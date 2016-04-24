@@ -1,0 +1,15 @@
+Gem::Specification.new do |s|
+    s.name = "hilighter"
+    s.version = "0.1.0"
+    s.date = Time.new.strftime("%Y-%m-%d")
+    s.summary = "Adds color methods to String class"
+    s.description =
+        "Adds color methods to String class. Also allows for " \
+        "string wrapping that accounts for color escape codes."
+    s.authors = [ "Miles Whittaker" ]
+    s.email = "mjwhitta@gmail.com"
+    s.files = Dir["lib/**/*.rb"]
+    s.homepage = "https://mjwhitta.github.io/hilighter"
+    s.license = "GPL-3.0"
+    s.add_development_dependency("rake", "~> 10.5", ">= 10.5.0")
+end
