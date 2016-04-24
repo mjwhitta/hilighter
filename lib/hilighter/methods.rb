@@ -1,7 +1,7 @@
 class Hilighter
     module Methods
         def plain
-            return self.gsub(/\e\[[0-9;]+m/, "")
+            return self.gsub(/\e\[([0-9;]*m|K)/, "")
         end
 
         def wrap(width = 80)
