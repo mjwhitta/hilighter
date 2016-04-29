@@ -5,16 +5,13 @@ class Hilighter
 
             clrs = rainbow_colors
             out = Array.new
-            i = 0
 
-            self.chars.each do |c|
-                if (c.match(/\s/))
-                    out.push(c)
-                else
-                    out.push(c.black.send("on_#{clrs[i % clrs.length]}"))
-                    i += 1
-                end
+            self.scan(
+                /((\e\[[0-9;]+m)?[^\e](\e\[0m)?)/
+            ).each_with_index do |c, i|
+                out.push("\e\[#{clrs[i % clrs.length] + 40}m#{c[0]}")
             end
+            out.push("\e\[0m")
 
             return out.join
         end
@@ -24,20 +21,7 @@ class Hilighter
         end
 
         def rainbow_colors
-            return [
-                "red",
-                "green",
-                "yellow",
-                "blue",
-                "magenta",
-                "cyan",
-                "light_red",
-                "light_green",
-                "light_yellow",
-                "light_blue",
-                "light_magenta",
-                "light_cyan",
-            ]
+            return [1, 2, 3, 4, 5, 6, 61, 62, 63, 64, 65, 66]
         end
         private :rainbow_colors
 
@@ -46,16 +30,13 @@ class Hilighter
 
             clrs = rainbow_colors
             out = Array.new
-            i = 0
 
-            self.chars.each do |c|
-                if (c.match(/\s/))
-                    out.push(c)
-                else
-                    out.push(c.send(clrs[i % clrs.length]))
-                    i += 1
-                end
+            self.scan(
+                /((\e\[[0-9;]+m)?[^\e](\e\[0m)?)/
+            ).each_with_index do |c, i|
+                out.push("\e\[#{clrs[i % clrs.length] + 30}m#{c[0]}")
             end
+            out.push("\e\[0m")
 
             return out.join
         end
