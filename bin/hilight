@@ -1,0 +1,114 @@
+#!/usr/bin/env ruby
+
+require "hilighter"
+require "io/wait"
+require "optparse"
+
+class HilightExit
+    GOOD = 0
+    INVALID_OPTION = 1
+    INVALID_ARGUMENT = 2
+    MISSING_ARGUMENT = 3
+    EXTRA_ARGUMENTS = 4
+    EXCEPTION = 5
+    AMBIGUOUS_ARGUMENT = 6
+end
+
+def parse(args)
+    options = Hash.new
+    options["verbose"] = false
+
+    info = [
+        "Hilights the text from stdin using the methods passed on",
+        "the CLI"
+    ].join(" ")
+
+    parser = OptionParser.new do |opts|
+        opts.summary_width = 14
+
+        opts.banner =
+            "Usage: #{File.basename($0)} [OPTIONS] [color1...colorN]"
+
+        opts.on("", "DESCRIPTION")
+
+        info.scan(/\S.{0,76}\S(?=\s|$)|\S+/).each do |line|
+            opts.on("    #{line}")
+        end
+
+        opts.on("", "OPTIONS")
+
+        opts.on("-h", "--help", "Display this help message") do
+            puts opts
+            exit HilightExit::GOOD
+        end
+
+        opts.on(
+            "-v",
+            "--verbose",
+            "Show backtrace when error occurs"
+        ) do
+            options["verbose"] = true
+        end
+    end
+
+    begin
+        parser.parse!
+    rescue OptionParser::InvalidOption => e
+        puts e.message
+        puts parser
+        exit HilightExit::INVALID_OPTION
+    rescue OptionParser::InvalidArgument => e
+        puts e.message
+        puts parser
+        exit HilightExit::INVALID_ARGUMENT
+    rescue OptionParser::MissingArgument => e
+        puts e.message
+        puts parser
+        exit HilightExit::MISSING_ARGUMENT
+    rescue OptionParser::AmbiguousOption => e
+        puts e.message
+        puts parser
+        exit Exit::AMBIGUOUS_ARGUMENT
+    end
+
+    return options
+end
+
+options = parse(ARGV)
+
+begin
+    loop do
+        input = STDIN.gets
+        break if (input.nil?)
+        ARGV.each do |color|
+            input = input.send(color)
+        end
+        print input
+    end
+rescue Interrupt
+    # ^C
+    # Exit gracefully
+rescue Errno::EPIPE
+    # Do nothing. This can happen if piping to another program such as
+    # less. Usually if less is closed before we're done with STDOUT.
+rescue Hilight::Error => e
+    puts e.message
+    exit HilightExit::EXCEPTION
+rescue Exception => e
+    $stderr.puts "Oops! Looks like an error has occured! If the " \
+        "error persists, file a bug at:".wrap
+    $stderr.puts
+    $stderr.puts "    https://gitlab.com/mjwhitta/hilight/issues"
+    $stderr.puts
+    $stderr.puts "Maybe the message below will help. If not, you " \
+        "can use the --verbose flag to get a backtrace.".wrap
+
+    $stderr.puts e.message.white.on_red
+    if (options["verbose"])
+        e.backtrace.each do |line|
+            $stderr.puts line.light_yellow
+        end
+    end
+    exit HilightExit::EXCEPTION
+end
+exit HilightExit::GOOD

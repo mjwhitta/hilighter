@@ -3,12 +3,12 @@ task :default => :gem
 desc "Clean up"
 task :clean do
     system("rm -f *.gem")
-    system("chmod -R go-rwx lib")
+    system("chmod -R go-rwx bin lib")
 end
 
 desc "Build gem"
 task :gem do
-    system("chmod -R u=rwX,go=rX lib")
+    system("chmod -R u=rwX,go=rX bin lib")
     system("gem build *.gemspec")
 end
 
