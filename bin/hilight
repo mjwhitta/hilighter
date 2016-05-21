@@ -77,13 +77,18 @@ end
 options = parse(ARGV)
 
 begin
-    loop do
-        input = STDIN.gets
-        break if (input.nil?)
-        ARGV.each do |color|
-            input = input.send(color)
+    if ((ARGV.length == 1) && (ARGV[0] == "sample"))
+        Hilighter.sample
+    else
+        loop do
+            input = STDIN.gets
+            break if (input.nil?)
+            ARGV.each do |color|
+                next if (color == "sample")
+                input = input.send(color)
+            end
+            print input
         end
-        print input
     end
 rescue Interrupt
     # ^C
@@ -91,7 +96,7 @@ rescue Interrupt
 rescue Errno::EPIPE
     # Do nothing. This can happen if piping to another program such as
     # less. Usually if less is closed before we're done with STDOUT.
-# rescue Hilight::Error => e
+# rescue Hilighter::Error => e
 #     puts e.message
 #     exit HilightExit::EXCEPTION
 rescue Exception => e
