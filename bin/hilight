@@ -91,9 +91,9 @@ rescue Interrupt
 rescue Errno::EPIPE
     # Do nothing. This can happen if piping to another program such as
     # less. Usually if less is closed before we're done with STDOUT.
-rescue Hilight::Error => e
-    puts e.message
-    exit HilightExit::EXCEPTION
+# rescue Hilight::Error => e
+#     puts e.message
+#     exit HilightExit::EXCEPTION
 rescue Exception => e
     $stderr.puts "Oops! Looks like an error has occured! If the " \
         "error persists, file a bug at:".wrap
