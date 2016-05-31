@@ -81,12 +81,20 @@ begin
         Hilighter.sample
     else
         loop do
+            # Get input
             input = STDIN.gets
+
+            # Break if EOF, otherwise remove existing color codes
             break if (input.nil?)
+            input = input.plain
+
+            # Apply all requested color codes
             ARGV.each do |color|
                 next if (color == "sample")
                 input = input.send(color)
             end
+
+            # Output
             print input
         end
     end
