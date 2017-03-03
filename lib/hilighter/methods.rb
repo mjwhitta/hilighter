@@ -9,7 +9,7 @@ class Hilighter
             self.scan(
                 /((\e\[[0-9;]+m)?[^\e](\e\[0m)?)/
             ).each_with_index do |c, i|
-                out.push("\e\[#{clrs[i % clrs.length] + 40}m#{c[0]}")
+                out.push("\e\[#{clrs[i % clrs.length] + 10}m#{c[0]}")
             end
             out.push("\e\[0m")
 
@@ -21,7 +21,7 @@ class Hilighter
         end
 
         def rainbow_colors
-            return [1, 2, 3, 4, 5, 6, 61, 62, 63, 64, 65, 66]
+            return [31, 32, 33, 34, 35, 36, 91, 92, 93, 94, 95, 96]
         end
         private :rainbow_colors
 
@@ -34,7 +34,7 @@ class Hilighter
             self.scan(
                 /((\e\[[0-9;]+m)?[^\e](\e\[0m)?)/
             ).each_with_index do |c, i|
-                out.push("\e\[#{clrs[i % clrs.length] + 30}m#{c[0]}")
+                out.push("\e\[#{clrs[i % clrs.length]}m#{c[0]}")
             end
             out.push("\e\[0m")
 
@@ -46,7 +46,7 @@ class Hilighter
             line = ""
             self.split(/\s+/).each do |word|
                 if ((line.plain.size + word.plain.size) > width)
-                    lines.push(line)
+                    lines.push("#{line}\n")
                     line = word
                 elsif (line.empty?)
                     line = word
@@ -54,8 +54,8 @@ class Hilighter
                     line += " #{word}"
                 end
             end
-            lines.push(line) if (!line.empty?)
-            return lines.join("\n")
+            lines.push("#{line}\n") if (!line.empty?)
+            return lines.join
         end
     end
 end

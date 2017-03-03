@@ -17,6 +17,28 @@ class Hilighter
             puts
         end
     end
+
+    def self.table
+        (0..15).each do |i|
+            bg = i.to_s.rjust(3, "0")
+            print " ".send("on_color_#{bg}")
+            print bg.black.send("on_color_#{bg}")
+            print " ".send("on_color_#{bg}")
+            print bg.white.send("on_color_#{bg}")
+            print " ".send("on_color_#{bg}")
+            puts if (((i + 1) % 8) == 0)
+        end
+
+        (16..255).each do |i|
+            bg = i.to_s.rjust(3, "0")
+            print " ".send("on_color_#{bg}")
+            print bg.black.send("on_color_#{bg}")
+            print " ".send("on_color_#{bg}")
+            print bg.white.send("on_color_#{bg}")
+            print " ".send("on_color_#{bg}")
+            puts if (((i - 15) % 6) == 0)
+        end
+    end
 end
 
 require "hilighter/codes"

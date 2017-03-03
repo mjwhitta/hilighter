@@ -43,6 +43,20 @@ def parse(args)
         end
 
         opts.on(
+            "-s",
+            "--sample",
+            "Show sample foreground/background colors"
+        ) do
+            Hilighter.sample
+            exit HilightExit::GOOD
+        end
+
+        opts.on("-t", "--table", "Show the color table") do
+            Hilighter.table
+            exit HilightExit::GOOD
+        end
+
+        opts.on(
             "-v",
             "--verbose",
             "Show backtrace when error occurs"
@@ -77,27 +91,29 @@ end
 options = parse(ARGV)
 
 begin
-    if ((ARGV.length == 1) && (ARGV[0] == "sample"))
-        Hilighter.sample
-    else
-        loop do
-            # Get input
-            input = STDIN.gets
+    bad = Array.new
+    loop do
+        # Get input
+        input = STDIN.gets
 
-            # Break if EOF, otherwise remove existing color codes
-            break if (input.nil?)
-            input = input.plain
+        # Break if EOF, otherwise remove existing color codes
+        break if (input.nil?)
+        input = input.plain
 
-            # Apply all requested color codes
-            ARGV.each do |color|
-                next if (color == "sample")
+        # Apply all requested color codes
+        ARGV.each do |color|
+            begin
                 input = input.send(color)
+            rescue NoMethodError
+                bad.push(color)
             end
-
-            # Output
-            print input
         end
+        break if (!bad.empty?)
+
+        # Output
+        print input
     end
+    puts "Invalid colors: #{bad.join(", ")}" if (!bad.empty?)
 rescue Interrupt
     # ^C
     # Exit gracefully
