@@ -16,6 +16,7 @@ end
 
 def parse(args)
     options = Hash.new
+    options["action"] = "default"
     options["verbose"] = false
 
     info = [
@@ -47,13 +48,11 @@ def parse(args)
             "--sample",
             "Show sample foreground/background colors"
         ) do
-            Hilighter.sample
-            exit HilightExit::GOOD
+            options["action"] = "sample"
         end
 
         opts.on("-t", "--table", "Show the color table") do
-            Hilighter.table
-            exit HilightExit::GOOD
+            options["action"] = "table"
         end
 
         opts.on(
@@ -91,29 +90,36 @@ end
 options = parse(ARGV)
 
 begin
-    bad = Array.new
-    loop do
-        # Get input
-        input = STDIN.gets
+    case options["action"]
+    when "sample"
+        Hilighter.sample
+    when "table"
+        Hilighter.table
+    else
+        bad = Array.new
+        loop do
+            # Get input
+            input = STDIN.gets
 
-        # Break if EOF, otherwise remove existing color codes
-        break if (input.nil?)
-        input = input.plain
+            # Break if EOF, otherwise remove existing color codes
+            break if (input.nil?)
+            input = input.plain
 
-        # Apply all requested color codes
-        ARGV.each do |color|
-            begin
-                input = input.send(color)
-            rescue NoMethodError
-                bad.push(color)
+            # Apply all requested color codes
+            ARGV.each do |color|
+                begin
+                    input = input.send(color)
+                rescue NoMethodError
+                    bad.push(color)
+                end
             end
-        end
-        break if (!bad.empty?)
+            break if (!bad.empty?)
 
-        # Output
-        print input
+            # Output
+            print input
+        end
+        puts "Invalid colors: #{bad.join(", ")}" if (!bad.empty?)
     end
-    puts "Invalid colors: #{bad.join(", ")}" if (!bad.empty?)
 rescue Interrupt
     # ^C
     # Exit gracefully
