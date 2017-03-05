@@ -2,28 +2,24 @@ class Hilighter
     module Codes
         def add_methods
             colors.each do |key, val|
+                fg = val.to_s
+
                 define_method key do
                     return self if (Hilighter.disable?)
-                    return "\e[#{val}m#{self}\e[0m"
+                    return "\e[#{fg}m#{self}\e[0m"
+                end
+
+                if (fg.match(/^38;5;/))
+                    tmp = val.split(";")
+                    tmp[0] = (tmp[0].to_i + 10).to_s
+                    bg = tmp.join(";")
+                else
+                    bg = (val + 10).to_s
                 end
 
                 define_method "on_#{key}" do
                     return self if (Hilighter.disable?)
-                    return "\e[#{val + 10}m#{self}\e[0m"
-                end
-            end
-
-            256.times.each do |i|
-                clr = i.to_s.rjust(3, "0")
-
-                define_method "color_#{clr}" do
-                    return self if (Hilighter.disable?)
-                    return "\e[38;5;#{clr}m#{self}\e[0m"
-                end
-
-                define_method "on_color_#{clr}" do
-                    return self if (Hilighter.disable?)
-                    return "\e[48;5;#{clr}m#{self}\e[0m"
+                    return "\e[#{bg}m#{self}\e[0m"
                 end
             end
 
@@ -36,7 +32,7 @@ class Hilighter
         end
 
         def colors
-            return {
+            @valid_colors ||= {
                 "black" => 30,
                 "red" => 31,
                 "green" => 32,
@@ -54,6 +50,13 @@ class Hilighter
                 "light_cyan" => 96,
                 "light_white" => 97
             }
+            if (@valid_colors.length < 256)
+                256.times.each do |i|
+                    clr = i.to_s.rjust(3, "0")
+                    @valid_colors["color_#{clr}"] = "38;5;#{clr}"
+                end
+            end
+            return @valid_colors
         end
 
         def modes

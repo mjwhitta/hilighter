@@ -10,8 +10,8 @@ class Hilighter
     end
 
     def self.sample
-        String.colors.keys.each do |fg|
-            String.colors.keys.each do |bg|
+        String.colors.keys[0, 16].each do |fg|
+            String.colors.keys[0, 16].each do |bg|
                 print " test ".send(fg).send("on_#{bg}")
             end
             puts
