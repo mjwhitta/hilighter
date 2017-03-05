@@ -55,13 +55,13 @@ class Hilighter
                     clr = i.to_s.rjust(3, "0")
                     @valid_colors["color_#{clr}"] = "38;5;#{clr}"
                 end
+                @valid_colors["default"] = 39
             end
             return @valid_colors
         end
 
         def modes
             return {
-                "default" => 0,
                 "reset" => 0,
                 "normal" => 0,
                 "bold" => 1,
