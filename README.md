@@ -7,7 +7,7 @@ a method for wrapping strings that accounts for color escape codes.
 
 ## How to install
 
-```bash
+```
 $ gem install hilighter
 ```
 
@@ -15,7 +15,7 @@ $ gem install hilighter
 
 In a terminal you can do things like the following:
 
-```bash
+```
 $ cat some_file | hilight green on_blue
 $ cat some_file | hilight rainbow on_white dim
 $ cat some_file | hl rainbow on_rainbow
@@ -25,7 +25,7 @@ $ hl rainbow on_rainbow <some_file
 Technically this is just calling methods from the String class so you
 can also do:
 
-```bash
+```
 $ cat some_bin | hilight dump
 $ cat some_file | hilight downcase
 $ cat some_file | hilight reverse
@@ -91,7 +91,6 @@ strikethrough | no_strikethrough | Same as crossed_out
 
 ## Links
 
-- [Homepage](https://mjwhitta.github.io/hilighter)
 - [Source](https://gitlab.com/mjwhitta/hilighter)
 - [Mirror](https://github.com/mjwhitta/hilighter)
 - [RubyGems](https://rubygems.org/gems/hilighter)
