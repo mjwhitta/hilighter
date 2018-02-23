@@ -1,3 +1,4 @@
 *.gem
+bin/hl
 Gemfile.lock
 tags
