@@ -7,6 +7,10 @@ class Hilighter
         # Convert hex to xterm-256 8-bit value
         # https://stackoverflow.com/questions/11765623/convert-hex-hex_to_256bitto-closest-x11-color-number
         def hex_to_x256(hex)
+            @@cached_codes ||= Hash.new
+            cache = @@cached_codes[hex]
+            return cache if (!cache.nil?)
+
             # For simplicity, assume RGB space is perceptually
             # uniform. There are 5 places where one of two outputs
             # needs to be chosen when the input is the exact middle:
@@ -31,13 +35,13 @@ class Hilighter
             ib = (b < 48) ? 0 : (b < 115) ? 1 : ((b - 35) / 40)
 
             # 0..215 lazy evaluation
-            clr_index = (36 * ir) + (6 * ig) + ib + 16
+            cidx = (36 * ir) + (6 * ig) + ib + 16
 
             # Calculate the nearest 0-based gray index at 232..255
             average = (r + g + b) / 3
 
             # 0..23
-            gray_index = (average > 238) ? 23 : (average - 3) / 10
+            gidx = (average > 238) ? 23 : (average - 3) / 10
 
             # Calculate the represented colors back from the index
             i2cv = [0, 0x5f, 0x87, 0xaf, 0xd7, 0xff]
@@ -48,7 +52,7 @@ class Hilighter
             cb = i2cv[ib]
 
             # same value for r/g/b  0..255
-            gv = (10 * gray_index) + 8
+            gv = (10 * gidx) + 8
 
             # Return the one which is nearer to the original rgb
             # values
@@ -56,10 +60,12 @@ class Hilighter
             gray_err = ((gv - r) ** 2 + (gv - g) ** 2 + (gv - b) ** 2)
 
             if (clr_err <= gray_err)
-                return clr_index.to_s.rjust(3, "0")
+                @@cached_codes[hex] = cidx.to_s.rjust(3, "0")
             else
-                return (gray_index + 232).to_s.rjust(3, "0")
+                @@cached_codes[hex] = (gidx + 232).to_s.rjust(3, "0")
             end
+
+            return @@cached_codes[hex]
         end
         private :hex_to_x256
 
