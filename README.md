@@ -20,6 +20,7 @@ $ cat some_file | hilight green on_blue
 $ cat some_file | hilight rainbow on_white dim
 $ cat some_file | hl rainbow on_rainbow
 $ hl rainbow on_rainbow <some_file
+$ echo "Hex color codes!" | hl ffffff on_ff0000
 ```
 
 Technically this is just calling methods from the String class so you
@@ -39,6 +40,8 @@ require "hilighter"
 puts "Hello, world!".white
 puts Array.new(100, "hilight").join(" ").wrap
 puts Array.new(100, "hilight").join(" ").green.wrap
+puts "Hex color codes!".hex_color("#ffffff").on_hex_color("#ff0000")
+puts "Hex color codes!".ffffff.on_ff0000
 ```
 
 The following colors are supported:
@@ -62,6 +65,8 @@ light_magenta          | on_light_magenta
 light_cyan             | on_light_cyan
 light_white            | on_light_white
 color_000 to color_255 | on_color_000 to on_color_255
+hex_color(hex)         | on_hex_color(hex)
+000000 to ffffff       | on_000000 to on_ffffff
 
 The following modes are supported:
 
