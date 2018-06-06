@@ -97,7 +97,6 @@ strikethrough | no_strikethrough | Same as crossed_out
 ## Links
 
 - [Source](https://gitlab.com/mjwhitta/hilighter)
-- [Mirror](https://github.com/mjwhitta/hilighter)
 - [RubyGems](https://rubygems.org/gems/hilighter)
 - [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
