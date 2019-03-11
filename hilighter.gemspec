@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
     s.files = Dir["lib/**/*.rb"]
     s.homepage = "https://gitlab.com/mjwhitta/hilighter"
     s.license = "GPL-3.0"
-    s.add_development_dependency("rake", "~> 12.3", ">= 12.3.0")
+    s.add_development_dependency("rake", "~> 12.3", ">= 12.3.2")
 end
