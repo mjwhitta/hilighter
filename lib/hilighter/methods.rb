@@ -35,7 +35,7 @@ class Hilighter
         end
 
         def plain
-            return self.gsub(/\e\[([0-9;]*m|K)/, "")
+            return self.gsub(/\e\[[0-9;]*m/, "")
         end
 
         def rainbow_colors

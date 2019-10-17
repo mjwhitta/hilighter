@@ -2,24 +2,16 @@ class Hilighter
     module Codes
         def add_methods
             colors.each do |key, val|
-                fg = val.to_s
-
-                define_method key do
-                    return self if (Hilighter.disable?)
-                    return "\e[#{fg}m#{self}\e[0m"
-                end
-
-                if (fg.match(/^38;5;/))
-                    tmp = val.split(";")
-                    tmp[0] = (tmp[0].to_i + 10).to_s
-                    bg = tmp.join(";")
+                if (key.start_with?("on_"))
+                    define_method key do
+                        return self if (Hilighter.disable?)
+                        return "\e[#{val}m#{self}\e[49m"
+                    end
                 else
-                    bg = (val + 10).to_s
-                end
-
-                define_method "on_#{key}" do
-                    return self if (Hilighter.disable?)
-                    return "\e[#{bg}m#{self}\e[0m"
+                    define_method key do
+                        return self if (Hilighter.disable?)
+                        return "\e[#{val}m#{self}\e[39m"
+                    end
                 end
             end
 
@@ -48,14 +40,34 @@ class Hilighter
                 "light_blue" => 94,
                 "light_magenta" => 95,
                 "light_cyan" => 96,
-                "light_white" => 97
+                "light_white" => 97,
+
+                "on_black" => 40,
+                "on_red" => 41,
+                "on_green" => 42,
+                "on_yellow" => 43,
+                "on_blue" => 44,
+                "on_magenta" => 45,
+                "on_cyan" => 46,
+                "on_white" => 47,
+                "on_light_black" => 100,
+                "on_light_red" => 101,
+                "on_light_green" => 102,
+                "on_light_yellow" => 103,
+                "on_light_blue" => 104,
+                "on_light_magenta" => 105,
+                "on_light_cyan" => 106,
+                "on_light_white" => 107,
+
+                "default" => 39,
+                "on_default" => 49
             }
             if (@valid_colors.length < 256)
                 256.times.each do |i|
                     clr = i.to_s.rjust(3, "0")
                     @valid_colors["color_#{clr}"] = "38;5;#{clr}"
+                    @valid_colors["on_color_#{clr}"] = "48;5;#{clr}"
                 end
-                @valid_colors["default"] = 39
             end
             return @valid_colors
         end
@@ -83,6 +95,7 @@ class Hilighter
                 "no_dim" => 22,
                 "no_faint" => 22,
                 "no_italic" => 23,
+                "no_fraktur" => 23,
                 "no_underline" => 24,
                 "no_blink" => 25,
                 "no_blink_slow" => 25,
