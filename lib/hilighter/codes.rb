@@ -5,12 +5,19 @@ class Hilighter
                 if (key.start_with?("on_"))
                     define_method key do
                         return self if (Hilighter.disable?)
-                        return "\e[#{val}m#{self}\e[49m"
+                        return [
+                            "\e[#{val}m",
+                            self.plain_bg.gsub(
+                                /\n/,
+                                "\e[49m\n\e[#{val}m"
+                            ),
+                            "\e[49m"
+                        ].join
                     end
                 else
                     define_method key do
                         return self if (Hilighter.disable?)
-                        return "\e[#{val}m#{self}\e[39m"
+                        return "\e[#{val}m#{self.plain_fg}\e[39m"
                     end
                 end
             end

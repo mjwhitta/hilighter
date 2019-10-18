@@ -1,5 +1,10 @@
 class Hilighter
     module Methods
+        def clr_regex
+            return /\e\[([0-9;]*m|K)/
+        end
+        private :clr_regex
+
         def hex_color(hex)
             return self.send(Hilighter.hex_to_x256(hex))
         end
@@ -24,18 +29,32 @@ class Hilighter
             clrs = rainbow_colors
             out = Array.new
 
-            self.scan(
-                /((\e\[[0-9;]+m)?[^\e](\e\[0m)?)/
-            ).each_with_index do |c, i|
-                out.push("\e\[#{clrs[i % clrs.length] + 10}m#{c[0]}")
+            self.plain_bg.each_line do |line|
+                line.chomp!
+                line.scan(
+                    /((#{clr_regex})*[^\e](#{clr_regex})*)/
+                ).each_with_index do |c, i|
+                    out.push(
+                        "\e[#{clrs[i % clrs.length] + 10}m#{c[0]}"
+                    )
+                end
+                out.push("\e[49m") if (!line.empty?)
+                out.push("\n")
             end
-            out.push("\e\[0m")
 
             return out.join
         end
 
         def plain
-            return self.gsub(/\e\[[0-9;]*m/, "")
+            return self.gsub(clr_regex, "")
+        end
+
+        def plain_bg
+            return self.gsub(/\e\[(4|10)[0-9;]+m/, "")
+        end
+
+        def plain_fg
+            return self.gsub(/\e\[[39][0-9;]+m/, "")
         end
 
         def rainbow_colors
@@ -49,12 +68,15 @@ class Hilighter
             clrs = rainbow_colors
             out = Array.new
 
-            self.scan(
-                /((\e\[[0-9;]+m)?[^\e](\e\[0m)?)/
-            ).each_with_index do |c, i|
-                out.push("\e\[#{clrs[i % clrs.length]}m#{c[0]}")
+            self.plain_fg.each_line do |line|
+                line.chomp!
+                line.scan(
+                    /((#{clr_regex})*[^\e](#{clr_regex})*)/
+                ).each_with_index do |c, i|
+                    out.push("\e[#{clrs[i % clrs.length]}m#{c[0]}")
+                end
+                out.push("\n")
             end
-            out.push("\e\[0m")
 
             return out.join
         end

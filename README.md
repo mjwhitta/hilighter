@@ -23,8 +23,8 @@ $ hl rainbow on_rainbow <some_file
 $ echo "Hex color codes!" | hl ffffff on_ff0000
 ```
 
-Technically this is just calling methods from the String class so you
-can also do:
+Technically this is just calling methods from the String class on each
+line of input, so you can also do:
 
 ```
 $ cat some_bin | hilight dump
@@ -37,11 +37,11 @@ In a script you can do things like the following:
 ```ruby
 require "hilighter"
 
-puts "Hello, world!".white
-puts Array.new(100, "hilight").join(" ").wrap
-puts Array.new(100, "hilight").join(" ").green.wrap
-puts "Hex color codes!".hex_color("#ffffff").on_hex_color("#ff0000")
-puts "Hex color codes!".ffffff.on_ff0000
+puts("Hello, world!".white)
+puts(Array.new(100, "hilight").join(" ").wrap)
+puts(Array.new(100, "hilight").join(" ").green.wrap)
+puts("Hex color codes!".hex_color("#ffffff").on_hex_color("#ff0000"))
+puts("Hex color codes!".ffffff.on_ff0000)
 ```
 
 The following colors are supported:

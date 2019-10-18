@@ -4,7 +4,28 @@ require "hilighter"
 require "io/wait"
 require "optparse"
 
-class HilightExit
+### Helpers begin
+def err(msg)
+    puts("[!] #{msg}".red)
+end
+def errx(msg)
+    raise Exception.new(msg)
+end
+def good(msg)
+    puts("[+] #{msg}".green)
+end
+def info(msg)
+    puts("[*] #{msg}".white)
+end
+def subinfo(msg)
+    puts("[=] #{msg}".cyan)
+end
+def warn(msg)
+    puts("[-] #{msg}".yellow)
+end
+### Helpers end
+
+class HilighterExit
     GOOD = 0
     INVALID_OPTION = 1
     INVALID_ARGUMENT = 2
@@ -21,26 +42,28 @@ def parse(args)
 
     info = [
         "Hilights the text from stdin using the methods passed on",
-        "the CLI"
+        "the CLI."
     ].join(" ")
 
     parser = OptionParser.new do |opts|
         opts.summary_width = 14
 
-        opts.banner =
-            "Usage: #{File.basename($0)} [OPTIONS] [color1...colorN]"
+        opts.banner = [
+            "Usage: #{File.basename($0)} [OPTIONS] [color1]...",
+            "[colorN]"
+        ].join(" ")
 
         opts.on("", "DESCRIPTION")
 
-        info.scan(/\S.{0,76}\S(?=\s|$)|\S+/).each do |line|
-            opts.on("    #{line}")
+        info.wrap(76).each_line do |line|
+            opts.on("    #{line.chomp}")
         end
 
         opts.on("", "OPTIONS")
 
         opts.on("-h", "--help", "Display this help message") do
-            puts opts
-            exit HilightExit::GOOD
+            puts(opts)
+            exit HilighterExit::GOOD
         end
 
         opts.on(
@@ -62,32 +85,44 @@ def parse(args)
         ) do
             options["verbose"] = true
         end
+
+        opts.on("-V", "--version", "Show version") do
+            __FILE__.match(/hilighter-(\d+\.\d+\.\d+)/) do |m|
+                puts(m[1])
+            end
+            exit HilighterExit::GOOD
+        end
     end
 
     begin
         parser.parse!
     rescue OptionParser::InvalidOption => e
-        puts e.message
-        puts parser
-        exit HilightExit::INVALID_OPTION
+        puts(e.message)
+        puts(parser)
+        exit HilighterExit::INVALID_OPTION
     rescue OptionParser::InvalidArgument => e
-        puts e.message
-        puts parser
-        exit HilightExit::INVALID_ARGUMENT
+        puts(e.message)
+        puts(parser)
+        exit HilighterExit::INVALID_ARGUMENT
     rescue OptionParser::MissingArgument => e
-        puts e.message
-        puts parser
-        exit HilightExit::MISSING_ARGUMENT
+        puts(e.message)
+        puts(parser)
+        exit HilighterExit::MISSING_ARGUMENT
     rescue OptionParser::AmbiguousOption => e
-        puts e.message
-        puts parser
+        puts(e.message)
+        puts(parser)
         exit Exit::AMBIGUOUS_ARGUMENT
     end
 
     return options
 end
 
-options = parse(ARGV)
+begin
+    options = parse(ARGV)
+rescue Interrupt
+    # Exit gracefully on ^C
+    exit HilighterExit::GOOD
+end
 
 begin
     case options["action"]
@@ -103,7 +138,7 @@ begin
 
             # Break if EOF, otherwise remove existing color codes
             break if (input.nil?)
-            input = input.plain
+            input = input.plain.chomp
 
             # Apply all requested color codes
             ARGV.each do |color|
@@ -116,34 +151,39 @@ begin
             break if (!bad.empty?)
 
             # Output
-            print input
+            puts(input)
         end
-        puts "Invalid colors: #{bad.join(", ")}" if (!bad.empty?)
+        puts("Invalid colors: #{bad.join(", ")}") if (!bad.empty?)
     end
 rescue Interrupt
-    # ^C
-    # Exit gracefully
+    # Exit gracefully on ^C
 rescue Errno::EPIPE
     # Do nothing. This can happen if piping to another program such as
     # less. Usually if less is closed before we're done with STDOUT.
-# rescue Hilighter::Error => e
-#     puts e.message
-#     exit HilightExit::EXCEPTION
 rescue Exception => e
-    $stderr.puts "Oops! Looks like an error has occured! If the " \
-        "error persists, file a bug at:".wrap
+    $stderr.puts(
+        [
+            "Oops! Looks like an error has occured! If the error",
+            "persists, file a bug at:"
+        ].join(" ").wrap
+    )
     $stderr.puts
-    $stderr.puts "    https://gitlab.com/mjwhitta/hilight/issues"
+    $stderr.puts("  https://gitlab.com/mjwhitta/hilighter/issues")
     $stderr.puts
-    $stderr.puts "Maybe the message below will help. If not, you " \
-        "can use the --verbose flag to get a backtrace.".wrap
+    $stderr.puts(
+        [
+            "Maybe the message below will help. If not, you can use",
+            "the --verbose flag to get a backtrace."
+        ].join(" ").wrap
+    )
+    $stderr.puts
 
-    $stderr.puts e.message.white.on_red
+    $stderr.puts(e.message.white.on_red)
     if (options["verbose"])
         e.backtrace.each do |line|
-            $stderr.puts line.light_yellow
+            $stderr.puts(line.light_yellow)
         end
     end
-    exit HilightExit::EXCEPTION
+    exit HilighterExit::EXCEPTION
 end
-exit HilightExit::GOOD
+exit HilighterExit::GOOD
