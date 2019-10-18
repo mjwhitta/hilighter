@@ -1,9 +1,9 @@
 class Hilighter
     module Methods
-        def clr_regex
+        def color_regex
             return /\e\[([0-9;]*m|K)/
         end
-        private :clr_regex
+        private :color_regex
 
         def hex_color(hex)
             return self.send(Hilighter.hex_to_x256(hex))
@@ -32,21 +32,20 @@ class Hilighter
             self.plain_bg.each_line do |line|
                 line.chomp!
                 line.scan(
-                    /((#{clr_regex})*[^\e](#{clr_regex})*)/
+                    /((#{color_regex})*[^\e](#{color_regex})*)/
                 ).each_with_index do |c, i|
                     out.push(
                         "\e[#{clrs[i % clrs.length] + 10}m#{c[0]}"
                     )
                 end
                 out.push("\e[49m") if (!line.empty?)
-                out.push("\n")
             end
 
             return out.join
         end
 
         def plain
-            return self.gsub(clr_regex, "")
+            return self.gsub(color_regex, "")
         end
 
         def plain_bg
@@ -71,11 +70,10 @@ class Hilighter
             self.plain_fg.each_line do |line|
                 line.chomp!
                 line.scan(
-                    /((#{clr_regex})*[^\e](#{clr_regex})*)/
+                    /((#{color_regex})*[^\e](#{color_regex})*)/
                 ).each_with_index do |c, i|
                     out.push("\e[#{clrs[i % clrs.length]}m#{c[0]}")
                 end
-                out.push("\n")
             end
 
             return out.join

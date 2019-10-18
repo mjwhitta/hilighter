@@ -5,6 +5,9 @@ class Hilighter
                 if (key.start_with?("on_"))
                     define_method key do
                         return self if (Hilighter.disable?)
+
+                        bg_regex = /\e\[(4|10)[0-9;]+m/
+
                         return [
                             "\e[#{val}m",
                             self.plain_bg.gsub(
@@ -12,12 +15,28 @@ class Hilighter
                                 "\e[49m\n\e[#{val}m"
                             ),
                             "\e[49m"
-                        ].join
+                        ].join.gsub(
+                            /(#{bg_regex})+(#{bg_regex})/,
+                            "\\3"
+                        ).gsub(/\n\e\[49m/, "\n")
                     end
                 else
                     define_method key do
                         return self if (Hilighter.disable?)
-                        return "\e[#{val}m#{self.plain_fg}\e[39m"
+
+                        fg_regex = /\e\[[39][0-9;]+m/
+
+                        return [
+                            "\e[#{val}m",
+                            self.plain_fg.gsub(
+                                /\n/,
+                                "\e[39m\n\e[#{val}m"
+                            ),
+                            "\e[39m"
+                        ].join.gsub(
+                            /(#{fg_regex})+(#{fg_regex})/,
+                            "\\2"
+                        ).gsub(/\n\e\[39m/, "\n")
                     end
                 end
             end

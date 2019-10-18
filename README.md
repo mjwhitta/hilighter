@@ -28,8 +28,8 @@ line of input, so you can also do:
 
 ```
 $ cat some_bin | hilight dump
-$ cat some_file | hilight downcase
-$ cat some_file | hilight reverse
+$ cat some_file | hl downcase
+$ cat some_file | hl reverse
 ```
 
 In a script you can do things like the following:
