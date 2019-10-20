@@ -90,7 +90,7 @@ conceal       | no_conceal       | Turn on/off conceal. Useful for passwords. No
 hide          | no_hide          | Same as conceal
 crossed_out   | no_crossed_out   | Characters legible, but marked for deletion. Not widely supported.
 strikethrough | no_strikethrough | Same as crossed_out
-[fraktur]     | no_fraktur       | Hardly ever supported. Use no_italic to turn off.
+[fraktur]     | no_fraktur       | Hardly ever supported
 
 [fraktur]: https://en.wikipedia.org/wiki/Fraktur
 
