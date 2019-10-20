@@ -64,6 +64,7 @@ light_blue             | on_light_blue
 light_magenta          | on_light_magenta
 light_cyan             | on_light_cyan
 light_white            | on_light_white
+default                | on_default
 color_000 to color_255 | on_color_000 to on_color_255
 hex_color(hex)         | on_hex_color(hex)
 000000 to ffffff       | on_000000 to on_ffffff
@@ -72,7 +73,6 @@ The following modes are supported:
 
 On            | Off              | Description
 ---           | ---              | -----------
-default       |                  | Turn off modes
 normal        |                  | Same as default
 reset         |                  | Same as default
 bold          | no_bold          | Turn on/off bold
@@ -90,7 +90,7 @@ conceal       | no_conceal       | Turn on/off conceal. Useful for passwords. No
 hide          | no_hide          | Same as conceal
 crossed_out   | no_crossed_out   | Characters legible, but marked for deletion. Not widely supported.
 strikethrough | no_strikethrough | Same as crossed_out
-[fraktur]     |                  | Hardly ever supported. Use no_italic to turn off.
+[fraktur]     | no_fraktur       | Hardly ever supported. Use no_italic to turn off.
 
 [fraktur]: https://en.wikipedia.org/wiki/Fraktur
 
