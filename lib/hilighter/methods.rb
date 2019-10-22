@@ -24,7 +24,7 @@ class Hilighter
         end
 
         def on_rainbow
-            return self if (Hilighter.disable?)
+            return self.plain if (Hilighter.disable?)
 
             clrs = rainbow_colors
             out = Array.new
@@ -62,7 +62,7 @@ class Hilighter
         private :rainbow_colors
 
         def rainbow
-            return self if (Hilighter.disable?)
+            return self.plain if (Hilighter.disable?)
 
             clrs = rainbow_colors
             out = Array.new

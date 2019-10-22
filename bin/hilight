@@ -46,7 +46,7 @@ def parse(args)
     ].join(" ")
 
     parser = OptionParser.new do |opts|
-        opts.summary_width = 14
+        opts.summary_width = 19
 
         opts.banner = [
             "Usage: #{File.basename($0)} [OPTIONS] [color1]...",
@@ -64,6 +64,10 @@ def parse(args)
         opts.on("-h", "--help", "Display this help message") do
             puts(opts)
             exit HilighterExit::GOOD
+        end
+
+        opts.on("--[no-]color", "Disable colorized output") do |c|
+            Hilighter.disable if (!c)
         end
 
         opts.on(

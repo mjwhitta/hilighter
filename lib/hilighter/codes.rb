@@ -4,7 +4,7 @@ class Hilighter
             colors.each do |key, val|
                 if (key.start_with?("on_"))
                     define_method key do
-                        return self if (Hilighter.disable?)
+                        return self.plain if (Hilighter.disable?)
 
                         bg_regex = /\e\[(4|10)[0-9;]+m/
 
@@ -22,7 +22,7 @@ class Hilighter
                     end
                 else
                     define_method key do
-                        return self if (Hilighter.disable?)
+                        return self.plain if (Hilighter.disable?)
 
                         fg_regex = /\e\[[39][0-9;]+m/
 
@@ -43,7 +43,7 @@ class Hilighter
 
             modes.each do |key, val|
                 define_method key do
-                    return self if (Hilighter.disable?)
+                    return self.plain if (Hilighter.disable?)
                     return "\e[#{val}m#{self}\e[0m"
                 end
             end

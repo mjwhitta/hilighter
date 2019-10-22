@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name = "hilighter"
-    s.version = "1.4.1"
+    s.version = "1.4.2"
     s.date = Time.new.strftime("%Y-%m-%d")
     s.summary = "Adds color methods to String class"
     s.description = [
