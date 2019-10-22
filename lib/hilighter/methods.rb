@@ -31,14 +31,14 @@ class Hilighter
 
             self.plain_bg.each_line do |line|
                 line.chomp!
-                line.scan(
+                colorized = line.scan(
                     /((#{color_regex})*[^\e](#{color_regex})*)/
-                ).each_with_index do |c, i|
-                    out.push(
-                        "\e[#{clrs[i % clrs.length] + 10}m#{c[0]}"
-                    )
-                end
+                ).map.with_index do |c, i|
+                    "\e[#{clrs[i % clrs.length] + 10}m#{c[0]}"
+                end.join
+                out.push(colorized)
                 out.push("\e[49m") if (!line.empty?)
+                out.push("\n")
             end
 
             return out.join
@@ -69,11 +69,12 @@ class Hilighter
 
             self.plain_fg.each_line do |line|
                 line.chomp!
-                line.scan(
+                colorized = line.scan(
                     /((#{color_regex})*[^\e](#{color_regex})*)/
-                ).each_with_index do |c, i|
-                    out.push("\e[#{clrs[i % clrs.length]}m#{c[0]}")
-                end
+                ).map.with_index do |c, i|
+                    "\e[#{clrs[i % clrs.length]}m#{c[0]}"
+                end.join
+                out.push("#{colorized}\n")
             end
 
             return out.join
