@@ -1,50 +1,68 @@
 class Hilighter
     module Codes
         def add_methods
+            color_regex = /^(\e\[([0-9;]+m|K))+$/
+            bg_regex = /\e\[(4|10)[0-9;]+m/
+            fg_regex = /\e\[[39][0-9;]+m/
+
             colors.each do |key, val|
                 if (key.start_with?("on_"))
+                    on_default = colors["on_default"]
                     define_method key do
                         return self.plain if (Hilighter.disable?)
-
-                        bg_regex = /\e\[(4|10)[0-9;]+m/
 
                         return [
                             "\e[#{val}m",
                             self.plain_bg.gsub(
                                 /\n/,
-                                "\e[49m\n\e[#{val}m"
+                                "\e[#{on_default}m\n\e[#{val}m"
                             ),
-                            "\e[49m"
+                            "\e[#{on_default}m"
                         ].join.gsub(
                             /(#{bg_regex})+(#{bg_regex})/,
                             "\\3"
-                        ).gsub(/\n\e\[49m/, "\n")
+                        ).gsub(/\n\e\[#{on_default}m/, "\n").gsub(
+                            color_regex,
+                            ""
+                        )
                     end
                 else
+                    default = colors["default"]
                     define_method key do
                         return self.plain if (Hilighter.disable?)
-
-                        fg_regex = /\e\[[39][0-9;]+m/
 
                         return [
                             "\e[#{val}m",
                             self.plain_fg.gsub(
                                 /\n/,
-                                "\e[39m\n\e[#{val}m"
+                                "\e[#{default}m\n\e[#{val}m"
                             ),
-                            "\e[39m"
+                            "\e[#{default}m"
                         ].join.gsub(
                             /(#{fg_regex})+(#{fg_regex})/,
                             "\\2"
-                        ).gsub(/\n\e\[39m/, "\n")
+                        ).gsub(/\n\e\[#{default}m/, "\n").gsub(
+                            color_regex,
+                            ""
+                        )
                     end
                 end
             end
 
             modes.each do |key, val|
+                off = "no_#{key}"
+                if modes.has_key?(off)
+                    off = "\e[#{modes[off]}m"
+                else
+                    off = ""
+                end
+
                 define_method key do
                     return self.plain if (Hilighter.disable?)
-                    return "\e[#{val}m#{self}\e[0m"
+                    return "\e[#{val}m#{self}#{off}".gsub(
+                        color_regex,
+                        ""
+                    )
                 end
             end
         end
@@ -117,6 +135,7 @@ class Hilighter
                 "crossed_out" => 9,
                 "strikethrough" => 9,
                 "fraktur" => 20,
+
                 "no_bold" => 21,
                 "no_dim" => 22,
                 "no_faint" => 22,

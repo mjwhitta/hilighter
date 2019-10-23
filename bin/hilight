@@ -142,7 +142,6 @@ begin
 
             # Break if EOF, otherwise remove existing color codes
             break if (input.nil?)
-            input = input.plain.chomp
 
             # Apply all requested color codes
             ARGV.each do |color|
