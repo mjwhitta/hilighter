@@ -36,12 +36,10 @@ class Hilighter
                 ).map.with_index do |c, i|
                     "\e[#{clrs[i % clrs.length] + 10}m#{c[0]}"
                 end.join
-                out.push(colorized)
-                out.push("\e[49m") if (!line.empty?)
-                out.push("\n")
+                out.push("#{colorized}\e[49m\n")
             end
 
-            return out.join
+            return out.join.gsub(/^(#{color_regex})+$/, "")
         end
 
         def plain
@@ -77,7 +75,7 @@ class Hilighter
                 out.push("#{colorized}\n")
             end
 
-            return out.join
+            return out.join.gsub(/^(#{color_regex})+$/, "")
         end
 
         def wrap(width = 80)

@@ -16,10 +16,7 @@ class Hilighter
                                 "\e[#{on_default}m\n\e[#{val}m"
                             ),
                             "\e[#{on_default}m"
-                        ].join.gsub(
-                            /\n\e\[#{on_default}m/,
-                            "\n"
-                        ).gsub(color_regex, "")
+                        ].join.gsub(color_regex, "")
                     end
                 else
                     default = colors["default"]
@@ -33,10 +30,7 @@ class Hilighter
                                 "\e[#{default}m\n\e[#{val}m"
                             ),
                             "\e[#{default}m"
-                        ].join.gsub(
-                            /\n\e\[#{default}m/,
-                            "\n"
-                        ).gsub(color_regex, "")
+                        ].join.gsub(color_regex, "")
                     end
                 end
             end
