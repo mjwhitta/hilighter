@@ -36,6 +36,12 @@ class Hilighter
             end
 
             modes.each do |key, val|
+                rm = [
+                    modes[key],
+                    modes[key.gsub(/^no_/, "")],
+                    modes["no_#{key}"]
+                ].delete_if(&:nil?).uniq.join("|")
+
                 off = "no_#{key}"
                 if modes.has_key?(off)
                     off = "\e[#{modes[off]}m"
@@ -45,6 +51,7 @@ class Hilighter
 
                 define_method key do
                     return self.plain if (Hilighter.disable?)
+                    self.gsub!(/\e\[(#{rm})m/, "")
                     return "\e[#{val}m#{self}#{off}".gsub(
                         color_regex,
                         ""
@@ -114,8 +121,9 @@ class Hilighter
                 "blink" => 5,
                 "blink_slow" => 5,
                 "blink_rapid" => 6,
-                "swap" => 7,
+                "inverse" => 7,
                 "negative" => 7,
+                "swap" => 7,
                 "hide" => 8,
                 "conceal" => 8,
                 "crossed_out" => 9,
@@ -131,8 +139,9 @@ class Hilighter
                 "no_blink" => 25,
                 "no_blink_slow" => 25,
                 "no_blink_rapid" => 26,
-                "no_swap" => 27,
+                "no_inverse" => 27,
                 "no_negative" => 27,
+                "no_swap" => 27,
                 "no_hide" => 28,
                 "no_conceal" => 28,
                 "no_crossed_out" => 29,
