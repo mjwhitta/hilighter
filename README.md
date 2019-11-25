@@ -21,6 +21,8 @@ $ cat some_file | hilight rainbow on_white dim
 $ cat some_file | hl rainbow on_rainbow
 $ hl rainbow on_rainbow <some_file
 $ echo "Hex color codes!" | hl ffffff on_ff0000
+$ cat some_file | hl wrap
+$ cat some_file | hl wrap_64
 ```
 
 Technically this is just calling methods from the String class on each
@@ -96,7 +98,7 @@ strikethrough | no_strikethrough | Same as crossed_out
 
 ## Links
 
-- [Source](https://gitlab.com/mjwhitta/hilighter)
+- [Source](https://gitlab.com/mjwhitta/hilighter/tree/ruby)
 - [RubyGems](https://rubygems.org/gems/hilighter)
 - [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 

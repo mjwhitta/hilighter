@@ -16,6 +16,11 @@ class Hilighter
             method_name.to_s.match(/^on_([A-Fa-f0-9]{6})$/) do |m|
                 return self.on_hex_color(m[1])
             end
+            method_name.to_s.match(/^wrap(_(\d+))?$/) do |m|
+                width = nil
+                width = m[2].to_i if (!m[1].nil?)
+                return self.wrap(width)
+            end
             super
         end
 

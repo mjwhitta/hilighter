@@ -38,8 +38,7 @@ class Hilighter
             modes.each do |key, val|
                 rm = [
                     modes[key],
-                    modes[key.gsub(/^no_/, "")],
-                    modes["no_#{key}"]
+                    modes["no_#{key}".gsub(/^no_no_/, "")]
                 ].delete_if(&:nil?).uniq.join("|")
 
                 off = "no_#{key}"
