@@ -80,6 +80,7 @@ EOF
 declare -a args deps
 unset help
 color="true"
+deps+=("go")
 deps+=("sed")
 
 # Check for missing dependencies
