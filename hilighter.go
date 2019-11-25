@@ -4,6 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"regexp"
+	"strconv"
+	"strings"
 )
 
 // Boolean to disable all color codes
@@ -18,7 +20,9 @@ var iterate = regexp.MustCompile(
 	`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
 )
 var newline = regexp.MustCompile(`\n`)
+var notwhitespace = regexp.MustCompile(`\S+`)
 var onlyCodes = regexp.MustCompile(`^(\x1b\[([0-9;]+m|K))+$`)
+var wrap = regexp.MustCompile(`wrap(_(\d+))?`)
 
 // Boolean to track version
 const Version = "1.5.1"
@@ -39,6 +43,18 @@ func Hilight(code string, str string, args ...interface{}) string {
 		case "rainbow":
 			return Rainbow(str, args...)
 		default:
+			// Check if wrap
+			var matches = wrap.FindAllStringSubmatch(code, -1)
+			for _, match := range matches {
+				// Determine wrap width, default to 80
+				var width = 80
+				if len(match) == 3 && len(match[2]) > 0 {
+					width, _ = strconv.Atoi(match[2])
+				}
+				return Wrap(width, str, args...)
+			}
+
+			// Otherwise panic
 			panic(errors.New("Invalid color or mode: " + code))
 		}
 	}
@@ -175,6 +191,32 @@ func Table() {
 }
 
 func Wrap(width int, str string, args ...interface{}) string {
-	// TODO wrap
-	return fmt.Sprintf(str, args...)
+	str = fmt.Sprintf(str, args...)
+
+	var line = ""
+	var lines []string
+	var words = notwhitespace.FindAllString(str, -1)
+
+	// Loop thru words
+	for _, word := range words {
+		if len(Plain(line))+len(Plain(word)) > width {
+			// Wrap if line would be longer than width
+			lines = append(lines, line)
+			line = word
+		} else if len(line) == 0 {
+			// Can't wrap less than a single word
+			line = word
+		} else {
+			// Append word to line
+			line += " " + word
+		}
+	}
+
+	// Ensure last line is not forgotten
+	if len(line) != 0 {
+		lines = append(lines, line)
+	}
+
+	// Join lines and return
+	return strings.Join(lines, "\n")
 }

@@ -2,6 +2,7 @@ package hilighter
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -66,19 +67,25 @@ func OnRainbow(str string, args ...interface{}) string {
 	var out []string
 
 	// Loop thru lines and apply bg color codes
+	var colors = rainbowColors()
+	var end = "\x1b[" + Colors["on_default"] + "m"
 	for i := range lines {
-		var matches = iterate.FindAllString(lines[i], -1)
-		for idx, char := range matches {
-			// TODO rainbow
-			fmt.Printf("%d -> %s\x1b[0m\n", idx, char)
+		var line []string
+		var chars = iterate.FindAllString(lines[i], -1)
+
+		// Loop thru non-color-code bytes and apply on_rainbow
+		for idx, char := range chars {
+			var code = strconv.Itoa(colors[idx%len(colors)] + 10)
+			line = append(line, "\x1b["+code+"m"+char)
 		}
 
-		// FIXME remove
-		out = append(out, lines[i])
+		// Put line back together again, ensure on_default code at end
+		out = append(out, strings.Join(line, "")+end)
 	}
 
-	// Put it all back together with newlines
-	return strings.Join(out, "\n")
+	// Put lines back together, and remove color codes if the line
+	// only contains color codes
+	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "")
 }
 
 func plainBg(str string, args ...interface{}) string {
@@ -100,19 +107,24 @@ func Rainbow(str string, args ...interface{}) string {
 	var out []string
 
 	// Loop thru lines and apply fg color codes
+	var colors = rainbowColors()
 	for i := range lines {
-		var matches = iterate.FindAllString(lines[i], -1)
-		for idx, char := range matches {
-			// TODO rainbow
-			fmt.Printf("%d -> %s\x1b[0m\n", idx, char)
+		var line []string
+		var chars = iterate.FindAllString(lines[i], -1)
+
+		// Loop thru non-color-code bytes and apply on_rainbow
+		for idx, char := range chars {
+			var code = strconv.Itoa(colors[idx%len(colors)])
+			line = append(line, "\x1b["+code+"m"+char)
 		}
 
-		// FIXME remove
-		out = append(out, lines[i])
+		// Put line back together again
+		out = append(out, strings.Join(line, ""))
 	}
 
-	// Put it all back together with newlines
-	return strings.Join(out, "\n")
+	// Put lines back together, and remove color codes if the line
+	// only contains color codes
+	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "")
 }
 
 func rainbowColors() []int {
