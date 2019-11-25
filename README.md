@@ -68,7 +68,6 @@ light_cyan             | on_light_cyan
 light_white            | on_light_white
 default                | on_default
 color_000 to color_255 | on_color_000 to on_color_255
-hex_color(hex)         | on_hex_color(hex)
 000000 to ffffff       | on_000000 to on_ffffff
 
 The following modes are supported:
