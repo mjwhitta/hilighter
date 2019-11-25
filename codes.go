@@ -2,6 +2,8 @@ package hilighter
 
 import "fmt"
 
+//go:generate ./scripts/generate_go_funcs
+
 var Colors = map[string]string{
 	"black":         "30",
 	"red":           "31",

@@ -12,4 +12,4 @@ fmt:
 	@go fmt . ./cmd/hl
 
 gen:
-	@./scripts/generate_go_funcs
+	@go generate
