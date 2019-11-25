@@ -41,7 +41,8 @@ func init() {
 	cli.ExitStatus = strings.Join(
 		[]string{
 			"Normally the exit status is 0. In the event of invalid",
-			"or missing arguments, the exit status will be non-zero.",
+			"or missing arguments, the exit status will be 1. If an",
+			"error reading stdin occurs, the exit status will be 2.",
 		},
 		" ",
 	)
@@ -107,7 +108,7 @@ func main() {
 		}
 
 		if scanner.Err() != nil {
-			errx(1, scanner.Err().Error())
+			errx(2, scanner.Err().Error())
 		}
 	}
 }

@@ -1,12 +1,9 @@
-GITLAB = hl "gitlab.com/mjwhitta/hilighter"
-LOCAL = hl "hilighter"
+all: build
 
-all: build unlocal
-
-build: local fmt
+build: fmt
 	@go build ./cmd/hl
 
-clean: unlocal fmt
+clean: fmt
 	@rm -f hl
 
 clena: clean
@@ -16,11 +13,3 @@ fmt:
 
 gen:
 	@./scripts/generate_go_funcs
-
-local:
-	@find cmd -type f -exec sed -i 's#$(GITLAB)#$(LOCAL)#' {} +
-	@rm -f go.mod go.sum
-
-unlocal:
-	@find cmd -type f -exec sed -i 's#$(LOCAL)#$(GITLAB)#' {} +
-	@git checkout go.mod go.sum
