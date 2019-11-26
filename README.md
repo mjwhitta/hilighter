@@ -25,7 +25,7 @@ $ cat some_file | hl wrap
 $ cat some_file | hl wrap_64
 ```
 
-In golang you can do things like the following:
+In Golang you can do things like the following:
 
 ```
 package main
@@ -86,25 +86,66 @@ func main() {
 
     // or
 
+    hl.PrintColor002("3. 8-bit color codes!\n")
+
+    // or
+
     hl.PrintlnColor002("3. 8-bit color codes!")
 
-    // Example 4 (text wrapping)
-    var long_var = "4."
+    // Example 4 (hex)
+
+    var hex = hl.Hex("5f8700", "4. Hex color codes!")
+    fmt.Println(hex)
+
+    // or
+
+    hl.PrintHex("5f8700", "4. Hex color codes!\n")
+
+    // or
+
+    hl.PrintlnHex("5f8700", "4. Hex color codes!")
+
+    // Example 5 (text wrapping)
+    var long_var = "5."
     var word = "hilight"
     for i := 0; i < 32; i++ {
         long_var += " " + word
     }
 
-    var wrapped = hl.Wrap(80, hl.Hilight("green", long_var))
-    fmt.Println(wrapped)
+    fmt.Println(hl.Wrap(80, hl.Hilight("green", long_var)))
 
     // or
 
     hl.PrintWrap(80, hl.Green("%s\n", long_var))
+    hl.Println() // FIXME
 
     // or
 
     hl.PrintlnWrap(80, hl.Green(long_var))
+
+    // Example 6 (rainbow)
+    long_var = "6."
+    for i := 0; i < 8; i++ {
+        long_var += " " + word
+    }
+
+    fmt.Println(hl.Rainbow(long_var))
+
+    // or
+
+    hl.PrintRainbow("%s\n", long_var)
+
+    // or
+
+    hl.PrintlnRainbow(long_var)
+
+    // or
+
+    hl.PrintlnOnRainbow(hl.White(long_var))
+
+    // or
+
+    hl.PrintlnRainbow(hl.OnRainbow(long_var))
 }
 ```
 

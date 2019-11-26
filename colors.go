@@ -56,6 +56,14 @@ func fgColor(code string, str string, args ...interface{}) string {
 	return colorized
 }
 
+func Hex(hex string, str string, args ...interface{}) string {
+	return colorize(hex_to_x256(hex), str, args...)
+}
+
+func OnHex(hex string, str string, args ...interface{}) string {
+	return colorize("on_"+hex_to_x256(hex), str, args...)
+}
+
 func OnRainbow(str string, args ...interface{}) string {
 	if Disable {
 		// Return the string w/o any color codes
