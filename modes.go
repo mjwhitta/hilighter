@@ -1,7 +1,6 @@
 package hilighter
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 )
@@ -36,7 +35,7 @@ func modify(mode string, str string, args ...interface{}) string {
 
 	// Remove other occurrences of specified mode and opposite
 	var tmp = regexp.MustCompile(`\x1b\[(` + rm + ")m")
-	str = tmp.ReplaceAllString(fmt.Sprintf(str, args...), "")
+	str = tmp.ReplaceAllString(Sprintf(str, args...), "")
 
 	// Wrap the whole thing with specified color code
 	var modified = "\x1b[" + Modes[mode] + "m" + str + off

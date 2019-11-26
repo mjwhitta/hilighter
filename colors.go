@@ -1,7 +1,6 @@
 package hilighter
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -97,11 +96,11 @@ func OnRainbow(str string, args ...interface{}) string {
 }
 
 func plainBg(str string, args ...interface{}) string {
-	return bgCodes.ReplaceAllString(fmt.Sprintf(str, args...), "")
+	return bgCodes.ReplaceAllString(Sprintf(str, args...), "")
 }
 
 func plainFg(str string, args ...interface{}) string {
-	return fgCodes.ReplaceAllString(fmt.Sprintf(str, args...), "")
+	return fgCodes.ReplaceAllString(Sprintf(str, args...), "")
 }
 
 func Rainbow(str string, args ...interface{}) string {

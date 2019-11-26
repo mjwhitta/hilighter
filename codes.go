@@ -1,7 +1,5 @@
 package hilighter
 
-import "fmt"
-
 //go:generate ./scripts/generate_go_funcs
 
 var Colors = map[string]string{
@@ -84,12 +82,12 @@ var Modes = map[string]string{
 func init() {
 	// Add all 8-bit colors, fg and bg
 	for i := 0; i < 256; i++ {
-		var key = fmt.Sprintf("color_%03d", i)
-		var val = fmt.Sprintf("38;5;%03d", i)
+		var key = Sprintf("color_%03d", i)
+		var val = Sprintf("38;5;%03d", i)
 		Colors[key] = val
 
-		key = fmt.Sprintf("on_color_%03d", i)
-		val = fmt.Sprintf("48;5;%03d", i)
+		key = Sprintf("on_color_%03d", i)
+		val = Sprintf("48;5;%03d", i)
 		Colors[key] = val
 	}
 }

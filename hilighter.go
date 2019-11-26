@@ -2,7 +2,6 @@ package hilighter
 
 import (
 	"errors"
-	"fmt"
 	"math"
 	"regexp"
 	"strconv"
@@ -111,9 +110,9 @@ func hex_to_x256(hex string) string {
 		math.Pow(float64(gv-g), 2) + math.Pow(float64(gv-b), 2)
 
 	if clr_err <= gray_err {
-		cachedCodes[hex] = fmt.Sprintf("color_%03d", cidx)
+		cachedCodes[hex] = Sprintf("color_%03d", cidx)
 	} else {
-		cachedCodes[hex] = fmt.Sprintf("color_%03d", gidx+232)
+		cachedCodes[hex] = Sprintf("color_%03d", gidx+232)
 	}
 
 	return cachedCodes[hex]
@@ -167,7 +166,7 @@ func Hilights(
 	str string,
 	args ...interface{},
 ) string {
-	str = fmt.Sprintf(str, args...)
+	str = Sprintf(str, args...)
 
 	// Apply all specified color codes
 	for i := range codes {
@@ -179,91 +178,7 @@ func Hilights(
 
 func Plain(str string, args ...interface{}) string {
 	// Strip all color codes
-	return allCodes.ReplaceAllString(fmt.Sprintf(str, args...), "")
-}
-
-func Print(args ...interface{}) {
-	fmt.Print(args...)
-}
-
-func Printf(str string, args ...interface{}) {
-	fmt.Printf(str, args...)
-}
-
-func PrintHex(hex string, str string, args ...interface{}) {
-	fmt.Print(Hex(hex, str, args...))
-}
-
-func PrintHilight(code string, str string, args ...interface{}) {
-	fmt.Print(Hilight(code, str, args...))
-}
-
-func PrintHilights(codes []string, str string, args ...interface{}) {
-	str = fmt.Sprintf(str, args...)
-
-	// Apply all specified color codes
-	for i := range codes {
-		str = Hilight(codes[i], str)
-	}
-
-	// Print the result
-	fmt.Print(str)
-}
-
-func Println(args ...interface{}) {
-	fmt.Println(args...)
-}
-
-func PrintlnHex(hex string, str string, args ...interface{}) {
-	fmt.Println(Hex(hex, str, args...))
-}
-
-func PrintlnHilight(code string, str string, args ...interface{}) {
-	fmt.Println(Hilight(code, str, args...))
-}
-
-func PrintlnHilights(codes []string, str string, args ...interface{}) {
-	str = fmt.Sprintf(str, args...)
-
-	// Apply all specified color codes
-	for i := range codes {
-		str = Hilight(codes[i], str)
-	}
-
-	// Print the result
-	fmt.Println(str)
-}
-
-func PrintlnOnHex(hex string, str string, args ...interface{}) {
-	fmt.Println(OnHex(hex, str, args...))
-}
-
-func PrintlnOnRainbow(str string, args ...interface{}) {
-	fmt.Println(OnRainbow(str, args...))
-}
-
-func PrintlnRainbow(str string, args ...interface{}) {
-	fmt.Println(Rainbow(str, args...))
-}
-
-func PrintlnWrap(width int, str string, args ...interface{}) {
-	fmt.Println(Wrap(width, str, args...))
-}
-
-func PrintOnHex(hex string, str string, args ...interface{}) {
-	fmt.Print(OnHex(hex, str, args...))
-}
-
-func PrintOnRainbow(str string, args ...interface{}) {
-	fmt.Print(OnRainbow(str, args...))
-}
-
-func PrintRainbow(str string, args ...interface{}) {
-	fmt.Print(Rainbow(str, args...))
-}
-
-func PrintWrap(width int, str string, args ...interface{}) {
-	fmt.Print(Wrap(width, str, args...))
+	return allCodes.ReplaceAllString(Sprintf(str, args...), "")
 }
 
 func Sample() {
@@ -271,32 +186,20 @@ func Sample() {
 	var fg, bg string
 	for f := 0; f < 16; f++ {
 		for b := 0; b < 16; b++ {
-			fg = fmt.Sprintf("color_%03d", f)
-			bg = fmt.Sprintf("on_color_%03d", b)
-			fmt.Print(colorize(fg, colorize(bg, " mw ")))
+			fg = Sprintf("color_%03d", f)
+			bg = Sprintf("on_color_%03d", b)
+			Print(colorize(fg, colorize(bg, " mw ")))
 		}
-		fmt.Print("\n")
+		Print("\n")
 	}
-}
-
-func Sprint(args ...interface{}) string {
-	return fmt.Sprint(args...)
-}
-
-func Sprintf(str string, args ...interface{}) string {
-	return fmt.Sprintf(str, args...)
-}
-
-func Sprintln(args ...interface{}) string {
-	return fmt.Sprintln(args...)
 }
 
 func Table() {
 	// Show a pretty table of all 8-bit colors
 	var bg string
 	for i := 0; i < 16; i++ {
-		bg = fmt.Sprintf("on_color_%03d", i)
-		fmt.Print(
+		bg = Sprintf("on_color_%03d", i)
+		Print(
 			colorize(
 				bg,
 				" %s %s ",
@@ -305,12 +208,12 @@ func Table() {
 			),
 		)
 		if (i+1)%8 == 0 {
-			fmt.Print("\n")
+			Print("\n")
 		}
 	}
 	for i := 16; i < 256; i++ {
-		bg = fmt.Sprintf("on_color_%03d", i)
-		fmt.Print(
+		bg = Sprintf("on_color_%03d", i)
+		Print(
 			colorize(
 				bg,
 				" %s %s ",
@@ -319,13 +222,13 @@ func Table() {
 			),
 		)
 		if (i-15)%6 == 0 {
-			fmt.Print("\n")
+			Print("\n")
 		}
 	}
 }
 
 func Wrap(width int, str string, args ...interface{}) string {
-	str = fmt.Sprintf(str, args...)
+	str = Sprintf(str, args...)
 
 	var line = ""
 	var lines []string
