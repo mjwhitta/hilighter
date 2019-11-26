@@ -90,7 +90,7 @@ var Modes = map[string]string{
 }
 
 // Boolean to track version
-const Version = "1.5.1"
+const Version = "1.5.2"
 
 // Various regular expressions
 var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
@@ -103,7 +103,9 @@ var iterate = regexp.MustCompile(
 )
 var newline = regexp.MustCompile(`\n`)
 var notwhitespace = regexp.MustCompile(`\S+`)
-var onlyCodes = regexp.MustCompile(`^(\x1b\[([0-9;]+m|K))+$`)
+var onlyCodes = regexp.MustCompile(
+	`(^|\n)(\x1b\[([0-9;]+m|K))+(\n|$)`,
+)
 var parseHex = regexp.MustCompile(
 	`(?i)^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?$`,
 )

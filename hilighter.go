@@ -21,9 +21,7 @@ func bgColor(code string, str string, args ...interface{}) string {
 		"\x1b[" + Colors["on_default"] + "m"
 
 	// Remove color codes, if the line only contains color codes
-	colorized = onlyCodes.ReplaceAllString(colorized, "")
-
-	return colorized
+	return onlyCodes.ReplaceAllString(colorized, "$1$4")
 }
 
 func colorize(clr string, str string, args ...interface{}) string {
@@ -53,9 +51,7 @@ func fgColor(code string, str string, args ...interface{}) string {
 		"\x1b[" + Colors["default"] + "m"
 
 	// Remove color codes, if the line only contains color codes
-	colorized = onlyCodes.ReplaceAllString(colorized, "")
-
-	return colorized
+	return onlyCodes.ReplaceAllString(colorized, "$1$4")
 }
 
 func Hex(hex string, str string, args ...interface{}) string {
@@ -240,9 +236,7 @@ func modify(mode string, str string, args ...interface{}) string {
 	var modified = "\x1b[" + Modes[mode] + "m" + str + off
 
 	// Remove color codes, if the line only contains color codes
-	modified = onlyCodes.ReplaceAllString(modified, "")
-
-	return modified
+	return onlyCodes.ReplaceAllString(modified, "$1$4")
 }
 
 func OnHex(hex string, str string, args ...interface{}) string {
@@ -278,7 +272,7 @@ func OnRainbow(str string, args ...interface{}) string {
 
 	// Put lines back together, and remove color codes if the line
 	// only contains color codes
-	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "")
+	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "$1$4")
 }
 
 func Plain(str string, args ...interface{}) string {
@@ -322,7 +316,7 @@ func Rainbow(str string, args ...interface{}) string {
 
 	// Put lines back together, and remove color codes if the line
 	// only contains color codes
-	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "")
+	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "$1$4")
 }
 
 func rainbowColors() []int {
@@ -404,7 +398,7 @@ func Wrap(width int, str string, args ...interface{}) string {
 	}
 
 	// If original string ended with newline, put it back
-	if strings.HasSuffix(Plain(str), "\n") {
+	if strings.HasSuffix(str, "\n") {
 		lines = append(lines, "")
 	}
 
