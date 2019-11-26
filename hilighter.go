@@ -403,6 +403,7 @@ func Wrap(width int, str string, args ...interface{}) string {
 		lines = append(lines, line)
 	}
 
+	// If original string ended with newline, put it back
 	if strings.HasSuffix(Plain(str), "\n") {
 		lines = append(lines, "")
 	}
