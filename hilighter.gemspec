@@ -16,5 +16,5 @@ Gem::Specification.new do |s|
     s.metadata = {"source_code_uri" => s.homepage}
     s.name = "hilighter"
     s.summary = "Adds color methods to String class"
-    s.version = "1.5.1"
+    s.version = "1.5.2"
 end

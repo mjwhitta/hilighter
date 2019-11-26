@@ -1,7 +1,7 @@
 class Hilighter
     module Codes
         def add_methods
-            color_regex = /^(\e\[([0-9;]+m|K))+$/
+            color_regex = /(^|\n)(\e\[([0-9;]+m|K))+(\n|$)/
 
             colors.each do |key, val|
                 if (key.start_with?("on_"))
@@ -16,7 +16,7 @@ class Hilighter
                                 "\e[#{on_default}m\n\e[#{val}m"
                             ),
                             "\e[#{on_default}m"
-                        ].join.gsub(color_regex, "")
+                        ].join.gsub(color_regex, "\\1\\4")
                     end
                 else
                     default = colors["default"]
@@ -30,7 +30,7 @@ class Hilighter
                                 "\e[#{default}m\n\e[#{val}m"
                             ),
                             "\e[#{default}m"
-                        ].join.gsub(color_regex, "")
+                        ].join.gsub(color_regex, "\\1\\4")
                     end
                 end
             end
@@ -53,7 +53,7 @@ class Hilighter
                     self.gsub!(/\e\[(#{rm})m/, "")
                     return "\e[#{val}m#{self}#{off}".gsub(
                         color_regex,
-                        ""
+                        "\\1\\4"
                     )
                 end
             end
