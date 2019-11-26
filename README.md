@@ -117,7 +117,6 @@ func main() {
     // or
 
     hl.PrintWrap(80, hl.Green("%s\n", long_var))
-    hl.Println() // FIXME
 
     // or
 

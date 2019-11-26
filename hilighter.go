@@ -403,6 +403,10 @@ func Wrap(width int, str string, args ...interface{}) string {
 		lines = append(lines, line)
 	}
 
+	if strings.HasSuffix(Plain(str), "\n") {
+		lines = append(lines, "")
+	}
+
 	// Join lines and return
 	return strings.Join(lines, "\n")
 }
