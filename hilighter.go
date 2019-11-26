@@ -3,6 +3,7 @@ package hilighter
 import (
 	"errors"
 	"fmt"
+	"math"
 	"regexp"
 	"strconv"
 	"strings"
@@ -11,21 +12,112 @@ import (
 // Boolean to disable all color codes
 var Disable = false
 
+// Cached hex to xterm-256 8-bit mappings
+var cachedCodes = map[string]string{}
+
+// Boolean to track version
+const Version = "1.5.1"
+
 // Various regular expressions
 var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
 var bgCodes = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
 var doubleno = regexp.MustCompile(`no_no_`)
 var fgCodes = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
+var hexCode = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
 var iterate = regexp.MustCompile(
 	`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
 )
 var newline = regexp.MustCompile(`\n`)
 var notwhitespace = regexp.MustCompile(`\S+`)
 var onlyCodes = regexp.MustCompile(`^(\x1b\[([0-9;]+m|K))+$`)
+var parseHex = regexp.MustCompile(
+	`(?i)^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?$`,
+)
 var wrap = regexp.MustCompile(`wrap(_(\d+))?`)
 
-// Boolean to track version
-const Version = "1.5.1"
+// Convert hex to xterm-256 8-bit value
+// https://stackoverflow.com/questions/11765623/convert-hex-hex_to_256bitto-closest-x11-color-number
+func hex_to_x256(hex string) string {
+	var hasKey bool
+	if _, hasKey = cachedCodes[hex]; hasKey {
+		return cachedCodes[hex]
+	}
+
+	// For simplicity, assume RGB space is perceptually uniform.
+	// There are 5 places where one of two outputs needs to be
+	// chosen when the input is the exact middle:
+	// - The r/g/b channels and the gray value:
+	//     - the higher value output is chosen
+	// - If the gray and color values have same distance from the
+	//   input
+	//     - color is chosen
+
+	// Calculate the nearest 0-based color index at 16..231
+	var r, g, b = uint64(0), uint64(0), uint64(0)
+	var matches = parseHex.FindAllStringSubmatch(hex, -1)
+	for _, match := range matches {
+		r, _ = strconv.ParseUint(match[1], 16, 8)
+		g, _ = strconv.ParseUint(match[2], 16, 8)
+		b, _ = strconv.ParseUint(match[3], 16, 8)
+	}
+
+	// 0..5 each
+	var ir = (r - 35) / 40
+	if r < 48 {
+		ir = 0
+	} else if r < 115 {
+		ir = 1
+	}
+	var ig = (g - 35) / 40
+	if g < 48 {
+		ig = 0
+	} else if g < 115 {
+		ig = 1
+	}
+	var ib = (b - 35) / 40
+	if b < 48 {
+		ib = 0
+	} else if b < 115 {
+		ib = 1
+	}
+
+	// 0..215 lazy evaluation
+	var cidx = (36 * ir) + (6 * ig) + ib + 16
+
+	// Calculate the nearest 0-based gray index at 232..255
+	var average = (r + g + b) / 3
+
+	// 0..23
+	var gidx = (average - 3) / 10
+	if average > 238 {
+		gidx = 23
+	}
+
+	// Calculate the represented colors back from the index
+	var i2cv = []uint64{0, 0x5f, 0x87, 0xaf, 0xd7, 0xff}
+
+	// r/g/b 0..255 each
+	var cr = i2cv[ir]
+	var cg = i2cv[ig]
+	var cb = i2cv[ib]
+
+	// same value for r/g/b 0..255
+	var gv = (10 * gidx) + 8
+
+	// Return the one which is nearer to the original rgb values
+	var clr_err = math.Pow(float64(cr-r), 2) +
+		math.Pow(float64(cg-g), 2) + math.Pow(float64(cb-b), 2)
+	var gray_err = math.Pow(float64(gv-r), 2) +
+		math.Pow(float64(gv-g), 2) + math.Pow(float64(gv-b), 2)
+
+	if clr_err <= gray_err {
+		cachedCodes[hex] = fmt.Sprintf("color_%03d", cidx)
+	} else {
+		cachedCodes[hex] = fmt.Sprintf("color_%03d", gidx+232)
+	}
+
+	return cachedCodes[hex]
+}
 
 func Hilight(code string, str string, args ...interface{}) string {
 	// Call the appropriate function
@@ -43,8 +135,18 @@ func Hilight(code string, str string, args ...interface{}) string {
 		case "rainbow":
 			return Rainbow(str, args...)
 		default:
+			// Check if hex color code
+			var matches = hexCode.FindAllStringSubmatch(code, -1)
+			for _, match := range matches {
+				var clr = hex_to_x256(match[2])
+				if strings.HasPrefix(code, "on_") {
+					clr = "on_" + clr
+				}
+				return colorize(clr, str, args...)
+			}
+
 			// Check if wrap
-			var matches = wrap.FindAllStringSubmatch(code, -1)
+			matches = wrap.FindAllStringSubmatch(code, -1)
 			for _, match := range matches {
 				// Determine wrap width, default to 80
 				var width = 80
