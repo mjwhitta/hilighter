@@ -84,8 +84,8 @@ class Hilighter
         end
 
         def wrap(width = 80)
-            lines = Array.new
             line = ""
+            lines = Array.new
             self.split(/\s+/).each do |word|
                 if ((line.plain.size + word.plain.size) > width)
                     lines.push("#{line}\n")

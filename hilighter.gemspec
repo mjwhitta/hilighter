@@ -13,9 +13,7 @@ Gem::Specification.new do |s|
     s.files = Dir["lib/**/*.rb"]
     s.homepage = "https://gitlab.com/mjwhitta/hilighter/tree/ruby"
     s.license = "GPL-3.0"
-    s.metadata = {
-        "source_code_uri" => "https://gitlab.com/mjwhitta/hilighter/tree/ruby"
-    }
+    s.metadata = {"source_code_uri" => s.homepage}
     s.name = "hilighter"
     s.summary = "Adds color methods to String class"
     s.version = "1.5.1"
