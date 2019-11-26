@@ -2,6 +2,9 @@ package hilighter
 
 //go:generate ./scripts/generate_go_funcs
 
+import "regexp"
+
+// Color codes
 var Colors = map[string]string{
 	"black":         "30",
 	"red":           "31",
@@ -41,6 +44,13 @@ var Colors = map[string]string{
 	"on_default": "49",
 }
 
+// Boolean to disable all color codes
+var Disable = false
+
+// Cached hex to xterm-256 8-bit mappings
+var cachedCodes = map[string]string{}
+
+// Mode codes
 var Modes = map[string]string{
 	"reset":         "0",
 	"normal":        "0",
@@ -78,6 +88,26 @@ var Modes = map[string]string{
 	"no_crossed_out":   "29",
 	"no_strikethrough": "29",
 }
+
+// Boolean to track version
+const Version = "1.5.1"
+
+// Various regular expressions
+var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
+var bgCodes = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
+var doubleno = regexp.MustCompile(`no_no_`)
+var fgCodes = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
+var hexCode = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
+var iterate = regexp.MustCompile(
+	`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
+)
+var newline = regexp.MustCompile(`\n`)
+var notwhitespace = regexp.MustCompile(`\S+`)
+var onlyCodes = regexp.MustCompile(`^(\x1b\[([0-9;]+m|K))+$`)
+var parseHex = regexp.MustCompile(
+	`(?i)^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?$`,
+)
+var wrap = regexp.MustCompile(`wrap(_(\d+))?`)
 
 func init() {
 	// Add all 8-bit colors, fg and bg
