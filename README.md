@@ -7,6 +7,8 @@ method for wrapping strings that accounts for color escape codes.
 
 ## How to install
 
+Open a terminal and run the following:
+
 ```
 $ go get -u gitlab.com/mjwhitta/hilighter/cmd/hl
 ```
