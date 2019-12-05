@@ -90,7 +90,7 @@ var Modes = map[string]string{
 }
 
 // Boolean to track version
-const Version = "1.5.2"
+const Version = "1.5.3"
 
 // Various regular expressions
 var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)

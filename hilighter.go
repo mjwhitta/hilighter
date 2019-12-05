@@ -55,12 +55,12 @@ func fgColor(code string, str string, args ...interface{}) string {
 }
 
 func Hex(hex string, str string, args ...interface{}) string {
-	return colorize(hex_to_x256(hex), str, args...)
+	return colorize(hexToXterm256(hex), str, args...)
 }
 
 // Convert hex to xterm-256 8-bit value
 // https://stackoverflow.com/questions/11765623/convert-hex-hex_to_256bitto-closest-x11-color-number
-func hex_to_x256(hex string) string {
+func hexToXterm256(hex string) string {
 	var hasKey bool
 	if _, hasKey = cachedCodes[hex]; hasKey {
 		return cachedCodes[hex]
@@ -161,7 +161,7 @@ func Hilight(code string, str string, args ...interface{}) string {
 			// Check if hex color code
 			var matches = hexCode.FindAllStringSubmatch(code, -1)
 			for _, match := range matches {
-				var clr = hex_to_x256(match[2])
+				var clr = hexToXterm256(match[2])
 				if strings.HasPrefix(code, "on_") {
 					clr = "on_" + clr
 				}
@@ -240,7 +240,7 @@ func modify(mode string, str string, args ...interface{}) string {
 }
 
 func OnHex(hex string, str string, args ...interface{}) string {
-	return colorize("on_"+hex_to_x256(hex), str, args...)
+	return colorize("on_"+hexToXterm256(hex), str, args...)
 }
 
 func OnRainbow(str string, args ...interface{}) string {
