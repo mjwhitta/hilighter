@@ -33,9 +33,8 @@ func colorize(clr string, str string, args ...interface{}) string {
 	// Call the appropriate function
 	if strings.HasPrefix(clr, "on_") {
 		return bgColor(clr, str, args...)
-	} else {
-		return fgColor(clr, str, args...)
 	}
+	return fgColor(clr, str, args...)
 }
 
 func fgColor(code string, str string, args ...interface{}) string {
@@ -128,12 +127,12 @@ func hexToXterm256(hex string) string {
 	var gv = (10 * gidx) + 8
 
 	// Return the one which is nearer to the original rgb values
-	var clr_err = math.Pow(float64(cr-r), 2) +
+	var clrErr = math.Pow(float64(cr-r), 2) +
 		math.Pow(float64(cg-g), 2) + math.Pow(float64(cb-b), 2)
-	var gray_err = math.Pow(float64(gv-r), 2) +
+	var grayErr = math.Pow(float64(gv-r), 2) +
 		math.Pow(float64(gv-g), 2) + math.Pow(float64(gv-b), 2)
 
-	if clr_err <= gray_err {
+	if clrErr <= grayErr {
 		cachedCodes[hex] = Sprintf("color_%03d", cidx)
 	} else {
 		cachedCodes[hex] = Sprintf("color_%03d", gidx+232)
