@@ -4,7 +4,7 @@ package hilighter
 
 import "regexp"
 
-// Color codes
+// Colors maps color names to color codes
 var Colors = map[string]string{
 	"black":         "30",
 	"red":           "31",
@@ -44,13 +44,13 @@ var Colors = map[string]string{
 	"on_default": "49",
 }
 
-// Boolean to disable all color codes
+// Disable is used to disable all color codes
 var Disable = false
 
 // Cached hex to xterm-256 8-bit mappings
 var cachedCodes = map[string]string{}
 
-// Mode codes
+// Modes maps mode names to mode codes
 var Modes = map[string]string{
 	"reset":         "0",
 	"normal":        "0",
@@ -89,8 +89,8 @@ var Modes = map[string]string{
 	"no_strikethrough": "29",
 }
 
-// Boolean to track version
-const Version = "1.5.4"
+// Version is the package version
+const Version = "1.5.5"
 
 // Various regular expressions
 var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)

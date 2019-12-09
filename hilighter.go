@@ -53,6 +53,8 @@ func fgColor(code string, str string, args ...interface{}) string {
 	return onlyCodes.ReplaceAllString(colorized, "$1$4")
 }
 
+// Hex will take a hex color code and add the appropriate ANSI color
+// codes to the provided string.
 func Hex(hex string, str string, args ...interface{}) string {
 	return colorize(hexToXterm256(hex), str, args...)
 }
@@ -141,6 +143,8 @@ func hexToXterm256(hex string) string {
 	return cachedCodes[hex]
 }
 
+// Hilight will add the appropriate ANSI code to the specified
+// string.
 func Hilight(code string, str string, args ...interface{}) string {
 	// Call the appropriate function
 	var hasKey bool
@@ -184,6 +188,8 @@ func Hilight(code string, str string, args ...interface{}) string {
 	}
 }
 
+// Hilights will add the appropriate ANSI codes to the specified
+// string.
 func Hilights(
 	codes []string,
 	str string,
@@ -238,10 +244,14 @@ func modify(mode string, str string, args ...interface{}) string {
 	return onlyCodes.ReplaceAllString(modified, "$1$4")
 }
 
+// OnHex will take a hex color code and add the appropriate ANSI color
+// codes to the provided string.
 func OnHex(hex string, str string, args ...interface{}) string {
 	return colorize("on_"+hexToXterm256(hex), str, args...)
 }
 
+// OnRainbow will add multiple ANSI color codes to a string for a
+// rainbow effect.
 func OnRainbow(str string, args ...interface{}) string {
 	if Disable {
 		// Return the string w/o any color codes
@@ -274,6 +284,7 @@ func OnRainbow(str string, args ...interface{}) string {
 	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "$1$4")
 }
 
+// Plain will strip all ANSI color codes from a string.
 func Plain(str string, args ...interface{}) string {
 	// Strip all color codes
 	return allCodes.ReplaceAllString(Sprintf(str, args...), "")
@@ -287,6 +298,8 @@ func plainFg(str string, args ...interface{}) string {
 	return fgCodes.ReplaceAllString(Sprintf(str, args...), "")
 }
 
+// Rainbow will add multiple ANSI color codes to a string for a
+// rainbow effect.
 func Rainbow(str string, args ...interface{}) string {
 	if Disable {
 		// Return the string w/o any color codes
@@ -323,8 +336,8 @@ func rainbowColors() []int {
 	return []int{31, 32, 33, 34, 35, 36, 91, 92, 93, 94, 95, 96}
 }
 
+// Sample will show all bg/fg combos of the first 16 8-bit colors.
 func Sample() {
-	// Show all bg/fg combos of the first 16 colors
 	var fg, bg string
 	for f := 0; f < 16; f++ {
 		for b := 0; b < 16; b++ {
@@ -336,8 +349,8 @@ func Sample() {
 	}
 }
 
+// Table will display a pretty table of all 8-bit colors.
 func Table() {
-	// Show a pretty table of all 8-bit colors
 	var bg string
 	for i := 0; i < 16; i++ {
 		bg = Sprintf("on_color_%03d", i)
@@ -369,6 +382,7 @@ func Table() {
 	}
 }
 
+// Wrap will wrap a string to the specified width.
 func Wrap(width int, str string, args ...interface{}) string {
 	str = Sprintf(str, args...)
 
