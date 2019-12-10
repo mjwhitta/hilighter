@@ -23,6 +23,15 @@ func warn(msg string)    { hl.PrintlnYellow("[-] %s", msg) }
 
 // Helpers end
 
+// Exit status
+const (
+	Good            int = 0
+	InvalidOption   int = 1
+	MissingArgument int = 2
+	Exception       int = 3
+	Stdin           int = 4
+)
+
 var nocolor bool
 var sample bool
 var table bool
@@ -39,9 +48,12 @@ func init() {
 	cli.BugEmail = "hilighter.bugs@whitta.dev"
 	cli.ExitStatus = strings.Join(
 		[]string{
-			"Normally the exit status is 0. In the event of invalid",
-			"or missing arguments, the exit status will be 1. If an",
-			"error reading stdin occurs, the exit status will be 2.",
+			"Normally the exit status is 0. In the event of an error",
+			"the exit status will be one of the below:\n\n",
+			"  1: Invalid option\n",
+			"  2: Missing argument\n",
+			"  3: Exception\n",
+			"  4: Error reading stdin",
 		},
 		" ",
 	)
@@ -68,9 +80,12 @@ func init() {
 	cli.Parse()
 
 	// Validate cli flags
-	if (!sample && !table && !version && (cli.NArg() == 0)) ||
-		((sample || table || version) && (cli.NArg() != 0)) {
-		cli.Usage(1)
+	if !sample && !table && !version && (cli.NArg() == 0) {
+		cli.Usage(MissingArgument)
+	} else if (sample || table || version) && (cli.NArg() != 0) {
+		cli.Usage(InvalidOption)
+	} else if sample && table {
+		cli.Usage(InvalidOption)
 	}
 }
 
@@ -79,7 +94,7 @@ func main() {
 
 	defer func() {
 		if r := recover(); r != nil {
-			err(r.(error).Error())
+			errx(Exception, r.(error).Error())
 		}
 	}()
 
@@ -107,7 +122,7 @@ func main() {
 		}
 
 		if scanner.Err() != nil {
-			errx(2, scanner.Err().Error())
+			errx(Stdin, scanner.Err().Error())
 		}
 	}
 }
