@@ -1,18 +1,19 @@
 all: build
 
-build: check fmt
-	@go build ./cmd/hl
+build: fmt
+	@mkdir -p ./build
+	@go build -o ./build ./cmd/*
 
 check:
 	@which go >/dev/null 2>&1
 
 clean: fmt
-	@rm -f hl
+	@rm -rf build
 
 clena: clean
 
 fmt: check
-	@go fmt . ./cmd/hl
+	@go fmt . ./cmd/*
 
 gen: check
 	@go generate

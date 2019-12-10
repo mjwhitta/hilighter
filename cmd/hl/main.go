@@ -88,7 +88,7 @@ func main() {
 	} else if table {
 		hl.Table()
 	} else if version {
-		hl.Printf("Version: %s\n", hl.Version)
+		hl.Printf("hilighter version %s\n", hl.Version)
 	} else {
 		var line string
 		var scanner = bufio.NewScanner(os.Stdin)
