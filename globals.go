@@ -90,7 +90,7 @@ var Modes = map[string]string{
 }
 
 // Version is the package version
-const Version = "1.5.8"
+const Version = "1.5.9"
 
 // Various regular expressions
 var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
@@ -102,7 +102,6 @@ var iterate = regexp.MustCompile(
 	`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
 )
 var newline = regexp.MustCompile(`\n`)
-var notwhitespace = regexp.MustCompile(`\S+`)
 var onlyCodes = regexp.MustCompile(
 	`(^|\n)(\x1b\[([0-9;]+m|K))+(\n|$)`,
 )

@@ -388,16 +388,16 @@ func Wrap(width int, str string, args ...interface{}) string {
 
 	var line = ""
 	var lines []string
-	var words = notwhitespace.FindAllString(str, -1)
+	var words = strings.Fields(str)
 
 	// Loop thru words
 	for _, word := range words {
-		if len(Plain(line))+len(Plain(word)) > width {
+		if len(line) == 0 {
+			// Can't wrap less than a single word
+			line = word
+		} else if len(Plain(line))+len(Plain(word))+1 > width {
 			// Wrap if line would be longer than width
 			lines = append(lines, line)
-			line = word
-		} else if len(line) == 0 {
-			// Can't wrap less than a single word
 			line = word
 		} else {
 			// Append word to line
