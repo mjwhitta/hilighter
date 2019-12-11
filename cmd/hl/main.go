@@ -32,10 +32,15 @@ const (
 	Stdin           int = 4
 )
 
-var nocolor bool
-var sample bool
-var table bool
-var version bool
+// Flags
+type cliFlags struct {
+	nocolor bool
+	sample  bool
+	table   bool
+	version bool
+}
+
+var flags cliFlags
 
 func init() {
 	// Configure cli package
@@ -67,30 +72,32 @@ func init() {
 	cli.Title = "Hilighter"
 
 	// Parse cli flags
-	cli.Flag(&nocolor, "no-color", false, "Disable colorized output.")
 	cli.Flag(
-		&sample,
+		&flags.nocolor,
+		"no-color",
+		false,
+		"Disable colorized output.",
+	)
+	cli.Flag(
+		&flags.sample,
 		"s",
 		"sample",
 		false,
 		"Show sample foreground/background colors.",
 	)
-	cli.Flag(&table, "t", "table", false, "Show the color table.")
-	cli.Flag(&version, "V", "version", false, "Show version.")
+	cli.Flag(
+		&flags.table,
+		"t",
+		"table",
+		false,
+		"Show the color table.",
+	)
+	cli.Flag(&flags.version, "V", "version", false, "Show version.")
 	cli.Parse()
-
-	// Validate cli flags
-	if !sample && !table && !version && (cli.NArg() == 0) {
-		cli.Usage(MissingArgument)
-	} else if (sample || table || version) && (cli.NArg() != 0) {
-		cli.Usage(InvalidOption)
-	} else if sample && table {
-		cli.Usage(InvalidOption)
-	}
 }
 
 func main() {
-	hl.Disable = nocolor
+	hl.Disable = flags.nocolor
 
 	defer func() {
 		if r := recover(); r != nil {
@@ -98,12 +105,12 @@ func main() {
 		}
 	}()
 
-	if sample {
+	validate()
+
+	if flags.sample {
 		hl.Sample()
-	} else if table {
+	} else if flags.table {
 		hl.Table()
-	} else if version {
-		hl.Printf("hilighter version %s\n", hl.Version)
 	} else {
 		var line string
 		var scanner = bufio.NewScanner(os.Stdin)
@@ -124,5 +131,23 @@ func main() {
 		if scanner.Err() != nil {
 			errx(Stdin, scanner.Err().Error())
 		}
+	}
+}
+
+// Process cli flags and ensure no issues
+func validate() {
+	// Short circuit if version was requested
+	if flags.version {
+		hl.Printf("hilighter version %s\n", hl.Version)
+		os.Exit(Good)
+	}
+
+	// Validate cli flags
+	if !flags.sample && !flags.table && (cli.NArg() == 0) {
+		cli.Usage(MissingArgument)
+	} else if (flags.sample || flags.table) && (cli.NArg() != 0) {
+		cli.Usage(InvalidOption)
+	} else if flags.sample && flags.table {
+		cli.Usage(InvalidOption)
 	}
 }
