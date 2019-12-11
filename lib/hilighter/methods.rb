@@ -87,17 +87,18 @@ class Hilighter
             line = ""
             lines = Array.new
             self.split(/\s+/).each do |word|
-                if ((line.plain.size + word.plain.size) > width)
-                    lines.push("#{line}\n")
+                if (line.empty?)
                     line = word
-                elsif (line.empty?)
+                elsif ((line.plain.size + word.plain.size) + 1 > width)
+                    lines.push(line)
                     line = word
                 else
                     line += " #{word}"
                 end
             end
-            lines.push("#{line}\n") if (!line.empty?)
-            return lines.join
+            lines.push(line) if (!line.empty?)
+            lines.push("") if (self.end_with?("\n"))
+            return lines.join("\n")
         end
     end
 end
