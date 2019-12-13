@@ -28,8 +28,8 @@ func PrintHilights(codes []string, str string, args ...interface{}) {
 	str = fmt.Sprintf(str, args...)
 
 	// Apply all specified color codes
-	for i := range codes {
-		str = Hilight(codes[i], str)
+	for _, code := range codes {
+		str = Hilight(code, str)
 	}
 
 	// Print the result
@@ -61,8 +61,8 @@ func PrintlnHilights(
 	str = fmt.Sprintf(str, args...)
 
 	// Apply all specified color codes
-	for i := range codes {
-		str = Hilight(codes[i], str)
+	for _, code := range codes {
+		str = Hilight(code, str)
 	}
 
 	// Print the result

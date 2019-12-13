@@ -9,6 +9,8 @@ import (
 )
 
 func bgColor(code string, str string, args ...interface{}) string {
+	var colorized string
+
 	// Strip all other bg color codes and don't extend bg color over
 	// newlines
 	str = newline.ReplaceAllString(
@@ -17,7 +19,7 @@ func bgColor(code string, str string, args ...interface{}) string {
 	)
 
 	// Wrap whole thing with specified color code
-	var colorized = "\x1b[" + Colors[code] + "m" + str +
+	colorized = "\x1b[" + Colors[code] + "m" + str +
 		"\x1b[" + Colors["on_default"] + "m"
 
 	// Remove color codes, if the line only contains color codes
@@ -38,6 +40,8 @@ func colorize(clr string, str string, args ...interface{}) string {
 }
 
 func fgColor(code string, str string, args ...interface{}) string {
+	var colorized string
+
 	// Strip all other fg color codes and don't extend fg color over
 	// newlines
 	str = newline.ReplaceAllString(
@@ -46,7 +50,7 @@ func fgColor(code string, str string, args ...interface{}) string {
 	)
 
 	// Wrap whole thing with specified color code
-	var colorized = "\x1b[" + Colors[code] + "m" + str +
+	colorized = "\x1b[" + Colors[code] + "m" + str +
 		"\x1b[" + Colors["default"] + "m"
 
 	// Remove color codes, if the line only contains color codes
@@ -67,6 +71,24 @@ func hexToXterm256(hex string) string {
 		return cachedCodes[hex]
 	}
 
+	var average uint64
+	var b uint64
+	var cb uint64
+	var cg uint64
+	var cidx uint64
+	var clrErr float64
+	var cr uint64
+	var g uint64
+	var gidx uint64
+	var grayErr float64
+	var gv uint64
+	var i2cv []uint64
+	var ib uint64
+	var ig uint64
+	var ir uint64
+	var matches [][]string
+	var r uint64
+
 	// For simplicity, assume RGB space is perceptually uniform.
 	// There are 5 places where one of two outputs needs to be
 	// chosen when the input is the exact middle:
@@ -77,8 +99,8 @@ func hexToXterm256(hex string) string {
 	//     - color is chosen
 
 	// Calculate the nearest 0-based color index at 16..231
-	var r, g, b = uint64(0), uint64(0), uint64(0)
-	var matches = parseHex.FindAllStringSubmatch(hex, -1)
+	r, g, b = 0, 0, 0
+	matches = parseHex.FindAllStringSubmatch(hex, -1)
 	for _, match := range matches {
 		r, _ = strconv.ParseUint(match[1], 16, 8)
 		g, _ = strconv.ParseUint(match[2], 16, 8)
@@ -86,19 +108,19 @@ func hexToXterm256(hex string) string {
 	}
 
 	// 0..5 each
-	var ir = (r - 35) / 40
+	ir = (r - 35) / 40
 	if r < 48 {
 		ir = 0
 	} else if r < 115 {
 		ir = 1
 	}
-	var ig = (g - 35) / 40
+	ig = (g - 35) / 40
 	if g < 48 {
 		ig = 0
 	} else if g < 115 {
 		ig = 1
 	}
-	var ib = (b - 35) / 40
+	ib = (b - 35) / 40
 	if b < 48 {
 		ib = 0
 	} else if b < 115 {
@@ -106,32 +128,32 @@ func hexToXterm256(hex string) string {
 	}
 
 	// 0..215 lazy evaluation
-	var cidx = (36 * ir) + (6 * ig) + ib + 16
+	cidx = (36 * ir) + (6 * ig) + ib + 16
 
 	// Calculate the nearest 0-based gray index at 232..255
-	var average = (r + g + b) / 3
+	average = (r + g + b) / 3
 
 	// 0..23
-	var gidx = (average - 3) / 10
+	gidx = (average - 3) / 10
 	if average > 238 {
 		gidx = 23
 	}
 
 	// Calculate the represented colors back from the index
-	var i2cv = []uint64{0, 0x5f, 0x87, 0xaf, 0xd7, 0xff}
+	i2cv = []uint64{0, 0x5f, 0x87, 0xaf, 0xd7, 0xff}
 
 	// r/g/b 0..255 each
-	var cr = i2cv[ir]
-	var cg = i2cv[ig]
-	var cb = i2cv[ib]
+	cr = i2cv[ir]
+	cg = i2cv[ig]
+	cb = i2cv[ib]
 
 	// same value for r/g/b 0..255
-	var gv = (10 * gidx) + 8
+	gv = (10 * gidx) + 8
 
 	// Return the one which is nearer to the original rgb values
-	var clrErr = math.Pow(float64(cr-r), 2) +
+	clrErr = math.Pow(float64(cr-r), 2) +
 		math.Pow(float64(cg-g), 2) + math.Pow(float64(cb-b), 2)
-	var grayErr = math.Pow(float64(gv-r), 2) +
+	grayErr = math.Pow(float64(gv-r), 2) +
 		math.Pow(float64(gv-g), 2) + math.Pow(float64(gv-b), 2)
 
 	if clrErr <= grayErr {
@@ -146,8 +168,12 @@ func hexToXterm256(hex string) string {
 // Hilight will add the appropriate ANSI code to the specified
 // string.
 func Hilight(code string, str string, args ...interface{}) string {
-	// Call the appropriate function
+	var clr string
 	var hasKey bool
+	var matches [][]string
+	var width int
+
+	// Call the appropriate function
 	if _, hasKey = Colors[code]; hasKey {
 		return colorize(code, str, args...)
 	} else if _, hasKey = Modes[code]; hasKey {
@@ -162,9 +188,9 @@ func Hilight(code string, str string, args ...interface{}) string {
 			return Rainbow(str, args...)
 		default:
 			// Check if hex color code
-			var matches = hexCode.FindAllStringSubmatch(code, -1)
+			matches = hexCode.FindAllStringSubmatch(code, -1)
 			for _, match := range matches {
-				var clr = hexToXterm256(match[2])
+				clr = hexToXterm256(match[2])
 				if strings.HasPrefix(code, "on_") {
 					clr = "on_" + clr
 				}
@@ -175,7 +201,7 @@ func Hilight(code string, str string, args ...interface{}) string {
 			matches = wrap.FindAllStringSubmatch(code, -1)
 			for _, match := range matches {
 				// Determine wrap width, default to 80
-				var width = 80
+				width = 80
 				if len(match) == 3 && len(match[2]) > 0 {
 					width, _ = strconv.Atoi(match[2])
 				}
@@ -198,8 +224,8 @@ func Hilights(
 	str = Sprintf(str, args...)
 
 	// Apply all specified color codes
-	for i := range codes {
-		str = Hilight(codes[i], str)
+	for _, code := range codes {
+		str = Hilight(code, str)
 	}
 
 	return str
@@ -211,18 +237,24 @@ func modify(mode string, str string, args ...interface{}) string {
 		return Plain(str, args...)
 	}
 
+	var hasKey bool
+	var modified string
+	var off string
+	var opposite string
+	var r *regexp.Regexp
+	var rm string
+
 	// Reverse mode
-	var opposite = "no_" + mode
+	opposite = "no_" + mode
 	if strings.HasPrefix(opposite, "no_no_") {
 		opposite = doubleno.ReplaceAllString(opposite, "")
 	}
 
 	// Store specified mode code for removal
-	var rm = Modes[mode]
+	rm = Modes[mode]
 
 	// Determine the off color code, if it exists
-	var hasKey bool
-	var off = ""
+	off = ""
 	if _, hasKey = Modes[opposite]; hasKey {
 		// Store opposite code for removal
 		rm += "|" + Modes[opposite]
@@ -234,11 +266,11 @@ func modify(mode string, str string, args ...interface{}) string {
 	}
 
 	// Remove other occurrences of specified mode and opposite
-	var tmp = regexp.MustCompile(`\x1b\[(` + rm + ")m")
-	str = tmp.ReplaceAllString(Sprintf(str, args...), "")
+	r = regexp.MustCompile(`\x1b\[(` + rm + ")m")
+	str = r.ReplaceAllString(Sprintf(str, args...), "")
 
 	// Wrap the whole thing with specified color code
-	var modified = "\x1b[" + Modes[mode] + "m" + str + off
+	modified = "\x1b[" + Modes[mode] + "m" + str + off
 
 	// Remove color codes, if the line only contains color codes
 	return onlyCodes.ReplaceAllString(modified, "$1$4")
@@ -258,20 +290,27 @@ func OnRainbow(str string, args ...interface{}) string {
 		return Plain(str, args...)
 	}
 
-	// Strip all other bg color codes and split on newline
-	var lines = strings.Split(plainBg(str, args...), "\n")
+	var chars []string
+	var code string
+	var colors []int
+	var end string
+	var line []string
+	var lines []string
 	var out []string
 
+	// Strip all other bg color codes and split on newline
+	lines = strings.Split(plainBg(str, args...), "\n")
+
 	// Loop thru lines and apply bg color codes
-	var colors = rainbowColors()
-	var end = "\x1b[" + Colors["on_default"] + "m"
+	colors = rainbowColors()
+	end = "\x1b[" + Colors["on_default"] + "m"
 	for i := range lines {
-		var line []string
-		var chars = iterate.FindAllString(lines[i], -1)
+		chars = iterate.FindAllString(lines[i], -1)
+		line = []string{}
 
 		// Loop thru non-color-code bytes and apply on_rainbow
 		for idx, char := range chars {
-			var code = strconv.Itoa(colors[idx%len(colors)] + 10)
+			code = strconv.Itoa(colors[idx%len(colors)] + 10)
 			line = append(line, "\x1b["+code+"m"+char)
 		}
 
@@ -306,19 +345,25 @@ func Rainbow(str string, args ...interface{}) string {
 		return Plain(str, args...)
 	}
 
-	// Strip all other fg color codes and split on newline
-	var lines = strings.Split(plainFg(str, args...), "\n")
+	var chars []string
+	var code string
+	var colors []int
+	var line []string
+	var lines []string
 	var out []string
 
+	// Strip all other fg color codes and split on newline
+	lines = strings.Split(plainFg(str, args...), "\n")
+
 	// Loop thru lines and apply fg color codes
-	var colors = rainbowColors()
+	colors = rainbowColors()
 	for i := range lines {
-		var line []string
-		var chars = iterate.FindAllString(lines[i], -1)
+		chars = iterate.FindAllString(lines[i], -1)
+		line = []string{}
 
 		// Loop thru non-color-code bytes and apply on_rainbow
 		for idx, char := range chars {
-			var code = strconv.Itoa(colors[idx%len(colors)])
+			code = strconv.Itoa(colors[idx%len(colors)])
 			line = append(line, "\x1b["+code+"m"+char)
 		}
 
@@ -338,7 +383,9 @@ func rainbowColors() []int {
 
 // Sample will show all bg/fg combos of the first 16 8-bit colors.
 func Sample() {
-	var fg, bg string
+	var bg string
+	var fg string
+
 	for f := 0; f < 16; f++ {
 		for b := 0; b < 16; b++ {
 			fg = Sprintf("color_%03d", f)
@@ -352,6 +399,7 @@ func Sample() {
 // Table will display a pretty table of all 8-bit colors.
 func Table() {
 	var bg string
+
 	for i := 0; i < 16; i++ {
 		bg = Sprintf("on_color_%03d", i)
 		Print(
@@ -366,6 +414,7 @@ func Table() {
 			Print("\n")
 		}
 	}
+
 	for i := 16; i < 256; i++ {
 		bg = Sprintf("on_color_%03d", i)
 		Print(
@@ -384,11 +433,11 @@ func Table() {
 
 // Wrap will wrap a string to the specified width.
 func Wrap(width int, str string, args ...interface{}) string {
-	str = Sprintf(str, args...)
-
 	var line = ""
 	var lines []string
 	var words = strings.Fields(str)
+
+	str = Sprintf(str, args...)
 
 	// Loop thru words
 	for _, word := range words {

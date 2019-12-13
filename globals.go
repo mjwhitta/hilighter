@@ -111,10 +111,13 @@ var parseHex = regexp.MustCompile(
 var wrap = regexp.MustCompile(`wrap(_(\d+))?`)
 
 func init() {
+	var key string
+	var val string
+
 	// Add all 8-bit colors, fg and bg
 	for i := 0; i < 256; i++ {
-		var key = Sprintf("color_%03d", i)
-		var val = Sprintf("38;5;%03d", i)
+		key = Sprintf("color_%03d", i)
+		val = Sprintf("38;5;%03d", i)
 		Colors[key] = val
 
 		key = Sprintf("on_color_%03d", i)
