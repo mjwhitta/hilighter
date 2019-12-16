@@ -23,41 +23,27 @@ subinfo() { echo -e "${color:+\e[36m}[=] $*\e[0m"; }
 warn() { echo -e "${color:+\e[33m}[-] $*\e[0m"; }
 ### Helpers end
 
-generate_color_func() {
-    local color="$1"
-    local func="$(echo "${color^}" | sed -r "s/_(.)/\u\1/g")"
+generate_funcs() {
+    local code="$1"
+    local func="$(echo "${code^}" | sed -r "s/_(.)/\u\1/g")"
 
     cat <<EOF
+// $func will Hilight() the provided string with the
+// specified ANSI code.
 func $func(str string, args ...interface{}) string {
-    return colorize("$color", str, args...)
+    return Hilight("$code", str, args...)
 }
 
+// Print$func will Hilight() the provided string with the
+// specified ANSI code and call fmt.Print(args ...interface{}).
 func Print$func(str string, args ...interface{}) {
-    Print(colorize("$color", str, args...))
+    Print(Hilight("$code", str, args...))
 }
 
+// Println$func will Hilight() the provided string with the
+// specified ANSI code and call fmt.Println(args ...interface{}).
 func Println$func(str string, args ...interface{}) {
-    Println(colorize("$color", str, args...))
-}
-
-EOF
-}
-
-generate_mode_func() {
-    local mode="$1"
-    local func="$(echo "${mode^}" | sed -r "s/_(.)/\u\1/g")"
-
-    cat <<EOF
-func $func(str string, args ...interface{}) string {
-    return modify("$mode", str, args...)
-}
-
-func Print$func(str string, args ...interface{}) {
-    Print(modify("$mode", str, args...))
-}
-
-func Println$func(str string, args ...interface{}) {
-    Println(modify("$mode", str, args...))
+    Println(Hilight("$code", str, args...))
 }
 
 EOF
@@ -110,32 +96,32 @@ package hilighter
 
 $(
     for color in black red green yellow blue magenta cyan white; do
-        generate_color_func "$color"
-        generate_color_func "on_$color"
-        generate_color_func "light_$color"
-        generate_color_func "on_light_$color"
+        generate_funcs "$color"
+        generate_funcs "on_$color"
+        generate_funcs "light_$color"
+        generate_funcs "on_light_$color"
     done; unset color
 
-    generate_color_func default
-    generate_color_func on_default
+    generate_funcs default
+    generate_funcs on_default
 
     for i in $(seq -w 0 255); do
-        generate_color_func "color_$i"
-        generate_color_func "on_color_$i"
+        generate_funcs "color_$i"
+        generate_funcs "on_color_$i"
     done; unset i
 )
 
 $(
-    generate_mode_func reset
-    generate_mode_func normal
+    generate_funcs reset
+    generate_funcs normal
 
     for mode in \
         bold dim faint italic underline blink blink_slow blink_rapid \
         inverse negative swap hide conceal crossed_out strikethrough \
         fraktur
     do
-        generate_mode_func "$mode"
-        generate_mode_func "no_$mode"
+        generate_funcs "$mode"
+        generate_funcs "no_$mode"
     done; unset mode
 )
 EOF

@@ -2,7 +2,7 @@ package hilighter
 
 import "fmt"
 
-// Print wraps fmt.Print().
+// Print wraps fmt.Print(args ...interface{}).
 func Print(args ...interface{}) {
 	fmt.Print(args...)
 }
