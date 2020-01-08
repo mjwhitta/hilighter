@@ -433,18 +433,23 @@ func Table() {
 
 // Wrap will wrap a string to the specified width.
 func Wrap(width int, str string, args ...interface{}) string {
+	var lc int
 	var line = ""
 	var lines []string
+	var wc int
 	var words = strings.Fields(str)
 
 	str = Sprintf(str, args...)
 
 	// Loop thru words
 	for _, word := range words {
-		if len(line) == 0 {
+		lc = len([]rune(Plain(line)))
+		wc = len([]rune(Plain(word)))
+
+		if lc == 0 {
 			// Can't wrap less than a single word
 			line = word
-		} else if len(Plain(line))+len(Plain(word))+1 > width {
+		} else if lc+wc+1 > width {
 			// Wrap if line would be longer than width
 			lines = append(lines, line)
 			line = word
@@ -455,7 +460,7 @@ func Wrap(width int, str string, args ...interface{}) string {
 	}
 
 	// Ensure last line is not forgotten
-	if len(line) != 0 {
+	if len([]rune(line)) != 0 {
 		lines = append(lines, line)
 	}
 
