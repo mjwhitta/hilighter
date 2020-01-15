@@ -23,6 +23,22 @@ subinfo() { echo -e "${color:+\e[36m}[=] $*\e[0m"; }
 warn() { echo -e "${color:+\e[33m}[-] $*\e[0m"; }
 ### Helpers end
 
+generate_format_func() {
+    local func="${1}f"
+    local var="$2"
+    local ret
+
+    [[ $# -eq 2 ]] || ret="true"
+
+    cat <<EOF
+// $func wraps $1 and works with format
+// strings.
+func $func(${var:+$var, }str string, args ...interface{}) ${ret:+string }{
+    ${ret:+return }$1(${var:+${var%% *}, }Sprintf(str, args...))
+}
+EOF
+}
+
 generate_funcs() {
     local code="$1"
     local func="$(echo "${code^}" | sed -r "s/_(.)/\u\1/g")"
@@ -30,21 +46,27 @@ generate_funcs() {
     cat <<EOF
 // $func will Hilight() the provided string with the
 // specified ANSI code.
-func $func(str string, args ...interface{}) string {
-    return Hilight("$code", str, args...)
+func $func(str string) string {
+    return Hilight("$code", str)
 }
 
 // Print$func will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func Print$func(str string, args ...interface{}) {
-    Print(Hilight("$code", str, args...))
+func Print$func(str string) {
+    Print(Hilight("$code", str))
 }
 
 // Println$func will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func Println$func(str string, args ...interface{}) {
-    Println(Hilight("$code", str, args...))
+func Println$func(str string) {
+    Println(Hilight("$code", str))
 }
+
+$(
+    generate_format_func "$func" "" "string"
+    generate_format_func "Print$func" ""
+    generate_format_func "Println$func" ""
+)
 
 EOF
 }
@@ -123,6 +145,36 @@ $(
         generate_funcs "$mode"
         generate_funcs "no_$mode"
     done; unset mode
+)
+
+$(
+    generate_format_func "Hex" "hex string" "string"
+    generate_format_func "Hilight" "code string" "string"
+    generate_format_func "Hilights" "codes []string" "string"
+    generate_format_func "OnHex" "hex string" "string"
+    generate_format_func "OnRainbow" "" "string"
+    generate_format_func "Plain" "" "string"
+    generate_format_func "Rainbow" "" "string"
+    generate_format_func "Wrap" "width int" "string"
+
+    generate_format_func "PrintHex" "hex string"
+    generate_format_func "PrintOnHex" "hex string"
+    generate_format_func "PrintlnHex" "hex string"
+    generate_format_func "PrintlnOnHex" "hex string"
+
+    generate_format_func "PrintHilight" "code string"
+    generate_format_func "PrintlnHilight" "code string"
+
+    generate_format_func "PrintHilights" "codes []string"
+    generate_format_func "PrintlnHilights" "codes []string"
+
+    generate_format_func "PrintRainbow" ""
+    generate_format_func "PrintOnRainbow" ""
+    generate_format_func "PrintlnRainbow" ""
+    generate_format_func "PrintlnOnRainbow" ""
+
+    generate_format_func "PrintWrap" "width int"
+    generate_format_func "PrintlnWrap" "width int"
 )
 EOF
 

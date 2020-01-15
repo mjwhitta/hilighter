@@ -3,10440 +3,21012 @@ package hilighter
 
 // Black will Hilight() the provided string with the
 // specified ANSI code.
-func Black(str string, args ...interface{}) string {
-	return Hilight("black", str, args...)
+func Black(str string) string {
+	return Hilight("black", str)
 }
 
 // PrintBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintBlack(str string, args ...interface{}) {
-	Print(Hilight("black", str, args...))
+func PrintBlack(str string) {
+	Print(Hilight("black", str))
 }
 
 // PrintlnBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnBlack(str string, args ...interface{}) {
-	Println(Hilight("black", str, args...))
+func PrintlnBlack(str string) {
+	Println(Hilight("black", str))
+}
+
+// Blackf wraps Black and works with format
+// strings.
+func Blackf(str string, args ...interface{}) string {
+	return Black(Sprintf(str, args...))
+}
+
+// PrintBlackf wraps PrintBlack and works with format
+// strings.
+func PrintBlackf(str string, args ...interface{}) {
+	PrintBlack(Sprintf(str, args...))
+}
+
+// PrintlnBlackf wraps PrintlnBlack and works with format
+// strings.
+func PrintlnBlackf(str string, args ...interface{}) {
+	PrintlnBlack(Sprintf(str, args...))
 }
 
 // OnBlack will Hilight() the provided string with the
 // specified ANSI code.
-func OnBlack(str string, args ...interface{}) string {
-	return Hilight("on_black", str, args...)
+func OnBlack(str string) string {
+	return Hilight("on_black", str)
 }
 
 // PrintOnBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnBlack(str string, args ...interface{}) {
-	Print(Hilight("on_black", str, args...))
+func PrintOnBlack(str string) {
+	Print(Hilight("on_black", str))
 }
 
 // PrintlnOnBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnBlack(str string, args ...interface{}) {
-	Println(Hilight("on_black", str, args...))
+func PrintlnOnBlack(str string) {
+	Println(Hilight("on_black", str))
+}
+
+// OnBlackf wraps OnBlack and works with format
+// strings.
+func OnBlackf(str string, args ...interface{}) string {
+	return OnBlack(Sprintf(str, args...))
+}
+
+// PrintOnBlackf wraps PrintOnBlack and works with format
+// strings.
+func PrintOnBlackf(str string, args ...interface{}) {
+	PrintOnBlack(Sprintf(str, args...))
+}
+
+// PrintlnOnBlackf wraps PrintlnOnBlack and works with format
+// strings.
+func PrintlnOnBlackf(str string, args ...interface{}) {
+	PrintlnOnBlack(Sprintf(str, args...))
 }
 
 // LightBlack will Hilight() the provided string with the
 // specified ANSI code.
-func LightBlack(str string, args ...interface{}) string {
-	return Hilight("light_black", str, args...)
+func LightBlack(str string) string {
+	return Hilight("light_black", str)
 }
 
 // PrintLightBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightBlack(str string, args ...interface{}) {
-	Print(Hilight("light_black", str, args...))
+func PrintLightBlack(str string) {
+	Print(Hilight("light_black", str))
 }
 
 // PrintlnLightBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightBlack(str string, args ...interface{}) {
-	Println(Hilight("light_black", str, args...))
+func PrintlnLightBlack(str string) {
+	Println(Hilight("light_black", str))
+}
+
+// LightBlackf wraps LightBlack and works with format
+// strings.
+func LightBlackf(str string, args ...interface{}) string {
+	return LightBlack(Sprintf(str, args...))
+}
+
+// PrintLightBlackf wraps PrintLightBlack and works with format
+// strings.
+func PrintLightBlackf(str string, args ...interface{}) {
+	PrintLightBlack(Sprintf(str, args...))
+}
+
+// PrintlnLightBlackf wraps PrintlnLightBlack and works with format
+// strings.
+func PrintlnLightBlackf(str string, args ...interface{}) {
+	PrintlnLightBlack(Sprintf(str, args...))
 }
 
 // OnLightBlack will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightBlack(str string, args ...interface{}) string {
-	return Hilight("on_light_black", str, args...)
+func OnLightBlack(str string) string {
+	return Hilight("on_light_black", str)
 }
 
 // PrintOnLightBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightBlack(str string, args ...interface{}) {
-	Print(Hilight("on_light_black", str, args...))
+func PrintOnLightBlack(str string) {
+	Print(Hilight("on_light_black", str))
 }
 
 // PrintlnOnLightBlack will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightBlack(str string, args ...interface{}) {
-	Println(Hilight("on_light_black", str, args...))
+func PrintlnOnLightBlack(str string) {
+	Println(Hilight("on_light_black", str))
+}
+
+// OnLightBlackf wraps OnLightBlack and works with format
+// strings.
+func OnLightBlackf(str string, args ...interface{}) string {
+	return OnLightBlack(Sprintf(str, args...))
+}
+
+// PrintOnLightBlackf wraps PrintOnLightBlack and works with format
+// strings.
+func PrintOnLightBlackf(str string, args ...interface{}) {
+	PrintOnLightBlack(Sprintf(str, args...))
+}
+
+// PrintlnOnLightBlackf wraps PrintlnOnLightBlack and works with format
+// strings.
+func PrintlnOnLightBlackf(str string, args ...interface{}) {
+	PrintlnOnLightBlack(Sprintf(str, args...))
 }
 
 // Red will Hilight() the provided string with the
 // specified ANSI code.
-func Red(str string, args ...interface{}) string {
-	return Hilight("red", str, args...)
+func Red(str string) string {
+	return Hilight("red", str)
 }
 
 // PrintRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintRed(str string, args ...interface{}) {
-	Print(Hilight("red", str, args...))
+func PrintRed(str string) {
+	Print(Hilight("red", str))
 }
 
 // PrintlnRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnRed(str string, args ...interface{}) {
-	Println(Hilight("red", str, args...))
+func PrintlnRed(str string) {
+	Println(Hilight("red", str))
+}
+
+// Redf wraps Red and works with format
+// strings.
+func Redf(str string, args ...interface{}) string {
+	return Red(Sprintf(str, args...))
+}
+
+// PrintRedf wraps PrintRed and works with format
+// strings.
+func PrintRedf(str string, args ...interface{}) {
+	PrintRed(Sprintf(str, args...))
+}
+
+// PrintlnRedf wraps PrintlnRed and works with format
+// strings.
+func PrintlnRedf(str string, args ...interface{}) {
+	PrintlnRed(Sprintf(str, args...))
 }
 
 // OnRed will Hilight() the provided string with the
 // specified ANSI code.
-func OnRed(str string, args ...interface{}) string {
-	return Hilight("on_red", str, args...)
+func OnRed(str string) string {
+	return Hilight("on_red", str)
 }
 
 // PrintOnRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnRed(str string, args ...interface{}) {
-	Print(Hilight("on_red", str, args...))
+func PrintOnRed(str string) {
+	Print(Hilight("on_red", str))
 }
 
 // PrintlnOnRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnRed(str string, args ...interface{}) {
-	Println(Hilight("on_red", str, args...))
+func PrintlnOnRed(str string) {
+	Println(Hilight("on_red", str))
+}
+
+// OnRedf wraps OnRed and works with format
+// strings.
+func OnRedf(str string, args ...interface{}) string {
+	return OnRed(Sprintf(str, args...))
+}
+
+// PrintOnRedf wraps PrintOnRed and works with format
+// strings.
+func PrintOnRedf(str string, args ...interface{}) {
+	PrintOnRed(Sprintf(str, args...))
+}
+
+// PrintlnOnRedf wraps PrintlnOnRed and works with format
+// strings.
+func PrintlnOnRedf(str string, args ...interface{}) {
+	PrintlnOnRed(Sprintf(str, args...))
 }
 
 // LightRed will Hilight() the provided string with the
 // specified ANSI code.
-func LightRed(str string, args ...interface{}) string {
-	return Hilight("light_red", str, args...)
+func LightRed(str string) string {
+	return Hilight("light_red", str)
 }
 
 // PrintLightRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightRed(str string, args ...interface{}) {
-	Print(Hilight("light_red", str, args...))
+func PrintLightRed(str string) {
+	Print(Hilight("light_red", str))
 }
 
 // PrintlnLightRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightRed(str string, args ...interface{}) {
-	Println(Hilight("light_red", str, args...))
+func PrintlnLightRed(str string) {
+	Println(Hilight("light_red", str))
+}
+
+// LightRedf wraps LightRed and works with format
+// strings.
+func LightRedf(str string, args ...interface{}) string {
+	return LightRed(Sprintf(str, args...))
+}
+
+// PrintLightRedf wraps PrintLightRed and works with format
+// strings.
+func PrintLightRedf(str string, args ...interface{}) {
+	PrintLightRed(Sprintf(str, args...))
+}
+
+// PrintlnLightRedf wraps PrintlnLightRed and works with format
+// strings.
+func PrintlnLightRedf(str string, args ...interface{}) {
+	PrintlnLightRed(Sprintf(str, args...))
 }
 
 // OnLightRed will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightRed(str string, args ...interface{}) string {
-	return Hilight("on_light_red", str, args...)
+func OnLightRed(str string) string {
+	return Hilight("on_light_red", str)
 }
 
 // PrintOnLightRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightRed(str string, args ...interface{}) {
-	Print(Hilight("on_light_red", str, args...))
+func PrintOnLightRed(str string) {
+	Print(Hilight("on_light_red", str))
 }
 
 // PrintlnOnLightRed will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightRed(str string, args ...interface{}) {
-	Println(Hilight("on_light_red", str, args...))
+func PrintlnOnLightRed(str string) {
+	Println(Hilight("on_light_red", str))
+}
+
+// OnLightRedf wraps OnLightRed and works with format
+// strings.
+func OnLightRedf(str string, args ...interface{}) string {
+	return OnLightRed(Sprintf(str, args...))
+}
+
+// PrintOnLightRedf wraps PrintOnLightRed and works with format
+// strings.
+func PrintOnLightRedf(str string, args ...interface{}) {
+	PrintOnLightRed(Sprintf(str, args...))
+}
+
+// PrintlnOnLightRedf wraps PrintlnOnLightRed and works with format
+// strings.
+func PrintlnOnLightRedf(str string, args ...interface{}) {
+	PrintlnOnLightRed(Sprintf(str, args...))
 }
 
 // Green will Hilight() the provided string with the
 // specified ANSI code.
-func Green(str string, args ...interface{}) string {
-	return Hilight("green", str, args...)
+func Green(str string) string {
+	return Hilight("green", str)
 }
 
 // PrintGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintGreen(str string, args ...interface{}) {
-	Print(Hilight("green", str, args...))
+func PrintGreen(str string) {
+	Print(Hilight("green", str))
 }
 
 // PrintlnGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnGreen(str string, args ...interface{}) {
-	Println(Hilight("green", str, args...))
+func PrintlnGreen(str string) {
+	Println(Hilight("green", str))
+}
+
+// Greenf wraps Green and works with format
+// strings.
+func Greenf(str string, args ...interface{}) string {
+	return Green(Sprintf(str, args...))
+}
+
+// PrintGreenf wraps PrintGreen and works with format
+// strings.
+func PrintGreenf(str string, args ...interface{}) {
+	PrintGreen(Sprintf(str, args...))
+}
+
+// PrintlnGreenf wraps PrintlnGreen and works with format
+// strings.
+func PrintlnGreenf(str string, args ...interface{}) {
+	PrintlnGreen(Sprintf(str, args...))
 }
 
 // OnGreen will Hilight() the provided string with the
 // specified ANSI code.
-func OnGreen(str string, args ...interface{}) string {
-	return Hilight("on_green", str, args...)
+func OnGreen(str string) string {
+	return Hilight("on_green", str)
 }
 
 // PrintOnGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnGreen(str string, args ...interface{}) {
-	Print(Hilight("on_green", str, args...))
+func PrintOnGreen(str string) {
+	Print(Hilight("on_green", str))
 }
 
 // PrintlnOnGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnGreen(str string, args ...interface{}) {
-	Println(Hilight("on_green", str, args...))
+func PrintlnOnGreen(str string) {
+	Println(Hilight("on_green", str))
+}
+
+// OnGreenf wraps OnGreen and works with format
+// strings.
+func OnGreenf(str string, args ...interface{}) string {
+	return OnGreen(Sprintf(str, args...))
+}
+
+// PrintOnGreenf wraps PrintOnGreen and works with format
+// strings.
+func PrintOnGreenf(str string, args ...interface{}) {
+	PrintOnGreen(Sprintf(str, args...))
+}
+
+// PrintlnOnGreenf wraps PrintlnOnGreen and works with format
+// strings.
+func PrintlnOnGreenf(str string, args ...interface{}) {
+	PrintlnOnGreen(Sprintf(str, args...))
 }
 
 // LightGreen will Hilight() the provided string with the
 // specified ANSI code.
-func LightGreen(str string, args ...interface{}) string {
-	return Hilight("light_green", str, args...)
+func LightGreen(str string) string {
+	return Hilight("light_green", str)
 }
 
 // PrintLightGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightGreen(str string, args ...interface{}) {
-	Print(Hilight("light_green", str, args...))
+func PrintLightGreen(str string) {
+	Print(Hilight("light_green", str))
 }
 
 // PrintlnLightGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightGreen(str string, args ...interface{}) {
-	Println(Hilight("light_green", str, args...))
+func PrintlnLightGreen(str string) {
+	Println(Hilight("light_green", str))
+}
+
+// LightGreenf wraps LightGreen and works with format
+// strings.
+func LightGreenf(str string, args ...interface{}) string {
+	return LightGreen(Sprintf(str, args...))
+}
+
+// PrintLightGreenf wraps PrintLightGreen and works with format
+// strings.
+func PrintLightGreenf(str string, args ...interface{}) {
+	PrintLightGreen(Sprintf(str, args...))
+}
+
+// PrintlnLightGreenf wraps PrintlnLightGreen and works with format
+// strings.
+func PrintlnLightGreenf(str string, args ...interface{}) {
+	PrintlnLightGreen(Sprintf(str, args...))
 }
 
 // OnLightGreen will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightGreen(str string, args ...interface{}) string {
-	return Hilight("on_light_green", str, args...)
+func OnLightGreen(str string) string {
+	return Hilight("on_light_green", str)
 }
 
 // PrintOnLightGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightGreen(str string, args ...interface{}) {
-	Print(Hilight("on_light_green", str, args...))
+func PrintOnLightGreen(str string) {
+	Print(Hilight("on_light_green", str))
 }
 
 // PrintlnOnLightGreen will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightGreen(str string, args ...interface{}) {
-	Println(Hilight("on_light_green", str, args...))
+func PrintlnOnLightGreen(str string) {
+	Println(Hilight("on_light_green", str))
+}
+
+// OnLightGreenf wraps OnLightGreen and works with format
+// strings.
+func OnLightGreenf(str string, args ...interface{}) string {
+	return OnLightGreen(Sprintf(str, args...))
+}
+
+// PrintOnLightGreenf wraps PrintOnLightGreen and works with format
+// strings.
+func PrintOnLightGreenf(str string, args ...interface{}) {
+	PrintOnLightGreen(Sprintf(str, args...))
+}
+
+// PrintlnOnLightGreenf wraps PrintlnOnLightGreen and works with format
+// strings.
+func PrintlnOnLightGreenf(str string, args ...interface{}) {
+	PrintlnOnLightGreen(Sprintf(str, args...))
 }
 
 // Yellow will Hilight() the provided string with the
 // specified ANSI code.
-func Yellow(str string, args ...interface{}) string {
-	return Hilight("yellow", str, args...)
+func Yellow(str string) string {
+	return Hilight("yellow", str)
 }
 
 // PrintYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintYellow(str string, args ...interface{}) {
-	Print(Hilight("yellow", str, args...))
+func PrintYellow(str string) {
+	Print(Hilight("yellow", str))
 }
 
 // PrintlnYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnYellow(str string, args ...interface{}) {
-	Println(Hilight("yellow", str, args...))
+func PrintlnYellow(str string) {
+	Println(Hilight("yellow", str))
+}
+
+// Yellowf wraps Yellow and works with format
+// strings.
+func Yellowf(str string, args ...interface{}) string {
+	return Yellow(Sprintf(str, args...))
+}
+
+// PrintYellowf wraps PrintYellow and works with format
+// strings.
+func PrintYellowf(str string, args ...interface{}) {
+	PrintYellow(Sprintf(str, args...))
+}
+
+// PrintlnYellowf wraps PrintlnYellow and works with format
+// strings.
+func PrintlnYellowf(str string, args ...interface{}) {
+	PrintlnYellow(Sprintf(str, args...))
 }
 
 // OnYellow will Hilight() the provided string with the
 // specified ANSI code.
-func OnYellow(str string, args ...interface{}) string {
-	return Hilight("on_yellow", str, args...)
+func OnYellow(str string) string {
+	return Hilight("on_yellow", str)
 }
 
 // PrintOnYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnYellow(str string, args ...interface{}) {
-	Print(Hilight("on_yellow", str, args...))
+func PrintOnYellow(str string) {
+	Print(Hilight("on_yellow", str))
 }
 
 // PrintlnOnYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnYellow(str string, args ...interface{}) {
-	Println(Hilight("on_yellow", str, args...))
+func PrintlnOnYellow(str string) {
+	Println(Hilight("on_yellow", str))
+}
+
+// OnYellowf wraps OnYellow and works with format
+// strings.
+func OnYellowf(str string, args ...interface{}) string {
+	return OnYellow(Sprintf(str, args...))
+}
+
+// PrintOnYellowf wraps PrintOnYellow and works with format
+// strings.
+func PrintOnYellowf(str string, args ...interface{}) {
+	PrintOnYellow(Sprintf(str, args...))
+}
+
+// PrintlnOnYellowf wraps PrintlnOnYellow and works with format
+// strings.
+func PrintlnOnYellowf(str string, args ...interface{}) {
+	PrintlnOnYellow(Sprintf(str, args...))
 }
 
 // LightYellow will Hilight() the provided string with the
 // specified ANSI code.
-func LightYellow(str string, args ...interface{}) string {
-	return Hilight("light_yellow", str, args...)
+func LightYellow(str string) string {
+	return Hilight("light_yellow", str)
 }
 
 // PrintLightYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightYellow(str string, args ...interface{}) {
-	Print(Hilight("light_yellow", str, args...))
+func PrintLightYellow(str string) {
+	Print(Hilight("light_yellow", str))
 }
 
 // PrintlnLightYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightYellow(str string, args ...interface{}) {
-	Println(Hilight("light_yellow", str, args...))
+func PrintlnLightYellow(str string) {
+	Println(Hilight("light_yellow", str))
+}
+
+// LightYellowf wraps LightYellow and works with format
+// strings.
+func LightYellowf(str string, args ...interface{}) string {
+	return LightYellow(Sprintf(str, args...))
+}
+
+// PrintLightYellowf wraps PrintLightYellow and works with format
+// strings.
+func PrintLightYellowf(str string, args ...interface{}) {
+	PrintLightYellow(Sprintf(str, args...))
+}
+
+// PrintlnLightYellowf wraps PrintlnLightYellow and works with format
+// strings.
+func PrintlnLightYellowf(str string, args ...interface{}) {
+	PrintlnLightYellow(Sprintf(str, args...))
 }
 
 // OnLightYellow will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightYellow(str string, args ...interface{}) string {
-	return Hilight("on_light_yellow", str, args...)
+func OnLightYellow(str string) string {
+	return Hilight("on_light_yellow", str)
 }
 
 // PrintOnLightYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightYellow(str string, args ...interface{}) {
-	Print(Hilight("on_light_yellow", str, args...))
+func PrintOnLightYellow(str string) {
+	Print(Hilight("on_light_yellow", str))
 }
 
 // PrintlnOnLightYellow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightYellow(str string, args ...interface{}) {
-	Println(Hilight("on_light_yellow", str, args...))
+func PrintlnOnLightYellow(str string) {
+	Println(Hilight("on_light_yellow", str))
+}
+
+// OnLightYellowf wraps OnLightYellow and works with format
+// strings.
+func OnLightYellowf(str string, args ...interface{}) string {
+	return OnLightYellow(Sprintf(str, args...))
+}
+
+// PrintOnLightYellowf wraps PrintOnLightYellow and works with format
+// strings.
+func PrintOnLightYellowf(str string, args ...interface{}) {
+	PrintOnLightYellow(Sprintf(str, args...))
+}
+
+// PrintlnOnLightYellowf wraps PrintlnOnLightYellow and works with format
+// strings.
+func PrintlnOnLightYellowf(str string, args ...interface{}) {
+	PrintlnOnLightYellow(Sprintf(str, args...))
 }
 
 // Blue will Hilight() the provided string with the
 // specified ANSI code.
-func Blue(str string, args ...interface{}) string {
-	return Hilight("blue", str, args...)
+func Blue(str string) string {
+	return Hilight("blue", str)
 }
 
 // PrintBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintBlue(str string, args ...interface{}) {
-	Print(Hilight("blue", str, args...))
+func PrintBlue(str string) {
+	Print(Hilight("blue", str))
 }
 
 // PrintlnBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnBlue(str string, args ...interface{}) {
-	Println(Hilight("blue", str, args...))
+func PrintlnBlue(str string) {
+	Println(Hilight("blue", str))
+}
+
+// Bluef wraps Blue and works with format
+// strings.
+func Bluef(str string, args ...interface{}) string {
+	return Blue(Sprintf(str, args...))
+}
+
+// PrintBluef wraps PrintBlue and works with format
+// strings.
+func PrintBluef(str string, args ...interface{}) {
+	PrintBlue(Sprintf(str, args...))
+}
+
+// PrintlnBluef wraps PrintlnBlue and works with format
+// strings.
+func PrintlnBluef(str string, args ...interface{}) {
+	PrintlnBlue(Sprintf(str, args...))
 }
 
 // OnBlue will Hilight() the provided string with the
 // specified ANSI code.
-func OnBlue(str string, args ...interface{}) string {
-	return Hilight("on_blue", str, args...)
+func OnBlue(str string) string {
+	return Hilight("on_blue", str)
 }
 
 // PrintOnBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnBlue(str string, args ...interface{}) {
-	Print(Hilight("on_blue", str, args...))
+func PrintOnBlue(str string) {
+	Print(Hilight("on_blue", str))
 }
 
 // PrintlnOnBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnBlue(str string, args ...interface{}) {
-	Println(Hilight("on_blue", str, args...))
+func PrintlnOnBlue(str string) {
+	Println(Hilight("on_blue", str))
+}
+
+// OnBluef wraps OnBlue and works with format
+// strings.
+func OnBluef(str string, args ...interface{}) string {
+	return OnBlue(Sprintf(str, args...))
+}
+
+// PrintOnBluef wraps PrintOnBlue and works with format
+// strings.
+func PrintOnBluef(str string, args ...interface{}) {
+	PrintOnBlue(Sprintf(str, args...))
+}
+
+// PrintlnOnBluef wraps PrintlnOnBlue and works with format
+// strings.
+func PrintlnOnBluef(str string, args ...interface{}) {
+	PrintlnOnBlue(Sprintf(str, args...))
 }
 
 // LightBlue will Hilight() the provided string with the
 // specified ANSI code.
-func LightBlue(str string, args ...interface{}) string {
-	return Hilight("light_blue", str, args...)
+func LightBlue(str string) string {
+	return Hilight("light_blue", str)
 }
 
 // PrintLightBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightBlue(str string, args ...interface{}) {
-	Print(Hilight("light_blue", str, args...))
+func PrintLightBlue(str string) {
+	Print(Hilight("light_blue", str))
 }
 
 // PrintlnLightBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightBlue(str string, args ...interface{}) {
-	Println(Hilight("light_blue", str, args...))
+func PrintlnLightBlue(str string) {
+	Println(Hilight("light_blue", str))
+}
+
+// LightBluef wraps LightBlue and works with format
+// strings.
+func LightBluef(str string, args ...interface{}) string {
+	return LightBlue(Sprintf(str, args...))
+}
+
+// PrintLightBluef wraps PrintLightBlue and works with format
+// strings.
+func PrintLightBluef(str string, args ...interface{}) {
+	PrintLightBlue(Sprintf(str, args...))
+}
+
+// PrintlnLightBluef wraps PrintlnLightBlue and works with format
+// strings.
+func PrintlnLightBluef(str string, args ...interface{}) {
+	PrintlnLightBlue(Sprintf(str, args...))
 }
 
 // OnLightBlue will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightBlue(str string, args ...interface{}) string {
-	return Hilight("on_light_blue", str, args...)
+func OnLightBlue(str string) string {
+	return Hilight("on_light_blue", str)
 }
 
 // PrintOnLightBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightBlue(str string, args ...interface{}) {
-	Print(Hilight("on_light_blue", str, args...))
+func PrintOnLightBlue(str string) {
+	Print(Hilight("on_light_blue", str))
 }
 
 // PrintlnOnLightBlue will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightBlue(str string, args ...interface{}) {
-	Println(Hilight("on_light_blue", str, args...))
+func PrintlnOnLightBlue(str string) {
+	Println(Hilight("on_light_blue", str))
+}
+
+// OnLightBluef wraps OnLightBlue and works with format
+// strings.
+func OnLightBluef(str string, args ...interface{}) string {
+	return OnLightBlue(Sprintf(str, args...))
+}
+
+// PrintOnLightBluef wraps PrintOnLightBlue and works with format
+// strings.
+func PrintOnLightBluef(str string, args ...interface{}) {
+	PrintOnLightBlue(Sprintf(str, args...))
+}
+
+// PrintlnOnLightBluef wraps PrintlnOnLightBlue and works with format
+// strings.
+func PrintlnOnLightBluef(str string, args ...interface{}) {
+	PrintlnOnLightBlue(Sprintf(str, args...))
 }
 
 // Magenta will Hilight() the provided string with the
 // specified ANSI code.
-func Magenta(str string, args ...interface{}) string {
-	return Hilight("magenta", str, args...)
+func Magenta(str string) string {
+	return Hilight("magenta", str)
 }
 
 // PrintMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintMagenta(str string, args ...interface{}) {
-	Print(Hilight("magenta", str, args...))
+func PrintMagenta(str string) {
+	Print(Hilight("magenta", str))
 }
 
 // PrintlnMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnMagenta(str string, args ...interface{}) {
-	Println(Hilight("magenta", str, args...))
+func PrintlnMagenta(str string) {
+	Println(Hilight("magenta", str))
+}
+
+// Magentaf wraps Magenta and works with format
+// strings.
+func Magentaf(str string, args ...interface{}) string {
+	return Magenta(Sprintf(str, args...))
+}
+
+// PrintMagentaf wraps PrintMagenta and works with format
+// strings.
+func PrintMagentaf(str string, args ...interface{}) {
+	PrintMagenta(Sprintf(str, args...))
+}
+
+// PrintlnMagentaf wraps PrintlnMagenta and works with format
+// strings.
+func PrintlnMagentaf(str string, args ...interface{}) {
+	PrintlnMagenta(Sprintf(str, args...))
 }
 
 // OnMagenta will Hilight() the provided string with the
 // specified ANSI code.
-func OnMagenta(str string, args ...interface{}) string {
-	return Hilight("on_magenta", str, args...)
+func OnMagenta(str string) string {
+	return Hilight("on_magenta", str)
 }
 
 // PrintOnMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnMagenta(str string, args ...interface{}) {
-	Print(Hilight("on_magenta", str, args...))
+func PrintOnMagenta(str string) {
+	Print(Hilight("on_magenta", str))
 }
 
 // PrintlnOnMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnMagenta(str string, args ...interface{}) {
-	Println(Hilight("on_magenta", str, args...))
+func PrintlnOnMagenta(str string) {
+	Println(Hilight("on_magenta", str))
+}
+
+// OnMagentaf wraps OnMagenta and works with format
+// strings.
+func OnMagentaf(str string, args ...interface{}) string {
+	return OnMagenta(Sprintf(str, args...))
+}
+
+// PrintOnMagentaf wraps PrintOnMagenta and works with format
+// strings.
+func PrintOnMagentaf(str string, args ...interface{}) {
+	PrintOnMagenta(Sprintf(str, args...))
+}
+
+// PrintlnOnMagentaf wraps PrintlnOnMagenta and works with format
+// strings.
+func PrintlnOnMagentaf(str string, args ...interface{}) {
+	PrintlnOnMagenta(Sprintf(str, args...))
 }
 
 // LightMagenta will Hilight() the provided string with the
 // specified ANSI code.
-func LightMagenta(str string, args ...interface{}) string {
-	return Hilight("light_magenta", str, args...)
+func LightMagenta(str string) string {
+	return Hilight("light_magenta", str)
 }
 
 // PrintLightMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightMagenta(str string, args ...interface{}) {
-	Print(Hilight("light_magenta", str, args...))
+func PrintLightMagenta(str string) {
+	Print(Hilight("light_magenta", str))
 }
 
 // PrintlnLightMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightMagenta(str string, args ...interface{}) {
-	Println(Hilight("light_magenta", str, args...))
+func PrintlnLightMagenta(str string) {
+	Println(Hilight("light_magenta", str))
+}
+
+// LightMagentaf wraps LightMagenta and works with format
+// strings.
+func LightMagentaf(str string, args ...interface{}) string {
+	return LightMagenta(Sprintf(str, args...))
+}
+
+// PrintLightMagentaf wraps PrintLightMagenta and works with format
+// strings.
+func PrintLightMagentaf(str string, args ...interface{}) {
+	PrintLightMagenta(Sprintf(str, args...))
+}
+
+// PrintlnLightMagentaf wraps PrintlnLightMagenta and works with format
+// strings.
+func PrintlnLightMagentaf(str string, args ...interface{}) {
+	PrintlnLightMagenta(Sprintf(str, args...))
 }
 
 // OnLightMagenta will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightMagenta(str string, args ...interface{}) string {
-	return Hilight("on_light_magenta", str, args...)
+func OnLightMagenta(str string) string {
+	return Hilight("on_light_magenta", str)
 }
 
 // PrintOnLightMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightMagenta(str string, args ...interface{}) {
-	Print(Hilight("on_light_magenta", str, args...))
+func PrintOnLightMagenta(str string) {
+	Print(Hilight("on_light_magenta", str))
 }
 
 // PrintlnOnLightMagenta will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightMagenta(str string, args ...interface{}) {
-	Println(Hilight("on_light_magenta", str, args...))
+func PrintlnOnLightMagenta(str string) {
+	Println(Hilight("on_light_magenta", str))
+}
+
+// OnLightMagentaf wraps OnLightMagenta and works with format
+// strings.
+func OnLightMagentaf(str string, args ...interface{}) string {
+	return OnLightMagenta(Sprintf(str, args...))
+}
+
+// PrintOnLightMagentaf wraps PrintOnLightMagenta and works with format
+// strings.
+func PrintOnLightMagentaf(str string, args ...interface{}) {
+	PrintOnLightMagenta(Sprintf(str, args...))
+}
+
+// PrintlnOnLightMagentaf wraps PrintlnOnLightMagenta and works with format
+// strings.
+func PrintlnOnLightMagentaf(str string, args ...interface{}) {
+	PrintlnOnLightMagenta(Sprintf(str, args...))
 }
 
 // Cyan will Hilight() the provided string with the
 // specified ANSI code.
-func Cyan(str string, args ...interface{}) string {
-	return Hilight("cyan", str, args...)
+func Cyan(str string) string {
+	return Hilight("cyan", str)
 }
 
 // PrintCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintCyan(str string, args ...interface{}) {
-	Print(Hilight("cyan", str, args...))
+func PrintCyan(str string) {
+	Print(Hilight("cyan", str))
 }
 
 // PrintlnCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnCyan(str string, args ...interface{}) {
-	Println(Hilight("cyan", str, args...))
+func PrintlnCyan(str string) {
+	Println(Hilight("cyan", str))
+}
+
+// Cyanf wraps Cyan and works with format
+// strings.
+func Cyanf(str string, args ...interface{}) string {
+	return Cyan(Sprintf(str, args...))
+}
+
+// PrintCyanf wraps PrintCyan and works with format
+// strings.
+func PrintCyanf(str string, args ...interface{}) {
+	PrintCyan(Sprintf(str, args...))
+}
+
+// PrintlnCyanf wraps PrintlnCyan and works with format
+// strings.
+func PrintlnCyanf(str string, args ...interface{}) {
+	PrintlnCyan(Sprintf(str, args...))
 }
 
 // OnCyan will Hilight() the provided string with the
 // specified ANSI code.
-func OnCyan(str string, args ...interface{}) string {
-	return Hilight("on_cyan", str, args...)
+func OnCyan(str string) string {
+	return Hilight("on_cyan", str)
 }
 
 // PrintOnCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnCyan(str string, args ...interface{}) {
-	Print(Hilight("on_cyan", str, args...))
+func PrintOnCyan(str string) {
+	Print(Hilight("on_cyan", str))
 }
 
 // PrintlnOnCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnCyan(str string, args ...interface{}) {
-	Println(Hilight("on_cyan", str, args...))
+func PrintlnOnCyan(str string) {
+	Println(Hilight("on_cyan", str))
+}
+
+// OnCyanf wraps OnCyan and works with format
+// strings.
+func OnCyanf(str string, args ...interface{}) string {
+	return OnCyan(Sprintf(str, args...))
+}
+
+// PrintOnCyanf wraps PrintOnCyan and works with format
+// strings.
+func PrintOnCyanf(str string, args ...interface{}) {
+	PrintOnCyan(Sprintf(str, args...))
+}
+
+// PrintlnOnCyanf wraps PrintlnOnCyan and works with format
+// strings.
+func PrintlnOnCyanf(str string, args ...interface{}) {
+	PrintlnOnCyan(Sprintf(str, args...))
 }
 
 // LightCyan will Hilight() the provided string with the
 // specified ANSI code.
-func LightCyan(str string, args ...interface{}) string {
-	return Hilight("light_cyan", str, args...)
+func LightCyan(str string) string {
+	return Hilight("light_cyan", str)
 }
 
 // PrintLightCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightCyan(str string, args ...interface{}) {
-	Print(Hilight("light_cyan", str, args...))
+func PrintLightCyan(str string) {
+	Print(Hilight("light_cyan", str))
 }
 
 // PrintlnLightCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightCyan(str string, args ...interface{}) {
-	Println(Hilight("light_cyan", str, args...))
+func PrintlnLightCyan(str string) {
+	Println(Hilight("light_cyan", str))
+}
+
+// LightCyanf wraps LightCyan and works with format
+// strings.
+func LightCyanf(str string, args ...interface{}) string {
+	return LightCyan(Sprintf(str, args...))
+}
+
+// PrintLightCyanf wraps PrintLightCyan and works with format
+// strings.
+func PrintLightCyanf(str string, args ...interface{}) {
+	PrintLightCyan(Sprintf(str, args...))
+}
+
+// PrintlnLightCyanf wraps PrintlnLightCyan and works with format
+// strings.
+func PrintlnLightCyanf(str string, args ...interface{}) {
+	PrintlnLightCyan(Sprintf(str, args...))
 }
 
 // OnLightCyan will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightCyan(str string, args ...interface{}) string {
-	return Hilight("on_light_cyan", str, args...)
+func OnLightCyan(str string) string {
+	return Hilight("on_light_cyan", str)
 }
 
 // PrintOnLightCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightCyan(str string, args ...interface{}) {
-	Print(Hilight("on_light_cyan", str, args...))
+func PrintOnLightCyan(str string) {
+	Print(Hilight("on_light_cyan", str))
 }
 
 // PrintlnOnLightCyan will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightCyan(str string, args ...interface{}) {
-	Println(Hilight("on_light_cyan", str, args...))
+func PrintlnOnLightCyan(str string) {
+	Println(Hilight("on_light_cyan", str))
+}
+
+// OnLightCyanf wraps OnLightCyan and works with format
+// strings.
+func OnLightCyanf(str string, args ...interface{}) string {
+	return OnLightCyan(Sprintf(str, args...))
+}
+
+// PrintOnLightCyanf wraps PrintOnLightCyan and works with format
+// strings.
+func PrintOnLightCyanf(str string, args ...interface{}) {
+	PrintOnLightCyan(Sprintf(str, args...))
+}
+
+// PrintlnOnLightCyanf wraps PrintlnOnLightCyan and works with format
+// strings.
+func PrintlnOnLightCyanf(str string, args ...interface{}) {
+	PrintlnOnLightCyan(Sprintf(str, args...))
 }
 
 // White will Hilight() the provided string with the
 // specified ANSI code.
-func White(str string, args ...interface{}) string {
-	return Hilight("white", str, args...)
+func White(str string) string {
+	return Hilight("white", str)
 }
 
 // PrintWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintWhite(str string, args ...interface{}) {
-	Print(Hilight("white", str, args...))
+func PrintWhite(str string) {
+	Print(Hilight("white", str))
 }
 
 // PrintlnWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnWhite(str string, args ...interface{}) {
-	Println(Hilight("white", str, args...))
+func PrintlnWhite(str string) {
+	Println(Hilight("white", str))
+}
+
+// Whitef wraps White and works with format
+// strings.
+func Whitef(str string, args ...interface{}) string {
+	return White(Sprintf(str, args...))
+}
+
+// PrintWhitef wraps PrintWhite and works with format
+// strings.
+func PrintWhitef(str string, args ...interface{}) {
+	PrintWhite(Sprintf(str, args...))
+}
+
+// PrintlnWhitef wraps PrintlnWhite and works with format
+// strings.
+func PrintlnWhitef(str string, args ...interface{}) {
+	PrintlnWhite(Sprintf(str, args...))
 }
 
 // OnWhite will Hilight() the provided string with the
 // specified ANSI code.
-func OnWhite(str string, args ...interface{}) string {
-	return Hilight("on_white", str, args...)
+func OnWhite(str string) string {
+	return Hilight("on_white", str)
 }
 
 // PrintOnWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnWhite(str string, args ...interface{}) {
-	Print(Hilight("on_white", str, args...))
+func PrintOnWhite(str string) {
+	Print(Hilight("on_white", str))
 }
 
 // PrintlnOnWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnWhite(str string, args ...interface{}) {
-	Println(Hilight("on_white", str, args...))
+func PrintlnOnWhite(str string) {
+	Println(Hilight("on_white", str))
+}
+
+// OnWhitef wraps OnWhite and works with format
+// strings.
+func OnWhitef(str string, args ...interface{}) string {
+	return OnWhite(Sprintf(str, args...))
+}
+
+// PrintOnWhitef wraps PrintOnWhite and works with format
+// strings.
+func PrintOnWhitef(str string, args ...interface{}) {
+	PrintOnWhite(Sprintf(str, args...))
+}
+
+// PrintlnOnWhitef wraps PrintlnOnWhite and works with format
+// strings.
+func PrintlnOnWhitef(str string, args ...interface{}) {
+	PrintlnOnWhite(Sprintf(str, args...))
 }
 
 // LightWhite will Hilight() the provided string with the
 // specified ANSI code.
-func LightWhite(str string, args ...interface{}) string {
-	return Hilight("light_white", str, args...)
+func LightWhite(str string) string {
+	return Hilight("light_white", str)
 }
 
 // PrintLightWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintLightWhite(str string, args ...interface{}) {
-	Print(Hilight("light_white", str, args...))
+func PrintLightWhite(str string) {
+	Print(Hilight("light_white", str))
 }
 
 // PrintlnLightWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnLightWhite(str string, args ...interface{}) {
-	Println(Hilight("light_white", str, args...))
+func PrintlnLightWhite(str string) {
+	Println(Hilight("light_white", str))
+}
+
+// LightWhitef wraps LightWhite and works with format
+// strings.
+func LightWhitef(str string, args ...interface{}) string {
+	return LightWhite(Sprintf(str, args...))
+}
+
+// PrintLightWhitef wraps PrintLightWhite and works with format
+// strings.
+func PrintLightWhitef(str string, args ...interface{}) {
+	PrintLightWhite(Sprintf(str, args...))
+}
+
+// PrintlnLightWhitef wraps PrintlnLightWhite and works with format
+// strings.
+func PrintlnLightWhitef(str string, args ...interface{}) {
+	PrintlnLightWhite(Sprintf(str, args...))
 }
 
 // OnLightWhite will Hilight() the provided string with the
 // specified ANSI code.
-func OnLightWhite(str string, args ...interface{}) string {
-	return Hilight("on_light_white", str, args...)
+func OnLightWhite(str string) string {
+	return Hilight("on_light_white", str)
 }
 
 // PrintOnLightWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnLightWhite(str string, args ...interface{}) {
-	Print(Hilight("on_light_white", str, args...))
+func PrintOnLightWhite(str string) {
+	Print(Hilight("on_light_white", str))
 }
 
 // PrintlnOnLightWhite will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnLightWhite(str string, args ...interface{}) {
-	Println(Hilight("on_light_white", str, args...))
+func PrintlnOnLightWhite(str string) {
+	Println(Hilight("on_light_white", str))
+}
+
+// OnLightWhitef wraps OnLightWhite and works with format
+// strings.
+func OnLightWhitef(str string, args ...interface{}) string {
+	return OnLightWhite(Sprintf(str, args...))
+}
+
+// PrintOnLightWhitef wraps PrintOnLightWhite and works with format
+// strings.
+func PrintOnLightWhitef(str string, args ...interface{}) {
+	PrintOnLightWhite(Sprintf(str, args...))
+}
+
+// PrintlnOnLightWhitef wraps PrintlnOnLightWhite and works with format
+// strings.
+func PrintlnOnLightWhitef(str string, args ...interface{}) {
+	PrintlnOnLightWhite(Sprintf(str, args...))
 }
 
 // Default will Hilight() the provided string with the
 // specified ANSI code.
-func Default(str string, args ...interface{}) string {
-	return Hilight("default", str, args...)
+func Default(str string) string {
+	return Hilight("default", str)
 }
 
 // PrintDefault will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintDefault(str string, args ...interface{}) {
-	Print(Hilight("default", str, args...))
+func PrintDefault(str string) {
+	Print(Hilight("default", str))
 }
 
 // PrintlnDefault will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnDefault(str string, args ...interface{}) {
-	Println(Hilight("default", str, args...))
+func PrintlnDefault(str string) {
+	Println(Hilight("default", str))
+}
+
+// Defaultf wraps Default and works with format
+// strings.
+func Defaultf(str string, args ...interface{}) string {
+	return Default(Sprintf(str, args...))
+}
+
+// PrintDefaultf wraps PrintDefault and works with format
+// strings.
+func PrintDefaultf(str string, args ...interface{}) {
+	PrintDefault(Sprintf(str, args...))
+}
+
+// PrintlnDefaultf wraps PrintlnDefault and works with format
+// strings.
+func PrintlnDefaultf(str string, args ...interface{}) {
+	PrintlnDefault(Sprintf(str, args...))
 }
 
 // OnDefault will Hilight() the provided string with the
 // specified ANSI code.
-func OnDefault(str string, args ...interface{}) string {
-	return Hilight("on_default", str, args...)
+func OnDefault(str string) string {
+	return Hilight("on_default", str)
 }
 
 // PrintOnDefault will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnDefault(str string, args ...interface{}) {
-	Print(Hilight("on_default", str, args...))
+func PrintOnDefault(str string) {
+	Print(Hilight("on_default", str))
 }
 
 // PrintlnOnDefault will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnDefault(str string, args ...interface{}) {
-	Println(Hilight("on_default", str, args...))
+func PrintlnOnDefault(str string) {
+	Println(Hilight("on_default", str))
+}
+
+// OnDefaultf wraps OnDefault and works with format
+// strings.
+func OnDefaultf(str string, args ...interface{}) string {
+	return OnDefault(Sprintf(str, args...))
+}
+
+// PrintOnDefaultf wraps PrintOnDefault and works with format
+// strings.
+func PrintOnDefaultf(str string, args ...interface{}) {
+	PrintOnDefault(Sprintf(str, args...))
+}
+
+// PrintlnOnDefaultf wraps PrintlnOnDefault and works with format
+// strings.
+func PrintlnOnDefaultf(str string, args ...interface{}) {
+	PrintlnOnDefault(Sprintf(str, args...))
 }
 
 // Color000 will Hilight() the provided string with the
 // specified ANSI code.
-func Color000(str string, args ...interface{}) string {
-	return Hilight("color_000", str, args...)
+func Color000(str string) string {
+	return Hilight("color_000", str)
 }
 
 // PrintColor000 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor000(str string, args ...interface{}) {
-	Print(Hilight("color_000", str, args...))
+func PrintColor000(str string) {
+	Print(Hilight("color_000", str))
 }
 
 // PrintlnColor000 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor000(str string, args ...interface{}) {
-	Println(Hilight("color_000", str, args...))
+func PrintlnColor000(str string) {
+	Println(Hilight("color_000", str))
+}
+
+// Color000f wraps Color000 and works with format
+// strings.
+func Color000f(str string, args ...interface{}) string {
+	return Color000(Sprintf(str, args...))
+}
+
+// PrintColor000f wraps PrintColor000 and works with format
+// strings.
+func PrintColor000f(str string, args ...interface{}) {
+	PrintColor000(Sprintf(str, args...))
+}
+
+// PrintlnColor000f wraps PrintlnColor000 and works with format
+// strings.
+func PrintlnColor000f(str string, args ...interface{}) {
+	PrintlnColor000(Sprintf(str, args...))
 }
 
 // OnColor000 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor000(str string, args ...interface{}) string {
-	return Hilight("on_color_000", str, args...)
+func OnColor000(str string) string {
+	return Hilight("on_color_000", str)
 }
 
 // PrintOnColor000 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor000(str string, args ...interface{}) {
-	Print(Hilight("on_color_000", str, args...))
+func PrintOnColor000(str string) {
+	Print(Hilight("on_color_000", str))
 }
 
 // PrintlnOnColor000 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor000(str string, args ...interface{}) {
-	Println(Hilight("on_color_000", str, args...))
+func PrintlnOnColor000(str string) {
+	Println(Hilight("on_color_000", str))
+}
+
+// OnColor000f wraps OnColor000 and works with format
+// strings.
+func OnColor000f(str string, args ...interface{}) string {
+	return OnColor000(Sprintf(str, args...))
+}
+
+// PrintOnColor000f wraps PrintOnColor000 and works with format
+// strings.
+func PrintOnColor000f(str string, args ...interface{}) {
+	PrintOnColor000(Sprintf(str, args...))
+}
+
+// PrintlnOnColor000f wraps PrintlnOnColor000 and works with format
+// strings.
+func PrintlnOnColor000f(str string, args ...interface{}) {
+	PrintlnOnColor000(Sprintf(str, args...))
 }
 
 // Color001 will Hilight() the provided string with the
 // specified ANSI code.
-func Color001(str string, args ...interface{}) string {
-	return Hilight("color_001", str, args...)
+func Color001(str string) string {
+	return Hilight("color_001", str)
 }
 
 // PrintColor001 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor001(str string, args ...interface{}) {
-	Print(Hilight("color_001", str, args...))
+func PrintColor001(str string) {
+	Print(Hilight("color_001", str))
 }
 
 // PrintlnColor001 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor001(str string, args ...interface{}) {
-	Println(Hilight("color_001", str, args...))
+func PrintlnColor001(str string) {
+	Println(Hilight("color_001", str))
+}
+
+// Color001f wraps Color001 and works with format
+// strings.
+func Color001f(str string, args ...interface{}) string {
+	return Color001(Sprintf(str, args...))
+}
+
+// PrintColor001f wraps PrintColor001 and works with format
+// strings.
+func PrintColor001f(str string, args ...interface{}) {
+	PrintColor001(Sprintf(str, args...))
+}
+
+// PrintlnColor001f wraps PrintlnColor001 and works with format
+// strings.
+func PrintlnColor001f(str string, args ...interface{}) {
+	PrintlnColor001(Sprintf(str, args...))
 }
 
 // OnColor001 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor001(str string, args ...interface{}) string {
-	return Hilight("on_color_001", str, args...)
+func OnColor001(str string) string {
+	return Hilight("on_color_001", str)
 }
 
 // PrintOnColor001 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor001(str string, args ...interface{}) {
-	Print(Hilight("on_color_001", str, args...))
+func PrintOnColor001(str string) {
+	Print(Hilight("on_color_001", str))
 }
 
 // PrintlnOnColor001 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor001(str string, args ...interface{}) {
-	Println(Hilight("on_color_001", str, args...))
+func PrintlnOnColor001(str string) {
+	Println(Hilight("on_color_001", str))
+}
+
+// OnColor001f wraps OnColor001 and works with format
+// strings.
+func OnColor001f(str string, args ...interface{}) string {
+	return OnColor001(Sprintf(str, args...))
+}
+
+// PrintOnColor001f wraps PrintOnColor001 and works with format
+// strings.
+func PrintOnColor001f(str string, args ...interface{}) {
+	PrintOnColor001(Sprintf(str, args...))
+}
+
+// PrintlnOnColor001f wraps PrintlnOnColor001 and works with format
+// strings.
+func PrintlnOnColor001f(str string, args ...interface{}) {
+	PrintlnOnColor001(Sprintf(str, args...))
 }
 
 // Color002 will Hilight() the provided string with the
 // specified ANSI code.
-func Color002(str string, args ...interface{}) string {
-	return Hilight("color_002", str, args...)
+func Color002(str string) string {
+	return Hilight("color_002", str)
 }
 
 // PrintColor002 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor002(str string, args ...interface{}) {
-	Print(Hilight("color_002", str, args...))
+func PrintColor002(str string) {
+	Print(Hilight("color_002", str))
 }
 
 // PrintlnColor002 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor002(str string, args ...interface{}) {
-	Println(Hilight("color_002", str, args...))
+func PrintlnColor002(str string) {
+	Println(Hilight("color_002", str))
+}
+
+// Color002f wraps Color002 and works with format
+// strings.
+func Color002f(str string, args ...interface{}) string {
+	return Color002(Sprintf(str, args...))
+}
+
+// PrintColor002f wraps PrintColor002 and works with format
+// strings.
+func PrintColor002f(str string, args ...interface{}) {
+	PrintColor002(Sprintf(str, args...))
+}
+
+// PrintlnColor002f wraps PrintlnColor002 and works with format
+// strings.
+func PrintlnColor002f(str string, args ...interface{}) {
+	PrintlnColor002(Sprintf(str, args...))
 }
 
 // OnColor002 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor002(str string, args ...interface{}) string {
-	return Hilight("on_color_002", str, args...)
+func OnColor002(str string) string {
+	return Hilight("on_color_002", str)
 }
 
 // PrintOnColor002 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor002(str string, args ...interface{}) {
-	Print(Hilight("on_color_002", str, args...))
+func PrintOnColor002(str string) {
+	Print(Hilight("on_color_002", str))
 }
 
 // PrintlnOnColor002 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor002(str string, args ...interface{}) {
-	Println(Hilight("on_color_002", str, args...))
+func PrintlnOnColor002(str string) {
+	Println(Hilight("on_color_002", str))
+}
+
+// OnColor002f wraps OnColor002 and works with format
+// strings.
+func OnColor002f(str string, args ...interface{}) string {
+	return OnColor002(Sprintf(str, args...))
+}
+
+// PrintOnColor002f wraps PrintOnColor002 and works with format
+// strings.
+func PrintOnColor002f(str string, args ...interface{}) {
+	PrintOnColor002(Sprintf(str, args...))
+}
+
+// PrintlnOnColor002f wraps PrintlnOnColor002 and works with format
+// strings.
+func PrintlnOnColor002f(str string, args ...interface{}) {
+	PrintlnOnColor002(Sprintf(str, args...))
 }
 
 // Color003 will Hilight() the provided string with the
 // specified ANSI code.
-func Color003(str string, args ...interface{}) string {
-	return Hilight("color_003", str, args...)
+func Color003(str string) string {
+	return Hilight("color_003", str)
 }
 
 // PrintColor003 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor003(str string, args ...interface{}) {
-	Print(Hilight("color_003", str, args...))
+func PrintColor003(str string) {
+	Print(Hilight("color_003", str))
 }
 
 // PrintlnColor003 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor003(str string, args ...interface{}) {
-	Println(Hilight("color_003", str, args...))
+func PrintlnColor003(str string) {
+	Println(Hilight("color_003", str))
+}
+
+// Color003f wraps Color003 and works with format
+// strings.
+func Color003f(str string, args ...interface{}) string {
+	return Color003(Sprintf(str, args...))
+}
+
+// PrintColor003f wraps PrintColor003 and works with format
+// strings.
+func PrintColor003f(str string, args ...interface{}) {
+	PrintColor003(Sprintf(str, args...))
+}
+
+// PrintlnColor003f wraps PrintlnColor003 and works with format
+// strings.
+func PrintlnColor003f(str string, args ...interface{}) {
+	PrintlnColor003(Sprintf(str, args...))
 }
 
 // OnColor003 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor003(str string, args ...interface{}) string {
-	return Hilight("on_color_003", str, args...)
+func OnColor003(str string) string {
+	return Hilight("on_color_003", str)
 }
 
 // PrintOnColor003 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor003(str string, args ...interface{}) {
-	Print(Hilight("on_color_003", str, args...))
+func PrintOnColor003(str string) {
+	Print(Hilight("on_color_003", str))
 }
 
 // PrintlnOnColor003 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor003(str string, args ...interface{}) {
-	Println(Hilight("on_color_003", str, args...))
+func PrintlnOnColor003(str string) {
+	Println(Hilight("on_color_003", str))
+}
+
+// OnColor003f wraps OnColor003 and works with format
+// strings.
+func OnColor003f(str string, args ...interface{}) string {
+	return OnColor003(Sprintf(str, args...))
+}
+
+// PrintOnColor003f wraps PrintOnColor003 and works with format
+// strings.
+func PrintOnColor003f(str string, args ...interface{}) {
+	PrintOnColor003(Sprintf(str, args...))
+}
+
+// PrintlnOnColor003f wraps PrintlnOnColor003 and works with format
+// strings.
+func PrintlnOnColor003f(str string, args ...interface{}) {
+	PrintlnOnColor003(Sprintf(str, args...))
 }
 
 // Color004 will Hilight() the provided string with the
 // specified ANSI code.
-func Color004(str string, args ...interface{}) string {
-	return Hilight("color_004", str, args...)
+func Color004(str string) string {
+	return Hilight("color_004", str)
 }
 
 // PrintColor004 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor004(str string, args ...interface{}) {
-	Print(Hilight("color_004", str, args...))
+func PrintColor004(str string) {
+	Print(Hilight("color_004", str))
 }
 
 // PrintlnColor004 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor004(str string, args ...interface{}) {
-	Println(Hilight("color_004", str, args...))
+func PrintlnColor004(str string) {
+	Println(Hilight("color_004", str))
+}
+
+// Color004f wraps Color004 and works with format
+// strings.
+func Color004f(str string, args ...interface{}) string {
+	return Color004(Sprintf(str, args...))
+}
+
+// PrintColor004f wraps PrintColor004 and works with format
+// strings.
+func PrintColor004f(str string, args ...interface{}) {
+	PrintColor004(Sprintf(str, args...))
+}
+
+// PrintlnColor004f wraps PrintlnColor004 and works with format
+// strings.
+func PrintlnColor004f(str string, args ...interface{}) {
+	PrintlnColor004(Sprintf(str, args...))
 }
 
 // OnColor004 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor004(str string, args ...interface{}) string {
-	return Hilight("on_color_004", str, args...)
+func OnColor004(str string) string {
+	return Hilight("on_color_004", str)
 }
 
 // PrintOnColor004 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor004(str string, args ...interface{}) {
-	Print(Hilight("on_color_004", str, args...))
+func PrintOnColor004(str string) {
+	Print(Hilight("on_color_004", str))
 }
 
 // PrintlnOnColor004 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor004(str string, args ...interface{}) {
-	Println(Hilight("on_color_004", str, args...))
+func PrintlnOnColor004(str string) {
+	Println(Hilight("on_color_004", str))
+}
+
+// OnColor004f wraps OnColor004 and works with format
+// strings.
+func OnColor004f(str string, args ...interface{}) string {
+	return OnColor004(Sprintf(str, args...))
+}
+
+// PrintOnColor004f wraps PrintOnColor004 and works with format
+// strings.
+func PrintOnColor004f(str string, args ...interface{}) {
+	PrintOnColor004(Sprintf(str, args...))
+}
+
+// PrintlnOnColor004f wraps PrintlnOnColor004 and works with format
+// strings.
+func PrintlnOnColor004f(str string, args ...interface{}) {
+	PrintlnOnColor004(Sprintf(str, args...))
 }
 
 // Color005 will Hilight() the provided string with the
 // specified ANSI code.
-func Color005(str string, args ...interface{}) string {
-	return Hilight("color_005", str, args...)
+func Color005(str string) string {
+	return Hilight("color_005", str)
 }
 
 // PrintColor005 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor005(str string, args ...interface{}) {
-	Print(Hilight("color_005", str, args...))
+func PrintColor005(str string) {
+	Print(Hilight("color_005", str))
 }
 
 // PrintlnColor005 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor005(str string, args ...interface{}) {
-	Println(Hilight("color_005", str, args...))
+func PrintlnColor005(str string) {
+	Println(Hilight("color_005", str))
+}
+
+// Color005f wraps Color005 and works with format
+// strings.
+func Color005f(str string, args ...interface{}) string {
+	return Color005(Sprintf(str, args...))
+}
+
+// PrintColor005f wraps PrintColor005 and works with format
+// strings.
+func PrintColor005f(str string, args ...interface{}) {
+	PrintColor005(Sprintf(str, args...))
+}
+
+// PrintlnColor005f wraps PrintlnColor005 and works with format
+// strings.
+func PrintlnColor005f(str string, args ...interface{}) {
+	PrintlnColor005(Sprintf(str, args...))
 }
 
 // OnColor005 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor005(str string, args ...interface{}) string {
-	return Hilight("on_color_005", str, args...)
+func OnColor005(str string) string {
+	return Hilight("on_color_005", str)
 }
 
 // PrintOnColor005 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor005(str string, args ...interface{}) {
-	Print(Hilight("on_color_005", str, args...))
+func PrintOnColor005(str string) {
+	Print(Hilight("on_color_005", str))
 }
 
 // PrintlnOnColor005 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor005(str string, args ...interface{}) {
-	Println(Hilight("on_color_005", str, args...))
+func PrintlnOnColor005(str string) {
+	Println(Hilight("on_color_005", str))
+}
+
+// OnColor005f wraps OnColor005 and works with format
+// strings.
+func OnColor005f(str string, args ...interface{}) string {
+	return OnColor005(Sprintf(str, args...))
+}
+
+// PrintOnColor005f wraps PrintOnColor005 and works with format
+// strings.
+func PrintOnColor005f(str string, args ...interface{}) {
+	PrintOnColor005(Sprintf(str, args...))
+}
+
+// PrintlnOnColor005f wraps PrintlnOnColor005 and works with format
+// strings.
+func PrintlnOnColor005f(str string, args ...interface{}) {
+	PrintlnOnColor005(Sprintf(str, args...))
 }
 
 // Color006 will Hilight() the provided string with the
 // specified ANSI code.
-func Color006(str string, args ...interface{}) string {
-	return Hilight("color_006", str, args...)
+func Color006(str string) string {
+	return Hilight("color_006", str)
 }
 
 // PrintColor006 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor006(str string, args ...interface{}) {
-	Print(Hilight("color_006", str, args...))
+func PrintColor006(str string) {
+	Print(Hilight("color_006", str))
 }
 
 // PrintlnColor006 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor006(str string, args ...interface{}) {
-	Println(Hilight("color_006", str, args...))
+func PrintlnColor006(str string) {
+	Println(Hilight("color_006", str))
+}
+
+// Color006f wraps Color006 and works with format
+// strings.
+func Color006f(str string, args ...interface{}) string {
+	return Color006(Sprintf(str, args...))
+}
+
+// PrintColor006f wraps PrintColor006 and works with format
+// strings.
+func PrintColor006f(str string, args ...interface{}) {
+	PrintColor006(Sprintf(str, args...))
+}
+
+// PrintlnColor006f wraps PrintlnColor006 and works with format
+// strings.
+func PrintlnColor006f(str string, args ...interface{}) {
+	PrintlnColor006(Sprintf(str, args...))
 }
 
 // OnColor006 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor006(str string, args ...interface{}) string {
-	return Hilight("on_color_006", str, args...)
+func OnColor006(str string) string {
+	return Hilight("on_color_006", str)
 }
 
 // PrintOnColor006 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor006(str string, args ...interface{}) {
-	Print(Hilight("on_color_006", str, args...))
+func PrintOnColor006(str string) {
+	Print(Hilight("on_color_006", str))
 }
 
 // PrintlnOnColor006 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor006(str string, args ...interface{}) {
-	Println(Hilight("on_color_006", str, args...))
+func PrintlnOnColor006(str string) {
+	Println(Hilight("on_color_006", str))
+}
+
+// OnColor006f wraps OnColor006 and works with format
+// strings.
+func OnColor006f(str string, args ...interface{}) string {
+	return OnColor006(Sprintf(str, args...))
+}
+
+// PrintOnColor006f wraps PrintOnColor006 and works with format
+// strings.
+func PrintOnColor006f(str string, args ...interface{}) {
+	PrintOnColor006(Sprintf(str, args...))
+}
+
+// PrintlnOnColor006f wraps PrintlnOnColor006 and works with format
+// strings.
+func PrintlnOnColor006f(str string, args ...interface{}) {
+	PrintlnOnColor006(Sprintf(str, args...))
 }
 
 // Color007 will Hilight() the provided string with the
 // specified ANSI code.
-func Color007(str string, args ...interface{}) string {
-	return Hilight("color_007", str, args...)
+func Color007(str string) string {
+	return Hilight("color_007", str)
 }
 
 // PrintColor007 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor007(str string, args ...interface{}) {
-	Print(Hilight("color_007", str, args...))
+func PrintColor007(str string) {
+	Print(Hilight("color_007", str))
 }
 
 // PrintlnColor007 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor007(str string, args ...interface{}) {
-	Println(Hilight("color_007", str, args...))
+func PrintlnColor007(str string) {
+	Println(Hilight("color_007", str))
+}
+
+// Color007f wraps Color007 and works with format
+// strings.
+func Color007f(str string, args ...interface{}) string {
+	return Color007(Sprintf(str, args...))
+}
+
+// PrintColor007f wraps PrintColor007 and works with format
+// strings.
+func PrintColor007f(str string, args ...interface{}) {
+	PrintColor007(Sprintf(str, args...))
+}
+
+// PrintlnColor007f wraps PrintlnColor007 and works with format
+// strings.
+func PrintlnColor007f(str string, args ...interface{}) {
+	PrintlnColor007(Sprintf(str, args...))
 }
 
 // OnColor007 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor007(str string, args ...interface{}) string {
-	return Hilight("on_color_007", str, args...)
+func OnColor007(str string) string {
+	return Hilight("on_color_007", str)
 }
 
 // PrintOnColor007 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor007(str string, args ...interface{}) {
-	Print(Hilight("on_color_007", str, args...))
+func PrintOnColor007(str string) {
+	Print(Hilight("on_color_007", str))
 }
 
 // PrintlnOnColor007 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor007(str string, args ...interface{}) {
-	Println(Hilight("on_color_007", str, args...))
+func PrintlnOnColor007(str string) {
+	Println(Hilight("on_color_007", str))
+}
+
+// OnColor007f wraps OnColor007 and works with format
+// strings.
+func OnColor007f(str string, args ...interface{}) string {
+	return OnColor007(Sprintf(str, args...))
+}
+
+// PrintOnColor007f wraps PrintOnColor007 and works with format
+// strings.
+func PrintOnColor007f(str string, args ...interface{}) {
+	PrintOnColor007(Sprintf(str, args...))
+}
+
+// PrintlnOnColor007f wraps PrintlnOnColor007 and works with format
+// strings.
+func PrintlnOnColor007f(str string, args ...interface{}) {
+	PrintlnOnColor007(Sprintf(str, args...))
 }
 
 // Color008 will Hilight() the provided string with the
 // specified ANSI code.
-func Color008(str string, args ...interface{}) string {
-	return Hilight("color_008", str, args...)
+func Color008(str string) string {
+	return Hilight("color_008", str)
 }
 
 // PrintColor008 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor008(str string, args ...interface{}) {
-	Print(Hilight("color_008", str, args...))
+func PrintColor008(str string) {
+	Print(Hilight("color_008", str))
 }
 
 // PrintlnColor008 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor008(str string, args ...interface{}) {
-	Println(Hilight("color_008", str, args...))
+func PrintlnColor008(str string) {
+	Println(Hilight("color_008", str))
+}
+
+// Color008f wraps Color008 and works with format
+// strings.
+func Color008f(str string, args ...interface{}) string {
+	return Color008(Sprintf(str, args...))
+}
+
+// PrintColor008f wraps PrintColor008 and works with format
+// strings.
+func PrintColor008f(str string, args ...interface{}) {
+	PrintColor008(Sprintf(str, args...))
+}
+
+// PrintlnColor008f wraps PrintlnColor008 and works with format
+// strings.
+func PrintlnColor008f(str string, args ...interface{}) {
+	PrintlnColor008(Sprintf(str, args...))
 }
 
 // OnColor008 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor008(str string, args ...interface{}) string {
-	return Hilight("on_color_008", str, args...)
+func OnColor008(str string) string {
+	return Hilight("on_color_008", str)
 }
 
 // PrintOnColor008 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor008(str string, args ...interface{}) {
-	Print(Hilight("on_color_008", str, args...))
+func PrintOnColor008(str string) {
+	Print(Hilight("on_color_008", str))
 }
 
 // PrintlnOnColor008 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor008(str string, args ...interface{}) {
-	Println(Hilight("on_color_008", str, args...))
+func PrintlnOnColor008(str string) {
+	Println(Hilight("on_color_008", str))
+}
+
+// OnColor008f wraps OnColor008 and works with format
+// strings.
+func OnColor008f(str string, args ...interface{}) string {
+	return OnColor008(Sprintf(str, args...))
+}
+
+// PrintOnColor008f wraps PrintOnColor008 and works with format
+// strings.
+func PrintOnColor008f(str string, args ...interface{}) {
+	PrintOnColor008(Sprintf(str, args...))
+}
+
+// PrintlnOnColor008f wraps PrintlnOnColor008 and works with format
+// strings.
+func PrintlnOnColor008f(str string, args ...interface{}) {
+	PrintlnOnColor008(Sprintf(str, args...))
 }
 
 // Color009 will Hilight() the provided string with the
 // specified ANSI code.
-func Color009(str string, args ...interface{}) string {
-	return Hilight("color_009", str, args...)
+func Color009(str string) string {
+	return Hilight("color_009", str)
 }
 
 // PrintColor009 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor009(str string, args ...interface{}) {
-	Print(Hilight("color_009", str, args...))
+func PrintColor009(str string) {
+	Print(Hilight("color_009", str))
 }
 
 // PrintlnColor009 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor009(str string, args ...interface{}) {
-	Println(Hilight("color_009", str, args...))
+func PrintlnColor009(str string) {
+	Println(Hilight("color_009", str))
+}
+
+// Color009f wraps Color009 and works with format
+// strings.
+func Color009f(str string, args ...interface{}) string {
+	return Color009(Sprintf(str, args...))
+}
+
+// PrintColor009f wraps PrintColor009 and works with format
+// strings.
+func PrintColor009f(str string, args ...interface{}) {
+	PrintColor009(Sprintf(str, args...))
+}
+
+// PrintlnColor009f wraps PrintlnColor009 and works with format
+// strings.
+func PrintlnColor009f(str string, args ...interface{}) {
+	PrintlnColor009(Sprintf(str, args...))
 }
 
 // OnColor009 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor009(str string, args ...interface{}) string {
-	return Hilight("on_color_009", str, args...)
+func OnColor009(str string) string {
+	return Hilight("on_color_009", str)
 }
 
 // PrintOnColor009 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor009(str string, args ...interface{}) {
-	Print(Hilight("on_color_009", str, args...))
+func PrintOnColor009(str string) {
+	Print(Hilight("on_color_009", str))
 }
 
 // PrintlnOnColor009 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor009(str string, args ...interface{}) {
-	Println(Hilight("on_color_009", str, args...))
+func PrintlnOnColor009(str string) {
+	Println(Hilight("on_color_009", str))
+}
+
+// OnColor009f wraps OnColor009 and works with format
+// strings.
+func OnColor009f(str string, args ...interface{}) string {
+	return OnColor009(Sprintf(str, args...))
+}
+
+// PrintOnColor009f wraps PrintOnColor009 and works with format
+// strings.
+func PrintOnColor009f(str string, args ...interface{}) {
+	PrintOnColor009(Sprintf(str, args...))
+}
+
+// PrintlnOnColor009f wraps PrintlnOnColor009 and works with format
+// strings.
+func PrintlnOnColor009f(str string, args ...interface{}) {
+	PrintlnOnColor009(Sprintf(str, args...))
 }
 
 // Color010 will Hilight() the provided string with the
 // specified ANSI code.
-func Color010(str string, args ...interface{}) string {
-	return Hilight("color_010", str, args...)
+func Color010(str string) string {
+	return Hilight("color_010", str)
 }
 
 // PrintColor010 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor010(str string, args ...interface{}) {
-	Print(Hilight("color_010", str, args...))
+func PrintColor010(str string) {
+	Print(Hilight("color_010", str))
 }
 
 // PrintlnColor010 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor010(str string, args ...interface{}) {
-	Println(Hilight("color_010", str, args...))
+func PrintlnColor010(str string) {
+	Println(Hilight("color_010", str))
+}
+
+// Color010f wraps Color010 and works with format
+// strings.
+func Color010f(str string, args ...interface{}) string {
+	return Color010(Sprintf(str, args...))
+}
+
+// PrintColor010f wraps PrintColor010 and works with format
+// strings.
+func PrintColor010f(str string, args ...interface{}) {
+	PrintColor010(Sprintf(str, args...))
+}
+
+// PrintlnColor010f wraps PrintlnColor010 and works with format
+// strings.
+func PrintlnColor010f(str string, args ...interface{}) {
+	PrintlnColor010(Sprintf(str, args...))
 }
 
 // OnColor010 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor010(str string, args ...interface{}) string {
-	return Hilight("on_color_010", str, args...)
+func OnColor010(str string) string {
+	return Hilight("on_color_010", str)
 }
 
 // PrintOnColor010 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor010(str string, args ...interface{}) {
-	Print(Hilight("on_color_010", str, args...))
+func PrintOnColor010(str string) {
+	Print(Hilight("on_color_010", str))
 }
 
 // PrintlnOnColor010 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor010(str string, args ...interface{}) {
-	Println(Hilight("on_color_010", str, args...))
+func PrintlnOnColor010(str string) {
+	Println(Hilight("on_color_010", str))
+}
+
+// OnColor010f wraps OnColor010 and works with format
+// strings.
+func OnColor010f(str string, args ...interface{}) string {
+	return OnColor010(Sprintf(str, args...))
+}
+
+// PrintOnColor010f wraps PrintOnColor010 and works with format
+// strings.
+func PrintOnColor010f(str string, args ...interface{}) {
+	PrintOnColor010(Sprintf(str, args...))
+}
+
+// PrintlnOnColor010f wraps PrintlnOnColor010 and works with format
+// strings.
+func PrintlnOnColor010f(str string, args ...interface{}) {
+	PrintlnOnColor010(Sprintf(str, args...))
 }
 
 // Color011 will Hilight() the provided string with the
 // specified ANSI code.
-func Color011(str string, args ...interface{}) string {
-	return Hilight("color_011", str, args...)
+func Color011(str string) string {
+	return Hilight("color_011", str)
 }
 
 // PrintColor011 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor011(str string, args ...interface{}) {
-	Print(Hilight("color_011", str, args...))
+func PrintColor011(str string) {
+	Print(Hilight("color_011", str))
 }
 
 // PrintlnColor011 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor011(str string, args ...interface{}) {
-	Println(Hilight("color_011", str, args...))
+func PrintlnColor011(str string) {
+	Println(Hilight("color_011", str))
+}
+
+// Color011f wraps Color011 and works with format
+// strings.
+func Color011f(str string, args ...interface{}) string {
+	return Color011(Sprintf(str, args...))
+}
+
+// PrintColor011f wraps PrintColor011 and works with format
+// strings.
+func PrintColor011f(str string, args ...interface{}) {
+	PrintColor011(Sprintf(str, args...))
+}
+
+// PrintlnColor011f wraps PrintlnColor011 and works with format
+// strings.
+func PrintlnColor011f(str string, args ...interface{}) {
+	PrintlnColor011(Sprintf(str, args...))
 }
 
 // OnColor011 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor011(str string, args ...interface{}) string {
-	return Hilight("on_color_011", str, args...)
+func OnColor011(str string) string {
+	return Hilight("on_color_011", str)
 }
 
 // PrintOnColor011 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor011(str string, args ...interface{}) {
-	Print(Hilight("on_color_011", str, args...))
+func PrintOnColor011(str string) {
+	Print(Hilight("on_color_011", str))
 }
 
 // PrintlnOnColor011 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor011(str string, args ...interface{}) {
-	Println(Hilight("on_color_011", str, args...))
+func PrintlnOnColor011(str string) {
+	Println(Hilight("on_color_011", str))
+}
+
+// OnColor011f wraps OnColor011 and works with format
+// strings.
+func OnColor011f(str string, args ...interface{}) string {
+	return OnColor011(Sprintf(str, args...))
+}
+
+// PrintOnColor011f wraps PrintOnColor011 and works with format
+// strings.
+func PrintOnColor011f(str string, args ...interface{}) {
+	PrintOnColor011(Sprintf(str, args...))
+}
+
+// PrintlnOnColor011f wraps PrintlnOnColor011 and works with format
+// strings.
+func PrintlnOnColor011f(str string, args ...interface{}) {
+	PrintlnOnColor011(Sprintf(str, args...))
 }
 
 // Color012 will Hilight() the provided string with the
 // specified ANSI code.
-func Color012(str string, args ...interface{}) string {
-	return Hilight("color_012", str, args...)
+func Color012(str string) string {
+	return Hilight("color_012", str)
 }
 
 // PrintColor012 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor012(str string, args ...interface{}) {
-	Print(Hilight("color_012", str, args...))
+func PrintColor012(str string) {
+	Print(Hilight("color_012", str))
 }
 
 // PrintlnColor012 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor012(str string, args ...interface{}) {
-	Println(Hilight("color_012", str, args...))
+func PrintlnColor012(str string) {
+	Println(Hilight("color_012", str))
+}
+
+// Color012f wraps Color012 and works with format
+// strings.
+func Color012f(str string, args ...interface{}) string {
+	return Color012(Sprintf(str, args...))
+}
+
+// PrintColor012f wraps PrintColor012 and works with format
+// strings.
+func PrintColor012f(str string, args ...interface{}) {
+	PrintColor012(Sprintf(str, args...))
+}
+
+// PrintlnColor012f wraps PrintlnColor012 and works with format
+// strings.
+func PrintlnColor012f(str string, args ...interface{}) {
+	PrintlnColor012(Sprintf(str, args...))
 }
 
 // OnColor012 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor012(str string, args ...interface{}) string {
-	return Hilight("on_color_012", str, args...)
+func OnColor012(str string) string {
+	return Hilight("on_color_012", str)
 }
 
 // PrintOnColor012 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor012(str string, args ...interface{}) {
-	Print(Hilight("on_color_012", str, args...))
+func PrintOnColor012(str string) {
+	Print(Hilight("on_color_012", str))
 }
 
 // PrintlnOnColor012 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor012(str string, args ...interface{}) {
-	Println(Hilight("on_color_012", str, args...))
+func PrintlnOnColor012(str string) {
+	Println(Hilight("on_color_012", str))
+}
+
+// OnColor012f wraps OnColor012 and works with format
+// strings.
+func OnColor012f(str string, args ...interface{}) string {
+	return OnColor012(Sprintf(str, args...))
+}
+
+// PrintOnColor012f wraps PrintOnColor012 and works with format
+// strings.
+func PrintOnColor012f(str string, args ...interface{}) {
+	PrintOnColor012(Sprintf(str, args...))
+}
+
+// PrintlnOnColor012f wraps PrintlnOnColor012 and works with format
+// strings.
+func PrintlnOnColor012f(str string, args ...interface{}) {
+	PrintlnOnColor012(Sprintf(str, args...))
 }
 
 // Color013 will Hilight() the provided string with the
 // specified ANSI code.
-func Color013(str string, args ...interface{}) string {
-	return Hilight("color_013", str, args...)
+func Color013(str string) string {
+	return Hilight("color_013", str)
 }
 
 // PrintColor013 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor013(str string, args ...interface{}) {
-	Print(Hilight("color_013", str, args...))
+func PrintColor013(str string) {
+	Print(Hilight("color_013", str))
 }
 
 // PrintlnColor013 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor013(str string, args ...interface{}) {
-	Println(Hilight("color_013", str, args...))
+func PrintlnColor013(str string) {
+	Println(Hilight("color_013", str))
+}
+
+// Color013f wraps Color013 and works with format
+// strings.
+func Color013f(str string, args ...interface{}) string {
+	return Color013(Sprintf(str, args...))
+}
+
+// PrintColor013f wraps PrintColor013 and works with format
+// strings.
+func PrintColor013f(str string, args ...interface{}) {
+	PrintColor013(Sprintf(str, args...))
+}
+
+// PrintlnColor013f wraps PrintlnColor013 and works with format
+// strings.
+func PrintlnColor013f(str string, args ...interface{}) {
+	PrintlnColor013(Sprintf(str, args...))
 }
 
 // OnColor013 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor013(str string, args ...interface{}) string {
-	return Hilight("on_color_013", str, args...)
+func OnColor013(str string) string {
+	return Hilight("on_color_013", str)
 }
 
 // PrintOnColor013 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor013(str string, args ...interface{}) {
-	Print(Hilight("on_color_013", str, args...))
+func PrintOnColor013(str string) {
+	Print(Hilight("on_color_013", str))
 }
 
 // PrintlnOnColor013 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor013(str string, args ...interface{}) {
-	Println(Hilight("on_color_013", str, args...))
+func PrintlnOnColor013(str string) {
+	Println(Hilight("on_color_013", str))
+}
+
+// OnColor013f wraps OnColor013 and works with format
+// strings.
+func OnColor013f(str string, args ...interface{}) string {
+	return OnColor013(Sprintf(str, args...))
+}
+
+// PrintOnColor013f wraps PrintOnColor013 and works with format
+// strings.
+func PrintOnColor013f(str string, args ...interface{}) {
+	PrintOnColor013(Sprintf(str, args...))
+}
+
+// PrintlnOnColor013f wraps PrintlnOnColor013 and works with format
+// strings.
+func PrintlnOnColor013f(str string, args ...interface{}) {
+	PrintlnOnColor013(Sprintf(str, args...))
 }
 
 // Color014 will Hilight() the provided string with the
 // specified ANSI code.
-func Color014(str string, args ...interface{}) string {
-	return Hilight("color_014", str, args...)
+func Color014(str string) string {
+	return Hilight("color_014", str)
 }
 
 // PrintColor014 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor014(str string, args ...interface{}) {
-	Print(Hilight("color_014", str, args...))
+func PrintColor014(str string) {
+	Print(Hilight("color_014", str))
 }
 
 // PrintlnColor014 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor014(str string, args ...interface{}) {
-	Println(Hilight("color_014", str, args...))
+func PrintlnColor014(str string) {
+	Println(Hilight("color_014", str))
+}
+
+// Color014f wraps Color014 and works with format
+// strings.
+func Color014f(str string, args ...interface{}) string {
+	return Color014(Sprintf(str, args...))
+}
+
+// PrintColor014f wraps PrintColor014 and works with format
+// strings.
+func PrintColor014f(str string, args ...interface{}) {
+	PrintColor014(Sprintf(str, args...))
+}
+
+// PrintlnColor014f wraps PrintlnColor014 and works with format
+// strings.
+func PrintlnColor014f(str string, args ...interface{}) {
+	PrintlnColor014(Sprintf(str, args...))
 }
 
 // OnColor014 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor014(str string, args ...interface{}) string {
-	return Hilight("on_color_014", str, args...)
+func OnColor014(str string) string {
+	return Hilight("on_color_014", str)
 }
 
 // PrintOnColor014 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor014(str string, args ...interface{}) {
-	Print(Hilight("on_color_014", str, args...))
+func PrintOnColor014(str string) {
+	Print(Hilight("on_color_014", str))
 }
 
 // PrintlnOnColor014 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor014(str string, args ...interface{}) {
-	Println(Hilight("on_color_014", str, args...))
+func PrintlnOnColor014(str string) {
+	Println(Hilight("on_color_014", str))
+}
+
+// OnColor014f wraps OnColor014 and works with format
+// strings.
+func OnColor014f(str string, args ...interface{}) string {
+	return OnColor014(Sprintf(str, args...))
+}
+
+// PrintOnColor014f wraps PrintOnColor014 and works with format
+// strings.
+func PrintOnColor014f(str string, args ...interface{}) {
+	PrintOnColor014(Sprintf(str, args...))
+}
+
+// PrintlnOnColor014f wraps PrintlnOnColor014 and works with format
+// strings.
+func PrintlnOnColor014f(str string, args ...interface{}) {
+	PrintlnOnColor014(Sprintf(str, args...))
 }
 
 // Color015 will Hilight() the provided string with the
 // specified ANSI code.
-func Color015(str string, args ...interface{}) string {
-	return Hilight("color_015", str, args...)
+func Color015(str string) string {
+	return Hilight("color_015", str)
 }
 
 // PrintColor015 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor015(str string, args ...interface{}) {
-	Print(Hilight("color_015", str, args...))
+func PrintColor015(str string) {
+	Print(Hilight("color_015", str))
 }
 
 // PrintlnColor015 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor015(str string, args ...interface{}) {
-	Println(Hilight("color_015", str, args...))
+func PrintlnColor015(str string) {
+	Println(Hilight("color_015", str))
+}
+
+// Color015f wraps Color015 and works with format
+// strings.
+func Color015f(str string, args ...interface{}) string {
+	return Color015(Sprintf(str, args...))
+}
+
+// PrintColor015f wraps PrintColor015 and works with format
+// strings.
+func PrintColor015f(str string, args ...interface{}) {
+	PrintColor015(Sprintf(str, args...))
+}
+
+// PrintlnColor015f wraps PrintlnColor015 and works with format
+// strings.
+func PrintlnColor015f(str string, args ...interface{}) {
+	PrintlnColor015(Sprintf(str, args...))
 }
 
 // OnColor015 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor015(str string, args ...interface{}) string {
-	return Hilight("on_color_015", str, args...)
+func OnColor015(str string) string {
+	return Hilight("on_color_015", str)
 }
 
 // PrintOnColor015 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor015(str string, args ...interface{}) {
-	Print(Hilight("on_color_015", str, args...))
+func PrintOnColor015(str string) {
+	Print(Hilight("on_color_015", str))
 }
 
 // PrintlnOnColor015 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor015(str string, args ...interface{}) {
-	Println(Hilight("on_color_015", str, args...))
+func PrintlnOnColor015(str string) {
+	Println(Hilight("on_color_015", str))
+}
+
+// OnColor015f wraps OnColor015 and works with format
+// strings.
+func OnColor015f(str string, args ...interface{}) string {
+	return OnColor015(Sprintf(str, args...))
+}
+
+// PrintOnColor015f wraps PrintOnColor015 and works with format
+// strings.
+func PrintOnColor015f(str string, args ...interface{}) {
+	PrintOnColor015(Sprintf(str, args...))
+}
+
+// PrintlnOnColor015f wraps PrintlnOnColor015 and works with format
+// strings.
+func PrintlnOnColor015f(str string, args ...interface{}) {
+	PrintlnOnColor015(Sprintf(str, args...))
 }
 
 // Color016 will Hilight() the provided string with the
 // specified ANSI code.
-func Color016(str string, args ...interface{}) string {
-	return Hilight("color_016", str, args...)
+func Color016(str string) string {
+	return Hilight("color_016", str)
 }
 
 // PrintColor016 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor016(str string, args ...interface{}) {
-	Print(Hilight("color_016", str, args...))
+func PrintColor016(str string) {
+	Print(Hilight("color_016", str))
 }
 
 // PrintlnColor016 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor016(str string, args ...interface{}) {
-	Println(Hilight("color_016", str, args...))
+func PrintlnColor016(str string) {
+	Println(Hilight("color_016", str))
+}
+
+// Color016f wraps Color016 and works with format
+// strings.
+func Color016f(str string, args ...interface{}) string {
+	return Color016(Sprintf(str, args...))
+}
+
+// PrintColor016f wraps PrintColor016 and works with format
+// strings.
+func PrintColor016f(str string, args ...interface{}) {
+	PrintColor016(Sprintf(str, args...))
+}
+
+// PrintlnColor016f wraps PrintlnColor016 and works with format
+// strings.
+func PrintlnColor016f(str string, args ...interface{}) {
+	PrintlnColor016(Sprintf(str, args...))
 }
 
 // OnColor016 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor016(str string, args ...interface{}) string {
-	return Hilight("on_color_016", str, args...)
+func OnColor016(str string) string {
+	return Hilight("on_color_016", str)
 }
 
 // PrintOnColor016 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor016(str string, args ...interface{}) {
-	Print(Hilight("on_color_016", str, args...))
+func PrintOnColor016(str string) {
+	Print(Hilight("on_color_016", str))
 }
 
 // PrintlnOnColor016 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor016(str string, args ...interface{}) {
-	Println(Hilight("on_color_016", str, args...))
+func PrintlnOnColor016(str string) {
+	Println(Hilight("on_color_016", str))
+}
+
+// OnColor016f wraps OnColor016 and works with format
+// strings.
+func OnColor016f(str string, args ...interface{}) string {
+	return OnColor016(Sprintf(str, args...))
+}
+
+// PrintOnColor016f wraps PrintOnColor016 and works with format
+// strings.
+func PrintOnColor016f(str string, args ...interface{}) {
+	PrintOnColor016(Sprintf(str, args...))
+}
+
+// PrintlnOnColor016f wraps PrintlnOnColor016 and works with format
+// strings.
+func PrintlnOnColor016f(str string, args ...interface{}) {
+	PrintlnOnColor016(Sprintf(str, args...))
 }
 
 // Color017 will Hilight() the provided string with the
 // specified ANSI code.
-func Color017(str string, args ...interface{}) string {
-	return Hilight("color_017", str, args...)
+func Color017(str string) string {
+	return Hilight("color_017", str)
 }
 
 // PrintColor017 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor017(str string, args ...interface{}) {
-	Print(Hilight("color_017", str, args...))
+func PrintColor017(str string) {
+	Print(Hilight("color_017", str))
 }
 
 // PrintlnColor017 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor017(str string, args ...interface{}) {
-	Println(Hilight("color_017", str, args...))
+func PrintlnColor017(str string) {
+	Println(Hilight("color_017", str))
+}
+
+// Color017f wraps Color017 and works with format
+// strings.
+func Color017f(str string, args ...interface{}) string {
+	return Color017(Sprintf(str, args...))
+}
+
+// PrintColor017f wraps PrintColor017 and works with format
+// strings.
+func PrintColor017f(str string, args ...interface{}) {
+	PrintColor017(Sprintf(str, args...))
+}
+
+// PrintlnColor017f wraps PrintlnColor017 and works with format
+// strings.
+func PrintlnColor017f(str string, args ...interface{}) {
+	PrintlnColor017(Sprintf(str, args...))
 }
 
 // OnColor017 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor017(str string, args ...interface{}) string {
-	return Hilight("on_color_017", str, args...)
+func OnColor017(str string) string {
+	return Hilight("on_color_017", str)
 }
 
 // PrintOnColor017 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor017(str string, args ...interface{}) {
-	Print(Hilight("on_color_017", str, args...))
+func PrintOnColor017(str string) {
+	Print(Hilight("on_color_017", str))
 }
 
 // PrintlnOnColor017 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor017(str string, args ...interface{}) {
-	Println(Hilight("on_color_017", str, args...))
+func PrintlnOnColor017(str string) {
+	Println(Hilight("on_color_017", str))
+}
+
+// OnColor017f wraps OnColor017 and works with format
+// strings.
+func OnColor017f(str string, args ...interface{}) string {
+	return OnColor017(Sprintf(str, args...))
+}
+
+// PrintOnColor017f wraps PrintOnColor017 and works with format
+// strings.
+func PrintOnColor017f(str string, args ...interface{}) {
+	PrintOnColor017(Sprintf(str, args...))
+}
+
+// PrintlnOnColor017f wraps PrintlnOnColor017 and works with format
+// strings.
+func PrintlnOnColor017f(str string, args ...interface{}) {
+	PrintlnOnColor017(Sprintf(str, args...))
 }
 
 // Color018 will Hilight() the provided string with the
 // specified ANSI code.
-func Color018(str string, args ...interface{}) string {
-	return Hilight("color_018", str, args...)
+func Color018(str string) string {
+	return Hilight("color_018", str)
 }
 
 // PrintColor018 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor018(str string, args ...interface{}) {
-	Print(Hilight("color_018", str, args...))
+func PrintColor018(str string) {
+	Print(Hilight("color_018", str))
 }
 
 // PrintlnColor018 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor018(str string, args ...interface{}) {
-	Println(Hilight("color_018", str, args...))
+func PrintlnColor018(str string) {
+	Println(Hilight("color_018", str))
+}
+
+// Color018f wraps Color018 and works with format
+// strings.
+func Color018f(str string, args ...interface{}) string {
+	return Color018(Sprintf(str, args...))
+}
+
+// PrintColor018f wraps PrintColor018 and works with format
+// strings.
+func PrintColor018f(str string, args ...interface{}) {
+	PrintColor018(Sprintf(str, args...))
+}
+
+// PrintlnColor018f wraps PrintlnColor018 and works with format
+// strings.
+func PrintlnColor018f(str string, args ...interface{}) {
+	PrintlnColor018(Sprintf(str, args...))
 }
 
 // OnColor018 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor018(str string, args ...interface{}) string {
-	return Hilight("on_color_018", str, args...)
+func OnColor018(str string) string {
+	return Hilight("on_color_018", str)
 }
 
 // PrintOnColor018 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor018(str string, args ...interface{}) {
-	Print(Hilight("on_color_018", str, args...))
+func PrintOnColor018(str string) {
+	Print(Hilight("on_color_018", str))
 }
 
 // PrintlnOnColor018 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor018(str string, args ...interface{}) {
-	Println(Hilight("on_color_018", str, args...))
+func PrintlnOnColor018(str string) {
+	Println(Hilight("on_color_018", str))
+}
+
+// OnColor018f wraps OnColor018 and works with format
+// strings.
+func OnColor018f(str string, args ...interface{}) string {
+	return OnColor018(Sprintf(str, args...))
+}
+
+// PrintOnColor018f wraps PrintOnColor018 and works with format
+// strings.
+func PrintOnColor018f(str string, args ...interface{}) {
+	PrintOnColor018(Sprintf(str, args...))
+}
+
+// PrintlnOnColor018f wraps PrintlnOnColor018 and works with format
+// strings.
+func PrintlnOnColor018f(str string, args ...interface{}) {
+	PrintlnOnColor018(Sprintf(str, args...))
 }
 
 // Color019 will Hilight() the provided string with the
 // specified ANSI code.
-func Color019(str string, args ...interface{}) string {
-	return Hilight("color_019", str, args...)
+func Color019(str string) string {
+	return Hilight("color_019", str)
 }
 
 // PrintColor019 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor019(str string, args ...interface{}) {
-	Print(Hilight("color_019", str, args...))
+func PrintColor019(str string) {
+	Print(Hilight("color_019", str))
 }
 
 // PrintlnColor019 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor019(str string, args ...interface{}) {
-	Println(Hilight("color_019", str, args...))
+func PrintlnColor019(str string) {
+	Println(Hilight("color_019", str))
+}
+
+// Color019f wraps Color019 and works with format
+// strings.
+func Color019f(str string, args ...interface{}) string {
+	return Color019(Sprintf(str, args...))
+}
+
+// PrintColor019f wraps PrintColor019 and works with format
+// strings.
+func PrintColor019f(str string, args ...interface{}) {
+	PrintColor019(Sprintf(str, args...))
+}
+
+// PrintlnColor019f wraps PrintlnColor019 and works with format
+// strings.
+func PrintlnColor019f(str string, args ...interface{}) {
+	PrintlnColor019(Sprintf(str, args...))
 }
 
 // OnColor019 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor019(str string, args ...interface{}) string {
-	return Hilight("on_color_019", str, args...)
+func OnColor019(str string) string {
+	return Hilight("on_color_019", str)
 }
 
 // PrintOnColor019 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor019(str string, args ...interface{}) {
-	Print(Hilight("on_color_019", str, args...))
+func PrintOnColor019(str string) {
+	Print(Hilight("on_color_019", str))
 }
 
 // PrintlnOnColor019 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor019(str string, args ...interface{}) {
-	Println(Hilight("on_color_019", str, args...))
+func PrintlnOnColor019(str string) {
+	Println(Hilight("on_color_019", str))
+}
+
+// OnColor019f wraps OnColor019 and works with format
+// strings.
+func OnColor019f(str string, args ...interface{}) string {
+	return OnColor019(Sprintf(str, args...))
+}
+
+// PrintOnColor019f wraps PrintOnColor019 and works with format
+// strings.
+func PrintOnColor019f(str string, args ...interface{}) {
+	PrintOnColor019(Sprintf(str, args...))
+}
+
+// PrintlnOnColor019f wraps PrintlnOnColor019 and works with format
+// strings.
+func PrintlnOnColor019f(str string, args ...interface{}) {
+	PrintlnOnColor019(Sprintf(str, args...))
 }
 
 // Color020 will Hilight() the provided string with the
 // specified ANSI code.
-func Color020(str string, args ...interface{}) string {
-	return Hilight("color_020", str, args...)
+func Color020(str string) string {
+	return Hilight("color_020", str)
 }
 
 // PrintColor020 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor020(str string, args ...interface{}) {
-	Print(Hilight("color_020", str, args...))
+func PrintColor020(str string) {
+	Print(Hilight("color_020", str))
 }
 
 // PrintlnColor020 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor020(str string, args ...interface{}) {
-	Println(Hilight("color_020", str, args...))
+func PrintlnColor020(str string) {
+	Println(Hilight("color_020", str))
+}
+
+// Color020f wraps Color020 and works with format
+// strings.
+func Color020f(str string, args ...interface{}) string {
+	return Color020(Sprintf(str, args...))
+}
+
+// PrintColor020f wraps PrintColor020 and works with format
+// strings.
+func PrintColor020f(str string, args ...interface{}) {
+	PrintColor020(Sprintf(str, args...))
+}
+
+// PrintlnColor020f wraps PrintlnColor020 and works with format
+// strings.
+func PrintlnColor020f(str string, args ...interface{}) {
+	PrintlnColor020(Sprintf(str, args...))
 }
 
 // OnColor020 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor020(str string, args ...interface{}) string {
-	return Hilight("on_color_020", str, args...)
+func OnColor020(str string) string {
+	return Hilight("on_color_020", str)
 }
 
 // PrintOnColor020 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor020(str string, args ...interface{}) {
-	Print(Hilight("on_color_020", str, args...))
+func PrintOnColor020(str string) {
+	Print(Hilight("on_color_020", str))
 }
 
 // PrintlnOnColor020 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor020(str string, args ...interface{}) {
-	Println(Hilight("on_color_020", str, args...))
+func PrintlnOnColor020(str string) {
+	Println(Hilight("on_color_020", str))
+}
+
+// OnColor020f wraps OnColor020 and works with format
+// strings.
+func OnColor020f(str string, args ...interface{}) string {
+	return OnColor020(Sprintf(str, args...))
+}
+
+// PrintOnColor020f wraps PrintOnColor020 and works with format
+// strings.
+func PrintOnColor020f(str string, args ...interface{}) {
+	PrintOnColor020(Sprintf(str, args...))
+}
+
+// PrintlnOnColor020f wraps PrintlnOnColor020 and works with format
+// strings.
+func PrintlnOnColor020f(str string, args ...interface{}) {
+	PrintlnOnColor020(Sprintf(str, args...))
 }
 
 // Color021 will Hilight() the provided string with the
 // specified ANSI code.
-func Color021(str string, args ...interface{}) string {
-	return Hilight("color_021", str, args...)
+func Color021(str string) string {
+	return Hilight("color_021", str)
 }
 
 // PrintColor021 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor021(str string, args ...interface{}) {
-	Print(Hilight("color_021", str, args...))
+func PrintColor021(str string) {
+	Print(Hilight("color_021", str))
 }
 
 // PrintlnColor021 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor021(str string, args ...interface{}) {
-	Println(Hilight("color_021", str, args...))
+func PrintlnColor021(str string) {
+	Println(Hilight("color_021", str))
+}
+
+// Color021f wraps Color021 and works with format
+// strings.
+func Color021f(str string, args ...interface{}) string {
+	return Color021(Sprintf(str, args...))
+}
+
+// PrintColor021f wraps PrintColor021 and works with format
+// strings.
+func PrintColor021f(str string, args ...interface{}) {
+	PrintColor021(Sprintf(str, args...))
+}
+
+// PrintlnColor021f wraps PrintlnColor021 and works with format
+// strings.
+func PrintlnColor021f(str string, args ...interface{}) {
+	PrintlnColor021(Sprintf(str, args...))
 }
 
 // OnColor021 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor021(str string, args ...interface{}) string {
-	return Hilight("on_color_021", str, args...)
+func OnColor021(str string) string {
+	return Hilight("on_color_021", str)
 }
 
 // PrintOnColor021 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor021(str string, args ...interface{}) {
-	Print(Hilight("on_color_021", str, args...))
+func PrintOnColor021(str string) {
+	Print(Hilight("on_color_021", str))
 }
 
 // PrintlnOnColor021 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor021(str string, args ...interface{}) {
-	Println(Hilight("on_color_021", str, args...))
+func PrintlnOnColor021(str string) {
+	Println(Hilight("on_color_021", str))
+}
+
+// OnColor021f wraps OnColor021 and works with format
+// strings.
+func OnColor021f(str string, args ...interface{}) string {
+	return OnColor021(Sprintf(str, args...))
+}
+
+// PrintOnColor021f wraps PrintOnColor021 and works with format
+// strings.
+func PrintOnColor021f(str string, args ...interface{}) {
+	PrintOnColor021(Sprintf(str, args...))
+}
+
+// PrintlnOnColor021f wraps PrintlnOnColor021 and works with format
+// strings.
+func PrintlnOnColor021f(str string, args ...interface{}) {
+	PrintlnOnColor021(Sprintf(str, args...))
 }
 
 // Color022 will Hilight() the provided string with the
 // specified ANSI code.
-func Color022(str string, args ...interface{}) string {
-	return Hilight("color_022", str, args...)
+func Color022(str string) string {
+	return Hilight("color_022", str)
 }
 
 // PrintColor022 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor022(str string, args ...interface{}) {
-	Print(Hilight("color_022", str, args...))
+func PrintColor022(str string) {
+	Print(Hilight("color_022", str))
 }
 
 // PrintlnColor022 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor022(str string, args ...interface{}) {
-	Println(Hilight("color_022", str, args...))
+func PrintlnColor022(str string) {
+	Println(Hilight("color_022", str))
+}
+
+// Color022f wraps Color022 and works with format
+// strings.
+func Color022f(str string, args ...interface{}) string {
+	return Color022(Sprintf(str, args...))
+}
+
+// PrintColor022f wraps PrintColor022 and works with format
+// strings.
+func PrintColor022f(str string, args ...interface{}) {
+	PrintColor022(Sprintf(str, args...))
+}
+
+// PrintlnColor022f wraps PrintlnColor022 and works with format
+// strings.
+func PrintlnColor022f(str string, args ...interface{}) {
+	PrintlnColor022(Sprintf(str, args...))
 }
 
 // OnColor022 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor022(str string, args ...interface{}) string {
-	return Hilight("on_color_022", str, args...)
+func OnColor022(str string) string {
+	return Hilight("on_color_022", str)
 }
 
 // PrintOnColor022 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor022(str string, args ...interface{}) {
-	Print(Hilight("on_color_022", str, args...))
+func PrintOnColor022(str string) {
+	Print(Hilight("on_color_022", str))
 }
 
 // PrintlnOnColor022 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor022(str string, args ...interface{}) {
-	Println(Hilight("on_color_022", str, args...))
+func PrintlnOnColor022(str string) {
+	Println(Hilight("on_color_022", str))
+}
+
+// OnColor022f wraps OnColor022 and works with format
+// strings.
+func OnColor022f(str string, args ...interface{}) string {
+	return OnColor022(Sprintf(str, args...))
+}
+
+// PrintOnColor022f wraps PrintOnColor022 and works with format
+// strings.
+func PrintOnColor022f(str string, args ...interface{}) {
+	PrintOnColor022(Sprintf(str, args...))
+}
+
+// PrintlnOnColor022f wraps PrintlnOnColor022 and works with format
+// strings.
+func PrintlnOnColor022f(str string, args ...interface{}) {
+	PrintlnOnColor022(Sprintf(str, args...))
 }
 
 // Color023 will Hilight() the provided string with the
 // specified ANSI code.
-func Color023(str string, args ...interface{}) string {
-	return Hilight("color_023", str, args...)
+func Color023(str string) string {
+	return Hilight("color_023", str)
 }
 
 // PrintColor023 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor023(str string, args ...interface{}) {
-	Print(Hilight("color_023", str, args...))
+func PrintColor023(str string) {
+	Print(Hilight("color_023", str))
 }
 
 // PrintlnColor023 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor023(str string, args ...interface{}) {
-	Println(Hilight("color_023", str, args...))
+func PrintlnColor023(str string) {
+	Println(Hilight("color_023", str))
+}
+
+// Color023f wraps Color023 and works with format
+// strings.
+func Color023f(str string, args ...interface{}) string {
+	return Color023(Sprintf(str, args...))
+}
+
+// PrintColor023f wraps PrintColor023 and works with format
+// strings.
+func PrintColor023f(str string, args ...interface{}) {
+	PrintColor023(Sprintf(str, args...))
+}
+
+// PrintlnColor023f wraps PrintlnColor023 and works with format
+// strings.
+func PrintlnColor023f(str string, args ...interface{}) {
+	PrintlnColor023(Sprintf(str, args...))
 }
 
 // OnColor023 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor023(str string, args ...interface{}) string {
-	return Hilight("on_color_023", str, args...)
+func OnColor023(str string) string {
+	return Hilight("on_color_023", str)
 }
 
 // PrintOnColor023 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor023(str string, args ...interface{}) {
-	Print(Hilight("on_color_023", str, args...))
+func PrintOnColor023(str string) {
+	Print(Hilight("on_color_023", str))
 }
 
 // PrintlnOnColor023 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor023(str string, args ...interface{}) {
-	Println(Hilight("on_color_023", str, args...))
+func PrintlnOnColor023(str string) {
+	Println(Hilight("on_color_023", str))
+}
+
+// OnColor023f wraps OnColor023 and works with format
+// strings.
+func OnColor023f(str string, args ...interface{}) string {
+	return OnColor023(Sprintf(str, args...))
+}
+
+// PrintOnColor023f wraps PrintOnColor023 and works with format
+// strings.
+func PrintOnColor023f(str string, args ...interface{}) {
+	PrintOnColor023(Sprintf(str, args...))
+}
+
+// PrintlnOnColor023f wraps PrintlnOnColor023 and works with format
+// strings.
+func PrintlnOnColor023f(str string, args ...interface{}) {
+	PrintlnOnColor023(Sprintf(str, args...))
 }
 
 // Color024 will Hilight() the provided string with the
 // specified ANSI code.
-func Color024(str string, args ...interface{}) string {
-	return Hilight("color_024", str, args...)
+func Color024(str string) string {
+	return Hilight("color_024", str)
 }
 
 // PrintColor024 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor024(str string, args ...interface{}) {
-	Print(Hilight("color_024", str, args...))
+func PrintColor024(str string) {
+	Print(Hilight("color_024", str))
 }
 
 // PrintlnColor024 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor024(str string, args ...interface{}) {
-	Println(Hilight("color_024", str, args...))
+func PrintlnColor024(str string) {
+	Println(Hilight("color_024", str))
+}
+
+// Color024f wraps Color024 and works with format
+// strings.
+func Color024f(str string, args ...interface{}) string {
+	return Color024(Sprintf(str, args...))
+}
+
+// PrintColor024f wraps PrintColor024 and works with format
+// strings.
+func PrintColor024f(str string, args ...interface{}) {
+	PrintColor024(Sprintf(str, args...))
+}
+
+// PrintlnColor024f wraps PrintlnColor024 and works with format
+// strings.
+func PrintlnColor024f(str string, args ...interface{}) {
+	PrintlnColor024(Sprintf(str, args...))
 }
 
 // OnColor024 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor024(str string, args ...interface{}) string {
-	return Hilight("on_color_024", str, args...)
+func OnColor024(str string) string {
+	return Hilight("on_color_024", str)
 }
 
 // PrintOnColor024 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor024(str string, args ...interface{}) {
-	Print(Hilight("on_color_024", str, args...))
+func PrintOnColor024(str string) {
+	Print(Hilight("on_color_024", str))
 }
 
 // PrintlnOnColor024 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor024(str string, args ...interface{}) {
-	Println(Hilight("on_color_024", str, args...))
+func PrintlnOnColor024(str string) {
+	Println(Hilight("on_color_024", str))
+}
+
+// OnColor024f wraps OnColor024 and works with format
+// strings.
+func OnColor024f(str string, args ...interface{}) string {
+	return OnColor024(Sprintf(str, args...))
+}
+
+// PrintOnColor024f wraps PrintOnColor024 and works with format
+// strings.
+func PrintOnColor024f(str string, args ...interface{}) {
+	PrintOnColor024(Sprintf(str, args...))
+}
+
+// PrintlnOnColor024f wraps PrintlnOnColor024 and works with format
+// strings.
+func PrintlnOnColor024f(str string, args ...interface{}) {
+	PrintlnOnColor024(Sprintf(str, args...))
 }
 
 // Color025 will Hilight() the provided string with the
 // specified ANSI code.
-func Color025(str string, args ...interface{}) string {
-	return Hilight("color_025", str, args...)
+func Color025(str string) string {
+	return Hilight("color_025", str)
 }
 
 // PrintColor025 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor025(str string, args ...interface{}) {
-	Print(Hilight("color_025", str, args...))
+func PrintColor025(str string) {
+	Print(Hilight("color_025", str))
 }
 
 // PrintlnColor025 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor025(str string, args ...interface{}) {
-	Println(Hilight("color_025", str, args...))
+func PrintlnColor025(str string) {
+	Println(Hilight("color_025", str))
+}
+
+// Color025f wraps Color025 and works with format
+// strings.
+func Color025f(str string, args ...interface{}) string {
+	return Color025(Sprintf(str, args...))
+}
+
+// PrintColor025f wraps PrintColor025 and works with format
+// strings.
+func PrintColor025f(str string, args ...interface{}) {
+	PrintColor025(Sprintf(str, args...))
+}
+
+// PrintlnColor025f wraps PrintlnColor025 and works with format
+// strings.
+func PrintlnColor025f(str string, args ...interface{}) {
+	PrintlnColor025(Sprintf(str, args...))
 }
 
 // OnColor025 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor025(str string, args ...interface{}) string {
-	return Hilight("on_color_025", str, args...)
+func OnColor025(str string) string {
+	return Hilight("on_color_025", str)
 }
 
 // PrintOnColor025 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor025(str string, args ...interface{}) {
-	Print(Hilight("on_color_025", str, args...))
+func PrintOnColor025(str string) {
+	Print(Hilight("on_color_025", str))
 }
 
 // PrintlnOnColor025 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor025(str string, args ...interface{}) {
-	Println(Hilight("on_color_025", str, args...))
+func PrintlnOnColor025(str string) {
+	Println(Hilight("on_color_025", str))
+}
+
+// OnColor025f wraps OnColor025 and works with format
+// strings.
+func OnColor025f(str string, args ...interface{}) string {
+	return OnColor025(Sprintf(str, args...))
+}
+
+// PrintOnColor025f wraps PrintOnColor025 and works with format
+// strings.
+func PrintOnColor025f(str string, args ...interface{}) {
+	PrintOnColor025(Sprintf(str, args...))
+}
+
+// PrintlnOnColor025f wraps PrintlnOnColor025 and works with format
+// strings.
+func PrintlnOnColor025f(str string, args ...interface{}) {
+	PrintlnOnColor025(Sprintf(str, args...))
 }
 
 // Color026 will Hilight() the provided string with the
 // specified ANSI code.
-func Color026(str string, args ...interface{}) string {
-	return Hilight("color_026", str, args...)
+func Color026(str string) string {
+	return Hilight("color_026", str)
 }
 
 // PrintColor026 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor026(str string, args ...interface{}) {
-	Print(Hilight("color_026", str, args...))
+func PrintColor026(str string) {
+	Print(Hilight("color_026", str))
 }
 
 // PrintlnColor026 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor026(str string, args ...interface{}) {
-	Println(Hilight("color_026", str, args...))
+func PrintlnColor026(str string) {
+	Println(Hilight("color_026", str))
+}
+
+// Color026f wraps Color026 and works with format
+// strings.
+func Color026f(str string, args ...interface{}) string {
+	return Color026(Sprintf(str, args...))
+}
+
+// PrintColor026f wraps PrintColor026 and works with format
+// strings.
+func PrintColor026f(str string, args ...interface{}) {
+	PrintColor026(Sprintf(str, args...))
+}
+
+// PrintlnColor026f wraps PrintlnColor026 and works with format
+// strings.
+func PrintlnColor026f(str string, args ...interface{}) {
+	PrintlnColor026(Sprintf(str, args...))
 }
 
 // OnColor026 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor026(str string, args ...interface{}) string {
-	return Hilight("on_color_026", str, args...)
+func OnColor026(str string) string {
+	return Hilight("on_color_026", str)
 }
 
 // PrintOnColor026 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor026(str string, args ...interface{}) {
-	Print(Hilight("on_color_026", str, args...))
+func PrintOnColor026(str string) {
+	Print(Hilight("on_color_026", str))
 }
 
 // PrintlnOnColor026 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor026(str string, args ...interface{}) {
-	Println(Hilight("on_color_026", str, args...))
+func PrintlnOnColor026(str string) {
+	Println(Hilight("on_color_026", str))
+}
+
+// OnColor026f wraps OnColor026 and works with format
+// strings.
+func OnColor026f(str string, args ...interface{}) string {
+	return OnColor026(Sprintf(str, args...))
+}
+
+// PrintOnColor026f wraps PrintOnColor026 and works with format
+// strings.
+func PrintOnColor026f(str string, args ...interface{}) {
+	PrintOnColor026(Sprintf(str, args...))
+}
+
+// PrintlnOnColor026f wraps PrintlnOnColor026 and works with format
+// strings.
+func PrintlnOnColor026f(str string, args ...interface{}) {
+	PrintlnOnColor026(Sprintf(str, args...))
 }
 
 // Color027 will Hilight() the provided string with the
 // specified ANSI code.
-func Color027(str string, args ...interface{}) string {
-	return Hilight("color_027", str, args...)
+func Color027(str string) string {
+	return Hilight("color_027", str)
 }
 
 // PrintColor027 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor027(str string, args ...interface{}) {
-	Print(Hilight("color_027", str, args...))
+func PrintColor027(str string) {
+	Print(Hilight("color_027", str))
 }
 
 // PrintlnColor027 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor027(str string, args ...interface{}) {
-	Println(Hilight("color_027", str, args...))
+func PrintlnColor027(str string) {
+	Println(Hilight("color_027", str))
+}
+
+// Color027f wraps Color027 and works with format
+// strings.
+func Color027f(str string, args ...interface{}) string {
+	return Color027(Sprintf(str, args...))
+}
+
+// PrintColor027f wraps PrintColor027 and works with format
+// strings.
+func PrintColor027f(str string, args ...interface{}) {
+	PrintColor027(Sprintf(str, args...))
+}
+
+// PrintlnColor027f wraps PrintlnColor027 and works with format
+// strings.
+func PrintlnColor027f(str string, args ...interface{}) {
+	PrintlnColor027(Sprintf(str, args...))
 }
 
 // OnColor027 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor027(str string, args ...interface{}) string {
-	return Hilight("on_color_027", str, args...)
+func OnColor027(str string) string {
+	return Hilight("on_color_027", str)
 }
 
 // PrintOnColor027 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor027(str string, args ...interface{}) {
-	Print(Hilight("on_color_027", str, args...))
+func PrintOnColor027(str string) {
+	Print(Hilight("on_color_027", str))
 }
 
 // PrintlnOnColor027 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor027(str string, args ...interface{}) {
-	Println(Hilight("on_color_027", str, args...))
+func PrintlnOnColor027(str string) {
+	Println(Hilight("on_color_027", str))
+}
+
+// OnColor027f wraps OnColor027 and works with format
+// strings.
+func OnColor027f(str string, args ...interface{}) string {
+	return OnColor027(Sprintf(str, args...))
+}
+
+// PrintOnColor027f wraps PrintOnColor027 and works with format
+// strings.
+func PrintOnColor027f(str string, args ...interface{}) {
+	PrintOnColor027(Sprintf(str, args...))
+}
+
+// PrintlnOnColor027f wraps PrintlnOnColor027 and works with format
+// strings.
+func PrintlnOnColor027f(str string, args ...interface{}) {
+	PrintlnOnColor027(Sprintf(str, args...))
 }
 
 // Color028 will Hilight() the provided string with the
 // specified ANSI code.
-func Color028(str string, args ...interface{}) string {
-	return Hilight("color_028", str, args...)
+func Color028(str string) string {
+	return Hilight("color_028", str)
 }
 
 // PrintColor028 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor028(str string, args ...interface{}) {
-	Print(Hilight("color_028", str, args...))
+func PrintColor028(str string) {
+	Print(Hilight("color_028", str))
 }
 
 // PrintlnColor028 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor028(str string, args ...interface{}) {
-	Println(Hilight("color_028", str, args...))
+func PrintlnColor028(str string) {
+	Println(Hilight("color_028", str))
+}
+
+// Color028f wraps Color028 and works with format
+// strings.
+func Color028f(str string, args ...interface{}) string {
+	return Color028(Sprintf(str, args...))
+}
+
+// PrintColor028f wraps PrintColor028 and works with format
+// strings.
+func PrintColor028f(str string, args ...interface{}) {
+	PrintColor028(Sprintf(str, args...))
+}
+
+// PrintlnColor028f wraps PrintlnColor028 and works with format
+// strings.
+func PrintlnColor028f(str string, args ...interface{}) {
+	PrintlnColor028(Sprintf(str, args...))
 }
 
 // OnColor028 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor028(str string, args ...interface{}) string {
-	return Hilight("on_color_028", str, args...)
+func OnColor028(str string) string {
+	return Hilight("on_color_028", str)
 }
 
 // PrintOnColor028 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor028(str string, args ...interface{}) {
-	Print(Hilight("on_color_028", str, args...))
+func PrintOnColor028(str string) {
+	Print(Hilight("on_color_028", str))
 }
 
 // PrintlnOnColor028 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor028(str string, args ...interface{}) {
-	Println(Hilight("on_color_028", str, args...))
+func PrintlnOnColor028(str string) {
+	Println(Hilight("on_color_028", str))
+}
+
+// OnColor028f wraps OnColor028 and works with format
+// strings.
+func OnColor028f(str string, args ...interface{}) string {
+	return OnColor028(Sprintf(str, args...))
+}
+
+// PrintOnColor028f wraps PrintOnColor028 and works with format
+// strings.
+func PrintOnColor028f(str string, args ...interface{}) {
+	PrintOnColor028(Sprintf(str, args...))
+}
+
+// PrintlnOnColor028f wraps PrintlnOnColor028 and works with format
+// strings.
+func PrintlnOnColor028f(str string, args ...interface{}) {
+	PrintlnOnColor028(Sprintf(str, args...))
 }
 
 // Color029 will Hilight() the provided string with the
 // specified ANSI code.
-func Color029(str string, args ...interface{}) string {
-	return Hilight("color_029", str, args...)
+func Color029(str string) string {
+	return Hilight("color_029", str)
 }
 
 // PrintColor029 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor029(str string, args ...interface{}) {
-	Print(Hilight("color_029", str, args...))
+func PrintColor029(str string) {
+	Print(Hilight("color_029", str))
 }
 
 // PrintlnColor029 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor029(str string, args ...interface{}) {
-	Println(Hilight("color_029", str, args...))
+func PrintlnColor029(str string) {
+	Println(Hilight("color_029", str))
+}
+
+// Color029f wraps Color029 and works with format
+// strings.
+func Color029f(str string, args ...interface{}) string {
+	return Color029(Sprintf(str, args...))
+}
+
+// PrintColor029f wraps PrintColor029 and works with format
+// strings.
+func PrintColor029f(str string, args ...interface{}) {
+	PrintColor029(Sprintf(str, args...))
+}
+
+// PrintlnColor029f wraps PrintlnColor029 and works with format
+// strings.
+func PrintlnColor029f(str string, args ...interface{}) {
+	PrintlnColor029(Sprintf(str, args...))
 }
 
 // OnColor029 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor029(str string, args ...interface{}) string {
-	return Hilight("on_color_029", str, args...)
+func OnColor029(str string) string {
+	return Hilight("on_color_029", str)
 }
 
 // PrintOnColor029 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor029(str string, args ...interface{}) {
-	Print(Hilight("on_color_029", str, args...))
+func PrintOnColor029(str string) {
+	Print(Hilight("on_color_029", str))
 }
 
 // PrintlnOnColor029 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor029(str string, args ...interface{}) {
-	Println(Hilight("on_color_029", str, args...))
+func PrintlnOnColor029(str string) {
+	Println(Hilight("on_color_029", str))
+}
+
+// OnColor029f wraps OnColor029 and works with format
+// strings.
+func OnColor029f(str string, args ...interface{}) string {
+	return OnColor029(Sprintf(str, args...))
+}
+
+// PrintOnColor029f wraps PrintOnColor029 and works with format
+// strings.
+func PrintOnColor029f(str string, args ...interface{}) {
+	PrintOnColor029(Sprintf(str, args...))
+}
+
+// PrintlnOnColor029f wraps PrintlnOnColor029 and works with format
+// strings.
+func PrintlnOnColor029f(str string, args ...interface{}) {
+	PrintlnOnColor029(Sprintf(str, args...))
 }
 
 // Color030 will Hilight() the provided string with the
 // specified ANSI code.
-func Color030(str string, args ...interface{}) string {
-	return Hilight("color_030", str, args...)
+func Color030(str string) string {
+	return Hilight("color_030", str)
 }
 
 // PrintColor030 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor030(str string, args ...interface{}) {
-	Print(Hilight("color_030", str, args...))
+func PrintColor030(str string) {
+	Print(Hilight("color_030", str))
 }
 
 // PrintlnColor030 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor030(str string, args ...interface{}) {
-	Println(Hilight("color_030", str, args...))
+func PrintlnColor030(str string) {
+	Println(Hilight("color_030", str))
+}
+
+// Color030f wraps Color030 and works with format
+// strings.
+func Color030f(str string, args ...interface{}) string {
+	return Color030(Sprintf(str, args...))
+}
+
+// PrintColor030f wraps PrintColor030 and works with format
+// strings.
+func PrintColor030f(str string, args ...interface{}) {
+	PrintColor030(Sprintf(str, args...))
+}
+
+// PrintlnColor030f wraps PrintlnColor030 and works with format
+// strings.
+func PrintlnColor030f(str string, args ...interface{}) {
+	PrintlnColor030(Sprintf(str, args...))
 }
 
 // OnColor030 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor030(str string, args ...interface{}) string {
-	return Hilight("on_color_030", str, args...)
+func OnColor030(str string) string {
+	return Hilight("on_color_030", str)
 }
 
 // PrintOnColor030 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor030(str string, args ...interface{}) {
-	Print(Hilight("on_color_030", str, args...))
+func PrintOnColor030(str string) {
+	Print(Hilight("on_color_030", str))
 }
 
 // PrintlnOnColor030 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor030(str string, args ...interface{}) {
-	Println(Hilight("on_color_030", str, args...))
+func PrintlnOnColor030(str string) {
+	Println(Hilight("on_color_030", str))
+}
+
+// OnColor030f wraps OnColor030 and works with format
+// strings.
+func OnColor030f(str string, args ...interface{}) string {
+	return OnColor030(Sprintf(str, args...))
+}
+
+// PrintOnColor030f wraps PrintOnColor030 and works with format
+// strings.
+func PrintOnColor030f(str string, args ...interface{}) {
+	PrintOnColor030(Sprintf(str, args...))
+}
+
+// PrintlnOnColor030f wraps PrintlnOnColor030 and works with format
+// strings.
+func PrintlnOnColor030f(str string, args ...interface{}) {
+	PrintlnOnColor030(Sprintf(str, args...))
 }
 
 // Color031 will Hilight() the provided string with the
 // specified ANSI code.
-func Color031(str string, args ...interface{}) string {
-	return Hilight("color_031", str, args...)
+func Color031(str string) string {
+	return Hilight("color_031", str)
 }
 
 // PrintColor031 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor031(str string, args ...interface{}) {
-	Print(Hilight("color_031", str, args...))
+func PrintColor031(str string) {
+	Print(Hilight("color_031", str))
 }
 
 // PrintlnColor031 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor031(str string, args ...interface{}) {
-	Println(Hilight("color_031", str, args...))
+func PrintlnColor031(str string) {
+	Println(Hilight("color_031", str))
+}
+
+// Color031f wraps Color031 and works with format
+// strings.
+func Color031f(str string, args ...interface{}) string {
+	return Color031(Sprintf(str, args...))
+}
+
+// PrintColor031f wraps PrintColor031 and works with format
+// strings.
+func PrintColor031f(str string, args ...interface{}) {
+	PrintColor031(Sprintf(str, args...))
+}
+
+// PrintlnColor031f wraps PrintlnColor031 and works with format
+// strings.
+func PrintlnColor031f(str string, args ...interface{}) {
+	PrintlnColor031(Sprintf(str, args...))
 }
 
 // OnColor031 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor031(str string, args ...interface{}) string {
-	return Hilight("on_color_031", str, args...)
+func OnColor031(str string) string {
+	return Hilight("on_color_031", str)
 }
 
 // PrintOnColor031 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor031(str string, args ...interface{}) {
-	Print(Hilight("on_color_031", str, args...))
+func PrintOnColor031(str string) {
+	Print(Hilight("on_color_031", str))
 }
 
 // PrintlnOnColor031 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor031(str string, args ...interface{}) {
-	Println(Hilight("on_color_031", str, args...))
+func PrintlnOnColor031(str string) {
+	Println(Hilight("on_color_031", str))
+}
+
+// OnColor031f wraps OnColor031 and works with format
+// strings.
+func OnColor031f(str string, args ...interface{}) string {
+	return OnColor031(Sprintf(str, args...))
+}
+
+// PrintOnColor031f wraps PrintOnColor031 and works with format
+// strings.
+func PrintOnColor031f(str string, args ...interface{}) {
+	PrintOnColor031(Sprintf(str, args...))
+}
+
+// PrintlnOnColor031f wraps PrintlnOnColor031 and works with format
+// strings.
+func PrintlnOnColor031f(str string, args ...interface{}) {
+	PrintlnOnColor031(Sprintf(str, args...))
 }
 
 // Color032 will Hilight() the provided string with the
 // specified ANSI code.
-func Color032(str string, args ...interface{}) string {
-	return Hilight("color_032", str, args...)
+func Color032(str string) string {
+	return Hilight("color_032", str)
 }
 
 // PrintColor032 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor032(str string, args ...interface{}) {
-	Print(Hilight("color_032", str, args...))
+func PrintColor032(str string) {
+	Print(Hilight("color_032", str))
 }
 
 // PrintlnColor032 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor032(str string, args ...interface{}) {
-	Println(Hilight("color_032", str, args...))
+func PrintlnColor032(str string) {
+	Println(Hilight("color_032", str))
+}
+
+// Color032f wraps Color032 and works with format
+// strings.
+func Color032f(str string, args ...interface{}) string {
+	return Color032(Sprintf(str, args...))
+}
+
+// PrintColor032f wraps PrintColor032 and works with format
+// strings.
+func PrintColor032f(str string, args ...interface{}) {
+	PrintColor032(Sprintf(str, args...))
+}
+
+// PrintlnColor032f wraps PrintlnColor032 and works with format
+// strings.
+func PrintlnColor032f(str string, args ...interface{}) {
+	PrintlnColor032(Sprintf(str, args...))
 }
 
 // OnColor032 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor032(str string, args ...interface{}) string {
-	return Hilight("on_color_032", str, args...)
+func OnColor032(str string) string {
+	return Hilight("on_color_032", str)
 }
 
 // PrintOnColor032 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor032(str string, args ...interface{}) {
-	Print(Hilight("on_color_032", str, args...))
+func PrintOnColor032(str string) {
+	Print(Hilight("on_color_032", str))
 }
 
 // PrintlnOnColor032 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor032(str string, args ...interface{}) {
-	Println(Hilight("on_color_032", str, args...))
+func PrintlnOnColor032(str string) {
+	Println(Hilight("on_color_032", str))
+}
+
+// OnColor032f wraps OnColor032 and works with format
+// strings.
+func OnColor032f(str string, args ...interface{}) string {
+	return OnColor032(Sprintf(str, args...))
+}
+
+// PrintOnColor032f wraps PrintOnColor032 and works with format
+// strings.
+func PrintOnColor032f(str string, args ...interface{}) {
+	PrintOnColor032(Sprintf(str, args...))
+}
+
+// PrintlnOnColor032f wraps PrintlnOnColor032 and works with format
+// strings.
+func PrintlnOnColor032f(str string, args ...interface{}) {
+	PrintlnOnColor032(Sprintf(str, args...))
 }
 
 // Color033 will Hilight() the provided string with the
 // specified ANSI code.
-func Color033(str string, args ...interface{}) string {
-	return Hilight("color_033", str, args...)
+func Color033(str string) string {
+	return Hilight("color_033", str)
 }
 
 // PrintColor033 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor033(str string, args ...interface{}) {
-	Print(Hilight("color_033", str, args...))
+func PrintColor033(str string) {
+	Print(Hilight("color_033", str))
 }
 
 // PrintlnColor033 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor033(str string, args ...interface{}) {
-	Println(Hilight("color_033", str, args...))
+func PrintlnColor033(str string) {
+	Println(Hilight("color_033", str))
+}
+
+// Color033f wraps Color033 and works with format
+// strings.
+func Color033f(str string, args ...interface{}) string {
+	return Color033(Sprintf(str, args...))
+}
+
+// PrintColor033f wraps PrintColor033 and works with format
+// strings.
+func PrintColor033f(str string, args ...interface{}) {
+	PrintColor033(Sprintf(str, args...))
+}
+
+// PrintlnColor033f wraps PrintlnColor033 and works with format
+// strings.
+func PrintlnColor033f(str string, args ...interface{}) {
+	PrintlnColor033(Sprintf(str, args...))
 }
 
 // OnColor033 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor033(str string, args ...interface{}) string {
-	return Hilight("on_color_033", str, args...)
+func OnColor033(str string) string {
+	return Hilight("on_color_033", str)
 }
 
 // PrintOnColor033 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor033(str string, args ...interface{}) {
-	Print(Hilight("on_color_033", str, args...))
+func PrintOnColor033(str string) {
+	Print(Hilight("on_color_033", str))
 }
 
 // PrintlnOnColor033 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor033(str string, args ...interface{}) {
-	Println(Hilight("on_color_033", str, args...))
+func PrintlnOnColor033(str string) {
+	Println(Hilight("on_color_033", str))
+}
+
+// OnColor033f wraps OnColor033 and works with format
+// strings.
+func OnColor033f(str string, args ...interface{}) string {
+	return OnColor033(Sprintf(str, args...))
+}
+
+// PrintOnColor033f wraps PrintOnColor033 and works with format
+// strings.
+func PrintOnColor033f(str string, args ...interface{}) {
+	PrintOnColor033(Sprintf(str, args...))
+}
+
+// PrintlnOnColor033f wraps PrintlnOnColor033 and works with format
+// strings.
+func PrintlnOnColor033f(str string, args ...interface{}) {
+	PrintlnOnColor033(Sprintf(str, args...))
 }
 
 // Color034 will Hilight() the provided string with the
 // specified ANSI code.
-func Color034(str string, args ...interface{}) string {
-	return Hilight("color_034", str, args...)
+func Color034(str string) string {
+	return Hilight("color_034", str)
 }
 
 // PrintColor034 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor034(str string, args ...interface{}) {
-	Print(Hilight("color_034", str, args...))
+func PrintColor034(str string) {
+	Print(Hilight("color_034", str))
 }
 
 // PrintlnColor034 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor034(str string, args ...interface{}) {
-	Println(Hilight("color_034", str, args...))
+func PrintlnColor034(str string) {
+	Println(Hilight("color_034", str))
+}
+
+// Color034f wraps Color034 and works with format
+// strings.
+func Color034f(str string, args ...interface{}) string {
+	return Color034(Sprintf(str, args...))
+}
+
+// PrintColor034f wraps PrintColor034 and works with format
+// strings.
+func PrintColor034f(str string, args ...interface{}) {
+	PrintColor034(Sprintf(str, args...))
+}
+
+// PrintlnColor034f wraps PrintlnColor034 and works with format
+// strings.
+func PrintlnColor034f(str string, args ...interface{}) {
+	PrintlnColor034(Sprintf(str, args...))
 }
 
 // OnColor034 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor034(str string, args ...interface{}) string {
-	return Hilight("on_color_034", str, args...)
+func OnColor034(str string) string {
+	return Hilight("on_color_034", str)
 }
 
 // PrintOnColor034 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor034(str string, args ...interface{}) {
-	Print(Hilight("on_color_034", str, args...))
+func PrintOnColor034(str string) {
+	Print(Hilight("on_color_034", str))
 }
 
 // PrintlnOnColor034 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor034(str string, args ...interface{}) {
-	Println(Hilight("on_color_034", str, args...))
+func PrintlnOnColor034(str string) {
+	Println(Hilight("on_color_034", str))
+}
+
+// OnColor034f wraps OnColor034 and works with format
+// strings.
+func OnColor034f(str string, args ...interface{}) string {
+	return OnColor034(Sprintf(str, args...))
+}
+
+// PrintOnColor034f wraps PrintOnColor034 and works with format
+// strings.
+func PrintOnColor034f(str string, args ...interface{}) {
+	PrintOnColor034(Sprintf(str, args...))
+}
+
+// PrintlnOnColor034f wraps PrintlnOnColor034 and works with format
+// strings.
+func PrintlnOnColor034f(str string, args ...interface{}) {
+	PrintlnOnColor034(Sprintf(str, args...))
 }
 
 // Color035 will Hilight() the provided string with the
 // specified ANSI code.
-func Color035(str string, args ...interface{}) string {
-	return Hilight("color_035", str, args...)
+func Color035(str string) string {
+	return Hilight("color_035", str)
 }
 
 // PrintColor035 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor035(str string, args ...interface{}) {
-	Print(Hilight("color_035", str, args...))
+func PrintColor035(str string) {
+	Print(Hilight("color_035", str))
 }
 
 // PrintlnColor035 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor035(str string, args ...interface{}) {
-	Println(Hilight("color_035", str, args...))
+func PrintlnColor035(str string) {
+	Println(Hilight("color_035", str))
+}
+
+// Color035f wraps Color035 and works with format
+// strings.
+func Color035f(str string, args ...interface{}) string {
+	return Color035(Sprintf(str, args...))
+}
+
+// PrintColor035f wraps PrintColor035 and works with format
+// strings.
+func PrintColor035f(str string, args ...interface{}) {
+	PrintColor035(Sprintf(str, args...))
+}
+
+// PrintlnColor035f wraps PrintlnColor035 and works with format
+// strings.
+func PrintlnColor035f(str string, args ...interface{}) {
+	PrintlnColor035(Sprintf(str, args...))
 }
 
 // OnColor035 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor035(str string, args ...interface{}) string {
-	return Hilight("on_color_035", str, args...)
+func OnColor035(str string) string {
+	return Hilight("on_color_035", str)
 }
 
 // PrintOnColor035 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor035(str string, args ...interface{}) {
-	Print(Hilight("on_color_035", str, args...))
+func PrintOnColor035(str string) {
+	Print(Hilight("on_color_035", str))
 }
 
 // PrintlnOnColor035 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor035(str string, args ...interface{}) {
-	Println(Hilight("on_color_035", str, args...))
+func PrintlnOnColor035(str string) {
+	Println(Hilight("on_color_035", str))
+}
+
+// OnColor035f wraps OnColor035 and works with format
+// strings.
+func OnColor035f(str string, args ...interface{}) string {
+	return OnColor035(Sprintf(str, args...))
+}
+
+// PrintOnColor035f wraps PrintOnColor035 and works with format
+// strings.
+func PrintOnColor035f(str string, args ...interface{}) {
+	PrintOnColor035(Sprintf(str, args...))
+}
+
+// PrintlnOnColor035f wraps PrintlnOnColor035 and works with format
+// strings.
+func PrintlnOnColor035f(str string, args ...interface{}) {
+	PrintlnOnColor035(Sprintf(str, args...))
 }
 
 // Color036 will Hilight() the provided string with the
 // specified ANSI code.
-func Color036(str string, args ...interface{}) string {
-	return Hilight("color_036", str, args...)
+func Color036(str string) string {
+	return Hilight("color_036", str)
 }
 
 // PrintColor036 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor036(str string, args ...interface{}) {
-	Print(Hilight("color_036", str, args...))
+func PrintColor036(str string) {
+	Print(Hilight("color_036", str))
 }
 
 // PrintlnColor036 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor036(str string, args ...interface{}) {
-	Println(Hilight("color_036", str, args...))
+func PrintlnColor036(str string) {
+	Println(Hilight("color_036", str))
+}
+
+// Color036f wraps Color036 and works with format
+// strings.
+func Color036f(str string, args ...interface{}) string {
+	return Color036(Sprintf(str, args...))
+}
+
+// PrintColor036f wraps PrintColor036 and works with format
+// strings.
+func PrintColor036f(str string, args ...interface{}) {
+	PrintColor036(Sprintf(str, args...))
+}
+
+// PrintlnColor036f wraps PrintlnColor036 and works with format
+// strings.
+func PrintlnColor036f(str string, args ...interface{}) {
+	PrintlnColor036(Sprintf(str, args...))
 }
 
 // OnColor036 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor036(str string, args ...interface{}) string {
-	return Hilight("on_color_036", str, args...)
+func OnColor036(str string) string {
+	return Hilight("on_color_036", str)
 }
 
 // PrintOnColor036 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor036(str string, args ...interface{}) {
-	Print(Hilight("on_color_036", str, args...))
+func PrintOnColor036(str string) {
+	Print(Hilight("on_color_036", str))
 }
 
 // PrintlnOnColor036 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor036(str string, args ...interface{}) {
-	Println(Hilight("on_color_036", str, args...))
+func PrintlnOnColor036(str string) {
+	Println(Hilight("on_color_036", str))
+}
+
+// OnColor036f wraps OnColor036 and works with format
+// strings.
+func OnColor036f(str string, args ...interface{}) string {
+	return OnColor036(Sprintf(str, args...))
+}
+
+// PrintOnColor036f wraps PrintOnColor036 and works with format
+// strings.
+func PrintOnColor036f(str string, args ...interface{}) {
+	PrintOnColor036(Sprintf(str, args...))
+}
+
+// PrintlnOnColor036f wraps PrintlnOnColor036 and works with format
+// strings.
+func PrintlnOnColor036f(str string, args ...interface{}) {
+	PrintlnOnColor036(Sprintf(str, args...))
 }
 
 // Color037 will Hilight() the provided string with the
 // specified ANSI code.
-func Color037(str string, args ...interface{}) string {
-	return Hilight("color_037", str, args...)
+func Color037(str string) string {
+	return Hilight("color_037", str)
 }
 
 // PrintColor037 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor037(str string, args ...interface{}) {
-	Print(Hilight("color_037", str, args...))
+func PrintColor037(str string) {
+	Print(Hilight("color_037", str))
 }
 
 // PrintlnColor037 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor037(str string, args ...interface{}) {
-	Println(Hilight("color_037", str, args...))
+func PrintlnColor037(str string) {
+	Println(Hilight("color_037", str))
+}
+
+// Color037f wraps Color037 and works with format
+// strings.
+func Color037f(str string, args ...interface{}) string {
+	return Color037(Sprintf(str, args...))
+}
+
+// PrintColor037f wraps PrintColor037 and works with format
+// strings.
+func PrintColor037f(str string, args ...interface{}) {
+	PrintColor037(Sprintf(str, args...))
+}
+
+// PrintlnColor037f wraps PrintlnColor037 and works with format
+// strings.
+func PrintlnColor037f(str string, args ...interface{}) {
+	PrintlnColor037(Sprintf(str, args...))
 }
 
 // OnColor037 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor037(str string, args ...interface{}) string {
-	return Hilight("on_color_037", str, args...)
+func OnColor037(str string) string {
+	return Hilight("on_color_037", str)
 }
 
 // PrintOnColor037 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor037(str string, args ...interface{}) {
-	Print(Hilight("on_color_037", str, args...))
+func PrintOnColor037(str string) {
+	Print(Hilight("on_color_037", str))
 }
 
 // PrintlnOnColor037 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor037(str string, args ...interface{}) {
-	Println(Hilight("on_color_037", str, args...))
+func PrintlnOnColor037(str string) {
+	Println(Hilight("on_color_037", str))
+}
+
+// OnColor037f wraps OnColor037 and works with format
+// strings.
+func OnColor037f(str string, args ...interface{}) string {
+	return OnColor037(Sprintf(str, args...))
+}
+
+// PrintOnColor037f wraps PrintOnColor037 and works with format
+// strings.
+func PrintOnColor037f(str string, args ...interface{}) {
+	PrintOnColor037(Sprintf(str, args...))
+}
+
+// PrintlnOnColor037f wraps PrintlnOnColor037 and works with format
+// strings.
+func PrintlnOnColor037f(str string, args ...interface{}) {
+	PrintlnOnColor037(Sprintf(str, args...))
 }
 
 // Color038 will Hilight() the provided string with the
 // specified ANSI code.
-func Color038(str string, args ...interface{}) string {
-	return Hilight("color_038", str, args...)
+func Color038(str string) string {
+	return Hilight("color_038", str)
 }
 
 // PrintColor038 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor038(str string, args ...interface{}) {
-	Print(Hilight("color_038", str, args...))
+func PrintColor038(str string) {
+	Print(Hilight("color_038", str))
 }
 
 // PrintlnColor038 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor038(str string, args ...interface{}) {
-	Println(Hilight("color_038", str, args...))
+func PrintlnColor038(str string) {
+	Println(Hilight("color_038", str))
+}
+
+// Color038f wraps Color038 and works with format
+// strings.
+func Color038f(str string, args ...interface{}) string {
+	return Color038(Sprintf(str, args...))
+}
+
+// PrintColor038f wraps PrintColor038 and works with format
+// strings.
+func PrintColor038f(str string, args ...interface{}) {
+	PrintColor038(Sprintf(str, args...))
+}
+
+// PrintlnColor038f wraps PrintlnColor038 and works with format
+// strings.
+func PrintlnColor038f(str string, args ...interface{}) {
+	PrintlnColor038(Sprintf(str, args...))
 }
 
 // OnColor038 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor038(str string, args ...interface{}) string {
-	return Hilight("on_color_038", str, args...)
+func OnColor038(str string) string {
+	return Hilight("on_color_038", str)
 }
 
 // PrintOnColor038 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor038(str string, args ...interface{}) {
-	Print(Hilight("on_color_038", str, args...))
+func PrintOnColor038(str string) {
+	Print(Hilight("on_color_038", str))
 }
 
 // PrintlnOnColor038 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor038(str string, args ...interface{}) {
-	Println(Hilight("on_color_038", str, args...))
+func PrintlnOnColor038(str string) {
+	Println(Hilight("on_color_038", str))
+}
+
+// OnColor038f wraps OnColor038 and works with format
+// strings.
+func OnColor038f(str string, args ...interface{}) string {
+	return OnColor038(Sprintf(str, args...))
+}
+
+// PrintOnColor038f wraps PrintOnColor038 and works with format
+// strings.
+func PrintOnColor038f(str string, args ...interface{}) {
+	PrintOnColor038(Sprintf(str, args...))
+}
+
+// PrintlnOnColor038f wraps PrintlnOnColor038 and works with format
+// strings.
+func PrintlnOnColor038f(str string, args ...interface{}) {
+	PrintlnOnColor038(Sprintf(str, args...))
 }
 
 // Color039 will Hilight() the provided string with the
 // specified ANSI code.
-func Color039(str string, args ...interface{}) string {
-	return Hilight("color_039", str, args...)
+func Color039(str string) string {
+	return Hilight("color_039", str)
 }
 
 // PrintColor039 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor039(str string, args ...interface{}) {
-	Print(Hilight("color_039", str, args...))
+func PrintColor039(str string) {
+	Print(Hilight("color_039", str))
 }
 
 // PrintlnColor039 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor039(str string, args ...interface{}) {
-	Println(Hilight("color_039", str, args...))
+func PrintlnColor039(str string) {
+	Println(Hilight("color_039", str))
+}
+
+// Color039f wraps Color039 and works with format
+// strings.
+func Color039f(str string, args ...interface{}) string {
+	return Color039(Sprintf(str, args...))
+}
+
+// PrintColor039f wraps PrintColor039 and works with format
+// strings.
+func PrintColor039f(str string, args ...interface{}) {
+	PrintColor039(Sprintf(str, args...))
+}
+
+// PrintlnColor039f wraps PrintlnColor039 and works with format
+// strings.
+func PrintlnColor039f(str string, args ...interface{}) {
+	PrintlnColor039(Sprintf(str, args...))
 }
 
 // OnColor039 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor039(str string, args ...interface{}) string {
-	return Hilight("on_color_039", str, args...)
+func OnColor039(str string) string {
+	return Hilight("on_color_039", str)
 }
 
 // PrintOnColor039 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor039(str string, args ...interface{}) {
-	Print(Hilight("on_color_039", str, args...))
+func PrintOnColor039(str string) {
+	Print(Hilight("on_color_039", str))
 }
 
 // PrintlnOnColor039 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor039(str string, args ...interface{}) {
-	Println(Hilight("on_color_039", str, args...))
+func PrintlnOnColor039(str string) {
+	Println(Hilight("on_color_039", str))
+}
+
+// OnColor039f wraps OnColor039 and works with format
+// strings.
+func OnColor039f(str string, args ...interface{}) string {
+	return OnColor039(Sprintf(str, args...))
+}
+
+// PrintOnColor039f wraps PrintOnColor039 and works with format
+// strings.
+func PrintOnColor039f(str string, args ...interface{}) {
+	PrintOnColor039(Sprintf(str, args...))
+}
+
+// PrintlnOnColor039f wraps PrintlnOnColor039 and works with format
+// strings.
+func PrintlnOnColor039f(str string, args ...interface{}) {
+	PrintlnOnColor039(Sprintf(str, args...))
 }
 
 // Color040 will Hilight() the provided string with the
 // specified ANSI code.
-func Color040(str string, args ...interface{}) string {
-	return Hilight("color_040", str, args...)
+func Color040(str string) string {
+	return Hilight("color_040", str)
 }
 
 // PrintColor040 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor040(str string, args ...interface{}) {
-	Print(Hilight("color_040", str, args...))
+func PrintColor040(str string) {
+	Print(Hilight("color_040", str))
 }
 
 // PrintlnColor040 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor040(str string, args ...interface{}) {
-	Println(Hilight("color_040", str, args...))
+func PrintlnColor040(str string) {
+	Println(Hilight("color_040", str))
+}
+
+// Color040f wraps Color040 and works with format
+// strings.
+func Color040f(str string, args ...interface{}) string {
+	return Color040(Sprintf(str, args...))
+}
+
+// PrintColor040f wraps PrintColor040 and works with format
+// strings.
+func PrintColor040f(str string, args ...interface{}) {
+	PrintColor040(Sprintf(str, args...))
+}
+
+// PrintlnColor040f wraps PrintlnColor040 and works with format
+// strings.
+func PrintlnColor040f(str string, args ...interface{}) {
+	PrintlnColor040(Sprintf(str, args...))
 }
 
 // OnColor040 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor040(str string, args ...interface{}) string {
-	return Hilight("on_color_040", str, args...)
+func OnColor040(str string) string {
+	return Hilight("on_color_040", str)
 }
 
 // PrintOnColor040 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor040(str string, args ...interface{}) {
-	Print(Hilight("on_color_040", str, args...))
+func PrintOnColor040(str string) {
+	Print(Hilight("on_color_040", str))
 }
 
 // PrintlnOnColor040 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor040(str string, args ...interface{}) {
-	Println(Hilight("on_color_040", str, args...))
+func PrintlnOnColor040(str string) {
+	Println(Hilight("on_color_040", str))
+}
+
+// OnColor040f wraps OnColor040 and works with format
+// strings.
+func OnColor040f(str string, args ...interface{}) string {
+	return OnColor040(Sprintf(str, args...))
+}
+
+// PrintOnColor040f wraps PrintOnColor040 and works with format
+// strings.
+func PrintOnColor040f(str string, args ...interface{}) {
+	PrintOnColor040(Sprintf(str, args...))
+}
+
+// PrintlnOnColor040f wraps PrintlnOnColor040 and works with format
+// strings.
+func PrintlnOnColor040f(str string, args ...interface{}) {
+	PrintlnOnColor040(Sprintf(str, args...))
 }
 
 // Color041 will Hilight() the provided string with the
 // specified ANSI code.
-func Color041(str string, args ...interface{}) string {
-	return Hilight("color_041", str, args...)
+func Color041(str string) string {
+	return Hilight("color_041", str)
 }
 
 // PrintColor041 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor041(str string, args ...interface{}) {
-	Print(Hilight("color_041", str, args...))
+func PrintColor041(str string) {
+	Print(Hilight("color_041", str))
 }
 
 // PrintlnColor041 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor041(str string, args ...interface{}) {
-	Println(Hilight("color_041", str, args...))
+func PrintlnColor041(str string) {
+	Println(Hilight("color_041", str))
+}
+
+// Color041f wraps Color041 and works with format
+// strings.
+func Color041f(str string, args ...interface{}) string {
+	return Color041(Sprintf(str, args...))
+}
+
+// PrintColor041f wraps PrintColor041 and works with format
+// strings.
+func PrintColor041f(str string, args ...interface{}) {
+	PrintColor041(Sprintf(str, args...))
+}
+
+// PrintlnColor041f wraps PrintlnColor041 and works with format
+// strings.
+func PrintlnColor041f(str string, args ...interface{}) {
+	PrintlnColor041(Sprintf(str, args...))
 }
 
 // OnColor041 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor041(str string, args ...interface{}) string {
-	return Hilight("on_color_041", str, args...)
+func OnColor041(str string) string {
+	return Hilight("on_color_041", str)
 }
 
 // PrintOnColor041 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor041(str string, args ...interface{}) {
-	Print(Hilight("on_color_041", str, args...))
+func PrintOnColor041(str string) {
+	Print(Hilight("on_color_041", str))
 }
 
 // PrintlnOnColor041 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor041(str string, args ...interface{}) {
-	Println(Hilight("on_color_041", str, args...))
+func PrintlnOnColor041(str string) {
+	Println(Hilight("on_color_041", str))
+}
+
+// OnColor041f wraps OnColor041 and works with format
+// strings.
+func OnColor041f(str string, args ...interface{}) string {
+	return OnColor041(Sprintf(str, args...))
+}
+
+// PrintOnColor041f wraps PrintOnColor041 and works with format
+// strings.
+func PrintOnColor041f(str string, args ...interface{}) {
+	PrintOnColor041(Sprintf(str, args...))
+}
+
+// PrintlnOnColor041f wraps PrintlnOnColor041 and works with format
+// strings.
+func PrintlnOnColor041f(str string, args ...interface{}) {
+	PrintlnOnColor041(Sprintf(str, args...))
 }
 
 // Color042 will Hilight() the provided string with the
 // specified ANSI code.
-func Color042(str string, args ...interface{}) string {
-	return Hilight("color_042", str, args...)
+func Color042(str string) string {
+	return Hilight("color_042", str)
 }
 
 // PrintColor042 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor042(str string, args ...interface{}) {
-	Print(Hilight("color_042", str, args...))
+func PrintColor042(str string) {
+	Print(Hilight("color_042", str))
 }
 
 // PrintlnColor042 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor042(str string, args ...interface{}) {
-	Println(Hilight("color_042", str, args...))
+func PrintlnColor042(str string) {
+	Println(Hilight("color_042", str))
+}
+
+// Color042f wraps Color042 and works with format
+// strings.
+func Color042f(str string, args ...interface{}) string {
+	return Color042(Sprintf(str, args...))
+}
+
+// PrintColor042f wraps PrintColor042 and works with format
+// strings.
+func PrintColor042f(str string, args ...interface{}) {
+	PrintColor042(Sprintf(str, args...))
+}
+
+// PrintlnColor042f wraps PrintlnColor042 and works with format
+// strings.
+func PrintlnColor042f(str string, args ...interface{}) {
+	PrintlnColor042(Sprintf(str, args...))
 }
 
 // OnColor042 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor042(str string, args ...interface{}) string {
-	return Hilight("on_color_042", str, args...)
+func OnColor042(str string) string {
+	return Hilight("on_color_042", str)
 }
 
 // PrintOnColor042 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor042(str string, args ...interface{}) {
-	Print(Hilight("on_color_042", str, args...))
+func PrintOnColor042(str string) {
+	Print(Hilight("on_color_042", str))
 }
 
 // PrintlnOnColor042 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor042(str string, args ...interface{}) {
-	Println(Hilight("on_color_042", str, args...))
+func PrintlnOnColor042(str string) {
+	Println(Hilight("on_color_042", str))
+}
+
+// OnColor042f wraps OnColor042 and works with format
+// strings.
+func OnColor042f(str string, args ...interface{}) string {
+	return OnColor042(Sprintf(str, args...))
+}
+
+// PrintOnColor042f wraps PrintOnColor042 and works with format
+// strings.
+func PrintOnColor042f(str string, args ...interface{}) {
+	PrintOnColor042(Sprintf(str, args...))
+}
+
+// PrintlnOnColor042f wraps PrintlnOnColor042 and works with format
+// strings.
+func PrintlnOnColor042f(str string, args ...interface{}) {
+	PrintlnOnColor042(Sprintf(str, args...))
 }
 
 // Color043 will Hilight() the provided string with the
 // specified ANSI code.
-func Color043(str string, args ...interface{}) string {
-	return Hilight("color_043", str, args...)
+func Color043(str string) string {
+	return Hilight("color_043", str)
 }
 
 // PrintColor043 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor043(str string, args ...interface{}) {
-	Print(Hilight("color_043", str, args...))
+func PrintColor043(str string) {
+	Print(Hilight("color_043", str))
 }
 
 // PrintlnColor043 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor043(str string, args ...interface{}) {
-	Println(Hilight("color_043", str, args...))
+func PrintlnColor043(str string) {
+	Println(Hilight("color_043", str))
+}
+
+// Color043f wraps Color043 and works with format
+// strings.
+func Color043f(str string, args ...interface{}) string {
+	return Color043(Sprintf(str, args...))
+}
+
+// PrintColor043f wraps PrintColor043 and works with format
+// strings.
+func PrintColor043f(str string, args ...interface{}) {
+	PrintColor043(Sprintf(str, args...))
+}
+
+// PrintlnColor043f wraps PrintlnColor043 and works with format
+// strings.
+func PrintlnColor043f(str string, args ...interface{}) {
+	PrintlnColor043(Sprintf(str, args...))
 }
 
 // OnColor043 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor043(str string, args ...interface{}) string {
-	return Hilight("on_color_043", str, args...)
+func OnColor043(str string) string {
+	return Hilight("on_color_043", str)
 }
 
 // PrintOnColor043 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor043(str string, args ...interface{}) {
-	Print(Hilight("on_color_043", str, args...))
+func PrintOnColor043(str string) {
+	Print(Hilight("on_color_043", str))
 }
 
 // PrintlnOnColor043 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor043(str string, args ...interface{}) {
-	Println(Hilight("on_color_043", str, args...))
+func PrintlnOnColor043(str string) {
+	Println(Hilight("on_color_043", str))
+}
+
+// OnColor043f wraps OnColor043 and works with format
+// strings.
+func OnColor043f(str string, args ...interface{}) string {
+	return OnColor043(Sprintf(str, args...))
+}
+
+// PrintOnColor043f wraps PrintOnColor043 and works with format
+// strings.
+func PrintOnColor043f(str string, args ...interface{}) {
+	PrintOnColor043(Sprintf(str, args...))
+}
+
+// PrintlnOnColor043f wraps PrintlnOnColor043 and works with format
+// strings.
+func PrintlnOnColor043f(str string, args ...interface{}) {
+	PrintlnOnColor043(Sprintf(str, args...))
 }
 
 // Color044 will Hilight() the provided string with the
 // specified ANSI code.
-func Color044(str string, args ...interface{}) string {
-	return Hilight("color_044", str, args...)
+func Color044(str string) string {
+	return Hilight("color_044", str)
 }
 
 // PrintColor044 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor044(str string, args ...interface{}) {
-	Print(Hilight("color_044", str, args...))
+func PrintColor044(str string) {
+	Print(Hilight("color_044", str))
 }
 
 // PrintlnColor044 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor044(str string, args ...interface{}) {
-	Println(Hilight("color_044", str, args...))
+func PrintlnColor044(str string) {
+	Println(Hilight("color_044", str))
+}
+
+// Color044f wraps Color044 and works with format
+// strings.
+func Color044f(str string, args ...interface{}) string {
+	return Color044(Sprintf(str, args...))
+}
+
+// PrintColor044f wraps PrintColor044 and works with format
+// strings.
+func PrintColor044f(str string, args ...interface{}) {
+	PrintColor044(Sprintf(str, args...))
+}
+
+// PrintlnColor044f wraps PrintlnColor044 and works with format
+// strings.
+func PrintlnColor044f(str string, args ...interface{}) {
+	PrintlnColor044(Sprintf(str, args...))
 }
 
 // OnColor044 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor044(str string, args ...interface{}) string {
-	return Hilight("on_color_044", str, args...)
+func OnColor044(str string) string {
+	return Hilight("on_color_044", str)
 }
 
 // PrintOnColor044 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor044(str string, args ...interface{}) {
-	Print(Hilight("on_color_044", str, args...))
+func PrintOnColor044(str string) {
+	Print(Hilight("on_color_044", str))
 }
 
 // PrintlnOnColor044 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor044(str string, args ...interface{}) {
-	Println(Hilight("on_color_044", str, args...))
+func PrintlnOnColor044(str string) {
+	Println(Hilight("on_color_044", str))
+}
+
+// OnColor044f wraps OnColor044 and works with format
+// strings.
+func OnColor044f(str string, args ...interface{}) string {
+	return OnColor044(Sprintf(str, args...))
+}
+
+// PrintOnColor044f wraps PrintOnColor044 and works with format
+// strings.
+func PrintOnColor044f(str string, args ...interface{}) {
+	PrintOnColor044(Sprintf(str, args...))
+}
+
+// PrintlnOnColor044f wraps PrintlnOnColor044 and works with format
+// strings.
+func PrintlnOnColor044f(str string, args ...interface{}) {
+	PrintlnOnColor044(Sprintf(str, args...))
 }
 
 // Color045 will Hilight() the provided string with the
 // specified ANSI code.
-func Color045(str string, args ...interface{}) string {
-	return Hilight("color_045", str, args...)
+func Color045(str string) string {
+	return Hilight("color_045", str)
 }
 
 // PrintColor045 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor045(str string, args ...interface{}) {
-	Print(Hilight("color_045", str, args...))
+func PrintColor045(str string) {
+	Print(Hilight("color_045", str))
 }
 
 // PrintlnColor045 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor045(str string, args ...interface{}) {
-	Println(Hilight("color_045", str, args...))
+func PrintlnColor045(str string) {
+	Println(Hilight("color_045", str))
+}
+
+// Color045f wraps Color045 and works with format
+// strings.
+func Color045f(str string, args ...interface{}) string {
+	return Color045(Sprintf(str, args...))
+}
+
+// PrintColor045f wraps PrintColor045 and works with format
+// strings.
+func PrintColor045f(str string, args ...interface{}) {
+	PrintColor045(Sprintf(str, args...))
+}
+
+// PrintlnColor045f wraps PrintlnColor045 and works with format
+// strings.
+func PrintlnColor045f(str string, args ...interface{}) {
+	PrintlnColor045(Sprintf(str, args...))
 }
 
 // OnColor045 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor045(str string, args ...interface{}) string {
-	return Hilight("on_color_045", str, args...)
+func OnColor045(str string) string {
+	return Hilight("on_color_045", str)
 }
 
 // PrintOnColor045 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor045(str string, args ...interface{}) {
-	Print(Hilight("on_color_045", str, args...))
+func PrintOnColor045(str string) {
+	Print(Hilight("on_color_045", str))
 }
 
 // PrintlnOnColor045 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor045(str string, args ...interface{}) {
-	Println(Hilight("on_color_045", str, args...))
+func PrintlnOnColor045(str string) {
+	Println(Hilight("on_color_045", str))
+}
+
+// OnColor045f wraps OnColor045 and works with format
+// strings.
+func OnColor045f(str string, args ...interface{}) string {
+	return OnColor045(Sprintf(str, args...))
+}
+
+// PrintOnColor045f wraps PrintOnColor045 and works with format
+// strings.
+func PrintOnColor045f(str string, args ...interface{}) {
+	PrintOnColor045(Sprintf(str, args...))
+}
+
+// PrintlnOnColor045f wraps PrintlnOnColor045 and works with format
+// strings.
+func PrintlnOnColor045f(str string, args ...interface{}) {
+	PrintlnOnColor045(Sprintf(str, args...))
 }
 
 // Color046 will Hilight() the provided string with the
 // specified ANSI code.
-func Color046(str string, args ...interface{}) string {
-	return Hilight("color_046", str, args...)
+func Color046(str string) string {
+	return Hilight("color_046", str)
 }
 
 // PrintColor046 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor046(str string, args ...interface{}) {
-	Print(Hilight("color_046", str, args...))
+func PrintColor046(str string) {
+	Print(Hilight("color_046", str))
 }
 
 // PrintlnColor046 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor046(str string, args ...interface{}) {
-	Println(Hilight("color_046", str, args...))
+func PrintlnColor046(str string) {
+	Println(Hilight("color_046", str))
+}
+
+// Color046f wraps Color046 and works with format
+// strings.
+func Color046f(str string, args ...interface{}) string {
+	return Color046(Sprintf(str, args...))
+}
+
+// PrintColor046f wraps PrintColor046 and works with format
+// strings.
+func PrintColor046f(str string, args ...interface{}) {
+	PrintColor046(Sprintf(str, args...))
+}
+
+// PrintlnColor046f wraps PrintlnColor046 and works with format
+// strings.
+func PrintlnColor046f(str string, args ...interface{}) {
+	PrintlnColor046(Sprintf(str, args...))
 }
 
 // OnColor046 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor046(str string, args ...interface{}) string {
-	return Hilight("on_color_046", str, args...)
+func OnColor046(str string) string {
+	return Hilight("on_color_046", str)
 }
 
 // PrintOnColor046 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor046(str string, args ...interface{}) {
-	Print(Hilight("on_color_046", str, args...))
+func PrintOnColor046(str string) {
+	Print(Hilight("on_color_046", str))
 }
 
 // PrintlnOnColor046 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor046(str string, args ...interface{}) {
-	Println(Hilight("on_color_046", str, args...))
+func PrintlnOnColor046(str string) {
+	Println(Hilight("on_color_046", str))
+}
+
+// OnColor046f wraps OnColor046 and works with format
+// strings.
+func OnColor046f(str string, args ...interface{}) string {
+	return OnColor046(Sprintf(str, args...))
+}
+
+// PrintOnColor046f wraps PrintOnColor046 and works with format
+// strings.
+func PrintOnColor046f(str string, args ...interface{}) {
+	PrintOnColor046(Sprintf(str, args...))
+}
+
+// PrintlnOnColor046f wraps PrintlnOnColor046 and works with format
+// strings.
+func PrintlnOnColor046f(str string, args ...interface{}) {
+	PrintlnOnColor046(Sprintf(str, args...))
 }
 
 // Color047 will Hilight() the provided string with the
 // specified ANSI code.
-func Color047(str string, args ...interface{}) string {
-	return Hilight("color_047", str, args...)
+func Color047(str string) string {
+	return Hilight("color_047", str)
 }
 
 // PrintColor047 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor047(str string, args ...interface{}) {
-	Print(Hilight("color_047", str, args...))
+func PrintColor047(str string) {
+	Print(Hilight("color_047", str))
 }
 
 // PrintlnColor047 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor047(str string, args ...interface{}) {
-	Println(Hilight("color_047", str, args...))
+func PrintlnColor047(str string) {
+	Println(Hilight("color_047", str))
+}
+
+// Color047f wraps Color047 and works with format
+// strings.
+func Color047f(str string, args ...interface{}) string {
+	return Color047(Sprintf(str, args...))
+}
+
+// PrintColor047f wraps PrintColor047 and works with format
+// strings.
+func PrintColor047f(str string, args ...interface{}) {
+	PrintColor047(Sprintf(str, args...))
+}
+
+// PrintlnColor047f wraps PrintlnColor047 and works with format
+// strings.
+func PrintlnColor047f(str string, args ...interface{}) {
+	PrintlnColor047(Sprintf(str, args...))
 }
 
 // OnColor047 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor047(str string, args ...interface{}) string {
-	return Hilight("on_color_047", str, args...)
+func OnColor047(str string) string {
+	return Hilight("on_color_047", str)
 }
 
 // PrintOnColor047 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor047(str string, args ...interface{}) {
-	Print(Hilight("on_color_047", str, args...))
+func PrintOnColor047(str string) {
+	Print(Hilight("on_color_047", str))
 }
 
 // PrintlnOnColor047 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor047(str string, args ...interface{}) {
-	Println(Hilight("on_color_047", str, args...))
+func PrintlnOnColor047(str string) {
+	Println(Hilight("on_color_047", str))
+}
+
+// OnColor047f wraps OnColor047 and works with format
+// strings.
+func OnColor047f(str string, args ...interface{}) string {
+	return OnColor047(Sprintf(str, args...))
+}
+
+// PrintOnColor047f wraps PrintOnColor047 and works with format
+// strings.
+func PrintOnColor047f(str string, args ...interface{}) {
+	PrintOnColor047(Sprintf(str, args...))
+}
+
+// PrintlnOnColor047f wraps PrintlnOnColor047 and works with format
+// strings.
+func PrintlnOnColor047f(str string, args ...interface{}) {
+	PrintlnOnColor047(Sprintf(str, args...))
 }
 
 // Color048 will Hilight() the provided string with the
 // specified ANSI code.
-func Color048(str string, args ...interface{}) string {
-	return Hilight("color_048", str, args...)
+func Color048(str string) string {
+	return Hilight("color_048", str)
 }
 
 // PrintColor048 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor048(str string, args ...interface{}) {
-	Print(Hilight("color_048", str, args...))
+func PrintColor048(str string) {
+	Print(Hilight("color_048", str))
 }
 
 // PrintlnColor048 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor048(str string, args ...interface{}) {
-	Println(Hilight("color_048", str, args...))
+func PrintlnColor048(str string) {
+	Println(Hilight("color_048", str))
+}
+
+// Color048f wraps Color048 and works with format
+// strings.
+func Color048f(str string, args ...interface{}) string {
+	return Color048(Sprintf(str, args...))
+}
+
+// PrintColor048f wraps PrintColor048 and works with format
+// strings.
+func PrintColor048f(str string, args ...interface{}) {
+	PrintColor048(Sprintf(str, args...))
+}
+
+// PrintlnColor048f wraps PrintlnColor048 and works with format
+// strings.
+func PrintlnColor048f(str string, args ...interface{}) {
+	PrintlnColor048(Sprintf(str, args...))
 }
 
 // OnColor048 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor048(str string, args ...interface{}) string {
-	return Hilight("on_color_048", str, args...)
+func OnColor048(str string) string {
+	return Hilight("on_color_048", str)
 }
 
 // PrintOnColor048 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor048(str string, args ...interface{}) {
-	Print(Hilight("on_color_048", str, args...))
+func PrintOnColor048(str string) {
+	Print(Hilight("on_color_048", str))
 }
 
 // PrintlnOnColor048 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor048(str string, args ...interface{}) {
-	Println(Hilight("on_color_048", str, args...))
+func PrintlnOnColor048(str string) {
+	Println(Hilight("on_color_048", str))
+}
+
+// OnColor048f wraps OnColor048 and works with format
+// strings.
+func OnColor048f(str string, args ...interface{}) string {
+	return OnColor048(Sprintf(str, args...))
+}
+
+// PrintOnColor048f wraps PrintOnColor048 and works with format
+// strings.
+func PrintOnColor048f(str string, args ...interface{}) {
+	PrintOnColor048(Sprintf(str, args...))
+}
+
+// PrintlnOnColor048f wraps PrintlnOnColor048 and works with format
+// strings.
+func PrintlnOnColor048f(str string, args ...interface{}) {
+	PrintlnOnColor048(Sprintf(str, args...))
 }
 
 // Color049 will Hilight() the provided string with the
 // specified ANSI code.
-func Color049(str string, args ...interface{}) string {
-	return Hilight("color_049", str, args...)
+func Color049(str string) string {
+	return Hilight("color_049", str)
 }
 
 // PrintColor049 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor049(str string, args ...interface{}) {
-	Print(Hilight("color_049", str, args...))
+func PrintColor049(str string) {
+	Print(Hilight("color_049", str))
 }
 
 // PrintlnColor049 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor049(str string, args ...interface{}) {
-	Println(Hilight("color_049", str, args...))
+func PrintlnColor049(str string) {
+	Println(Hilight("color_049", str))
+}
+
+// Color049f wraps Color049 and works with format
+// strings.
+func Color049f(str string, args ...interface{}) string {
+	return Color049(Sprintf(str, args...))
+}
+
+// PrintColor049f wraps PrintColor049 and works with format
+// strings.
+func PrintColor049f(str string, args ...interface{}) {
+	PrintColor049(Sprintf(str, args...))
+}
+
+// PrintlnColor049f wraps PrintlnColor049 and works with format
+// strings.
+func PrintlnColor049f(str string, args ...interface{}) {
+	PrintlnColor049(Sprintf(str, args...))
 }
 
 // OnColor049 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor049(str string, args ...interface{}) string {
-	return Hilight("on_color_049", str, args...)
+func OnColor049(str string) string {
+	return Hilight("on_color_049", str)
 }
 
 // PrintOnColor049 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor049(str string, args ...interface{}) {
-	Print(Hilight("on_color_049", str, args...))
+func PrintOnColor049(str string) {
+	Print(Hilight("on_color_049", str))
 }
 
 // PrintlnOnColor049 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor049(str string, args ...interface{}) {
-	Println(Hilight("on_color_049", str, args...))
+func PrintlnOnColor049(str string) {
+	Println(Hilight("on_color_049", str))
+}
+
+// OnColor049f wraps OnColor049 and works with format
+// strings.
+func OnColor049f(str string, args ...interface{}) string {
+	return OnColor049(Sprintf(str, args...))
+}
+
+// PrintOnColor049f wraps PrintOnColor049 and works with format
+// strings.
+func PrintOnColor049f(str string, args ...interface{}) {
+	PrintOnColor049(Sprintf(str, args...))
+}
+
+// PrintlnOnColor049f wraps PrintlnOnColor049 and works with format
+// strings.
+func PrintlnOnColor049f(str string, args ...interface{}) {
+	PrintlnOnColor049(Sprintf(str, args...))
 }
 
 // Color050 will Hilight() the provided string with the
 // specified ANSI code.
-func Color050(str string, args ...interface{}) string {
-	return Hilight("color_050", str, args...)
+func Color050(str string) string {
+	return Hilight("color_050", str)
 }
 
 // PrintColor050 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor050(str string, args ...interface{}) {
-	Print(Hilight("color_050", str, args...))
+func PrintColor050(str string) {
+	Print(Hilight("color_050", str))
 }
 
 // PrintlnColor050 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor050(str string, args ...interface{}) {
-	Println(Hilight("color_050", str, args...))
+func PrintlnColor050(str string) {
+	Println(Hilight("color_050", str))
+}
+
+// Color050f wraps Color050 and works with format
+// strings.
+func Color050f(str string, args ...interface{}) string {
+	return Color050(Sprintf(str, args...))
+}
+
+// PrintColor050f wraps PrintColor050 and works with format
+// strings.
+func PrintColor050f(str string, args ...interface{}) {
+	PrintColor050(Sprintf(str, args...))
+}
+
+// PrintlnColor050f wraps PrintlnColor050 and works with format
+// strings.
+func PrintlnColor050f(str string, args ...interface{}) {
+	PrintlnColor050(Sprintf(str, args...))
 }
 
 // OnColor050 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor050(str string, args ...interface{}) string {
-	return Hilight("on_color_050", str, args...)
+func OnColor050(str string) string {
+	return Hilight("on_color_050", str)
 }
 
 // PrintOnColor050 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor050(str string, args ...interface{}) {
-	Print(Hilight("on_color_050", str, args...))
+func PrintOnColor050(str string) {
+	Print(Hilight("on_color_050", str))
 }
 
 // PrintlnOnColor050 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor050(str string, args ...interface{}) {
-	Println(Hilight("on_color_050", str, args...))
+func PrintlnOnColor050(str string) {
+	Println(Hilight("on_color_050", str))
+}
+
+// OnColor050f wraps OnColor050 and works with format
+// strings.
+func OnColor050f(str string, args ...interface{}) string {
+	return OnColor050(Sprintf(str, args...))
+}
+
+// PrintOnColor050f wraps PrintOnColor050 and works with format
+// strings.
+func PrintOnColor050f(str string, args ...interface{}) {
+	PrintOnColor050(Sprintf(str, args...))
+}
+
+// PrintlnOnColor050f wraps PrintlnOnColor050 and works with format
+// strings.
+func PrintlnOnColor050f(str string, args ...interface{}) {
+	PrintlnOnColor050(Sprintf(str, args...))
 }
 
 // Color051 will Hilight() the provided string with the
 // specified ANSI code.
-func Color051(str string, args ...interface{}) string {
-	return Hilight("color_051", str, args...)
+func Color051(str string) string {
+	return Hilight("color_051", str)
 }
 
 // PrintColor051 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor051(str string, args ...interface{}) {
-	Print(Hilight("color_051", str, args...))
+func PrintColor051(str string) {
+	Print(Hilight("color_051", str))
 }
 
 // PrintlnColor051 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor051(str string, args ...interface{}) {
-	Println(Hilight("color_051", str, args...))
+func PrintlnColor051(str string) {
+	Println(Hilight("color_051", str))
+}
+
+// Color051f wraps Color051 and works with format
+// strings.
+func Color051f(str string, args ...interface{}) string {
+	return Color051(Sprintf(str, args...))
+}
+
+// PrintColor051f wraps PrintColor051 and works with format
+// strings.
+func PrintColor051f(str string, args ...interface{}) {
+	PrintColor051(Sprintf(str, args...))
+}
+
+// PrintlnColor051f wraps PrintlnColor051 and works with format
+// strings.
+func PrintlnColor051f(str string, args ...interface{}) {
+	PrintlnColor051(Sprintf(str, args...))
 }
 
 // OnColor051 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor051(str string, args ...interface{}) string {
-	return Hilight("on_color_051", str, args...)
+func OnColor051(str string) string {
+	return Hilight("on_color_051", str)
 }
 
 // PrintOnColor051 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor051(str string, args ...interface{}) {
-	Print(Hilight("on_color_051", str, args...))
+func PrintOnColor051(str string) {
+	Print(Hilight("on_color_051", str))
 }
 
 // PrintlnOnColor051 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor051(str string, args ...interface{}) {
-	Println(Hilight("on_color_051", str, args...))
+func PrintlnOnColor051(str string) {
+	Println(Hilight("on_color_051", str))
+}
+
+// OnColor051f wraps OnColor051 and works with format
+// strings.
+func OnColor051f(str string, args ...interface{}) string {
+	return OnColor051(Sprintf(str, args...))
+}
+
+// PrintOnColor051f wraps PrintOnColor051 and works with format
+// strings.
+func PrintOnColor051f(str string, args ...interface{}) {
+	PrintOnColor051(Sprintf(str, args...))
+}
+
+// PrintlnOnColor051f wraps PrintlnOnColor051 and works with format
+// strings.
+func PrintlnOnColor051f(str string, args ...interface{}) {
+	PrintlnOnColor051(Sprintf(str, args...))
 }
 
 // Color052 will Hilight() the provided string with the
 // specified ANSI code.
-func Color052(str string, args ...interface{}) string {
-	return Hilight("color_052", str, args...)
+func Color052(str string) string {
+	return Hilight("color_052", str)
 }
 
 // PrintColor052 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor052(str string, args ...interface{}) {
-	Print(Hilight("color_052", str, args...))
+func PrintColor052(str string) {
+	Print(Hilight("color_052", str))
 }
 
 // PrintlnColor052 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor052(str string, args ...interface{}) {
-	Println(Hilight("color_052", str, args...))
+func PrintlnColor052(str string) {
+	Println(Hilight("color_052", str))
+}
+
+// Color052f wraps Color052 and works with format
+// strings.
+func Color052f(str string, args ...interface{}) string {
+	return Color052(Sprintf(str, args...))
+}
+
+// PrintColor052f wraps PrintColor052 and works with format
+// strings.
+func PrintColor052f(str string, args ...interface{}) {
+	PrintColor052(Sprintf(str, args...))
+}
+
+// PrintlnColor052f wraps PrintlnColor052 and works with format
+// strings.
+func PrintlnColor052f(str string, args ...interface{}) {
+	PrintlnColor052(Sprintf(str, args...))
 }
 
 // OnColor052 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor052(str string, args ...interface{}) string {
-	return Hilight("on_color_052", str, args...)
+func OnColor052(str string) string {
+	return Hilight("on_color_052", str)
 }
 
 // PrintOnColor052 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor052(str string, args ...interface{}) {
-	Print(Hilight("on_color_052", str, args...))
+func PrintOnColor052(str string) {
+	Print(Hilight("on_color_052", str))
 }
 
 // PrintlnOnColor052 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor052(str string, args ...interface{}) {
-	Println(Hilight("on_color_052", str, args...))
+func PrintlnOnColor052(str string) {
+	Println(Hilight("on_color_052", str))
+}
+
+// OnColor052f wraps OnColor052 and works with format
+// strings.
+func OnColor052f(str string, args ...interface{}) string {
+	return OnColor052(Sprintf(str, args...))
+}
+
+// PrintOnColor052f wraps PrintOnColor052 and works with format
+// strings.
+func PrintOnColor052f(str string, args ...interface{}) {
+	PrintOnColor052(Sprintf(str, args...))
+}
+
+// PrintlnOnColor052f wraps PrintlnOnColor052 and works with format
+// strings.
+func PrintlnOnColor052f(str string, args ...interface{}) {
+	PrintlnOnColor052(Sprintf(str, args...))
 }
 
 // Color053 will Hilight() the provided string with the
 // specified ANSI code.
-func Color053(str string, args ...interface{}) string {
-	return Hilight("color_053", str, args...)
+func Color053(str string) string {
+	return Hilight("color_053", str)
 }
 
 // PrintColor053 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor053(str string, args ...interface{}) {
-	Print(Hilight("color_053", str, args...))
+func PrintColor053(str string) {
+	Print(Hilight("color_053", str))
 }
 
 // PrintlnColor053 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor053(str string, args ...interface{}) {
-	Println(Hilight("color_053", str, args...))
+func PrintlnColor053(str string) {
+	Println(Hilight("color_053", str))
+}
+
+// Color053f wraps Color053 and works with format
+// strings.
+func Color053f(str string, args ...interface{}) string {
+	return Color053(Sprintf(str, args...))
+}
+
+// PrintColor053f wraps PrintColor053 and works with format
+// strings.
+func PrintColor053f(str string, args ...interface{}) {
+	PrintColor053(Sprintf(str, args...))
+}
+
+// PrintlnColor053f wraps PrintlnColor053 and works with format
+// strings.
+func PrintlnColor053f(str string, args ...interface{}) {
+	PrintlnColor053(Sprintf(str, args...))
 }
 
 // OnColor053 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor053(str string, args ...interface{}) string {
-	return Hilight("on_color_053", str, args...)
+func OnColor053(str string) string {
+	return Hilight("on_color_053", str)
 }
 
 // PrintOnColor053 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor053(str string, args ...interface{}) {
-	Print(Hilight("on_color_053", str, args...))
+func PrintOnColor053(str string) {
+	Print(Hilight("on_color_053", str))
 }
 
 // PrintlnOnColor053 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor053(str string, args ...interface{}) {
-	Println(Hilight("on_color_053", str, args...))
+func PrintlnOnColor053(str string) {
+	Println(Hilight("on_color_053", str))
+}
+
+// OnColor053f wraps OnColor053 and works with format
+// strings.
+func OnColor053f(str string, args ...interface{}) string {
+	return OnColor053(Sprintf(str, args...))
+}
+
+// PrintOnColor053f wraps PrintOnColor053 and works with format
+// strings.
+func PrintOnColor053f(str string, args ...interface{}) {
+	PrintOnColor053(Sprintf(str, args...))
+}
+
+// PrintlnOnColor053f wraps PrintlnOnColor053 and works with format
+// strings.
+func PrintlnOnColor053f(str string, args ...interface{}) {
+	PrintlnOnColor053(Sprintf(str, args...))
 }
 
 // Color054 will Hilight() the provided string with the
 // specified ANSI code.
-func Color054(str string, args ...interface{}) string {
-	return Hilight("color_054", str, args...)
+func Color054(str string) string {
+	return Hilight("color_054", str)
 }
 
 // PrintColor054 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor054(str string, args ...interface{}) {
-	Print(Hilight("color_054", str, args...))
+func PrintColor054(str string) {
+	Print(Hilight("color_054", str))
 }
 
 // PrintlnColor054 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor054(str string, args ...interface{}) {
-	Println(Hilight("color_054", str, args...))
+func PrintlnColor054(str string) {
+	Println(Hilight("color_054", str))
+}
+
+// Color054f wraps Color054 and works with format
+// strings.
+func Color054f(str string, args ...interface{}) string {
+	return Color054(Sprintf(str, args...))
+}
+
+// PrintColor054f wraps PrintColor054 and works with format
+// strings.
+func PrintColor054f(str string, args ...interface{}) {
+	PrintColor054(Sprintf(str, args...))
+}
+
+// PrintlnColor054f wraps PrintlnColor054 and works with format
+// strings.
+func PrintlnColor054f(str string, args ...interface{}) {
+	PrintlnColor054(Sprintf(str, args...))
 }
 
 // OnColor054 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor054(str string, args ...interface{}) string {
-	return Hilight("on_color_054", str, args...)
+func OnColor054(str string) string {
+	return Hilight("on_color_054", str)
 }
 
 // PrintOnColor054 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor054(str string, args ...interface{}) {
-	Print(Hilight("on_color_054", str, args...))
+func PrintOnColor054(str string) {
+	Print(Hilight("on_color_054", str))
 }
 
 // PrintlnOnColor054 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor054(str string, args ...interface{}) {
-	Println(Hilight("on_color_054", str, args...))
+func PrintlnOnColor054(str string) {
+	Println(Hilight("on_color_054", str))
+}
+
+// OnColor054f wraps OnColor054 and works with format
+// strings.
+func OnColor054f(str string, args ...interface{}) string {
+	return OnColor054(Sprintf(str, args...))
+}
+
+// PrintOnColor054f wraps PrintOnColor054 and works with format
+// strings.
+func PrintOnColor054f(str string, args ...interface{}) {
+	PrintOnColor054(Sprintf(str, args...))
+}
+
+// PrintlnOnColor054f wraps PrintlnOnColor054 and works with format
+// strings.
+func PrintlnOnColor054f(str string, args ...interface{}) {
+	PrintlnOnColor054(Sprintf(str, args...))
 }
 
 // Color055 will Hilight() the provided string with the
 // specified ANSI code.
-func Color055(str string, args ...interface{}) string {
-	return Hilight("color_055", str, args...)
+func Color055(str string) string {
+	return Hilight("color_055", str)
 }
 
 // PrintColor055 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor055(str string, args ...interface{}) {
-	Print(Hilight("color_055", str, args...))
+func PrintColor055(str string) {
+	Print(Hilight("color_055", str))
 }
 
 // PrintlnColor055 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor055(str string, args ...interface{}) {
-	Println(Hilight("color_055", str, args...))
+func PrintlnColor055(str string) {
+	Println(Hilight("color_055", str))
+}
+
+// Color055f wraps Color055 and works with format
+// strings.
+func Color055f(str string, args ...interface{}) string {
+	return Color055(Sprintf(str, args...))
+}
+
+// PrintColor055f wraps PrintColor055 and works with format
+// strings.
+func PrintColor055f(str string, args ...interface{}) {
+	PrintColor055(Sprintf(str, args...))
+}
+
+// PrintlnColor055f wraps PrintlnColor055 and works with format
+// strings.
+func PrintlnColor055f(str string, args ...interface{}) {
+	PrintlnColor055(Sprintf(str, args...))
 }
 
 // OnColor055 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor055(str string, args ...interface{}) string {
-	return Hilight("on_color_055", str, args...)
+func OnColor055(str string) string {
+	return Hilight("on_color_055", str)
 }
 
 // PrintOnColor055 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor055(str string, args ...interface{}) {
-	Print(Hilight("on_color_055", str, args...))
+func PrintOnColor055(str string) {
+	Print(Hilight("on_color_055", str))
 }
 
 // PrintlnOnColor055 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor055(str string, args ...interface{}) {
-	Println(Hilight("on_color_055", str, args...))
+func PrintlnOnColor055(str string) {
+	Println(Hilight("on_color_055", str))
+}
+
+// OnColor055f wraps OnColor055 and works with format
+// strings.
+func OnColor055f(str string, args ...interface{}) string {
+	return OnColor055(Sprintf(str, args...))
+}
+
+// PrintOnColor055f wraps PrintOnColor055 and works with format
+// strings.
+func PrintOnColor055f(str string, args ...interface{}) {
+	PrintOnColor055(Sprintf(str, args...))
+}
+
+// PrintlnOnColor055f wraps PrintlnOnColor055 and works with format
+// strings.
+func PrintlnOnColor055f(str string, args ...interface{}) {
+	PrintlnOnColor055(Sprintf(str, args...))
 }
 
 // Color056 will Hilight() the provided string with the
 // specified ANSI code.
-func Color056(str string, args ...interface{}) string {
-	return Hilight("color_056", str, args...)
+func Color056(str string) string {
+	return Hilight("color_056", str)
 }
 
 // PrintColor056 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor056(str string, args ...interface{}) {
-	Print(Hilight("color_056", str, args...))
+func PrintColor056(str string) {
+	Print(Hilight("color_056", str))
 }
 
 // PrintlnColor056 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor056(str string, args ...interface{}) {
-	Println(Hilight("color_056", str, args...))
+func PrintlnColor056(str string) {
+	Println(Hilight("color_056", str))
+}
+
+// Color056f wraps Color056 and works with format
+// strings.
+func Color056f(str string, args ...interface{}) string {
+	return Color056(Sprintf(str, args...))
+}
+
+// PrintColor056f wraps PrintColor056 and works with format
+// strings.
+func PrintColor056f(str string, args ...interface{}) {
+	PrintColor056(Sprintf(str, args...))
+}
+
+// PrintlnColor056f wraps PrintlnColor056 and works with format
+// strings.
+func PrintlnColor056f(str string, args ...interface{}) {
+	PrintlnColor056(Sprintf(str, args...))
 }
 
 // OnColor056 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor056(str string, args ...interface{}) string {
-	return Hilight("on_color_056", str, args...)
+func OnColor056(str string) string {
+	return Hilight("on_color_056", str)
 }
 
 // PrintOnColor056 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor056(str string, args ...interface{}) {
-	Print(Hilight("on_color_056", str, args...))
+func PrintOnColor056(str string) {
+	Print(Hilight("on_color_056", str))
 }
 
 // PrintlnOnColor056 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor056(str string, args ...interface{}) {
-	Println(Hilight("on_color_056", str, args...))
+func PrintlnOnColor056(str string) {
+	Println(Hilight("on_color_056", str))
+}
+
+// OnColor056f wraps OnColor056 and works with format
+// strings.
+func OnColor056f(str string, args ...interface{}) string {
+	return OnColor056(Sprintf(str, args...))
+}
+
+// PrintOnColor056f wraps PrintOnColor056 and works with format
+// strings.
+func PrintOnColor056f(str string, args ...interface{}) {
+	PrintOnColor056(Sprintf(str, args...))
+}
+
+// PrintlnOnColor056f wraps PrintlnOnColor056 and works with format
+// strings.
+func PrintlnOnColor056f(str string, args ...interface{}) {
+	PrintlnOnColor056(Sprintf(str, args...))
 }
 
 // Color057 will Hilight() the provided string with the
 // specified ANSI code.
-func Color057(str string, args ...interface{}) string {
-	return Hilight("color_057", str, args...)
+func Color057(str string) string {
+	return Hilight("color_057", str)
 }
 
 // PrintColor057 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor057(str string, args ...interface{}) {
-	Print(Hilight("color_057", str, args...))
+func PrintColor057(str string) {
+	Print(Hilight("color_057", str))
 }
 
 // PrintlnColor057 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor057(str string, args ...interface{}) {
-	Println(Hilight("color_057", str, args...))
+func PrintlnColor057(str string) {
+	Println(Hilight("color_057", str))
+}
+
+// Color057f wraps Color057 and works with format
+// strings.
+func Color057f(str string, args ...interface{}) string {
+	return Color057(Sprintf(str, args...))
+}
+
+// PrintColor057f wraps PrintColor057 and works with format
+// strings.
+func PrintColor057f(str string, args ...interface{}) {
+	PrintColor057(Sprintf(str, args...))
+}
+
+// PrintlnColor057f wraps PrintlnColor057 and works with format
+// strings.
+func PrintlnColor057f(str string, args ...interface{}) {
+	PrintlnColor057(Sprintf(str, args...))
 }
 
 // OnColor057 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor057(str string, args ...interface{}) string {
-	return Hilight("on_color_057", str, args...)
+func OnColor057(str string) string {
+	return Hilight("on_color_057", str)
 }
 
 // PrintOnColor057 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor057(str string, args ...interface{}) {
-	Print(Hilight("on_color_057", str, args...))
+func PrintOnColor057(str string) {
+	Print(Hilight("on_color_057", str))
 }
 
 // PrintlnOnColor057 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor057(str string, args ...interface{}) {
-	Println(Hilight("on_color_057", str, args...))
+func PrintlnOnColor057(str string) {
+	Println(Hilight("on_color_057", str))
+}
+
+// OnColor057f wraps OnColor057 and works with format
+// strings.
+func OnColor057f(str string, args ...interface{}) string {
+	return OnColor057(Sprintf(str, args...))
+}
+
+// PrintOnColor057f wraps PrintOnColor057 and works with format
+// strings.
+func PrintOnColor057f(str string, args ...interface{}) {
+	PrintOnColor057(Sprintf(str, args...))
+}
+
+// PrintlnOnColor057f wraps PrintlnOnColor057 and works with format
+// strings.
+func PrintlnOnColor057f(str string, args ...interface{}) {
+	PrintlnOnColor057(Sprintf(str, args...))
 }
 
 // Color058 will Hilight() the provided string with the
 // specified ANSI code.
-func Color058(str string, args ...interface{}) string {
-	return Hilight("color_058", str, args...)
+func Color058(str string) string {
+	return Hilight("color_058", str)
 }
 
 // PrintColor058 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor058(str string, args ...interface{}) {
-	Print(Hilight("color_058", str, args...))
+func PrintColor058(str string) {
+	Print(Hilight("color_058", str))
 }
 
 // PrintlnColor058 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor058(str string, args ...interface{}) {
-	Println(Hilight("color_058", str, args...))
+func PrintlnColor058(str string) {
+	Println(Hilight("color_058", str))
+}
+
+// Color058f wraps Color058 and works with format
+// strings.
+func Color058f(str string, args ...interface{}) string {
+	return Color058(Sprintf(str, args...))
+}
+
+// PrintColor058f wraps PrintColor058 and works with format
+// strings.
+func PrintColor058f(str string, args ...interface{}) {
+	PrintColor058(Sprintf(str, args...))
+}
+
+// PrintlnColor058f wraps PrintlnColor058 and works with format
+// strings.
+func PrintlnColor058f(str string, args ...interface{}) {
+	PrintlnColor058(Sprintf(str, args...))
 }
 
 // OnColor058 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor058(str string, args ...interface{}) string {
-	return Hilight("on_color_058", str, args...)
+func OnColor058(str string) string {
+	return Hilight("on_color_058", str)
 }
 
 // PrintOnColor058 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor058(str string, args ...interface{}) {
-	Print(Hilight("on_color_058", str, args...))
+func PrintOnColor058(str string) {
+	Print(Hilight("on_color_058", str))
 }
 
 // PrintlnOnColor058 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor058(str string, args ...interface{}) {
-	Println(Hilight("on_color_058", str, args...))
+func PrintlnOnColor058(str string) {
+	Println(Hilight("on_color_058", str))
+}
+
+// OnColor058f wraps OnColor058 and works with format
+// strings.
+func OnColor058f(str string, args ...interface{}) string {
+	return OnColor058(Sprintf(str, args...))
+}
+
+// PrintOnColor058f wraps PrintOnColor058 and works with format
+// strings.
+func PrintOnColor058f(str string, args ...interface{}) {
+	PrintOnColor058(Sprintf(str, args...))
+}
+
+// PrintlnOnColor058f wraps PrintlnOnColor058 and works with format
+// strings.
+func PrintlnOnColor058f(str string, args ...interface{}) {
+	PrintlnOnColor058(Sprintf(str, args...))
 }
 
 // Color059 will Hilight() the provided string with the
 // specified ANSI code.
-func Color059(str string, args ...interface{}) string {
-	return Hilight("color_059", str, args...)
+func Color059(str string) string {
+	return Hilight("color_059", str)
 }
 
 // PrintColor059 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor059(str string, args ...interface{}) {
-	Print(Hilight("color_059", str, args...))
+func PrintColor059(str string) {
+	Print(Hilight("color_059", str))
 }
 
 // PrintlnColor059 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor059(str string, args ...interface{}) {
-	Println(Hilight("color_059", str, args...))
+func PrintlnColor059(str string) {
+	Println(Hilight("color_059", str))
+}
+
+// Color059f wraps Color059 and works with format
+// strings.
+func Color059f(str string, args ...interface{}) string {
+	return Color059(Sprintf(str, args...))
+}
+
+// PrintColor059f wraps PrintColor059 and works with format
+// strings.
+func PrintColor059f(str string, args ...interface{}) {
+	PrintColor059(Sprintf(str, args...))
+}
+
+// PrintlnColor059f wraps PrintlnColor059 and works with format
+// strings.
+func PrintlnColor059f(str string, args ...interface{}) {
+	PrintlnColor059(Sprintf(str, args...))
 }
 
 // OnColor059 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor059(str string, args ...interface{}) string {
-	return Hilight("on_color_059", str, args...)
+func OnColor059(str string) string {
+	return Hilight("on_color_059", str)
 }
 
 // PrintOnColor059 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor059(str string, args ...interface{}) {
-	Print(Hilight("on_color_059", str, args...))
+func PrintOnColor059(str string) {
+	Print(Hilight("on_color_059", str))
 }
 
 // PrintlnOnColor059 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor059(str string, args ...interface{}) {
-	Println(Hilight("on_color_059", str, args...))
+func PrintlnOnColor059(str string) {
+	Println(Hilight("on_color_059", str))
+}
+
+// OnColor059f wraps OnColor059 and works with format
+// strings.
+func OnColor059f(str string, args ...interface{}) string {
+	return OnColor059(Sprintf(str, args...))
+}
+
+// PrintOnColor059f wraps PrintOnColor059 and works with format
+// strings.
+func PrintOnColor059f(str string, args ...interface{}) {
+	PrintOnColor059(Sprintf(str, args...))
+}
+
+// PrintlnOnColor059f wraps PrintlnOnColor059 and works with format
+// strings.
+func PrintlnOnColor059f(str string, args ...interface{}) {
+	PrintlnOnColor059(Sprintf(str, args...))
 }
 
 // Color060 will Hilight() the provided string with the
 // specified ANSI code.
-func Color060(str string, args ...interface{}) string {
-	return Hilight("color_060", str, args...)
+func Color060(str string) string {
+	return Hilight("color_060", str)
 }
 
 // PrintColor060 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor060(str string, args ...interface{}) {
-	Print(Hilight("color_060", str, args...))
+func PrintColor060(str string) {
+	Print(Hilight("color_060", str))
 }
 
 // PrintlnColor060 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor060(str string, args ...interface{}) {
-	Println(Hilight("color_060", str, args...))
+func PrintlnColor060(str string) {
+	Println(Hilight("color_060", str))
+}
+
+// Color060f wraps Color060 and works with format
+// strings.
+func Color060f(str string, args ...interface{}) string {
+	return Color060(Sprintf(str, args...))
+}
+
+// PrintColor060f wraps PrintColor060 and works with format
+// strings.
+func PrintColor060f(str string, args ...interface{}) {
+	PrintColor060(Sprintf(str, args...))
+}
+
+// PrintlnColor060f wraps PrintlnColor060 and works with format
+// strings.
+func PrintlnColor060f(str string, args ...interface{}) {
+	PrintlnColor060(Sprintf(str, args...))
 }
 
 // OnColor060 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor060(str string, args ...interface{}) string {
-	return Hilight("on_color_060", str, args...)
+func OnColor060(str string) string {
+	return Hilight("on_color_060", str)
 }
 
 // PrintOnColor060 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor060(str string, args ...interface{}) {
-	Print(Hilight("on_color_060", str, args...))
+func PrintOnColor060(str string) {
+	Print(Hilight("on_color_060", str))
 }
 
 // PrintlnOnColor060 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor060(str string, args ...interface{}) {
-	Println(Hilight("on_color_060", str, args...))
+func PrintlnOnColor060(str string) {
+	Println(Hilight("on_color_060", str))
+}
+
+// OnColor060f wraps OnColor060 and works with format
+// strings.
+func OnColor060f(str string, args ...interface{}) string {
+	return OnColor060(Sprintf(str, args...))
+}
+
+// PrintOnColor060f wraps PrintOnColor060 and works with format
+// strings.
+func PrintOnColor060f(str string, args ...interface{}) {
+	PrintOnColor060(Sprintf(str, args...))
+}
+
+// PrintlnOnColor060f wraps PrintlnOnColor060 and works with format
+// strings.
+func PrintlnOnColor060f(str string, args ...interface{}) {
+	PrintlnOnColor060(Sprintf(str, args...))
 }
 
 // Color061 will Hilight() the provided string with the
 // specified ANSI code.
-func Color061(str string, args ...interface{}) string {
-	return Hilight("color_061", str, args...)
+func Color061(str string) string {
+	return Hilight("color_061", str)
 }
 
 // PrintColor061 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor061(str string, args ...interface{}) {
-	Print(Hilight("color_061", str, args...))
+func PrintColor061(str string) {
+	Print(Hilight("color_061", str))
 }
 
 // PrintlnColor061 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor061(str string, args ...interface{}) {
-	Println(Hilight("color_061", str, args...))
+func PrintlnColor061(str string) {
+	Println(Hilight("color_061", str))
+}
+
+// Color061f wraps Color061 and works with format
+// strings.
+func Color061f(str string, args ...interface{}) string {
+	return Color061(Sprintf(str, args...))
+}
+
+// PrintColor061f wraps PrintColor061 and works with format
+// strings.
+func PrintColor061f(str string, args ...interface{}) {
+	PrintColor061(Sprintf(str, args...))
+}
+
+// PrintlnColor061f wraps PrintlnColor061 and works with format
+// strings.
+func PrintlnColor061f(str string, args ...interface{}) {
+	PrintlnColor061(Sprintf(str, args...))
 }
 
 // OnColor061 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor061(str string, args ...interface{}) string {
-	return Hilight("on_color_061", str, args...)
+func OnColor061(str string) string {
+	return Hilight("on_color_061", str)
 }
 
 // PrintOnColor061 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor061(str string, args ...interface{}) {
-	Print(Hilight("on_color_061", str, args...))
+func PrintOnColor061(str string) {
+	Print(Hilight("on_color_061", str))
 }
 
 // PrintlnOnColor061 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor061(str string, args ...interface{}) {
-	Println(Hilight("on_color_061", str, args...))
+func PrintlnOnColor061(str string) {
+	Println(Hilight("on_color_061", str))
+}
+
+// OnColor061f wraps OnColor061 and works with format
+// strings.
+func OnColor061f(str string, args ...interface{}) string {
+	return OnColor061(Sprintf(str, args...))
+}
+
+// PrintOnColor061f wraps PrintOnColor061 and works with format
+// strings.
+func PrintOnColor061f(str string, args ...interface{}) {
+	PrintOnColor061(Sprintf(str, args...))
+}
+
+// PrintlnOnColor061f wraps PrintlnOnColor061 and works with format
+// strings.
+func PrintlnOnColor061f(str string, args ...interface{}) {
+	PrintlnOnColor061(Sprintf(str, args...))
 }
 
 // Color062 will Hilight() the provided string with the
 // specified ANSI code.
-func Color062(str string, args ...interface{}) string {
-	return Hilight("color_062", str, args...)
+func Color062(str string) string {
+	return Hilight("color_062", str)
 }
 
 // PrintColor062 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor062(str string, args ...interface{}) {
-	Print(Hilight("color_062", str, args...))
+func PrintColor062(str string) {
+	Print(Hilight("color_062", str))
 }
 
 // PrintlnColor062 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor062(str string, args ...interface{}) {
-	Println(Hilight("color_062", str, args...))
+func PrintlnColor062(str string) {
+	Println(Hilight("color_062", str))
+}
+
+// Color062f wraps Color062 and works with format
+// strings.
+func Color062f(str string, args ...interface{}) string {
+	return Color062(Sprintf(str, args...))
+}
+
+// PrintColor062f wraps PrintColor062 and works with format
+// strings.
+func PrintColor062f(str string, args ...interface{}) {
+	PrintColor062(Sprintf(str, args...))
+}
+
+// PrintlnColor062f wraps PrintlnColor062 and works with format
+// strings.
+func PrintlnColor062f(str string, args ...interface{}) {
+	PrintlnColor062(Sprintf(str, args...))
 }
 
 // OnColor062 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor062(str string, args ...interface{}) string {
-	return Hilight("on_color_062", str, args...)
+func OnColor062(str string) string {
+	return Hilight("on_color_062", str)
 }
 
 // PrintOnColor062 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor062(str string, args ...interface{}) {
-	Print(Hilight("on_color_062", str, args...))
+func PrintOnColor062(str string) {
+	Print(Hilight("on_color_062", str))
 }
 
 // PrintlnOnColor062 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor062(str string, args ...interface{}) {
-	Println(Hilight("on_color_062", str, args...))
+func PrintlnOnColor062(str string) {
+	Println(Hilight("on_color_062", str))
+}
+
+// OnColor062f wraps OnColor062 and works with format
+// strings.
+func OnColor062f(str string, args ...interface{}) string {
+	return OnColor062(Sprintf(str, args...))
+}
+
+// PrintOnColor062f wraps PrintOnColor062 and works with format
+// strings.
+func PrintOnColor062f(str string, args ...interface{}) {
+	PrintOnColor062(Sprintf(str, args...))
+}
+
+// PrintlnOnColor062f wraps PrintlnOnColor062 and works with format
+// strings.
+func PrintlnOnColor062f(str string, args ...interface{}) {
+	PrintlnOnColor062(Sprintf(str, args...))
 }
 
 // Color063 will Hilight() the provided string with the
 // specified ANSI code.
-func Color063(str string, args ...interface{}) string {
-	return Hilight("color_063", str, args...)
+func Color063(str string) string {
+	return Hilight("color_063", str)
 }
 
 // PrintColor063 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor063(str string, args ...interface{}) {
-	Print(Hilight("color_063", str, args...))
+func PrintColor063(str string) {
+	Print(Hilight("color_063", str))
 }
 
 // PrintlnColor063 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor063(str string, args ...interface{}) {
-	Println(Hilight("color_063", str, args...))
+func PrintlnColor063(str string) {
+	Println(Hilight("color_063", str))
+}
+
+// Color063f wraps Color063 and works with format
+// strings.
+func Color063f(str string, args ...interface{}) string {
+	return Color063(Sprintf(str, args...))
+}
+
+// PrintColor063f wraps PrintColor063 and works with format
+// strings.
+func PrintColor063f(str string, args ...interface{}) {
+	PrintColor063(Sprintf(str, args...))
+}
+
+// PrintlnColor063f wraps PrintlnColor063 and works with format
+// strings.
+func PrintlnColor063f(str string, args ...interface{}) {
+	PrintlnColor063(Sprintf(str, args...))
 }
 
 // OnColor063 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor063(str string, args ...interface{}) string {
-	return Hilight("on_color_063", str, args...)
+func OnColor063(str string) string {
+	return Hilight("on_color_063", str)
 }
 
 // PrintOnColor063 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor063(str string, args ...interface{}) {
-	Print(Hilight("on_color_063", str, args...))
+func PrintOnColor063(str string) {
+	Print(Hilight("on_color_063", str))
 }
 
 // PrintlnOnColor063 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor063(str string, args ...interface{}) {
-	Println(Hilight("on_color_063", str, args...))
+func PrintlnOnColor063(str string) {
+	Println(Hilight("on_color_063", str))
+}
+
+// OnColor063f wraps OnColor063 and works with format
+// strings.
+func OnColor063f(str string, args ...interface{}) string {
+	return OnColor063(Sprintf(str, args...))
+}
+
+// PrintOnColor063f wraps PrintOnColor063 and works with format
+// strings.
+func PrintOnColor063f(str string, args ...interface{}) {
+	PrintOnColor063(Sprintf(str, args...))
+}
+
+// PrintlnOnColor063f wraps PrintlnOnColor063 and works with format
+// strings.
+func PrintlnOnColor063f(str string, args ...interface{}) {
+	PrintlnOnColor063(Sprintf(str, args...))
 }
 
 // Color064 will Hilight() the provided string with the
 // specified ANSI code.
-func Color064(str string, args ...interface{}) string {
-	return Hilight("color_064", str, args...)
+func Color064(str string) string {
+	return Hilight("color_064", str)
 }
 
 // PrintColor064 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor064(str string, args ...interface{}) {
-	Print(Hilight("color_064", str, args...))
+func PrintColor064(str string) {
+	Print(Hilight("color_064", str))
 }
 
 // PrintlnColor064 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor064(str string, args ...interface{}) {
-	Println(Hilight("color_064", str, args...))
+func PrintlnColor064(str string) {
+	Println(Hilight("color_064", str))
+}
+
+// Color064f wraps Color064 and works with format
+// strings.
+func Color064f(str string, args ...interface{}) string {
+	return Color064(Sprintf(str, args...))
+}
+
+// PrintColor064f wraps PrintColor064 and works with format
+// strings.
+func PrintColor064f(str string, args ...interface{}) {
+	PrintColor064(Sprintf(str, args...))
+}
+
+// PrintlnColor064f wraps PrintlnColor064 and works with format
+// strings.
+func PrintlnColor064f(str string, args ...interface{}) {
+	PrintlnColor064(Sprintf(str, args...))
 }
 
 // OnColor064 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor064(str string, args ...interface{}) string {
-	return Hilight("on_color_064", str, args...)
+func OnColor064(str string) string {
+	return Hilight("on_color_064", str)
 }
 
 // PrintOnColor064 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor064(str string, args ...interface{}) {
-	Print(Hilight("on_color_064", str, args...))
+func PrintOnColor064(str string) {
+	Print(Hilight("on_color_064", str))
 }
 
 // PrintlnOnColor064 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor064(str string, args ...interface{}) {
-	Println(Hilight("on_color_064", str, args...))
+func PrintlnOnColor064(str string) {
+	Println(Hilight("on_color_064", str))
+}
+
+// OnColor064f wraps OnColor064 and works with format
+// strings.
+func OnColor064f(str string, args ...interface{}) string {
+	return OnColor064(Sprintf(str, args...))
+}
+
+// PrintOnColor064f wraps PrintOnColor064 and works with format
+// strings.
+func PrintOnColor064f(str string, args ...interface{}) {
+	PrintOnColor064(Sprintf(str, args...))
+}
+
+// PrintlnOnColor064f wraps PrintlnOnColor064 and works with format
+// strings.
+func PrintlnOnColor064f(str string, args ...interface{}) {
+	PrintlnOnColor064(Sprintf(str, args...))
 }
 
 // Color065 will Hilight() the provided string with the
 // specified ANSI code.
-func Color065(str string, args ...interface{}) string {
-	return Hilight("color_065", str, args...)
+func Color065(str string) string {
+	return Hilight("color_065", str)
 }
 
 // PrintColor065 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor065(str string, args ...interface{}) {
-	Print(Hilight("color_065", str, args...))
+func PrintColor065(str string) {
+	Print(Hilight("color_065", str))
 }
 
 // PrintlnColor065 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor065(str string, args ...interface{}) {
-	Println(Hilight("color_065", str, args...))
+func PrintlnColor065(str string) {
+	Println(Hilight("color_065", str))
+}
+
+// Color065f wraps Color065 and works with format
+// strings.
+func Color065f(str string, args ...interface{}) string {
+	return Color065(Sprintf(str, args...))
+}
+
+// PrintColor065f wraps PrintColor065 and works with format
+// strings.
+func PrintColor065f(str string, args ...interface{}) {
+	PrintColor065(Sprintf(str, args...))
+}
+
+// PrintlnColor065f wraps PrintlnColor065 and works with format
+// strings.
+func PrintlnColor065f(str string, args ...interface{}) {
+	PrintlnColor065(Sprintf(str, args...))
 }
 
 // OnColor065 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor065(str string, args ...interface{}) string {
-	return Hilight("on_color_065", str, args...)
+func OnColor065(str string) string {
+	return Hilight("on_color_065", str)
 }
 
 // PrintOnColor065 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor065(str string, args ...interface{}) {
-	Print(Hilight("on_color_065", str, args...))
+func PrintOnColor065(str string) {
+	Print(Hilight("on_color_065", str))
 }
 
 // PrintlnOnColor065 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor065(str string, args ...interface{}) {
-	Println(Hilight("on_color_065", str, args...))
+func PrintlnOnColor065(str string) {
+	Println(Hilight("on_color_065", str))
+}
+
+// OnColor065f wraps OnColor065 and works with format
+// strings.
+func OnColor065f(str string, args ...interface{}) string {
+	return OnColor065(Sprintf(str, args...))
+}
+
+// PrintOnColor065f wraps PrintOnColor065 and works with format
+// strings.
+func PrintOnColor065f(str string, args ...interface{}) {
+	PrintOnColor065(Sprintf(str, args...))
+}
+
+// PrintlnOnColor065f wraps PrintlnOnColor065 and works with format
+// strings.
+func PrintlnOnColor065f(str string, args ...interface{}) {
+	PrintlnOnColor065(Sprintf(str, args...))
 }
 
 // Color066 will Hilight() the provided string with the
 // specified ANSI code.
-func Color066(str string, args ...interface{}) string {
-	return Hilight("color_066", str, args...)
+func Color066(str string) string {
+	return Hilight("color_066", str)
 }
 
 // PrintColor066 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor066(str string, args ...interface{}) {
-	Print(Hilight("color_066", str, args...))
+func PrintColor066(str string) {
+	Print(Hilight("color_066", str))
 }
 
 // PrintlnColor066 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor066(str string, args ...interface{}) {
-	Println(Hilight("color_066", str, args...))
+func PrintlnColor066(str string) {
+	Println(Hilight("color_066", str))
+}
+
+// Color066f wraps Color066 and works with format
+// strings.
+func Color066f(str string, args ...interface{}) string {
+	return Color066(Sprintf(str, args...))
+}
+
+// PrintColor066f wraps PrintColor066 and works with format
+// strings.
+func PrintColor066f(str string, args ...interface{}) {
+	PrintColor066(Sprintf(str, args...))
+}
+
+// PrintlnColor066f wraps PrintlnColor066 and works with format
+// strings.
+func PrintlnColor066f(str string, args ...interface{}) {
+	PrintlnColor066(Sprintf(str, args...))
 }
 
 // OnColor066 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor066(str string, args ...interface{}) string {
-	return Hilight("on_color_066", str, args...)
+func OnColor066(str string) string {
+	return Hilight("on_color_066", str)
 }
 
 // PrintOnColor066 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor066(str string, args ...interface{}) {
-	Print(Hilight("on_color_066", str, args...))
+func PrintOnColor066(str string) {
+	Print(Hilight("on_color_066", str))
 }
 
 // PrintlnOnColor066 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor066(str string, args ...interface{}) {
-	Println(Hilight("on_color_066", str, args...))
+func PrintlnOnColor066(str string) {
+	Println(Hilight("on_color_066", str))
+}
+
+// OnColor066f wraps OnColor066 and works with format
+// strings.
+func OnColor066f(str string, args ...interface{}) string {
+	return OnColor066(Sprintf(str, args...))
+}
+
+// PrintOnColor066f wraps PrintOnColor066 and works with format
+// strings.
+func PrintOnColor066f(str string, args ...interface{}) {
+	PrintOnColor066(Sprintf(str, args...))
+}
+
+// PrintlnOnColor066f wraps PrintlnOnColor066 and works with format
+// strings.
+func PrintlnOnColor066f(str string, args ...interface{}) {
+	PrintlnOnColor066(Sprintf(str, args...))
 }
 
 // Color067 will Hilight() the provided string with the
 // specified ANSI code.
-func Color067(str string, args ...interface{}) string {
-	return Hilight("color_067", str, args...)
+func Color067(str string) string {
+	return Hilight("color_067", str)
 }
 
 // PrintColor067 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor067(str string, args ...interface{}) {
-	Print(Hilight("color_067", str, args...))
+func PrintColor067(str string) {
+	Print(Hilight("color_067", str))
 }
 
 // PrintlnColor067 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor067(str string, args ...interface{}) {
-	Println(Hilight("color_067", str, args...))
+func PrintlnColor067(str string) {
+	Println(Hilight("color_067", str))
+}
+
+// Color067f wraps Color067 and works with format
+// strings.
+func Color067f(str string, args ...interface{}) string {
+	return Color067(Sprintf(str, args...))
+}
+
+// PrintColor067f wraps PrintColor067 and works with format
+// strings.
+func PrintColor067f(str string, args ...interface{}) {
+	PrintColor067(Sprintf(str, args...))
+}
+
+// PrintlnColor067f wraps PrintlnColor067 and works with format
+// strings.
+func PrintlnColor067f(str string, args ...interface{}) {
+	PrintlnColor067(Sprintf(str, args...))
 }
 
 // OnColor067 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor067(str string, args ...interface{}) string {
-	return Hilight("on_color_067", str, args...)
+func OnColor067(str string) string {
+	return Hilight("on_color_067", str)
 }
 
 // PrintOnColor067 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor067(str string, args ...interface{}) {
-	Print(Hilight("on_color_067", str, args...))
+func PrintOnColor067(str string) {
+	Print(Hilight("on_color_067", str))
 }
 
 // PrintlnOnColor067 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor067(str string, args ...interface{}) {
-	Println(Hilight("on_color_067", str, args...))
+func PrintlnOnColor067(str string) {
+	Println(Hilight("on_color_067", str))
+}
+
+// OnColor067f wraps OnColor067 and works with format
+// strings.
+func OnColor067f(str string, args ...interface{}) string {
+	return OnColor067(Sprintf(str, args...))
+}
+
+// PrintOnColor067f wraps PrintOnColor067 and works with format
+// strings.
+func PrintOnColor067f(str string, args ...interface{}) {
+	PrintOnColor067(Sprintf(str, args...))
+}
+
+// PrintlnOnColor067f wraps PrintlnOnColor067 and works with format
+// strings.
+func PrintlnOnColor067f(str string, args ...interface{}) {
+	PrintlnOnColor067(Sprintf(str, args...))
 }
 
 // Color068 will Hilight() the provided string with the
 // specified ANSI code.
-func Color068(str string, args ...interface{}) string {
-	return Hilight("color_068", str, args...)
+func Color068(str string) string {
+	return Hilight("color_068", str)
 }
 
 // PrintColor068 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor068(str string, args ...interface{}) {
-	Print(Hilight("color_068", str, args...))
+func PrintColor068(str string) {
+	Print(Hilight("color_068", str))
 }
 
 // PrintlnColor068 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor068(str string, args ...interface{}) {
-	Println(Hilight("color_068", str, args...))
+func PrintlnColor068(str string) {
+	Println(Hilight("color_068", str))
+}
+
+// Color068f wraps Color068 and works with format
+// strings.
+func Color068f(str string, args ...interface{}) string {
+	return Color068(Sprintf(str, args...))
+}
+
+// PrintColor068f wraps PrintColor068 and works with format
+// strings.
+func PrintColor068f(str string, args ...interface{}) {
+	PrintColor068(Sprintf(str, args...))
+}
+
+// PrintlnColor068f wraps PrintlnColor068 and works with format
+// strings.
+func PrintlnColor068f(str string, args ...interface{}) {
+	PrintlnColor068(Sprintf(str, args...))
 }
 
 // OnColor068 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor068(str string, args ...interface{}) string {
-	return Hilight("on_color_068", str, args...)
+func OnColor068(str string) string {
+	return Hilight("on_color_068", str)
 }
 
 // PrintOnColor068 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor068(str string, args ...interface{}) {
-	Print(Hilight("on_color_068", str, args...))
+func PrintOnColor068(str string) {
+	Print(Hilight("on_color_068", str))
 }
 
 // PrintlnOnColor068 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor068(str string, args ...interface{}) {
-	Println(Hilight("on_color_068", str, args...))
+func PrintlnOnColor068(str string) {
+	Println(Hilight("on_color_068", str))
+}
+
+// OnColor068f wraps OnColor068 and works with format
+// strings.
+func OnColor068f(str string, args ...interface{}) string {
+	return OnColor068(Sprintf(str, args...))
+}
+
+// PrintOnColor068f wraps PrintOnColor068 and works with format
+// strings.
+func PrintOnColor068f(str string, args ...interface{}) {
+	PrintOnColor068(Sprintf(str, args...))
+}
+
+// PrintlnOnColor068f wraps PrintlnOnColor068 and works with format
+// strings.
+func PrintlnOnColor068f(str string, args ...interface{}) {
+	PrintlnOnColor068(Sprintf(str, args...))
 }
 
 // Color069 will Hilight() the provided string with the
 // specified ANSI code.
-func Color069(str string, args ...interface{}) string {
-	return Hilight("color_069", str, args...)
+func Color069(str string) string {
+	return Hilight("color_069", str)
 }
 
 // PrintColor069 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor069(str string, args ...interface{}) {
-	Print(Hilight("color_069", str, args...))
+func PrintColor069(str string) {
+	Print(Hilight("color_069", str))
 }
 
 // PrintlnColor069 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor069(str string, args ...interface{}) {
-	Println(Hilight("color_069", str, args...))
+func PrintlnColor069(str string) {
+	Println(Hilight("color_069", str))
+}
+
+// Color069f wraps Color069 and works with format
+// strings.
+func Color069f(str string, args ...interface{}) string {
+	return Color069(Sprintf(str, args...))
+}
+
+// PrintColor069f wraps PrintColor069 and works with format
+// strings.
+func PrintColor069f(str string, args ...interface{}) {
+	PrintColor069(Sprintf(str, args...))
+}
+
+// PrintlnColor069f wraps PrintlnColor069 and works with format
+// strings.
+func PrintlnColor069f(str string, args ...interface{}) {
+	PrintlnColor069(Sprintf(str, args...))
 }
 
 // OnColor069 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor069(str string, args ...interface{}) string {
-	return Hilight("on_color_069", str, args...)
+func OnColor069(str string) string {
+	return Hilight("on_color_069", str)
 }
 
 // PrintOnColor069 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor069(str string, args ...interface{}) {
-	Print(Hilight("on_color_069", str, args...))
+func PrintOnColor069(str string) {
+	Print(Hilight("on_color_069", str))
 }
 
 // PrintlnOnColor069 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor069(str string, args ...interface{}) {
-	Println(Hilight("on_color_069", str, args...))
+func PrintlnOnColor069(str string) {
+	Println(Hilight("on_color_069", str))
+}
+
+// OnColor069f wraps OnColor069 and works with format
+// strings.
+func OnColor069f(str string, args ...interface{}) string {
+	return OnColor069(Sprintf(str, args...))
+}
+
+// PrintOnColor069f wraps PrintOnColor069 and works with format
+// strings.
+func PrintOnColor069f(str string, args ...interface{}) {
+	PrintOnColor069(Sprintf(str, args...))
+}
+
+// PrintlnOnColor069f wraps PrintlnOnColor069 and works with format
+// strings.
+func PrintlnOnColor069f(str string, args ...interface{}) {
+	PrintlnOnColor069(Sprintf(str, args...))
 }
 
 // Color070 will Hilight() the provided string with the
 // specified ANSI code.
-func Color070(str string, args ...interface{}) string {
-	return Hilight("color_070", str, args...)
+func Color070(str string) string {
+	return Hilight("color_070", str)
 }
 
 // PrintColor070 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor070(str string, args ...interface{}) {
-	Print(Hilight("color_070", str, args...))
+func PrintColor070(str string) {
+	Print(Hilight("color_070", str))
 }
 
 // PrintlnColor070 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor070(str string, args ...interface{}) {
-	Println(Hilight("color_070", str, args...))
+func PrintlnColor070(str string) {
+	Println(Hilight("color_070", str))
+}
+
+// Color070f wraps Color070 and works with format
+// strings.
+func Color070f(str string, args ...interface{}) string {
+	return Color070(Sprintf(str, args...))
+}
+
+// PrintColor070f wraps PrintColor070 and works with format
+// strings.
+func PrintColor070f(str string, args ...interface{}) {
+	PrintColor070(Sprintf(str, args...))
+}
+
+// PrintlnColor070f wraps PrintlnColor070 and works with format
+// strings.
+func PrintlnColor070f(str string, args ...interface{}) {
+	PrintlnColor070(Sprintf(str, args...))
 }
 
 // OnColor070 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor070(str string, args ...interface{}) string {
-	return Hilight("on_color_070", str, args...)
+func OnColor070(str string) string {
+	return Hilight("on_color_070", str)
 }
 
 // PrintOnColor070 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor070(str string, args ...interface{}) {
-	Print(Hilight("on_color_070", str, args...))
+func PrintOnColor070(str string) {
+	Print(Hilight("on_color_070", str))
 }
 
 // PrintlnOnColor070 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor070(str string, args ...interface{}) {
-	Println(Hilight("on_color_070", str, args...))
+func PrintlnOnColor070(str string) {
+	Println(Hilight("on_color_070", str))
+}
+
+// OnColor070f wraps OnColor070 and works with format
+// strings.
+func OnColor070f(str string, args ...interface{}) string {
+	return OnColor070(Sprintf(str, args...))
+}
+
+// PrintOnColor070f wraps PrintOnColor070 and works with format
+// strings.
+func PrintOnColor070f(str string, args ...interface{}) {
+	PrintOnColor070(Sprintf(str, args...))
+}
+
+// PrintlnOnColor070f wraps PrintlnOnColor070 and works with format
+// strings.
+func PrintlnOnColor070f(str string, args ...interface{}) {
+	PrintlnOnColor070(Sprintf(str, args...))
 }
 
 // Color071 will Hilight() the provided string with the
 // specified ANSI code.
-func Color071(str string, args ...interface{}) string {
-	return Hilight("color_071", str, args...)
+func Color071(str string) string {
+	return Hilight("color_071", str)
 }
 
 // PrintColor071 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor071(str string, args ...interface{}) {
-	Print(Hilight("color_071", str, args...))
+func PrintColor071(str string) {
+	Print(Hilight("color_071", str))
 }
 
 // PrintlnColor071 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor071(str string, args ...interface{}) {
-	Println(Hilight("color_071", str, args...))
+func PrintlnColor071(str string) {
+	Println(Hilight("color_071", str))
+}
+
+// Color071f wraps Color071 and works with format
+// strings.
+func Color071f(str string, args ...interface{}) string {
+	return Color071(Sprintf(str, args...))
+}
+
+// PrintColor071f wraps PrintColor071 and works with format
+// strings.
+func PrintColor071f(str string, args ...interface{}) {
+	PrintColor071(Sprintf(str, args...))
+}
+
+// PrintlnColor071f wraps PrintlnColor071 and works with format
+// strings.
+func PrintlnColor071f(str string, args ...interface{}) {
+	PrintlnColor071(Sprintf(str, args...))
 }
 
 // OnColor071 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor071(str string, args ...interface{}) string {
-	return Hilight("on_color_071", str, args...)
+func OnColor071(str string) string {
+	return Hilight("on_color_071", str)
 }
 
 // PrintOnColor071 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor071(str string, args ...interface{}) {
-	Print(Hilight("on_color_071", str, args...))
+func PrintOnColor071(str string) {
+	Print(Hilight("on_color_071", str))
 }
 
 // PrintlnOnColor071 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor071(str string, args ...interface{}) {
-	Println(Hilight("on_color_071", str, args...))
+func PrintlnOnColor071(str string) {
+	Println(Hilight("on_color_071", str))
+}
+
+// OnColor071f wraps OnColor071 and works with format
+// strings.
+func OnColor071f(str string, args ...interface{}) string {
+	return OnColor071(Sprintf(str, args...))
+}
+
+// PrintOnColor071f wraps PrintOnColor071 and works with format
+// strings.
+func PrintOnColor071f(str string, args ...interface{}) {
+	PrintOnColor071(Sprintf(str, args...))
+}
+
+// PrintlnOnColor071f wraps PrintlnOnColor071 and works with format
+// strings.
+func PrintlnOnColor071f(str string, args ...interface{}) {
+	PrintlnOnColor071(Sprintf(str, args...))
 }
 
 // Color072 will Hilight() the provided string with the
 // specified ANSI code.
-func Color072(str string, args ...interface{}) string {
-	return Hilight("color_072", str, args...)
+func Color072(str string) string {
+	return Hilight("color_072", str)
 }
 
 // PrintColor072 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor072(str string, args ...interface{}) {
-	Print(Hilight("color_072", str, args...))
+func PrintColor072(str string) {
+	Print(Hilight("color_072", str))
 }
 
 // PrintlnColor072 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor072(str string, args ...interface{}) {
-	Println(Hilight("color_072", str, args...))
+func PrintlnColor072(str string) {
+	Println(Hilight("color_072", str))
+}
+
+// Color072f wraps Color072 and works with format
+// strings.
+func Color072f(str string, args ...interface{}) string {
+	return Color072(Sprintf(str, args...))
+}
+
+// PrintColor072f wraps PrintColor072 and works with format
+// strings.
+func PrintColor072f(str string, args ...interface{}) {
+	PrintColor072(Sprintf(str, args...))
+}
+
+// PrintlnColor072f wraps PrintlnColor072 and works with format
+// strings.
+func PrintlnColor072f(str string, args ...interface{}) {
+	PrintlnColor072(Sprintf(str, args...))
 }
 
 // OnColor072 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor072(str string, args ...interface{}) string {
-	return Hilight("on_color_072", str, args...)
+func OnColor072(str string) string {
+	return Hilight("on_color_072", str)
 }
 
 // PrintOnColor072 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor072(str string, args ...interface{}) {
-	Print(Hilight("on_color_072", str, args...))
+func PrintOnColor072(str string) {
+	Print(Hilight("on_color_072", str))
 }
 
 // PrintlnOnColor072 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor072(str string, args ...interface{}) {
-	Println(Hilight("on_color_072", str, args...))
+func PrintlnOnColor072(str string) {
+	Println(Hilight("on_color_072", str))
+}
+
+// OnColor072f wraps OnColor072 and works with format
+// strings.
+func OnColor072f(str string, args ...interface{}) string {
+	return OnColor072(Sprintf(str, args...))
+}
+
+// PrintOnColor072f wraps PrintOnColor072 and works with format
+// strings.
+func PrintOnColor072f(str string, args ...interface{}) {
+	PrintOnColor072(Sprintf(str, args...))
+}
+
+// PrintlnOnColor072f wraps PrintlnOnColor072 and works with format
+// strings.
+func PrintlnOnColor072f(str string, args ...interface{}) {
+	PrintlnOnColor072(Sprintf(str, args...))
 }
 
 // Color073 will Hilight() the provided string with the
 // specified ANSI code.
-func Color073(str string, args ...interface{}) string {
-	return Hilight("color_073", str, args...)
+func Color073(str string) string {
+	return Hilight("color_073", str)
 }
 
 // PrintColor073 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor073(str string, args ...interface{}) {
-	Print(Hilight("color_073", str, args...))
+func PrintColor073(str string) {
+	Print(Hilight("color_073", str))
 }
 
 // PrintlnColor073 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor073(str string, args ...interface{}) {
-	Println(Hilight("color_073", str, args...))
+func PrintlnColor073(str string) {
+	Println(Hilight("color_073", str))
+}
+
+// Color073f wraps Color073 and works with format
+// strings.
+func Color073f(str string, args ...interface{}) string {
+	return Color073(Sprintf(str, args...))
+}
+
+// PrintColor073f wraps PrintColor073 and works with format
+// strings.
+func PrintColor073f(str string, args ...interface{}) {
+	PrintColor073(Sprintf(str, args...))
+}
+
+// PrintlnColor073f wraps PrintlnColor073 and works with format
+// strings.
+func PrintlnColor073f(str string, args ...interface{}) {
+	PrintlnColor073(Sprintf(str, args...))
 }
 
 // OnColor073 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor073(str string, args ...interface{}) string {
-	return Hilight("on_color_073", str, args...)
+func OnColor073(str string) string {
+	return Hilight("on_color_073", str)
 }
 
 // PrintOnColor073 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor073(str string, args ...interface{}) {
-	Print(Hilight("on_color_073", str, args...))
+func PrintOnColor073(str string) {
+	Print(Hilight("on_color_073", str))
 }
 
 // PrintlnOnColor073 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor073(str string, args ...interface{}) {
-	Println(Hilight("on_color_073", str, args...))
+func PrintlnOnColor073(str string) {
+	Println(Hilight("on_color_073", str))
+}
+
+// OnColor073f wraps OnColor073 and works with format
+// strings.
+func OnColor073f(str string, args ...interface{}) string {
+	return OnColor073(Sprintf(str, args...))
+}
+
+// PrintOnColor073f wraps PrintOnColor073 and works with format
+// strings.
+func PrintOnColor073f(str string, args ...interface{}) {
+	PrintOnColor073(Sprintf(str, args...))
+}
+
+// PrintlnOnColor073f wraps PrintlnOnColor073 and works with format
+// strings.
+func PrintlnOnColor073f(str string, args ...interface{}) {
+	PrintlnOnColor073(Sprintf(str, args...))
 }
 
 // Color074 will Hilight() the provided string with the
 // specified ANSI code.
-func Color074(str string, args ...interface{}) string {
-	return Hilight("color_074", str, args...)
+func Color074(str string) string {
+	return Hilight("color_074", str)
 }
 
 // PrintColor074 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor074(str string, args ...interface{}) {
-	Print(Hilight("color_074", str, args...))
+func PrintColor074(str string) {
+	Print(Hilight("color_074", str))
 }
 
 // PrintlnColor074 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor074(str string, args ...interface{}) {
-	Println(Hilight("color_074", str, args...))
+func PrintlnColor074(str string) {
+	Println(Hilight("color_074", str))
+}
+
+// Color074f wraps Color074 and works with format
+// strings.
+func Color074f(str string, args ...interface{}) string {
+	return Color074(Sprintf(str, args...))
+}
+
+// PrintColor074f wraps PrintColor074 and works with format
+// strings.
+func PrintColor074f(str string, args ...interface{}) {
+	PrintColor074(Sprintf(str, args...))
+}
+
+// PrintlnColor074f wraps PrintlnColor074 and works with format
+// strings.
+func PrintlnColor074f(str string, args ...interface{}) {
+	PrintlnColor074(Sprintf(str, args...))
 }
 
 // OnColor074 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor074(str string, args ...interface{}) string {
-	return Hilight("on_color_074", str, args...)
+func OnColor074(str string) string {
+	return Hilight("on_color_074", str)
 }
 
 // PrintOnColor074 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor074(str string, args ...interface{}) {
-	Print(Hilight("on_color_074", str, args...))
+func PrintOnColor074(str string) {
+	Print(Hilight("on_color_074", str))
 }
 
 // PrintlnOnColor074 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor074(str string, args ...interface{}) {
-	Println(Hilight("on_color_074", str, args...))
+func PrintlnOnColor074(str string) {
+	Println(Hilight("on_color_074", str))
+}
+
+// OnColor074f wraps OnColor074 and works with format
+// strings.
+func OnColor074f(str string, args ...interface{}) string {
+	return OnColor074(Sprintf(str, args...))
+}
+
+// PrintOnColor074f wraps PrintOnColor074 and works with format
+// strings.
+func PrintOnColor074f(str string, args ...interface{}) {
+	PrintOnColor074(Sprintf(str, args...))
+}
+
+// PrintlnOnColor074f wraps PrintlnOnColor074 and works with format
+// strings.
+func PrintlnOnColor074f(str string, args ...interface{}) {
+	PrintlnOnColor074(Sprintf(str, args...))
 }
 
 // Color075 will Hilight() the provided string with the
 // specified ANSI code.
-func Color075(str string, args ...interface{}) string {
-	return Hilight("color_075", str, args...)
+func Color075(str string) string {
+	return Hilight("color_075", str)
 }
 
 // PrintColor075 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor075(str string, args ...interface{}) {
-	Print(Hilight("color_075", str, args...))
+func PrintColor075(str string) {
+	Print(Hilight("color_075", str))
 }
 
 // PrintlnColor075 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor075(str string, args ...interface{}) {
-	Println(Hilight("color_075", str, args...))
+func PrintlnColor075(str string) {
+	Println(Hilight("color_075", str))
+}
+
+// Color075f wraps Color075 and works with format
+// strings.
+func Color075f(str string, args ...interface{}) string {
+	return Color075(Sprintf(str, args...))
+}
+
+// PrintColor075f wraps PrintColor075 and works with format
+// strings.
+func PrintColor075f(str string, args ...interface{}) {
+	PrintColor075(Sprintf(str, args...))
+}
+
+// PrintlnColor075f wraps PrintlnColor075 and works with format
+// strings.
+func PrintlnColor075f(str string, args ...interface{}) {
+	PrintlnColor075(Sprintf(str, args...))
 }
 
 // OnColor075 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor075(str string, args ...interface{}) string {
-	return Hilight("on_color_075", str, args...)
+func OnColor075(str string) string {
+	return Hilight("on_color_075", str)
 }
 
 // PrintOnColor075 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor075(str string, args ...interface{}) {
-	Print(Hilight("on_color_075", str, args...))
+func PrintOnColor075(str string) {
+	Print(Hilight("on_color_075", str))
 }
 
 // PrintlnOnColor075 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor075(str string, args ...interface{}) {
-	Println(Hilight("on_color_075", str, args...))
+func PrintlnOnColor075(str string) {
+	Println(Hilight("on_color_075", str))
+}
+
+// OnColor075f wraps OnColor075 and works with format
+// strings.
+func OnColor075f(str string, args ...interface{}) string {
+	return OnColor075(Sprintf(str, args...))
+}
+
+// PrintOnColor075f wraps PrintOnColor075 and works with format
+// strings.
+func PrintOnColor075f(str string, args ...interface{}) {
+	PrintOnColor075(Sprintf(str, args...))
+}
+
+// PrintlnOnColor075f wraps PrintlnOnColor075 and works with format
+// strings.
+func PrintlnOnColor075f(str string, args ...interface{}) {
+	PrintlnOnColor075(Sprintf(str, args...))
 }
 
 // Color076 will Hilight() the provided string with the
 // specified ANSI code.
-func Color076(str string, args ...interface{}) string {
-	return Hilight("color_076", str, args...)
+func Color076(str string) string {
+	return Hilight("color_076", str)
 }
 
 // PrintColor076 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor076(str string, args ...interface{}) {
-	Print(Hilight("color_076", str, args...))
+func PrintColor076(str string) {
+	Print(Hilight("color_076", str))
 }
 
 // PrintlnColor076 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor076(str string, args ...interface{}) {
-	Println(Hilight("color_076", str, args...))
+func PrintlnColor076(str string) {
+	Println(Hilight("color_076", str))
+}
+
+// Color076f wraps Color076 and works with format
+// strings.
+func Color076f(str string, args ...interface{}) string {
+	return Color076(Sprintf(str, args...))
+}
+
+// PrintColor076f wraps PrintColor076 and works with format
+// strings.
+func PrintColor076f(str string, args ...interface{}) {
+	PrintColor076(Sprintf(str, args...))
+}
+
+// PrintlnColor076f wraps PrintlnColor076 and works with format
+// strings.
+func PrintlnColor076f(str string, args ...interface{}) {
+	PrintlnColor076(Sprintf(str, args...))
 }
 
 // OnColor076 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor076(str string, args ...interface{}) string {
-	return Hilight("on_color_076", str, args...)
+func OnColor076(str string) string {
+	return Hilight("on_color_076", str)
 }
 
 // PrintOnColor076 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor076(str string, args ...interface{}) {
-	Print(Hilight("on_color_076", str, args...))
+func PrintOnColor076(str string) {
+	Print(Hilight("on_color_076", str))
 }
 
 // PrintlnOnColor076 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor076(str string, args ...interface{}) {
-	Println(Hilight("on_color_076", str, args...))
+func PrintlnOnColor076(str string) {
+	Println(Hilight("on_color_076", str))
+}
+
+// OnColor076f wraps OnColor076 and works with format
+// strings.
+func OnColor076f(str string, args ...interface{}) string {
+	return OnColor076(Sprintf(str, args...))
+}
+
+// PrintOnColor076f wraps PrintOnColor076 and works with format
+// strings.
+func PrintOnColor076f(str string, args ...interface{}) {
+	PrintOnColor076(Sprintf(str, args...))
+}
+
+// PrintlnOnColor076f wraps PrintlnOnColor076 and works with format
+// strings.
+func PrintlnOnColor076f(str string, args ...interface{}) {
+	PrintlnOnColor076(Sprintf(str, args...))
 }
 
 // Color077 will Hilight() the provided string with the
 // specified ANSI code.
-func Color077(str string, args ...interface{}) string {
-	return Hilight("color_077", str, args...)
+func Color077(str string) string {
+	return Hilight("color_077", str)
 }
 
 // PrintColor077 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor077(str string, args ...interface{}) {
-	Print(Hilight("color_077", str, args...))
+func PrintColor077(str string) {
+	Print(Hilight("color_077", str))
 }
 
 // PrintlnColor077 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor077(str string, args ...interface{}) {
-	Println(Hilight("color_077", str, args...))
+func PrintlnColor077(str string) {
+	Println(Hilight("color_077", str))
+}
+
+// Color077f wraps Color077 and works with format
+// strings.
+func Color077f(str string, args ...interface{}) string {
+	return Color077(Sprintf(str, args...))
+}
+
+// PrintColor077f wraps PrintColor077 and works with format
+// strings.
+func PrintColor077f(str string, args ...interface{}) {
+	PrintColor077(Sprintf(str, args...))
+}
+
+// PrintlnColor077f wraps PrintlnColor077 and works with format
+// strings.
+func PrintlnColor077f(str string, args ...interface{}) {
+	PrintlnColor077(Sprintf(str, args...))
 }
 
 // OnColor077 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor077(str string, args ...interface{}) string {
-	return Hilight("on_color_077", str, args...)
+func OnColor077(str string) string {
+	return Hilight("on_color_077", str)
 }
 
 // PrintOnColor077 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor077(str string, args ...interface{}) {
-	Print(Hilight("on_color_077", str, args...))
+func PrintOnColor077(str string) {
+	Print(Hilight("on_color_077", str))
 }
 
 // PrintlnOnColor077 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor077(str string, args ...interface{}) {
-	Println(Hilight("on_color_077", str, args...))
+func PrintlnOnColor077(str string) {
+	Println(Hilight("on_color_077", str))
+}
+
+// OnColor077f wraps OnColor077 and works with format
+// strings.
+func OnColor077f(str string, args ...interface{}) string {
+	return OnColor077(Sprintf(str, args...))
+}
+
+// PrintOnColor077f wraps PrintOnColor077 and works with format
+// strings.
+func PrintOnColor077f(str string, args ...interface{}) {
+	PrintOnColor077(Sprintf(str, args...))
+}
+
+// PrintlnOnColor077f wraps PrintlnOnColor077 and works with format
+// strings.
+func PrintlnOnColor077f(str string, args ...interface{}) {
+	PrintlnOnColor077(Sprintf(str, args...))
 }
 
 // Color078 will Hilight() the provided string with the
 // specified ANSI code.
-func Color078(str string, args ...interface{}) string {
-	return Hilight("color_078", str, args...)
+func Color078(str string) string {
+	return Hilight("color_078", str)
 }
 
 // PrintColor078 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor078(str string, args ...interface{}) {
-	Print(Hilight("color_078", str, args...))
+func PrintColor078(str string) {
+	Print(Hilight("color_078", str))
 }
 
 // PrintlnColor078 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor078(str string, args ...interface{}) {
-	Println(Hilight("color_078", str, args...))
+func PrintlnColor078(str string) {
+	Println(Hilight("color_078", str))
+}
+
+// Color078f wraps Color078 and works with format
+// strings.
+func Color078f(str string, args ...interface{}) string {
+	return Color078(Sprintf(str, args...))
+}
+
+// PrintColor078f wraps PrintColor078 and works with format
+// strings.
+func PrintColor078f(str string, args ...interface{}) {
+	PrintColor078(Sprintf(str, args...))
+}
+
+// PrintlnColor078f wraps PrintlnColor078 and works with format
+// strings.
+func PrintlnColor078f(str string, args ...interface{}) {
+	PrintlnColor078(Sprintf(str, args...))
 }
 
 // OnColor078 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor078(str string, args ...interface{}) string {
-	return Hilight("on_color_078", str, args...)
+func OnColor078(str string) string {
+	return Hilight("on_color_078", str)
 }
 
 // PrintOnColor078 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor078(str string, args ...interface{}) {
-	Print(Hilight("on_color_078", str, args...))
+func PrintOnColor078(str string) {
+	Print(Hilight("on_color_078", str))
 }
 
 // PrintlnOnColor078 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor078(str string, args ...interface{}) {
-	Println(Hilight("on_color_078", str, args...))
+func PrintlnOnColor078(str string) {
+	Println(Hilight("on_color_078", str))
+}
+
+// OnColor078f wraps OnColor078 and works with format
+// strings.
+func OnColor078f(str string, args ...interface{}) string {
+	return OnColor078(Sprintf(str, args...))
+}
+
+// PrintOnColor078f wraps PrintOnColor078 and works with format
+// strings.
+func PrintOnColor078f(str string, args ...interface{}) {
+	PrintOnColor078(Sprintf(str, args...))
+}
+
+// PrintlnOnColor078f wraps PrintlnOnColor078 and works with format
+// strings.
+func PrintlnOnColor078f(str string, args ...interface{}) {
+	PrintlnOnColor078(Sprintf(str, args...))
 }
 
 // Color079 will Hilight() the provided string with the
 // specified ANSI code.
-func Color079(str string, args ...interface{}) string {
-	return Hilight("color_079", str, args...)
+func Color079(str string) string {
+	return Hilight("color_079", str)
 }
 
 // PrintColor079 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor079(str string, args ...interface{}) {
-	Print(Hilight("color_079", str, args...))
+func PrintColor079(str string) {
+	Print(Hilight("color_079", str))
 }
 
 // PrintlnColor079 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor079(str string, args ...interface{}) {
-	Println(Hilight("color_079", str, args...))
+func PrintlnColor079(str string) {
+	Println(Hilight("color_079", str))
+}
+
+// Color079f wraps Color079 and works with format
+// strings.
+func Color079f(str string, args ...interface{}) string {
+	return Color079(Sprintf(str, args...))
+}
+
+// PrintColor079f wraps PrintColor079 and works with format
+// strings.
+func PrintColor079f(str string, args ...interface{}) {
+	PrintColor079(Sprintf(str, args...))
+}
+
+// PrintlnColor079f wraps PrintlnColor079 and works with format
+// strings.
+func PrintlnColor079f(str string, args ...interface{}) {
+	PrintlnColor079(Sprintf(str, args...))
 }
 
 // OnColor079 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor079(str string, args ...interface{}) string {
-	return Hilight("on_color_079", str, args...)
+func OnColor079(str string) string {
+	return Hilight("on_color_079", str)
 }
 
 // PrintOnColor079 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor079(str string, args ...interface{}) {
-	Print(Hilight("on_color_079", str, args...))
+func PrintOnColor079(str string) {
+	Print(Hilight("on_color_079", str))
 }
 
 // PrintlnOnColor079 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor079(str string, args ...interface{}) {
-	Println(Hilight("on_color_079", str, args...))
+func PrintlnOnColor079(str string) {
+	Println(Hilight("on_color_079", str))
+}
+
+// OnColor079f wraps OnColor079 and works with format
+// strings.
+func OnColor079f(str string, args ...interface{}) string {
+	return OnColor079(Sprintf(str, args...))
+}
+
+// PrintOnColor079f wraps PrintOnColor079 and works with format
+// strings.
+func PrintOnColor079f(str string, args ...interface{}) {
+	PrintOnColor079(Sprintf(str, args...))
+}
+
+// PrintlnOnColor079f wraps PrintlnOnColor079 and works with format
+// strings.
+func PrintlnOnColor079f(str string, args ...interface{}) {
+	PrintlnOnColor079(Sprintf(str, args...))
 }
 
 // Color080 will Hilight() the provided string with the
 // specified ANSI code.
-func Color080(str string, args ...interface{}) string {
-	return Hilight("color_080", str, args...)
+func Color080(str string) string {
+	return Hilight("color_080", str)
 }
 
 // PrintColor080 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor080(str string, args ...interface{}) {
-	Print(Hilight("color_080", str, args...))
+func PrintColor080(str string) {
+	Print(Hilight("color_080", str))
 }
 
 // PrintlnColor080 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor080(str string, args ...interface{}) {
-	Println(Hilight("color_080", str, args...))
+func PrintlnColor080(str string) {
+	Println(Hilight("color_080", str))
+}
+
+// Color080f wraps Color080 and works with format
+// strings.
+func Color080f(str string, args ...interface{}) string {
+	return Color080(Sprintf(str, args...))
+}
+
+// PrintColor080f wraps PrintColor080 and works with format
+// strings.
+func PrintColor080f(str string, args ...interface{}) {
+	PrintColor080(Sprintf(str, args...))
+}
+
+// PrintlnColor080f wraps PrintlnColor080 and works with format
+// strings.
+func PrintlnColor080f(str string, args ...interface{}) {
+	PrintlnColor080(Sprintf(str, args...))
 }
 
 // OnColor080 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor080(str string, args ...interface{}) string {
-	return Hilight("on_color_080", str, args...)
+func OnColor080(str string) string {
+	return Hilight("on_color_080", str)
 }
 
 // PrintOnColor080 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor080(str string, args ...interface{}) {
-	Print(Hilight("on_color_080", str, args...))
+func PrintOnColor080(str string) {
+	Print(Hilight("on_color_080", str))
 }
 
 // PrintlnOnColor080 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor080(str string, args ...interface{}) {
-	Println(Hilight("on_color_080", str, args...))
+func PrintlnOnColor080(str string) {
+	Println(Hilight("on_color_080", str))
+}
+
+// OnColor080f wraps OnColor080 and works with format
+// strings.
+func OnColor080f(str string, args ...interface{}) string {
+	return OnColor080(Sprintf(str, args...))
+}
+
+// PrintOnColor080f wraps PrintOnColor080 and works with format
+// strings.
+func PrintOnColor080f(str string, args ...interface{}) {
+	PrintOnColor080(Sprintf(str, args...))
+}
+
+// PrintlnOnColor080f wraps PrintlnOnColor080 and works with format
+// strings.
+func PrintlnOnColor080f(str string, args ...interface{}) {
+	PrintlnOnColor080(Sprintf(str, args...))
 }
 
 // Color081 will Hilight() the provided string with the
 // specified ANSI code.
-func Color081(str string, args ...interface{}) string {
-	return Hilight("color_081", str, args...)
+func Color081(str string) string {
+	return Hilight("color_081", str)
 }
 
 // PrintColor081 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor081(str string, args ...interface{}) {
-	Print(Hilight("color_081", str, args...))
+func PrintColor081(str string) {
+	Print(Hilight("color_081", str))
 }
 
 // PrintlnColor081 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor081(str string, args ...interface{}) {
-	Println(Hilight("color_081", str, args...))
+func PrintlnColor081(str string) {
+	Println(Hilight("color_081", str))
+}
+
+// Color081f wraps Color081 and works with format
+// strings.
+func Color081f(str string, args ...interface{}) string {
+	return Color081(Sprintf(str, args...))
+}
+
+// PrintColor081f wraps PrintColor081 and works with format
+// strings.
+func PrintColor081f(str string, args ...interface{}) {
+	PrintColor081(Sprintf(str, args...))
+}
+
+// PrintlnColor081f wraps PrintlnColor081 and works with format
+// strings.
+func PrintlnColor081f(str string, args ...interface{}) {
+	PrintlnColor081(Sprintf(str, args...))
 }
 
 // OnColor081 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor081(str string, args ...interface{}) string {
-	return Hilight("on_color_081", str, args...)
+func OnColor081(str string) string {
+	return Hilight("on_color_081", str)
 }
 
 // PrintOnColor081 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor081(str string, args ...interface{}) {
-	Print(Hilight("on_color_081", str, args...))
+func PrintOnColor081(str string) {
+	Print(Hilight("on_color_081", str))
 }
 
 // PrintlnOnColor081 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor081(str string, args ...interface{}) {
-	Println(Hilight("on_color_081", str, args...))
+func PrintlnOnColor081(str string) {
+	Println(Hilight("on_color_081", str))
+}
+
+// OnColor081f wraps OnColor081 and works with format
+// strings.
+func OnColor081f(str string, args ...interface{}) string {
+	return OnColor081(Sprintf(str, args...))
+}
+
+// PrintOnColor081f wraps PrintOnColor081 and works with format
+// strings.
+func PrintOnColor081f(str string, args ...interface{}) {
+	PrintOnColor081(Sprintf(str, args...))
+}
+
+// PrintlnOnColor081f wraps PrintlnOnColor081 and works with format
+// strings.
+func PrintlnOnColor081f(str string, args ...interface{}) {
+	PrintlnOnColor081(Sprintf(str, args...))
 }
 
 // Color082 will Hilight() the provided string with the
 // specified ANSI code.
-func Color082(str string, args ...interface{}) string {
-	return Hilight("color_082", str, args...)
+func Color082(str string) string {
+	return Hilight("color_082", str)
 }
 
 // PrintColor082 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor082(str string, args ...interface{}) {
-	Print(Hilight("color_082", str, args...))
+func PrintColor082(str string) {
+	Print(Hilight("color_082", str))
 }
 
 // PrintlnColor082 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor082(str string, args ...interface{}) {
-	Println(Hilight("color_082", str, args...))
+func PrintlnColor082(str string) {
+	Println(Hilight("color_082", str))
+}
+
+// Color082f wraps Color082 and works with format
+// strings.
+func Color082f(str string, args ...interface{}) string {
+	return Color082(Sprintf(str, args...))
+}
+
+// PrintColor082f wraps PrintColor082 and works with format
+// strings.
+func PrintColor082f(str string, args ...interface{}) {
+	PrintColor082(Sprintf(str, args...))
+}
+
+// PrintlnColor082f wraps PrintlnColor082 and works with format
+// strings.
+func PrintlnColor082f(str string, args ...interface{}) {
+	PrintlnColor082(Sprintf(str, args...))
 }
 
 // OnColor082 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor082(str string, args ...interface{}) string {
-	return Hilight("on_color_082", str, args...)
+func OnColor082(str string) string {
+	return Hilight("on_color_082", str)
 }
 
 // PrintOnColor082 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor082(str string, args ...interface{}) {
-	Print(Hilight("on_color_082", str, args...))
+func PrintOnColor082(str string) {
+	Print(Hilight("on_color_082", str))
 }
 
 // PrintlnOnColor082 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor082(str string, args ...interface{}) {
-	Println(Hilight("on_color_082", str, args...))
+func PrintlnOnColor082(str string) {
+	Println(Hilight("on_color_082", str))
+}
+
+// OnColor082f wraps OnColor082 and works with format
+// strings.
+func OnColor082f(str string, args ...interface{}) string {
+	return OnColor082(Sprintf(str, args...))
+}
+
+// PrintOnColor082f wraps PrintOnColor082 and works with format
+// strings.
+func PrintOnColor082f(str string, args ...interface{}) {
+	PrintOnColor082(Sprintf(str, args...))
+}
+
+// PrintlnOnColor082f wraps PrintlnOnColor082 and works with format
+// strings.
+func PrintlnOnColor082f(str string, args ...interface{}) {
+	PrintlnOnColor082(Sprintf(str, args...))
 }
 
 // Color083 will Hilight() the provided string with the
 // specified ANSI code.
-func Color083(str string, args ...interface{}) string {
-	return Hilight("color_083", str, args...)
+func Color083(str string) string {
+	return Hilight("color_083", str)
 }
 
 // PrintColor083 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor083(str string, args ...interface{}) {
-	Print(Hilight("color_083", str, args...))
+func PrintColor083(str string) {
+	Print(Hilight("color_083", str))
 }
 
 // PrintlnColor083 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor083(str string, args ...interface{}) {
-	Println(Hilight("color_083", str, args...))
+func PrintlnColor083(str string) {
+	Println(Hilight("color_083", str))
+}
+
+// Color083f wraps Color083 and works with format
+// strings.
+func Color083f(str string, args ...interface{}) string {
+	return Color083(Sprintf(str, args...))
+}
+
+// PrintColor083f wraps PrintColor083 and works with format
+// strings.
+func PrintColor083f(str string, args ...interface{}) {
+	PrintColor083(Sprintf(str, args...))
+}
+
+// PrintlnColor083f wraps PrintlnColor083 and works with format
+// strings.
+func PrintlnColor083f(str string, args ...interface{}) {
+	PrintlnColor083(Sprintf(str, args...))
 }
 
 // OnColor083 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor083(str string, args ...interface{}) string {
-	return Hilight("on_color_083", str, args...)
+func OnColor083(str string) string {
+	return Hilight("on_color_083", str)
 }
 
 // PrintOnColor083 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor083(str string, args ...interface{}) {
-	Print(Hilight("on_color_083", str, args...))
+func PrintOnColor083(str string) {
+	Print(Hilight("on_color_083", str))
 }
 
 // PrintlnOnColor083 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor083(str string, args ...interface{}) {
-	Println(Hilight("on_color_083", str, args...))
+func PrintlnOnColor083(str string) {
+	Println(Hilight("on_color_083", str))
+}
+
+// OnColor083f wraps OnColor083 and works with format
+// strings.
+func OnColor083f(str string, args ...interface{}) string {
+	return OnColor083(Sprintf(str, args...))
+}
+
+// PrintOnColor083f wraps PrintOnColor083 and works with format
+// strings.
+func PrintOnColor083f(str string, args ...interface{}) {
+	PrintOnColor083(Sprintf(str, args...))
+}
+
+// PrintlnOnColor083f wraps PrintlnOnColor083 and works with format
+// strings.
+func PrintlnOnColor083f(str string, args ...interface{}) {
+	PrintlnOnColor083(Sprintf(str, args...))
 }
 
 // Color084 will Hilight() the provided string with the
 // specified ANSI code.
-func Color084(str string, args ...interface{}) string {
-	return Hilight("color_084", str, args...)
+func Color084(str string) string {
+	return Hilight("color_084", str)
 }
 
 // PrintColor084 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor084(str string, args ...interface{}) {
-	Print(Hilight("color_084", str, args...))
+func PrintColor084(str string) {
+	Print(Hilight("color_084", str))
 }
 
 // PrintlnColor084 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor084(str string, args ...interface{}) {
-	Println(Hilight("color_084", str, args...))
+func PrintlnColor084(str string) {
+	Println(Hilight("color_084", str))
+}
+
+// Color084f wraps Color084 and works with format
+// strings.
+func Color084f(str string, args ...interface{}) string {
+	return Color084(Sprintf(str, args...))
+}
+
+// PrintColor084f wraps PrintColor084 and works with format
+// strings.
+func PrintColor084f(str string, args ...interface{}) {
+	PrintColor084(Sprintf(str, args...))
+}
+
+// PrintlnColor084f wraps PrintlnColor084 and works with format
+// strings.
+func PrintlnColor084f(str string, args ...interface{}) {
+	PrintlnColor084(Sprintf(str, args...))
 }
 
 // OnColor084 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor084(str string, args ...interface{}) string {
-	return Hilight("on_color_084", str, args...)
+func OnColor084(str string) string {
+	return Hilight("on_color_084", str)
 }
 
 // PrintOnColor084 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor084(str string, args ...interface{}) {
-	Print(Hilight("on_color_084", str, args...))
+func PrintOnColor084(str string) {
+	Print(Hilight("on_color_084", str))
 }
 
 // PrintlnOnColor084 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor084(str string, args ...interface{}) {
-	Println(Hilight("on_color_084", str, args...))
+func PrintlnOnColor084(str string) {
+	Println(Hilight("on_color_084", str))
+}
+
+// OnColor084f wraps OnColor084 and works with format
+// strings.
+func OnColor084f(str string, args ...interface{}) string {
+	return OnColor084(Sprintf(str, args...))
+}
+
+// PrintOnColor084f wraps PrintOnColor084 and works with format
+// strings.
+func PrintOnColor084f(str string, args ...interface{}) {
+	PrintOnColor084(Sprintf(str, args...))
+}
+
+// PrintlnOnColor084f wraps PrintlnOnColor084 and works with format
+// strings.
+func PrintlnOnColor084f(str string, args ...interface{}) {
+	PrintlnOnColor084(Sprintf(str, args...))
 }
 
 // Color085 will Hilight() the provided string with the
 // specified ANSI code.
-func Color085(str string, args ...interface{}) string {
-	return Hilight("color_085", str, args...)
+func Color085(str string) string {
+	return Hilight("color_085", str)
 }
 
 // PrintColor085 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor085(str string, args ...interface{}) {
-	Print(Hilight("color_085", str, args...))
+func PrintColor085(str string) {
+	Print(Hilight("color_085", str))
 }
 
 // PrintlnColor085 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor085(str string, args ...interface{}) {
-	Println(Hilight("color_085", str, args...))
+func PrintlnColor085(str string) {
+	Println(Hilight("color_085", str))
+}
+
+// Color085f wraps Color085 and works with format
+// strings.
+func Color085f(str string, args ...interface{}) string {
+	return Color085(Sprintf(str, args...))
+}
+
+// PrintColor085f wraps PrintColor085 and works with format
+// strings.
+func PrintColor085f(str string, args ...interface{}) {
+	PrintColor085(Sprintf(str, args...))
+}
+
+// PrintlnColor085f wraps PrintlnColor085 and works with format
+// strings.
+func PrintlnColor085f(str string, args ...interface{}) {
+	PrintlnColor085(Sprintf(str, args...))
 }
 
 // OnColor085 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor085(str string, args ...interface{}) string {
-	return Hilight("on_color_085", str, args...)
+func OnColor085(str string) string {
+	return Hilight("on_color_085", str)
 }
 
 // PrintOnColor085 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor085(str string, args ...interface{}) {
-	Print(Hilight("on_color_085", str, args...))
+func PrintOnColor085(str string) {
+	Print(Hilight("on_color_085", str))
 }
 
 // PrintlnOnColor085 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor085(str string, args ...interface{}) {
-	Println(Hilight("on_color_085", str, args...))
+func PrintlnOnColor085(str string) {
+	Println(Hilight("on_color_085", str))
+}
+
+// OnColor085f wraps OnColor085 and works with format
+// strings.
+func OnColor085f(str string, args ...interface{}) string {
+	return OnColor085(Sprintf(str, args...))
+}
+
+// PrintOnColor085f wraps PrintOnColor085 and works with format
+// strings.
+func PrintOnColor085f(str string, args ...interface{}) {
+	PrintOnColor085(Sprintf(str, args...))
+}
+
+// PrintlnOnColor085f wraps PrintlnOnColor085 and works with format
+// strings.
+func PrintlnOnColor085f(str string, args ...interface{}) {
+	PrintlnOnColor085(Sprintf(str, args...))
 }
 
 // Color086 will Hilight() the provided string with the
 // specified ANSI code.
-func Color086(str string, args ...interface{}) string {
-	return Hilight("color_086", str, args...)
+func Color086(str string) string {
+	return Hilight("color_086", str)
 }
 
 // PrintColor086 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor086(str string, args ...interface{}) {
-	Print(Hilight("color_086", str, args...))
+func PrintColor086(str string) {
+	Print(Hilight("color_086", str))
 }
 
 // PrintlnColor086 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor086(str string, args ...interface{}) {
-	Println(Hilight("color_086", str, args...))
+func PrintlnColor086(str string) {
+	Println(Hilight("color_086", str))
+}
+
+// Color086f wraps Color086 and works with format
+// strings.
+func Color086f(str string, args ...interface{}) string {
+	return Color086(Sprintf(str, args...))
+}
+
+// PrintColor086f wraps PrintColor086 and works with format
+// strings.
+func PrintColor086f(str string, args ...interface{}) {
+	PrintColor086(Sprintf(str, args...))
+}
+
+// PrintlnColor086f wraps PrintlnColor086 and works with format
+// strings.
+func PrintlnColor086f(str string, args ...interface{}) {
+	PrintlnColor086(Sprintf(str, args...))
 }
 
 // OnColor086 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor086(str string, args ...interface{}) string {
-	return Hilight("on_color_086", str, args...)
+func OnColor086(str string) string {
+	return Hilight("on_color_086", str)
 }
 
 // PrintOnColor086 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor086(str string, args ...interface{}) {
-	Print(Hilight("on_color_086", str, args...))
+func PrintOnColor086(str string) {
+	Print(Hilight("on_color_086", str))
 }
 
 // PrintlnOnColor086 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor086(str string, args ...interface{}) {
-	Println(Hilight("on_color_086", str, args...))
+func PrintlnOnColor086(str string) {
+	Println(Hilight("on_color_086", str))
+}
+
+// OnColor086f wraps OnColor086 and works with format
+// strings.
+func OnColor086f(str string, args ...interface{}) string {
+	return OnColor086(Sprintf(str, args...))
+}
+
+// PrintOnColor086f wraps PrintOnColor086 and works with format
+// strings.
+func PrintOnColor086f(str string, args ...interface{}) {
+	PrintOnColor086(Sprintf(str, args...))
+}
+
+// PrintlnOnColor086f wraps PrintlnOnColor086 and works with format
+// strings.
+func PrintlnOnColor086f(str string, args ...interface{}) {
+	PrintlnOnColor086(Sprintf(str, args...))
 }
 
 // Color087 will Hilight() the provided string with the
 // specified ANSI code.
-func Color087(str string, args ...interface{}) string {
-	return Hilight("color_087", str, args...)
+func Color087(str string) string {
+	return Hilight("color_087", str)
 }
 
 // PrintColor087 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor087(str string, args ...interface{}) {
-	Print(Hilight("color_087", str, args...))
+func PrintColor087(str string) {
+	Print(Hilight("color_087", str))
 }
 
 // PrintlnColor087 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor087(str string, args ...interface{}) {
-	Println(Hilight("color_087", str, args...))
+func PrintlnColor087(str string) {
+	Println(Hilight("color_087", str))
+}
+
+// Color087f wraps Color087 and works with format
+// strings.
+func Color087f(str string, args ...interface{}) string {
+	return Color087(Sprintf(str, args...))
+}
+
+// PrintColor087f wraps PrintColor087 and works with format
+// strings.
+func PrintColor087f(str string, args ...interface{}) {
+	PrintColor087(Sprintf(str, args...))
+}
+
+// PrintlnColor087f wraps PrintlnColor087 and works with format
+// strings.
+func PrintlnColor087f(str string, args ...interface{}) {
+	PrintlnColor087(Sprintf(str, args...))
 }
 
 // OnColor087 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor087(str string, args ...interface{}) string {
-	return Hilight("on_color_087", str, args...)
+func OnColor087(str string) string {
+	return Hilight("on_color_087", str)
 }
 
 // PrintOnColor087 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor087(str string, args ...interface{}) {
-	Print(Hilight("on_color_087", str, args...))
+func PrintOnColor087(str string) {
+	Print(Hilight("on_color_087", str))
 }
 
 // PrintlnOnColor087 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor087(str string, args ...interface{}) {
-	Println(Hilight("on_color_087", str, args...))
+func PrintlnOnColor087(str string) {
+	Println(Hilight("on_color_087", str))
+}
+
+// OnColor087f wraps OnColor087 and works with format
+// strings.
+func OnColor087f(str string, args ...interface{}) string {
+	return OnColor087(Sprintf(str, args...))
+}
+
+// PrintOnColor087f wraps PrintOnColor087 and works with format
+// strings.
+func PrintOnColor087f(str string, args ...interface{}) {
+	PrintOnColor087(Sprintf(str, args...))
+}
+
+// PrintlnOnColor087f wraps PrintlnOnColor087 and works with format
+// strings.
+func PrintlnOnColor087f(str string, args ...interface{}) {
+	PrintlnOnColor087(Sprintf(str, args...))
 }
 
 // Color088 will Hilight() the provided string with the
 // specified ANSI code.
-func Color088(str string, args ...interface{}) string {
-	return Hilight("color_088", str, args...)
+func Color088(str string) string {
+	return Hilight("color_088", str)
 }
 
 // PrintColor088 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor088(str string, args ...interface{}) {
-	Print(Hilight("color_088", str, args...))
+func PrintColor088(str string) {
+	Print(Hilight("color_088", str))
 }
 
 // PrintlnColor088 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor088(str string, args ...interface{}) {
-	Println(Hilight("color_088", str, args...))
+func PrintlnColor088(str string) {
+	Println(Hilight("color_088", str))
+}
+
+// Color088f wraps Color088 and works with format
+// strings.
+func Color088f(str string, args ...interface{}) string {
+	return Color088(Sprintf(str, args...))
+}
+
+// PrintColor088f wraps PrintColor088 and works with format
+// strings.
+func PrintColor088f(str string, args ...interface{}) {
+	PrintColor088(Sprintf(str, args...))
+}
+
+// PrintlnColor088f wraps PrintlnColor088 and works with format
+// strings.
+func PrintlnColor088f(str string, args ...interface{}) {
+	PrintlnColor088(Sprintf(str, args...))
 }
 
 // OnColor088 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor088(str string, args ...interface{}) string {
-	return Hilight("on_color_088", str, args...)
+func OnColor088(str string) string {
+	return Hilight("on_color_088", str)
 }
 
 // PrintOnColor088 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor088(str string, args ...interface{}) {
-	Print(Hilight("on_color_088", str, args...))
+func PrintOnColor088(str string) {
+	Print(Hilight("on_color_088", str))
 }
 
 // PrintlnOnColor088 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor088(str string, args ...interface{}) {
-	Println(Hilight("on_color_088", str, args...))
+func PrintlnOnColor088(str string) {
+	Println(Hilight("on_color_088", str))
+}
+
+// OnColor088f wraps OnColor088 and works with format
+// strings.
+func OnColor088f(str string, args ...interface{}) string {
+	return OnColor088(Sprintf(str, args...))
+}
+
+// PrintOnColor088f wraps PrintOnColor088 and works with format
+// strings.
+func PrintOnColor088f(str string, args ...interface{}) {
+	PrintOnColor088(Sprintf(str, args...))
+}
+
+// PrintlnOnColor088f wraps PrintlnOnColor088 and works with format
+// strings.
+func PrintlnOnColor088f(str string, args ...interface{}) {
+	PrintlnOnColor088(Sprintf(str, args...))
 }
 
 // Color089 will Hilight() the provided string with the
 // specified ANSI code.
-func Color089(str string, args ...interface{}) string {
-	return Hilight("color_089", str, args...)
+func Color089(str string) string {
+	return Hilight("color_089", str)
 }
 
 // PrintColor089 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor089(str string, args ...interface{}) {
-	Print(Hilight("color_089", str, args...))
+func PrintColor089(str string) {
+	Print(Hilight("color_089", str))
 }
 
 // PrintlnColor089 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor089(str string, args ...interface{}) {
-	Println(Hilight("color_089", str, args...))
+func PrintlnColor089(str string) {
+	Println(Hilight("color_089", str))
+}
+
+// Color089f wraps Color089 and works with format
+// strings.
+func Color089f(str string, args ...interface{}) string {
+	return Color089(Sprintf(str, args...))
+}
+
+// PrintColor089f wraps PrintColor089 and works with format
+// strings.
+func PrintColor089f(str string, args ...interface{}) {
+	PrintColor089(Sprintf(str, args...))
+}
+
+// PrintlnColor089f wraps PrintlnColor089 and works with format
+// strings.
+func PrintlnColor089f(str string, args ...interface{}) {
+	PrintlnColor089(Sprintf(str, args...))
 }
 
 // OnColor089 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor089(str string, args ...interface{}) string {
-	return Hilight("on_color_089", str, args...)
+func OnColor089(str string) string {
+	return Hilight("on_color_089", str)
 }
 
 // PrintOnColor089 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor089(str string, args ...interface{}) {
-	Print(Hilight("on_color_089", str, args...))
+func PrintOnColor089(str string) {
+	Print(Hilight("on_color_089", str))
 }
 
 // PrintlnOnColor089 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor089(str string, args ...interface{}) {
-	Println(Hilight("on_color_089", str, args...))
+func PrintlnOnColor089(str string) {
+	Println(Hilight("on_color_089", str))
+}
+
+// OnColor089f wraps OnColor089 and works with format
+// strings.
+func OnColor089f(str string, args ...interface{}) string {
+	return OnColor089(Sprintf(str, args...))
+}
+
+// PrintOnColor089f wraps PrintOnColor089 and works with format
+// strings.
+func PrintOnColor089f(str string, args ...interface{}) {
+	PrintOnColor089(Sprintf(str, args...))
+}
+
+// PrintlnOnColor089f wraps PrintlnOnColor089 and works with format
+// strings.
+func PrintlnOnColor089f(str string, args ...interface{}) {
+	PrintlnOnColor089(Sprintf(str, args...))
 }
 
 // Color090 will Hilight() the provided string with the
 // specified ANSI code.
-func Color090(str string, args ...interface{}) string {
-	return Hilight("color_090", str, args...)
+func Color090(str string) string {
+	return Hilight("color_090", str)
 }
 
 // PrintColor090 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor090(str string, args ...interface{}) {
-	Print(Hilight("color_090", str, args...))
+func PrintColor090(str string) {
+	Print(Hilight("color_090", str))
 }
 
 // PrintlnColor090 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor090(str string, args ...interface{}) {
-	Println(Hilight("color_090", str, args...))
+func PrintlnColor090(str string) {
+	Println(Hilight("color_090", str))
+}
+
+// Color090f wraps Color090 and works with format
+// strings.
+func Color090f(str string, args ...interface{}) string {
+	return Color090(Sprintf(str, args...))
+}
+
+// PrintColor090f wraps PrintColor090 and works with format
+// strings.
+func PrintColor090f(str string, args ...interface{}) {
+	PrintColor090(Sprintf(str, args...))
+}
+
+// PrintlnColor090f wraps PrintlnColor090 and works with format
+// strings.
+func PrintlnColor090f(str string, args ...interface{}) {
+	PrintlnColor090(Sprintf(str, args...))
 }
 
 // OnColor090 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor090(str string, args ...interface{}) string {
-	return Hilight("on_color_090", str, args...)
+func OnColor090(str string) string {
+	return Hilight("on_color_090", str)
 }
 
 // PrintOnColor090 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor090(str string, args ...interface{}) {
-	Print(Hilight("on_color_090", str, args...))
+func PrintOnColor090(str string) {
+	Print(Hilight("on_color_090", str))
 }
 
 // PrintlnOnColor090 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor090(str string, args ...interface{}) {
-	Println(Hilight("on_color_090", str, args...))
+func PrintlnOnColor090(str string) {
+	Println(Hilight("on_color_090", str))
+}
+
+// OnColor090f wraps OnColor090 and works with format
+// strings.
+func OnColor090f(str string, args ...interface{}) string {
+	return OnColor090(Sprintf(str, args...))
+}
+
+// PrintOnColor090f wraps PrintOnColor090 and works with format
+// strings.
+func PrintOnColor090f(str string, args ...interface{}) {
+	PrintOnColor090(Sprintf(str, args...))
+}
+
+// PrintlnOnColor090f wraps PrintlnOnColor090 and works with format
+// strings.
+func PrintlnOnColor090f(str string, args ...interface{}) {
+	PrintlnOnColor090(Sprintf(str, args...))
 }
 
 // Color091 will Hilight() the provided string with the
 // specified ANSI code.
-func Color091(str string, args ...interface{}) string {
-	return Hilight("color_091", str, args...)
+func Color091(str string) string {
+	return Hilight("color_091", str)
 }
 
 // PrintColor091 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor091(str string, args ...interface{}) {
-	Print(Hilight("color_091", str, args...))
+func PrintColor091(str string) {
+	Print(Hilight("color_091", str))
 }
 
 // PrintlnColor091 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor091(str string, args ...interface{}) {
-	Println(Hilight("color_091", str, args...))
+func PrintlnColor091(str string) {
+	Println(Hilight("color_091", str))
+}
+
+// Color091f wraps Color091 and works with format
+// strings.
+func Color091f(str string, args ...interface{}) string {
+	return Color091(Sprintf(str, args...))
+}
+
+// PrintColor091f wraps PrintColor091 and works with format
+// strings.
+func PrintColor091f(str string, args ...interface{}) {
+	PrintColor091(Sprintf(str, args...))
+}
+
+// PrintlnColor091f wraps PrintlnColor091 and works with format
+// strings.
+func PrintlnColor091f(str string, args ...interface{}) {
+	PrintlnColor091(Sprintf(str, args...))
 }
 
 // OnColor091 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor091(str string, args ...interface{}) string {
-	return Hilight("on_color_091", str, args...)
+func OnColor091(str string) string {
+	return Hilight("on_color_091", str)
 }
 
 // PrintOnColor091 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor091(str string, args ...interface{}) {
-	Print(Hilight("on_color_091", str, args...))
+func PrintOnColor091(str string) {
+	Print(Hilight("on_color_091", str))
 }
 
 // PrintlnOnColor091 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor091(str string, args ...interface{}) {
-	Println(Hilight("on_color_091", str, args...))
+func PrintlnOnColor091(str string) {
+	Println(Hilight("on_color_091", str))
+}
+
+// OnColor091f wraps OnColor091 and works with format
+// strings.
+func OnColor091f(str string, args ...interface{}) string {
+	return OnColor091(Sprintf(str, args...))
+}
+
+// PrintOnColor091f wraps PrintOnColor091 and works with format
+// strings.
+func PrintOnColor091f(str string, args ...interface{}) {
+	PrintOnColor091(Sprintf(str, args...))
+}
+
+// PrintlnOnColor091f wraps PrintlnOnColor091 and works with format
+// strings.
+func PrintlnOnColor091f(str string, args ...interface{}) {
+	PrintlnOnColor091(Sprintf(str, args...))
 }
 
 // Color092 will Hilight() the provided string with the
 // specified ANSI code.
-func Color092(str string, args ...interface{}) string {
-	return Hilight("color_092", str, args...)
+func Color092(str string) string {
+	return Hilight("color_092", str)
 }
 
 // PrintColor092 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor092(str string, args ...interface{}) {
-	Print(Hilight("color_092", str, args...))
+func PrintColor092(str string) {
+	Print(Hilight("color_092", str))
 }
 
 // PrintlnColor092 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor092(str string, args ...interface{}) {
-	Println(Hilight("color_092", str, args...))
+func PrintlnColor092(str string) {
+	Println(Hilight("color_092", str))
+}
+
+// Color092f wraps Color092 and works with format
+// strings.
+func Color092f(str string, args ...interface{}) string {
+	return Color092(Sprintf(str, args...))
+}
+
+// PrintColor092f wraps PrintColor092 and works with format
+// strings.
+func PrintColor092f(str string, args ...interface{}) {
+	PrintColor092(Sprintf(str, args...))
+}
+
+// PrintlnColor092f wraps PrintlnColor092 and works with format
+// strings.
+func PrintlnColor092f(str string, args ...interface{}) {
+	PrintlnColor092(Sprintf(str, args...))
 }
 
 // OnColor092 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor092(str string, args ...interface{}) string {
-	return Hilight("on_color_092", str, args...)
+func OnColor092(str string) string {
+	return Hilight("on_color_092", str)
 }
 
 // PrintOnColor092 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor092(str string, args ...interface{}) {
-	Print(Hilight("on_color_092", str, args...))
+func PrintOnColor092(str string) {
+	Print(Hilight("on_color_092", str))
 }
 
 // PrintlnOnColor092 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor092(str string, args ...interface{}) {
-	Println(Hilight("on_color_092", str, args...))
+func PrintlnOnColor092(str string) {
+	Println(Hilight("on_color_092", str))
+}
+
+// OnColor092f wraps OnColor092 and works with format
+// strings.
+func OnColor092f(str string, args ...interface{}) string {
+	return OnColor092(Sprintf(str, args...))
+}
+
+// PrintOnColor092f wraps PrintOnColor092 and works with format
+// strings.
+func PrintOnColor092f(str string, args ...interface{}) {
+	PrintOnColor092(Sprintf(str, args...))
+}
+
+// PrintlnOnColor092f wraps PrintlnOnColor092 and works with format
+// strings.
+func PrintlnOnColor092f(str string, args ...interface{}) {
+	PrintlnOnColor092(Sprintf(str, args...))
 }
 
 // Color093 will Hilight() the provided string with the
 // specified ANSI code.
-func Color093(str string, args ...interface{}) string {
-	return Hilight("color_093", str, args...)
+func Color093(str string) string {
+	return Hilight("color_093", str)
 }
 
 // PrintColor093 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor093(str string, args ...interface{}) {
-	Print(Hilight("color_093", str, args...))
+func PrintColor093(str string) {
+	Print(Hilight("color_093", str))
 }
 
 // PrintlnColor093 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor093(str string, args ...interface{}) {
-	Println(Hilight("color_093", str, args...))
+func PrintlnColor093(str string) {
+	Println(Hilight("color_093", str))
+}
+
+// Color093f wraps Color093 and works with format
+// strings.
+func Color093f(str string, args ...interface{}) string {
+	return Color093(Sprintf(str, args...))
+}
+
+// PrintColor093f wraps PrintColor093 and works with format
+// strings.
+func PrintColor093f(str string, args ...interface{}) {
+	PrintColor093(Sprintf(str, args...))
+}
+
+// PrintlnColor093f wraps PrintlnColor093 and works with format
+// strings.
+func PrintlnColor093f(str string, args ...interface{}) {
+	PrintlnColor093(Sprintf(str, args...))
 }
 
 // OnColor093 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor093(str string, args ...interface{}) string {
-	return Hilight("on_color_093", str, args...)
+func OnColor093(str string) string {
+	return Hilight("on_color_093", str)
 }
 
 // PrintOnColor093 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor093(str string, args ...interface{}) {
-	Print(Hilight("on_color_093", str, args...))
+func PrintOnColor093(str string) {
+	Print(Hilight("on_color_093", str))
 }
 
 // PrintlnOnColor093 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor093(str string, args ...interface{}) {
-	Println(Hilight("on_color_093", str, args...))
+func PrintlnOnColor093(str string) {
+	Println(Hilight("on_color_093", str))
+}
+
+// OnColor093f wraps OnColor093 and works with format
+// strings.
+func OnColor093f(str string, args ...interface{}) string {
+	return OnColor093(Sprintf(str, args...))
+}
+
+// PrintOnColor093f wraps PrintOnColor093 and works with format
+// strings.
+func PrintOnColor093f(str string, args ...interface{}) {
+	PrintOnColor093(Sprintf(str, args...))
+}
+
+// PrintlnOnColor093f wraps PrintlnOnColor093 and works with format
+// strings.
+func PrintlnOnColor093f(str string, args ...interface{}) {
+	PrintlnOnColor093(Sprintf(str, args...))
 }
 
 // Color094 will Hilight() the provided string with the
 // specified ANSI code.
-func Color094(str string, args ...interface{}) string {
-	return Hilight("color_094", str, args...)
+func Color094(str string) string {
+	return Hilight("color_094", str)
 }
 
 // PrintColor094 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor094(str string, args ...interface{}) {
-	Print(Hilight("color_094", str, args...))
+func PrintColor094(str string) {
+	Print(Hilight("color_094", str))
 }
 
 // PrintlnColor094 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor094(str string, args ...interface{}) {
-	Println(Hilight("color_094", str, args...))
+func PrintlnColor094(str string) {
+	Println(Hilight("color_094", str))
+}
+
+// Color094f wraps Color094 and works with format
+// strings.
+func Color094f(str string, args ...interface{}) string {
+	return Color094(Sprintf(str, args...))
+}
+
+// PrintColor094f wraps PrintColor094 and works with format
+// strings.
+func PrintColor094f(str string, args ...interface{}) {
+	PrintColor094(Sprintf(str, args...))
+}
+
+// PrintlnColor094f wraps PrintlnColor094 and works with format
+// strings.
+func PrintlnColor094f(str string, args ...interface{}) {
+	PrintlnColor094(Sprintf(str, args...))
 }
 
 // OnColor094 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor094(str string, args ...interface{}) string {
-	return Hilight("on_color_094", str, args...)
+func OnColor094(str string) string {
+	return Hilight("on_color_094", str)
 }
 
 // PrintOnColor094 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor094(str string, args ...interface{}) {
-	Print(Hilight("on_color_094", str, args...))
+func PrintOnColor094(str string) {
+	Print(Hilight("on_color_094", str))
 }
 
 // PrintlnOnColor094 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor094(str string, args ...interface{}) {
-	Println(Hilight("on_color_094", str, args...))
+func PrintlnOnColor094(str string) {
+	Println(Hilight("on_color_094", str))
+}
+
+// OnColor094f wraps OnColor094 and works with format
+// strings.
+func OnColor094f(str string, args ...interface{}) string {
+	return OnColor094(Sprintf(str, args...))
+}
+
+// PrintOnColor094f wraps PrintOnColor094 and works with format
+// strings.
+func PrintOnColor094f(str string, args ...interface{}) {
+	PrintOnColor094(Sprintf(str, args...))
+}
+
+// PrintlnOnColor094f wraps PrintlnOnColor094 and works with format
+// strings.
+func PrintlnOnColor094f(str string, args ...interface{}) {
+	PrintlnOnColor094(Sprintf(str, args...))
 }
 
 // Color095 will Hilight() the provided string with the
 // specified ANSI code.
-func Color095(str string, args ...interface{}) string {
-	return Hilight("color_095", str, args...)
+func Color095(str string) string {
+	return Hilight("color_095", str)
 }
 
 // PrintColor095 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor095(str string, args ...interface{}) {
-	Print(Hilight("color_095", str, args...))
+func PrintColor095(str string) {
+	Print(Hilight("color_095", str))
 }
 
 // PrintlnColor095 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor095(str string, args ...interface{}) {
-	Println(Hilight("color_095", str, args...))
+func PrintlnColor095(str string) {
+	Println(Hilight("color_095", str))
+}
+
+// Color095f wraps Color095 and works with format
+// strings.
+func Color095f(str string, args ...interface{}) string {
+	return Color095(Sprintf(str, args...))
+}
+
+// PrintColor095f wraps PrintColor095 and works with format
+// strings.
+func PrintColor095f(str string, args ...interface{}) {
+	PrintColor095(Sprintf(str, args...))
+}
+
+// PrintlnColor095f wraps PrintlnColor095 and works with format
+// strings.
+func PrintlnColor095f(str string, args ...interface{}) {
+	PrintlnColor095(Sprintf(str, args...))
 }
 
 // OnColor095 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor095(str string, args ...interface{}) string {
-	return Hilight("on_color_095", str, args...)
+func OnColor095(str string) string {
+	return Hilight("on_color_095", str)
 }
 
 // PrintOnColor095 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor095(str string, args ...interface{}) {
-	Print(Hilight("on_color_095", str, args...))
+func PrintOnColor095(str string) {
+	Print(Hilight("on_color_095", str))
 }
 
 // PrintlnOnColor095 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor095(str string, args ...interface{}) {
-	Println(Hilight("on_color_095", str, args...))
+func PrintlnOnColor095(str string) {
+	Println(Hilight("on_color_095", str))
+}
+
+// OnColor095f wraps OnColor095 and works with format
+// strings.
+func OnColor095f(str string, args ...interface{}) string {
+	return OnColor095(Sprintf(str, args...))
+}
+
+// PrintOnColor095f wraps PrintOnColor095 and works with format
+// strings.
+func PrintOnColor095f(str string, args ...interface{}) {
+	PrintOnColor095(Sprintf(str, args...))
+}
+
+// PrintlnOnColor095f wraps PrintlnOnColor095 and works with format
+// strings.
+func PrintlnOnColor095f(str string, args ...interface{}) {
+	PrintlnOnColor095(Sprintf(str, args...))
 }
 
 // Color096 will Hilight() the provided string with the
 // specified ANSI code.
-func Color096(str string, args ...interface{}) string {
-	return Hilight("color_096", str, args...)
+func Color096(str string) string {
+	return Hilight("color_096", str)
 }
 
 // PrintColor096 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor096(str string, args ...interface{}) {
-	Print(Hilight("color_096", str, args...))
+func PrintColor096(str string) {
+	Print(Hilight("color_096", str))
 }
 
 // PrintlnColor096 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor096(str string, args ...interface{}) {
-	Println(Hilight("color_096", str, args...))
+func PrintlnColor096(str string) {
+	Println(Hilight("color_096", str))
+}
+
+// Color096f wraps Color096 and works with format
+// strings.
+func Color096f(str string, args ...interface{}) string {
+	return Color096(Sprintf(str, args...))
+}
+
+// PrintColor096f wraps PrintColor096 and works with format
+// strings.
+func PrintColor096f(str string, args ...interface{}) {
+	PrintColor096(Sprintf(str, args...))
+}
+
+// PrintlnColor096f wraps PrintlnColor096 and works with format
+// strings.
+func PrintlnColor096f(str string, args ...interface{}) {
+	PrintlnColor096(Sprintf(str, args...))
 }
 
 // OnColor096 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor096(str string, args ...interface{}) string {
-	return Hilight("on_color_096", str, args...)
+func OnColor096(str string) string {
+	return Hilight("on_color_096", str)
 }
 
 // PrintOnColor096 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor096(str string, args ...interface{}) {
-	Print(Hilight("on_color_096", str, args...))
+func PrintOnColor096(str string) {
+	Print(Hilight("on_color_096", str))
 }
 
 // PrintlnOnColor096 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor096(str string, args ...interface{}) {
-	Println(Hilight("on_color_096", str, args...))
+func PrintlnOnColor096(str string) {
+	Println(Hilight("on_color_096", str))
+}
+
+// OnColor096f wraps OnColor096 and works with format
+// strings.
+func OnColor096f(str string, args ...interface{}) string {
+	return OnColor096(Sprintf(str, args...))
+}
+
+// PrintOnColor096f wraps PrintOnColor096 and works with format
+// strings.
+func PrintOnColor096f(str string, args ...interface{}) {
+	PrintOnColor096(Sprintf(str, args...))
+}
+
+// PrintlnOnColor096f wraps PrintlnOnColor096 and works with format
+// strings.
+func PrintlnOnColor096f(str string, args ...interface{}) {
+	PrintlnOnColor096(Sprintf(str, args...))
 }
 
 // Color097 will Hilight() the provided string with the
 // specified ANSI code.
-func Color097(str string, args ...interface{}) string {
-	return Hilight("color_097", str, args...)
+func Color097(str string) string {
+	return Hilight("color_097", str)
 }
 
 // PrintColor097 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor097(str string, args ...interface{}) {
-	Print(Hilight("color_097", str, args...))
+func PrintColor097(str string) {
+	Print(Hilight("color_097", str))
 }
 
 // PrintlnColor097 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor097(str string, args ...interface{}) {
-	Println(Hilight("color_097", str, args...))
+func PrintlnColor097(str string) {
+	Println(Hilight("color_097", str))
+}
+
+// Color097f wraps Color097 and works with format
+// strings.
+func Color097f(str string, args ...interface{}) string {
+	return Color097(Sprintf(str, args...))
+}
+
+// PrintColor097f wraps PrintColor097 and works with format
+// strings.
+func PrintColor097f(str string, args ...interface{}) {
+	PrintColor097(Sprintf(str, args...))
+}
+
+// PrintlnColor097f wraps PrintlnColor097 and works with format
+// strings.
+func PrintlnColor097f(str string, args ...interface{}) {
+	PrintlnColor097(Sprintf(str, args...))
 }
 
 // OnColor097 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor097(str string, args ...interface{}) string {
-	return Hilight("on_color_097", str, args...)
+func OnColor097(str string) string {
+	return Hilight("on_color_097", str)
 }
 
 // PrintOnColor097 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor097(str string, args ...interface{}) {
-	Print(Hilight("on_color_097", str, args...))
+func PrintOnColor097(str string) {
+	Print(Hilight("on_color_097", str))
 }
 
 // PrintlnOnColor097 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor097(str string, args ...interface{}) {
-	Println(Hilight("on_color_097", str, args...))
+func PrintlnOnColor097(str string) {
+	Println(Hilight("on_color_097", str))
+}
+
+// OnColor097f wraps OnColor097 and works with format
+// strings.
+func OnColor097f(str string, args ...interface{}) string {
+	return OnColor097(Sprintf(str, args...))
+}
+
+// PrintOnColor097f wraps PrintOnColor097 and works with format
+// strings.
+func PrintOnColor097f(str string, args ...interface{}) {
+	PrintOnColor097(Sprintf(str, args...))
+}
+
+// PrintlnOnColor097f wraps PrintlnOnColor097 and works with format
+// strings.
+func PrintlnOnColor097f(str string, args ...interface{}) {
+	PrintlnOnColor097(Sprintf(str, args...))
 }
 
 // Color098 will Hilight() the provided string with the
 // specified ANSI code.
-func Color098(str string, args ...interface{}) string {
-	return Hilight("color_098", str, args...)
+func Color098(str string) string {
+	return Hilight("color_098", str)
 }
 
 // PrintColor098 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor098(str string, args ...interface{}) {
-	Print(Hilight("color_098", str, args...))
+func PrintColor098(str string) {
+	Print(Hilight("color_098", str))
 }
 
 // PrintlnColor098 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor098(str string, args ...interface{}) {
-	Println(Hilight("color_098", str, args...))
+func PrintlnColor098(str string) {
+	Println(Hilight("color_098", str))
+}
+
+// Color098f wraps Color098 and works with format
+// strings.
+func Color098f(str string, args ...interface{}) string {
+	return Color098(Sprintf(str, args...))
+}
+
+// PrintColor098f wraps PrintColor098 and works with format
+// strings.
+func PrintColor098f(str string, args ...interface{}) {
+	PrintColor098(Sprintf(str, args...))
+}
+
+// PrintlnColor098f wraps PrintlnColor098 and works with format
+// strings.
+func PrintlnColor098f(str string, args ...interface{}) {
+	PrintlnColor098(Sprintf(str, args...))
 }
 
 // OnColor098 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor098(str string, args ...interface{}) string {
-	return Hilight("on_color_098", str, args...)
+func OnColor098(str string) string {
+	return Hilight("on_color_098", str)
 }
 
 // PrintOnColor098 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor098(str string, args ...interface{}) {
-	Print(Hilight("on_color_098", str, args...))
+func PrintOnColor098(str string) {
+	Print(Hilight("on_color_098", str))
 }
 
 // PrintlnOnColor098 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor098(str string, args ...interface{}) {
-	Println(Hilight("on_color_098", str, args...))
+func PrintlnOnColor098(str string) {
+	Println(Hilight("on_color_098", str))
+}
+
+// OnColor098f wraps OnColor098 and works with format
+// strings.
+func OnColor098f(str string, args ...interface{}) string {
+	return OnColor098(Sprintf(str, args...))
+}
+
+// PrintOnColor098f wraps PrintOnColor098 and works with format
+// strings.
+func PrintOnColor098f(str string, args ...interface{}) {
+	PrintOnColor098(Sprintf(str, args...))
+}
+
+// PrintlnOnColor098f wraps PrintlnOnColor098 and works with format
+// strings.
+func PrintlnOnColor098f(str string, args ...interface{}) {
+	PrintlnOnColor098(Sprintf(str, args...))
 }
 
 // Color099 will Hilight() the provided string with the
 // specified ANSI code.
-func Color099(str string, args ...interface{}) string {
-	return Hilight("color_099", str, args...)
+func Color099(str string) string {
+	return Hilight("color_099", str)
 }
 
 // PrintColor099 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor099(str string, args ...interface{}) {
-	Print(Hilight("color_099", str, args...))
+func PrintColor099(str string) {
+	Print(Hilight("color_099", str))
 }
 
 // PrintlnColor099 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor099(str string, args ...interface{}) {
-	Println(Hilight("color_099", str, args...))
+func PrintlnColor099(str string) {
+	Println(Hilight("color_099", str))
+}
+
+// Color099f wraps Color099 and works with format
+// strings.
+func Color099f(str string, args ...interface{}) string {
+	return Color099(Sprintf(str, args...))
+}
+
+// PrintColor099f wraps PrintColor099 and works with format
+// strings.
+func PrintColor099f(str string, args ...interface{}) {
+	PrintColor099(Sprintf(str, args...))
+}
+
+// PrintlnColor099f wraps PrintlnColor099 and works with format
+// strings.
+func PrintlnColor099f(str string, args ...interface{}) {
+	PrintlnColor099(Sprintf(str, args...))
 }
 
 // OnColor099 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor099(str string, args ...interface{}) string {
-	return Hilight("on_color_099", str, args...)
+func OnColor099(str string) string {
+	return Hilight("on_color_099", str)
 }
 
 // PrintOnColor099 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor099(str string, args ...interface{}) {
-	Print(Hilight("on_color_099", str, args...))
+func PrintOnColor099(str string) {
+	Print(Hilight("on_color_099", str))
 }
 
 // PrintlnOnColor099 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor099(str string, args ...interface{}) {
-	Println(Hilight("on_color_099", str, args...))
+func PrintlnOnColor099(str string) {
+	Println(Hilight("on_color_099", str))
+}
+
+// OnColor099f wraps OnColor099 and works with format
+// strings.
+func OnColor099f(str string, args ...interface{}) string {
+	return OnColor099(Sprintf(str, args...))
+}
+
+// PrintOnColor099f wraps PrintOnColor099 and works with format
+// strings.
+func PrintOnColor099f(str string, args ...interface{}) {
+	PrintOnColor099(Sprintf(str, args...))
+}
+
+// PrintlnOnColor099f wraps PrintlnOnColor099 and works with format
+// strings.
+func PrintlnOnColor099f(str string, args ...interface{}) {
+	PrintlnOnColor099(Sprintf(str, args...))
 }
 
 // Color100 will Hilight() the provided string with the
 // specified ANSI code.
-func Color100(str string, args ...interface{}) string {
-	return Hilight("color_100", str, args...)
+func Color100(str string) string {
+	return Hilight("color_100", str)
 }
 
 // PrintColor100 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor100(str string, args ...interface{}) {
-	Print(Hilight("color_100", str, args...))
+func PrintColor100(str string) {
+	Print(Hilight("color_100", str))
 }
 
 // PrintlnColor100 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor100(str string, args ...interface{}) {
-	Println(Hilight("color_100", str, args...))
+func PrintlnColor100(str string) {
+	Println(Hilight("color_100", str))
+}
+
+// Color100f wraps Color100 and works with format
+// strings.
+func Color100f(str string, args ...interface{}) string {
+	return Color100(Sprintf(str, args...))
+}
+
+// PrintColor100f wraps PrintColor100 and works with format
+// strings.
+func PrintColor100f(str string, args ...interface{}) {
+	PrintColor100(Sprintf(str, args...))
+}
+
+// PrintlnColor100f wraps PrintlnColor100 and works with format
+// strings.
+func PrintlnColor100f(str string, args ...interface{}) {
+	PrintlnColor100(Sprintf(str, args...))
 }
 
 // OnColor100 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor100(str string, args ...interface{}) string {
-	return Hilight("on_color_100", str, args...)
+func OnColor100(str string) string {
+	return Hilight("on_color_100", str)
 }
 
 // PrintOnColor100 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor100(str string, args ...interface{}) {
-	Print(Hilight("on_color_100", str, args...))
+func PrintOnColor100(str string) {
+	Print(Hilight("on_color_100", str))
 }
 
 // PrintlnOnColor100 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor100(str string, args ...interface{}) {
-	Println(Hilight("on_color_100", str, args...))
+func PrintlnOnColor100(str string) {
+	Println(Hilight("on_color_100", str))
+}
+
+// OnColor100f wraps OnColor100 and works with format
+// strings.
+func OnColor100f(str string, args ...interface{}) string {
+	return OnColor100(Sprintf(str, args...))
+}
+
+// PrintOnColor100f wraps PrintOnColor100 and works with format
+// strings.
+func PrintOnColor100f(str string, args ...interface{}) {
+	PrintOnColor100(Sprintf(str, args...))
+}
+
+// PrintlnOnColor100f wraps PrintlnOnColor100 and works with format
+// strings.
+func PrintlnOnColor100f(str string, args ...interface{}) {
+	PrintlnOnColor100(Sprintf(str, args...))
 }
 
 // Color101 will Hilight() the provided string with the
 // specified ANSI code.
-func Color101(str string, args ...interface{}) string {
-	return Hilight("color_101", str, args...)
+func Color101(str string) string {
+	return Hilight("color_101", str)
 }
 
 // PrintColor101 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor101(str string, args ...interface{}) {
-	Print(Hilight("color_101", str, args...))
+func PrintColor101(str string) {
+	Print(Hilight("color_101", str))
 }
 
 // PrintlnColor101 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor101(str string, args ...interface{}) {
-	Println(Hilight("color_101", str, args...))
+func PrintlnColor101(str string) {
+	Println(Hilight("color_101", str))
+}
+
+// Color101f wraps Color101 and works with format
+// strings.
+func Color101f(str string, args ...interface{}) string {
+	return Color101(Sprintf(str, args...))
+}
+
+// PrintColor101f wraps PrintColor101 and works with format
+// strings.
+func PrintColor101f(str string, args ...interface{}) {
+	PrintColor101(Sprintf(str, args...))
+}
+
+// PrintlnColor101f wraps PrintlnColor101 and works with format
+// strings.
+func PrintlnColor101f(str string, args ...interface{}) {
+	PrintlnColor101(Sprintf(str, args...))
 }
 
 // OnColor101 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor101(str string, args ...interface{}) string {
-	return Hilight("on_color_101", str, args...)
+func OnColor101(str string) string {
+	return Hilight("on_color_101", str)
 }
 
 // PrintOnColor101 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor101(str string, args ...interface{}) {
-	Print(Hilight("on_color_101", str, args...))
+func PrintOnColor101(str string) {
+	Print(Hilight("on_color_101", str))
 }
 
 // PrintlnOnColor101 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor101(str string, args ...interface{}) {
-	Println(Hilight("on_color_101", str, args...))
+func PrintlnOnColor101(str string) {
+	Println(Hilight("on_color_101", str))
+}
+
+// OnColor101f wraps OnColor101 and works with format
+// strings.
+func OnColor101f(str string, args ...interface{}) string {
+	return OnColor101(Sprintf(str, args...))
+}
+
+// PrintOnColor101f wraps PrintOnColor101 and works with format
+// strings.
+func PrintOnColor101f(str string, args ...interface{}) {
+	PrintOnColor101(Sprintf(str, args...))
+}
+
+// PrintlnOnColor101f wraps PrintlnOnColor101 and works with format
+// strings.
+func PrintlnOnColor101f(str string, args ...interface{}) {
+	PrintlnOnColor101(Sprintf(str, args...))
 }
 
 // Color102 will Hilight() the provided string with the
 // specified ANSI code.
-func Color102(str string, args ...interface{}) string {
-	return Hilight("color_102", str, args...)
+func Color102(str string) string {
+	return Hilight("color_102", str)
 }
 
 // PrintColor102 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor102(str string, args ...interface{}) {
-	Print(Hilight("color_102", str, args...))
+func PrintColor102(str string) {
+	Print(Hilight("color_102", str))
 }
 
 // PrintlnColor102 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor102(str string, args ...interface{}) {
-	Println(Hilight("color_102", str, args...))
+func PrintlnColor102(str string) {
+	Println(Hilight("color_102", str))
+}
+
+// Color102f wraps Color102 and works with format
+// strings.
+func Color102f(str string, args ...interface{}) string {
+	return Color102(Sprintf(str, args...))
+}
+
+// PrintColor102f wraps PrintColor102 and works with format
+// strings.
+func PrintColor102f(str string, args ...interface{}) {
+	PrintColor102(Sprintf(str, args...))
+}
+
+// PrintlnColor102f wraps PrintlnColor102 and works with format
+// strings.
+func PrintlnColor102f(str string, args ...interface{}) {
+	PrintlnColor102(Sprintf(str, args...))
 }
 
 // OnColor102 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor102(str string, args ...interface{}) string {
-	return Hilight("on_color_102", str, args...)
+func OnColor102(str string) string {
+	return Hilight("on_color_102", str)
 }
 
 // PrintOnColor102 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor102(str string, args ...interface{}) {
-	Print(Hilight("on_color_102", str, args...))
+func PrintOnColor102(str string) {
+	Print(Hilight("on_color_102", str))
 }
 
 // PrintlnOnColor102 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor102(str string, args ...interface{}) {
-	Println(Hilight("on_color_102", str, args...))
+func PrintlnOnColor102(str string) {
+	Println(Hilight("on_color_102", str))
+}
+
+// OnColor102f wraps OnColor102 and works with format
+// strings.
+func OnColor102f(str string, args ...interface{}) string {
+	return OnColor102(Sprintf(str, args...))
+}
+
+// PrintOnColor102f wraps PrintOnColor102 and works with format
+// strings.
+func PrintOnColor102f(str string, args ...interface{}) {
+	PrintOnColor102(Sprintf(str, args...))
+}
+
+// PrintlnOnColor102f wraps PrintlnOnColor102 and works with format
+// strings.
+func PrintlnOnColor102f(str string, args ...interface{}) {
+	PrintlnOnColor102(Sprintf(str, args...))
 }
 
 // Color103 will Hilight() the provided string with the
 // specified ANSI code.
-func Color103(str string, args ...interface{}) string {
-	return Hilight("color_103", str, args...)
+func Color103(str string) string {
+	return Hilight("color_103", str)
 }
 
 // PrintColor103 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor103(str string, args ...interface{}) {
-	Print(Hilight("color_103", str, args...))
+func PrintColor103(str string) {
+	Print(Hilight("color_103", str))
 }
 
 // PrintlnColor103 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor103(str string, args ...interface{}) {
-	Println(Hilight("color_103", str, args...))
+func PrintlnColor103(str string) {
+	Println(Hilight("color_103", str))
+}
+
+// Color103f wraps Color103 and works with format
+// strings.
+func Color103f(str string, args ...interface{}) string {
+	return Color103(Sprintf(str, args...))
+}
+
+// PrintColor103f wraps PrintColor103 and works with format
+// strings.
+func PrintColor103f(str string, args ...interface{}) {
+	PrintColor103(Sprintf(str, args...))
+}
+
+// PrintlnColor103f wraps PrintlnColor103 and works with format
+// strings.
+func PrintlnColor103f(str string, args ...interface{}) {
+	PrintlnColor103(Sprintf(str, args...))
 }
 
 // OnColor103 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor103(str string, args ...interface{}) string {
-	return Hilight("on_color_103", str, args...)
+func OnColor103(str string) string {
+	return Hilight("on_color_103", str)
 }
 
 // PrintOnColor103 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor103(str string, args ...interface{}) {
-	Print(Hilight("on_color_103", str, args...))
+func PrintOnColor103(str string) {
+	Print(Hilight("on_color_103", str))
 }
 
 // PrintlnOnColor103 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor103(str string, args ...interface{}) {
-	Println(Hilight("on_color_103", str, args...))
+func PrintlnOnColor103(str string) {
+	Println(Hilight("on_color_103", str))
+}
+
+// OnColor103f wraps OnColor103 and works with format
+// strings.
+func OnColor103f(str string, args ...interface{}) string {
+	return OnColor103(Sprintf(str, args...))
+}
+
+// PrintOnColor103f wraps PrintOnColor103 and works with format
+// strings.
+func PrintOnColor103f(str string, args ...interface{}) {
+	PrintOnColor103(Sprintf(str, args...))
+}
+
+// PrintlnOnColor103f wraps PrintlnOnColor103 and works with format
+// strings.
+func PrintlnOnColor103f(str string, args ...interface{}) {
+	PrintlnOnColor103(Sprintf(str, args...))
 }
 
 // Color104 will Hilight() the provided string with the
 // specified ANSI code.
-func Color104(str string, args ...interface{}) string {
-	return Hilight("color_104", str, args...)
+func Color104(str string) string {
+	return Hilight("color_104", str)
 }
 
 // PrintColor104 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor104(str string, args ...interface{}) {
-	Print(Hilight("color_104", str, args...))
+func PrintColor104(str string) {
+	Print(Hilight("color_104", str))
 }
 
 // PrintlnColor104 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor104(str string, args ...interface{}) {
-	Println(Hilight("color_104", str, args...))
+func PrintlnColor104(str string) {
+	Println(Hilight("color_104", str))
+}
+
+// Color104f wraps Color104 and works with format
+// strings.
+func Color104f(str string, args ...interface{}) string {
+	return Color104(Sprintf(str, args...))
+}
+
+// PrintColor104f wraps PrintColor104 and works with format
+// strings.
+func PrintColor104f(str string, args ...interface{}) {
+	PrintColor104(Sprintf(str, args...))
+}
+
+// PrintlnColor104f wraps PrintlnColor104 and works with format
+// strings.
+func PrintlnColor104f(str string, args ...interface{}) {
+	PrintlnColor104(Sprintf(str, args...))
 }
 
 // OnColor104 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor104(str string, args ...interface{}) string {
-	return Hilight("on_color_104", str, args...)
+func OnColor104(str string) string {
+	return Hilight("on_color_104", str)
 }
 
 // PrintOnColor104 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor104(str string, args ...interface{}) {
-	Print(Hilight("on_color_104", str, args...))
+func PrintOnColor104(str string) {
+	Print(Hilight("on_color_104", str))
 }
 
 // PrintlnOnColor104 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor104(str string, args ...interface{}) {
-	Println(Hilight("on_color_104", str, args...))
+func PrintlnOnColor104(str string) {
+	Println(Hilight("on_color_104", str))
+}
+
+// OnColor104f wraps OnColor104 and works with format
+// strings.
+func OnColor104f(str string, args ...interface{}) string {
+	return OnColor104(Sprintf(str, args...))
+}
+
+// PrintOnColor104f wraps PrintOnColor104 and works with format
+// strings.
+func PrintOnColor104f(str string, args ...interface{}) {
+	PrintOnColor104(Sprintf(str, args...))
+}
+
+// PrintlnOnColor104f wraps PrintlnOnColor104 and works with format
+// strings.
+func PrintlnOnColor104f(str string, args ...interface{}) {
+	PrintlnOnColor104(Sprintf(str, args...))
 }
 
 // Color105 will Hilight() the provided string with the
 // specified ANSI code.
-func Color105(str string, args ...interface{}) string {
-	return Hilight("color_105", str, args...)
+func Color105(str string) string {
+	return Hilight("color_105", str)
 }
 
 // PrintColor105 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor105(str string, args ...interface{}) {
-	Print(Hilight("color_105", str, args...))
+func PrintColor105(str string) {
+	Print(Hilight("color_105", str))
 }
 
 // PrintlnColor105 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor105(str string, args ...interface{}) {
-	Println(Hilight("color_105", str, args...))
+func PrintlnColor105(str string) {
+	Println(Hilight("color_105", str))
+}
+
+// Color105f wraps Color105 and works with format
+// strings.
+func Color105f(str string, args ...interface{}) string {
+	return Color105(Sprintf(str, args...))
+}
+
+// PrintColor105f wraps PrintColor105 and works with format
+// strings.
+func PrintColor105f(str string, args ...interface{}) {
+	PrintColor105(Sprintf(str, args...))
+}
+
+// PrintlnColor105f wraps PrintlnColor105 and works with format
+// strings.
+func PrintlnColor105f(str string, args ...interface{}) {
+	PrintlnColor105(Sprintf(str, args...))
 }
 
 // OnColor105 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor105(str string, args ...interface{}) string {
-	return Hilight("on_color_105", str, args...)
+func OnColor105(str string) string {
+	return Hilight("on_color_105", str)
 }
 
 // PrintOnColor105 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor105(str string, args ...interface{}) {
-	Print(Hilight("on_color_105", str, args...))
+func PrintOnColor105(str string) {
+	Print(Hilight("on_color_105", str))
 }
 
 // PrintlnOnColor105 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor105(str string, args ...interface{}) {
-	Println(Hilight("on_color_105", str, args...))
+func PrintlnOnColor105(str string) {
+	Println(Hilight("on_color_105", str))
+}
+
+// OnColor105f wraps OnColor105 and works with format
+// strings.
+func OnColor105f(str string, args ...interface{}) string {
+	return OnColor105(Sprintf(str, args...))
+}
+
+// PrintOnColor105f wraps PrintOnColor105 and works with format
+// strings.
+func PrintOnColor105f(str string, args ...interface{}) {
+	PrintOnColor105(Sprintf(str, args...))
+}
+
+// PrintlnOnColor105f wraps PrintlnOnColor105 and works with format
+// strings.
+func PrintlnOnColor105f(str string, args ...interface{}) {
+	PrintlnOnColor105(Sprintf(str, args...))
 }
 
 // Color106 will Hilight() the provided string with the
 // specified ANSI code.
-func Color106(str string, args ...interface{}) string {
-	return Hilight("color_106", str, args...)
+func Color106(str string) string {
+	return Hilight("color_106", str)
 }
 
 // PrintColor106 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor106(str string, args ...interface{}) {
-	Print(Hilight("color_106", str, args...))
+func PrintColor106(str string) {
+	Print(Hilight("color_106", str))
 }
 
 // PrintlnColor106 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor106(str string, args ...interface{}) {
-	Println(Hilight("color_106", str, args...))
+func PrintlnColor106(str string) {
+	Println(Hilight("color_106", str))
+}
+
+// Color106f wraps Color106 and works with format
+// strings.
+func Color106f(str string, args ...interface{}) string {
+	return Color106(Sprintf(str, args...))
+}
+
+// PrintColor106f wraps PrintColor106 and works with format
+// strings.
+func PrintColor106f(str string, args ...interface{}) {
+	PrintColor106(Sprintf(str, args...))
+}
+
+// PrintlnColor106f wraps PrintlnColor106 and works with format
+// strings.
+func PrintlnColor106f(str string, args ...interface{}) {
+	PrintlnColor106(Sprintf(str, args...))
 }
 
 // OnColor106 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor106(str string, args ...interface{}) string {
-	return Hilight("on_color_106", str, args...)
+func OnColor106(str string) string {
+	return Hilight("on_color_106", str)
 }
 
 // PrintOnColor106 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor106(str string, args ...interface{}) {
-	Print(Hilight("on_color_106", str, args...))
+func PrintOnColor106(str string) {
+	Print(Hilight("on_color_106", str))
 }
 
 // PrintlnOnColor106 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor106(str string, args ...interface{}) {
-	Println(Hilight("on_color_106", str, args...))
+func PrintlnOnColor106(str string) {
+	Println(Hilight("on_color_106", str))
+}
+
+// OnColor106f wraps OnColor106 and works with format
+// strings.
+func OnColor106f(str string, args ...interface{}) string {
+	return OnColor106(Sprintf(str, args...))
+}
+
+// PrintOnColor106f wraps PrintOnColor106 and works with format
+// strings.
+func PrintOnColor106f(str string, args ...interface{}) {
+	PrintOnColor106(Sprintf(str, args...))
+}
+
+// PrintlnOnColor106f wraps PrintlnOnColor106 and works with format
+// strings.
+func PrintlnOnColor106f(str string, args ...interface{}) {
+	PrintlnOnColor106(Sprintf(str, args...))
 }
 
 // Color107 will Hilight() the provided string with the
 // specified ANSI code.
-func Color107(str string, args ...interface{}) string {
-	return Hilight("color_107", str, args...)
+func Color107(str string) string {
+	return Hilight("color_107", str)
 }
 
 // PrintColor107 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor107(str string, args ...interface{}) {
-	Print(Hilight("color_107", str, args...))
+func PrintColor107(str string) {
+	Print(Hilight("color_107", str))
 }
 
 // PrintlnColor107 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor107(str string, args ...interface{}) {
-	Println(Hilight("color_107", str, args...))
+func PrintlnColor107(str string) {
+	Println(Hilight("color_107", str))
+}
+
+// Color107f wraps Color107 and works with format
+// strings.
+func Color107f(str string, args ...interface{}) string {
+	return Color107(Sprintf(str, args...))
+}
+
+// PrintColor107f wraps PrintColor107 and works with format
+// strings.
+func PrintColor107f(str string, args ...interface{}) {
+	PrintColor107(Sprintf(str, args...))
+}
+
+// PrintlnColor107f wraps PrintlnColor107 and works with format
+// strings.
+func PrintlnColor107f(str string, args ...interface{}) {
+	PrintlnColor107(Sprintf(str, args...))
 }
 
 // OnColor107 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor107(str string, args ...interface{}) string {
-	return Hilight("on_color_107", str, args...)
+func OnColor107(str string) string {
+	return Hilight("on_color_107", str)
 }
 
 // PrintOnColor107 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor107(str string, args ...interface{}) {
-	Print(Hilight("on_color_107", str, args...))
+func PrintOnColor107(str string) {
+	Print(Hilight("on_color_107", str))
 }
 
 // PrintlnOnColor107 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor107(str string, args ...interface{}) {
-	Println(Hilight("on_color_107", str, args...))
+func PrintlnOnColor107(str string) {
+	Println(Hilight("on_color_107", str))
+}
+
+// OnColor107f wraps OnColor107 and works with format
+// strings.
+func OnColor107f(str string, args ...interface{}) string {
+	return OnColor107(Sprintf(str, args...))
+}
+
+// PrintOnColor107f wraps PrintOnColor107 and works with format
+// strings.
+func PrintOnColor107f(str string, args ...interface{}) {
+	PrintOnColor107(Sprintf(str, args...))
+}
+
+// PrintlnOnColor107f wraps PrintlnOnColor107 and works with format
+// strings.
+func PrintlnOnColor107f(str string, args ...interface{}) {
+	PrintlnOnColor107(Sprintf(str, args...))
 }
 
 // Color108 will Hilight() the provided string with the
 // specified ANSI code.
-func Color108(str string, args ...interface{}) string {
-	return Hilight("color_108", str, args...)
+func Color108(str string) string {
+	return Hilight("color_108", str)
 }
 
 // PrintColor108 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor108(str string, args ...interface{}) {
-	Print(Hilight("color_108", str, args...))
+func PrintColor108(str string) {
+	Print(Hilight("color_108", str))
 }
 
 // PrintlnColor108 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor108(str string, args ...interface{}) {
-	Println(Hilight("color_108", str, args...))
+func PrintlnColor108(str string) {
+	Println(Hilight("color_108", str))
+}
+
+// Color108f wraps Color108 and works with format
+// strings.
+func Color108f(str string, args ...interface{}) string {
+	return Color108(Sprintf(str, args...))
+}
+
+// PrintColor108f wraps PrintColor108 and works with format
+// strings.
+func PrintColor108f(str string, args ...interface{}) {
+	PrintColor108(Sprintf(str, args...))
+}
+
+// PrintlnColor108f wraps PrintlnColor108 and works with format
+// strings.
+func PrintlnColor108f(str string, args ...interface{}) {
+	PrintlnColor108(Sprintf(str, args...))
 }
 
 // OnColor108 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor108(str string, args ...interface{}) string {
-	return Hilight("on_color_108", str, args...)
+func OnColor108(str string) string {
+	return Hilight("on_color_108", str)
 }
 
 // PrintOnColor108 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor108(str string, args ...interface{}) {
-	Print(Hilight("on_color_108", str, args...))
+func PrintOnColor108(str string) {
+	Print(Hilight("on_color_108", str))
 }
 
 // PrintlnOnColor108 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor108(str string, args ...interface{}) {
-	Println(Hilight("on_color_108", str, args...))
+func PrintlnOnColor108(str string) {
+	Println(Hilight("on_color_108", str))
+}
+
+// OnColor108f wraps OnColor108 and works with format
+// strings.
+func OnColor108f(str string, args ...interface{}) string {
+	return OnColor108(Sprintf(str, args...))
+}
+
+// PrintOnColor108f wraps PrintOnColor108 and works with format
+// strings.
+func PrintOnColor108f(str string, args ...interface{}) {
+	PrintOnColor108(Sprintf(str, args...))
+}
+
+// PrintlnOnColor108f wraps PrintlnOnColor108 and works with format
+// strings.
+func PrintlnOnColor108f(str string, args ...interface{}) {
+	PrintlnOnColor108(Sprintf(str, args...))
 }
 
 // Color109 will Hilight() the provided string with the
 // specified ANSI code.
-func Color109(str string, args ...interface{}) string {
-	return Hilight("color_109", str, args...)
+func Color109(str string) string {
+	return Hilight("color_109", str)
 }
 
 // PrintColor109 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor109(str string, args ...interface{}) {
-	Print(Hilight("color_109", str, args...))
+func PrintColor109(str string) {
+	Print(Hilight("color_109", str))
 }
 
 // PrintlnColor109 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor109(str string, args ...interface{}) {
-	Println(Hilight("color_109", str, args...))
+func PrintlnColor109(str string) {
+	Println(Hilight("color_109", str))
+}
+
+// Color109f wraps Color109 and works with format
+// strings.
+func Color109f(str string, args ...interface{}) string {
+	return Color109(Sprintf(str, args...))
+}
+
+// PrintColor109f wraps PrintColor109 and works with format
+// strings.
+func PrintColor109f(str string, args ...interface{}) {
+	PrintColor109(Sprintf(str, args...))
+}
+
+// PrintlnColor109f wraps PrintlnColor109 and works with format
+// strings.
+func PrintlnColor109f(str string, args ...interface{}) {
+	PrintlnColor109(Sprintf(str, args...))
 }
 
 // OnColor109 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor109(str string, args ...interface{}) string {
-	return Hilight("on_color_109", str, args...)
+func OnColor109(str string) string {
+	return Hilight("on_color_109", str)
 }
 
 // PrintOnColor109 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor109(str string, args ...interface{}) {
-	Print(Hilight("on_color_109", str, args...))
+func PrintOnColor109(str string) {
+	Print(Hilight("on_color_109", str))
 }
 
 // PrintlnOnColor109 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor109(str string, args ...interface{}) {
-	Println(Hilight("on_color_109", str, args...))
+func PrintlnOnColor109(str string) {
+	Println(Hilight("on_color_109", str))
+}
+
+// OnColor109f wraps OnColor109 and works with format
+// strings.
+func OnColor109f(str string, args ...interface{}) string {
+	return OnColor109(Sprintf(str, args...))
+}
+
+// PrintOnColor109f wraps PrintOnColor109 and works with format
+// strings.
+func PrintOnColor109f(str string, args ...interface{}) {
+	PrintOnColor109(Sprintf(str, args...))
+}
+
+// PrintlnOnColor109f wraps PrintlnOnColor109 and works with format
+// strings.
+func PrintlnOnColor109f(str string, args ...interface{}) {
+	PrintlnOnColor109(Sprintf(str, args...))
 }
 
 // Color110 will Hilight() the provided string with the
 // specified ANSI code.
-func Color110(str string, args ...interface{}) string {
-	return Hilight("color_110", str, args...)
+func Color110(str string) string {
+	return Hilight("color_110", str)
 }
 
 // PrintColor110 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor110(str string, args ...interface{}) {
-	Print(Hilight("color_110", str, args...))
+func PrintColor110(str string) {
+	Print(Hilight("color_110", str))
 }
 
 // PrintlnColor110 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor110(str string, args ...interface{}) {
-	Println(Hilight("color_110", str, args...))
+func PrintlnColor110(str string) {
+	Println(Hilight("color_110", str))
+}
+
+// Color110f wraps Color110 and works with format
+// strings.
+func Color110f(str string, args ...interface{}) string {
+	return Color110(Sprintf(str, args...))
+}
+
+// PrintColor110f wraps PrintColor110 and works with format
+// strings.
+func PrintColor110f(str string, args ...interface{}) {
+	PrintColor110(Sprintf(str, args...))
+}
+
+// PrintlnColor110f wraps PrintlnColor110 and works with format
+// strings.
+func PrintlnColor110f(str string, args ...interface{}) {
+	PrintlnColor110(Sprintf(str, args...))
 }
 
 // OnColor110 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor110(str string, args ...interface{}) string {
-	return Hilight("on_color_110", str, args...)
+func OnColor110(str string) string {
+	return Hilight("on_color_110", str)
 }
 
 // PrintOnColor110 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor110(str string, args ...interface{}) {
-	Print(Hilight("on_color_110", str, args...))
+func PrintOnColor110(str string) {
+	Print(Hilight("on_color_110", str))
 }
 
 // PrintlnOnColor110 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor110(str string, args ...interface{}) {
-	Println(Hilight("on_color_110", str, args...))
+func PrintlnOnColor110(str string) {
+	Println(Hilight("on_color_110", str))
+}
+
+// OnColor110f wraps OnColor110 and works with format
+// strings.
+func OnColor110f(str string, args ...interface{}) string {
+	return OnColor110(Sprintf(str, args...))
+}
+
+// PrintOnColor110f wraps PrintOnColor110 and works with format
+// strings.
+func PrintOnColor110f(str string, args ...interface{}) {
+	PrintOnColor110(Sprintf(str, args...))
+}
+
+// PrintlnOnColor110f wraps PrintlnOnColor110 and works with format
+// strings.
+func PrintlnOnColor110f(str string, args ...interface{}) {
+	PrintlnOnColor110(Sprintf(str, args...))
 }
 
 // Color111 will Hilight() the provided string with the
 // specified ANSI code.
-func Color111(str string, args ...interface{}) string {
-	return Hilight("color_111", str, args...)
+func Color111(str string) string {
+	return Hilight("color_111", str)
 }
 
 // PrintColor111 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor111(str string, args ...interface{}) {
-	Print(Hilight("color_111", str, args...))
+func PrintColor111(str string) {
+	Print(Hilight("color_111", str))
 }
 
 // PrintlnColor111 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor111(str string, args ...interface{}) {
-	Println(Hilight("color_111", str, args...))
+func PrintlnColor111(str string) {
+	Println(Hilight("color_111", str))
+}
+
+// Color111f wraps Color111 and works with format
+// strings.
+func Color111f(str string, args ...interface{}) string {
+	return Color111(Sprintf(str, args...))
+}
+
+// PrintColor111f wraps PrintColor111 and works with format
+// strings.
+func PrintColor111f(str string, args ...interface{}) {
+	PrintColor111(Sprintf(str, args...))
+}
+
+// PrintlnColor111f wraps PrintlnColor111 and works with format
+// strings.
+func PrintlnColor111f(str string, args ...interface{}) {
+	PrintlnColor111(Sprintf(str, args...))
 }
 
 // OnColor111 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor111(str string, args ...interface{}) string {
-	return Hilight("on_color_111", str, args...)
+func OnColor111(str string) string {
+	return Hilight("on_color_111", str)
 }
 
 // PrintOnColor111 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor111(str string, args ...interface{}) {
-	Print(Hilight("on_color_111", str, args...))
+func PrintOnColor111(str string) {
+	Print(Hilight("on_color_111", str))
 }
 
 // PrintlnOnColor111 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor111(str string, args ...interface{}) {
-	Println(Hilight("on_color_111", str, args...))
+func PrintlnOnColor111(str string) {
+	Println(Hilight("on_color_111", str))
+}
+
+// OnColor111f wraps OnColor111 and works with format
+// strings.
+func OnColor111f(str string, args ...interface{}) string {
+	return OnColor111(Sprintf(str, args...))
+}
+
+// PrintOnColor111f wraps PrintOnColor111 and works with format
+// strings.
+func PrintOnColor111f(str string, args ...interface{}) {
+	PrintOnColor111(Sprintf(str, args...))
+}
+
+// PrintlnOnColor111f wraps PrintlnOnColor111 and works with format
+// strings.
+func PrintlnOnColor111f(str string, args ...interface{}) {
+	PrintlnOnColor111(Sprintf(str, args...))
 }
 
 // Color112 will Hilight() the provided string with the
 // specified ANSI code.
-func Color112(str string, args ...interface{}) string {
-	return Hilight("color_112", str, args...)
+func Color112(str string) string {
+	return Hilight("color_112", str)
 }
 
 // PrintColor112 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor112(str string, args ...interface{}) {
-	Print(Hilight("color_112", str, args...))
+func PrintColor112(str string) {
+	Print(Hilight("color_112", str))
 }
 
 // PrintlnColor112 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor112(str string, args ...interface{}) {
-	Println(Hilight("color_112", str, args...))
+func PrintlnColor112(str string) {
+	Println(Hilight("color_112", str))
+}
+
+// Color112f wraps Color112 and works with format
+// strings.
+func Color112f(str string, args ...interface{}) string {
+	return Color112(Sprintf(str, args...))
+}
+
+// PrintColor112f wraps PrintColor112 and works with format
+// strings.
+func PrintColor112f(str string, args ...interface{}) {
+	PrintColor112(Sprintf(str, args...))
+}
+
+// PrintlnColor112f wraps PrintlnColor112 and works with format
+// strings.
+func PrintlnColor112f(str string, args ...interface{}) {
+	PrintlnColor112(Sprintf(str, args...))
 }
 
 // OnColor112 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor112(str string, args ...interface{}) string {
-	return Hilight("on_color_112", str, args...)
+func OnColor112(str string) string {
+	return Hilight("on_color_112", str)
 }
 
 // PrintOnColor112 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor112(str string, args ...interface{}) {
-	Print(Hilight("on_color_112", str, args...))
+func PrintOnColor112(str string) {
+	Print(Hilight("on_color_112", str))
 }
 
 // PrintlnOnColor112 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor112(str string, args ...interface{}) {
-	Println(Hilight("on_color_112", str, args...))
+func PrintlnOnColor112(str string) {
+	Println(Hilight("on_color_112", str))
+}
+
+// OnColor112f wraps OnColor112 and works with format
+// strings.
+func OnColor112f(str string, args ...interface{}) string {
+	return OnColor112(Sprintf(str, args...))
+}
+
+// PrintOnColor112f wraps PrintOnColor112 and works with format
+// strings.
+func PrintOnColor112f(str string, args ...interface{}) {
+	PrintOnColor112(Sprintf(str, args...))
+}
+
+// PrintlnOnColor112f wraps PrintlnOnColor112 and works with format
+// strings.
+func PrintlnOnColor112f(str string, args ...interface{}) {
+	PrintlnOnColor112(Sprintf(str, args...))
 }
 
 // Color113 will Hilight() the provided string with the
 // specified ANSI code.
-func Color113(str string, args ...interface{}) string {
-	return Hilight("color_113", str, args...)
+func Color113(str string) string {
+	return Hilight("color_113", str)
 }
 
 // PrintColor113 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor113(str string, args ...interface{}) {
-	Print(Hilight("color_113", str, args...))
+func PrintColor113(str string) {
+	Print(Hilight("color_113", str))
 }
 
 // PrintlnColor113 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor113(str string, args ...interface{}) {
-	Println(Hilight("color_113", str, args...))
+func PrintlnColor113(str string) {
+	Println(Hilight("color_113", str))
+}
+
+// Color113f wraps Color113 and works with format
+// strings.
+func Color113f(str string, args ...interface{}) string {
+	return Color113(Sprintf(str, args...))
+}
+
+// PrintColor113f wraps PrintColor113 and works with format
+// strings.
+func PrintColor113f(str string, args ...interface{}) {
+	PrintColor113(Sprintf(str, args...))
+}
+
+// PrintlnColor113f wraps PrintlnColor113 and works with format
+// strings.
+func PrintlnColor113f(str string, args ...interface{}) {
+	PrintlnColor113(Sprintf(str, args...))
 }
 
 // OnColor113 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor113(str string, args ...interface{}) string {
-	return Hilight("on_color_113", str, args...)
+func OnColor113(str string) string {
+	return Hilight("on_color_113", str)
 }
 
 // PrintOnColor113 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor113(str string, args ...interface{}) {
-	Print(Hilight("on_color_113", str, args...))
+func PrintOnColor113(str string) {
+	Print(Hilight("on_color_113", str))
 }
 
 // PrintlnOnColor113 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor113(str string, args ...interface{}) {
-	Println(Hilight("on_color_113", str, args...))
+func PrintlnOnColor113(str string) {
+	Println(Hilight("on_color_113", str))
+}
+
+// OnColor113f wraps OnColor113 and works with format
+// strings.
+func OnColor113f(str string, args ...interface{}) string {
+	return OnColor113(Sprintf(str, args...))
+}
+
+// PrintOnColor113f wraps PrintOnColor113 and works with format
+// strings.
+func PrintOnColor113f(str string, args ...interface{}) {
+	PrintOnColor113(Sprintf(str, args...))
+}
+
+// PrintlnOnColor113f wraps PrintlnOnColor113 and works with format
+// strings.
+func PrintlnOnColor113f(str string, args ...interface{}) {
+	PrintlnOnColor113(Sprintf(str, args...))
 }
 
 // Color114 will Hilight() the provided string with the
 // specified ANSI code.
-func Color114(str string, args ...interface{}) string {
-	return Hilight("color_114", str, args...)
+func Color114(str string) string {
+	return Hilight("color_114", str)
 }
 
 // PrintColor114 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor114(str string, args ...interface{}) {
-	Print(Hilight("color_114", str, args...))
+func PrintColor114(str string) {
+	Print(Hilight("color_114", str))
 }
 
 // PrintlnColor114 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor114(str string, args ...interface{}) {
-	Println(Hilight("color_114", str, args...))
+func PrintlnColor114(str string) {
+	Println(Hilight("color_114", str))
+}
+
+// Color114f wraps Color114 and works with format
+// strings.
+func Color114f(str string, args ...interface{}) string {
+	return Color114(Sprintf(str, args...))
+}
+
+// PrintColor114f wraps PrintColor114 and works with format
+// strings.
+func PrintColor114f(str string, args ...interface{}) {
+	PrintColor114(Sprintf(str, args...))
+}
+
+// PrintlnColor114f wraps PrintlnColor114 and works with format
+// strings.
+func PrintlnColor114f(str string, args ...interface{}) {
+	PrintlnColor114(Sprintf(str, args...))
 }
 
 // OnColor114 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor114(str string, args ...interface{}) string {
-	return Hilight("on_color_114", str, args...)
+func OnColor114(str string) string {
+	return Hilight("on_color_114", str)
 }
 
 // PrintOnColor114 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor114(str string, args ...interface{}) {
-	Print(Hilight("on_color_114", str, args...))
+func PrintOnColor114(str string) {
+	Print(Hilight("on_color_114", str))
 }
 
 // PrintlnOnColor114 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor114(str string, args ...interface{}) {
-	Println(Hilight("on_color_114", str, args...))
+func PrintlnOnColor114(str string) {
+	Println(Hilight("on_color_114", str))
+}
+
+// OnColor114f wraps OnColor114 and works with format
+// strings.
+func OnColor114f(str string, args ...interface{}) string {
+	return OnColor114(Sprintf(str, args...))
+}
+
+// PrintOnColor114f wraps PrintOnColor114 and works with format
+// strings.
+func PrintOnColor114f(str string, args ...interface{}) {
+	PrintOnColor114(Sprintf(str, args...))
+}
+
+// PrintlnOnColor114f wraps PrintlnOnColor114 and works with format
+// strings.
+func PrintlnOnColor114f(str string, args ...interface{}) {
+	PrintlnOnColor114(Sprintf(str, args...))
 }
 
 // Color115 will Hilight() the provided string with the
 // specified ANSI code.
-func Color115(str string, args ...interface{}) string {
-	return Hilight("color_115", str, args...)
+func Color115(str string) string {
+	return Hilight("color_115", str)
 }
 
 // PrintColor115 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor115(str string, args ...interface{}) {
-	Print(Hilight("color_115", str, args...))
+func PrintColor115(str string) {
+	Print(Hilight("color_115", str))
 }
 
 // PrintlnColor115 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor115(str string, args ...interface{}) {
-	Println(Hilight("color_115", str, args...))
+func PrintlnColor115(str string) {
+	Println(Hilight("color_115", str))
+}
+
+// Color115f wraps Color115 and works with format
+// strings.
+func Color115f(str string, args ...interface{}) string {
+	return Color115(Sprintf(str, args...))
+}
+
+// PrintColor115f wraps PrintColor115 and works with format
+// strings.
+func PrintColor115f(str string, args ...interface{}) {
+	PrintColor115(Sprintf(str, args...))
+}
+
+// PrintlnColor115f wraps PrintlnColor115 and works with format
+// strings.
+func PrintlnColor115f(str string, args ...interface{}) {
+	PrintlnColor115(Sprintf(str, args...))
 }
 
 // OnColor115 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor115(str string, args ...interface{}) string {
-	return Hilight("on_color_115", str, args...)
+func OnColor115(str string) string {
+	return Hilight("on_color_115", str)
 }
 
 // PrintOnColor115 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor115(str string, args ...interface{}) {
-	Print(Hilight("on_color_115", str, args...))
+func PrintOnColor115(str string) {
+	Print(Hilight("on_color_115", str))
 }
 
 // PrintlnOnColor115 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor115(str string, args ...interface{}) {
-	Println(Hilight("on_color_115", str, args...))
+func PrintlnOnColor115(str string) {
+	Println(Hilight("on_color_115", str))
+}
+
+// OnColor115f wraps OnColor115 and works with format
+// strings.
+func OnColor115f(str string, args ...interface{}) string {
+	return OnColor115(Sprintf(str, args...))
+}
+
+// PrintOnColor115f wraps PrintOnColor115 and works with format
+// strings.
+func PrintOnColor115f(str string, args ...interface{}) {
+	PrintOnColor115(Sprintf(str, args...))
+}
+
+// PrintlnOnColor115f wraps PrintlnOnColor115 and works with format
+// strings.
+func PrintlnOnColor115f(str string, args ...interface{}) {
+	PrintlnOnColor115(Sprintf(str, args...))
 }
 
 // Color116 will Hilight() the provided string with the
 // specified ANSI code.
-func Color116(str string, args ...interface{}) string {
-	return Hilight("color_116", str, args...)
+func Color116(str string) string {
+	return Hilight("color_116", str)
 }
 
 // PrintColor116 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor116(str string, args ...interface{}) {
-	Print(Hilight("color_116", str, args...))
+func PrintColor116(str string) {
+	Print(Hilight("color_116", str))
 }
 
 // PrintlnColor116 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor116(str string, args ...interface{}) {
-	Println(Hilight("color_116", str, args...))
+func PrintlnColor116(str string) {
+	Println(Hilight("color_116", str))
+}
+
+// Color116f wraps Color116 and works with format
+// strings.
+func Color116f(str string, args ...interface{}) string {
+	return Color116(Sprintf(str, args...))
+}
+
+// PrintColor116f wraps PrintColor116 and works with format
+// strings.
+func PrintColor116f(str string, args ...interface{}) {
+	PrintColor116(Sprintf(str, args...))
+}
+
+// PrintlnColor116f wraps PrintlnColor116 and works with format
+// strings.
+func PrintlnColor116f(str string, args ...interface{}) {
+	PrintlnColor116(Sprintf(str, args...))
 }
 
 // OnColor116 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor116(str string, args ...interface{}) string {
-	return Hilight("on_color_116", str, args...)
+func OnColor116(str string) string {
+	return Hilight("on_color_116", str)
 }
 
 // PrintOnColor116 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor116(str string, args ...interface{}) {
-	Print(Hilight("on_color_116", str, args...))
+func PrintOnColor116(str string) {
+	Print(Hilight("on_color_116", str))
 }
 
 // PrintlnOnColor116 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor116(str string, args ...interface{}) {
-	Println(Hilight("on_color_116", str, args...))
+func PrintlnOnColor116(str string) {
+	Println(Hilight("on_color_116", str))
+}
+
+// OnColor116f wraps OnColor116 and works with format
+// strings.
+func OnColor116f(str string, args ...interface{}) string {
+	return OnColor116(Sprintf(str, args...))
+}
+
+// PrintOnColor116f wraps PrintOnColor116 and works with format
+// strings.
+func PrintOnColor116f(str string, args ...interface{}) {
+	PrintOnColor116(Sprintf(str, args...))
+}
+
+// PrintlnOnColor116f wraps PrintlnOnColor116 and works with format
+// strings.
+func PrintlnOnColor116f(str string, args ...interface{}) {
+	PrintlnOnColor116(Sprintf(str, args...))
 }
 
 // Color117 will Hilight() the provided string with the
 // specified ANSI code.
-func Color117(str string, args ...interface{}) string {
-	return Hilight("color_117", str, args...)
+func Color117(str string) string {
+	return Hilight("color_117", str)
 }
 
 // PrintColor117 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor117(str string, args ...interface{}) {
-	Print(Hilight("color_117", str, args...))
+func PrintColor117(str string) {
+	Print(Hilight("color_117", str))
 }
 
 // PrintlnColor117 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor117(str string, args ...interface{}) {
-	Println(Hilight("color_117", str, args...))
+func PrintlnColor117(str string) {
+	Println(Hilight("color_117", str))
+}
+
+// Color117f wraps Color117 and works with format
+// strings.
+func Color117f(str string, args ...interface{}) string {
+	return Color117(Sprintf(str, args...))
+}
+
+// PrintColor117f wraps PrintColor117 and works with format
+// strings.
+func PrintColor117f(str string, args ...interface{}) {
+	PrintColor117(Sprintf(str, args...))
+}
+
+// PrintlnColor117f wraps PrintlnColor117 and works with format
+// strings.
+func PrintlnColor117f(str string, args ...interface{}) {
+	PrintlnColor117(Sprintf(str, args...))
 }
 
 // OnColor117 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor117(str string, args ...interface{}) string {
-	return Hilight("on_color_117", str, args...)
+func OnColor117(str string) string {
+	return Hilight("on_color_117", str)
 }
 
 // PrintOnColor117 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor117(str string, args ...interface{}) {
-	Print(Hilight("on_color_117", str, args...))
+func PrintOnColor117(str string) {
+	Print(Hilight("on_color_117", str))
 }
 
 // PrintlnOnColor117 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor117(str string, args ...interface{}) {
-	Println(Hilight("on_color_117", str, args...))
+func PrintlnOnColor117(str string) {
+	Println(Hilight("on_color_117", str))
+}
+
+// OnColor117f wraps OnColor117 and works with format
+// strings.
+func OnColor117f(str string, args ...interface{}) string {
+	return OnColor117(Sprintf(str, args...))
+}
+
+// PrintOnColor117f wraps PrintOnColor117 and works with format
+// strings.
+func PrintOnColor117f(str string, args ...interface{}) {
+	PrintOnColor117(Sprintf(str, args...))
+}
+
+// PrintlnOnColor117f wraps PrintlnOnColor117 and works with format
+// strings.
+func PrintlnOnColor117f(str string, args ...interface{}) {
+	PrintlnOnColor117(Sprintf(str, args...))
 }
 
 // Color118 will Hilight() the provided string with the
 // specified ANSI code.
-func Color118(str string, args ...interface{}) string {
-	return Hilight("color_118", str, args...)
+func Color118(str string) string {
+	return Hilight("color_118", str)
 }
 
 // PrintColor118 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor118(str string, args ...interface{}) {
-	Print(Hilight("color_118", str, args...))
+func PrintColor118(str string) {
+	Print(Hilight("color_118", str))
 }
 
 // PrintlnColor118 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor118(str string, args ...interface{}) {
-	Println(Hilight("color_118", str, args...))
+func PrintlnColor118(str string) {
+	Println(Hilight("color_118", str))
+}
+
+// Color118f wraps Color118 and works with format
+// strings.
+func Color118f(str string, args ...interface{}) string {
+	return Color118(Sprintf(str, args...))
+}
+
+// PrintColor118f wraps PrintColor118 and works with format
+// strings.
+func PrintColor118f(str string, args ...interface{}) {
+	PrintColor118(Sprintf(str, args...))
+}
+
+// PrintlnColor118f wraps PrintlnColor118 and works with format
+// strings.
+func PrintlnColor118f(str string, args ...interface{}) {
+	PrintlnColor118(Sprintf(str, args...))
 }
 
 // OnColor118 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor118(str string, args ...interface{}) string {
-	return Hilight("on_color_118", str, args...)
+func OnColor118(str string) string {
+	return Hilight("on_color_118", str)
 }
 
 // PrintOnColor118 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor118(str string, args ...interface{}) {
-	Print(Hilight("on_color_118", str, args...))
+func PrintOnColor118(str string) {
+	Print(Hilight("on_color_118", str))
 }
 
 // PrintlnOnColor118 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor118(str string, args ...interface{}) {
-	Println(Hilight("on_color_118", str, args...))
+func PrintlnOnColor118(str string) {
+	Println(Hilight("on_color_118", str))
+}
+
+// OnColor118f wraps OnColor118 and works with format
+// strings.
+func OnColor118f(str string, args ...interface{}) string {
+	return OnColor118(Sprintf(str, args...))
+}
+
+// PrintOnColor118f wraps PrintOnColor118 and works with format
+// strings.
+func PrintOnColor118f(str string, args ...interface{}) {
+	PrintOnColor118(Sprintf(str, args...))
+}
+
+// PrintlnOnColor118f wraps PrintlnOnColor118 and works with format
+// strings.
+func PrintlnOnColor118f(str string, args ...interface{}) {
+	PrintlnOnColor118(Sprintf(str, args...))
 }
 
 // Color119 will Hilight() the provided string with the
 // specified ANSI code.
-func Color119(str string, args ...interface{}) string {
-	return Hilight("color_119", str, args...)
+func Color119(str string) string {
+	return Hilight("color_119", str)
 }
 
 // PrintColor119 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor119(str string, args ...interface{}) {
-	Print(Hilight("color_119", str, args...))
+func PrintColor119(str string) {
+	Print(Hilight("color_119", str))
 }
 
 // PrintlnColor119 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor119(str string, args ...interface{}) {
-	Println(Hilight("color_119", str, args...))
+func PrintlnColor119(str string) {
+	Println(Hilight("color_119", str))
+}
+
+// Color119f wraps Color119 and works with format
+// strings.
+func Color119f(str string, args ...interface{}) string {
+	return Color119(Sprintf(str, args...))
+}
+
+// PrintColor119f wraps PrintColor119 and works with format
+// strings.
+func PrintColor119f(str string, args ...interface{}) {
+	PrintColor119(Sprintf(str, args...))
+}
+
+// PrintlnColor119f wraps PrintlnColor119 and works with format
+// strings.
+func PrintlnColor119f(str string, args ...interface{}) {
+	PrintlnColor119(Sprintf(str, args...))
 }
 
 // OnColor119 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor119(str string, args ...interface{}) string {
-	return Hilight("on_color_119", str, args...)
+func OnColor119(str string) string {
+	return Hilight("on_color_119", str)
 }
 
 // PrintOnColor119 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor119(str string, args ...interface{}) {
-	Print(Hilight("on_color_119", str, args...))
+func PrintOnColor119(str string) {
+	Print(Hilight("on_color_119", str))
 }
 
 // PrintlnOnColor119 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor119(str string, args ...interface{}) {
-	Println(Hilight("on_color_119", str, args...))
+func PrintlnOnColor119(str string) {
+	Println(Hilight("on_color_119", str))
+}
+
+// OnColor119f wraps OnColor119 and works with format
+// strings.
+func OnColor119f(str string, args ...interface{}) string {
+	return OnColor119(Sprintf(str, args...))
+}
+
+// PrintOnColor119f wraps PrintOnColor119 and works with format
+// strings.
+func PrintOnColor119f(str string, args ...interface{}) {
+	PrintOnColor119(Sprintf(str, args...))
+}
+
+// PrintlnOnColor119f wraps PrintlnOnColor119 and works with format
+// strings.
+func PrintlnOnColor119f(str string, args ...interface{}) {
+	PrintlnOnColor119(Sprintf(str, args...))
 }
 
 // Color120 will Hilight() the provided string with the
 // specified ANSI code.
-func Color120(str string, args ...interface{}) string {
-	return Hilight("color_120", str, args...)
+func Color120(str string) string {
+	return Hilight("color_120", str)
 }
 
 // PrintColor120 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor120(str string, args ...interface{}) {
-	Print(Hilight("color_120", str, args...))
+func PrintColor120(str string) {
+	Print(Hilight("color_120", str))
 }
 
 // PrintlnColor120 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor120(str string, args ...interface{}) {
-	Println(Hilight("color_120", str, args...))
+func PrintlnColor120(str string) {
+	Println(Hilight("color_120", str))
+}
+
+// Color120f wraps Color120 and works with format
+// strings.
+func Color120f(str string, args ...interface{}) string {
+	return Color120(Sprintf(str, args...))
+}
+
+// PrintColor120f wraps PrintColor120 and works with format
+// strings.
+func PrintColor120f(str string, args ...interface{}) {
+	PrintColor120(Sprintf(str, args...))
+}
+
+// PrintlnColor120f wraps PrintlnColor120 and works with format
+// strings.
+func PrintlnColor120f(str string, args ...interface{}) {
+	PrintlnColor120(Sprintf(str, args...))
 }
 
 // OnColor120 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor120(str string, args ...interface{}) string {
-	return Hilight("on_color_120", str, args...)
+func OnColor120(str string) string {
+	return Hilight("on_color_120", str)
 }
 
 // PrintOnColor120 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor120(str string, args ...interface{}) {
-	Print(Hilight("on_color_120", str, args...))
+func PrintOnColor120(str string) {
+	Print(Hilight("on_color_120", str))
 }
 
 // PrintlnOnColor120 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor120(str string, args ...interface{}) {
-	Println(Hilight("on_color_120", str, args...))
+func PrintlnOnColor120(str string) {
+	Println(Hilight("on_color_120", str))
+}
+
+// OnColor120f wraps OnColor120 and works with format
+// strings.
+func OnColor120f(str string, args ...interface{}) string {
+	return OnColor120(Sprintf(str, args...))
+}
+
+// PrintOnColor120f wraps PrintOnColor120 and works with format
+// strings.
+func PrintOnColor120f(str string, args ...interface{}) {
+	PrintOnColor120(Sprintf(str, args...))
+}
+
+// PrintlnOnColor120f wraps PrintlnOnColor120 and works with format
+// strings.
+func PrintlnOnColor120f(str string, args ...interface{}) {
+	PrintlnOnColor120(Sprintf(str, args...))
 }
 
 // Color121 will Hilight() the provided string with the
 // specified ANSI code.
-func Color121(str string, args ...interface{}) string {
-	return Hilight("color_121", str, args...)
+func Color121(str string) string {
+	return Hilight("color_121", str)
 }
 
 // PrintColor121 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor121(str string, args ...interface{}) {
-	Print(Hilight("color_121", str, args...))
+func PrintColor121(str string) {
+	Print(Hilight("color_121", str))
 }
 
 // PrintlnColor121 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor121(str string, args ...interface{}) {
-	Println(Hilight("color_121", str, args...))
+func PrintlnColor121(str string) {
+	Println(Hilight("color_121", str))
+}
+
+// Color121f wraps Color121 and works with format
+// strings.
+func Color121f(str string, args ...interface{}) string {
+	return Color121(Sprintf(str, args...))
+}
+
+// PrintColor121f wraps PrintColor121 and works with format
+// strings.
+func PrintColor121f(str string, args ...interface{}) {
+	PrintColor121(Sprintf(str, args...))
+}
+
+// PrintlnColor121f wraps PrintlnColor121 and works with format
+// strings.
+func PrintlnColor121f(str string, args ...interface{}) {
+	PrintlnColor121(Sprintf(str, args...))
 }
 
 // OnColor121 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor121(str string, args ...interface{}) string {
-	return Hilight("on_color_121", str, args...)
+func OnColor121(str string) string {
+	return Hilight("on_color_121", str)
 }
 
 // PrintOnColor121 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor121(str string, args ...interface{}) {
-	Print(Hilight("on_color_121", str, args...))
+func PrintOnColor121(str string) {
+	Print(Hilight("on_color_121", str))
 }
 
 // PrintlnOnColor121 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor121(str string, args ...interface{}) {
-	Println(Hilight("on_color_121", str, args...))
+func PrintlnOnColor121(str string) {
+	Println(Hilight("on_color_121", str))
+}
+
+// OnColor121f wraps OnColor121 and works with format
+// strings.
+func OnColor121f(str string, args ...interface{}) string {
+	return OnColor121(Sprintf(str, args...))
+}
+
+// PrintOnColor121f wraps PrintOnColor121 and works with format
+// strings.
+func PrintOnColor121f(str string, args ...interface{}) {
+	PrintOnColor121(Sprintf(str, args...))
+}
+
+// PrintlnOnColor121f wraps PrintlnOnColor121 and works with format
+// strings.
+func PrintlnOnColor121f(str string, args ...interface{}) {
+	PrintlnOnColor121(Sprintf(str, args...))
 }
 
 // Color122 will Hilight() the provided string with the
 // specified ANSI code.
-func Color122(str string, args ...interface{}) string {
-	return Hilight("color_122", str, args...)
+func Color122(str string) string {
+	return Hilight("color_122", str)
 }
 
 // PrintColor122 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor122(str string, args ...interface{}) {
-	Print(Hilight("color_122", str, args...))
+func PrintColor122(str string) {
+	Print(Hilight("color_122", str))
 }
 
 // PrintlnColor122 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor122(str string, args ...interface{}) {
-	Println(Hilight("color_122", str, args...))
+func PrintlnColor122(str string) {
+	Println(Hilight("color_122", str))
+}
+
+// Color122f wraps Color122 and works with format
+// strings.
+func Color122f(str string, args ...interface{}) string {
+	return Color122(Sprintf(str, args...))
+}
+
+// PrintColor122f wraps PrintColor122 and works with format
+// strings.
+func PrintColor122f(str string, args ...interface{}) {
+	PrintColor122(Sprintf(str, args...))
+}
+
+// PrintlnColor122f wraps PrintlnColor122 and works with format
+// strings.
+func PrintlnColor122f(str string, args ...interface{}) {
+	PrintlnColor122(Sprintf(str, args...))
 }
 
 // OnColor122 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor122(str string, args ...interface{}) string {
-	return Hilight("on_color_122", str, args...)
+func OnColor122(str string) string {
+	return Hilight("on_color_122", str)
 }
 
 // PrintOnColor122 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor122(str string, args ...interface{}) {
-	Print(Hilight("on_color_122", str, args...))
+func PrintOnColor122(str string) {
+	Print(Hilight("on_color_122", str))
 }
 
 // PrintlnOnColor122 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor122(str string, args ...interface{}) {
-	Println(Hilight("on_color_122", str, args...))
+func PrintlnOnColor122(str string) {
+	Println(Hilight("on_color_122", str))
+}
+
+// OnColor122f wraps OnColor122 and works with format
+// strings.
+func OnColor122f(str string, args ...interface{}) string {
+	return OnColor122(Sprintf(str, args...))
+}
+
+// PrintOnColor122f wraps PrintOnColor122 and works with format
+// strings.
+func PrintOnColor122f(str string, args ...interface{}) {
+	PrintOnColor122(Sprintf(str, args...))
+}
+
+// PrintlnOnColor122f wraps PrintlnOnColor122 and works with format
+// strings.
+func PrintlnOnColor122f(str string, args ...interface{}) {
+	PrintlnOnColor122(Sprintf(str, args...))
 }
 
 // Color123 will Hilight() the provided string with the
 // specified ANSI code.
-func Color123(str string, args ...interface{}) string {
-	return Hilight("color_123", str, args...)
+func Color123(str string) string {
+	return Hilight("color_123", str)
 }
 
 // PrintColor123 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor123(str string, args ...interface{}) {
-	Print(Hilight("color_123", str, args...))
+func PrintColor123(str string) {
+	Print(Hilight("color_123", str))
 }
 
 // PrintlnColor123 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor123(str string, args ...interface{}) {
-	Println(Hilight("color_123", str, args...))
+func PrintlnColor123(str string) {
+	Println(Hilight("color_123", str))
+}
+
+// Color123f wraps Color123 and works with format
+// strings.
+func Color123f(str string, args ...interface{}) string {
+	return Color123(Sprintf(str, args...))
+}
+
+// PrintColor123f wraps PrintColor123 and works with format
+// strings.
+func PrintColor123f(str string, args ...interface{}) {
+	PrintColor123(Sprintf(str, args...))
+}
+
+// PrintlnColor123f wraps PrintlnColor123 and works with format
+// strings.
+func PrintlnColor123f(str string, args ...interface{}) {
+	PrintlnColor123(Sprintf(str, args...))
 }
 
 // OnColor123 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor123(str string, args ...interface{}) string {
-	return Hilight("on_color_123", str, args...)
+func OnColor123(str string) string {
+	return Hilight("on_color_123", str)
 }
 
 // PrintOnColor123 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor123(str string, args ...interface{}) {
-	Print(Hilight("on_color_123", str, args...))
+func PrintOnColor123(str string) {
+	Print(Hilight("on_color_123", str))
 }
 
 // PrintlnOnColor123 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor123(str string, args ...interface{}) {
-	Println(Hilight("on_color_123", str, args...))
+func PrintlnOnColor123(str string) {
+	Println(Hilight("on_color_123", str))
+}
+
+// OnColor123f wraps OnColor123 and works with format
+// strings.
+func OnColor123f(str string, args ...interface{}) string {
+	return OnColor123(Sprintf(str, args...))
+}
+
+// PrintOnColor123f wraps PrintOnColor123 and works with format
+// strings.
+func PrintOnColor123f(str string, args ...interface{}) {
+	PrintOnColor123(Sprintf(str, args...))
+}
+
+// PrintlnOnColor123f wraps PrintlnOnColor123 and works with format
+// strings.
+func PrintlnOnColor123f(str string, args ...interface{}) {
+	PrintlnOnColor123(Sprintf(str, args...))
 }
 
 // Color124 will Hilight() the provided string with the
 // specified ANSI code.
-func Color124(str string, args ...interface{}) string {
-	return Hilight("color_124", str, args...)
+func Color124(str string) string {
+	return Hilight("color_124", str)
 }
 
 // PrintColor124 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor124(str string, args ...interface{}) {
-	Print(Hilight("color_124", str, args...))
+func PrintColor124(str string) {
+	Print(Hilight("color_124", str))
 }
 
 // PrintlnColor124 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor124(str string, args ...interface{}) {
-	Println(Hilight("color_124", str, args...))
+func PrintlnColor124(str string) {
+	Println(Hilight("color_124", str))
+}
+
+// Color124f wraps Color124 and works with format
+// strings.
+func Color124f(str string, args ...interface{}) string {
+	return Color124(Sprintf(str, args...))
+}
+
+// PrintColor124f wraps PrintColor124 and works with format
+// strings.
+func PrintColor124f(str string, args ...interface{}) {
+	PrintColor124(Sprintf(str, args...))
+}
+
+// PrintlnColor124f wraps PrintlnColor124 and works with format
+// strings.
+func PrintlnColor124f(str string, args ...interface{}) {
+	PrintlnColor124(Sprintf(str, args...))
 }
 
 // OnColor124 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor124(str string, args ...interface{}) string {
-	return Hilight("on_color_124", str, args...)
+func OnColor124(str string) string {
+	return Hilight("on_color_124", str)
 }
 
 // PrintOnColor124 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor124(str string, args ...interface{}) {
-	Print(Hilight("on_color_124", str, args...))
+func PrintOnColor124(str string) {
+	Print(Hilight("on_color_124", str))
 }
 
 // PrintlnOnColor124 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor124(str string, args ...interface{}) {
-	Println(Hilight("on_color_124", str, args...))
+func PrintlnOnColor124(str string) {
+	Println(Hilight("on_color_124", str))
+}
+
+// OnColor124f wraps OnColor124 and works with format
+// strings.
+func OnColor124f(str string, args ...interface{}) string {
+	return OnColor124(Sprintf(str, args...))
+}
+
+// PrintOnColor124f wraps PrintOnColor124 and works with format
+// strings.
+func PrintOnColor124f(str string, args ...interface{}) {
+	PrintOnColor124(Sprintf(str, args...))
+}
+
+// PrintlnOnColor124f wraps PrintlnOnColor124 and works with format
+// strings.
+func PrintlnOnColor124f(str string, args ...interface{}) {
+	PrintlnOnColor124(Sprintf(str, args...))
 }
 
 // Color125 will Hilight() the provided string with the
 // specified ANSI code.
-func Color125(str string, args ...interface{}) string {
-	return Hilight("color_125", str, args...)
+func Color125(str string) string {
+	return Hilight("color_125", str)
 }
 
 // PrintColor125 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor125(str string, args ...interface{}) {
-	Print(Hilight("color_125", str, args...))
+func PrintColor125(str string) {
+	Print(Hilight("color_125", str))
 }
 
 // PrintlnColor125 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor125(str string, args ...interface{}) {
-	Println(Hilight("color_125", str, args...))
+func PrintlnColor125(str string) {
+	Println(Hilight("color_125", str))
+}
+
+// Color125f wraps Color125 and works with format
+// strings.
+func Color125f(str string, args ...interface{}) string {
+	return Color125(Sprintf(str, args...))
+}
+
+// PrintColor125f wraps PrintColor125 and works with format
+// strings.
+func PrintColor125f(str string, args ...interface{}) {
+	PrintColor125(Sprintf(str, args...))
+}
+
+// PrintlnColor125f wraps PrintlnColor125 and works with format
+// strings.
+func PrintlnColor125f(str string, args ...interface{}) {
+	PrintlnColor125(Sprintf(str, args...))
 }
 
 // OnColor125 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor125(str string, args ...interface{}) string {
-	return Hilight("on_color_125", str, args...)
+func OnColor125(str string) string {
+	return Hilight("on_color_125", str)
 }
 
 // PrintOnColor125 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor125(str string, args ...interface{}) {
-	Print(Hilight("on_color_125", str, args...))
+func PrintOnColor125(str string) {
+	Print(Hilight("on_color_125", str))
 }
 
 // PrintlnOnColor125 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor125(str string, args ...interface{}) {
-	Println(Hilight("on_color_125", str, args...))
+func PrintlnOnColor125(str string) {
+	Println(Hilight("on_color_125", str))
+}
+
+// OnColor125f wraps OnColor125 and works with format
+// strings.
+func OnColor125f(str string, args ...interface{}) string {
+	return OnColor125(Sprintf(str, args...))
+}
+
+// PrintOnColor125f wraps PrintOnColor125 and works with format
+// strings.
+func PrintOnColor125f(str string, args ...interface{}) {
+	PrintOnColor125(Sprintf(str, args...))
+}
+
+// PrintlnOnColor125f wraps PrintlnOnColor125 and works with format
+// strings.
+func PrintlnOnColor125f(str string, args ...interface{}) {
+	PrintlnOnColor125(Sprintf(str, args...))
 }
 
 // Color126 will Hilight() the provided string with the
 // specified ANSI code.
-func Color126(str string, args ...interface{}) string {
-	return Hilight("color_126", str, args...)
+func Color126(str string) string {
+	return Hilight("color_126", str)
 }
 
 // PrintColor126 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor126(str string, args ...interface{}) {
-	Print(Hilight("color_126", str, args...))
+func PrintColor126(str string) {
+	Print(Hilight("color_126", str))
 }
 
 // PrintlnColor126 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor126(str string, args ...interface{}) {
-	Println(Hilight("color_126", str, args...))
+func PrintlnColor126(str string) {
+	Println(Hilight("color_126", str))
+}
+
+// Color126f wraps Color126 and works with format
+// strings.
+func Color126f(str string, args ...interface{}) string {
+	return Color126(Sprintf(str, args...))
+}
+
+// PrintColor126f wraps PrintColor126 and works with format
+// strings.
+func PrintColor126f(str string, args ...interface{}) {
+	PrintColor126(Sprintf(str, args...))
+}
+
+// PrintlnColor126f wraps PrintlnColor126 and works with format
+// strings.
+func PrintlnColor126f(str string, args ...interface{}) {
+	PrintlnColor126(Sprintf(str, args...))
 }
 
 // OnColor126 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor126(str string, args ...interface{}) string {
-	return Hilight("on_color_126", str, args...)
+func OnColor126(str string) string {
+	return Hilight("on_color_126", str)
 }
 
 // PrintOnColor126 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor126(str string, args ...interface{}) {
-	Print(Hilight("on_color_126", str, args...))
+func PrintOnColor126(str string) {
+	Print(Hilight("on_color_126", str))
 }
 
 // PrintlnOnColor126 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor126(str string, args ...interface{}) {
-	Println(Hilight("on_color_126", str, args...))
+func PrintlnOnColor126(str string) {
+	Println(Hilight("on_color_126", str))
+}
+
+// OnColor126f wraps OnColor126 and works with format
+// strings.
+func OnColor126f(str string, args ...interface{}) string {
+	return OnColor126(Sprintf(str, args...))
+}
+
+// PrintOnColor126f wraps PrintOnColor126 and works with format
+// strings.
+func PrintOnColor126f(str string, args ...interface{}) {
+	PrintOnColor126(Sprintf(str, args...))
+}
+
+// PrintlnOnColor126f wraps PrintlnOnColor126 and works with format
+// strings.
+func PrintlnOnColor126f(str string, args ...interface{}) {
+	PrintlnOnColor126(Sprintf(str, args...))
 }
 
 // Color127 will Hilight() the provided string with the
 // specified ANSI code.
-func Color127(str string, args ...interface{}) string {
-	return Hilight("color_127", str, args...)
+func Color127(str string) string {
+	return Hilight("color_127", str)
 }
 
 // PrintColor127 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor127(str string, args ...interface{}) {
-	Print(Hilight("color_127", str, args...))
+func PrintColor127(str string) {
+	Print(Hilight("color_127", str))
 }
 
 // PrintlnColor127 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor127(str string, args ...interface{}) {
-	Println(Hilight("color_127", str, args...))
+func PrintlnColor127(str string) {
+	Println(Hilight("color_127", str))
+}
+
+// Color127f wraps Color127 and works with format
+// strings.
+func Color127f(str string, args ...interface{}) string {
+	return Color127(Sprintf(str, args...))
+}
+
+// PrintColor127f wraps PrintColor127 and works with format
+// strings.
+func PrintColor127f(str string, args ...interface{}) {
+	PrintColor127(Sprintf(str, args...))
+}
+
+// PrintlnColor127f wraps PrintlnColor127 and works with format
+// strings.
+func PrintlnColor127f(str string, args ...interface{}) {
+	PrintlnColor127(Sprintf(str, args...))
 }
 
 // OnColor127 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor127(str string, args ...interface{}) string {
-	return Hilight("on_color_127", str, args...)
+func OnColor127(str string) string {
+	return Hilight("on_color_127", str)
 }
 
 // PrintOnColor127 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor127(str string, args ...interface{}) {
-	Print(Hilight("on_color_127", str, args...))
+func PrintOnColor127(str string) {
+	Print(Hilight("on_color_127", str))
 }
 
 // PrintlnOnColor127 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor127(str string, args ...interface{}) {
-	Println(Hilight("on_color_127", str, args...))
+func PrintlnOnColor127(str string) {
+	Println(Hilight("on_color_127", str))
+}
+
+// OnColor127f wraps OnColor127 and works with format
+// strings.
+func OnColor127f(str string, args ...interface{}) string {
+	return OnColor127(Sprintf(str, args...))
+}
+
+// PrintOnColor127f wraps PrintOnColor127 and works with format
+// strings.
+func PrintOnColor127f(str string, args ...interface{}) {
+	PrintOnColor127(Sprintf(str, args...))
+}
+
+// PrintlnOnColor127f wraps PrintlnOnColor127 and works with format
+// strings.
+func PrintlnOnColor127f(str string, args ...interface{}) {
+	PrintlnOnColor127(Sprintf(str, args...))
 }
 
 // Color128 will Hilight() the provided string with the
 // specified ANSI code.
-func Color128(str string, args ...interface{}) string {
-	return Hilight("color_128", str, args...)
+func Color128(str string) string {
+	return Hilight("color_128", str)
 }
 
 // PrintColor128 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor128(str string, args ...interface{}) {
-	Print(Hilight("color_128", str, args...))
+func PrintColor128(str string) {
+	Print(Hilight("color_128", str))
 }
 
 // PrintlnColor128 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor128(str string, args ...interface{}) {
-	Println(Hilight("color_128", str, args...))
+func PrintlnColor128(str string) {
+	Println(Hilight("color_128", str))
+}
+
+// Color128f wraps Color128 and works with format
+// strings.
+func Color128f(str string, args ...interface{}) string {
+	return Color128(Sprintf(str, args...))
+}
+
+// PrintColor128f wraps PrintColor128 and works with format
+// strings.
+func PrintColor128f(str string, args ...interface{}) {
+	PrintColor128(Sprintf(str, args...))
+}
+
+// PrintlnColor128f wraps PrintlnColor128 and works with format
+// strings.
+func PrintlnColor128f(str string, args ...interface{}) {
+	PrintlnColor128(Sprintf(str, args...))
 }
 
 // OnColor128 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor128(str string, args ...interface{}) string {
-	return Hilight("on_color_128", str, args...)
+func OnColor128(str string) string {
+	return Hilight("on_color_128", str)
 }
 
 // PrintOnColor128 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor128(str string, args ...interface{}) {
-	Print(Hilight("on_color_128", str, args...))
+func PrintOnColor128(str string) {
+	Print(Hilight("on_color_128", str))
 }
 
 // PrintlnOnColor128 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor128(str string, args ...interface{}) {
-	Println(Hilight("on_color_128", str, args...))
+func PrintlnOnColor128(str string) {
+	Println(Hilight("on_color_128", str))
+}
+
+// OnColor128f wraps OnColor128 and works with format
+// strings.
+func OnColor128f(str string, args ...interface{}) string {
+	return OnColor128(Sprintf(str, args...))
+}
+
+// PrintOnColor128f wraps PrintOnColor128 and works with format
+// strings.
+func PrintOnColor128f(str string, args ...interface{}) {
+	PrintOnColor128(Sprintf(str, args...))
+}
+
+// PrintlnOnColor128f wraps PrintlnOnColor128 and works with format
+// strings.
+func PrintlnOnColor128f(str string, args ...interface{}) {
+	PrintlnOnColor128(Sprintf(str, args...))
 }
 
 // Color129 will Hilight() the provided string with the
 // specified ANSI code.
-func Color129(str string, args ...interface{}) string {
-	return Hilight("color_129", str, args...)
+func Color129(str string) string {
+	return Hilight("color_129", str)
 }
 
 // PrintColor129 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor129(str string, args ...interface{}) {
-	Print(Hilight("color_129", str, args...))
+func PrintColor129(str string) {
+	Print(Hilight("color_129", str))
 }
 
 // PrintlnColor129 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor129(str string, args ...interface{}) {
-	Println(Hilight("color_129", str, args...))
+func PrintlnColor129(str string) {
+	Println(Hilight("color_129", str))
+}
+
+// Color129f wraps Color129 and works with format
+// strings.
+func Color129f(str string, args ...interface{}) string {
+	return Color129(Sprintf(str, args...))
+}
+
+// PrintColor129f wraps PrintColor129 and works with format
+// strings.
+func PrintColor129f(str string, args ...interface{}) {
+	PrintColor129(Sprintf(str, args...))
+}
+
+// PrintlnColor129f wraps PrintlnColor129 and works with format
+// strings.
+func PrintlnColor129f(str string, args ...interface{}) {
+	PrintlnColor129(Sprintf(str, args...))
 }
 
 // OnColor129 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor129(str string, args ...interface{}) string {
-	return Hilight("on_color_129", str, args...)
+func OnColor129(str string) string {
+	return Hilight("on_color_129", str)
 }
 
 // PrintOnColor129 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor129(str string, args ...interface{}) {
-	Print(Hilight("on_color_129", str, args...))
+func PrintOnColor129(str string) {
+	Print(Hilight("on_color_129", str))
 }
 
 // PrintlnOnColor129 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor129(str string, args ...interface{}) {
-	Println(Hilight("on_color_129", str, args...))
+func PrintlnOnColor129(str string) {
+	Println(Hilight("on_color_129", str))
+}
+
+// OnColor129f wraps OnColor129 and works with format
+// strings.
+func OnColor129f(str string, args ...interface{}) string {
+	return OnColor129(Sprintf(str, args...))
+}
+
+// PrintOnColor129f wraps PrintOnColor129 and works with format
+// strings.
+func PrintOnColor129f(str string, args ...interface{}) {
+	PrintOnColor129(Sprintf(str, args...))
+}
+
+// PrintlnOnColor129f wraps PrintlnOnColor129 and works with format
+// strings.
+func PrintlnOnColor129f(str string, args ...interface{}) {
+	PrintlnOnColor129(Sprintf(str, args...))
 }
 
 // Color130 will Hilight() the provided string with the
 // specified ANSI code.
-func Color130(str string, args ...interface{}) string {
-	return Hilight("color_130", str, args...)
+func Color130(str string) string {
+	return Hilight("color_130", str)
 }
 
 // PrintColor130 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor130(str string, args ...interface{}) {
-	Print(Hilight("color_130", str, args...))
+func PrintColor130(str string) {
+	Print(Hilight("color_130", str))
 }
 
 // PrintlnColor130 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor130(str string, args ...interface{}) {
-	Println(Hilight("color_130", str, args...))
+func PrintlnColor130(str string) {
+	Println(Hilight("color_130", str))
+}
+
+// Color130f wraps Color130 and works with format
+// strings.
+func Color130f(str string, args ...interface{}) string {
+	return Color130(Sprintf(str, args...))
+}
+
+// PrintColor130f wraps PrintColor130 and works with format
+// strings.
+func PrintColor130f(str string, args ...interface{}) {
+	PrintColor130(Sprintf(str, args...))
+}
+
+// PrintlnColor130f wraps PrintlnColor130 and works with format
+// strings.
+func PrintlnColor130f(str string, args ...interface{}) {
+	PrintlnColor130(Sprintf(str, args...))
 }
 
 // OnColor130 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor130(str string, args ...interface{}) string {
-	return Hilight("on_color_130", str, args...)
+func OnColor130(str string) string {
+	return Hilight("on_color_130", str)
 }
 
 // PrintOnColor130 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor130(str string, args ...interface{}) {
-	Print(Hilight("on_color_130", str, args...))
+func PrintOnColor130(str string) {
+	Print(Hilight("on_color_130", str))
 }
 
 // PrintlnOnColor130 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor130(str string, args ...interface{}) {
-	Println(Hilight("on_color_130", str, args...))
+func PrintlnOnColor130(str string) {
+	Println(Hilight("on_color_130", str))
+}
+
+// OnColor130f wraps OnColor130 and works with format
+// strings.
+func OnColor130f(str string, args ...interface{}) string {
+	return OnColor130(Sprintf(str, args...))
+}
+
+// PrintOnColor130f wraps PrintOnColor130 and works with format
+// strings.
+func PrintOnColor130f(str string, args ...interface{}) {
+	PrintOnColor130(Sprintf(str, args...))
+}
+
+// PrintlnOnColor130f wraps PrintlnOnColor130 and works with format
+// strings.
+func PrintlnOnColor130f(str string, args ...interface{}) {
+	PrintlnOnColor130(Sprintf(str, args...))
 }
 
 // Color131 will Hilight() the provided string with the
 // specified ANSI code.
-func Color131(str string, args ...interface{}) string {
-	return Hilight("color_131", str, args...)
+func Color131(str string) string {
+	return Hilight("color_131", str)
 }
 
 // PrintColor131 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor131(str string, args ...interface{}) {
-	Print(Hilight("color_131", str, args...))
+func PrintColor131(str string) {
+	Print(Hilight("color_131", str))
 }
 
 // PrintlnColor131 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor131(str string, args ...interface{}) {
-	Println(Hilight("color_131", str, args...))
+func PrintlnColor131(str string) {
+	Println(Hilight("color_131", str))
+}
+
+// Color131f wraps Color131 and works with format
+// strings.
+func Color131f(str string, args ...interface{}) string {
+	return Color131(Sprintf(str, args...))
+}
+
+// PrintColor131f wraps PrintColor131 and works with format
+// strings.
+func PrintColor131f(str string, args ...interface{}) {
+	PrintColor131(Sprintf(str, args...))
+}
+
+// PrintlnColor131f wraps PrintlnColor131 and works with format
+// strings.
+func PrintlnColor131f(str string, args ...interface{}) {
+	PrintlnColor131(Sprintf(str, args...))
 }
 
 // OnColor131 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor131(str string, args ...interface{}) string {
-	return Hilight("on_color_131", str, args...)
+func OnColor131(str string) string {
+	return Hilight("on_color_131", str)
 }
 
 // PrintOnColor131 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor131(str string, args ...interface{}) {
-	Print(Hilight("on_color_131", str, args...))
+func PrintOnColor131(str string) {
+	Print(Hilight("on_color_131", str))
 }
 
 // PrintlnOnColor131 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor131(str string, args ...interface{}) {
-	Println(Hilight("on_color_131", str, args...))
+func PrintlnOnColor131(str string) {
+	Println(Hilight("on_color_131", str))
+}
+
+// OnColor131f wraps OnColor131 and works with format
+// strings.
+func OnColor131f(str string, args ...interface{}) string {
+	return OnColor131(Sprintf(str, args...))
+}
+
+// PrintOnColor131f wraps PrintOnColor131 and works with format
+// strings.
+func PrintOnColor131f(str string, args ...interface{}) {
+	PrintOnColor131(Sprintf(str, args...))
+}
+
+// PrintlnOnColor131f wraps PrintlnOnColor131 and works with format
+// strings.
+func PrintlnOnColor131f(str string, args ...interface{}) {
+	PrintlnOnColor131(Sprintf(str, args...))
 }
 
 // Color132 will Hilight() the provided string with the
 // specified ANSI code.
-func Color132(str string, args ...interface{}) string {
-	return Hilight("color_132", str, args...)
+func Color132(str string) string {
+	return Hilight("color_132", str)
 }
 
 // PrintColor132 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor132(str string, args ...interface{}) {
-	Print(Hilight("color_132", str, args...))
+func PrintColor132(str string) {
+	Print(Hilight("color_132", str))
 }
 
 // PrintlnColor132 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor132(str string, args ...interface{}) {
-	Println(Hilight("color_132", str, args...))
+func PrintlnColor132(str string) {
+	Println(Hilight("color_132", str))
+}
+
+// Color132f wraps Color132 and works with format
+// strings.
+func Color132f(str string, args ...interface{}) string {
+	return Color132(Sprintf(str, args...))
+}
+
+// PrintColor132f wraps PrintColor132 and works with format
+// strings.
+func PrintColor132f(str string, args ...interface{}) {
+	PrintColor132(Sprintf(str, args...))
+}
+
+// PrintlnColor132f wraps PrintlnColor132 and works with format
+// strings.
+func PrintlnColor132f(str string, args ...interface{}) {
+	PrintlnColor132(Sprintf(str, args...))
 }
 
 // OnColor132 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor132(str string, args ...interface{}) string {
-	return Hilight("on_color_132", str, args...)
+func OnColor132(str string) string {
+	return Hilight("on_color_132", str)
 }
 
 // PrintOnColor132 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor132(str string, args ...interface{}) {
-	Print(Hilight("on_color_132", str, args...))
+func PrintOnColor132(str string) {
+	Print(Hilight("on_color_132", str))
 }
 
 // PrintlnOnColor132 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor132(str string, args ...interface{}) {
-	Println(Hilight("on_color_132", str, args...))
+func PrintlnOnColor132(str string) {
+	Println(Hilight("on_color_132", str))
+}
+
+// OnColor132f wraps OnColor132 and works with format
+// strings.
+func OnColor132f(str string, args ...interface{}) string {
+	return OnColor132(Sprintf(str, args...))
+}
+
+// PrintOnColor132f wraps PrintOnColor132 and works with format
+// strings.
+func PrintOnColor132f(str string, args ...interface{}) {
+	PrintOnColor132(Sprintf(str, args...))
+}
+
+// PrintlnOnColor132f wraps PrintlnOnColor132 and works with format
+// strings.
+func PrintlnOnColor132f(str string, args ...interface{}) {
+	PrintlnOnColor132(Sprintf(str, args...))
 }
 
 // Color133 will Hilight() the provided string with the
 // specified ANSI code.
-func Color133(str string, args ...interface{}) string {
-	return Hilight("color_133", str, args...)
+func Color133(str string) string {
+	return Hilight("color_133", str)
 }
 
 // PrintColor133 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor133(str string, args ...interface{}) {
-	Print(Hilight("color_133", str, args...))
+func PrintColor133(str string) {
+	Print(Hilight("color_133", str))
 }
 
 // PrintlnColor133 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor133(str string, args ...interface{}) {
-	Println(Hilight("color_133", str, args...))
+func PrintlnColor133(str string) {
+	Println(Hilight("color_133", str))
+}
+
+// Color133f wraps Color133 and works with format
+// strings.
+func Color133f(str string, args ...interface{}) string {
+	return Color133(Sprintf(str, args...))
+}
+
+// PrintColor133f wraps PrintColor133 and works with format
+// strings.
+func PrintColor133f(str string, args ...interface{}) {
+	PrintColor133(Sprintf(str, args...))
+}
+
+// PrintlnColor133f wraps PrintlnColor133 and works with format
+// strings.
+func PrintlnColor133f(str string, args ...interface{}) {
+	PrintlnColor133(Sprintf(str, args...))
 }
 
 // OnColor133 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor133(str string, args ...interface{}) string {
-	return Hilight("on_color_133", str, args...)
+func OnColor133(str string) string {
+	return Hilight("on_color_133", str)
 }
 
 // PrintOnColor133 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor133(str string, args ...interface{}) {
-	Print(Hilight("on_color_133", str, args...))
+func PrintOnColor133(str string) {
+	Print(Hilight("on_color_133", str))
 }
 
 // PrintlnOnColor133 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor133(str string, args ...interface{}) {
-	Println(Hilight("on_color_133", str, args...))
+func PrintlnOnColor133(str string) {
+	Println(Hilight("on_color_133", str))
+}
+
+// OnColor133f wraps OnColor133 and works with format
+// strings.
+func OnColor133f(str string, args ...interface{}) string {
+	return OnColor133(Sprintf(str, args...))
+}
+
+// PrintOnColor133f wraps PrintOnColor133 and works with format
+// strings.
+func PrintOnColor133f(str string, args ...interface{}) {
+	PrintOnColor133(Sprintf(str, args...))
+}
+
+// PrintlnOnColor133f wraps PrintlnOnColor133 and works with format
+// strings.
+func PrintlnOnColor133f(str string, args ...interface{}) {
+	PrintlnOnColor133(Sprintf(str, args...))
 }
 
 // Color134 will Hilight() the provided string with the
 // specified ANSI code.
-func Color134(str string, args ...interface{}) string {
-	return Hilight("color_134", str, args...)
+func Color134(str string) string {
+	return Hilight("color_134", str)
 }
 
 // PrintColor134 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor134(str string, args ...interface{}) {
-	Print(Hilight("color_134", str, args...))
+func PrintColor134(str string) {
+	Print(Hilight("color_134", str))
 }
 
 // PrintlnColor134 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor134(str string, args ...interface{}) {
-	Println(Hilight("color_134", str, args...))
+func PrintlnColor134(str string) {
+	Println(Hilight("color_134", str))
+}
+
+// Color134f wraps Color134 and works with format
+// strings.
+func Color134f(str string, args ...interface{}) string {
+	return Color134(Sprintf(str, args...))
+}
+
+// PrintColor134f wraps PrintColor134 and works with format
+// strings.
+func PrintColor134f(str string, args ...interface{}) {
+	PrintColor134(Sprintf(str, args...))
+}
+
+// PrintlnColor134f wraps PrintlnColor134 and works with format
+// strings.
+func PrintlnColor134f(str string, args ...interface{}) {
+	PrintlnColor134(Sprintf(str, args...))
 }
 
 // OnColor134 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor134(str string, args ...interface{}) string {
-	return Hilight("on_color_134", str, args...)
+func OnColor134(str string) string {
+	return Hilight("on_color_134", str)
 }
 
 // PrintOnColor134 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor134(str string, args ...interface{}) {
-	Print(Hilight("on_color_134", str, args...))
+func PrintOnColor134(str string) {
+	Print(Hilight("on_color_134", str))
 }
 
 // PrintlnOnColor134 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor134(str string, args ...interface{}) {
-	Println(Hilight("on_color_134", str, args...))
+func PrintlnOnColor134(str string) {
+	Println(Hilight("on_color_134", str))
+}
+
+// OnColor134f wraps OnColor134 and works with format
+// strings.
+func OnColor134f(str string, args ...interface{}) string {
+	return OnColor134(Sprintf(str, args...))
+}
+
+// PrintOnColor134f wraps PrintOnColor134 and works with format
+// strings.
+func PrintOnColor134f(str string, args ...interface{}) {
+	PrintOnColor134(Sprintf(str, args...))
+}
+
+// PrintlnOnColor134f wraps PrintlnOnColor134 and works with format
+// strings.
+func PrintlnOnColor134f(str string, args ...interface{}) {
+	PrintlnOnColor134(Sprintf(str, args...))
 }
 
 // Color135 will Hilight() the provided string with the
 // specified ANSI code.
-func Color135(str string, args ...interface{}) string {
-	return Hilight("color_135", str, args...)
+func Color135(str string) string {
+	return Hilight("color_135", str)
 }
 
 // PrintColor135 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor135(str string, args ...interface{}) {
-	Print(Hilight("color_135", str, args...))
+func PrintColor135(str string) {
+	Print(Hilight("color_135", str))
 }
 
 // PrintlnColor135 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor135(str string, args ...interface{}) {
-	Println(Hilight("color_135", str, args...))
+func PrintlnColor135(str string) {
+	Println(Hilight("color_135", str))
+}
+
+// Color135f wraps Color135 and works with format
+// strings.
+func Color135f(str string, args ...interface{}) string {
+	return Color135(Sprintf(str, args...))
+}
+
+// PrintColor135f wraps PrintColor135 and works with format
+// strings.
+func PrintColor135f(str string, args ...interface{}) {
+	PrintColor135(Sprintf(str, args...))
+}
+
+// PrintlnColor135f wraps PrintlnColor135 and works with format
+// strings.
+func PrintlnColor135f(str string, args ...interface{}) {
+	PrintlnColor135(Sprintf(str, args...))
 }
 
 // OnColor135 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor135(str string, args ...interface{}) string {
-	return Hilight("on_color_135", str, args...)
+func OnColor135(str string) string {
+	return Hilight("on_color_135", str)
 }
 
 // PrintOnColor135 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor135(str string, args ...interface{}) {
-	Print(Hilight("on_color_135", str, args...))
+func PrintOnColor135(str string) {
+	Print(Hilight("on_color_135", str))
 }
 
 // PrintlnOnColor135 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor135(str string, args ...interface{}) {
-	Println(Hilight("on_color_135", str, args...))
+func PrintlnOnColor135(str string) {
+	Println(Hilight("on_color_135", str))
+}
+
+// OnColor135f wraps OnColor135 and works with format
+// strings.
+func OnColor135f(str string, args ...interface{}) string {
+	return OnColor135(Sprintf(str, args...))
+}
+
+// PrintOnColor135f wraps PrintOnColor135 and works with format
+// strings.
+func PrintOnColor135f(str string, args ...interface{}) {
+	PrintOnColor135(Sprintf(str, args...))
+}
+
+// PrintlnOnColor135f wraps PrintlnOnColor135 and works with format
+// strings.
+func PrintlnOnColor135f(str string, args ...interface{}) {
+	PrintlnOnColor135(Sprintf(str, args...))
 }
 
 // Color136 will Hilight() the provided string with the
 // specified ANSI code.
-func Color136(str string, args ...interface{}) string {
-	return Hilight("color_136", str, args...)
+func Color136(str string) string {
+	return Hilight("color_136", str)
 }
 
 // PrintColor136 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor136(str string, args ...interface{}) {
-	Print(Hilight("color_136", str, args...))
+func PrintColor136(str string) {
+	Print(Hilight("color_136", str))
 }
 
 // PrintlnColor136 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor136(str string, args ...interface{}) {
-	Println(Hilight("color_136", str, args...))
+func PrintlnColor136(str string) {
+	Println(Hilight("color_136", str))
+}
+
+// Color136f wraps Color136 and works with format
+// strings.
+func Color136f(str string, args ...interface{}) string {
+	return Color136(Sprintf(str, args...))
+}
+
+// PrintColor136f wraps PrintColor136 and works with format
+// strings.
+func PrintColor136f(str string, args ...interface{}) {
+	PrintColor136(Sprintf(str, args...))
+}
+
+// PrintlnColor136f wraps PrintlnColor136 and works with format
+// strings.
+func PrintlnColor136f(str string, args ...interface{}) {
+	PrintlnColor136(Sprintf(str, args...))
 }
 
 // OnColor136 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor136(str string, args ...interface{}) string {
-	return Hilight("on_color_136", str, args...)
+func OnColor136(str string) string {
+	return Hilight("on_color_136", str)
 }
 
 // PrintOnColor136 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor136(str string, args ...interface{}) {
-	Print(Hilight("on_color_136", str, args...))
+func PrintOnColor136(str string) {
+	Print(Hilight("on_color_136", str))
 }
 
 // PrintlnOnColor136 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor136(str string, args ...interface{}) {
-	Println(Hilight("on_color_136", str, args...))
+func PrintlnOnColor136(str string) {
+	Println(Hilight("on_color_136", str))
+}
+
+// OnColor136f wraps OnColor136 and works with format
+// strings.
+func OnColor136f(str string, args ...interface{}) string {
+	return OnColor136(Sprintf(str, args...))
+}
+
+// PrintOnColor136f wraps PrintOnColor136 and works with format
+// strings.
+func PrintOnColor136f(str string, args ...interface{}) {
+	PrintOnColor136(Sprintf(str, args...))
+}
+
+// PrintlnOnColor136f wraps PrintlnOnColor136 and works with format
+// strings.
+func PrintlnOnColor136f(str string, args ...interface{}) {
+	PrintlnOnColor136(Sprintf(str, args...))
 }
 
 // Color137 will Hilight() the provided string with the
 // specified ANSI code.
-func Color137(str string, args ...interface{}) string {
-	return Hilight("color_137", str, args...)
+func Color137(str string) string {
+	return Hilight("color_137", str)
 }
 
 // PrintColor137 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor137(str string, args ...interface{}) {
-	Print(Hilight("color_137", str, args...))
+func PrintColor137(str string) {
+	Print(Hilight("color_137", str))
 }
 
 // PrintlnColor137 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor137(str string, args ...interface{}) {
-	Println(Hilight("color_137", str, args...))
+func PrintlnColor137(str string) {
+	Println(Hilight("color_137", str))
+}
+
+// Color137f wraps Color137 and works with format
+// strings.
+func Color137f(str string, args ...interface{}) string {
+	return Color137(Sprintf(str, args...))
+}
+
+// PrintColor137f wraps PrintColor137 and works with format
+// strings.
+func PrintColor137f(str string, args ...interface{}) {
+	PrintColor137(Sprintf(str, args...))
+}
+
+// PrintlnColor137f wraps PrintlnColor137 and works with format
+// strings.
+func PrintlnColor137f(str string, args ...interface{}) {
+	PrintlnColor137(Sprintf(str, args...))
 }
 
 // OnColor137 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor137(str string, args ...interface{}) string {
-	return Hilight("on_color_137", str, args...)
+func OnColor137(str string) string {
+	return Hilight("on_color_137", str)
 }
 
 // PrintOnColor137 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor137(str string, args ...interface{}) {
-	Print(Hilight("on_color_137", str, args...))
+func PrintOnColor137(str string) {
+	Print(Hilight("on_color_137", str))
 }
 
 // PrintlnOnColor137 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor137(str string, args ...interface{}) {
-	Println(Hilight("on_color_137", str, args...))
+func PrintlnOnColor137(str string) {
+	Println(Hilight("on_color_137", str))
+}
+
+// OnColor137f wraps OnColor137 and works with format
+// strings.
+func OnColor137f(str string, args ...interface{}) string {
+	return OnColor137(Sprintf(str, args...))
+}
+
+// PrintOnColor137f wraps PrintOnColor137 and works with format
+// strings.
+func PrintOnColor137f(str string, args ...interface{}) {
+	PrintOnColor137(Sprintf(str, args...))
+}
+
+// PrintlnOnColor137f wraps PrintlnOnColor137 and works with format
+// strings.
+func PrintlnOnColor137f(str string, args ...interface{}) {
+	PrintlnOnColor137(Sprintf(str, args...))
 }
 
 // Color138 will Hilight() the provided string with the
 // specified ANSI code.
-func Color138(str string, args ...interface{}) string {
-	return Hilight("color_138", str, args...)
+func Color138(str string) string {
+	return Hilight("color_138", str)
 }
 
 // PrintColor138 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor138(str string, args ...interface{}) {
-	Print(Hilight("color_138", str, args...))
+func PrintColor138(str string) {
+	Print(Hilight("color_138", str))
 }
 
 // PrintlnColor138 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor138(str string, args ...interface{}) {
-	Println(Hilight("color_138", str, args...))
+func PrintlnColor138(str string) {
+	Println(Hilight("color_138", str))
+}
+
+// Color138f wraps Color138 and works with format
+// strings.
+func Color138f(str string, args ...interface{}) string {
+	return Color138(Sprintf(str, args...))
+}
+
+// PrintColor138f wraps PrintColor138 and works with format
+// strings.
+func PrintColor138f(str string, args ...interface{}) {
+	PrintColor138(Sprintf(str, args...))
+}
+
+// PrintlnColor138f wraps PrintlnColor138 and works with format
+// strings.
+func PrintlnColor138f(str string, args ...interface{}) {
+	PrintlnColor138(Sprintf(str, args...))
 }
 
 // OnColor138 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor138(str string, args ...interface{}) string {
-	return Hilight("on_color_138", str, args...)
+func OnColor138(str string) string {
+	return Hilight("on_color_138", str)
 }
 
 // PrintOnColor138 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor138(str string, args ...interface{}) {
-	Print(Hilight("on_color_138", str, args...))
+func PrintOnColor138(str string) {
+	Print(Hilight("on_color_138", str))
 }
 
 // PrintlnOnColor138 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor138(str string, args ...interface{}) {
-	Println(Hilight("on_color_138", str, args...))
+func PrintlnOnColor138(str string) {
+	Println(Hilight("on_color_138", str))
+}
+
+// OnColor138f wraps OnColor138 and works with format
+// strings.
+func OnColor138f(str string, args ...interface{}) string {
+	return OnColor138(Sprintf(str, args...))
+}
+
+// PrintOnColor138f wraps PrintOnColor138 and works with format
+// strings.
+func PrintOnColor138f(str string, args ...interface{}) {
+	PrintOnColor138(Sprintf(str, args...))
+}
+
+// PrintlnOnColor138f wraps PrintlnOnColor138 and works with format
+// strings.
+func PrintlnOnColor138f(str string, args ...interface{}) {
+	PrintlnOnColor138(Sprintf(str, args...))
 }
 
 // Color139 will Hilight() the provided string with the
 // specified ANSI code.
-func Color139(str string, args ...interface{}) string {
-	return Hilight("color_139", str, args...)
+func Color139(str string) string {
+	return Hilight("color_139", str)
 }
 
 // PrintColor139 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor139(str string, args ...interface{}) {
-	Print(Hilight("color_139", str, args...))
+func PrintColor139(str string) {
+	Print(Hilight("color_139", str))
 }
 
 // PrintlnColor139 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor139(str string, args ...interface{}) {
-	Println(Hilight("color_139", str, args...))
+func PrintlnColor139(str string) {
+	Println(Hilight("color_139", str))
+}
+
+// Color139f wraps Color139 and works with format
+// strings.
+func Color139f(str string, args ...interface{}) string {
+	return Color139(Sprintf(str, args...))
+}
+
+// PrintColor139f wraps PrintColor139 and works with format
+// strings.
+func PrintColor139f(str string, args ...interface{}) {
+	PrintColor139(Sprintf(str, args...))
+}
+
+// PrintlnColor139f wraps PrintlnColor139 and works with format
+// strings.
+func PrintlnColor139f(str string, args ...interface{}) {
+	PrintlnColor139(Sprintf(str, args...))
 }
 
 // OnColor139 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor139(str string, args ...interface{}) string {
-	return Hilight("on_color_139", str, args...)
+func OnColor139(str string) string {
+	return Hilight("on_color_139", str)
 }
 
 // PrintOnColor139 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor139(str string, args ...interface{}) {
-	Print(Hilight("on_color_139", str, args...))
+func PrintOnColor139(str string) {
+	Print(Hilight("on_color_139", str))
 }
 
 // PrintlnOnColor139 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor139(str string, args ...interface{}) {
-	Println(Hilight("on_color_139", str, args...))
+func PrintlnOnColor139(str string) {
+	Println(Hilight("on_color_139", str))
+}
+
+// OnColor139f wraps OnColor139 and works with format
+// strings.
+func OnColor139f(str string, args ...interface{}) string {
+	return OnColor139(Sprintf(str, args...))
+}
+
+// PrintOnColor139f wraps PrintOnColor139 and works with format
+// strings.
+func PrintOnColor139f(str string, args ...interface{}) {
+	PrintOnColor139(Sprintf(str, args...))
+}
+
+// PrintlnOnColor139f wraps PrintlnOnColor139 and works with format
+// strings.
+func PrintlnOnColor139f(str string, args ...interface{}) {
+	PrintlnOnColor139(Sprintf(str, args...))
 }
 
 // Color140 will Hilight() the provided string with the
 // specified ANSI code.
-func Color140(str string, args ...interface{}) string {
-	return Hilight("color_140", str, args...)
+func Color140(str string) string {
+	return Hilight("color_140", str)
 }
 
 // PrintColor140 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor140(str string, args ...interface{}) {
-	Print(Hilight("color_140", str, args...))
+func PrintColor140(str string) {
+	Print(Hilight("color_140", str))
 }
 
 // PrintlnColor140 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor140(str string, args ...interface{}) {
-	Println(Hilight("color_140", str, args...))
+func PrintlnColor140(str string) {
+	Println(Hilight("color_140", str))
+}
+
+// Color140f wraps Color140 and works with format
+// strings.
+func Color140f(str string, args ...interface{}) string {
+	return Color140(Sprintf(str, args...))
+}
+
+// PrintColor140f wraps PrintColor140 and works with format
+// strings.
+func PrintColor140f(str string, args ...interface{}) {
+	PrintColor140(Sprintf(str, args...))
+}
+
+// PrintlnColor140f wraps PrintlnColor140 and works with format
+// strings.
+func PrintlnColor140f(str string, args ...interface{}) {
+	PrintlnColor140(Sprintf(str, args...))
 }
 
 // OnColor140 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor140(str string, args ...interface{}) string {
-	return Hilight("on_color_140", str, args...)
+func OnColor140(str string) string {
+	return Hilight("on_color_140", str)
 }
 
 // PrintOnColor140 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor140(str string, args ...interface{}) {
-	Print(Hilight("on_color_140", str, args...))
+func PrintOnColor140(str string) {
+	Print(Hilight("on_color_140", str))
 }
 
 // PrintlnOnColor140 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor140(str string, args ...interface{}) {
-	Println(Hilight("on_color_140", str, args...))
+func PrintlnOnColor140(str string) {
+	Println(Hilight("on_color_140", str))
+}
+
+// OnColor140f wraps OnColor140 and works with format
+// strings.
+func OnColor140f(str string, args ...interface{}) string {
+	return OnColor140(Sprintf(str, args...))
+}
+
+// PrintOnColor140f wraps PrintOnColor140 and works with format
+// strings.
+func PrintOnColor140f(str string, args ...interface{}) {
+	PrintOnColor140(Sprintf(str, args...))
+}
+
+// PrintlnOnColor140f wraps PrintlnOnColor140 and works with format
+// strings.
+func PrintlnOnColor140f(str string, args ...interface{}) {
+	PrintlnOnColor140(Sprintf(str, args...))
 }
 
 // Color141 will Hilight() the provided string with the
 // specified ANSI code.
-func Color141(str string, args ...interface{}) string {
-	return Hilight("color_141", str, args...)
+func Color141(str string) string {
+	return Hilight("color_141", str)
 }
 
 // PrintColor141 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor141(str string, args ...interface{}) {
-	Print(Hilight("color_141", str, args...))
+func PrintColor141(str string) {
+	Print(Hilight("color_141", str))
 }
 
 // PrintlnColor141 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor141(str string, args ...interface{}) {
-	Println(Hilight("color_141", str, args...))
+func PrintlnColor141(str string) {
+	Println(Hilight("color_141", str))
+}
+
+// Color141f wraps Color141 and works with format
+// strings.
+func Color141f(str string, args ...interface{}) string {
+	return Color141(Sprintf(str, args...))
+}
+
+// PrintColor141f wraps PrintColor141 and works with format
+// strings.
+func PrintColor141f(str string, args ...interface{}) {
+	PrintColor141(Sprintf(str, args...))
+}
+
+// PrintlnColor141f wraps PrintlnColor141 and works with format
+// strings.
+func PrintlnColor141f(str string, args ...interface{}) {
+	PrintlnColor141(Sprintf(str, args...))
 }
 
 // OnColor141 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor141(str string, args ...interface{}) string {
-	return Hilight("on_color_141", str, args...)
+func OnColor141(str string) string {
+	return Hilight("on_color_141", str)
 }
 
 // PrintOnColor141 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor141(str string, args ...interface{}) {
-	Print(Hilight("on_color_141", str, args...))
+func PrintOnColor141(str string) {
+	Print(Hilight("on_color_141", str))
 }
 
 // PrintlnOnColor141 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor141(str string, args ...interface{}) {
-	Println(Hilight("on_color_141", str, args...))
+func PrintlnOnColor141(str string) {
+	Println(Hilight("on_color_141", str))
+}
+
+// OnColor141f wraps OnColor141 and works with format
+// strings.
+func OnColor141f(str string, args ...interface{}) string {
+	return OnColor141(Sprintf(str, args...))
+}
+
+// PrintOnColor141f wraps PrintOnColor141 and works with format
+// strings.
+func PrintOnColor141f(str string, args ...interface{}) {
+	PrintOnColor141(Sprintf(str, args...))
+}
+
+// PrintlnOnColor141f wraps PrintlnOnColor141 and works with format
+// strings.
+func PrintlnOnColor141f(str string, args ...interface{}) {
+	PrintlnOnColor141(Sprintf(str, args...))
 }
 
 // Color142 will Hilight() the provided string with the
 // specified ANSI code.
-func Color142(str string, args ...interface{}) string {
-	return Hilight("color_142", str, args...)
+func Color142(str string) string {
+	return Hilight("color_142", str)
 }
 
 // PrintColor142 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor142(str string, args ...interface{}) {
-	Print(Hilight("color_142", str, args...))
+func PrintColor142(str string) {
+	Print(Hilight("color_142", str))
 }
 
 // PrintlnColor142 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor142(str string, args ...interface{}) {
-	Println(Hilight("color_142", str, args...))
+func PrintlnColor142(str string) {
+	Println(Hilight("color_142", str))
+}
+
+// Color142f wraps Color142 and works with format
+// strings.
+func Color142f(str string, args ...interface{}) string {
+	return Color142(Sprintf(str, args...))
+}
+
+// PrintColor142f wraps PrintColor142 and works with format
+// strings.
+func PrintColor142f(str string, args ...interface{}) {
+	PrintColor142(Sprintf(str, args...))
+}
+
+// PrintlnColor142f wraps PrintlnColor142 and works with format
+// strings.
+func PrintlnColor142f(str string, args ...interface{}) {
+	PrintlnColor142(Sprintf(str, args...))
 }
 
 // OnColor142 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor142(str string, args ...interface{}) string {
-	return Hilight("on_color_142", str, args...)
+func OnColor142(str string) string {
+	return Hilight("on_color_142", str)
 }
 
 // PrintOnColor142 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor142(str string, args ...interface{}) {
-	Print(Hilight("on_color_142", str, args...))
+func PrintOnColor142(str string) {
+	Print(Hilight("on_color_142", str))
 }
 
 // PrintlnOnColor142 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor142(str string, args ...interface{}) {
-	Println(Hilight("on_color_142", str, args...))
+func PrintlnOnColor142(str string) {
+	Println(Hilight("on_color_142", str))
+}
+
+// OnColor142f wraps OnColor142 and works with format
+// strings.
+func OnColor142f(str string, args ...interface{}) string {
+	return OnColor142(Sprintf(str, args...))
+}
+
+// PrintOnColor142f wraps PrintOnColor142 and works with format
+// strings.
+func PrintOnColor142f(str string, args ...interface{}) {
+	PrintOnColor142(Sprintf(str, args...))
+}
+
+// PrintlnOnColor142f wraps PrintlnOnColor142 and works with format
+// strings.
+func PrintlnOnColor142f(str string, args ...interface{}) {
+	PrintlnOnColor142(Sprintf(str, args...))
 }
 
 // Color143 will Hilight() the provided string with the
 // specified ANSI code.
-func Color143(str string, args ...interface{}) string {
-	return Hilight("color_143", str, args...)
+func Color143(str string) string {
+	return Hilight("color_143", str)
 }
 
 // PrintColor143 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor143(str string, args ...interface{}) {
-	Print(Hilight("color_143", str, args...))
+func PrintColor143(str string) {
+	Print(Hilight("color_143", str))
 }
 
 // PrintlnColor143 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor143(str string, args ...interface{}) {
-	Println(Hilight("color_143", str, args...))
+func PrintlnColor143(str string) {
+	Println(Hilight("color_143", str))
+}
+
+// Color143f wraps Color143 and works with format
+// strings.
+func Color143f(str string, args ...interface{}) string {
+	return Color143(Sprintf(str, args...))
+}
+
+// PrintColor143f wraps PrintColor143 and works with format
+// strings.
+func PrintColor143f(str string, args ...interface{}) {
+	PrintColor143(Sprintf(str, args...))
+}
+
+// PrintlnColor143f wraps PrintlnColor143 and works with format
+// strings.
+func PrintlnColor143f(str string, args ...interface{}) {
+	PrintlnColor143(Sprintf(str, args...))
 }
 
 // OnColor143 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor143(str string, args ...interface{}) string {
-	return Hilight("on_color_143", str, args...)
+func OnColor143(str string) string {
+	return Hilight("on_color_143", str)
 }
 
 // PrintOnColor143 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor143(str string, args ...interface{}) {
-	Print(Hilight("on_color_143", str, args...))
+func PrintOnColor143(str string) {
+	Print(Hilight("on_color_143", str))
 }
 
 // PrintlnOnColor143 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor143(str string, args ...interface{}) {
-	Println(Hilight("on_color_143", str, args...))
+func PrintlnOnColor143(str string) {
+	Println(Hilight("on_color_143", str))
+}
+
+// OnColor143f wraps OnColor143 and works with format
+// strings.
+func OnColor143f(str string, args ...interface{}) string {
+	return OnColor143(Sprintf(str, args...))
+}
+
+// PrintOnColor143f wraps PrintOnColor143 and works with format
+// strings.
+func PrintOnColor143f(str string, args ...interface{}) {
+	PrintOnColor143(Sprintf(str, args...))
+}
+
+// PrintlnOnColor143f wraps PrintlnOnColor143 and works with format
+// strings.
+func PrintlnOnColor143f(str string, args ...interface{}) {
+	PrintlnOnColor143(Sprintf(str, args...))
 }
 
 // Color144 will Hilight() the provided string with the
 // specified ANSI code.
-func Color144(str string, args ...interface{}) string {
-	return Hilight("color_144", str, args...)
+func Color144(str string) string {
+	return Hilight("color_144", str)
 }
 
 // PrintColor144 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor144(str string, args ...interface{}) {
-	Print(Hilight("color_144", str, args...))
+func PrintColor144(str string) {
+	Print(Hilight("color_144", str))
 }
 
 // PrintlnColor144 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor144(str string, args ...interface{}) {
-	Println(Hilight("color_144", str, args...))
+func PrintlnColor144(str string) {
+	Println(Hilight("color_144", str))
+}
+
+// Color144f wraps Color144 and works with format
+// strings.
+func Color144f(str string, args ...interface{}) string {
+	return Color144(Sprintf(str, args...))
+}
+
+// PrintColor144f wraps PrintColor144 and works with format
+// strings.
+func PrintColor144f(str string, args ...interface{}) {
+	PrintColor144(Sprintf(str, args...))
+}
+
+// PrintlnColor144f wraps PrintlnColor144 and works with format
+// strings.
+func PrintlnColor144f(str string, args ...interface{}) {
+	PrintlnColor144(Sprintf(str, args...))
 }
 
 // OnColor144 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor144(str string, args ...interface{}) string {
-	return Hilight("on_color_144", str, args...)
+func OnColor144(str string) string {
+	return Hilight("on_color_144", str)
 }
 
 // PrintOnColor144 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor144(str string, args ...interface{}) {
-	Print(Hilight("on_color_144", str, args...))
+func PrintOnColor144(str string) {
+	Print(Hilight("on_color_144", str))
 }
 
 // PrintlnOnColor144 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor144(str string, args ...interface{}) {
-	Println(Hilight("on_color_144", str, args...))
+func PrintlnOnColor144(str string) {
+	Println(Hilight("on_color_144", str))
+}
+
+// OnColor144f wraps OnColor144 and works with format
+// strings.
+func OnColor144f(str string, args ...interface{}) string {
+	return OnColor144(Sprintf(str, args...))
+}
+
+// PrintOnColor144f wraps PrintOnColor144 and works with format
+// strings.
+func PrintOnColor144f(str string, args ...interface{}) {
+	PrintOnColor144(Sprintf(str, args...))
+}
+
+// PrintlnOnColor144f wraps PrintlnOnColor144 and works with format
+// strings.
+func PrintlnOnColor144f(str string, args ...interface{}) {
+	PrintlnOnColor144(Sprintf(str, args...))
 }
 
 // Color145 will Hilight() the provided string with the
 // specified ANSI code.
-func Color145(str string, args ...interface{}) string {
-	return Hilight("color_145", str, args...)
+func Color145(str string) string {
+	return Hilight("color_145", str)
 }
 
 // PrintColor145 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor145(str string, args ...interface{}) {
-	Print(Hilight("color_145", str, args...))
+func PrintColor145(str string) {
+	Print(Hilight("color_145", str))
 }
 
 // PrintlnColor145 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor145(str string, args ...interface{}) {
-	Println(Hilight("color_145", str, args...))
+func PrintlnColor145(str string) {
+	Println(Hilight("color_145", str))
+}
+
+// Color145f wraps Color145 and works with format
+// strings.
+func Color145f(str string, args ...interface{}) string {
+	return Color145(Sprintf(str, args...))
+}
+
+// PrintColor145f wraps PrintColor145 and works with format
+// strings.
+func PrintColor145f(str string, args ...interface{}) {
+	PrintColor145(Sprintf(str, args...))
+}
+
+// PrintlnColor145f wraps PrintlnColor145 and works with format
+// strings.
+func PrintlnColor145f(str string, args ...interface{}) {
+	PrintlnColor145(Sprintf(str, args...))
 }
 
 // OnColor145 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor145(str string, args ...interface{}) string {
-	return Hilight("on_color_145", str, args...)
+func OnColor145(str string) string {
+	return Hilight("on_color_145", str)
 }
 
 // PrintOnColor145 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor145(str string, args ...interface{}) {
-	Print(Hilight("on_color_145", str, args...))
+func PrintOnColor145(str string) {
+	Print(Hilight("on_color_145", str))
 }
 
 // PrintlnOnColor145 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor145(str string, args ...interface{}) {
-	Println(Hilight("on_color_145", str, args...))
+func PrintlnOnColor145(str string) {
+	Println(Hilight("on_color_145", str))
+}
+
+// OnColor145f wraps OnColor145 and works with format
+// strings.
+func OnColor145f(str string, args ...interface{}) string {
+	return OnColor145(Sprintf(str, args...))
+}
+
+// PrintOnColor145f wraps PrintOnColor145 and works with format
+// strings.
+func PrintOnColor145f(str string, args ...interface{}) {
+	PrintOnColor145(Sprintf(str, args...))
+}
+
+// PrintlnOnColor145f wraps PrintlnOnColor145 and works with format
+// strings.
+func PrintlnOnColor145f(str string, args ...interface{}) {
+	PrintlnOnColor145(Sprintf(str, args...))
 }
 
 // Color146 will Hilight() the provided string with the
 // specified ANSI code.
-func Color146(str string, args ...interface{}) string {
-	return Hilight("color_146", str, args...)
+func Color146(str string) string {
+	return Hilight("color_146", str)
 }
 
 // PrintColor146 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor146(str string, args ...interface{}) {
-	Print(Hilight("color_146", str, args...))
+func PrintColor146(str string) {
+	Print(Hilight("color_146", str))
 }
 
 // PrintlnColor146 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor146(str string, args ...interface{}) {
-	Println(Hilight("color_146", str, args...))
+func PrintlnColor146(str string) {
+	Println(Hilight("color_146", str))
+}
+
+// Color146f wraps Color146 and works with format
+// strings.
+func Color146f(str string, args ...interface{}) string {
+	return Color146(Sprintf(str, args...))
+}
+
+// PrintColor146f wraps PrintColor146 and works with format
+// strings.
+func PrintColor146f(str string, args ...interface{}) {
+	PrintColor146(Sprintf(str, args...))
+}
+
+// PrintlnColor146f wraps PrintlnColor146 and works with format
+// strings.
+func PrintlnColor146f(str string, args ...interface{}) {
+	PrintlnColor146(Sprintf(str, args...))
 }
 
 // OnColor146 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor146(str string, args ...interface{}) string {
-	return Hilight("on_color_146", str, args...)
+func OnColor146(str string) string {
+	return Hilight("on_color_146", str)
 }
 
 // PrintOnColor146 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor146(str string, args ...interface{}) {
-	Print(Hilight("on_color_146", str, args...))
+func PrintOnColor146(str string) {
+	Print(Hilight("on_color_146", str))
 }
 
 // PrintlnOnColor146 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor146(str string, args ...interface{}) {
-	Println(Hilight("on_color_146", str, args...))
+func PrintlnOnColor146(str string) {
+	Println(Hilight("on_color_146", str))
+}
+
+// OnColor146f wraps OnColor146 and works with format
+// strings.
+func OnColor146f(str string, args ...interface{}) string {
+	return OnColor146(Sprintf(str, args...))
+}
+
+// PrintOnColor146f wraps PrintOnColor146 and works with format
+// strings.
+func PrintOnColor146f(str string, args ...interface{}) {
+	PrintOnColor146(Sprintf(str, args...))
+}
+
+// PrintlnOnColor146f wraps PrintlnOnColor146 and works with format
+// strings.
+func PrintlnOnColor146f(str string, args ...interface{}) {
+	PrintlnOnColor146(Sprintf(str, args...))
 }
 
 // Color147 will Hilight() the provided string with the
 // specified ANSI code.
-func Color147(str string, args ...interface{}) string {
-	return Hilight("color_147", str, args...)
+func Color147(str string) string {
+	return Hilight("color_147", str)
 }
 
 // PrintColor147 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor147(str string, args ...interface{}) {
-	Print(Hilight("color_147", str, args...))
+func PrintColor147(str string) {
+	Print(Hilight("color_147", str))
 }
 
 // PrintlnColor147 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor147(str string, args ...interface{}) {
-	Println(Hilight("color_147", str, args...))
+func PrintlnColor147(str string) {
+	Println(Hilight("color_147", str))
+}
+
+// Color147f wraps Color147 and works with format
+// strings.
+func Color147f(str string, args ...interface{}) string {
+	return Color147(Sprintf(str, args...))
+}
+
+// PrintColor147f wraps PrintColor147 and works with format
+// strings.
+func PrintColor147f(str string, args ...interface{}) {
+	PrintColor147(Sprintf(str, args...))
+}
+
+// PrintlnColor147f wraps PrintlnColor147 and works with format
+// strings.
+func PrintlnColor147f(str string, args ...interface{}) {
+	PrintlnColor147(Sprintf(str, args...))
 }
 
 // OnColor147 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor147(str string, args ...interface{}) string {
-	return Hilight("on_color_147", str, args...)
+func OnColor147(str string) string {
+	return Hilight("on_color_147", str)
 }
 
 // PrintOnColor147 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor147(str string, args ...interface{}) {
-	Print(Hilight("on_color_147", str, args...))
+func PrintOnColor147(str string) {
+	Print(Hilight("on_color_147", str))
 }
 
 // PrintlnOnColor147 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor147(str string, args ...interface{}) {
-	Println(Hilight("on_color_147", str, args...))
+func PrintlnOnColor147(str string) {
+	Println(Hilight("on_color_147", str))
+}
+
+// OnColor147f wraps OnColor147 and works with format
+// strings.
+func OnColor147f(str string, args ...interface{}) string {
+	return OnColor147(Sprintf(str, args...))
+}
+
+// PrintOnColor147f wraps PrintOnColor147 and works with format
+// strings.
+func PrintOnColor147f(str string, args ...interface{}) {
+	PrintOnColor147(Sprintf(str, args...))
+}
+
+// PrintlnOnColor147f wraps PrintlnOnColor147 and works with format
+// strings.
+func PrintlnOnColor147f(str string, args ...interface{}) {
+	PrintlnOnColor147(Sprintf(str, args...))
 }
 
 // Color148 will Hilight() the provided string with the
 // specified ANSI code.
-func Color148(str string, args ...interface{}) string {
-	return Hilight("color_148", str, args...)
+func Color148(str string) string {
+	return Hilight("color_148", str)
 }
 
 // PrintColor148 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor148(str string, args ...interface{}) {
-	Print(Hilight("color_148", str, args...))
+func PrintColor148(str string) {
+	Print(Hilight("color_148", str))
 }
 
 // PrintlnColor148 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor148(str string, args ...interface{}) {
-	Println(Hilight("color_148", str, args...))
+func PrintlnColor148(str string) {
+	Println(Hilight("color_148", str))
+}
+
+// Color148f wraps Color148 and works with format
+// strings.
+func Color148f(str string, args ...interface{}) string {
+	return Color148(Sprintf(str, args...))
+}
+
+// PrintColor148f wraps PrintColor148 and works with format
+// strings.
+func PrintColor148f(str string, args ...interface{}) {
+	PrintColor148(Sprintf(str, args...))
+}
+
+// PrintlnColor148f wraps PrintlnColor148 and works with format
+// strings.
+func PrintlnColor148f(str string, args ...interface{}) {
+	PrintlnColor148(Sprintf(str, args...))
 }
 
 // OnColor148 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor148(str string, args ...interface{}) string {
-	return Hilight("on_color_148", str, args...)
+func OnColor148(str string) string {
+	return Hilight("on_color_148", str)
 }
 
 // PrintOnColor148 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor148(str string, args ...interface{}) {
-	Print(Hilight("on_color_148", str, args...))
+func PrintOnColor148(str string) {
+	Print(Hilight("on_color_148", str))
 }
 
 // PrintlnOnColor148 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor148(str string, args ...interface{}) {
-	Println(Hilight("on_color_148", str, args...))
+func PrintlnOnColor148(str string) {
+	Println(Hilight("on_color_148", str))
+}
+
+// OnColor148f wraps OnColor148 and works with format
+// strings.
+func OnColor148f(str string, args ...interface{}) string {
+	return OnColor148(Sprintf(str, args...))
+}
+
+// PrintOnColor148f wraps PrintOnColor148 and works with format
+// strings.
+func PrintOnColor148f(str string, args ...interface{}) {
+	PrintOnColor148(Sprintf(str, args...))
+}
+
+// PrintlnOnColor148f wraps PrintlnOnColor148 and works with format
+// strings.
+func PrintlnOnColor148f(str string, args ...interface{}) {
+	PrintlnOnColor148(Sprintf(str, args...))
 }
 
 // Color149 will Hilight() the provided string with the
 // specified ANSI code.
-func Color149(str string, args ...interface{}) string {
-	return Hilight("color_149", str, args...)
+func Color149(str string) string {
+	return Hilight("color_149", str)
 }
 
 // PrintColor149 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor149(str string, args ...interface{}) {
-	Print(Hilight("color_149", str, args...))
+func PrintColor149(str string) {
+	Print(Hilight("color_149", str))
 }
 
 // PrintlnColor149 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor149(str string, args ...interface{}) {
-	Println(Hilight("color_149", str, args...))
+func PrintlnColor149(str string) {
+	Println(Hilight("color_149", str))
+}
+
+// Color149f wraps Color149 and works with format
+// strings.
+func Color149f(str string, args ...interface{}) string {
+	return Color149(Sprintf(str, args...))
+}
+
+// PrintColor149f wraps PrintColor149 and works with format
+// strings.
+func PrintColor149f(str string, args ...interface{}) {
+	PrintColor149(Sprintf(str, args...))
+}
+
+// PrintlnColor149f wraps PrintlnColor149 and works with format
+// strings.
+func PrintlnColor149f(str string, args ...interface{}) {
+	PrintlnColor149(Sprintf(str, args...))
 }
 
 // OnColor149 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor149(str string, args ...interface{}) string {
-	return Hilight("on_color_149", str, args...)
+func OnColor149(str string) string {
+	return Hilight("on_color_149", str)
 }
 
 // PrintOnColor149 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor149(str string, args ...interface{}) {
-	Print(Hilight("on_color_149", str, args...))
+func PrintOnColor149(str string) {
+	Print(Hilight("on_color_149", str))
 }
 
 // PrintlnOnColor149 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor149(str string, args ...interface{}) {
-	Println(Hilight("on_color_149", str, args...))
+func PrintlnOnColor149(str string) {
+	Println(Hilight("on_color_149", str))
+}
+
+// OnColor149f wraps OnColor149 and works with format
+// strings.
+func OnColor149f(str string, args ...interface{}) string {
+	return OnColor149(Sprintf(str, args...))
+}
+
+// PrintOnColor149f wraps PrintOnColor149 and works with format
+// strings.
+func PrintOnColor149f(str string, args ...interface{}) {
+	PrintOnColor149(Sprintf(str, args...))
+}
+
+// PrintlnOnColor149f wraps PrintlnOnColor149 and works with format
+// strings.
+func PrintlnOnColor149f(str string, args ...interface{}) {
+	PrintlnOnColor149(Sprintf(str, args...))
 }
 
 // Color150 will Hilight() the provided string with the
 // specified ANSI code.
-func Color150(str string, args ...interface{}) string {
-	return Hilight("color_150", str, args...)
+func Color150(str string) string {
+	return Hilight("color_150", str)
 }
 
 // PrintColor150 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor150(str string, args ...interface{}) {
-	Print(Hilight("color_150", str, args...))
+func PrintColor150(str string) {
+	Print(Hilight("color_150", str))
 }
 
 // PrintlnColor150 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor150(str string, args ...interface{}) {
-	Println(Hilight("color_150", str, args...))
+func PrintlnColor150(str string) {
+	Println(Hilight("color_150", str))
+}
+
+// Color150f wraps Color150 and works with format
+// strings.
+func Color150f(str string, args ...interface{}) string {
+	return Color150(Sprintf(str, args...))
+}
+
+// PrintColor150f wraps PrintColor150 and works with format
+// strings.
+func PrintColor150f(str string, args ...interface{}) {
+	PrintColor150(Sprintf(str, args...))
+}
+
+// PrintlnColor150f wraps PrintlnColor150 and works with format
+// strings.
+func PrintlnColor150f(str string, args ...interface{}) {
+	PrintlnColor150(Sprintf(str, args...))
 }
 
 // OnColor150 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor150(str string, args ...interface{}) string {
-	return Hilight("on_color_150", str, args...)
+func OnColor150(str string) string {
+	return Hilight("on_color_150", str)
 }
 
 // PrintOnColor150 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor150(str string, args ...interface{}) {
-	Print(Hilight("on_color_150", str, args...))
+func PrintOnColor150(str string) {
+	Print(Hilight("on_color_150", str))
 }
 
 // PrintlnOnColor150 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor150(str string, args ...interface{}) {
-	Println(Hilight("on_color_150", str, args...))
+func PrintlnOnColor150(str string) {
+	Println(Hilight("on_color_150", str))
+}
+
+// OnColor150f wraps OnColor150 and works with format
+// strings.
+func OnColor150f(str string, args ...interface{}) string {
+	return OnColor150(Sprintf(str, args...))
+}
+
+// PrintOnColor150f wraps PrintOnColor150 and works with format
+// strings.
+func PrintOnColor150f(str string, args ...interface{}) {
+	PrintOnColor150(Sprintf(str, args...))
+}
+
+// PrintlnOnColor150f wraps PrintlnOnColor150 and works with format
+// strings.
+func PrintlnOnColor150f(str string, args ...interface{}) {
+	PrintlnOnColor150(Sprintf(str, args...))
 }
 
 // Color151 will Hilight() the provided string with the
 // specified ANSI code.
-func Color151(str string, args ...interface{}) string {
-	return Hilight("color_151", str, args...)
+func Color151(str string) string {
+	return Hilight("color_151", str)
 }
 
 // PrintColor151 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor151(str string, args ...interface{}) {
-	Print(Hilight("color_151", str, args...))
+func PrintColor151(str string) {
+	Print(Hilight("color_151", str))
 }
 
 // PrintlnColor151 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor151(str string, args ...interface{}) {
-	Println(Hilight("color_151", str, args...))
+func PrintlnColor151(str string) {
+	Println(Hilight("color_151", str))
+}
+
+// Color151f wraps Color151 and works with format
+// strings.
+func Color151f(str string, args ...interface{}) string {
+	return Color151(Sprintf(str, args...))
+}
+
+// PrintColor151f wraps PrintColor151 and works with format
+// strings.
+func PrintColor151f(str string, args ...interface{}) {
+	PrintColor151(Sprintf(str, args...))
+}
+
+// PrintlnColor151f wraps PrintlnColor151 and works with format
+// strings.
+func PrintlnColor151f(str string, args ...interface{}) {
+	PrintlnColor151(Sprintf(str, args...))
 }
 
 // OnColor151 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor151(str string, args ...interface{}) string {
-	return Hilight("on_color_151", str, args...)
+func OnColor151(str string) string {
+	return Hilight("on_color_151", str)
 }
 
 // PrintOnColor151 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor151(str string, args ...interface{}) {
-	Print(Hilight("on_color_151", str, args...))
+func PrintOnColor151(str string) {
+	Print(Hilight("on_color_151", str))
 }
 
 // PrintlnOnColor151 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor151(str string, args ...interface{}) {
-	Println(Hilight("on_color_151", str, args...))
+func PrintlnOnColor151(str string) {
+	Println(Hilight("on_color_151", str))
+}
+
+// OnColor151f wraps OnColor151 and works with format
+// strings.
+func OnColor151f(str string, args ...interface{}) string {
+	return OnColor151(Sprintf(str, args...))
+}
+
+// PrintOnColor151f wraps PrintOnColor151 and works with format
+// strings.
+func PrintOnColor151f(str string, args ...interface{}) {
+	PrintOnColor151(Sprintf(str, args...))
+}
+
+// PrintlnOnColor151f wraps PrintlnOnColor151 and works with format
+// strings.
+func PrintlnOnColor151f(str string, args ...interface{}) {
+	PrintlnOnColor151(Sprintf(str, args...))
 }
 
 // Color152 will Hilight() the provided string with the
 // specified ANSI code.
-func Color152(str string, args ...interface{}) string {
-	return Hilight("color_152", str, args...)
+func Color152(str string) string {
+	return Hilight("color_152", str)
 }
 
 // PrintColor152 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor152(str string, args ...interface{}) {
-	Print(Hilight("color_152", str, args...))
+func PrintColor152(str string) {
+	Print(Hilight("color_152", str))
 }
 
 // PrintlnColor152 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor152(str string, args ...interface{}) {
-	Println(Hilight("color_152", str, args...))
+func PrintlnColor152(str string) {
+	Println(Hilight("color_152", str))
+}
+
+// Color152f wraps Color152 and works with format
+// strings.
+func Color152f(str string, args ...interface{}) string {
+	return Color152(Sprintf(str, args...))
+}
+
+// PrintColor152f wraps PrintColor152 and works with format
+// strings.
+func PrintColor152f(str string, args ...interface{}) {
+	PrintColor152(Sprintf(str, args...))
+}
+
+// PrintlnColor152f wraps PrintlnColor152 and works with format
+// strings.
+func PrintlnColor152f(str string, args ...interface{}) {
+	PrintlnColor152(Sprintf(str, args...))
 }
 
 // OnColor152 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor152(str string, args ...interface{}) string {
-	return Hilight("on_color_152", str, args...)
+func OnColor152(str string) string {
+	return Hilight("on_color_152", str)
 }
 
 // PrintOnColor152 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor152(str string, args ...interface{}) {
-	Print(Hilight("on_color_152", str, args...))
+func PrintOnColor152(str string) {
+	Print(Hilight("on_color_152", str))
 }
 
 // PrintlnOnColor152 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor152(str string, args ...interface{}) {
-	Println(Hilight("on_color_152", str, args...))
+func PrintlnOnColor152(str string) {
+	Println(Hilight("on_color_152", str))
+}
+
+// OnColor152f wraps OnColor152 and works with format
+// strings.
+func OnColor152f(str string, args ...interface{}) string {
+	return OnColor152(Sprintf(str, args...))
+}
+
+// PrintOnColor152f wraps PrintOnColor152 and works with format
+// strings.
+func PrintOnColor152f(str string, args ...interface{}) {
+	PrintOnColor152(Sprintf(str, args...))
+}
+
+// PrintlnOnColor152f wraps PrintlnOnColor152 and works with format
+// strings.
+func PrintlnOnColor152f(str string, args ...interface{}) {
+	PrintlnOnColor152(Sprintf(str, args...))
 }
 
 // Color153 will Hilight() the provided string with the
 // specified ANSI code.
-func Color153(str string, args ...interface{}) string {
-	return Hilight("color_153", str, args...)
+func Color153(str string) string {
+	return Hilight("color_153", str)
 }
 
 // PrintColor153 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor153(str string, args ...interface{}) {
-	Print(Hilight("color_153", str, args...))
+func PrintColor153(str string) {
+	Print(Hilight("color_153", str))
 }
 
 // PrintlnColor153 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor153(str string, args ...interface{}) {
-	Println(Hilight("color_153", str, args...))
+func PrintlnColor153(str string) {
+	Println(Hilight("color_153", str))
+}
+
+// Color153f wraps Color153 and works with format
+// strings.
+func Color153f(str string, args ...interface{}) string {
+	return Color153(Sprintf(str, args...))
+}
+
+// PrintColor153f wraps PrintColor153 and works with format
+// strings.
+func PrintColor153f(str string, args ...interface{}) {
+	PrintColor153(Sprintf(str, args...))
+}
+
+// PrintlnColor153f wraps PrintlnColor153 and works with format
+// strings.
+func PrintlnColor153f(str string, args ...interface{}) {
+	PrintlnColor153(Sprintf(str, args...))
 }
 
 // OnColor153 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor153(str string, args ...interface{}) string {
-	return Hilight("on_color_153", str, args...)
+func OnColor153(str string) string {
+	return Hilight("on_color_153", str)
 }
 
 // PrintOnColor153 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor153(str string, args ...interface{}) {
-	Print(Hilight("on_color_153", str, args...))
+func PrintOnColor153(str string) {
+	Print(Hilight("on_color_153", str))
 }
 
 // PrintlnOnColor153 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor153(str string, args ...interface{}) {
-	Println(Hilight("on_color_153", str, args...))
+func PrintlnOnColor153(str string) {
+	Println(Hilight("on_color_153", str))
+}
+
+// OnColor153f wraps OnColor153 and works with format
+// strings.
+func OnColor153f(str string, args ...interface{}) string {
+	return OnColor153(Sprintf(str, args...))
+}
+
+// PrintOnColor153f wraps PrintOnColor153 and works with format
+// strings.
+func PrintOnColor153f(str string, args ...interface{}) {
+	PrintOnColor153(Sprintf(str, args...))
+}
+
+// PrintlnOnColor153f wraps PrintlnOnColor153 and works with format
+// strings.
+func PrintlnOnColor153f(str string, args ...interface{}) {
+	PrintlnOnColor153(Sprintf(str, args...))
 }
 
 // Color154 will Hilight() the provided string with the
 // specified ANSI code.
-func Color154(str string, args ...interface{}) string {
-	return Hilight("color_154", str, args...)
+func Color154(str string) string {
+	return Hilight("color_154", str)
 }
 
 // PrintColor154 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor154(str string, args ...interface{}) {
-	Print(Hilight("color_154", str, args...))
+func PrintColor154(str string) {
+	Print(Hilight("color_154", str))
 }
 
 // PrintlnColor154 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor154(str string, args ...interface{}) {
-	Println(Hilight("color_154", str, args...))
+func PrintlnColor154(str string) {
+	Println(Hilight("color_154", str))
+}
+
+// Color154f wraps Color154 and works with format
+// strings.
+func Color154f(str string, args ...interface{}) string {
+	return Color154(Sprintf(str, args...))
+}
+
+// PrintColor154f wraps PrintColor154 and works with format
+// strings.
+func PrintColor154f(str string, args ...interface{}) {
+	PrintColor154(Sprintf(str, args...))
+}
+
+// PrintlnColor154f wraps PrintlnColor154 and works with format
+// strings.
+func PrintlnColor154f(str string, args ...interface{}) {
+	PrintlnColor154(Sprintf(str, args...))
 }
 
 // OnColor154 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor154(str string, args ...interface{}) string {
-	return Hilight("on_color_154", str, args...)
+func OnColor154(str string) string {
+	return Hilight("on_color_154", str)
 }
 
 // PrintOnColor154 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor154(str string, args ...interface{}) {
-	Print(Hilight("on_color_154", str, args...))
+func PrintOnColor154(str string) {
+	Print(Hilight("on_color_154", str))
 }
 
 // PrintlnOnColor154 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor154(str string, args ...interface{}) {
-	Println(Hilight("on_color_154", str, args...))
+func PrintlnOnColor154(str string) {
+	Println(Hilight("on_color_154", str))
+}
+
+// OnColor154f wraps OnColor154 and works with format
+// strings.
+func OnColor154f(str string, args ...interface{}) string {
+	return OnColor154(Sprintf(str, args...))
+}
+
+// PrintOnColor154f wraps PrintOnColor154 and works with format
+// strings.
+func PrintOnColor154f(str string, args ...interface{}) {
+	PrintOnColor154(Sprintf(str, args...))
+}
+
+// PrintlnOnColor154f wraps PrintlnOnColor154 and works with format
+// strings.
+func PrintlnOnColor154f(str string, args ...interface{}) {
+	PrintlnOnColor154(Sprintf(str, args...))
 }
 
 // Color155 will Hilight() the provided string with the
 // specified ANSI code.
-func Color155(str string, args ...interface{}) string {
-	return Hilight("color_155", str, args...)
+func Color155(str string) string {
+	return Hilight("color_155", str)
 }
 
 // PrintColor155 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor155(str string, args ...interface{}) {
-	Print(Hilight("color_155", str, args...))
+func PrintColor155(str string) {
+	Print(Hilight("color_155", str))
 }
 
 // PrintlnColor155 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor155(str string, args ...interface{}) {
-	Println(Hilight("color_155", str, args...))
+func PrintlnColor155(str string) {
+	Println(Hilight("color_155", str))
+}
+
+// Color155f wraps Color155 and works with format
+// strings.
+func Color155f(str string, args ...interface{}) string {
+	return Color155(Sprintf(str, args...))
+}
+
+// PrintColor155f wraps PrintColor155 and works with format
+// strings.
+func PrintColor155f(str string, args ...interface{}) {
+	PrintColor155(Sprintf(str, args...))
+}
+
+// PrintlnColor155f wraps PrintlnColor155 and works with format
+// strings.
+func PrintlnColor155f(str string, args ...interface{}) {
+	PrintlnColor155(Sprintf(str, args...))
 }
 
 // OnColor155 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor155(str string, args ...interface{}) string {
-	return Hilight("on_color_155", str, args...)
+func OnColor155(str string) string {
+	return Hilight("on_color_155", str)
 }
 
 // PrintOnColor155 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor155(str string, args ...interface{}) {
-	Print(Hilight("on_color_155", str, args...))
+func PrintOnColor155(str string) {
+	Print(Hilight("on_color_155", str))
 }
 
 // PrintlnOnColor155 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor155(str string, args ...interface{}) {
-	Println(Hilight("on_color_155", str, args...))
+func PrintlnOnColor155(str string) {
+	Println(Hilight("on_color_155", str))
+}
+
+// OnColor155f wraps OnColor155 and works with format
+// strings.
+func OnColor155f(str string, args ...interface{}) string {
+	return OnColor155(Sprintf(str, args...))
+}
+
+// PrintOnColor155f wraps PrintOnColor155 and works with format
+// strings.
+func PrintOnColor155f(str string, args ...interface{}) {
+	PrintOnColor155(Sprintf(str, args...))
+}
+
+// PrintlnOnColor155f wraps PrintlnOnColor155 and works with format
+// strings.
+func PrintlnOnColor155f(str string, args ...interface{}) {
+	PrintlnOnColor155(Sprintf(str, args...))
 }
 
 // Color156 will Hilight() the provided string with the
 // specified ANSI code.
-func Color156(str string, args ...interface{}) string {
-	return Hilight("color_156", str, args...)
+func Color156(str string) string {
+	return Hilight("color_156", str)
 }
 
 // PrintColor156 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor156(str string, args ...interface{}) {
-	Print(Hilight("color_156", str, args...))
+func PrintColor156(str string) {
+	Print(Hilight("color_156", str))
 }
 
 // PrintlnColor156 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor156(str string, args ...interface{}) {
-	Println(Hilight("color_156", str, args...))
+func PrintlnColor156(str string) {
+	Println(Hilight("color_156", str))
+}
+
+// Color156f wraps Color156 and works with format
+// strings.
+func Color156f(str string, args ...interface{}) string {
+	return Color156(Sprintf(str, args...))
+}
+
+// PrintColor156f wraps PrintColor156 and works with format
+// strings.
+func PrintColor156f(str string, args ...interface{}) {
+	PrintColor156(Sprintf(str, args...))
+}
+
+// PrintlnColor156f wraps PrintlnColor156 and works with format
+// strings.
+func PrintlnColor156f(str string, args ...interface{}) {
+	PrintlnColor156(Sprintf(str, args...))
 }
 
 // OnColor156 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor156(str string, args ...interface{}) string {
-	return Hilight("on_color_156", str, args...)
+func OnColor156(str string) string {
+	return Hilight("on_color_156", str)
 }
 
 // PrintOnColor156 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor156(str string, args ...interface{}) {
-	Print(Hilight("on_color_156", str, args...))
+func PrintOnColor156(str string) {
+	Print(Hilight("on_color_156", str))
 }
 
 // PrintlnOnColor156 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor156(str string, args ...interface{}) {
-	Println(Hilight("on_color_156", str, args...))
+func PrintlnOnColor156(str string) {
+	Println(Hilight("on_color_156", str))
+}
+
+// OnColor156f wraps OnColor156 and works with format
+// strings.
+func OnColor156f(str string, args ...interface{}) string {
+	return OnColor156(Sprintf(str, args...))
+}
+
+// PrintOnColor156f wraps PrintOnColor156 and works with format
+// strings.
+func PrintOnColor156f(str string, args ...interface{}) {
+	PrintOnColor156(Sprintf(str, args...))
+}
+
+// PrintlnOnColor156f wraps PrintlnOnColor156 and works with format
+// strings.
+func PrintlnOnColor156f(str string, args ...interface{}) {
+	PrintlnOnColor156(Sprintf(str, args...))
 }
 
 // Color157 will Hilight() the provided string with the
 // specified ANSI code.
-func Color157(str string, args ...interface{}) string {
-	return Hilight("color_157", str, args...)
+func Color157(str string) string {
+	return Hilight("color_157", str)
 }
 
 // PrintColor157 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor157(str string, args ...interface{}) {
-	Print(Hilight("color_157", str, args...))
+func PrintColor157(str string) {
+	Print(Hilight("color_157", str))
 }
 
 // PrintlnColor157 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor157(str string, args ...interface{}) {
-	Println(Hilight("color_157", str, args...))
+func PrintlnColor157(str string) {
+	Println(Hilight("color_157", str))
+}
+
+// Color157f wraps Color157 and works with format
+// strings.
+func Color157f(str string, args ...interface{}) string {
+	return Color157(Sprintf(str, args...))
+}
+
+// PrintColor157f wraps PrintColor157 and works with format
+// strings.
+func PrintColor157f(str string, args ...interface{}) {
+	PrintColor157(Sprintf(str, args...))
+}
+
+// PrintlnColor157f wraps PrintlnColor157 and works with format
+// strings.
+func PrintlnColor157f(str string, args ...interface{}) {
+	PrintlnColor157(Sprintf(str, args...))
 }
 
 // OnColor157 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor157(str string, args ...interface{}) string {
-	return Hilight("on_color_157", str, args...)
+func OnColor157(str string) string {
+	return Hilight("on_color_157", str)
 }
 
 // PrintOnColor157 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor157(str string, args ...interface{}) {
-	Print(Hilight("on_color_157", str, args...))
+func PrintOnColor157(str string) {
+	Print(Hilight("on_color_157", str))
 }
 
 // PrintlnOnColor157 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor157(str string, args ...interface{}) {
-	Println(Hilight("on_color_157", str, args...))
+func PrintlnOnColor157(str string) {
+	Println(Hilight("on_color_157", str))
+}
+
+// OnColor157f wraps OnColor157 and works with format
+// strings.
+func OnColor157f(str string, args ...interface{}) string {
+	return OnColor157(Sprintf(str, args...))
+}
+
+// PrintOnColor157f wraps PrintOnColor157 and works with format
+// strings.
+func PrintOnColor157f(str string, args ...interface{}) {
+	PrintOnColor157(Sprintf(str, args...))
+}
+
+// PrintlnOnColor157f wraps PrintlnOnColor157 and works with format
+// strings.
+func PrintlnOnColor157f(str string, args ...interface{}) {
+	PrintlnOnColor157(Sprintf(str, args...))
 }
 
 // Color158 will Hilight() the provided string with the
 // specified ANSI code.
-func Color158(str string, args ...interface{}) string {
-	return Hilight("color_158", str, args...)
+func Color158(str string) string {
+	return Hilight("color_158", str)
 }
 
 // PrintColor158 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor158(str string, args ...interface{}) {
-	Print(Hilight("color_158", str, args...))
+func PrintColor158(str string) {
+	Print(Hilight("color_158", str))
 }
 
 // PrintlnColor158 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor158(str string, args ...interface{}) {
-	Println(Hilight("color_158", str, args...))
+func PrintlnColor158(str string) {
+	Println(Hilight("color_158", str))
+}
+
+// Color158f wraps Color158 and works with format
+// strings.
+func Color158f(str string, args ...interface{}) string {
+	return Color158(Sprintf(str, args...))
+}
+
+// PrintColor158f wraps PrintColor158 and works with format
+// strings.
+func PrintColor158f(str string, args ...interface{}) {
+	PrintColor158(Sprintf(str, args...))
+}
+
+// PrintlnColor158f wraps PrintlnColor158 and works with format
+// strings.
+func PrintlnColor158f(str string, args ...interface{}) {
+	PrintlnColor158(Sprintf(str, args...))
 }
 
 // OnColor158 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor158(str string, args ...interface{}) string {
-	return Hilight("on_color_158", str, args...)
+func OnColor158(str string) string {
+	return Hilight("on_color_158", str)
 }
 
 // PrintOnColor158 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor158(str string, args ...interface{}) {
-	Print(Hilight("on_color_158", str, args...))
+func PrintOnColor158(str string) {
+	Print(Hilight("on_color_158", str))
 }
 
 // PrintlnOnColor158 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor158(str string, args ...interface{}) {
-	Println(Hilight("on_color_158", str, args...))
+func PrintlnOnColor158(str string) {
+	Println(Hilight("on_color_158", str))
+}
+
+// OnColor158f wraps OnColor158 and works with format
+// strings.
+func OnColor158f(str string, args ...interface{}) string {
+	return OnColor158(Sprintf(str, args...))
+}
+
+// PrintOnColor158f wraps PrintOnColor158 and works with format
+// strings.
+func PrintOnColor158f(str string, args ...interface{}) {
+	PrintOnColor158(Sprintf(str, args...))
+}
+
+// PrintlnOnColor158f wraps PrintlnOnColor158 and works with format
+// strings.
+func PrintlnOnColor158f(str string, args ...interface{}) {
+	PrintlnOnColor158(Sprintf(str, args...))
 }
 
 // Color159 will Hilight() the provided string with the
 // specified ANSI code.
-func Color159(str string, args ...interface{}) string {
-	return Hilight("color_159", str, args...)
+func Color159(str string) string {
+	return Hilight("color_159", str)
 }
 
 // PrintColor159 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor159(str string, args ...interface{}) {
-	Print(Hilight("color_159", str, args...))
+func PrintColor159(str string) {
+	Print(Hilight("color_159", str))
 }
 
 // PrintlnColor159 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor159(str string, args ...interface{}) {
-	Println(Hilight("color_159", str, args...))
+func PrintlnColor159(str string) {
+	Println(Hilight("color_159", str))
+}
+
+// Color159f wraps Color159 and works with format
+// strings.
+func Color159f(str string, args ...interface{}) string {
+	return Color159(Sprintf(str, args...))
+}
+
+// PrintColor159f wraps PrintColor159 and works with format
+// strings.
+func PrintColor159f(str string, args ...interface{}) {
+	PrintColor159(Sprintf(str, args...))
+}
+
+// PrintlnColor159f wraps PrintlnColor159 and works with format
+// strings.
+func PrintlnColor159f(str string, args ...interface{}) {
+	PrintlnColor159(Sprintf(str, args...))
 }
 
 // OnColor159 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor159(str string, args ...interface{}) string {
-	return Hilight("on_color_159", str, args...)
+func OnColor159(str string) string {
+	return Hilight("on_color_159", str)
 }
 
 // PrintOnColor159 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor159(str string, args ...interface{}) {
-	Print(Hilight("on_color_159", str, args...))
+func PrintOnColor159(str string) {
+	Print(Hilight("on_color_159", str))
 }
 
 // PrintlnOnColor159 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor159(str string, args ...interface{}) {
-	Println(Hilight("on_color_159", str, args...))
+func PrintlnOnColor159(str string) {
+	Println(Hilight("on_color_159", str))
+}
+
+// OnColor159f wraps OnColor159 and works with format
+// strings.
+func OnColor159f(str string, args ...interface{}) string {
+	return OnColor159(Sprintf(str, args...))
+}
+
+// PrintOnColor159f wraps PrintOnColor159 and works with format
+// strings.
+func PrintOnColor159f(str string, args ...interface{}) {
+	PrintOnColor159(Sprintf(str, args...))
+}
+
+// PrintlnOnColor159f wraps PrintlnOnColor159 and works with format
+// strings.
+func PrintlnOnColor159f(str string, args ...interface{}) {
+	PrintlnOnColor159(Sprintf(str, args...))
 }
 
 // Color160 will Hilight() the provided string with the
 // specified ANSI code.
-func Color160(str string, args ...interface{}) string {
-	return Hilight("color_160", str, args...)
+func Color160(str string) string {
+	return Hilight("color_160", str)
 }
 
 // PrintColor160 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor160(str string, args ...interface{}) {
-	Print(Hilight("color_160", str, args...))
+func PrintColor160(str string) {
+	Print(Hilight("color_160", str))
 }
 
 // PrintlnColor160 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor160(str string, args ...interface{}) {
-	Println(Hilight("color_160", str, args...))
+func PrintlnColor160(str string) {
+	Println(Hilight("color_160", str))
+}
+
+// Color160f wraps Color160 and works with format
+// strings.
+func Color160f(str string, args ...interface{}) string {
+	return Color160(Sprintf(str, args...))
+}
+
+// PrintColor160f wraps PrintColor160 and works with format
+// strings.
+func PrintColor160f(str string, args ...interface{}) {
+	PrintColor160(Sprintf(str, args...))
+}
+
+// PrintlnColor160f wraps PrintlnColor160 and works with format
+// strings.
+func PrintlnColor160f(str string, args ...interface{}) {
+	PrintlnColor160(Sprintf(str, args...))
 }
 
 // OnColor160 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor160(str string, args ...interface{}) string {
-	return Hilight("on_color_160", str, args...)
+func OnColor160(str string) string {
+	return Hilight("on_color_160", str)
 }
 
 // PrintOnColor160 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor160(str string, args ...interface{}) {
-	Print(Hilight("on_color_160", str, args...))
+func PrintOnColor160(str string) {
+	Print(Hilight("on_color_160", str))
 }
 
 // PrintlnOnColor160 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor160(str string, args ...interface{}) {
-	Println(Hilight("on_color_160", str, args...))
+func PrintlnOnColor160(str string) {
+	Println(Hilight("on_color_160", str))
+}
+
+// OnColor160f wraps OnColor160 and works with format
+// strings.
+func OnColor160f(str string, args ...interface{}) string {
+	return OnColor160(Sprintf(str, args...))
+}
+
+// PrintOnColor160f wraps PrintOnColor160 and works with format
+// strings.
+func PrintOnColor160f(str string, args ...interface{}) {
+	PrintOnColor160(Sprintf(str, args...))
+}
+
+// PrintlnOnColor160f wraps PrintlnOnColor160 and works with format
+// strings.
+func PrintlnOnColor160f(str string, args ...interface{}) {
+	PrintlnOnColor160(Sprintf(str, args...))
 }
 
 // Color161 will Hilight() the provided string with the
 // specified ANSI code.
-func Color161(str string, args ...interface{}) string {
-	return Hilight("color_161", str, args...)
+func Color161(str string) string {
+	return Hilight("color_161", str)
 }
 
 // PrintColor161 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor161(str string, args ...interface{}) {
-	Print(Hilight("color_161", str, args...))
+func PrintColor161(str string) {
+	Print(Hilight("color_161", str))
 }
 
 // PrintlnColor161 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor161(str string, args ...interface{}) {
-	Println(Hilight("color_161", str, args...))
+func PrintlnColor161(str string) {
+	Println(Hilight("color_161", str))
+}
+
+// Color161f wraps Color161 and works with format
+// strings.
+func Color161f(str string, args ...interface{}) string {
+	return Color161(Sprintf(str, args...))
+}
+
+// PrintColor161f wraps PrintColor161 and works with format
+// strings.
+func PrintColor161f(str string, args ...interface{}) {
+	PrintColor161(Sprintf(str, args...))
+}
+
+// PrintlnColor161f wraps PrintlnColor161 and works with format
+// strings.
+func PrintlnColor161f(str string, args ...interface{}) {
+	PrintlnColor161(Sprintf(str, args...))
 }
 
 // OnColor161 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor161(str string, args ...interface{}) string {
-	return Hilight("on_color_161", str, args...)
+func OnColor161(str string) string {
+	return Hilight("on_color_161", str)
 }
 
 // PrintOnColor161 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor161(str string, args ...interface{}) {
-	Print(Hilight("on_color_161", str, args...))
+func PrintOnColor161(str string) {
+	Print(Hilight("on_color_161", str))
 }
 
 // PrintlnOnColor161 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor161(str string, args ...interface{}) {
-	Println(Hilight("on_color_161", str, args...))
+func PrintlnOnColor161(str string) {
+	Println(Hilight("on_color_161", str))
+}
+
+// OnColor161f wraps OnColor161 and works with format
+// strings.
+func OnColor161f(str string, args ...interface{}) string {
+	return OnColor161(Sprintf(str, args...))
+}
+
+// PrintOnColor161f wraps PrintOnColor161 and works with format
+// strings.
+func PrintOnColor161f(str string, args ...interface{}) {
+	PrintOnColor161(Sprintf(str, args...))
+}
+
+// PrintlnOnColor161f wraps PrintlnOnColor161 and works with format
+// strings.
+func PrintlnOnColor161f(str string, args ...interface{}) {
+	PrintlnOnColor161(Sprintf(str, args...))
 }
 
 // Color162 will Hilight() the provided string with the
 // specified ANSI code.
-func Color162(str string, args ...interface{}) string {
-	return Hilight("color_162", str, args...)
+func Color162(str string) string {
+	return Hilight("color_162", str)
 }
 
 // PrintColor162 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor162(str string, args ...interface{}) {
-	Print(Hilight("color_162", str, args...))
+func PrintColor162(str string) {
+	Print(Hilight("color_162", str))
 }
 
 // PrintlnColor162 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor162(str string, args ...interface{}) {
-	Println(Hilight("color_162", str, args...))
+func PrintlnColor162(str string) {
+	Println(Hilight("color_162", str))
+}
+
+// Color162f wraps Color162 and works with format
+// strings.
+func Color162f(str string, args ...interface{}) string {
+	return Color162(Sprintf(str, args...))
+}
+
+// PrintColor162f wraps PrintColor162 and works with format
+// strings.
+func PrintColor162f(str string, args ...interface{}) {
+	PrintColor162(Sprintf(str, args...))
+}
+
+// PrintlnColor162f wraps PrintlnColor162 and works with format
+// strings.
+func PrintlnColor162f(str string, args ...interface{}) {
+	PrintlnColor162(Sprintf(str, args...))
 }
 
 // OnColor162 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor162(str string, args ...interface{}) string {
-	return Hilight("on_color_162", str, args...)
+func OnColor162(str string) string {
+	return Hilight("on_color_162", str)
 }
 
 // PrintOnColor162 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor162(str string, args ...interface{}) {
-	Print(Hilight("on_color_162", str, args...))
+func PrintOnColor162(str string) {
+	Print(Hilight("on_color_162", str))
 }
 
 // PrintlnOnColor162 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor162(str string, args ...interface{}) {
-	Println(Hilight("on_color_162", str, args...))
+func PrintlnOnColor162(str string) {
+	Println(Hilight("on_color_162", str))
+}
+
+// OnColor162f wraps OnColor162 and works with format
+// strings.
+func OnColor162f(str string, args ...interface{}) string {
+	return OnColor162(Sprintf(str, args...))
+}
+
+// PrintOnColor162f wraps PrintOnColor162 and works with format
+// strings.
+func PrintOnColor162f(str string, args ...interface{}) {
+	PrintOnColor162(Sprintf(str, args...))
+}
+
+// PrintlnOnColor162f wraps PrintlnOnColor162 and works with format
+// strings.
+func PrintlnOnColor162f(str string, args ...interface{}) {
+	PrintlnOnColor162(Sprintf(str, args...))
 }
 
 // Color163 will Hilight() the provided string with the
 // specified ANSI code.
-func Color163(str string, args ...interface{}) string {
-	return Hilight("color_163", str, args...)
+func Color163(str string) string {
+	return Hilight("color_163", str)
 }
 
 // PrintColor163 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor163(str string, args ...interface{}) {
-	Print(Hilight("color_163", str, args...))
+func PrintColor163(str string) {
+	Print(Hilight("color_163", str))
 }
 
 // PrintlnColor163 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor163(str string, args ...interface{}) {
-	Println(Hilight("color_163", str, args...))
+func PrintlnColor163(str string) {
+	Println(Hilight("color_163", str))
+}
+
+// Color163f wraps Color163 and works with format
+// strings.
+func Color163f(str string, args ...interface{}) string {
+	return Color163(Sprintf(str, args...))
+}
+
+// PrintColor163f wraps PrintColor163 and works with format
+// strings.
+func PrintColor163f(str string, args ...interface{}) {
+	PrintColor163(Sprintf(str, args...))
+}
+
+// PrintlnColor163f wraps PrintlnColor163 and works with format
+// strings.
+func PrintlnColor163f(str string, args ...interface{}) {
+	PrintlnColor163(Sprintf(str, args...))
 }
 
 // OnColor163 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor163(str string, args ...interface{}) string {
-	return Hilight("on_color_163", str, args...)
+func OnColor163(str string) string {
+	return Hilight("on_color_163", str)
 }
 
 // PrintOnColor163 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor163(str string, args ...interface{}) {
-	Print(Hilight("on_color_163", str, args...))
+func PrintOnColor163(str string) {
+	Print(Hilight("on_color_163", str))
 }
 
 // PrintlnOnColor163 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor163(str string, args ...interface{}) {
-	Println(Hilight("on_color_163", str, args...))
+func PrintlnOnColor163(str string) {
+	Println(Hilight("on_color_163", str))
+}
+
+// OnColor163f wraps OnColor163 and works with format
+// strings.
+func OnColor163f(str string, args ...interface{}) string {
+	return OnColor163(Sprintf(str, args...))
+}
+
+// PrintOnColor163f wraps PrintOnColor163 and works with format
+// strings.
+func PrintOnColor163f(str string, args ...interface{}) {
+	PrintOnColor163(Sprintf(str, args...))
+}
+
+// PrintlnOnColor163f wraps PrintlnOnColor163 and works with format
+// strings.
+func PrintlnOnColor163f(str string, args ...interface{}) {
+	PrintlnOnColor163(Sprintf(str, args...))
 }
 
 // Color164 will Hilight() the provided string with the
 // specified ANSI code.
-func Color164(str string, args ...interface{}) string {
-	return Hilight("color_164", str, args...)
+func Color164(str string) string {
+	return Hilight("color_164", str)
 }
 
 // PrintColor164 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor164(str string, args ...interface{}) {
-	Print(Hilight("color_164", str, args...))
+func PrintColor164(str string) {
+	Print(Hilight("color_164", str))
 }
 
 // PrintlnColor164 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor164(str string, args ...interface{}) {
-	Println(Hilight("color_164", str, args...))
+func PrintlnColor164(str string) {
+	Println(Hilight("color_164", str))
+}
+
+// Color164f wraps Color164 and works with format
+// strings.
+func Color164f(str string, args ...interface{}) string {
+	return Color164(Sprintf(str, args...))
+}
+
+// PrintColor164f wraps PrintColor164 and works with format
+// strings.
+func PrintColor164f(str string, args ...interface{}) {
+	PrintColor164(Sprintf(str, args...))
+}
+
+// PrintlnColor164f wraps PrintlnColor164 and works with format
+// strings.
+func PrintlnColor164f(str string, args ...interface{}) {
+	PrintlnColor164(Sprintf(str, args...))
 }
 
 // OnColor164 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor164(str string, args ...interface{}) string {
-	return Hilight("on_color_164", str, args...)
+func OnColor164(str string) string {
+	return Hilight("on_color_164", str)
 }
 
 // PrintOnColor164 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor164(str string, args ...interface{}) {
-	Print(Hilight("on_color_164", str, args...))
+func PrintOnColor164(str string) {
+	Print(Hilight("on_color_164", str))
 }
 
 // PrintlnOnColor164 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor164(str string, args ...interface{}) {
-	Println(Hilight("on_color_164", str, args...))
+func PrintlnOnColor164(str string) {
+	Println(Hilight("on_color_164", str))
+}
+
+// OnColor164f wraps OnColor164 and works with format
+// strings.
+func OnColor164f(str string, args ...interface{}) string {
+	return OnColor164(Sprintf(str, args...))
+}
+
+// PrintOnColor164f wraps PrintOnColor164 and works with format
+// strings.
+func PrintOnColor164f(str string, args ...interface{}) {
+	PrintOnColor164(Sprintf(str, args...))
+}
+
+// PrintlnOnColor164f wraps PrintlnOnColor164 and works with format
+// strings.
+func PrintlnOnColor164f(str string, args ...interface{}) {
+	PrintlnOnColor164(Sprintf(str, args...))
 }
 
 // Color165 will Hilight() the provided string with the
 // specified ANSI code.
-func Color165(str string, args ...interface{}) string {
-	return Hilight("color_165", str, args...)
+func Color165(str string) string {
+	return Hilight("color_165", str)
 }
 
 // PrintColor165 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor165(str string, args ...interface{}) {
-	Print(Hilight("color_165", str, args...))
+func PrintColor165(str string) {
+	Print(Hilight("color_165", str))
 }
 
 // PrintlnColor165 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor165(str string, args ...interface{}) {
-	Println(Hilight("color_165", str, args...))
+func PrintlnColor165(str string) {
+	Println(Hilight("color_165", str))
+}
+
+// Color165f wraps Color165 and works with format
+// strings.
+func Color165f(str string, args ...interface{}) string {
+	return Color165(Sprintf(str, args...))
+}
+
+// PrintColor165f wraps PrintColor165 and works with format
+// strings.
+func PrintColor165f(str string, args ...interface{}) {
+	PrintColor165(Sprintf(str, args...))
+}
+
+// PrintlnColor165f wraps PrintlnColor165 and works with format
+// strings.
+func PrintlnColor165f(str string, args ...interface{}) {
+	PrintlnColor165(Sprintf(str, args...))
 }
 
 // OnColor165 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor165(str string, args ...interface{}) string {
-	return Hilight("on_color_165", str, args...)
+func OnColor165(str string) string {
+	return Hilight("on_color_165", str)
 }
 
 // PrintOnColor165 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor165(str string, args ...interface{}) {
-	Print(Hilight("on_color_165", str, args...))
+func PrintOnColor165(str string) {
+	Print(Hilight("on_color_165", str))
 }
 
 // PrintlnOnColor165 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor165(str string, args ...interface{}) {
-	Println(Hilight("on_color_165", str, args...))
+func PrintlnOnColor165(str string) {
+	Println(Hilight("on_color_165", str))
+}
+
+// OnColor165f wraps OnColor165 and works with format
+// strings.
+func OnColor165f(str string, args ...interface{}) string {
+	return OnColor165(Sprintf(str, args...))
+}
+
+// PrintOnColor165f wraps PrintOnColor165 and works with format
+// strings.
+func PrintOnColor165f(str string, args ...interface{}) {
+	PrintOnColor165(Sprintf(str, args...))
+}
+
+// PrintlnOnColor165f wraps PrintlnOnColor165 and works with format
+// strings.
+func PrintlnOnColor165f(str string, args ...interface{}) {
+	PrintlnOnColor165(Sprintf(str, args...))
 }
 
 // Color166 will Hilight() the provided string with the
 // specified ANSI code.
-func Color166(str string, args ...interface{}) string {
-	return Hilight("color_166", str, args...)
+func Color166(str string) string {
+	return Hilight("color_166", str)
 }
 
 // PrintColor166 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor166(str string, args ...interface{}) {
-	Print(Hilight("color_166", str, args...))
+func PrintColor166(str string) {
+	Print(Hilight("color_166", str))
 }
 
 // PrintlnColor166 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor166(str string, args ...interface{}) {
-	Println(Hilight("color_166", str, args...))
+func PrintlnColor166(str string) {
+	Println(Hilight("color_166", str))
+}
+
+// Color166f wraps Color166 and works with format
+// strings.
+func Color166f(str string, args ...interface{}) string {
+	return Color166(Sprintf(str, args...))
+}
+
+// PrintColor166f wraps PrintColor166 and works with format
+// strings.
+func PrintColor166f(str string, args ...interface{}) {
+	PrintColor166(Sprintf(str, args...))
+}
+
+// PrintlnColor166f wraps PrintlnColor166 and works with format
+// strings.
+func PrintlnColor166f(str string, args ...interface{}) {
+	PrintlnColor166(Sprintf(str, args...))
 }
 
 // OnColor166 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor166(str string, args ...interface{}) string {
-	return Hilight("on_color_166", str, args...)
+func OnColor166(str string) string {
+	return Hilight("on_color_166", str)
 }
 
 // PrintOnColor166 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor166(str string, args ...interface{}) {
-	Print(Hilight("on_color_166", str, args...))
+func PrintOnColor166(str string) {
+	Print(Hilight("on_color_166", str))
 }
 
 // PrintlnOnColor166 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor166(str string, args ...interface{}) {
-	Println(Hilight("on_color_166", str, args...))
+func PrintlnOnColor166(str string) {
+	Println(Hilight("on_color_166", str))
+}
+
+// OnColor166f wraps OnColor166 and works with format
+// strings.
+func OnColor166f(str string, args ...interface{}) string {
+	return OnColor166(Sprintf(str, args...))
+}
+
+// PrintOnColor166f wraps PrintOnColor166 and works with format
+// strings.
+func PrintOnColor166f(str string, args ...interface{}) {
+	PrintOnColor166(Sprintf(str, args...))
+}
+
+// PrintlnOnColor166f wraps PrintlnOnColor166 and works with format
+// strings.
+func PrintlnOnColor166f(str string, args ...interface{}) {
+	PrintlnOnColor166(Sprintf(str, args...))
 }
 
 // Color167 will Hilight() the provided string with the
 // specified ANSI code.
-func Color167(str string, args ...interface{}) string {
-	return Hilight("color_167", str, args...)
+func Color167(str string) string {
+	return Hilight("color_167", str)
 }
 
 // PrintColor167 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor167(str string, args ...interface{}) {
-	Print(Hilight("color_167", str, args...))
+func PrintColor167(str string) {
+	Print(Hilight("color_167", str))
 }
 
 // PrintlnColor167 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor167(str string, args ...interface{}) {
-	Println(Hilight("color_167", str, args...))
+func PrintlnColor167(str string) {
+	Println(Hilight("color_167", str))
+}
+
+// Color167f wraps Color167 and works with format
+// strings.
+func Color167f(str string, args ...interface{}) string {
+	return Color167(Sprintf(str, args...))
+}
+
+// PrintColor167f wraps PrintColor167 and works with format
+// strings.
+func PrintColor167f(str string, args ...interface{}) {
+	PrintColor167(Sprintf(str, args...))
+}
+
+// PrintlnColor167f wraps PrintlnColor167 and works with format
+// strings.
+func PrintlnColor167f(str string, args ...interface{}) {
+	PrintlnColor167(Sprintf(str, args...))
 }
 
 // OnColor167 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor167(str string, args ...interface{}) string {
-	return Hilight("on_color_167", str, args...)
+func OnColor167(str string) string {
+	return Hilight("on_color_167", str)
 }
 
 // PrintOnColor167 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor167(str string, args ...interface{}) {
-	Print(Hilight("on_color_167", str, args...))
+func PrintOnColor167(str string) {
+	Print(Hilight("on_color_167", str))
 }
 
 // PrintlnOnColor167 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor167(str string, args ...interface{}) {
-	Println(Hilight("on_color_167", str, args...))
+func PrintlnOnColor167(str string) {
+	Println(Hilight("on_color_167", str))
+}
+
+// OnColor167f wraps OnColor167 and works with format
+// strings.
+func OnColor167f(str string, args ...interface{}) string {
+	return OnColor167(Sprintf(str, args...))
+}
+
+// PrintOnColor167f wraps PrintOnColor167 and works with format
+// strings.
+func PrintOnColor167f(str string, args ...interface{}) {
+	PrintOnColor167(Sprintf(str, args...))
+}
+
+// PrintlnOnColor167f wraps PrintlnOnColor167 and works with format
+// strings.
+func PrintlnOnColor167f(str string, args ...interface{}) {
+	PrintlnOnColor167(Sprintf(str, args...))
 }
 
 // Color168 will Hilight() the provided string with the
 // specified ANSI code.
-func Color168(str string, args ...interface{}) string {
-	return Hilight("color_168", str, args...)
+func Color168(str string) string {
+	return Hilight("color_168", str)
 }
 
 // PrintColor168 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor168(str string, args ...interface{}) {
-	Print(Hilight("color_168", str, args...))
+func PrintColor168(str string) {
+	Print(Hilight("color_168", str))
 }
 
 // PrintlnColor168 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor168(str string, args ...interface{}) {
-	Println(Hilight("color_168", str, args...))
+func PrintlnColor168(str string) {
+	Println(Hilight("color_168", str))
+}
+
+// Color168f wraps Color168 and works with format
+// strings.
+func Color168f(str string, args ...interface{}) string {
+	return Color168(Sprintf(str, args...))
+}
+
+// PrintColor168f wraps PrintColor168 and works with format
+// strings.
+func PrintColor168f(str string, args ...interface{}) {
+	PrintColor168(Sprintf(str, args...))
+}
+
+// PrintlnColor168f wraps PrintlnColor168 and works with format
+// strings.
+func PrintlnColor168f(str string, args ...interface{}) {
+	PrintlnColor168(Sprintf(str, args...))
 }
 
 // OnColor168 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor168(str string, args ...interface{}) string {
-	return Hilight("on_color_168", str, args...)
+func OnColor168(str string) string {
+	return Hilight("on_color_168", str)
 }
 
 // PrintOnColor168 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor168(str string, args ...interface{}) {
-	Print(Hilight("on_color_168", str, args...))
+func PrintOnColor168(str string) {
+	Print(Hilight("on_color_168", str))
 }
 
 // PrintlnOnColor168 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor168(str string, args ...interface{}) {
-	Println(Hilight("on_color_168", str, args...))
+func PrintlnOnColor168(str string) {
+	Println(Hilight("on_color_168", str))
+}
+
+// OnColor168f wraps OnColor168 and works with format
+// strings.
+func OnColor168f(str string, args ...interface{}) string {
+	return OnColor168(Sprintf(str, args...))
+}
+
+// PrintOnColor168f wraps PrintOnColor168 and works with format
+// strings.
+func PrintOnColor168f(str string, args ...interface{}) {
+	PrintOnColor168(Sprintf(str, args...))
+}
+
+// PrintlnOnColor168f wraps PrintlnOnColor168 and works with format
+// strings.
+func PrintlnOnColor168f(str string, args ...interface{}) {
+	PrintlnOnColor168(Sprintf(str, args...))
 }
 
 // Color169 will Hilight() the provided string with the
 // specified ANSI code.
-func Color169(str string, args ...interface{}) string {
-	return Hilight("color_169", str, args...)
+func Color169(str string) string {
+	return Hilight("color_169", str)
 }
 
 // PrintColor169 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor169(str string, args ...interface{}) {
-	Print(Hilight("color_169", str, args...))
+func PrintColor169(str string) {
+	Print(Hilight("color_169", str))
 }
 
 // PrintlnColor169 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor169(str string, args ...interface{}) {
-	Println(Hilight("color_169", str, args...))
+func PrintlnColor169(str string) {
+	Println(Hilight("color_169", str))
+}
+
+// Color169f wraps Color169 and works with format
+// strings.
+func Color169f(str string, args ...interface{}) string {
+	return Color169(Sprintf(str, args...))
+}
+
+// PrintColor169f wraps PrintColor169 and works with format
+// strings.
+func PrintColor169f(str string, args ...interface{}) {
+	PrintColor169(Sprintf(str, args...))
+}
+
+// PrintlnColor169f wraps PrintlnColor169 and works with format
+// strings.
+func PrintlnColor169f(str string, args ...interface{}) {
+	PrintlnColor169(Sprintf(str, args...))
 }
 
 // OnColor169 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor169(str string, args ...interface{}) string {
-	return Hilight("on_color_169", str, args...)
+func OnColor169(str string) string {
+	return Hilight("on_color_169", str)
 }
 
 // PrintOnColor169 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor169(str string, args ...interface{}) {
-	Print(Hilight("on_color_169", str, args...))
+func PrintOnColor169(str string) {
+	Print(Hilight("on_color_169", str))
 }
 
 // PrintlnOnColor169 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor169(str string, args ...interface{}) {
-	Println(Hilight("on_color_169", str, args...))
+func PrintlnOnColor169(str string) {
+	Println(Hilight("on_color_169", str))
+}
+
+// OnColor169f wraps OnColor169 and works with format
+// strings.
+func OnColor169f(str string, args ...interface{}) string {
+	return OnColor169(Sprintf(str, args...))
+}
+
+// PrintOnColor169f wraps PrintOnColor169 and works with format
+// strings.
+func PrintOnColor169f(str string, args ...interface{}) {
+	PrintOnColor169(Sprintf(str, args...))
+}
+
+// PrintlnOnColor169f wraps PrintlnOnColor169 and works with format
+// strings.
+func PrintlnOnColor169f(str string, args ...interface{}) {
+	PrintlnOnColor169(Sprintf(str, args...))
 }
 
 // Color170 will Hilight() the provided string with the
 // specified ANSI code.
-func Color170(str string, args ...interface{}) string {
-	return Hilight("color_170", str, args...)
+func Color170(str string) string {
+	return Hilight("color_170", str)
 }
 
 // PrintColor170 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor170(str string, args ...interface{}) {
-	Print(Hilight("color_170", str, args...))
+func PrintColor170(str string) {
+	Print(Hilight("color_170", str))
 }
 
 // PrintlnColor170 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor170(str string, args ...interface{}) {
-	Println(Hilight("color_170", str, args...))
+func PrintlnColor170(str string) {
+	Println(Hilight("color_170", str))
+}
+
+// Color170f wraps Color170 and works with format
+// strings.
+func Color170f(str string, args ...interface{}) string {
+	return Color170(Sprintf(str, args...))
+}
+
+// PrintColor170f wraps PrintColor170 and works with format
+// strings.
+func PrintColor170f(str string, args ...interface{}) {
+	PrintColor170(Sprintf(str, args...))
+}
+
+// PrintlnColor170f wraps PrintlnColor170 and works with format
+// strings.
+func PrintlnColor170f(str string, args ...interface{}) {
+	PrintlnColor170(Sprintf(str, args...))
 }
 
 // OnColor170 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor170(str string, args ...interface{}) string {
-	return Hilight("on_color_170", str, args...)
+func OnColor170(str string) string {
+	return Hilight("on_color_170", str)
 }
 
 // PrintOnColor170 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor170(str string, args ...interface{}) {
-	Print(Hilight("on_color_170", str, args...))
+func PrintOnColor170(str string) {
+	Print(Hilight("on_color_170", str))
 }
 
 // PrintlnOnColor170 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor170(str string, args ...interface{}) {
-	Println(Hilight("on_color_170", str, args...))
+func PrintlnOnColor170(str string) {
+	Println(Hilight("on_color_170", str))
+}
+
+// OnColor170f wraps OnColor170 and works with format
+// strings.
+func OnColor170f(str string, args ...interface{}) string {
+	return OnColor170(Sprintf(str, args...))
+}
+
+// PrintOnColor170f wraps PrintOnColor170 and works with format
+// strings.
+func PrintOnColor170f(str string, args ...interface{}) {
+	PrintOnColor170(Sprintf(str, args...))
+}
+
+// PrintlnOnColor170f wraps PrintlnOnColor170 and works with format
+// strings.
+func PrintlnOnColor170f(str string, args ...interface{}) {
+	PrintlnOnColor170(Sprintf(str, args...))
 }
 
 // Color171 will Hilight() the provided string with the
 // specified ANSI code.
-func Color171(str string, args ...interface{}) string {
-	return Hilight("color_171", str, args...)
+func Color171(str string) string {
+	return Hilight("color_171", str)
 }
 
 // PrintColor171 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor171(str string, args ...interface{}) {
-	Print(Hilight("color_171", str, args...))
+func PrintColor171(str string) {
+	Print(Hilight("color_171", str))
 }
 
 // PrintlnColor171 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor171(str string, args ...interface{}) {
-	Println(Hilight("color_171", str, args...))
+func PrintlnColor171(str string) {
+	Println(Hilight("color_171", str))
+}
+
+// Color171f wraps Color171 and works with format
+// strings.
+func Color171f(str string, args ...interface{}) string {
+	return Color171(Sprintf(str, args...))
+}
+
+// PrintColor171f wraps PrintColor171 and works with format
+// strings.
+func PrintColor171f(str string, args ...interface{}) {
+	PrintColor171(Sprintf(str, args...))
+}
+
+// PrintlnColor171f wraps PrintlnColor171 and works with format
+// strings.
+func PrintlnColor171f(str string, args ...interface{}) {
+	PrintlnColor171(Sprintf(str, args...))
 }
 
 // OnColor171 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor171(str string, args ...interface{}) string {
-	return Hilight("on_color_171", str, args...)
+func OnColor171(str string) string {
+	return Hilight("on_color_171", str)
 }
 
 // PrintOnColor171 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor171(str string, args ...interface{}) {
-	Print(Hilight("on_color_171", str, args...))
+func PrintOnColor171(str string) {
+	Print(Hilight("on_color_171", str))
 }
 
 // PrintlnOnColor171 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor171(str string, args ...interface{}) {
-	Println(Hilight("on_color_171", str, args...))
+func PrintlnOnColor171(str string) {
+	Println(Hilight("on_color_171", str))
+}
+
+// OnColor171f wraps OnColor171 and works with format
+// strings.
+func OnColor171f(str string, args ...interface{}) string {
+	return OnColor171(Sprintf(str, args...))
+}
+
+// PrintOnColor171f wraps PrintOnColor171 and works with format
+// strings.
+func PrintOnColor171f(str string, args ...interface{}) {
+	PrintOnColor171(Sprintf(str, args...))
+}
+
+// PrintlnOnColor171f wraps PrintlnOnColor171 and works with format
+// strings.
+func PrintlnOnColor171f(str string, args ...interface{}) {
+	PrintlnOnColor171(Sprintf(str, args...))
 }
 
 // Color172 will Hilight() the provided string with the
 // specified ANSI code.
-func Color172(str string, args ...interface{}) string {
-	return Hilight("color_172", str, args...)
+func Color172(str string) string {
+	return Hilight("color_172", str)
 }
 
 // PrintColor172 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor172(str string, args ...interface{}) {
-	Print(Hilight("color_172", str, args...))
+func PrintColor172(str string) {
+	Print(Hilight("color_172", str))
 }
 
 // PrintlnColor172 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor172(str string, args ...interface{}) {
-	Println(Hilight("color_172", str, args...))
+func PrintlnColor172(str string) {
+	Println(Hilight("color_172", str))
+}
+
+// Color172f wraps Color172 and works with format
+// strings.
+func Color172f(str string, args ...interface{}) string {
+	return Color172(Sprintf(str, args...))
+}
+
+// PrintColor172f wraps PrintColor172 and works with format
+// strings.
+func PrintColor172f(str string, args ...interface{}) {
+	PrintColor172(Sprintf(str, args...))
+}
+
+// PrintlnColor172f wraps PrintlnColor172 and works with format
+// strings.
+func PrintlnColor172f(str string, args ...interface{}) {
+	PrintlnColor172(Sprintf(str, args...))
 }
 
 // OnColor172 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor172(str string, args ...interface{}) string {
-	return Hilight("on_color_172", str, args...)
+func OnColor172(str string) string {
+	return Hilight("on_color_172", str)
 }
 
 // PrintOnColor172 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor172(str string, args ...interface{}) {
-	Print(Hilight("on_color_172", str, args...))
+func PrintOnColor172(str string) {
+	Print(Hilight("on_color_172", str))
 }
 
 // PrintlnOnColor172 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor172(str string, args ...interface{}) {
-	Println(Hilight("on_color_172", str, args...))
+func PrintlnOnColor172(str string) {
+	Println(Hilight("on_color_172", str))
+}
+
+// OnColor172f wraps OnColor172 and works with format
+// strings.
+func OnColor172f(str string, args ...interface{}) string {
+	return OnColor172(Sprintf(str, args...))
+}
+
+// PrintOnColor172f wraps PrintOnColor172 and works with format
+// strings.
+func PrintOnColor172f(str string, args ...interface{}) {
+	PrintOnColor172(Sprintf(str, args...))
+}
+
+// PrintlnOnColor172f wraps PrintlnOnColor172 and works with format
+// strings.
+func PrintlnOnColor172f(str string, args ...interface{}) {
+	PrintlnOnColor172(Sprintf(str, args...))
 }
 
 // Color173 will Hilight() the provided string with the
 // specified ANSI code.
-func Color173(str string, args ...interface{}) string {
-	return Hilight("color_173", str, args...)
+func Color173(str string) string {
+	return Hilight("color_173", str)
 }
 
 // PrintColor173 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor173(str string, args ...interface{}) {
-	Print(Hilight("color_173", str, args...))
+func PrintColor173(str string) {
+	Print(Hilight("color_173", str))
 }
 
 // PrintlnColor173 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor173(str string, args ...interface{}) {
-	Println(Hilight("color_173", str, args...))
+func PrintlnColor173(str string) {
+	Println(Hilight("color_173", str))
+}
+
+// Color173f wraps Color173 and works with format
+// strings.
+func Color173f(str string, args ...interface{}) string {
+	return Color173(Sprintf(str, args...))
+}
+
+// PrintColor173f wraps PrintColor173 and works with format
+// strings.
+func PrintColor173f(str string, args ...interface{}) {
+	PrintColor173(Sprintf(str, args...))
+}
+
+// PrintlnColor173f wraps PrintlnColor173 and works with format
+// strings.
+func PrintlnColor173f(str string, args ...interface{}) {
+	PrintlnColor173(Sprintf(str, args...))
 }
 
 // OnColor173 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor173(str string, args ...interface{}) string {
-	return Hilight("on_color_173", str, args...)
+func OnColor173(str string) string {
+	return Hilight("on_color_173", str)
 }
 
 // PrintOnColor173 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor173(str string, args ...interface{}) {
-	Print(Hilight("on_color_173", str, args...))
+func PrintOnColor173(str string) {
+	Print(Hilight("on_color_173", str))
 }
 
 // PrintlnOnColor173 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor173(str string, args ...interface{}) {
-	Println(Hilight("on_color_173", str, args...))
+func PrintlnOnColor173(str string) {
+	Println(Hilight("on_color_173", str))
+}
+
+// OnColor173f wraps OnColor173 and works with format
+// strings.
+func OnColor173f(str string, args ...interface{}) string {
+	return OnColor173(Sprintf(str, args...))
+}
+
+// PrintOnColor173f wraps PrintOnColor173 and works with format
+// strings.
+func PrintOnColor173f(str string, args ...interface{}) {
+	PrintOnColor173(Sprintf(str, args...))
+}
+
+// PrintlnOnColor173f wraps PrintlnOnColor173 and works with format
+// strings.
+func PrintlnOnColor173f(str string, args ...interface{}) {
+	PrintlnOnColor173(Sprintf(str, args...))
 }
 
 // Color174 will Hilight() the provided string with the
 // specified ANSI code.
-func Color174(str string, args ...interface{}) string {
-	return Hilight("color_174", str, args...)
+func Color174(str string) string {
+	return Hilight("color_174", str)
 }
 
 // PrintColor174 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor174(str string, args ...interface{}) {
-	Print(Hilight("color_174", str, args...))
+func PrintColor174(str string) {
+	Print(Hilight("color_174", str))
 }
 
 // PrintlnColor174 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor174(str string, args ...interface{}) {
-	Println(Hilight("color_174", str, args...))
+func PrintlnColor174(str string) {
+	Println(Hilight("color_174", str))
+}
+
+// Color174f wraps Color174 and works with format
+// strings.
+func Color174f(str string, args ...interface{}) string {
+	return Color174(Sprintf(str, args...))
+}
+
+// PrintColor174f wraps PrintColor174 and works with format
+// strings.
+func PrintColor174f(str string, args ...interface{}) {
+	PrintColor174(Sprintf(str, args...))
+}
+
+// PrintlnColor174f wraps PrintlnColor174 and works with format
+// strings.
+func PrintlnColor174f(str string, args ...interface{}) {
+	PrintlnColor174(Sprintf(str, args...))
 }
 
 // OnColor174 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor174(str string, args ...interface{}) string {
-	return Hilight("on_color_174", str, args...)
+func OnColor174(str string) string {
+	return Hilight("on_color_174", str)
 }
 
 // PrintOnColor174 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor174(str string, args ...interface{}) {
-	Print(Hilight("on_color_174", str, args...))
+func PrintOnColor174(str string) {
+	Print(Hilight("on_color_174", str))
 }
 
 // PrintlnOnColor174 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor174(str string, args ...interface{}) {
-	Println(Hilight("on_color_174", str, args...))
+func PrintlnOnColor174(str string) {
+	Println(Hilight("on_color_174", str))
+}
+
+// OnColor174f wraps OnColor174 and works with format
+// strings.
+func OnColor174f(str string, args ...interface{}) string {
+	return OnColor174(Sprintf(str, args...))
+}
+
+// PrintOnColor174f wraps PrintOnColor174 and works with format
+// strings.
+func PrintOnColor174f(str string, args ...interface{}) {
+	PrintOnColor174(Sprintf(str, args...))
+}
+
+// PrintlnOnColor174f wraps PrintlnOnColor174 and works with format
+// strings.
+func PrintlnOnColor174f(str string, args ...interface{}) {
+	PrintlnOnColor174(Sprintf(str, args...))
 }
 
 // Color175 will Hilight() the provided string with the
 // specified ANSI code.
-func Color175(str string, args ...interface{}) string {
-	return Hilight("color_175", str, args...)
+func Color175(str string) string {
+	return Hilight("color_175", str)
 }
 
 // PrintColor175 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor175(str string, args ...interface{}) {
-	Print(Hilight("color_175", str, args...))
+func PrintColor175(str string) {
+	Print(Hilight("color_175", str))
 }
 
 // PrintlnColor175 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor175(str string, args ...interface{}) {
-	Println(Hilight("color_175", str, args...))
+func PrintlnColor175(str string) {
+	Println(Hilight("color_175", str))
+}
+
+// Color175f wraps Color175 and works with format
+// strings.
+func Color175f(str string, args ...interface{}) string {
+	return Color175(Sprintf(str, args...))
+}
+
+// PrintColor175f wraps PrintColor175 and works with format
+// strings.
+func PrintColor175f(str string, args ...interface{}) {
+	PrintColor175(Sprintf(str, args...))
+}
+
+// PrintlnColor175f wraps PrintlnColor175 and works with format
+// strings.
+func PrintlnColor175f(str string, args ...interface{}) {
+	PrintlnColor175(Sprintf(str, args...))
 }
 
 // OnColor175 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor175(str string, args ...interface{}) string {
-	return Hilight("on_color_175", str, args...)
+func OnColor175(str string) string {
+	return Hilight("on_color_175", str)
 }
 
 // PrintOnColor175 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor175(str string, args ...interface{}) {
-	Print(Hilight("on_color_175", str, args...))
+func PrintOnColor175(str string) {
+	Print(Hilight("on_color_175", str))
 }
 
 // PrintlnOnColor175 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor175(str string, args ...interface{}) {
-	Println(Hilight("on_color_175", str, args...))
+func PrintlnOnColor175(str string) {
+	Println(Hilight("on_color_175", str))
+}
+
+// OnColor175f wraps OnColor175 and works with format
+// strings.
+func OnColor175f(str string, args ...interface{}) string {
+	return OnColor175(Sprintf(str, args...))
+}
+
+// PrintOnColor175f wraps PrintOnColor175 and works with format
+// strings.
+func PrintOnColor175f(str string, args ...interface{}) {
+	PrintOnColor175(Sprintf(str, args...))
+}
+
+// PrintlnOnColor175f wraps PrintlnOnColor175 and works with format
+// strings.
+func PrintlnOnColor175f(str string, args ...interface{}) {
+	PrintlnOnColor175(Sprintf(str, args...))
 }
 
 // Color176 will Hilight() the provided string with the
 // specified ANSI code.
-func Color176(str string, args ...interface{}) string {
-	return Hilight("color_176", str, args...)
+func Color176(str string) string {
+	return Hilight("color_176", str)
 }
 
 // PrintColor176 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor176(str string, args ...interface{}) {
-	Print(Hilight("color_176", str, args...))
+func PrintColor176(str string) {
+	Print(Hilight("color_176", str))
 }
 
 // PrintlnColor176 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor176(str string, args ...interface{}) {
-	Println(Hilight("color_176", str, args...))
+func PrintlnColor176(str string) {
+	Println(Hilight("color_176", str))
+}
+
+// Color176f wraps Color176 and works with format
+// strings.
+func Color176f(str string, args ...interface{}) string {
+	return Color176(Sprintf(str, args...))
+}
+
+// PrintColor176f wraps PrintColor176 and works with format
+// strings.
+func PrintColor176f(str string, args ...interface{}) {
+	PrintColor176(Sprintf(str, args...))
+}
+
+// PrintlnColor176f wraps PrintlnColor176 and works with format
+// strings.
+func PrintlnColor176f(str string, args ...interface{}) {
+	PrintlnColor176(Sprintf(str, args...))
 }
 
 // OnColor176 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor176(str string, args ...interface{}) string {
-	return Hilight("on_color_176", str, args...)
+func OnColor176(str string) string {
+	return Hilight("on_color_176", str)
 }
 
 // PrintOnColor176 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor176(str string, args ...interface{}) {
-	Print(Hilight("on_color_176", str, args...))
+func PrintOnColor176(str string) {
+	Print(Hilight("on_color_176", str))
 }
 
 // PrintlnOnColor176 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor176(str string, args ...interface{}) {
-	Println(Hilight("on_color_176", str, args...))
+func PrintlnOnColor176(str string) {
+	Println(Hilight("on_color_176", str))
+}
+
+// OnColor176f wraps OnColor176 and works with format
+// strings.
+func OnColor176f(str string, args ...interface{}) string {
+	return OnColor176(Sprintf(str, args...))
+}
+
+// PrintOnColor176f wraps PrintOnColor176 and works with format
+// strings.
+func PrintOnColor176f(str string, args ...interface{}) {
+	PrintOnColor176(Sprintf(str, args...))
+}
+
+// PrintlnOnColor176f wraps PrintlnOnColor176 and works with format
+// strings.
+func PrintlnOnColor176f(str string, args ...interface{}) {
+	PrintlnOnColor176(Sprintf(str, args...))
 }
 
 // Color177 will Hilight() the provided string with the
 // specified ANSI code.
-func Color177(str string, args ...interface{}) string {
-	return Hilight("color_177", str, args...)
+func Color177(str string) string {
+	return Hilight("color_177", str)
 }
 
 // PrintColor177 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor177(str string, args ...interface{}) {
-	Print(Hilight("color_177", str, args...))
+func PrintColor177(str string) {
+	Print(Hilight("color_177", str))
 }
 
 // PrintlnColor177 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor177(str string, args ...interface{}) {
-	Println(Hilight("color_177", str, args...))
+func PrintlnColor177(str string) {
+	Println(Hilight("color_177", str))
+}
+
+// Color177f wraps Color177 and works with format
+// strings.
+func Color177f(str string, args ...interface{}) string {
+	return Color177(Sprintf(str, args...))
+}
+
+// PrintColor177f wraps PrintColor177 and works with format
+// strings.
+func PrintColor177f(str string, args ...interface{}) {
+	PrintColor177(Sprintf(str, args...))
+}
+
+// PrintlnColor177f wraps PrintlnColor177 and works with format
+// strings.
+func PrintlnColor177f(str string, args ...interface{}) {
+	PrintlnColor177(Sprintf(str, args...))
 }
 
 // OnColor177 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor177(str string, args ...interface{}) string {
-	return Hilight("on_color_177", str, args...)
+func OnColor177(str string) string {
+	return Hilight("on_color_177", str)
 }
 
 // PrintOnColor177 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor177(str string, args ...interface{}) {
-	Print(Hilight("on_color_177", str, args...))
+func PrintOnColor177(str string) {
+	Print(Hilight("on_color_177", str))
 }
 
 // PrintlnOnColor177 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor177(str string, args ...interface{}) {
-	Println(Hilight("on_color_177", str, args...))
+func PrintlnOnColor177(str string) {
+	Println(Hilight("on_color_177", str))
+}
+
+// OnColor177f wraps OnColor177 and works with format
+// strings.
+func OnColor177f(str string, args ...interface{}) string {
+	return OnColor177(Sprintf(str, args...))
+}
+
+// PrintOnColor177f wraps PrintOnColor177 and works with format
+// strings.
+func PrintOnColor177f(str string, args ...interface{}) {
+	PrintOnColor177(Sprintf(str, args...))
+}
+
+// PrintlnOnColor177f wraps PrintlnOnColor177 and works with format
+// strings.
+func PrintlnOnColor177f(str string, args ...interface{}) {
+	PrintlnOnColor177(Sprintf(str, args...))
 }
 
 // Color178 will Hilight() the provided string with the
 // specified ANSI code.
-func Color178(str string, args ...interface{}) string {
-	return Hilight("color_178", str, args...)
+func Color178(str string) string {
+	return Hilight("color_178", str)
 }
 
 // PrintColor178 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor178(str string, args ...interface{}) {
-	Print(Hilight("color_178", str, args...))
+func PrintColor178(str string) {
+	Print(Hilight("color_178", str))
 }
 
 // PrintlnColor178 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor178(str string, args ...interface{}) {
-	Println(Hilight("color_178", str, args...))
+func PrintlnColor178(str string) {
+	Println(Hilight("color_178", str))
+}
+
+// Color178f wraps Color178 and works with format
+// strings.
+func Color178f(str string, args ...interface{}) string {
+	return Color178(Sprintf(str, args...))
+}
+
+// PrintColor178f wraps PrintColor178 and works with format
+// strings.
+func PrintColor178f(str string, args ...interface{}) {
+	PrintColor178(Sprintf(str, args...))
+}
+
+// PrintlnColor178f wraps PrintlnColor178 and works with format
+// strings.
+func PrintlnColor178f(str string, args ...interface{}) {
+	PrintlnColor178(Sprintf(str, args...))
 }
 
 // OnColor178 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor178(str string, args ...interface{}) string {
-	return Hilight("on_color_178", str, args...)
+func OnColor178(str string) string {
+	return Hilight("on_color_178", str)
 }
 
 // PrintOnColor178 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor178(str string, args ...interface{}) {
-	Print(Hilight("on_color_178", str, args...))
+func PrintOnColor178(str string) {
+	Print(Hilight("on_color_178", str))
 }
 
 // PrintlnOnColor178 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor178(str string, args ...interface{}) {
-	Println(Hilight("on_color_178", str, args...))
+func PrintlnOnColor178(str string) {
+	Println(Hilight("on_color_178", str))
+}
+
+// OnColor178f wraps OnColor178 and works with format
+// strings.
+func OnColor178f(str string, args ...interface{}) string {
+	return OnColor178(Sprintf(str, args...))
+}
+
+// PrintOnColor178f wraps PrintOnColor178 and works with format
+// strings.
+func PrintOnColor178f(str string, args ...interface{}) {
+	PrintOnColor178(Sprintf(str, args...))
+}
+
+// PrintlnOnColor178f wraps PrintlnOnColor178 and works with format
+// strings.
+func PrintlnOnColor178f(str string, args ...interface{}) {
+	PrintlnOnColor178(Sprintf(str, args...))
 }
 
 // Color179 will Hilight() the provided string with the
 // specified ANSI code.
-func Color179(str string, args ...interface{}) string {
-	return Hilight("color_179", str, args...)
+func Color179(str string) string {
+	return Hilight("color_179", str)
 }
 
 // PrintColor179 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor179(str string, args ...interface{}) {
-	Print(Hilight("color_179", str, args...))
+func PrintColor179(str string) {
+	Print(Hilight("color_179", str))
 }
 
 // PrintlnColor179 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor179(str string, args ...interface{}) {
-	Println(Hilight("color_179", str, args...))
+func PrintlnColor179(str string) {
+	Println(Hilight("color_179", str))
+}
+
+// Color179f wraps Color179 and works with format
+// strings.
+func Color179f(str string, args ...interface{}) string {
+	return Color179(Sprintf(str, args...))
+}
+
+// PrintColor179f wraps PrintColor179 and works with format
+// strings.
+func PrintColor179f(str string, args ...interface{}) {
+	PrintColor179(Sprintf(str, args...))
+}
+
+// PrintlnColor179f wraps PrintlnColor179 and works with format
+// strings.
+func PrintlnColor179f(str string, args ...interface{}) {
+	PrintlnColor179(Sprintf(str, args...))
 }
 
 // OnColor179 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor179(str string, args ...interface{}) string {
-	return Hilight("on_color_179", str, args...)
+func OnColor179(str string) string {
+	return Hilight("on_color_179", str)
 }
 
 // PrintOnColor179 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor179(str string, args ...interface{}) {
-	Print(Hilight("on_color_179", str, args...))
+func PrintOnColor179(str string) {
+	Print(Hilight("on_color_179", str))
 }
 
 // PrintlnOnColor179 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor179(str string, args ...interface{}) {
-	Println(Hilight("on_color_179", str, args...))
+func PrintlnOnColor179(str string) {
+	Println(Hilight("on_color_179", str))
+}
+
+// OnColor179f wraps OnColor179 and works with format
+// strings.
+func OnColor179f(str string, args ...interface{}) string {
+	return OnColor179(Sprintf(str, args...))
+}
+
+// PrintOnColor179f wraps PrintOnColor179 and works with format
+// strings.
+func PrintOnColor179f(str string, args ...interface{}) {
+	PrintOnColor179(Sprintf(str, args...))
+}
+
+// PrintlnOnColor179f wraps PrintlnOnColor179 and works with format
+// strings.
+func PrintlnOnColor179f(str string, args ...interface{}) {
+	PrintlnOnColor179(Sprintf(str, args...))
 }
 
 // Color180 will Hilight() the provided string with the
 // specified ANSI code.
-func Color180(str string, args ...interface{}) string {
-	return Hilight("color_180", str, args...)
+func Color180(str string) string {
+	return Hilight("color_180", str)
 }
 
 // PrintColor180 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor180(str string, args ...interface{}) {
-	Print(Hilight("color_180", str, args...))
+func PrintColor180(str string) {
+	Print(Hilight("color_180", str))
 }
 
 // PrintlnColor180 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor180(str string, args ...interface{}) {
-	Println(Hilight("color_180", str, args...))
+func PrintlnColor180(str string) {
+	Println(Hilight("color_180", str))
+}
+
+// Color180f wraps Color180 and works with format
+// strings.
+func Color180f(str string, args ...interface{}) string {
+	return Color180(Sprintf(str, args...))
+}
+
+// PrintColor180f wraps PrintColor180 and works with format
+// strings.
+func PrintColor180f(str string, args ...interface{}) {
+	PrintColor180(Sprintf(str, args...))
+}
+
+// PrintlnColor180f wraps PrintlnColor180 and works with format
+// strings.
+func PrintlnColor180f(str string, args ...interface{}) {
+	PrintlnColor180(Sprintf(str, args...))
 }
 
 // OnColor180 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor180(str string, args ...interface{}) string {
-	return Hilight("on_color_180", str, args...)
+func OnColor180(str string) string {
+	return Hilight("on_color_180", str)
 }
 
 // PrintOnColor180 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor180(str string, args ...interface{}) {
-	Print(Hilight("on_color_180", str, args...))
+func PrintOnColor180(str string) {
+	Print(Hilight("on_color_180", str))
 }
 
 // PrintlnOnColor180 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor180(str string, args ...interface{}) {
-	Println(Hilight("on_color_180", str, args...))
+func PrintlnOnColor180(str string) {
+	Println(Hilight("on_color_180", str))
+}
+
+// OnColor180f wraps OnColor180 and works with format
+// strings.
+func OnColor180f(str string, args ...interface{}) string {
+	return OnColor180(Sprintf(str, args...))
+}
+
+// PrintOnColor180f wraps PrintOnColor180 and works with format
+// strings.
+func PrintOnColor180f(str string, args ...interface{}) {
+	PrintOnColor180(Sprintf(str, args...))
+}
+
+// PrintlnOnColor180f wraps PrintlnOnColor180 and works with format
+// strings.
+func PrintlnOnColor180f(str string, args ...interface{}) {
+	PrintlnOnColor180(Sprintf(str, args...))
 }
 
 // Color181 will Hilight() the provided string with the
 // specified ANSI code.
-func Color181(str string, args ...interface{}) string {
-	return Hilight("color_181", str, args...)
+func Color181(str string) string {
+	return Hilight("color_181", str)
 }
 
 // PrintColor181 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor181(str string, args ...interface{}) {
-	Print(Hilight("color_181", str, args...))
+func PrintColor181(str string) {
+	Print(Hilight("color_181", str))
 }
 
 // PrintlnColor181 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor181(str string, args ...interface{}) {
-	Println(Hilight("color_181", str, args...))
+func PrintlnColor181(str string) {
+	Println(Hilight("color_181", str))
+}
+
+// Color181f wraps Color181 and works with format
+// strings.
+func Color181f(str string, args ...interface{}) string {
+	return Color181(Sprintf(str, args...))
+}
+
+// PrintColor181f wraps PrintColor181 and works with format
+// strings.
+func PrintColor181f(str string, args ...interface{}) {
+	PrintColor181(Sprintf(str, args...))
+}
+
+// PrintlnColor181f wraps PrintlnColor181 and works with format
+// strings.
+func PrintlnColor181f(str string, args ...interface{}) {
+	PrintlnColor181(Sprintf(str, args...))
 }
 
 // OnColor181 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor181(str string, args ...interface{}) string {
-	return Hilight("on_color_181", str, args...)
+func OnColor181(str string) string {
+	return Hilight("on_color_181", str)
 }
 
 // PrintOnColor181 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor181(str string, args ...interface{}) {
-	Print(Hilight("on_color_181", str, args...))
+func PrintOnColor181(str string) {
+	Print(Hilight("on_color_181", str))
 }
 
 // PrintlnOnColor181 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor181(str string, args ...interface{}) {
-	Println(Hilight("on_color_181", str, args...))
+func PrintlnOnColor181(str string) {
+	Println(Hilight("on_color_181", str))
+}
+
+// OnColor181f wraps OnColor181 and works with format
+// strings.
+func OnColor181f(str string, args ...interface{}) string {
+	return OnColor181(Sprintf(str, args...))
+}
+
+// PrintOnColor181f wraps PrintOnColor181 and works with format
+// strings.
+func PrintOnColor181f(str string, args ...interface{}) {
+	PrintOnColor181(Sprintf(str, args...))
+}
+
+// PrintlnOnColor181f wraps PrintlnOnColor181 and works with format
+// strings.
+func PrintlnOnColor181f(str string, args ...interface{}) {
+	PrintlnOnColor181(Sprintf(str, args...))
 }
 
 // Color182 will Hilight() the provided string with the
 // specified ANSI code.
-func Color182(str string, args ...interface{}) string {
-	return Hilight("color_182", str, args...)
+func Color182(str string) string {
+	return Hilight("color_182", str)
 }
 
 // PrintColor182 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor182(str string, args ...interface{}) {
-	Print(Hilight("color_182", str, args...))
+func PrintColor182(str string) {
+	Print(Hilight("color_182", str))
 }
 
 // PrintlnColor182 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor182(str string, args ...interface{}) {
-	Println(Hilight("color_182", str, args...))
+func PrintlnColor182(str string) {
+	Println(Hilight("color_182", str))
+}
+
+// Color182f wraps Color182 and works with format
+// strings.
+func Color182f(str string, args ...interface{}) string {
+	return Color182(Sprintf(str, args...))
+}
+
+// PrintColor182f wraps PrintColor182 and works with format
+// strings.
+func PrintColor182f(str string, args ...interface{}) {
+	PrintColor182(Sprintf(str, args...))
+}
+
+// PrintlnColor182f wraps PrintlnColor182 and works with format
+// strings.
+func PrintlnColor182f(str string, args ...interface{}) {
+	PrintlnColor182(Sprintf(str, args...))
 }
 
 // OnColor182 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor182(str string, args ...interface{}) string {
-	return Hilight("on_color_182", str, args...)
+func OnColor182(str string) string {
+	return Hilight("on_color_182", str)
 }
 
 // PrintOnColor182 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor182(str string, args ...interface{}) {
-	Print(Hilight("on_color_182", str, args...))
+func PrintOnColor182(str string) {
+	Print(Hilight("on_color_182", str))
 }
 
 // PrintlnOnColor182 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor182(str string, args ...interface{}) {
-	Println(Hilight("on_color_182", str, args...))
+func PrintlnOnColor182(str string) {
+	Println(Hilight("on_color_182", str))
+}
+
+// OnColor182f wraps OnColor182 and works with format
+// strings.
+func OnColor182f(str string, args ...interface{}) string {
+	return OnColor182(Sprintf(str, args...))
+}
+
+// PrintOnColor182f wraps PrintOnColor182 and works with format
+// strings.
+func PrintOnColor182f(str string, args ...interface{}) {
+	PrintOnColor182(Sprintf(str, args...))
+}
+
+// PrintlnOnColor182f wraps PrintlnOnColor182 and works with format
+// strings.
+func PrintlnOnColor182f(str string, args ...interface{}) {
+	PrintlnOnColor182(Sprintf(str, args...))
 }
 
 // Color183 will Hilight() the provided string with the
 // specified ANSI code.
-func Color183(str string, args ...interface{}) string {
-	return Hilight("color_183", str, args...)
+func Color183(str string) string {
+	return Hilight("color_183", str)
 }
 
 // PrintColor183 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor183(str string, args ...interface{}) {
-	Print(Hilight("color_183", str, args...))
+func PrintColor183(str string) {
+	Print(Hilight("color_183", str))
 }
 
 // PrintlnColor183 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor183(str string, args ...interface{}) {
-	Println(Hilight("color_183", str, args...))
+func PrintlnColor183(str string) {
+	Println(Hilight("color_183", str))
+}
+
+// Color183f wraps Color183 and works with format
+// strings.
+func Color183f(str string, args ...interface{}) string {
+	return Color183(Sprintf(str, args...))
+}
+
+// PrintColor183f wraps PrintColor183 and works with format
+// strings.
+func PrintColor183f(str string, args ...interface{}) {
+	PrintColor183(Sprintf(str, args...))
+}
+
+// PrintlnColor183f wraps PrintlnColor183 and works with format
+// strings.
+func PrintlnColor183f(str string, args ...interface{}) {
+	PrintlnColor183(Sprintf(str, args...))
 }
 
 // OnColor183 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor183(str string, args ...interface{}) string {
-	return Hilight("on_color_183", str, args...)
+func OnColor183(str string) string {
+	return Hilight("on_color_183", str)
 }
 
 // PrintOnColor183 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor183(str string, args ...interface{}) {
-	Print(Hilight("on_color_183", str, args...))
+func PrintOnColor183(str string) {
+	Print(Hilight("on_color_183", str))
 }
 
 // PrintlnOnColor183 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor183(str string, args ...interface{}) {
-	Println(Hilight("on_color_183", str, args...))
+func PrintlnOnColor183(str string) {
+	Println(Hilight("on_color_183", str))
+}
+
+// OnColor183f wraps OnColor183 and works with format
+// strings.
+func OnColor183f(str string, args ...interface{}) string {
+	return OnColor183(Sprintf(str, args...))
+}
+
+// PrintOnColor183f wraps PrintOnColor183 and works with format
+// strings.
+func PrintOnColor183f(str string, args ...interface{}) {
+	PrintOnColor183(Sprintf(str, args...))
+}
+
+// PrintlnOnColor183f wraps PrintlnOnColor183 and works with format
+// strings.
+func PrintlnOnColor183f(str string, args ...interface{}) {
+	PrintlnOnColor183(Sprintf(str, args...))
 }
 
 // Color184 will Hilight() the provided string with the
 // specified ANSI code.
-func Color184(str string, args ...interface{}) string {
-	return Hilight("color_184", str, args...)
+func Color184(str string) string {
+	return Hilight("color_184", str)
 }
 
 // PrintColor184 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor184(str string, args ...interface{}) {
-	Print(Hilight("color_184", str, args...))
+func PrintColor184(str string) {
+	Print(Hilight("color_184", str))
 }
 
 // PrintlnColor184 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor184(str string, args ...interface{}) {
-	Println(Hilight("color_184", str, args...))
+func PrintlnColor184(str string) {
+	Println(Hilight("color_184", str))
+}
+
+// Color184f wraps Color184 and works with format
+// strings.
+func Color184f(str string, args ...interface{}) string {
+	return Color184(Sprintf(str, args...))
+}
+
+// PrintColor184f wraps PrintColor184 and works with format
+// strings.
+func PrintColor184f(str string, args ...interface{}) {
+	PrintColor184(Sprintf(str, args...))
+}
+
+// PrintlnColor184f wraps PrintlnColor184 and works with format
+// strings.
+func PrintlnColor184f(str string, args ...interface{}) {
+	PrintlnColor184(Sprintf(str, args...))
 }
 
 // OnColor184 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor184(str string, args ...interface{}) string {
-	return Hilight("on_color_184", str, args...)
+func OnColor184(str string) string {
+	return Hilight("on_color_184", str)
 }
 
 // PrintOnColor184 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor184(str string, args ...interface{}) {
-	Print(Hilight("on_color_184", str, args...))
+func PrintOnColor184(str string) {
+	Print(Hilight("on_color_184", str))
 }
 
 // PrintlnOnColor184 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor184(str string, args ...interface{}) {
-	Println(Hilight("on_color_184", str, args...))
+func PrintlnOnColor184(str string) {
+	Println(Hilight("on_color_184", str))
+}
+
+// OnColor184f wraps OnColor184 and works with format
+// strings.
+func OnColor184f(str string, args ...interface{}) string {
+	return OnColor184(Sprintf(str, args...))
+}
+
+// PrintOnColor184f wraps PrintOnColor184 and works with format
+// strings.
+func PrintOnColor184f(str string, args ...interface{}) {
+	PrintOnColor184(Sprintf(str, args...))
+}
+
+// PrintlnOnColor184f wraps PrintlnOnColor184 and works with format
+// strings.
+func PrintlnOnColor184f(str string, args ...interface{}) {
+	PrintlnOnColor184(Sprintf(str, args...))
 }
 
 // Color185 will Hilight() the provided string with the
 // specified ANSI code.
-func Color185(str string, args ...interface{}) string {
-	return Hilight("color_185", str, args...)
+func Color185(str string) string {
+	return Hilight("color_185", str)
 }
 
 // PrintColor185 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor185(str string, args ...interface{}) {
-	Print(Hilight("color_185", str, args...))
+func PrintColor185(str string) {
+	Print(Hilight("color_185", str))
 }
 
 // PrintlnColor185 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor185(str string, args ...interface{}) {
-	Println(Hilight("color_185", str, args...))
+func PrintlnColor185(str string) {
+	Println(Hilight("color_185", str))
+}
+
+// Color185f wraps Color185 and works with format
+// strings.
+func Color185f(str string, args ...interface{}) string {
+	return Color185(Sprintf(str, args...))
+}
+
+// PrintColor185f wraps PrintColor185 and works with format
+// strings.
+func PrintColor185f(str string, args ...interface{}) {
+	PrintColor185(Sprintf(str, args...))
+}
+
+// PrintlnColor185f wraps PrintlnColor185 and works with format
+// strings.
+func PrintlnColor185f(str string, args ...interface{}) {
+	PrintlnColor185(Sprintf(str, args...))
 }
 
 // OnColor185 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor185(str string, args ...interface{}) string {
-	return Hilight("on_color_185", str, args...)
+func OnColor185(str string) string {
+	return Hilight("on_color_185", str)
 }
 
 // PrintOnColor185 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor185(str string, args ...interface{}) {
-	Print(Hilight("on_color_185", str, args...))
+func PrintOnColor185(str string) {
+	Print(Hilight("on_color_185", str))
 }
 
 // PrintlnOnColor185 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor185(str string, args ...interface{}) {
-	Println(Hilight("on_color_185", str, args...))
+func PrintlnOnColor185(str string) {
+	Println(Hilight("on_color_185", str))
+}
+
+// OnColor185f wraps OnColor185 and works with format
+// strings.
+func OnColor185f(str string, args ...interface{}) string {
+	return OnColor185(Sprintf(str, args...))
+}
+
+// PrintOnColor185f wraps PrintOnColor185 and works with format
+// strings.
+func PrintOnColor185f(str string, args ...interface{}) {
+	PrintOnColor185(Sprintf(str, args...))
+}
+
+// PrintlnOnColor185f wraps PrintlnOnColor185 and works with format
+// strings.
+func PrintlnOnColor185f(str string, args ...interface{}) {
+	PrintlnOnColor185(Sprintf(str, args...))
 }
 
 // Color186 will Hilight() the provided string with the
 // specified ANSI code.
-func Color186(str string, args ...interface{}) string {
-	return Hilight("color_186", str, args...)
+func Color186(str string) string {
+	return Hilight("color_186", str)
 }
 
 // PrintColor186 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor186(str string, args ...interface{}) {
-	Print(Hilight("color_186", str, args...))
+func PrintColor186(str string) {
+	Print(Hilight("color_186", str))
 }
 
 // PrintlnColor186 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor186(str string, args ...interface{}) {
-	Println(Hilight("color_186", str, args...))
+func PrintlnColor186(str string) {
+	Println(Hilight("color_186", str))
+}
+
+// Color186f wraps Color186 and works with format
+// strings.
+func Color186f(str string, args ...interface{}) string {
+	return Color186(Sprintf(str, args...))
+}
+
+// PrintColor186f wraps PrintColor186 and works with format
+// strings.
+func PrintColor186f(str string, args ...interface{}) {
+	PrintColor186(Sprintf(str, args...))
+}
+
+// PrintlnColor186f wraps PrintlnColor186 and works with format
+// strings.
+func PrintlnColor186f(str string, args ...interface{}) {
+	PrintlnColor186(Sprintf(str, args...))
 }
 
 // OnColor186 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor186(str string, args ...interface{}) string {
-	return Hilight("on_color_186", str, args...)
+func OnColor186(str string) string {
+	return Hilight("on_color_186", str)
 }
 
 // PrintOnColor186 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor186(str string, args ...interface{}) {
-	Print(Hilight("on_color_186", str, args...))
+func PrintOnColor186(str string) {
+	Print(Hilight("on_color_186", str))
 }
 
 // PrintlnOnColor186 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor186(str string, args ...interface{}) {
-	Println(Hilight("on_color_186", str, args...))
+func PrintlnOnColor186(str string) {
+	Println(Hilight("on_color_186", str))
+}
+
+// OnColor186f wraps OnColor186 and works with format
+// strings.
+func OnColor186f(str string, args ...interface{}) string {
+	return OnColor186(Sprintf(str, args...))
+}
+
+// PrintOnColor186f wraps PrintOnColor186 and works with format
+// strings.
+func PrintOnColor186f(str string, args ...interface{}) {
+	PrintOnColor186(Sprintf(str, args...))
+}
+
+// PrintlnOnColor186f wraps PrintlnOnColor186 and works with format
+// strings.
+func PrintlnOnColor186f(str string, args ...interface{}) {
+	PrintlnOnColor186(Sprintf(str, args...))
 }
 
 // Color187 will Hilight() the provided string with the
 // specified ANSI code.
-func Color187(str string, args ...interface{}) string {
-	return Hilight("color_187", str, args...)
+func Color187(str string) string {
+	return Hilight("color_187", str)
 }
 
 // PrintColor187 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor187(str string, args ...interface{}) {
-	Print(Hilight("color_187", str, args...))
+func PrintColor187(str string) {
+	Print(Hilight("color_187", str))
 }
 
 // PrintlnColor187 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor187(str string, args ...interface{}) {
-	Println(Hilight("color_187", str, args...))
+func PrintlnColor187(str string) {
+	Println(Hilight("color_187", str))
+}
+
+// Color187f wraps Color187 and works with format
+// strings.
+func Color187f(str string, args ...interface{}) string {
+	return Color187(Sprintf(str, args...))
+}
+
+// PrintColor187f wraps PrintColor187 and works with format
+// strings.
+func PrintColor187f(str string, args ...interface{}) {
+	PrintColor187(Sprintf(str, args...))
+}
+
+// PrintlnColor187f wraps PrintlnColor187 and works with format
+// strings.
+func PrintlnColor187f(str string, args ...interface{}) {
+	PrintlnColor187(Sprintf(str, args...))
 }
 
 // OnColor187 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor187(str string, args ...interface{}) string {
-	return Hilight("on_color_187", str, args...)
+func OnColor187(str string) string {
+	return Hilight("on_color_187", str)
 }
 
 // PrintOnColor187 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor187(str string, args ...interface{}) {
-	Print(Hilight("on_color_187", str, args...))
+func PrintOnColor187(str string) {
+	Print(Hilight("on_color_187", str))
 }
 
 // PrintlnOnColor187 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor187(str string, args ...interface{}) {
-	Println(Hilight("on_color_187", str, args...))
+func PrintlnOnColor187(str string) {
+	Println(Hilight("on_color_187", str))
+}
+
+// OnColor187f wraps OnColor187 and works with format
+// strings.
+func OnColor187f(str string, args ...interface{}) string {
+	return OnColor187(Sprintf(str, args...))
+}
+
+// PrintOnColor187f wraps PrintOnColor187 and works with format
+// strings.
+func PrintOnColor187f(str string, args ...interface{}) {
+	PrintOnColor187(Sprintf(str, args...))
+}
+
+// PrintlnOnColor187f wraps PrintlnOnColor187 and works with format
+// strings.
+func PrintlnOnColor187f(str string, args ...interface{}) {
+	PrintlnOnColor187(Sprintf(str, args...))
 }
 
 // Color188 will Hilight() the provided string with the
 // specified ANSI code.
-func Color188(str string, args ...interface{}) string {
-	return Hilight("color_188", str, args...)
+func Color188(str string) string {
+	return Hilight("color_188", str)
 }
 
 // PrintColor188 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor188(str string, args ...interface{}) {
-	Print(Hilight("color_188", str, args...))
+func PrintColor188(str string) {
+	Print(Hilight("color_188", str))
 }
 
 // PrintlnColor188 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor188(str string, args ...interface{}) {
-	Println(Hilight("color_188", str, args...))
+func PrintlnColor188(str string) {
+	Println(Hilight("color_188", str))
+}
+
+// Color188f wraps Color188 and works with format
+// strings.
+func Color188f(str string, args ...interface{}) string {
+	return Color188(Sprintf(str, args...))
+}
+
+// PrintColor188f wraps PrintColor188 and works with format
+// strings.
+func PrintColor188f(str string, args ...interface{}) {
+	PrintColor188(Sprintf(str, args...))
+}
+
+// PrintlnColor188f wraps PrintlnColor188 and works with format
+// strings.
+func PrintlnColor188f(str string, args ...interface{}) {
+	PrintlnColor188(Sprintf(str, args...))
 }
 
 // OnColor188 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor188(str string, args ...interface{}) string {
-	return Hilight("on_color_188", str, args...)
+func OnColor188(str string) string {
+	return Hilight("on_color_188", str)
 }
 
 // PrintOnColor188 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor188(str string, args ...interface{}) {
-	Print(Hilight("on_color_188", str, args...))
+func PrintOnColor188(str string) {
+	Print(Hilight("on_color_188", str))
 }
 
 // PrintlnOnColor188 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor188(str string, args ...interface{}) {
-	Println(Hilight("on_color_188", str, args...))
+func PrintlnOnColor188(str string) {
+	Println(Hilight("on_color_188", str))
+}
+
+// OnColor188f wraps OnColor188 and works with format
+// strings.
+func OnColor188f(str string, args ...interface{}) string {
+	return OnColor188(Sprintf(str, args...))
+}
+
+// PrintOnColor188f wraps PrintOnColor188 and works with format
+// strings.
+func PrintOnColor188f(str string, args ...interface{}) {
+	PrintOnColor188(Sprintf(str, args...))
+}
+
+// PrintlnOnColor188f wraps PrintlnOnColor188 and works with format
+// strings.
+func PrintlnOnColor188f(str string, args ...interface{}) {
+	PrintlnOnColor188(Sprintf(str, args...))
 }
 
 // Color189 will Hilight() the provided string with the
 // specified ANSI code.
-func Color189(str string, args ...interface{}) string {
-	return Hilight("color_189", str, args...)
+func Color189(str string) string {
+	return Hilight("color_189", str)
 }
 
 // PrintColor189 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor189(str string, args ...interface{}) {
-	Print(Hilight("color_189", str, args...))
+func PrintColor189(str string) {
+	Print(Hilight("color_189", str))
 }
 
 // PrintlnColor189 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor189(str string, args ...interface{}) {
-	Println(Hilight("color_189", str, args...))
+func PrintlnColor189(str string) {
+	Println(Hilight("color_189", str))
+}
+
+// Color189f wraps Color189 and works with format
+// strings.
+func Color189f(str string, args ...interface{}) string {
+	return Color189(Sprintf(str, args...))
+}
+
+// PrintColor189f wraps PrintColor189 and works with format
+// strings.
+func PrintColor189f(str string, args ...interface{}) {
+	PrintColor189(Sprintf(str, args...))
+}
+
+// PrintlnColor189f wraps PrintlnColor189 and works with format
+// strings.
+func PrintlnColor189f(str string, args ...interface{}) {
+	PrintlnColor189(Sprintf(str, args...))
 }
 
 // OnColor189 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor189(str string, args ...interface{}) string {
-	return Hilight("on_color_189", str, args...)
+func OnColor189(str string) string {
+	return Hilight("on_color_189", str)
 }
 
 // PrintOnColor189 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor189(str string, args ...interface{}) {
-	Print(Hilight("on_color_189", str, args...))
+func PrintOnColor189(str string) {
+	Print(Hilight("on_color_189", str))
 }
 
 // PrintlnOnColor189 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor189(str string, args ...interface{}) {
-	Println(Hilight("on_color_189", str, args...))
+func PrintlnOnColor189(str string) {
+	Println(Hilight("on_color_189", str))
+}
+
+// OnColor189f wraps OnColor189 and works with format
+// strings.
+func OnColor189f(str string, args ...interface{}) string {
+	return OnColor189(Sprintf(str, args...))
+}
+
+// PrintOnColor189f wraps PrintOnColor189 and works with format
+// strings.
+func PrintOnColor189f(str string, args ...interface{}) {
+	PrintOnColor189(Sprintf(str, args...))
+}
+
+// PrintlnOnColor189f wraps PrintlnOnColor189 and works with format
+// strings.
+func PrintlnOnColor189f(str string, args ...interface{}) {
+	PrintlnOnColor189(Sprintf(str, args...))
 }
 
 // Color190 will Hilight() the provided string with the
 // specified ANSI code.
-func Color190(str string, args ...interface{}) string {
-	return Hilight("color_190", str, args...)
+func Color190(str string) string {
+	return Hilight("color_190", str)
 }
 
 // PrintColor190 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor190(str string, args ...interface{}) {
-	Print(Hilight("color_190", str, args...))
+func PrintColor190(str string) {
+	Print(Hilight("color_190", str))
 }
 
 // PrintlnColor190 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor190(str string, args ...interface{}) {
-	Println(Hilight("color_190", str, args...))
+func PrintlnColor190(str string) {
+	Println(Hilight("color_190", str))
+}
+
+// Color190f wraps Color190 and works with format
+// strings.
+func Color190f(str string, args ...interface{}) string {
+	return Color190(Sprintf(str, args...))
+}
+
+// PrintColor190f wraps PrintColor190 and works with format
+// strings.
+func PrintColor190f(str string, args ...interface{}) {
+	PrintColor190(Sprintf(str, args...))
+}
+
+// PrintlnColor190f wraps PrintlnColor190 and works with format
+// strings.
+func PrintlnColor190f(str string, args ...interface{}) {
+	PrintlnColor190(Sprintf(str, args...))
 }
 
 // OnColor190 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor190(str string, args ...interface{}) string {
-	return Hilight("on_color_190", str, args...)
+func OnColor190(str string) string {
+	return Hilight("on_color_190", str)
 }
 
 // PrintOnColor190 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor190(str string, args ...interface{}) {
-	Print(Hilight("on_color_190", str, args...))
+func PrintOnColor190(str string) {
+	Print(Hilight("on_color_190", str))
 }
 
 // PrintlnOnColor190 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor190(str string, args ...interface{}) {
-	Println(Hilight("on_color_190", str, args...))
+func PrintlnOnColor190(str string) {
+	Println(Hilight("on_color_190", str))
+}
+
+// OnColor190f wraps OnColor190 and works with format
+// strings.
+func OnColor190f(str string, args ...interface{}) string {
+	return OnColor190(Sprintf(str, args...))
+}
+
+// PrintOnColor190f wraps PrintOnColor190 and works with format
+// strings.
+func PrintOnColor190f(str string, args ...interface{}) {
+	PrintOnColor190(Sprintf(str, args...))
+}
+
+// PrintlnOnColor190f wraps PrintlnOnColor190 and works with format
+// strings.
+func PrintlnOnColor190f(str string, args ...interface{}) {
+	PrintlnOnColor190(Sprintf(str, args...))
 }
 
 // Color191 will Hilight() the provided string with the
 // specified ANSI code.
-func Color191(str string, args ...interface{}) string {
-	return Hilight("color_191", str, args...)
+func Color191(str string) string {
+	return Hilight("color_191", str)
 }
 
 // PrintColor191 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor191(str string, args ...interface{}) {
-	Print(Hilight("color_191", str, args...))
+func PrintColor191(str string) {
+	Print(Hilight("color_191", str))
 }
 
 // PrintlnColor191 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor191(str string, args ...interface{}) {
-	Println(Hilight("color_191", str, args...))
+func PrintlnColor191(str string) {
+	Println(Hilight("color_191", str))
+}
+
+// Color191f wraps Color191 and works with format
+// strings.
+func Color191f(str string, args ...interface{}) string {
+	return Color191(Sprintf(str, args...))
+}
+
+// PrintColor191f wraps PrintColor191 and works with format
+// strings.
+func PrintColor191f(str string, args ...interface{}) {
+	PrintColor191(Sprintf(str, args...))
+}
+
+// PrintlnColor191f wraps PrintlnColor191 and works with format
+// strings.
+func PrintlnColor191f(str string, args ...interface{}) {
+	PrintlnColor191(Sprintf(str, args...))
 }
 
 // OnColor191 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor191(str string, args ...interface{}) string {
-	return Hilight("on_color_191", str, args...)
+func OnColor191(str string) string {
+	return Hilight("on_color_191", str)
 }
 
 // PrintOnColor191 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor191(str string, args ...interface{}) {
-	Print(Hilight("on_color_191", str, args...))
+func PrintOnColor191(str string) {
+	Print(Hilight("on_color_191", str))
 }
 
 // PrintlnOnColor191 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor191(str string, args ...interface{}) {
-	Println(Hilight("on_color_191", str, args...))
+func PrintlnOnColor191(str string) {
+	Println(Hilight("on_color_191", str))
+}
+
+// OnColor191f wraps OnColor191 and works with format
+// strings.
+func OnColor191f(str string, args ...interface{}) string {
+	return OnColor191(Sprintf(str, args...))
+}
+
+// PrintOnColor191f wraps PrintOnColor191 and works with format
+// strings.
+func PrintOnColor191f(str string, args ...interface{}) {
+	PrintOnColor191(Sprintf(str, args...))
+}
+
+// PrintlnOnColor191f wraps PrintlnOnColor191 and works with format
+// strings.
+func PrintlnOnColor191f(str string, args ...interface{}) {
+	PrintlnOnColor191(Sprintf(str, args...))
 }
 
 // Color192 will Hilight() the provided string with the
 // specified ANSI code.
-func Color192(str string, args ...interface{}) string {
-	return Hilight("color_192", str, args...)
+func Color192(str string) string {
+	return Hilight("color_192", str)
 }
 
 // PrintColor192 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor192(str string, args ...interface{}) {
-	Print(Hilight("color_192", str, args...))
+func PrintColor192(str string) {
+	Print(Hilight("color_192", str))
 }
 
 // PrintlnColor192 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor192(str string, args ...interface{}) {
-	Println(Hilight("color_192", str, args...))
+func PrintlnColor192(str string) {
+	Println(Hilight("color_192", str))
+}
+
+// Color192f wraps Color192 and works with format
+// strings.
+func Color192f(str string, args ...interface{}) string {
+	return Color192(Sprintf(str, args...))
+}
+
+// PrintColor192f wraps PrintColor192 and works with format
+// strings.
+func PrintColor192f(str string, args ...interface{}) {
+	PrintColor192(Sprintf(str, args...))
+}
+
+// PrintlnColor192f wraps PrintlnColor192 and works with format
+// strings.
+func PrintlnColor192f(str string, args ...interface{}) {
+	PrintlnColor192(Sprintf(str, args...))
 }
 
 // OnColor192 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor192(str string, args ...interface{}) string {
-	return Hilight("on_color_192", str, args...)
+func OnColor192(str string) string {
+	return Hilight("on_color_192", str)
 }
 
 // PrintOnColor192 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor192(str string, args ...interface{}) {
-	Print(Hilight("on_color_192", str, args...))
+func PrintOnColor192(str string) {
+	Print(Hilight("on_color_192", str))
 }
 
 // PrintlnOnColor192 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor192(str string, args ...interface{}) {
-	Println(Hilight("on_color_192", str, args...))
+func PrintlnOnColor192(str string) {
+	Println(Hilight("on_color_192", str))
+}
+
+// OnColor192f wraps OnColor192 and works with format
+// strings.
+func OnColor192f(str string, args ...interface{}) string {
+	return OnColor192(Sprintf(str, args...))
+}
+
+// PrintOnColor192f wraps PrintOnColor192 and works with format
+// strings.
+func PrintOnColor192f(str string, args ...interface{}) {
+	PrintOnColor192(Sprintf(str, args...))
+}
+
+// PrintlnOnColor192f wraps PrintlnOnColor192 and works with format
+// strings.
+func PrintlnOnColor192f(str string, args ...interface{}) {
+	PrintlnOnColor192(Sprintf(str, args...))
 }
 
 // Color193 will Hilight() the provided string with the
 // specified ANSI code.
-func Color193(str string, args ...interface{}) string {
-	return Hilight("color_193", str, args...)
+func Color193(str string) string {
+	return Hilight("color_193", str)
 }
 
 // PrintColor193 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor193(str string, args ...interface{}) {
-	Print(Hilight("color_193", str, args...))
+func PrintColor193(str string) {
+	Print(Hilight("color_193", str))
 }
 
 // PrintlnColor193 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor193(str string, args ...interface{}) {
-	Println(Hilight("color_193", str, args...))
+func PrintlnColor193(str string) {
+	Println(Hilight("color_193", str))
+}
+
+// Color193f wraps Color193 and works with format
+// strings.
+func Color193f(str string, args ...interface{}) string {
+	return Color193(Sprintf(str, args...))
+}
+
+// PrintColor193f wraps PrintColor193 and works with format
+// strings.
+func PrintColor193f(str string, args ...interface{}) {
+	PrintColor193(Sprintf(str, args...))
+}
+
+// PrintlnColor193f wraps PrintlnColor193 and works with format
+// strings.
+func PrintlnColor193f(str string, args ...interface{}) {
+	PrintlnColor193(Sprintf(str, args...))
 }
 
 // OnColor193 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor193(str string, args ...interface{}) string {
-	return Hilight("on_color_193", str, args...)
+func OnColor193(str string) string {
+	return Hilight("on_color_193", str)
 }
 
 // PrintOnColor193 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor193(str string, args ...interface{}) {
-	Print(Hilight("on_color_193", str, args...))
+func PrintOnColor193(str string) {
+	Print(Hilight("on_color_193", str))
 }
 
 // PrintlnOnColor193 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor193(str string, args ...interface{}) {
-	Println(Hilight("on_color_193", str, args...))
+func PrintlnOnColor193(str string) {
+	Println(Hilight("on_color_193", str))
+}
+
+// OnColor193f wraps OnColor193 and works with format
+// strings.
+func OnColor193f(str string, args ...interface{}) string {
+	return OnColor193(Sprintf(str, args...))
+}
+
+// PrintOnColor193f wraps PrintOnColor193 and works with format
+// strings.
+func PrintOnColor193f(str string, args ...interface{}) {
+	PrintOnColor193(Sprintf(str, args...))
+}
+
+// PrintlnOnColor193f wraps PrintlnOnColor193 and works with format
+// strings.
+func PrintlnOnColor193f(str string, args ...interface{}) {
+	PrintlnOnColor193(Sprintf(str, args...))
 }
 
 // Color194 will Hilight() the provided string with the
 // specified ANSI code.
-func Color194(str string, args ...interface{}) string {
-	return Hilight("color_194", str, args...)
+func Color194(str string) string {
+	return Hilight("color_194", str)
 }
 
 // PrintColor194 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor194(str string, args ...interface{}) {
-	Print(Hilight("color_194", str, args...))
+func PrintColor194(str string) {
+	Print(Hilight("color_194", str))
 }
 
 // PrintlnColor194 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor194(str string, args ...interface{}) {
-	Println(Hilight("color_194", str, args...))
+func PrintlnColor194(str string) {
+	Println(Hilight("color_194", str))
+}
+
+// Color194f wraps Color194 and works with format
+// strings.
+func Color194f(str string, args ...interface{}) string {
+	return Color194(Sprintf(str, args...))
+}
+
+// PrintColor194f wraps PrintColor194 and works with format
+// strings.
+func PrintColor194f(str string, args ...interface{}) {
+	PrintColor194(Sprintf(str, args...))
+}
+
+// PrintlnColor194f wraps PrintlnColor194 and works with format
+// strings.
+func PrintlnColor194f(str string, args ...interface{}) {
+	PrintlnColor194(Sprintf(str, args...))
 }
 
 // OnColor194 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor194(str string, args ...interface{}) string {
-	return Hilight("on_color_194", str, args...)
+func OnColor194(str string) string {
+	return Hilight("on_color_194", str)
 }
 
 // PrintOnColor194 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor194(str string, args ...interface{}) {
-	Print(Hilight("on_color_194", str, args...))
+func PrintOnColor194(str string) {
+	Print(Hilight("on_color_194", str))
 }
 
 // PrintlnOnColor194 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor194(str string, args ...interface{}) {
-	Println(Hilight("on_color_194", str, args...))
+func PrintlnOnColor194(str string) {
+	Println(Hilight("on_color_194", str))
+}
+
+// OnColor194f wraps OnColor194 and works with format
+// strings.
+func OnColor194f(str string, args ...interface{}) string {
+	return OnColor194(Sprintf(str, args...))
+}
+
+// PrintOnColor194f wraps PrintOnColor194 and works with format
+// strings.
+func PrintOnColor194f(str string, args ...interface{}) {
+	PrintOnColor194(Sprintf(str, args...))
+}
+
+// PrintlnOnColor194f wraps PrintlnOnColor194 and works with format
+// strings.
+func PrintlnOnColor194f(str string, args ...interface{}) {
+	PrintlnOnColor194(Sprintf(str, args...))
 }
 
 // Color195 will Hilight() the provided string with the
 // specified ANSI code.
-func Color195(str string, args ...interface{}) string {
-	return Hilight("color_195", str, args...)
+func Color195(str string) string {
+	return Hilight("color_195", str)
 }
 
 // PrintColor195 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor195(str string, args ...interface{}) {
-	Print(Hilight("color_195", str, args...))
+func PrintColor195(str string) {
+	Print(Hilight("color_195", str))
 }
 
 // PrintlnColor195 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor195(str string, args ...interface{}) {
-	Println(Hilight("color_195", str, args...))
+func PrintlnColor195(str string) {
+	Println(Hilight("color_195", str))
+}
+
+// Color195f wraps Color195 and works with format
+// strings.
+func Color195f(str string, args ...interface{}) string {
+	return Color195(Sprintf(str, args...))
+}
+
+// PrintColor195f wraps PrintColor195 and works with format
+// strings.
+func PrintColor195f(str string, args ...interface{}) {
+	PrintColor195(Sprintf(str, args...))
+}
+
+// PrintlnColor195f wraps PrintlnColor195 and works with format
+// strings.
+func PrintlnColor195f(str string, args ...interface{}) {
+	PrintlnColor195(Sprintf(str, args...))
 }
 
 // OnColor195 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor195(str string, args ...interface{}) string {
-	return Hilight("on_color_195", str, args...)
+func OnColor195(str string) string {
+	return Hilight("on_color_195", str)
 }
 
 // PrintOnColor195 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor195(str string, args ...interface{}) {
-	Print(Hilight("on_color_195", str, args...))
+func PrintOnColor195(str string) {
+	Print(Hilight("on_color_195", str))
 }
 
 // PrintlnOnColor195 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor195(str string, args ...interface{}) {
-	Println(Hilight("on_color_195", str, args...))
+func PrintlnOnColor195(str string) {
+	Println(Hilight("on_color_195", str))
+}
+
+// OnColor195f wraps OnColor195 and works with format
+// strings.
+func OnColor195f(str string, args ...interface{}) string {
+	return OnColor195(Sprintf(str, args...))
+}
+
+// PrintOnColor195f wraps PrintOnColor195 and works with format
+// strings.
+func PrintOnColor195f(str string, args ...interface{}) {
+	PrintOnColor195(Sprintf(str, args...))
+}
+
+// PrintlnOnColor195f wraps PrintlnOnColor195 and works with format
+// strings.
+func PrintlnOnColor195f(str string, args ...interface{}) {
+	PrintlnOnColor195(Sprintf(str, args...))
 }
 
 // Color196 will Hilight() the provided string with the
 // specified ANSI code.
-func Color196(str string, args ...interface{}) string {
-	return Hilight("color_196", str, args...)
+func Color196(str string) string {
+	return Hilight("color_196", str)
 }
 
 // PrintColor196 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor196(str string, args ...interface{}) {
-	Print(Hilight("color_196", str, args...))
+func PrintColor196(str string) {
+	Print(Hilight("color_196", str))
 }
 
 // PrintlnColor196 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor196(str string, args ...interface{}) {
-	Println(Hilight("color_196", str, args...))
+func PrintlnColor196(str string) {
+	Println(Hilight("color_196", str))
+}
+
+// Color196f wraps Color196 and works with format
+// strings.
+func Color196f(str string, args ...interface{}) string {
+	return Color196(Sprintf(str, args...))
+}
+
+// PrintColor196f wraps PrintColor196 and works with format
+// strings.
+func PrintColor196f(str string, args ...interface{}) {
+	PrintColor196(Sprintf(str, args...))
+}
+
+// PrintlnColor196f wraps PrintlnColor196 and works with format
+// strings.
+func PrintlnColor196f(str string, args ...interface{}) {
+	PrintlnColor196(Sprintf(str, args...))
 }
 
 // OnColor196 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor196(str string, args ...interface{}) string {
-	return Hilight("on_color_196", str, args...)
+func OnColor196(str string) string {
+	return Hilight("on_color_196", str)
 }
 
 // PrintOnColor196 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor196(str string, args ...interface{}) {
-	Print(Hilight("on_color_196", str, args...))
+func PrintOnColor196(str string) {
+	Print(Hilight("on_color_196", str))
 }
 
 // PrintlnOnColor196 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor196(str string, args ...interface{}) {
-	Println(Hilight("on_color_196", str, args...))
+func PrintlnOnColor196(str string) {
+	Println(Hilight("on_color_196", str))
+}
+
+// OnColor196f wraps OnColor196 and works with format
+// strings.
+func OnColor196f(str string, args ...interface{}) string {
+	return OnColor196(Sprintf(str, args...))
+}
+
+// PrintOnColor196f wraps PrintOnColor196 and works with format
+// strings.
+func PrintOnColor196f(str string, args ...interface{}) {
+	PrintOnColor196(Sprintf(str, args...))
+}
+
+// PrintlnOnColor196f wraps PrintlnOnColor196 and works with format
+// strings.
+func PrintlnOnColor196f(str string, args ...interface{}) {
+	PrintlnOnColor196(Sprintf(str, args...))
 }
 
 // Color197 will Hilight() the provided string with the
 // specified ANSI code.
-func Color197(str string, args ...interface{}) string {
-	return Hilight("color_197", str, args...)
+func Color197(str string) string {
+	return Hilight("color_197", str)
 }
 
 // PrintColor197 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor197(str string, args ...interface{}) {
-	Print(Hilight("color_197", str, args...))
+func PrintColor197(str string) {
+	Print(Hilight("color_197", str))
 }
 
 // PrintlnColor197 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor197(str string, args ...interface{}) {
-	Println(Hilight("color_197", str, args...))
+func PrintlnColor197(str string) {
+	Println(Hilight("color_197", str))
+}
+
+// Color197f wraps Color197 and works with format
+// strings.
+func Color197f(str string, args ...interface{}) string {
+	return Color197(Sprintf(str, args...))
+}
+
+// PrintColor197f wraps PrintColor197 and works with format
+// strings.
+func PrintColor197f(str string, args ...interface{}) {
+	PrintColor197(Sprintf(str, args...))
+}
+
+// PrintlnColor197f wraps PrintlnColor197 and works with format
+// strings.
+func PrintlnColor197f(str string, args ...interface{}) {
+	PrintlnColor197(Sprintf(str, args...))
 }
 
 // OnColor197 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor197(str string, args ...interface{}) string {
-	return Hilight("on_color_197", str, args...)
+func OnColor197(str string) string {
+	return Hilight("on_color_197", str)
 }
 
 // PrintOnColor197 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor197(str string, args ...interface{}) {
-	Print(Hilight("on_color_197", str, args...))
+func PrintOnColor197(str string) {
+	Print(Hilight("on_color_197", str))
 }
 
 // PrintlnOnColor197 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor197(str string, args ...interface{}) {
-	Println(Hilight("on_color_197", str, args...))
+func PrintlnOnColor197(str string) {
+	Println(Hilight("on_color_197", str))
+}
+
+// OnColor197f wraps OnColor197 and works with format
+// strings.
+func OnColor197f(str string, args ...interface{}) string {
+	return OnColor197(Sprintf(str, args...))
+}
+
+// PrintOnColor197f wraps PrintOnColor197 and works with format
+// strings.
+func PrintOnColor197f(str string, args ...interface{}) {
+	PrintOnColor197(Sprintf(str, args...))
+}
+
+// PrintlnOnColor197f wraps PrintlnOnColor197 and works with format
+// strings.
+func PrintlnOnColor197f(str string, args ...interface{}) {
+	PrintlnOnColor197(Sprintf(str, args...))
 }
 
 // Color198 will Hilight() the provided string with the
 // specified ANSI code.
-func Color198(str string, args ...interface{}) string {
-	return Hilight("color_198", str, args...)
+func Color198(str string) string {
+	return Hilight("color_198", str)
 }
 
 // PrintColor198 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor198(str string, args ...interface{}) {
-	Print(Hilight("color_198", str, args...))
+func PrintColor198(str string) {
+	Print(Hilight("color_198", str))
 }
 
 // PrintlnColor198 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor198(str string, args ...interface{}) {
-	Println(Hilight("color_198", str, args...))
+func PrintlnColor198(str string) {
+	Println(Hilight("color_198", str))
+}
+
+// Color198f wraps Color198 and works with format
+// strings.
+func Color198f(str string, args ...interface{}) string {
+	return Color198(Sprintf(str, args...))
+}
+
+// PrintColor198f wraps PrintColor198 and works with format
+// strings.
+func PrintColor198f(str string, args ...interface{}) {
+	PrintColor198(Sprintf(str, args...))
+}
+
+// PrintlnColor198f wraps PrintlnColor198 and works with format
+// strings.
+func PrintlnColor198f(str string, args ...interface{}) {
+	PrintlnColor198(Sprintf(str, args...))
 }
 
 // OnColor198 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor198(str string, args ...interface{}) string {
-	return Hilight("on_color_198", str, args...)
+func OnColor198(str string) string {
+	return Hilight("on_color_198", str)
 }
 
 // PrintOnColor198 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor198(str string, args ...interface{}) {
-	Print(Hilight("on_color_198", str, args...))
+func PrintOnColor198(str string) {
+	Print(Hilight("on_color_198", str))
 }
 
 // PrintlnOnColor198 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor198(str string, args ...interface{}) {
-	Println(Hilight("on_color_198", str, args...))
+func PrintlnOnColor198(str string) {
+	Println(Hilight("on_color_198", str))
+}
+
+// OnColor198f wraps OnColor198 and works with format
+// strings.
+func OnColor198f(str string, args ...interface{}) string {
+	return OnColor198(Sprintf(str, args...))
+}
+
+// PrintOnColor198f wraps PrintOnColor198 and works with format
+// strings.
+func PrintOnColor198f(str string, args ...interface{}) {
+	PrintOnColor198(Sprintf(str, args...))
+}
+
+// PrintlnOnColor198f wraps PrintlnOnColor198 and works with format
+// strings.
+func PrintlnOnColor198f(str string, args ...interface{}) {
+	PrintlnOnColor198(Sprintf(str, args...))
 }
 
 // Color199 will Hilight() the provided string with the
 // specified ANSI code.
-func Color199(str string, args ...interface{}) string {
-	return Hilight("color_199", str, args...)
+func Color199(str string) string {
+	return Hilight("color_199", str)
 }
 
 // PrintColor199 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor199(str string, args ...interface{}) {
-	Print(Hilight("color_199", str, args...))
+func PrintColor199(str string) {
+	Print(Hilight("color_199", str))
 }
 
 // PrintlnColor199 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor199(str string, args ...interface{}) {
-	Println(Hilight("color_199", str, args...))
+func PrintlnColor199(str string) {
+	Println(Hilight("color_199", str))
+}
+
+// Color199f wraps Color199 and works with format
+// strings.
+func Color199f(str string, args ...interface{}) string {
+	return Color199(Sprintf(str, args...))
+}
+
+// PrintColor199f wraps PrintColor199 and works with format
+// strings.
+func PrintColor199f(str string, args ...interface{}) {
+	PrintColor199(Sprintf(str, args...))
+}
+
+// PrintlnColor199f wraps PrintlnColor199 and works with format
+// strings.
+func PrintlnColor199f(str string, args ...interface{}) {
+	PrintlnColor199(Sprintf(str, args...))
 }
 
 // OnColor199 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor199(str string, args ...interface{}) string {
-	return Hilight("on_color_199", str, args...)
+func OnColor199(str string) string {
+	return Hilight("on_color_199", str)
 }
 
 // PrintOnColor199 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor199(str string, args ...interface{}) {
-	Print(Hilight("on_color_199", str, args...))
+func PrintOnColor199(str string) {
+	Print(Hilight("on_color_199", str))
 }
 
 // PrintlnOnColor199 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor199(str string, args ...interface{}) {
-	Println(Hilight("on_color_199", str, args...))
+func PrintlnOnColor199(str string) {
+	Println(Hilight("on_color_199", str))
+}
+
+// OnColor199f wraps OnColor199 and works with format
+// strings.
+func OnColor199f(str string, args ...interface{}) string {
+	return OnColor199(Sprintf(str, args...))
+}
+
+// PrintOnColor199f wraps PrintOnColor199 and works with format
+// strings.
+func PrintOnColor199f(str string, args ...interface{}) {
+	PrintOnColor199(Sprintf(str, args...))
+}
+
+// PrintlnOnColor199f wraps PrintlnOnColor199 and works with format
+// strings.
+func PrintlnOnColor199f(str string, args ...interface{}) {
+	PrintlnOnColor199(Sprintf(str, args...))
 }
 
 // Color200 will Hilight() the provided string with the
 // specified ANSI code.
-func Color200(str string, args ...interface{}) string {
-	return Hilight("color_200", str, args...)
+func Color200(str string) string {
+	return Hilight("color_200", str)
 }
 
 // PrintColor200 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor200(str string, args ...interface{}) {
-	Print(Hilight("color_200", str, args...))
+func PrintColor200(str string) {
+	Print(Hilight("color_200", str))
 }
 
 // PrintlnColor200 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor200(str string, args ...interface{}) {
-	Println(Hilight("color_200", str, args...))
+func PrintlnColor200(str string) {
+	Println(Hilight("color_200", str))
+}
+
+// Color200f wraps Color200 and works with format
+// strings.
+func Color200f(str string, args ...interface{}) string {
+	return Color200(Sprintf(str, args...))
+}
+
+// PrintColor200f wraps PrintColor200 and works with format
+// strings.
+func PrintColor200f(str string, args ...interface{}) {
+	PrintColor200(Sprintf(str, args...))
+}
+
+// PrintlnColor200f wraps PrintlnColor200 and works with format
+// strings.
+func PrintlnColor200f(str string, args ...interface{}) {
+	PrintlnColor200(Sprintf(str, args...))
 }
 
 // OnColor200 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor200(str string, args ...interface{}) string {
-	return Hilight("on_color_200", str, args...)
+func OnColor200(str string) string {
+	return Hilight("on_color_200", str)
 }
 
 // PrintOnColor200 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor200(str string, args ...interface{}) {
-	Print(Hilight("on_color_200", str, args...))
+func PrintOnColor200(str string) {
+	Print(Hilight("on_color_200", str))
 }
 
 // PrintlnOnColor200 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor200(str string, args ...interface{}) {
-	Println(Hilight("on_color_200", str, args...))
+func PrintlnOnColor200(str string) {
+	Println(Hilight("on_color_200", str))
+}
+
+// OnColor200f wraps OnColor200 and works with format
+// strings.
+func OnColor200f(str string, args ...interface{}) string {
+	return OnColor200(Sprintf(str, args...))
+}
+
+// PrintOnColor200f wraps PrintOnColor200 and works with format
+// strings.
+func PrintOnColor200f(str string, args ...interface{}) {
+	PrintOnColor200(Sprintf(str, args...))
+}
+
+// PrintlnOnColor200f wraps PrintlnOnColor200 and works with format
+// strings.
+func PrintlnOnColor200f(str string, args ...interface{}) {
+	PrintlnOnColor200(Sprintf(str, args...))
 }
 
 // Color201 will Hilight() the provided string with the
 // specified ANSI code.
-func Color201(str string, args ...interface{}) string {
-	return Hilight("color_201", str, args...)
+func Color201(str string) string {
+	return Hilight("color_201", str)
 }
 
 // PrintColor201 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor201(str string, args ...interface{}) {
-	Print(Hilight("color_201", str, args...))
+func PrintColor201(str string) {
+	Print(Hilight("color_201", str))
 }
 
 // PrintlnColor201 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor201(str string, args ...interface{}) {
-	Println(Hilight("color_201", str, args...))
+func PrintlnColor201(str string) {
+	Println(Hilight("color_201", str))
+}
+
+// Color201f wraps Color201 and works with format
+// strings.
+func Color201f(str string, args ...interface{}) string {
+	return Color201(Sprintf(str, args...))
+}
+
+// PrintColor201f wraps PrintColor201 and works with format
+// strings.
+func PrintColor201f(str string, args ...interface{}) {
+	PrintColor201(Sprintf(str, args...))
+}
+
+// PrintlnColor201f wraps PrintlnColor201 and works with format
+// strings.
+func PrintlnColor201f(str string, args ...interface{}) {
+	PrintlnColor201(Sprintf(str, args...))
 }
 
 // OnColor201 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor201(str string, args ...interface{}) string {
-	return Hilight("on_color_201", str, args...)
+func OnColor201(str string) string {
+	return Hilight("on_color_201", str)
 }
 
 // PrintOnColor201 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor201(str string, args ...interface{}) {
-	Print(Hilight("on_color_201", str, args...))
+func PrintOnColor201(str string) {
+	Print(Hilight("on_color_201", str))
 }
 
 // PrintlnOnColor201 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor201(str string, args ...interface{}) {
-	Println(Hilight("on_color_201", str, args...))
+func PrintlnOnColor201(str string) {
+	Println(Hilight("on_color_201", str))
+}
+
+// OnColor201f wraps OnColor201 and works with format
+// strings.
+func OnColor201f(str string, args ...interface{}) string {
+	return OnColor201(Sprintf(str, args...))
+}
+
+// PrintOnColor201f wraps PrintOnColor201 and works with format
+// strings.
+func PrintOnColor201f(str string, args ...interface{}) {
+	PrintOnColor201(Sprintf(str, args...))
+}
+
+// PrintlnOnColor201f wraps PrintlnOnColor201 and works with format
+// strings.
+func PrintlnOnColor201f(str string, args ...interface{}) {
+	PrintlnOnColor201(Sprintf(str, args...))
 }
 
 // Color202 will Hilight() the provided string with the
 // specified ANSI code.
-func Color202(str string, args ...interface{}) string {
-	return Hilight("color_202", str, args...)
+func Color202(str string) string {
+	return Hilight("color_202", str)
 }
 
 // PrintColor202 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor202(str string, args ...interface{}) {
-	Print(Hilight("color_202", str, args...))
+func PrintColor202(str string) {
+	Print(Hilight("color_202", str))
 }
 
 // PrintlnColor202 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor202(str string, args ...interface{}) {
-	Println(Hilight("color_202", str, args...))
+func PrintlnColor202(str string) {
+	Println(Hilight("color_202", str))
+}
+
+// Color202f wraps Color202 and works with format
+// strings.
+func Color202f(str string, args ...interface{}) string {
+	return Color202(Sprintf(str, args...))
+}
+
+// PrintColor202f wraps PrintColor202 and works with format
+// strings.
+func PrintColor202f(str string, args ...interface{}) {
+	PrintColor202(Sprintf(str, args...))
+}
+
+// PrintlnColor202f wraps PrintlnColor202 and works with format
+// strings.
+func PrintlnColor202f(str string, args ...interface{}) {
+	PrintlnColor202(Sprintf(str, args...))
 }
 
 // OnColor202 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor202(str string, args ...interface{}) string {
-	return Hilight("on_color_202", str, args...)
+func OnColor202(str string) string {
+	return Hilight("on_color_202", str)
 }
 
 // PrintOnColor202 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor202(str string, args ...interface{}) {
-	Print(Hilight("on_color_202", str, args...))
+func PrintOnColor202(str string) {
+	Print(Hilight("on_color_202", str))
 }
 
 // PrintlnOnColor202 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor202(str string, args ...interface{}) {
-	Println(Hilight("on_color_202", str, args...))
+func PrintlnOnColor202(str string) {
+	Println(Hilight("on_color_202", str))
+}
+
+// OnColor202f wraps OnColor202 and works with format
+// strings.
+func OnColor202f(str string, args ...interface{}) string {
+	return OnColor202(Sprintf(str, args...))
+}
+
+// PrintOnColor202f wraps PrintOnColor202 and works with format
+// strings.
+func PrintOnColor202f(str string, args ...interface{}) {
+	PrintOnColor202(Sprintf(str, args...))
+}
+
+// PrintlnOnColor202f wraps PrintlnOnColor202 and works with format
+// strings.
+func PrintlnOnColor202f(str string, args ...interface{}) {
+	PrintlnOnColor202(Sprintf(str, args...))
 }
 
 // Color203 will Hilight() the provided string with the
 // specified ANSI code.
-func Color203(str string, args ...interface{}) string {
-	return Hilight("color_203", str, args...)
+func Color203(str string) string {
+	return Hilight("color_203", str)
 }
 
 // PrintColor203 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor203(str string, args ...interface{}) {
-	Print(Hilight("color_203", str, args...))
+func PrintColor203(str string) {
+	Print(Hilight("color_203", str))
 }
 
 // PrintlnColor203 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor203(str string, args ...interface{}) {
-	Println(Hilight("color_203", str, args...))
+func PrintlnColor203(str string) {
+	Println(Hilight("color_203", str))
+}
+
+// Color203f wraps Color203 and works with format
+// strings.
+func Color203f(str string, args ...interface{}) string {
+	return Color203(Sprintf(str, args...))
+}
+
+// PrintColor203f wraps PrintColor203 and works with format
+// strings.
+func PrintColor203f(str string, args ...interface{}) {
+	PrintColor203(Sprintf(str, args...))
+}
+
+// PrintlnColor203f wraps PrintlnColor203 and works with format
+// strings.
+func PrintlnColor203f(str string, args ...interface{}) {
+	PrintlnColor203(Sprintf(str, args...))
 }
 
 // OnColor203 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor203(str string, args ...interface{}) string {
-	return Hilight("on_color_203", str, args...)
+func OnColor203(str string) string {
+	return Hilight("on_color_203", str)
 }
 
 // PrintOnColor203 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor203(str string, args ...interface{}) {
-	Print(Hilight("on_color_203", str, args...))
+func PrintOnColor203(str string) {
+	Print(Hilight("on_color_203", str))
 }
 
 // PrintlnOnColor203 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor203(str string, args ...interface{}) {
-	Println(Hilight("on_color_203", str, args...))
+func PrintlnOnColor203(str string) {
+	Println(Hilight("on_color_203", str))
+}
+
+// OnColor203f wraps OnColor203 and works with format
+// strings.
+func OnColor203f(str string, args ...interface{}) string {
+	return OnColor203(Sprintf(str, args...))
+}
+
+// PrintOnColor203f wraps PrintOnColor203 and works with format
+// strings.
+func PrintOnColor203f(str string, args ...interface{}) {
+	PrintOnColor203(Sprintf(str, args...))
+}
+
+// PrintlnOnColor203f wraps PrintlnOnColor203 and works with format
+// strings.
+func PrintlnOnColor203f(str string, args ...interface{}) {
+	PrintlnOnColor203(Sprintf(str, args...))
 }
 
 // Color204 will Hilight() the provided string with the
 // specified ANSI code.
-func Color204(str string, args ...interface{}) string {
-	return Hilight("color_204", str, args...)
+func Color204(str string) string {
+	return Hilight("color_204", str)
 }
 
 // PrintColor204 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor204(str string, args ...interface{}) {
-	Print(Hilight("color_204", str, args...))
+func PrintColor204(str string) {
+	Print(Hilight("color_204", str))
 }
 
 // PrintlnColor204 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor204(str string, args ...interface{}) {
-	Println(Hilight("color_204", str, args...))
+func PrintlnColor204(str string) {
+	Println(Hilight("color_204", str))
+}
+
+// Color204f wraps Color204 and works with format
+// strings.
+func Color204f(str string, args ...interface{}) string {
+	return Color204(Sprintf(str, args...))
+}
+
+// PrintColor204f wraps PrintColor204 and works with format
+// strings.
+func PrintColor204f(str string, args ...interface{}) {
+	PrintColor204(Sprintf(str, args...))
+}
+
+// PrintlnColor204f wraps PrintlnColor204 and works with format
+// strings.
+func PrintlnColor204f(str string, args ...interface{}) {
+	PrintlnColor204(Sprintf(str, args...))
 }
 
 // OnColor204 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor204(str string, args ...interface{}) string {
-	return Hilight("on_color_204", str, args...)
+func OnColor204(str string) string {
+	return Hilight("on_color_204", str)
 }
 
 // PrintOnColor204 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor204(str string, args ...interface{}) {
-	Print(Hilight("on_color_204", str, args...))
+func PrintOnColor204(str string) {
+	Print(Hilight("on_color_204", str))
 }
 
 // PrintlnOnColor204 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor204(str string, args ...interface{}) {
-	Println(Hilight("on_color_204", str, args...))
+func PrintlnOnColor204(str string) {
+	Println(Hilight("on_color_204", str))
+}
+
+// OnColor204f wraps OnColor204 and works with format
+// strings.
+func OnColor204f(str string, args ...interface{}) string {
+	return OnColor204(Sprintf(str, args...))
+}
+
+// PrintOnColor204f wraps PrintOnColor204 and works with format
+// strings.
+func PrintOnColor204f(str string, args ...interface{}) {
+	PrintOnColor204(Sprintf(str, args...))
+}
+
+// PrintlnOnColor204f wraps PrintlnOnColor204 and works with format
+// strings.
+func PrintlnOnColor204f(str string, args ...interface{}) {
+	PrintlnOnColor204(Sprintf(str, args...))
 }
 
 // Color205 will Hilight() the provided string with the
 // specified ANSI code.
-func Color205(str string, args ...interface{}) string {
-	return Hilight("color_205", str, args...)
+func Color205(str string) string {
+	return Hilight("color_205", str)
 }
 
 // PrintColor205 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor205(str string, args ...interface{}) {
-	Print(Hilight("color_205", str, args...))
+func PrintColor205(str string) {
+	Print(Hilight("color_205", str))
 }
 
 // PrintlnColor205 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor205(str string, args ...interface{}) {
-	Println(Hilight("color_205", str, args...))
+func PrintlnColor205(str string) {
+	Println(Hilight("color_205", str))
+}
+
+// Color205f wraps Color205 and works with format
+// strings.
+func Color205f(str string, args ...interface{}) string {
+	return Color205(Sprintf(str, args...))
+}
+
+// PrintColor205f wraps PrintColor205 and works with format
+// strings.
+func PrintColor205f(str string, args ...interface{}) {
+	PrintColor205(Sprintf(str, args...))
+}
+
+// PrintlnColor205f wraps PrintlnColor205 and works with format
+// strings.
+func PrintlnColor205f(str string, args ...interface{}) {
+	PrintlnColor205(Sprintf(str, args...))
 }
 
 // OnColor205 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor205(str string, args ...interface{}) string {
-	return Hilight("on_color_205", str, args...)
+func OnColor205(str string) string {
+	return Hilight("on_color_205", str)
 }
 
 // PrintOnColor205 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor205(str string, args ...interface{}) {
-	Print(Hilight("on_color_205", str, args...))
+func PrintOnColor205(str string) {
+	Print(Hilight("on_color_205", str))
 }
 
 // PrintlnOnColor205 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor205(str string, args ...interface{}) {
-	Println(Hilight("on_color_205", str, args...))
+func PrintlnOnColor205(str string) {
+	Println(Hilight("on_color_205", str))
+}
+
+// OnColor205f wraps OnColor205 and works with format
+// strings.
+func OnColor205f(str string, args ...interface{}) string {
+	return OnColor205(Sprintf(str, args...))
+}
+
+// PrintOnColor205f wraps PrintOnColor205 and works with format
+// strings.
+func PrintOnColor205f(str string, args ...interface{}) {
+	PrintOnColor205(Sprintf(str, args...))
+}
+
+// PrintlnOnColor205f wraps PrintlnOnColor205 and works with format
+// strings.
+func PrintlnOnColor205f(str string, args ...interface{}) {
+	PrintlnOnColor205(Sprintf(str, args...))
 }
 
 // Color206 will Hilight() the provided string with the
 // specified ANSI code.
-func Color206(str string, args ...interface{}) string {
-	return Hilight("color_206", str, args...)
+func Color206(str string) string {
+	return Hilight("color_206", str)
 }
 
 // PrintColor206 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor206(str string, args ...interface{}) {
-	Print(Hilight("color_206", str, args...))
+func PrintColor206(str string) {
+	Print(Hilight("color_206", str))
 }
 
 // PrintlnColor206 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor206(str string, args ...interface{}) {
-	Println(Hilight("color_206", str, args...))
+func PrintlnColor206(str string) {
+	Println(Hilight("color_206", str))
+}
+
+// Color206f wraps Color206 and works with format
+// strings.
+func Color206f(str string, args ...interface{}) string {
+	return Color206(Sprintf(str, args...))
+}
+
+// PrintColor206f wraps PrintColor206 and works with format
+// strings.
+func PrintColor206f(str string, args ...interface{}) {
+	PrintColor206(Sprintf(str, args...))
+}
+
+// PrintlnColor206f wraps PrintlnColor206 and works with format
+// strings.
+func PrintlnColor206f(str string, args ...interface{}) {
+	PrintlnColor206(Sprintf(str, args...))
 }
 
 // OnColor206 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor206(str string, args ...interface{}) string {
-	return Hilight("on_color_206", str, args...)
+func OnColor206(str string) string {
+	return Hilight("on_color_206", str)
 }
 
 // PrintOnColor206 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor206(str string, args ...interface{}) {
-	Print(Hilight("on_color_206", str, args...))
+func PrintOnColor206(str string) {
+	Print(Hilight("on_color_206", str))
 }
 
 // PrintlnOnColor206 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor206(str string, args ...interface{}) {
-	Println(Hilight("on_color_206", str, args...))
+func PrintlnOnColor206(str string) {
+	Println(Hilight("on_color_206", str))
+}
+
+// OnColor206f wraps OnColor206 and works with format
+// strings.
+func OnColor206f(str string, args ...interface{}) string {
+	return OnColor206(Sprintf(str, args...))
+}
+
+// PrintOnColor206f wraps PrintOnColor206 and works with format
+// strings.
+func PrintOnColor206f(str string, args ...interface{}) {
+	PrintOnColor206(Sprintf(str, args...))
+}
+
+// PrintlnOnColor206f wraps PrintlnOnColor206 and works with format
+// strings.
+func PrintlnOnColor206f(str string, args ...interface{}) {
+	PrintlnOnColor206(Sprintf(str, args...))
 }
 
 // Color207 will Hilight() the provided string with the
 // specified ANSI code.
-func Color207(str string, args ...interface{}) string {
-	return Hilight("color_207", str, args...)
+func Color207(str string) string {
+	return Hilight("color_207", str)
 }
 
 // PrintColor207 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor207(str string, args ...interface{}) {
-	Print(Hilight("color_207", str, args...))
+func PrintColor207(str string) {
+	Print(Hilight("color_207", str))
 }
 
 // PrintlnColor207 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor207(str string, args ...interface{}) {
-	Println(Hilight("color_207", str, args...))
+func PrintlnColor207(str string) {
+	Println(Hilight("color_207", str))
+}
+
+// Color207f wraps Color207 and works with format
+// strings.
+func Color207f(str string, args ...interface{}) string {
+	return Color207(Sprintf(str, args...))
+}
+
+// PrintColor207f wraps PrintColor207 and works with format
+// strings.
+func PrintColor207f(str string, args ...interface{}) {
+	PrintColor207(Sprintf(str, args...))
+}
+
+// PrintlnColor207f wraps PrintlnColor207 and works with format
+// strings.
+func PrintlnColor207f(str string, args ...interface{}) {
+	PrintlnColor207(Sprintf(str, args...))
 }
 
 // OnColor207 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor207(str string, args ...interface{}) string {
-	return Hilight("on_color_207", str, args...)
+func OnColor207(str string) string {
+	return Hilight("on_color_207", str)
 }
 
 // PrintOnColor207 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor207(str string, args ...interface{}) {
-	Print(Hilight("on_color_207", str, args...))
+func PrintOnColor207(str string) {
+	Print(Hilight("on_color_207", str))
 }
 
 // PrintlnOnColor207 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor207(str string, args ...interface{}) {
-	Println(Hilight("on_color_207", str, args...))
+func PrintlnOnColor207(str string) {
+	Println(Hilight("on_color_207", str))
+}
+
+// OnColor207f wraps OnColor207 and works with format
+// strings.
+func OnColor207f(str string, args ...interface{}) string {
+	return OnColor207(Sprintf(str, args...))
+}
+
+// PrintOnColor207f wraps PrintOnColor207 and works with format
+// strings.
+func PrintOnColor207f(str string, args ...interface{}) {
+	PrintOnColor207(Sprintf(str, args...))
+}
+
+// PrintlnOnColor207f wraps PrintlnOnColor207 and works with format
+// strings.
+func PrintlnOnColor207f(str string, args ...interface{}) {
+	PrintlnOnColor207(Sprintf(str, args...))
 }
 
 // Color208 will Hilight() the provided string with the
 // specified ANSI code.
-func Color208(str string, args ...interface{}) string {
-	return Hilight("color_208", str, args...)
+func Color208(str string) string {
+	return Hilight("color_208", str)
 }
 
 // PrintColor208 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor208(str string, args ...interface{}) {
-	Print(Hilight("color_208", str, args...))
+func PrintColor208(str string) {
+	Print(Hilight("color_208", str))
 }
 
 // PrintlnColor208 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor208(str string, args ...interface{}) {
-	Println(Hilight("color_208", str, args...))
+func PrintlnColor208(str string) {
+	Println(Hilight("color_208", str))
+}
+
+// Color208f wraps Color208 and works with format
+// strings.
+func Color208f(str string, args ...interface{}) string {
+	return Color208(Sprintf(str, args...))
+}
+
+// PrintColor208f wraps PrintColor208 and works with format
+// strings.
+func PrintColor208f(str string, args ...interface{}) {
+	PrintColor208(Sprintf(str, args...))
+}
+
+// PrintlnColor208f wraps PrintlnColor208 and works with format
+// strings.
+func PrintlnColor208f(str string, args ...interface{}) {
+	PrintlnColor208(Sprintf(str, args...))
 }
 
 // OnColor208 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor208(str string, args ...interface{}) string {
-	return Hilight("on_color_208", str, args...)
+func OnColor208(str string) string {
+	return Hilight("on_color_208", str)
 }
 
 // PrintOnColor208 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor208(str string, args ...interface{}) {
-	Print(Hilight("on_color_208", str, args...))
+func PrintOnColor208(str string) {
+	Print(Hilight("on_color_208", str))
 }
 
 // PrintlnOnColor208 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor208(str string, args ...interface{}) {
-	Println(Hilight("on_color_208", str, args...))
+func PrintlnOnColor208(str string) {
+	Println(Hilight("on_color_208", str))
+}
+
+// OnColor208f wraps OnColor208 and works with format
+// strings.
+func OnColor208f(str string, args ...interface{}) string {
+	return OnColor208(Sprintf(str, args...))
+}
+
+// PrintOnColor208f wraps PrintOnColor208 and works with format
+// strings.
+func PrintOnColor208f(str string, args ...interface{}) {
+	PrintOnColor208(Sprintf(str, args...))
+}
+
+// PrintlnOnColor208f wraps PrintlnOnColor208 and works with format
+// strings.
+func PrintlnOnColor208f(str string, args ...interface{}) {
+	PrintlnOnColor208(Sprintf(str, args...))
 }
 
 // Color209 will Hilight() the provided string with the
 // specified ANSI code.
-func Color209(str string, args ...interface{}) string {
-	return Hilight("color_209", str, args...)
+func Color209(str string) string {
+	return Hilight("color_209", str)
 }
 
 // PrintColor209 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor209(str string, args ...interface{}) {
-	Print(Hilight("color_209", str, args...))
+func PrintColor209(str string) {
+	Print(Hilight("color_209", str))
 }
 
 // PrintlnColor209 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor209(str string, args ...interface{}) {
-	Println(Hilight("color_209", str, args...))
+func PrintlnColor209(str string) {
+	Println(Hilight("color_209", str))
+}
+
+// Color209f wraps Color209 and works with format
+// strings.
+func Color209f(str string, args ...interface{}) string {
+	return Color209(Sprintf(str, args...))
+}
+
+// PrintColor209f wraps PrintColor209 and works with format
+// strings.
+func PrintColor209f(str string, args ...interface{}) {
+	PrintColor209(Sprintf(str, args...))
+}
+
+// PrintlnColor209f wraps PrintlnColor209 and works with format
+// strings.
+func PrintlnColor209f(str string, args ...interface{}) {
+	PrintlnColor209(Sprintf(str, args...))
 }
 
 // OnColor209 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor209(str string, args ...interface{}) string {
-	return Hilight("on_color_209", str, args...)
+func OnColor209(str string) string {
+	return Hilight("on_color_209", str)
 }
 
 // PrintOnColor209 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor209(str string, args ...interface{}) {
-	Print(Hilight("on_color_209", str, args...))
+func PrintOnColor209(str string) {
+	Print(Hilight("on_color_209", str))
 }
 
 // PrintlnOnColor209 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor209(str string, args ...interface{}) {
-	Println(Hilight("on_color_209", str, args...))
+func PrintlnOnColor209(str string) {
+	Println(Hilight("on_color_209", str))
+}
+
+// OnColor209f wraps OnColor209 and works with format
+// strings.
+func OnColor209f(str string, args ...interface{}) string {
+	return OnColor209(Sprintf(str, args...))
+}
+
+// PrintOnColor209f wraps PrintOnColor209 and works with format
+// strings.
+func PrintOnColor209f(str string, args ...interface{}) {
+	PrintOnColor209(Sprintf(str, args...))
+}
+
+// PrintlnOnColor209f wraps PrintlnOnColor209 and works with format
+// strings.
+func PrintlnOnColor209f(str string, args ...interface{}) {
+	PrintlnOnColor209(Sprintf(str, args...))
 }
 
 // Color210 will Hilight() the provided string with the
 // specified ANSI code.
-func Color210(str string, args ...interface{}) string {
-	return Hilight("color_210", str, args...)
+func Color210(str string) string {
+	return Hilight("color_210", str)
 }
 
 // PrintColor210 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor210(str string, args ...interface{}) {
-	Print(Hilight("color_210", str, args...))
+func PrintColor210(str string) {
+	Print(Hilight("color_210", str))
 }
 
 // PrintlnColor210 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor210(str string, args ...interface{}) {
-	Println(Hilight("color_210", str, args...))
+func PrintlnColor210(str string) {
+	Println(Hilight("color_210", str))
+}
+
+// Color210f wraps Color210 and works with format
+// strings.
+func Color210f(str string, args ...interface{}) string {
+	return Color210(Sprintf(str, args...))
+}
+
+// PrintColor210f wraps PrintColor210 and works with format
+// strings.
+func PrintColor210f(str string, args ...interface{}) {
+	PrintColor210(Sprintf(str, args...))
+}
+
+// PrintlnColor210f wraps PrintlnColor210 and works with format
+// strings.
+func PrintlnColor210f(str string, args ...interface{}) {
+	PrintlnColor210(Sprintf(str, args...))
 }
 
 // OnColor210 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor210(str string, args ...interface{}) string {
-	return Hilight("on_color_210", str, args...)
+func OnColor210(str string) string {
+	return Hilight("on_color_210", str)
 }
 
 // PrintOnColor210 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor210(str string, args ...interface{}) {
-	Print(Hilight("on_color_210", str, args...))
+func PrintOnColor210(str string) {
+	Print(Hilight("on_color_210", str))
 }
 
 // PrintlnOnColor210 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor210(str string, args ...interface{}) {
-	Println(Hilight("on_color_210", str, args...))
+func PrintlnOnColor210(str string) {
+	Println(Hilight("on_color_210", str))
+}
+
+// OnColor210f wraps OnColor210 and works with format
+// strings.
+func OnColor210f(str string, args ...interface{}) string {
+	return OnColor210(Sprintf(str, args...))
+}
+
+// PrintOnColor210f wraps PrintOnColor210 and works with format
+// strings.
+func PrintOnColor210f(str string, args ...interface{}) {
+	PrintOnColor210(Sprintf(str, args...))
+}
+
+// PrintlnOnColor210f wraps PrintlnOnColor210 and works with format
+// strings.
+func PrintlnOnColor210f(str string, args ...interface{}) {
+	PrintlnOnColor210(Sprintf(str, args...))
 }
 
 // Color211 will Hilight() the provided string with the
 // specified ANSI code.
-func Color211(str string, args ...interface{}) string {
-	return Hilight("color_211", str, args...)
+func Color211(str string) string {
+	return Hilight("color_211", str)
 }
 
 // PrintColor211 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor211(str string, args ...interface{}) {
-	Print(Hilight("color_211", str, args...))
+func PrintColor211(str string) {
+	Print(Hilight("color_211", str))
 }
 
 // PrintlnColor211 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor211(str string, args ...interface{}) {
-	Println(Hilight("color_211", str, args...))
+func PrintlnColor211(str string) {
+	Println(Hilight("color_211", str))
+}
+
+// Color211f wraps Color211 and works with format
+// strings.
+func Color211f(str string, args ...interface{}) string {
+	return Color211(Sprintf(str, args...))
+}
+
+// PrintColor211f wraps PrintColor211 and works with format
+// strings.
+func PrintColor211f(str string, args ...interface{}) {
+	PrintColor211(Sprintf(str, args...))
+}
+
+// PrintlnColor211f wraps PrintlnColor211 and works with format
+// strings.
+func PrintlnColor211f(str string, args ...interface{}) {
+	PrintlnColor211(Sprintf(str, args...))
 }
 
 // OnColor211 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor211(str string, args ...interface{}) string {
-	return Hilight("on_color_211", str, args...)
+func OnColor211(str string) string {
+	return Hilight("on_color_211", str)
 }
 
 // PrintOnColor211 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor211(str string, args ...interface{}) {
-	Print(Hilight("on_color_211", str, args...))
+func PrintOnColor211(str string) {
+	Print(Hilight("on_color_211", str))
 }
 
 // PrintlnOnColor211 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor211(str string, args ...interface{}) {
-	Println(Hilight("on_color_211", str, args...))
+func PrintlnOnColor211(str string) {
+	Println(Hilight("on_color_211", str))
+}
+
+// OnColor211f wraps OnColor211 and works with format
+// strings.
+func OnColor211f(str string, args ...interface{}) string {
+	return OnColor211(Sprintf(str, args...))
+}
+
+// PrintOnColor211f wraps PrintOnColor211 and works with format
+// strings.
+func PrintOnColor211f(str string, args ...interface{}) {
+	PrintOnColor211(Sprintf(str, args...))
+}
+
+// PrintlnOnColor211f wraps PrintlnOnColor211 and works with format
+// strings.
+func PrintlnOnColor211f(str string, args ...interface{}) {
+	PrintlnOnColor211(Sprintf(str, args...))
 }
 
 // Color212 will Hilight() the provided string with the
 // specified ANSI code.
-func Color212(str string, args ...interface{}) string {
-	return Hilight("color_212", str, args...)
+func Color212(str string) string {
+	return Hilight("color_212", str)
 }
 
 // PrintColor212 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor212(str string, args ...interface{}) {
-	Print(Hilight("color_212", str, args...))
+func PrintColor212(str string) {
+	Print(Hilight("color_212", str))
 }
 
 // PrintlnColor212 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor212(str string, args ...interface{}) {
-	Println(Hilight("color_212", str, args...))
+func PrintlnColor212(str string) {
+	Println(Hilight("color_212", str))
+}
+
+// Color212f wraps Color212 and works with format
+// strings.
+func Color212f(str string, args ...interface{}) string {
+	return Color212(Sprintf(str, args...))
+}
+
+// PrintColor212f wraps PrintColor212 and works with format
+// strings.
+func PrintColor212f(str string, args ...interface{}) {
+	PrintColor212(Sprintf(str, args...))
+}
+
+// PrintlnColor212f wraps PrintlnColor212 and works with format
+// strings.
+func PrintlnColor212f(str string, args ...interface{}) {
+	PrintlnColor212(Sprintf(str, args...))
 }
 
 // OnColor212 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor212(str string, args ...interface{}) string {
-	return Hilight("on_color_212", str, args...)
+func OnColor212(str string) string {
+	return Hilight("on_color_212", str)
 }
 
 // PrintOnColor212 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor212(str string, args ...interface{}) {
-	Print(Hilight("on_color_212", str, args...))
+func PrintOnColor212(str string) {
+	Print(Hilight("on_color_212", str))
 }
 
 // PrintlnOnColor212 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor212(str string, args ...interface{}) {
-	Println(Hilight("on_color_212", str, args...))
+func PrintlnOnColor212(str string) {
+	Println(Hilight("on_color_212", str))
+}
+
+// OnColor212f wraps OnColor212 and works with format
+// strings.
+func OnColor212f(str string, args ...interface{}) string {
+	return OnColor212(Sprintf(str, args...))
+}
+
+// PrintOnColor212f wraps PrintOnColor212 and works with format
+// strings.
+func PrintOnColor212f(str string, args ...interface{}) {
+	PrintOnColor212(Sprintf(str, args...))
+}
+
+// PrintlnOnColor212f wraps PrintlnOnColor212 and works with format
+// strings.
+func PrintlnOnColor212f(str string, args ...interface{}) {
+	PrintlnOnColor212(Sprintf(str, args...))
 }
 
 // Color213 will Hilight() the provided string with the
 // specified ANSI code.
-func Color213(str string, args ...interface{}) string {
-	return Hilight("color_213", str, args...)
+func Color213(str string) string {
+	return Hilight("color_213", str)
 }
 
 // PrintColor213 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor213(str string, args ...interface{}) {
-	Print(Hilight("color_213", str, args...))
+func PrintColor213(str string) {
+	Print(Hilight("color_213", str))
 }
 
 // PrintlnColor213 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor213(str string, args ...interface{}) {
-	Println(Hilight("color_213", str, args...))
+func PrintlnColor213(str string) {
+	Println(Hilight("color_213", str))
+}
+
+// Color213f wraps Color213 and works with format
+// strings.
+func Color213f(str string, args ...interface{}) string {
+	return Color213(Sprintf(str, args...))
+}
+
+// PrintColor213f wraps PrintColor213 and works with format
+// strings.
+func PrintColor213f(str string, args ...interface{}) {
+	PrintColor213(Sprintf(str, args...))
+}
+
+// PrintlnColor213f wraps PrintlnColor213 and works with format
+// strings.
+func PrintlnColor213f(str string, args ...interface{}) {
+	PrintlnColor213(Sprintf(str, args...))
 }
 
 // OnColor213 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor213(str string, args ...interface{}) string {
-	return Hilight("on_color_213", str, args...)
+func OnColor213(str string) string {
+	return Hilight("on_color_213", str)
 }
 
 // PrintOnColor213 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor213(str string, args ...interface{}) {
-	Print(Hilight("on_color_213", str, args...))
+func PrintOnColor213(str string) {
+	Print(Hilight("on_color_213", str))
 }
 
 // PrintlnOnColor213 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor213(str string, args ...interface{}) {
-	Println(Hilight("on_color_213", str, args...))
+func PrintlnOnColor213(str string) {
+	Println(Hilight("on_color_213", str))
+}
+
+// OnColor213f wraps OnColor213 and works with format
+// strings.
+func OnColor213f(str string, args ...interface{}) string {
+	return OnColor213(Sprintf(str, args...))
+}
+
+// PrintOnColor213f wraps PrintOnColor213 and works with format
+// strings.
+func PrintOnColor213f(str string, args ...interface{}) {
+	PrintOnColor213(Sprintf(str, args...))
+}
+
+// PrintlnOnColor213f wraps PrintlnOnColor213 and works with format
+// strings.
+func PrintlnOnColor213f(str string, args ...interface{}) {
+	PrintlnOnColor213(Sprintf(str, args...))
 }
 
 // Color214 will Hilight() the provided string with the
 // specified ANSI code.
-func Color214(str string, args ...interface{}) string {
-	return Hilight("color_214", str, args...)
+func Color214(str string) string {
+	return Hilight("color_214", str)
 }
 
 // PrintColor214 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor214(str string, args ...interface{}) {
-	Print(Hilight("color_214", str, args...))
+func PrintColor214(str string) {
+	Print(Hilight("color_214", str))
 }
 
 // PrintlnColor214 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor214(str string, args ...interface{}) {
-	Println(Hilight("color_214", str, args...))
+func PrintlnColor214(str string) {
+	Println(Hilight("color_214", str))
+}
+
+// Color214f wraps Color214 and works with format
+// strings.
+func Color214f(str string, args ...interface{}) string {
+	return Color214(Sprintf(str, args...))
+}
+
+// PrintColor214f wraps PrintColor214 and works with format
+// strings.
+func PrintColor214f(str string, args ...interface{}) {
+	PrintColor214(Sprintf(str, args...))
+}
+
+// PrintlnColor214f wraps PrintlnColor214 and works with format
+// strings.
+func PrintlnColor214f(str string, args ...interface{}) {
+	PrintlnColor214(Sprintf(str, args...))
 }
 
 // OnColor214 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor214(str string, args ...interface{}) string {
-	return Hilight("on_color_214", str, args...)
+func OnColor214(str string) string {
+	return Hilight("on_color_214", str)
 }
 
 // PrintOnColor214 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor214(str string, args ...interface{}) {
-	Print(Hilight("on_color_214", str, args...))
+func PrintOnColor214(str string) {
+	Print(Hilight("on_color_214", str))
 }
 
 // PrintlnOnColor214 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor214(str string, args ...interface{}) {
-	Println(Hilight("on_color_214", str, args...))
+func PrintlnOnColor214(str string) {
+	Println(Hilight("on_color_214", str))
+}
+
+// OnColor214f wraps OnColor214 and works with format
+// strings.
+func OnColor214f(str string, args ...interface{}) string {
+	return OnColor214(Sprintf(str, args...))
+}
+
+// PrintOnColor214f wraps PrintOnColor214 and works with format
+// strings.
+func PrintOnColor214f(str string, args ...interface{}) {
+	PrintOnColor214(Sprintf(str, args...))
+}
+
+// PrintlnOnColor214f wraps PrintlnOnColor214 and works with format
+// strings.
+func PrintlnOnColor214f(str string, args ...interface{}) {
+	PrintlnOnColor214(Sprintf(str, args...))
 }
 
 // Color215 will Hilight() the provided string with the
 // specified ANSI code.
-func Color215(str string, args ...interface{}) string {
-	return Hilight("color_215", str, args...)
+func Color215(str string) string {
+	return Hilight("color_215", str)
 }
 
 // PrintColor215 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor215(str string, args ...interface{}) {
-	Print(Hilight("color_215", str, args...))
+func PrintColor215(str string) {
+	Print(Hilight("color_215", str))
 }
 
 // PrintlnColor215 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor215(str string, args ...interface{}) {
-	Println(Hilight("color_215", str, args...))
+func PrintlnColor215(str string) {
+	Println(Hilight("color_215", str))
+}
+
+// Color215f wraps Color215 and works with format
+// strings.
+func Color215f(str string, args ...interface{}) string {
+	return Color215(Sprintf(str, args...))
+}
+
+// PrintColor215f wraps PrintColor215 and works with format
+// strings.
+func PrintColor215f(str string, args ...interface{}) {
+	PrintColor215(Sprintf(str, args...))
+}
+
+// PrintlnColor215f wraps PrintlnColor215 and works with format
+// strings.
+func PrintlnColor215f(str string, args ...interface{}) {
+	PrintlnColor215(Sprintf(str, args...))
 }
 
 // OnColor215 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor215(str string, args ...interface{}) string {
-	return Hilight("on_color_215", str, args...)
+func OnColor215(str string) string {
+	return Hilight("on_color_215", str)
 }
 
 // PrintOnColor215 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor215(str string, args ...interface{}) {
-	Print(Hilight("on_color_215", str, args...))
+func PrintOnColor215(str string) {
+	Print(Hilight("on_color_215", str))
 }
 
 // PrintlnOnColor215 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor215(str string, args ...interface{}) {
-	Println(Hilight("on_color_215", str, args...))
+func PrintlnOnColor215(str string) {
+	Println(Hilight("on_color_215", str))
+}
+
+// OnColor215f wraps OnColor215 and works with format
+// strings.
+func OnColor215f(str string, args ...interface{}) string {
+	return OnColor215(Sprintf(str, args...))
+}
+
+// PrintOnColor215f wraps PrintOnColor215 and works with format
+// strings.
+func PrintOnColor215f(str string, args ...interface{}) {
+	PrintOnColor215(Sprintf(str, args...))
+}
+
+// PrintlnOnColor215f wraps PrintlnOnColor215 and works with format
+// strings.
+func PrintlnOnColor215f(str string, args ...interface{}) {
+	PrintlnOnColor215(Sprintf(str, args...))
 }
 
 // Color216 will Hilight() the provided string with the
 // specified ANSI code.
-func Color216(str string, args ...interface{}) string {
-	return Hilight("color_216", str, args...)
+func Color216(str string) string {
+	return Hilight("color_216", str)
 }
 
 // PrintColor216 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor216(str string, args ...interface{}) {
-	Print(Hilight("color_216", str, args...))
+func PrintColor216(str string) {
+	Print(Hilight("color_216", str))
 }
 
 // PrintlnColor216 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor216(str string, args ...interface{}) {
-	Println(Hilight("color_216", str, args...))
+func PrintlnColor216(str string) {
+	Println(Hilight("color_216", str))
+}
+
+// Color216f wraps Color216 and works with format
+// strings.
+func Color216f(str string, args ...interface{}) string {
+	return Color216(Sprintf(str, args...))
+}
+
+// PrintColor216f wraps PrintColor216 and works with format
+// strings.
+func PrintColor216f(str string, args ...interface{}) {
+	PrintColor216(Sprintf(str, args...))
+}
+
+// PrintlnColor216f wraps PrintlnColor216 and works with format
+// strings.
+func PrintlnColor216f(str string, args ...interface{}) {
+	PrintlnColor216(Sprintf(str, args...))
 }
 
 // OnColor216 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor216(str string, args ...interface{}) string {
-	return Hilight("on_color_216", str, args...)
+func OnColor216(str string) string {
+	return Hilight("on_color_216", str)
 }
 
 // PrintOnColor216 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor216(str string, args ...interface{}) {
-	Print(Hilight("on_color_216", str, args...))
+func PrintOnColor216(str string) {
+	Print(Hilight("on_color_216", str))
 }
 
 // PrintlnOnColor216 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor216(str string, args ...interface{}) {
-	Println(Hilight("on_color_216", str, args...))
+func PrintlnOnColor216(str string) {
+	Println(Hilight("on_color_216", str))
+}
+
+// OnColor216f wraps OnColor216 and works with format
+// strings.
+func OnColor216f(str string, args ...interface{}) string {
+	return OnColor216(Sprintf(str, args...))
+}
+
+// PrintOnColor216f wraps PrintOnColor216 and works with format
+// strings.
+func PrintOnColor216f(str string, args ...interface{}) {
+	PrintOnColor216(Sprintf(str, args...))
+}
+
+// PrintlnOnColor216f wraps PrintlnOnColor216 and works with format
+// strings.
+func PrintlnOnColor216f(str string, args ...interface{}) {
+	PrintlnOnColor216(Sprintf(str, args...))
 }
 
 // Color217 will Hilight() the provided string with the
 // specified ANSI code.
-func Color217(str string, args ...interface{}) string {
-	return Hilight("color_217", str, args...)
+func Color217(str string) string {
+	return Hilight("color_217", str)
 }
 
 // PrintColor217 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor217(str string, args ...interface{}) {
-	Print(Hilight("color_217", str, args...))
+func PrintColor217(str string) {
+	Print(Hilight("color_217", str))
 }
 
 // PrintlnColor217 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor217(str string, args ...interface{}) {
-	Println(Hilight("color_217", str, args...))
+func PrintlnColor217(str string) {
+	Println(Hilight("color_217", str))
+}
+
+// Color217f wraps Color217 and works with format
+// strings.
+func Color217f(str string, args ...interface{}) string {
+	return Color217(Sprintf(str, args...))
+}
+
+// PrintColor217f wraps PrintColor217 and works with format
+// strings.
+func PrintColor217f(str string, args ...interface{}) {
+	PrintColor217(Sprintf(str, args...))
+}
+
+// PrintlnColor217f wraps PrintlnColor217 and works with format
+// strings.
+func PrintlnColor217f(str string, args ...interface{}) {
+	PrintlnColor217(Sprintf(str, args...))
 }
 
 // OnColor217 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor217(str string, args ...interface{}) string {
-	return Hilight("on_color_217", str, args...)
+func OnColor217(str string) string {
+	return Hilight("on_color_217", str)
 }
 
 // PrintOnColor217 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor217(str string, args ...interface{}) {
-	Print(Hilight("on_color_217", str, args...))
+func PrintOnColor217(str string) {
+	Print(Hilight("on_color_217", str))
 }
 
 // PrintlnOnColor217 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor217(str string, args ...interface{}) {
-	Println(Hilight("on_color_217", str, args...))
+func PrintlnOnColor217(str string) {
+	Println(Hilight("on_color_217", str))
+}
+
+// OnColor217f wraps OnColor217 and works with format
+// strings.
+func OnColor217f(str string, args ...interface{}) string {
+	return OnColor217(Sprintf(str, args...))
+}
+
+// PrintOnColor217f wraps PrintOnColor217 and works with format
+// strings.
+func PrintOnColor217f(str string, args ...interface{}) {
+	PrintOnColor217(Sprintf(str, args...))
+}
+
+// PrintlnOnColor217f wraps PrintlnOnColor217 and works with format
+// strings.
+func PrintlnOnColor217f(str string, args ...interface{}) {
+	PrintlnOnColor217(Sprintf(str, args...))
 }
 
 // Color218 will Hilight() the provided string with the
 // specified ANSI code.
-func Color218(str string, args ...interface{}) string {
-	return Hilight("color_218", str, args...)
+func Color218(str string) string {
+	return Hilight("color_218", str)
 }
 
 // PrintColor218 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor218(str string, args ...interface{}) {
-	Print(Hilight("color_218", str, args...))
+func PrintColor218(str string) {
+	Print(Hilight("color_218", str))
 }
 
 // PrintlnColor218 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor218(str string, args ...interface{}) {
-	Println(Hilight("color_218", str, args...))
+func PrintlnColor218(str string) {
+	Println(Hilight("color_218", str))
+}
+
+// Color218f wraps Color218 and works with format
+// strings.
+func Color218f(str string, args ...interface{}) string {
+	return Color218(Sprintf(str, args...))
+}
+
+// PrintColor218f wraps PrintColor218 and works with format
+// strings.
+func PrintColor218f(str string, args ...interface{}) {
+	PrintColor218(Sprintf(str, args...))
+}
+
+// PrintlnColor218f wraps PrintlnColor218 and works with format
+// strings.
+func PrintlnColor218f(str string, args ...interface{}) {
+	PrintlnColor218(Sprintf(str, args...))
 }
 
 // OnColor218 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor218(str string, args ...interface{}) string {
-	return Hilight("on_color_218", str, args...)
+func OnColor218(str string) string {
+	return Hilight("on_color_218", str)
 }
 
 // PrintOnColor218 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor218(str string, args ...interface{}) {
-	Print(Hilight("on_color_218", str, args...))
+func PrintOnColor218(str string) {
+	Print(Hilight("on_color_218", str))
 }
 
 // PrintlnOnColor218 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor218(str string, args ...interface{}) {
-	Println(Hilight("on_color_218", str, args...))
+func PrintlnOnColor218(str string) {
+	Println(Hilight("on_color_218", str))
+}
+
+// OnColor218f wraps OnColor218 and works with format
+// strings.
+func OnColor218f(str string, args ...interface{}) string {
+	return OnColor218(Sprintf(str, args...))
+}
+
+// PrintOnColor218f wraps PrintOnColor218 and works with format
+// strings.
+func PrintOnColor218f(str string, args ...interface{}) {
+	PrintOnColor218(Sprintf(str, args...))
+}
+
+// PrintlnOnColor218f wraps PrintlnOnColor218 and works with format
+// strings.
+func PrintlnOnColor218f(str string, args ...interface{}) {
+	PrintlnOnColor218(Sprintf(str, args...))
 }
 
 // Color219 will Hilight() the provided string with the
 // specified ANSI code.
-func Color219(str string, args ...interface{}) string {
-	return Hilight("color_219", str, args...)
+func Color219(str string) string {
+	return Hilight("color_219", str)
 }
 
 // PrintColor219 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor219(str string, args ...interface{}) {
-	Print(Hilight("color_219", str, args...))
+func PrintColor219(str string) {
+	Print(Hilight("color_219", str))
 }
 
 // PrintlnColor219 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor219(str string, args ...interface{}) {
-	Println(Hilight("color_219", str, args...))
+func PrintlnColor219(str string) {
+	Println(Hilight("color_219", str))
+}
+
+// Color219f wraps Color219 and works with format
+// strings.
+func Color219f(str string, args ...interface{}) string {
+	return Color219(Sprintf(str, args...))
+}
+
+// PrintColor219f wraps PrintColor219 and works with format
+// strings.
+func PrintColor219f(str string, args ...interface{}) {
+	PrintColor219(Sprintf(str, args...))
+}
+
+// PrintlnColor219f wraps PrintlnColor219 and works with format
+// strings.
+func PrintlnColor219f(str string, args ...interface{}) {
+	PrintlnColor219(Sprintf(str, args...))
 }
 
 // OnColor219 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor219(str string, args ...interface{}) string {
-	return Hilight("on_color_219", str, args...)
+func OnColor219(str string) string {
+	return Hilight("on_color_219", str)
 }
 
 // PrintOnColor219 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor219(str string, args ...interface{}) {
-	Print(Hilight("on_color_219", str, args...))
+func PrintOnColor219(str string) {
+	Print(Hilight("on_color_219", str))
 }
 
 // PrintlnOnColor219 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor219(str string, args ...interface{}) {
-	Println(Hilight("on_color_219", str, args...))
+func PrintlnOnColor219(str string) {
+	Println(Hilight("on_color_219", str))
+}
+
+// OnColor219f wraps OnColor219 and works with format
+// strings.
+func OnColor219f(str string, args ...interface{}) string {
+	return OnColor219(Sprintf(str, args...))
+}
+
+// PrintOnColor219f wraps PrintOnColor219 and works with format
+// strings.
+func PrintOnColor219f(str string, args ...interface{}) {
+	PrintOnColor219(Sprintf(str, args...))
+}
+
+// PrintlnOnColor219f wraps PrintlnOnColor219 and works with format
+// strings.
+func PrintlnOnColor219f(str string, args ...interface{}) {
+	PrintlnOnColor219(Sprintf(str, args...))
 }
 
 // Color220 will Hilight() the provided string with the
 // specified ANSI code.
-func Color220(str string, args ...interface{}) string {
-	return Hilight("color_220", str, args...)
+func Color220(str string) string {
+	return Hilight("color_220", str)
 }
 
 // PrintColor220 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor220(str string, args ...interface{}) {
-	Print(Hilight("color_220", str, args...))
+func PrintColor220(str string) {
+	Print(Hilight("color_220", str))
 }
 
 // PrintlnColor220 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor220(str string, args ...interface{}) {
-	Println(Hilight("color_220", str, args...))
+func PrintlnColor220(str string) {
+	Println(Hilight("color_220", str))
+}
+
+// Color220f wraps Color220 and works with format
+// strings.
+func Color220f(str string, args ...interface{}) string {
+	return Color220(Sprintf(str, args...))
+}
+
+// PrintColor220f wraps PrintColor220 and works with format
+// strings.
+func PrintColor220f(str string, args ...interface{}) {
+	PrintColor220(Sprintf(str, args...))
+}
+
+// PrintlnColor220f wraps PrintlnColor220 and works with format
+// strings.
+func PrintlnColor220f(str string, args ...interface{}) {
+	PrintlnColor220(Sprintf(str, args...))
 }
 
 // OnColor220 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor220(str string, args ...interface{}) string {
-	return Hilight("on_color_220", str, args...)
+func OnColor220(str string) string {
+	return Hilight("on_color_220", str)
 }
 
 // PrintOnColor220 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor220(str string, args ...interface{}) {
-	Print(Hilight("on_color_220", str, args...))
+func PrintOnColor220(str string) {
+	Print(Hilight("on_color_220", str))
 }
 
 // PrintlnOnColor220 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor220(str string, args ...interface{}) {
-	Println(Hilight("on_color_220", str, args...))
+func PrintlnOnColor220(str string) {
+	Println(Hilight("on_color_220", str))
+}
+
+// OnColor220f wraps OnColor220 and works with format
+// strings.
+func OnColor220f(str string, args ...interface{}) string {
+	return OnColor220(Sprintf(str, args...))
+}
+
+// PrintOnColor220f wraps PrintOnColor220 and works with format
+// strings.
+func PrintOnColor220f(str string, args ...interface{}) {
+	PrintOnColor220(Sprintf(str, args...))
+}
+
+// PrintlnOnColor220f wraps PrintlnOnColor220 and works with format
+// strings.
+func PrintlnOnColor220f(str string, args ...interface{}) {
+	PrintlnOnColor220(Sprintf(str, args...))
 }
 
 // Color221 will Hilight() the provided string with the
 // specified ANSI code.
-func Color221(str string, args ...interface{}) string {
-	return Hilight("color_221", str, args...)
+func Color221(str string) string {
+	return Hilight("color_221", str)
 }
 
 // PrintColor221 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor221(str string, args ...interface{}) {
-	Print(Hilight("color_221", str, args...))
+func PrintColor221(str string) {
+	Print(Hilight("color_221", str))
 }
 
 // PrintlnColor221 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor221(str string, args ...interface{}) {
-	Println(Hilight("color_221", str, args...))
+func PrintlnColor221(str string) {
+	Println(Hilight("color_221", str))
+}
+
+// Color221f wraps Color221 and works with format
+// strings.
+func Color221f(str string, args ...interface{}) string {
+	return Color221(Sprintf(str, args...))
+}
+
+// PrintColor221f wraps PrintColor221 and works with format
+// strings.
+func PrintColor221f(str string, args ...interface{}) {
+	PrintColor221(Sprintf(str, args...))
+}
+
+// PrintlnColor221f wraps PrintlnColor221 and works with format
+// strings.
+func PrintlnColor221f(str string, args ...interface{}) {
+	PrintlnColor221(Sprintf(str, args...))
 }
 
 // OnColor221 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor221(str string, args ...interface{}) string {
-	return Hilight("on_color_221", str, args...)
+func OnColor221(str string) string {
+	return Hilight("on_color_221", str)
 }
 
 // PrintOnColor221 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor221(str string, args ...interface{}) {
-	Print(Hilight("on_color_221", str, args...))
+func PrintOnColor221(str string) {
+	Print(Hilight("on_color_221", str))
 }
 
 // PrintlnOnColor221 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor221(str string, args ...interface{}) {
-	Println(Hilight("on_color_221", str, args...))
+func PrintlnOnColor221(str string) {
+	Println(Hilight("on_color_221", str))
+}
+
+// OnColor221f wraps OnColor221 and works with format
+// strings.
+func OnColor221f(str string, args ...interface{}) string {
+	return OnColor221(Sprintf(str, args...))
+}
+
+// PrintOnColor221f wraps PrintOnColor221 and works with format
+// strings.
+func PrintOnColor221f(str string, args ...interface{}) {
+	PrintOnColor221(Sprintf(str, args...))
+}
+
+// PrintlnOnColor221f wraps PrintlnOnColor221 and works with format
+// strings.
+func PrintlnOnColor221f(str string, args ...interface{}) {
+	PrintlnOnColor221(Sprintf(str, args...))
 }
 
 // Color222 will Hilight() the provided string with the
 // specified ANSI code.
-func Color222(str string, args ...interface{}) string {
-	return Hilight("color_222", str, args...)
+func Color222(str string) string {
+	return Hilight("color_222", str)
 }
 
 // PrintColor222 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor222(str string, args ...interface{}) {
-	Print(Hilight("color_222", str, args...))
+func PrintColor222(str string) {
+	Print(Hilight("color_222", str))
 }
 
 // PrintlnColor222 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor222(str string, args ...interface{}) {
-	Println(Hilight("color_222", str, args...))
+func PrintlnColor222(str string) {
+	Println(Hilight("color_222", str))
+}
+
+// Color222f wraps Color222 and works with format
+// strings.
+func Color222f(str string, args ...interface{}) string {
+	return Color222(Sprintf(str, args...))
+}
+
+// PrintColor222f wraps PrintColor222 and works with format
+// strings.
+func PrintColor222f(str string, args ...interface{}) {
+	PrintColor222(Sprintf(str, args...))
+}
+
+// PrintlnColor222f wraps PrintlnColor222 and works with format
+// strings.
+func PrintlnColor222f(str string, args ...interface{}) {
+	PrintlnColor222(Sprintf(str, args...))
 }
 
 // OnColor222 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor222(str string, args ...interface{}) string {
-	return Hilight("on_color_222", str, args...)
+func OnColor222(str string) string {
+	return Hilight("on_color_222", str)
 }
 
 // PrintOnColor222 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor222(str string, args ...interface{}) {
-	Print(Hilight("on_color_222", str, args...))
+func PrintOnColor222(str string) {
+	Print(Hilight("on_color_222", str))
 }
 
 // PrintlnOnColor222 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor222(str string, args ...interface{}) {
-	Println(Hilight("on_color_222", str, args...))
+func PrintlnOnColor222(str string) {
+	Println(Hilight("on_color_222", str))
+}
+
+// OnColor222f wraps OnColor222 and works with format
+// strings.
+func OnColor222f(str string, args ...interface{}) string {
+	return OnColor222(Sprintf(str, args...))
+}
+
+// PrintOnColor222f wraps PrintOnColor222 and works with format
+// strings.
+func PrintOnColor222f(str string, args ...interface{}) {
+	PrintOnColor222(Sprintf(str, args...))
+}
+
+// PrintlnOnColor222f wraps PrintlnOnColor222 and works with format
+// strings.
+func PrintlnOnColor222f(str string, args ...interface{}) {
+	PrintlnOnColor222(Sprintf(str, args...))
 }
 
 // Color223 will Hilight() the provided string with the
 // specified ANSI code.
-func Color223(str string, args ...interface{}) string {
-	return Hilight("color_223", str, args...)
+func Color223(str string) string {
+	return Hilight("color_223", str)
 }
 
 // PrintColor223 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor223(str string, args ...interface{}) {
-	Print(Hilight("color_223", str, args...))
+func PrintColor223(str string) {
+	Print(Hilight("color_223", str))
 }
 
 // PrintlnColor223 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor223(str string, args ...interface{}) {
-	Println(Hilight("color_223", str, args...))
+func PrintlnColor223(str string) {
+	Println(Hilight("color_223", str))
+}
+
+// Color223f wraps Color223 and works with format
+// strings.
+func Color223f(str string, args ...interface{}) string {
+	return Color223(Sprintf(str, args...))
+}
+
+// PrintColor223f wraps PrintColor223 and works with format
+// strings.
+func PrintColor223f(str string, args ...interface{}) {
+	PrintColor223(Sprintf(str, args...))
+}
+
+// PrintlnColor223f wraps PrintlnColor223 and works with format
+// strings.
+func PrintlnColor223f(str string, args ...interface{}) {
+	PrintlnColor223(Sprintf(str, args...))
 }
 
 // OnColor223 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor223(str string, args ...interface{}) string {
-	return Hilight("on_color_223", str, args...)
+func OnColor223(str string) string {
+	return Hilight("on_color_223", str)
 }
 
 // PrintOnColor223 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor223(str string, args ...interface{}) {
-	Print(Hilight("on_color_223", str, args...))
+func PrintOnColor223(str string) {
+	Print(Hilight("on_color_223", str))
 }
 
 // PrintlnOnColor223 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor223(str string, args ...interface{}) {
-	Println(Hilight("on_color_223", str, args...))
+func PrintlnOnColor223(str string) {
+	Println(Hilight("on_color_223", str))
+}
+
+// OnColor223f wraps OnColor223 and works with format
+// strings.
+func OnColor223f(str string, args ...interface{}) string {
+	return OnColor223(Sprintf(str, args...))
+}
+
+// PrintOnColor223f wraps PrintOnColor223 and works with format
+// strings.
+func PrintOnColor223f(str string, args ...interface{}) {
+	PrintOnColor223(Sprintf(str, args...))
+}
+
+// PrintlnOnColor223f wraps PrintlnOnColor223 and works with format
+// strings.
+func PrintlnOnColor223f(str string, args ...interface{}) {
+	PrintlnOnColor223(Sprintf(str, args...))
 }
 
 // Color224 will Hilight() the provided string with the
 // specified ANSI code.
-func Color224(str string, args ...interface{}) string {
-	return Hilight("color_224", str, args...)
+func Color224(str string) string {
+	return Hilight("color_224", str)
 }
 
 // PrintColor224 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor224(str string, args ...interface{}) {
-	Print(Hilight("color_224", str, args...))
+func PrintColor224(str string) {
+	Print(Hilight("color_224", str))
 }
 
 // PrintlnColor224 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor224(str string, args ...interface{}) {
-	Println(Hilight("color_224", str, args...))
+func PrintlnColor224(str string) {
+	Println(Hilight("color_224", str))
+}
+
+// Color224f wraps Color224 and works with format
+// strings.
+func Color224f(str string, args ...interface{}) string {
+	return Color224(Sprintf(str, args...))
+}
+
+// PrintColor224f wraps PrintColor224 and works with format
+// strings.
+func PrintColor224f(str string, args ...interface{}) {
+	PrintColor224(Sprintf(str, args...))
+}
+
+// PrintlnColor224f wraps PrintlnColor224 and works with format
+// strings.
+func PrintlnColor224f(str string, args ...interface{}) {
+	PrintlnColor224(Sprintf(str, args...))
 }
 
 // OnColor224 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor224(str string, args ...interface{}) string {
-	return Hilight("on_color_224", str, args...)
+func OnColor224(str string) string {
+	return Hilight("on_color_224", str)
 }
 
 // PrintOnColor224 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor224(str string, args ...interface{}) {
-	Print(Hilight("on_color_224", str, args...))
+func PrintOnColor224(str string) {
+	Print(Hilight("on_color_224", str))
 }
 
 // PrintlnOnColor224 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor224(str string, args ...interface{}) {
-	Println(Hilight("on_color_224", str, args...))
+func PrintlnOnColor224(str string) {
+	Println(Hilight("on_color_224", str))
+}
+
+// OnColor224f wraps OnColor224 and works with format
+// strings.
+func OnColor224f(str string, args ...interface{}) string {
+	return OnColor224(Sprintf(str, args...))
+}
+
+// PrintOnColor224f wraps PrintOnColor224 and works with format
+// strings.
+func PrintOnColor224f(str string, args ...interface{}) {
+	PrintOnColor224(Sprintf(str, args...))
+}
+
+// PrintlnOnColor224f wraps PrintlnOnColor224 and works with format
+// strings.
+func PrintlnOnColor224f(str string, args ...interface{}) {
+	PrintlnOnColor224(Sprintf(str, args...))
 }
 
 // Color225 will Hilight() the provided string with the
 // specified ANSI code.
-func Color225(str string, args ...interface{}) string {
-	return Hilight("color_225", str, args...)
+func Color225(str string) string {
+	return Hilight("color_225", str)
 }
 
 // PrintColor225 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor225(str string, args ...interface{}) {
-	Print(Hilight("color_225", str, args...))
+func PrintColor225(str string) {
+	Print(Hilight("color_225", str))
 }
 
 // PrintlnColor225 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor225(str string, args ...interface{}) {
-	Println(Hilight("color_225", str, args...))
+func PrintlnColor225(str string) {
+	Println(Hilight("color_225", str))
+}
+
+// Color225f wraps Color225 and works with format
+// strings.
+func Color225f(str string, args ...interface{}) string {
+	return Color225(Sprintf(str, args...))
+}
+
+// PrintColor225f wraps PrintColor225 and works with format
+// strings.
+func PrintColor225f(str string, args ...interface{}) {
+	PrintColor225(Sprintf(str, args...))
+}
+
+// PrintlnColor225f wraps PrintlnColor225 and works with format
+// strings.
+func PrintlnColor225f(str string, args ...interface{}) {
+	PrintlnColor225(Sprintf(str, args...))
 }
 
 // OnColor225 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor225(str string, args ...interface{}) string {
-	return Hilight("on_color_225", str, args...)
+func OnColor225(str string) string {
+	return Hilight("on_color_225", str)
 }
 
 // PrintOnColor225 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor225(str string, args ...interface{}) {
-	Print(Hilight("on_color_225", str, args...))
+func PrintOnColor225(str string) {
+	Print(Hilight("on_color_225", str))
 }
 
 // PrintlnOnColor225 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor225(str string, args ...interface{}) {
-	Println(Hilight("on_color_225", str, args...))
+func PrintlnOnColor225(str string) {
+	Println(Hilight("on_color_225", str))
+}
+
+// OnColor225f wraps OnColor225 and works with format
+// strings.
+func OnColor225f(str string, args ...interface{}) string {
+	return OnColor225(Sprintf(str, args...))
+}
+
+// PrintOnColor225f wraps PrintOnColor225 and works with format
+// strings.
+func PrintOnColor225f(str string, args ...interface{}) {
+	PrintOnColor225(Sprintf(str, args...))
+}
+
+// PrintlnOnColor225f wraps PrintlnOnColor225 and works with format
+// strings.
+func PrintlnOnColor225f(str string, args ...interface{}) {
+	PrintlnOnColor225(Sprintf(str, args...))
 }
 
 // Color226 will Hilight() the provided string with the
 // specified ANSI code.
-func Color226(str string, args ...interface{}) string {
-	return Hilight("color_226", str, args...)
+func Color226(str string) string {
+	return Hilight("color_226", str)
 }
 
 // PrintColor226 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor226(str string, args ...interface{}) {
-	Print(Hilight("color_226", str, args...))
+func PrintColor226(str string) {
+	Print(Hilight("color_226", str))
 }
 
 // PrintlnColor226 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor226(str string, args ...interface{}) {
-	Println(Hilight("color_226", str, args...))
+func PrintlnColor226(str string) {
+	Println(Hilight("color_226", str))
+}
+
+// Color226f wraps Color226 and works with format
+// strings.
+func Color226f(str string, args ...interface{}) string {
+	return Color226(Sprintf(str, args...))
+}
+
+// PrintColor226f wraps PrintColor226 and works with format
+// strings.
+func PrintColor226f(str string, args ...interface{}) {
+	PrintColor226(Sprintf(str, args...))
+}
+
+// PrintlnColor226f wraps PrintlnColor226 and works with format
+// strings.
+func PrintlnColor226f(str string, args ...interface{}) {
+	PrintlnColor226(Sprintf(str, args...))
 }
 
 // OnColor226 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor226(str string, args ...interface{}) string {
-	return Hilight("on_color_226", str, args...)
+func OnColor226(str string) string {
+	return Hilight("on_color_226", str)
 }
 
 // PrintOnColor226 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor226(str string, args ...interface{}) {
-	Print(Hilight("on_color_226", str, args...))
+func PrintOnColor226(str string) {
+	Print(Hilight("on_color_226", str))
 }
 
 // PrintlnOnColor226 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor226(str string, args ...interface{}) {
-	Println(Hilight("on_color_226", str, args...))
+func PrintlnOnColor226(str string) {
+	Println(Hilight("on_color_226", str))
+}
+
+// OnColor226f wraps OnColor226 and works with format
+// strings.
+func OnColor226f(str string, args ...interface{}) string {
+	return OnColor226(Sprintf(str, args...))
+}
+
+// PrintOnColor226f wraps PrintOnColor226 and works with format
+// strings.
+func PrintOnColor226f(str string, args ...interface{}) {
+	PrintOnColor226(Sprintf(str, args...))
+}
+
+// PrintlnOnColor226f wraps PrintlnOnColor226 and works with format
+// strings.
+func PrintlnOnColor226f(str string, args ...interface{}) {
+	PrintlnOnColor226(Sprintf(str, args...))
 }
 
 // Color227 will Hilight() the provided string with the
 // specified ANSI code.
-func Color227(str string, args ...interface{}) string {
-	return Hilight("color_227", str, args...)
+func Color227(str string) string {
+	return Hilight("color_227", str)
 }
 
 // PrintColor227 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor227(str string, args ...interface{}) {
-	Print(Hilight("color_227", str, args...))
+func PrintColor227(str string) {
+	Print(Hilight("color_227", str))
 }
 
 // PrintlnColor227 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor227(str string, args ...interface{}) {
-	Println(Hilight("color_227", str, args...))
+func PrintlnColor227(str string) {
+	Println(Hilight("color_227", str))
+}
+
+// Color227f wraps Color227 and works with format
+// strings.
+func Color227f(str string, args ...interface{}) string {
+	return Color227(Sprintf(str, args...))
+}
+
+// PrintColor227f wraps PrintColor227 and works with format
+// strings.
+func PrintColor227f(str string, args ...interface{}) {
+	PrintColor227(Sprintf(str, args...))
+}
+
+// PrintlnColor227f wraps PrintlnColor227 and works with format
+// strings.
+func PrintlnColor227f(str string, args ...interface{}) {
+	PrintlnColor227(Sprintf(str, args...))
 }
 
 // OnColor227 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor227(str string, args ...interface{}) string {
-	return Hilight("on_color_227", str, args...)
+func OnColor227(str string) string {
+	return Hilight("on_color_227", str)
 }
 
 // PrintOnColor227 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor227(str string, args ...interface{}) {
-	Print(Hilight("on_color_227", str, args...))
+func PrintOnColor227(str string) {
+	Print(Hilight("on_color_227", str))
 }
 
 // PrintlnOnColor227 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor227(str string, args ...interface{}) {
-	Println(Hilight("on_color_227", str, args...))
+func PrintlnOnColor227(str string) {
+	Println(Hilight("on_color_227", str))
+}
+
+// OnColor227f wraps OnColor227 and works with format
+// strings.
+func OnColor227f(str string, args ...interface{}) string {
+	return OnColor227(Sprintf(str, args...))
+}
+
+// PrintOnColor227f wraps PrintOnColor227 and works with format
+// strings.
+func PrintOnColor227f(str string, args ...interface{}) {
+	PrintOnColor227(Sprintf(str, args...))
+}
+
+// PrintlnOnColor227f wraps PrintlnOnColor227 and works with format
+// strings.
+func PrintlnOnColor227f(str string, args ...interface{}) {
+	PrintlnOnColor227(Sprintf(str, args...))
 }
 
 // Color228 will Hilight() the provided string with the
 // specified ANSI code.
-func Color228(str string, args ...interface{}) string {
-	return Hilight("color_228", str, args...)
+func Color228(str string) string {
+	return Hilight("color_228", str)
 }
 
 // PrintColor228 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor228(str string, args ...interface{}) {
-	Print(Hilight("color_228", str, args...))
+func PrintColor228(str string) {
+	Print(Hilight("color_228", str))
 }
 
 // PrintlnColor228 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor228(str string, args ...interface{}) {
-	Println(Hilight("color_228", str, args...))
+func PrintlnColor228(str string) {
+	Println(Hilight("color_228", str))
+}
+
+// Color228f wraps Color228 and works with format
+// strings.
+func Color228f(str string, args ...interface{}) string {
+	return Color228(Sprintf(str, args...))
+}
+
+// PrintColor228f wraps PrintColor228 and works with format
+// strings.
+func PrintColor228f(str string, args ...interface{}) {
+	PrintColor228(Sprintf(str, args...))
+}
+
+// PrintlnColor228f wraps PrintlnColor228 and works with format
+// strings.
+func PrintlnColor228f(str string, args ...interface{}) {
+	PrintlnColor228(Sprintf(str, args...))
 }
 
 // OnColor228 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor228(str string, args ...interface{}) string {
-	return Hilight("on_color_228", str, args...)
+func OnColor228(str string) string {
+	return Hilight("on_color_228", str)
 }
 
 // PrintOnColor228 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor228(str string, args ...interface{}) {
-	Print(Hilight("on_color_228", str, args...))
+func PrintOnColor228(str string) {
+	Print(Hilight("on_color_228", str))
 }
 
 // PrintlnOnColor228 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor228(str string, args ...interface{}) {
-	Println(Hilight("on_color_228", str, args...))
+func PrintlnOnColor228(str string) {
+	Println(Hilight("on_color_228", str))
+}
+
+// OnColor228f wraps OnColor228 and works with format
+// strings.
+func OnColor228f(str string, args ...interface{}) string {
+	return OnColor228(Sprintf(str, args...))
+}
+
+// PrintOnColor228f wraps PrintOnColor228 and works with format
+// strings.
+func PrintOnColor228f(str string, args ...interface{}) {
+	PrintOnColor228(Sprintf(str, args...))
+}
+
+// PrintlnOnColor228f wraps PrintlnOnColor228 and works with format
+// strings.
+func PrintlnOnColor228f(str string, args ...interface{}) {
+	PrintlnOnColor228(Sprintf(str, args...))
 }
 
 // Color229 will Hilight() the provided string with the
 // specified ANSI code.
-func Color229(str string, args ...interface{}) string {
-	return Hilight("color_229", str, args...)
+func Color229(str string) string {
+	return Hilight("color_229", str)
 }
 
 // PrintColor229 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor229(str string, args ...interface{}) {
-	Print(Hilight("color_229", str, args...))
+func PrintColor229(str string) {
+	Print(Hilight("color_229", str))
 }
 
 // PrintlnColor229 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor229(str string, args ...interface{}) {
-	Println(Hilight("color_229", str, args...))
+func PrintlnColor229(str string) {
+	Println(Hilight("color_229", str))
+}
+
+// Color229f wraps Color229 and works with format
+// strings.
+func Color229f(str string, args ...interface{}) string {
+	return Color229(Sprintf(str, args...))
+}
+
+// PrintColor229f wraps PrintColor229 and works with format
+// strings.
+func PrintColor229f(str string, args ...interface{}) {
+	PrintColor229(Sprintf(str, args...))
+}
+
+// PrintlnColor229f wraps PrintlnColor229 and works with format
+// strings.
+func PrintlnColor229f(str string, args ...interface{}) {
+	PrintlnColor229(Sprintf(str, args...))
 }
 
 // OnColor229 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor229(str string, args ...interface{}) string {
-	return Hilight("on_color_229", str, args...)
+func OnColor229(str string) string {
+	return Hilight("on_color_229", str)
 }
 
 // PrintOnColor229 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor229(str string, args ...interface{}) {
-	Print(Hilight("on_color_229", str, args...))
+func PrintOnColor229(str string) {
+	Print(Hilight("on_color_229", str))
 }
 
 // PrintlnOnColor229 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor229(str string, args ...interface{}) {
-	Println(Hilight("on_color_229", str, args...))
+func PrintlnOnColor229(str string) {
+	Println(Hilight("on_color_229", str))
+}
+
+// OnColor229f wraps OnColor229 and works with format
+// strings.
+func OnColor229f(str string, args ...interface{}) string {
+	return OnColor229(Sprintf(str, args...))
+}
+
+// PrintOnColor229f wraps PrintOnColor229 and works with format
+// strings.
+func PrintOnColor229f(str string, args ...interface{}) {
+	PrintOnColor229(Sprintf(str, args...))
+}
+
+// PrintlnOnColor229f wraps PrintlnOnColor229 and works with format
+// strings.
+func PrintlnOnColor229f(str string, args ...interface{}) {
+	PrintlnOnColor229(Sprintf(str, args...))
 }
 
 // Color230 will Hilight() the provided string with the
 // specified ANSI code.
-func Color230(str string, args ...interface{}) string {
-	return Hilight("color_230", str, args...)
+func Color230(str string) string {
+	return Hilight("color_230", str)
 }
 
 // PrintColor230 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor230(str string, args ...interface{}) {
-	Print(Hilight("color_230", str, args...))
+func PrintColor230(str string) {
+	Print(Hilight("color_230", str))
 }
 
 // PrintlnColor230 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor230(str string, args ...interface{}) {
-	Println(Hilight("color_230", str, args...))
+func PrintlnColor230(str string) {
+	Println(Hilight("color_230", str))
+}
+
+// Color230f wraps Color230 and works with format
+// strings.
+func Color230f(str string, args ...interface{}) string {
+	return Color230(Sprintf(str, args...))
+}
+
+// PrintColor230f wraps PrintColor230 and works with format
+// strings.
+func PrintColor230f(str string, args ...interface{}) {
+	PrintColor230(Sprintf(str, args...))
+}
+
+// PrintlnColor230f wraps PrintlnColor230 and works with format
+// strings.
+func PrintlnColor230f(str string, args ...interface{}) {
+	PrintlnColor230(Sprintf(str, args...))
 }
 
 // OnColor230 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor230(str string, args ...interface{}) string {
-	return Hilight("on_color_230", str, args...)
+func OnColor230(str string) string {
+	return Hilight("on_color_230", str)
 }
 
 // PrintOnColor230 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor230(str string, args ...interface{}) {
-	Print(Hilight("on_color_230", str, args...))
+func PrintOnColor230(str string) {
+	Print(Hilight("on_color_230", str))
 }
 
 // PrintlnOnColor230 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor230(str string, args ...interface{}) {
-	Println(Hilight("on_color_230", str, args...))
+func PrintlnOnColor230(str string) {
+	Println(Hilight("on_color_230", str))
+}
+
+// OnColor230f wraps OnColor230 and works with format
+// strings.
+func OnColor230f(str string, args ...interface{}) string {
+	return OnColor230(Sprintf(str, args...))
+}
+
+// PrintOnColor230f wraps PrintOnColor230 and works with format
+// strings.
+func PrintOnColor230f(str string, args ...interface{}) {
+	PrintOnColor230(Sprintf(str, args...))
+}
+
+// PrintlnOnColor230f wraps PrintlnOnColor230 and works with format
+// strings.
+func PrintlnOnColor230f(str string, args ...interface{}) {
+	PrintlnOnColor230(Sprintf(str, args...))
 }
 
 // Color231 will Hilight() the provided string with the
 // specified ANSI code.
-func Color231(str string, args ...interface{}) string {
-	return Hilight("color_231", str, args...)
+func Color231(str string) string {
+	return Hilight("color_231", str)
 }
 
 // PrintColor231 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor231(str string, args ...interface{}) {
-	Print(Hilight("color_231", str, args...))
+func PrintColor231(str string) {
+	Print(Hilight("color_231", str))
 }
 
 // PrintlnColor231 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor231(str string, args ...interface{}) {
-	Println(Hilight("color_231", str, args...))
+func PrintlnColor231(str string) {
+	Println(Hilight("color_231", str))
+}
+
+// Color231f wraps Color231 and works with format
+// strings.
+func Color231f(str string, args ...interface{}) string {
+	return Color231(Sprintf(str, args...))
+}
+
+// PrintColor231f wraps PrintColor231 and works with format
+// strings.
+func PrintColor231f(str string, args ...interface{}) {
+	PrintColor231(Sprintf(str, args...))
+}
+
+// PrintlnColor231f wraps PrintlnColor231 and works with format
+// strings.
+func PrintlnColor231f(str string, args ...interface{}) {
+	PrintlnColor231(Sprintf(str, args...))
 }
 
 // OnColor231 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor231(str string, args ...interface{}) string {
-	return Hilight("on_color_231", str, args...)
+func OnColor231(str string) string {
+	return Hilight("on_color_231", str)
 }
 
 // PrintOnColor231 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor231(str string, args ...interface{}) {
-	Print(Hilight("on_color_231", str, args...))
+func PrintOnColor231(str string) {
+	Print(Hilight("on_color_231", str))
 }
 
 // PrintlnOnColor231 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor231(str string, args ...interface{}) {
-	Println(Hilight("on_color_231", str, args...))
+func PrintlnOnColor231(str string) {
+	Println(Hilight("on_color_231", str))
+}
+
+// OnColor231f wraps OnColor231 and works with format
+// strings.
+func OnColor231f(str string, args ...interface{}) string {
+	return OnColor231(Sprintf(str, args...))
+}
+
+// PrintOnColor231f wraps PrintOnColor231 and works with format
+// strings.
+func PrintOnColor231f(str string, args ...interface{}) {
+	PrintOnColor231(Sprintf(str, args...))
+}
+
+// PrintlnOnColor231f wraps PrintlnOnColor231 and works with format
+// strings.
+func PrintlnOnColor231f(str string, args ...interface{}) {
+	PrintlnOnColor231(Sprintf(str, args...))
 }
 
 // Color232 will Hilight() the provided string with the
 // specified ANSI code.
-func Color232(str string, args ...interface{}) string {
-	return Hilight("color_232", str, args...)
+func Color232(str string) string {
+	return Hilight("color_232", str)
 }
 
 // PrintColor232 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor232(str string, args ...interface{}) {
-	Print(Hilight("color_232", str, args...))
+func PrintColor232(str string) {
+	Print(Hilight("color_232", str))
 }
 
 // PrintlnColor232 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor232(str string, args ...interface{}) {
-	Println(Hilight("color_232", str, args...))
+func PrintlnColor232(str string) {
+	Println(Hilight("color_232", str))
+}
+
+// Color232f wraps Color232 and works with format
+// strings.
+func Color232f(str string, args ...interface{}) string {
+	return Color232(Sprintf(str, args...))
+}
+
+// PrintColor232f wraps PrintColor232 and works with format
+// strings.
+func PrintColor232f(str string, args ...interface{}) {
+	PrintColor232(Sprintf(str, args...))
+}
+
+// PrintlnColor232f wraps PrintlnColor232 and works with format
+// strings.
+func PrintlnColor232f(str string, args ...interface{}) {
+	PrintlnColor232(Sprintf(str, args...))
 }
 
 // OnColor232 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor232(str string, args ...interface{}) string {
-	return Hilight("on_color_232", str, args...)
+func OnColor232(str string) string {
+	return Hilight("on_color_232", str)
 }
 
 // PrintOnColor232 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor232(str string, args ...interface{}) {
-	Print(Hilight("on_color_232", str, args...))
+func PrintOnColor232(str string) {
+	Print(Hilight("on_color_232", str))
 }
 
 // PrintlnOnColor232 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor232(str string, args ...interface{}) {
-	Println(Hilight("on_color_232", str, args...))
+func PrintlnOnColor232(str string) {
+	Println(Hilight("on_color_232", str))
+}
+
+// OnColor232f wraps OnColor232 and works with format
+// strings.
+func OnColor232f(str string, args ...interface{}) string {
+	return OnColor232(Sprintf(str, args...))
+}
+
+// PrintOnColor232f wraps PrintOnColor232 and works with format
+// strings.
+func PrintOnColor232f(str string, args ...interface{}) {
+	PrintOnColor232(Sprintf(str, args...))
+}
+
+// PrintlnOnColor232f wraps PrintlnOnColor232 and works with format
+// strings.
+func PrintlnOnColor232f(str string, args ...interface{}) {
+	PrintlnOnColor232(Sprintf(str, args...))
 }
 
 // Color233 will Hilight() the provided string with the
 // specified ANSI code.
-func Color233(str string, args ...interface{}) string {
-	return Hilight("color_233", str, args...)
+func Color233(str string) string {
+	return Hilight("color_233", str)
 }
 
 // PrintColor233 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor233(str string, args ...interface{}) {
-	Print(Hilight("color_233", str, args...))
+func PrintColor233(str string) {
+	Print(Hilight("color_233", str))
 }
 
 // PrintlnColor233 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor233(str string, args ...interface{}) {
-	Println(Hilight("color_233", str, args...))
+func PrintlnColor233(str string) {
+	Println(Hilight("color_233", str))
+}
+
+// Color233f wraps Color233 and works with format
+// strings.
+func Color233f(str string, args ...interface{}) string {
+	return Color233(Sprintf(str, args...))
+}
+
+// PrintColor233f wraps PrintColor233 and works with format
+// strings.
+func PrintColor233f(str string, args ...interface{}) {
+	PrintColor233(Sprintf(str, args...))
+}
+
+// PrintlnColor233f wraps PrintlnColor233 and works with format
+// strings.
+func PrintlnColor233f(str string, args ...interface{}) {
+	PrintlnColor233(Sprintf(str, args...))
 }
 
 // OnColor233 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor233(str string, args ...interface{}) string {
-	return Hilight("on_color_233", str, args...)
+func OnColor233(str string) string {
+	return Hilight("on_color_233", str)
 }
 
 // PrintOnColor233 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor233(str string, args ...interface{}) {
-	Print(Hilight("on_color_233", str, args...))
+func PrintOnColor233(str string) {
+	Print(Hilight("on_color_233", str))
 }
 
 // PrintlnOnColor233 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor233(str string, args ...interface{}) {
-	Println(Hilight("on_color_233", str, args...))
+func PrintlnOnColor233(str string) {
+	Println(Hilight("on_color_233", str))
+}
+
+// OnColor233f wraps OnColor233 and works with format
+// strings.
+func OnColor233f(str string, args ...interface{}) string {
+	return OnColor233(Sprintf(str, args...))
+}
+
+// PrintOnColor233f wraps PrintOnColor233 and works with format
+// strings.
+func PrintOnColor233f(str string, args ...interface{}) {
+	PrintOnColor233(Sprintf(str, args...))
+}
+
+// PrintlnOnColor233f wraps PrintlnOnColor233 and works with format
+// strings.
+func PrintlnOnColor233f(str string, args ...interface{}) {
+	PrintlnOnColor233(Sprintf(str, args...))
 }
 
 // Color234 will Hilight() the provided string with the
 // specified ANSI code.
-func Color234(str string, args ...interface{}) string {
-	return Hilight("color_234", str, args...)
+func Color234(str string) string {
+	return Hilight("color_234", str)
 }
 
 // PrintColor234 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor234(str string, args ...interface{}) {
-	Print(Hilight("color_234", str, args...))
+func PrintColor234(str string) {
+	Print(Hilight("color_234", str))
 }
 
 // PrintlnColor234 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor234(str string, args ...interface{}) {
-	Println(Hilight("color_234", str, args...))
+func PrintlnColor234(str string) {
+	Println(Hilight("color_234", str))
+}
+
+// Color234f wraps Color234 and works with format
+// strings.
+func Color234f(str string, args ...interface{}) string {
+	return Color234(Sprintf(str, args...))
+}
+
+// PrintColor234f wraps PrintColor234 and works with format
+// strings.
+func PrintColor234f(str string, args ...interface{}) {
+	PrintColor234(Sprintf(str, args...))
+}
+
+// PrintlnColor234f wraps PrintlnColor234 and works with format
+// strings.
+func PrintlnColor234f(str string, args ...interface{}) {
+	PrintlnColor234(Sprintf(str, args...))
 }
 
 // OnColor234 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor234(str string, args ...interface{}) string {
-	return Hilight("on_color_234", str, args...)
+func OnColor234(str string) string {
+	return Hilight("on_color_234", str)
 }
 
 // PrintOnColor234 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor234(str string, args ...interface{}) {
-	Print(Hilight("on_color_234", str, args...))
+func PrintOnColor234(str string) {
+	Print(Hilight("on_color_234", str))
 }
 
 // PrintlnOnColor234 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor234(str string, args ...interface{}) {
-	Println(Hilight("on_color_234", str, args...))
+func PrintlnOnColor234(str string) {
+	Println(Hilight("on_color_234", str))
+}
+
+// OnColor234f wraps OnColor234 and works with format
+// strings.
+func OnColor234f(str string, args ...interface{}) string {
+	return OnColor234(Sprintf(str, args...))
+}
+
+// PrintOnColor234f wraps PrintOnColor234 and works with format
+// strings.
+func PrintOnColor234f(str string, args ...interface{}) {
+	PrintOnColor234(Sprintf(str, args...))
+}
+
+// PrintlnOnColor234f wraps PrintlnOnColor234 and works with format
+// strings.
+func PrintlnOnColor234f(str string, args ...interface{}) {
+	PrintlnOnColor234(Sprintf(str, args...))
 }
 
 // Color235 will Hilight() the provided string with the
 // specified ANSI code.
-func Color235(str string, args ...interface{}) string {
-	return Hilight("color_235", str, args...)
+func Color235(str string) string {
+	return Hilight("color_235", str)
 }
 
 // PrintColor235 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor235(str string, args ...interface{}) {
-	Print(Hilight("color_235", str, args...))
+func PrintColor235(str string) {
+	Print(Hilight("color_235", str))
 }
 
 // PrintlnColor235 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor235(str string, args ...interface{}) {
-	Println(Hilight("color_235", str, args...))
+func PrintlnColor235(str string) {
+	Println(Hilight("color_235", str))
+}
+
+// Color235f wraps Color235 and works with format
+// strings.
+func Color235f(str string, args ...interface{}) string {
+	return Color235(Sprintf(str, args...))
+}
+
+// PrintColor235f wraps PrintColor235 and works with format
+// strings.
+func PrintColor235f(str string, args ...interface{}) {
+	PrintColor235(Sprintf(str, args...))
+}
+
+// PrintlnColor235f wraps PrintlnColor235 and works with format
+// strings.
+func PrintlnColor235f(str string, args ...interface{}) {
+	PrintlnColor235(Sprintf(str, args...))
 }
 
 // OnColor235 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor235(str string, args ...interface{}) string {
-	return Hilight("on_color_235", str, args...)
+func OnColor235(str string) string {
+	return Hilight("on_color_235", str)
 }
 
 // PrintOnColor235 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor235(str string, args ...interface{}) {
-	Print(Hilight("on_color_235", str, args...))
+func PrintOnColor235(str string) {
+	Print(Hilight("on_color_235", str))
 }
 
 // PrintlnOnColor235 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor235(str string, args ...interface{}) {
-	Println(Hilight("on_color_235", str, args...))
+func PrintlnOnColor235(str string) {
+	Println(Hilight("on_color_235", str))
+}
+
+// OnColor235f wraps OnColor235 and works with format
+// strings.
+func OnColor235f(str string, args ...interface{}) string {
+	return OnColor235(Sprintf(str, args...))
+}
+
+// PrintOnColor235f wraps PrintOnColor235 and works with format
+// strings.
+func PrintOnColor235f(str string, args ...interface{}) {
+	PrintOnColor235(Sprintf(str, args...))
+}
+
+// PrintlnOnColor235f wraps PrintlnOnColor235 and works with format
+// strings.
+func PrintlnOnColor235f(str string, args ...interface{}) {
+	PrintlnOnColor235(Sprintf(str, args...))
 }
 
 // Color236 will Hilight() the provided string with the
 // specified ANSI code.
-func Color236(str string, args ...interface{}) string {
-	return Hilight("color_236", str, args...)
+func Color236(str string) string {
+	return Hilight("color_236", str)
 }
 
 // PrintColor236 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor236(str string, args ...interface{}) {
-	Print(Hilight("color_236", str, args...))
+func PrintColor236(str string) {
+	Print(Hilight("color_236", str))
 }
 
 // PrintlnColor236 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor236(str string, args ...interface{}) {
-	Println(Hilight("color_236", str, args...))
+func PrintlnColor236(str string) {
+	Println(Hilight("color_236", str))
+}
+
+// Color236f wraps Color236 and works with format
+// strings.
+func Color236f(str string, args ...interface{}) string {
+	return Color236(Sprintf(str, args...))
+}
+
+// PrintColor236f wraps PrintColor236 and works with format
+// strings.
+func PrintColor236f(str string, args ...interface{}) {
+	PrintColor236(Sprintf(str, args...))
+}
+
+// PrintlnColor236f wraps PrintlnColor236 and works with format
+// strings.
+func PrintlnColor236f(str string, args ...interface{}) {
+	PrintlnColor236(Sprintf(str, args...))
 }
 
 // OnColor236 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor236(str string, args ...interface{}) string {
-	return Hilight("on_color_236", str, args...)
+func OnColor236(str string) string {
+	return Hilight("on_color_236", str)
 }
 
 // PrintOnColor236 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor236(str string, args ...interface{}) {
-	Print(Hilight("on_color_236", str, args...))
+func PrintOnColor236(str string) {
+	Print(Hilight("on_color_236", str))
 }
 
 // PrintlnOnColor236 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor236(str string, args ...interface{}) {
-	Println(Hilight("on_color_236", str, args...))
+func PrintlnOnColor236(str string) {
+	Println(Hilight("on_color_236", str))
+}
+
+// OnColor236f wraps OnColor236 and works with format
+// strings.
+func OnColor236f(str string, args ...interface{}) string {
+	return OnColor236(Sprintf(str, args...))
+}
+
+// PrintOnColor236f wraps PrintOnColor236 and works with format
+// strings.
+func PrintOnColor236f(str string, args ...interface{}) {
+	PrintOnColor236(Sprintf(str, args...))
+}
+
+// PrintlnOnColor236f wraps PrintlnOnColor236 and works with format
+// strings.
+func PrintlnOnColor236f(str string, args ...interface{}) {
+	PrintlnOnColor236(Sprintf(str, args...))
 }
 
 // Color237 will Hilight() the provided string with the
 // specified ANSI code.
-func Color237(str string, args ...interface{}) string {
-	return Hilight("color_237", str, args...)
+func Color237(str string) string {
+	return Hilight("color_237", str)
 }
 
 // PrintColor237 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor237(str string, args ...interface{}) {
-	Print(Hilight("color_237", str, args...))
+func PrintColor237(str string) {
+	Print(Hilight("color_237", str))
 }
 
 // PrintlnColor237 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor237(str string, args ...interface{}) {
-	Println(Hilight("color_237", str, args...))
+func PrintlnColor237(str string) {
+	Println(Hilight("color_237", str))
+}
+
+// Color237f wraps Color237 and works with format
+// strings.
+func Color237f(str string, args ...interface{}) string {
+	return Color237(Sprintf(str, args...))
+}
+
+// PrintColor237f wraps PrintColor237 and works with format
+// strings.
+func PrintColor237f(str string, args ...interface{}) {
+	PrintColor237(Sprintf(str, args...))
+}
+
+// PrintlnColor237f wraps PrintlnColor237 and works with format
+// strings.
+func PrintlnColor237f(str string, args ...interface{}) {
+	PrintlnColor237(Sprintf(str, args...))
 }
 
 // OnColor237 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor237(str string, args ...interface{}) string {
-	return Hilight("on_color_237", str, args...)
+func OnColor237(str string) string {
+	return Hilight("on_color_237", str)
 }
 
 // PrintOnColor237 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor237(str string, args ...interface{}) {
-	Print(Hilight("on_color_237", str, args...))
+func PrintOnColor237(str string) {
+	Print(Hilight("on_color_237", str))
 }
 
 // PrintlnOnColor237 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor237(str string, args ...interface{}) {
-	Println(Hilight("on_color_237", str, args...))
+func PrintlnOnColor237(str string) {
+	Println(Hilight("on_color_237", str))
+}
+
+// OnColor237f wraps OnColor237 and works with format
+// strings.
+func OnColor237f(str string, args ...interface{}) string {
+	return OnColor237(Sprintf(str, args...))
+}
+
+// PrintOnColor237f wraps PrintOnColor237 and works with format
+// strings.
+func PrintOnColor237f(str string, args ...interface{}) {
+	PrintOnColor237(Sprintf(str, args...))
+}
+
+// PrintlnOnColor237f wraps PrintlnOnColor237 and works with format
+// strings.
+func PrintlnOnColor237f(str string, args ...interface{}) {
+	PrintlnOnColor237(Sprintf(str, args...))
 }
 
 // Color238 will Hilight() the provided string with the
 // specified ANSI code.
-func Color238(str string, args ...interface{}) string {
-	return Hilight("color_238", str, args...)
+func Color238(str string) string {
+	return Hilight("color_238", str)
 }
 
 // PrintColor238 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor238(str string, args ...interface{}) {
-	Print(Hilight("color_238", str, args...))
+func PrintColor238(str string) {
+	Print(Hilight("color_238", str))
 }
 
 // PrintlnColor238 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor238(str string, args ...interface{}) {
-	Println(Hilight("color_238", str, args...))
+func PrintlnColor238(str string) {
+	Println(Hilight("color_238", str))
+}
+
+// Color238f wraps Color238 and works with format
+// strings.
+func Color238f(str string, args ...interface{}) string {
+	return Color238(Sprintf(str, args...))
+}
+
+// PrintColor238f wraps PrintColor238 and works with format
+// strings.
+func PrintColor238f(str string, args ...interface{}) {
+	PrintColor238(Sprintf(str, args...))
+}
+
+// PrintlnColor238f wraps PrintlnColor238 and works with format
+// strings.
+func PrintlnColor238f(str string, args ...interface{}) {
+	PrintlnColor238(Sprintf(str, args...))
 }
 
 // OnColor238 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor238(str string, args ...interface{}) string {
-	return Hilight("on_color_238", str, args...)
+func OnColor238(str string) string {
+	return Hilight("on_color_238", str)
 }
 
 // PrintOnColor238 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor238(str string, args ...interface{}) {
-	Print(Hilight("on_color_238", str, args...))
+func PrintOnColor238(str string) {
+	Print(Hilight("on_color_238", str))
 }
 
 // PrintlnOnColor238 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor238(str string, args ...interface{}) {
-	Println(Hilight("on_color_238", str, args...))
+func PrintlnOnColor238(str string) {
+	Println(Hilight("on_color_238", str))
+}
+
+// OnColor238f wraps OnColor238 and works with format
+// strings.
+func OnColor238f(str string, args ...interface{}) string {
+	return OnColor238(Sprintf(str, args...))
+}
+
+// PrintOnColor238f wraps PrintOnColor238 and works with format
+// strings.
+func PrintOnColor238f(str string, args ...interface{}) {
+	PrintOnColor238(Sprintf(str, args...))
+}
+
+// PrintlnOnColor238f wraps PrintlnOnColor238 and works with format
+// strings.
+func PrintlnOnColor238f(str string, args ...interface{}) {
+	PrintlnOnColor238(Sprintf(str, args...))
 }
 
 // Color239 will Hilight() the provided string with the
 // specified ANSI code.
-func Color239(str string, args ...interface{}) string {
-	return Hilight("color_239", str, args...)
+func Color239(str string) string {
+	return Hilight("color_239", str)
 }
 
 // PrintColor239 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor239(str string, args ...interface{}) {
-	Print(Hilight("color_239", str, args...))
+func PrintColor239(str string) {
+	Print(Hilight("color_239", str))
 }
 
 // PrintlnColor239 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor239(str string, args ...interface{}) {
-	Println(Hilight("color_239", str, args...))
+func PrintlnColor239(str string) {
+	Println(Hilight("color_239", str))
+}
+
+// Color239f wraps Color239 and works with format
+// strings.
+func Color239f(str string, args ...interface{}) string {
+	return Color239(Sprintf(str, args...))
+}
+
+// PrintColor239f wraps PrintColor239 and works with format
+// strings.
+func PrintColor239f(str string, args ...interface{}) {
+	PrintColor239(Sprintf(str, args...))
+}
+
+// PrintlnColor239f wraps PrintlnColor239 and works with format
+// strings.
+func PrintlnColor239f(str string, args ...interface{}) {
+	PrintlnColor239(Sprintf(str, args...))
 }
 
 // OnColor239 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor239(str string, args ...interface{}) string {
-	return Hilight("on_color_239", str, args...)
+func OnColor239(str string) string {
+	return Hilight("on_color_239", str)
 }
 
 // PrintOnColor239 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor239(str string, args ...interface{}) {
-	Print(Hilight("on_color_239", str, args...))
+func PrintOnColor239(str string) {
+	Print(Hilight("on_color_239", str))
 }
 
 // PrintlnOnColor239 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor239(str string, args ...interface{}) {
-	Println(Hilight("on_color_239", str, args...))
+func PrintlnOnColor239(str string) {
+	Println(Hilight("on_color_239", str))
+}
+
+// OnColor239f wraps OnColor239 and works with format
+// strings.
+func OnColor239f(str string, args ...interface{}) string {
+	return OnColor239(Sprintf(str, args...))
+}
+
+// PrintOnColor239f wraps PrintOnColor239 and works with format
+// strings.
+func PrintOnColor239f(str string, args ...interface{}) {
+	PrintOnColor239(Sprintf(str, args...))
+}
+
+// PrintlnOnColor239f wraps PrintlnOnColor239 and works with format
+// strings.
+func PrintlnOnColor239f(str string, args ...interface{}) {
+	PrintlnOnColor239(Sprintf(str, args...))
 }
 
 // Color240 will Hilight() the provided string with the
 // specified ANSI code.
-func Color240(str string, args ...interface{}) string {
-	return Hilight("color_240", str, args...)
+func Color240(str string) string {
+	return Hilight("color_240", str)
 }
 
 // PrintColor240 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor240(str string, args ...interface{}) {
-	Print(Hilight("color_240", str, args...))
+func PrintColor240(str string) {
+	Print(Hilight("color_240", str))
 }
 
 // PrintlnColor240 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor240(str string, args ...interface{}) {
-	Println(Hilight("color_240", str, args...))
+func PrintlnColor240(str string) {
+	Println(Hilight("color_240", str))
+}
+
+// Color240f wraps Color240 and works with format
+// strings.
+func Color240f(str string, args ...interface{}) string {
+	return Color240(Sprintf(str, args...))
+}
+
+// PrintColor240f wraps PrintColor240 and works with format
+// strings.
+func PrintColor240f(str string, args ...interface{}) {
+	PrintColor240(Sprintf(str, args...))
+}
+
+// PrintlnColor240f wraps PrintlnColor240 and works with format
+// strings.
+func PrintlnColor240f(str string, args ...interface{}) {
+	PrintlnColor240(Sprintf(str, args...))
 }
 
 // OnColor240 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor240(str string, args ...interface{}) string {
-	return Hilight("on_color_240", str, args...)
+func OnColor240(str string) string {
+	return Hilight("on_color_240", str)
 }
 
 // PrintOnColor240 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor240(str string, args ...interface{}) {
-	Print(Hilight("on_color_240", str, args...))
+func PrintOnColor240(str string) {
+	Print(Hilight("on_color_240", str))
 }
 
 // PrintlnOnColor240 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor240(str string, args ...interface{}) {
-	Println(Hilight("on_color_240", str, args...))
+func PrintlnOnColor240(str string) {
+	Println(Hilight("on_color_240", str))
+}
+
+// OnColor240f wraps OnColor240 and works with format
+// strings.
+func OnColor240f(str string, args ...interface{}) string {
+	return OnColor240(Sprintf(str, args...))
+}
+
+// PrintOnColor240f wraps PrintOnColor240 and works with format
+// strings.
+func PrintOnColor240f(str string, args ...interface{}) {
+	PrintOnColor240(Sprintf(str, args...))
+}
+
+// PrintlnOnColor240f wraps PrintlnOnColor240 and works with format
+// strings.
+func PrintlnOnColor240f(str string, args ...interface{}) {
+	PrintlnOnColor240(Sprintf(str, args...))
 }
 
 // Color241 will Hilight() the provided string with the
 // specified ANSI code.
-func Color241(str string, args ...interface{}) string {
-	return Hilight("color_241", str, args...)
+func Color241(str string) string {
+	return Hilight("color_241", str)
 }
 
 // PrintColor241 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor241(str string, args ...interface{}) {
-	Print(Hilight("color_241", str, args...))
+func PrintColor241(str string) {
+	Print(Hilight("color_241", str))
 }
 
 // PrintlnColor241 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor241(str string, args ...interface{}) {
-	Println(Hilight("color_241", str, args...))
+func PrintlnColor241(str string) {
+	Println(Hilight("color_241", str))
+}
+
+// Color241f wraps Color241 and works with format
+// strings.
+func Color241f(str string, args ...interface{}) string {
+	return Color241(Sprintf(str, args...))
+}
+
+// PrintColor241f wraps PrintColor241 and works with format
+// strings.
+func PrintColor241f(str string, args ...interface{}) {
+	PrintColor241(Sprintf(str, args...))
+}
+
+// PrintlnColor241f wraps PrintlnColor241 and works with format
+// strings.
+func PrintlnColor241f(str string, args ...interface{}) {
+	PrintlnColor241(Sprintf(str, args...))
 }
 
 // OnColor241 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor241(str string, args ...interface{}) string {
-	return Hilight("on_color_241", str, args...)
+func OnColor241(str string) string {
+	return Hilight("on_color_241", str)
 }
 
 // PrintOnColor241 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor241(str string, args ...interface{}) {
-	Print(Hilight("on_color_241", str, args...))
+func PrintOnColor241(str string) {
+	Print(Hilight("on_color_241", str))
 }
 
 // PrintlnOnColor241 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor241(str string, args ...interface{}) {
-	Println(Hilight("on_color_241", str, args...))
+func PrintlnOnColor241(str string) {
+	Println(Hilight("on_color_241", str))
+}
+
+// OnColor241f wraps OnColor241 and works with format
+// strings.
+func OnColor241f(str string, args ...interface{}) string {
+	return OnColor241(Sprintf(str, args...))
+}
+
+// PrintOnColor241f wraps PrintOnColor241 and works with format
+// strings.
+func PrintOnColor241f(str string, args ...interface{}) {
+	PrintOnColor241(Sprintf(str, args...))
+}
+
+// PrintlnOnColor241f wraps PrintlnOnColor241 and works with format
+// strings.
+func PrintlnOnColor241f(str string, args ...interface{}) {
+	PrintlnOnColor241(Sprintf(str, args...))
 }
 
 // Color242 will Hilight() the provided string with the
 // specified ANSI code.
-func Color242(str string, args ...interface{}) string {
-	return Hilight("color_242", str, args...)
+func Color242(str string) string {
+	return Hilight("color_242", str)
 }
 
 // PrintColor242 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor242(str string, args ...interface{}) {
-	Print(Hilight("color_242", str, args...))
+func PrintColor242(str string) {
+	Print(Hilight("color_242", str))
 }
 
 // PrintlnColor242 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor242(str string, args ...interface{}) {
-	Println(Hilight("color_242", str, args...))
+func PrintlnColor242(str string) {
+	Println(Hilight("color_242", str))
+}
+
+// Color242f wraps Color242 and works with format
+// strings.
+func Color242f(str string, args ...interface{}) string {
+	return Color242(Sprintf(str, args...))
+}
+
+// PrintColor242f wraps PrintColor242 and works with format
+// strings.
+func PrintColor242f(str string, args ...interface{}) {
+	PrintColor242(Sprintf(str, args...))
+}
+
+// PrintlnColor242f wraps PrintlnColor242 and works with format
+// strings.
+func PrintlnColor242f(str string, args ...interface{}) {
+	PrintlnColor242(Sprintf(str, args...))
 }
 
 // OnColor242 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor242(str string, args ...interface{}) string {
-	return Hilight("on_color_242", str, args...)
+func OnColor242(str string) string {
+	return Hilight("on_color_242", str)
 }
 
 // PrintOnColor242 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor242(str string, args ...interface{}) {
-	Print(Hilight("on_color_242", str, args...))
+func PrintOnColor242(str string) {
+	Print(Hilight("on_color_242", str))
 }
 
 // PrintlnOnColor242 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor242(str string, args ...interface{}) {
-	Println(Hilight("on_color_242", str, args...))
+func PrintlnOnColor242(str string) {
+	Println(Hilight("on_color_242", str))
+}
+
+// OnColor242f wraps OnColor242 and works with format
+// strings.
+func OnColor242f(str string, args ...interface{}) string {
+	return OnColor242(Sprintf(str, args...))
+}
+
+// PrintOnColor242f wraps PrintOnColor242 and works with format
+// strings.
+func PrintOnColor242f(str string, args ...interface{}) {
+	PrintOnColor242(Sprintf(str, args...))
+}
+
+// PrintlnOnColor242f wraps PrintlnOnColor242 and works with format
+// strings.
+func PrintlnOnColor242f(str string, args ...interface{}) {
+	PrintlnOnColor242(Sprintf(str, args...))
 }
 
 // Color243 will Hilight() the provided string with the
 // specified ANSI code.
-func Color243(str string, args ...interface{}) string {
-	return Hilight("color_243", str, args...)
+func Color243(str string) string {
+	return Hilight("color_243", str)
 }
 
 // PrintColor243 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor243(str string, args ...interface{}) {
-	Print(Hilight("color_243", str, args...))
+func PrintColor243(str string) {
+	Print(Hilight("color_243", str))
 }
 
 // PrintlnColor243 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor243(str string, args ...interface{}) {
-	Println(Hilight("color_243", str, args...))
+func PrintlnColor243(str string) {
+	Println(Hilight("color_243", str))
+}
+
+// Color243f wraps Color243 and works with format
+// strings.
+func Color243f(str string, args ...interface{}) string {
+	return Color243(Sprintf(str, args...))
+}
+
+// PrintColor243f wraps PrintColor243 and works with format
+// strings.
+func PrintColor243f(str string, args ...interface{}) {
+	PrintColor243(Sprintf(str, args...))
+}
+
+// PrintlnColor243f wraps PrintlnColor243 and works with format
+// strings.
+func PrintlnColor243f(str string, args ...interface{}) {
+	PrintlnColor243(Sprintf(str, args...))
 }
 
 // OnColor243 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor243(str string, args ...interface{}) string {
-	return Hilight("on_color_243", str, args...)
+func OnColor243(str string) string {
+	return Hilight("on_color_243", str)
 }
 
 // PrintOnColor243 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor243(str string, args ...interface{}) {
-	Print(Hilight("on_color_243", str, args...))
+func PrintOnColor243(str string) {
+	Print(Hilight("on_color_243", str))
 }
 
 // PrintlnOnColor243 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor243(str string, args ...interface{}) {
-	Println(Hilight("on_color_243", str, args...))
+func PrintlnOnColor243(str string) {
+	Println(Hilight("on_color_243", str))
+}
+
+// OnColor243f wraps OnColor243 and works with format
+// strings.
+func OnColor243f(str string, args ...interface{}) string {
+	return OnColor243(Sprintf(str, args...))
+}
+
+// PrintOnColor243f wraps PrintOnColor243 and works with format
+// strings.
+func PrintOnColor243f(str string, args ...interface{}) {
+	PrintOnColor243(Sprintf(str, args...))
+}
+
+// PrintlnOnColor243f wraps PrintlnOnColor243 and works with format
+// strings.
+func PrintlnOnColor243f(str string, args ...interface{}) {
+	PrintlnOnColor243(Sprintf(str, args...))
 }
 
 // Color244 will Hilight() the provided string with the
 // specified ANSI code.
-func Color244(str string, args ...interface{}) string {
-	return Hilight("color_244", str, args...)
+func Color244(str string) string {
+	return Hilight("color_244", str)
 }
 
 // PrintColor244 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor244(str string, args ...interface{}) {
-	Print(Hilight("color_244", str, args...))
+func PrintColor244(str string) {
+	Print(Hilight("color_244", str))
 }
 
 // PrintlnColor244 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor244(str string, args ...interface{}) {
-	Println(Hilight("color_244", str, args...))
+func PrintlnColor244(str string) {
+	Println(Hilight("color_244", str))
+}
+
+// Color244f wraps Color244 and works with format
+// strings.
+func Color244f(str string, args ...interface{}) string {
+	return Color244(Sprintf(str, args...))
+}
+
+// PrintColor244f wraps PrintColor244 and works with format
+// strings.
+func PrintColor244f(str string, args ...interface{}) {
+	PrintColor244(Sprintf(str, args...))
+}
+
+// PrintlnColor244f wraps PrintlnColor244 and works with format
+// strings.
+func PrintlnColor244f(str string, args ...interface{}) {
+	PrintlnColor244(Sprintf(str, args...))
 }
 
 // OnColor244 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor244(str string, args ...interface{}) string {
-	return Hilight("on_color_244", str, args...)
+func OnColor244(str string) string {
+	return Hilight("on_color_244", str)
 }
 
 // PrintOnColor244 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor244(str string, args ...interface{}) {
-	Print(Hilight("on_color_244", str, args...))
+func PrintOnColor244(str string) {
+	Print(Hilight("on_color_244", str))
 }
 
 // PrintlnOnColor244 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor244(str string, args ...interface{}) {
-	Println(Hilight("on_color_244", str, args...))
+func PrintlnOnColor244(str string) {
+	Println(Hilight("on_color_244", str))
+}
+
+// OnColor244f wraps OnColor244 and works with format
+// strings.
+func OnColor244f(str string, args ...interface{}) string {
+	return OnColor244(Sprintf(str, args...))
+}
+
+// PrintOnColor244f wraps PrintOnColor244 and works with format
+// strings.
+func PrintOnColor244f(str string, args ...interface{}) {
+	PrintOnColor244(Sprintf(str, args...))
+}
+
+// PrintlnOnColor244f wraps PrintlnOnColor244 and works with format
+// strings.
+func PrintlnOnColor244f(str string, args ...interface{}) {
+	PrintlnOnColor244(Sprintf(str, args...))
 }
 
 // Color245 will Hilight() the provided string with the
 // specified ANSI code.
-func Color245(str string, args ...interface{}) string {
-	return Hilight("color_245", str, args...)
+func Color245(str string) string {
+	return Hilight("color_245", str)
 }
 
 // PrintColor245 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor245(str string, args ...interface{}) {
-	Print(Hilight("color_245", str, args...))
+func PrintColor245(str string) {
+	Print(Hilight("color_245", str))
 }
 
 // PrintlnColor245 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor245(str string, args ...interface{}) {
-	Println(Hilight("color_245", str, args...))
+func PrintlnColor245(str string) {
+	Println(Hilight("color_245", str))
+}
+
+// Color245f wraps Color245 and works with format
+// strings.
+func Color245f(str string, args ...interface{}) string {
+	return Color245(Sprintf(str, args...))
+}
+
+// PrintColor245f wraps PrintColor245 and works with format
+// strings.
+func PrintColor245f(str string, args ...interface{}) {
+	PrintColor245(Sprintf(str, args...))
+}
+
+// PrintlnColor245f wraps PrintlnColor245 and works with format
+// strings.
+func PrintlnColor245f(str string, args ...interface{}) {
+	PrintlnColor245(Sprintf(str, args...))
 }
 
 // OnColor245 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor245(str string, args ...interface{}) string {
-	return Hilight("on_color_245", str, args...)
+func OnColor245(str string) string {
+	return Hilight("on_color_245", str)
 }
 
 // PrintOnColor245 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor245(str string, args ...interface{}) {
-	Print(Hilight("on_color_245", str, args...))
+func PrintOnColor245(str string) {
+	Print(Hilight("on_color_245", str))
 }
 
 // PrintlnOnColor245 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor245(str string, args ...interface{}) {
-	Println(Hilight("on_color_245", str, args...))
+func PrintlnOnColor245(str string) {
+	Println(Hilight("on_color_245", str))
+}
+
+// OnColor245f wraps OnColor245 and works with format
+// strings.
+func OnColor245f(str string, args ...interface{}) string {
+	return OnColor245(Sprintf(str, args...))
+}
+
+// PrintOnColor245f wraps PrintOnColor245 and works with format
+// strings.
+func PrintOnColor245f(str string, args ...interface{}) {
+	PrintOnColor245(Sprintf(str, args...))
+}
+
+// PrintlnOnColor245f wraps PrintlnOnColor245 and works with format
+// strings.
+func PrintlnOnColor245f(str string, args ...interface{}) {
+	PrintlnOnColor245(Sprintf(str, args...))
 }
 
 // Color246 will Hilight() the provided string with the
 // specified ANSI code.
-func Color246(str string, args ...interface{}) string {
-	return Hilight("color_246", str, args...)
+func Color246(str string) string {
+	return Hilight("color_246", str)
 }
 
 // PrintColor246 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor246(str string, args ...interface{}) {
-	Print(Hilight("color_246", str, args...))
+func PrintColor246(str string) {
+	Print(Hilight("color_246", str))
 }
 
 // PrintlnColor246 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor246(str string, args ...interface{}) {
-	Println(Hilight("color_246", str, args...))
+func PrintlnColor246(str string) {
+	Println(Hilight("color_246", str))
+}
+
+// Color246f wraps Color246 and works with format
+// strings.
+func Color246f(str string, args ...interface{}) string {
+	return Color246(Sprintf(str, args...))
+}
+
+// PrintColor246f wraps PrintColor246 and works with format
+// strings.
+func PrintColor246f(str string, args ...interface{}) {
+	PrintColor246(Sprintf(str, args...))
+}
+
+// PrintlnColor246f wraps PrintlnColor246 and works with format
+// strings.
+func PrintlnColor246f(str string, args ...interface{}) {
+	PrintlnColor246(Sprintf(str, args...))
 }
 
 // OnColor246 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor246(str string, args ...interface{}) string {
-	return Hilight("on_color_246", str, args...)
+func OnColor246(str string) string {
+	return Hilight("on_color_246", str)
 }
 
 // PrintOnColor246 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor246(str string, args ...interface{}) {
-	Print(Hilight("on_color_246", str, args...))
+func PrintOnColor246(str string) {
+	Print(Hilight("on_color_246", str))
 }
 
 // PrintlnOnColor246 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor246(str string, args ...interface{}) {
-	Println(Hilight("on_color_246", str, args...))
+func PrintlnOnColor246(str string) {
+	Println(Hilight("on_color_246", str))
+}
+
+// OnColor246f wraps OnColor246 and works with format
+// strings.
+func OnColor246f(str string, args ...interface{}) string {
+	return OnColor246(Sprintf(str, args...))
+}
+
+// PrintOnColor246f wraps PrintOnColor246 and works with format
+// strings.
+func PrintOnColor246f(str string, args ...interface{}) {
+	PrintOnColor246(Sprintf(str, args...))
+}
+
+// PrintlnOnColor246f wraps PrintlnOnColor246 and works with format
+// strings.
+func PrintlnOnColor246f(str string, args ...interface{}) {
+	PrintlnOnColor246(Sprintf(str, args...))
 }
 
 // Color247 will Hilight() the provided string with the
 // specified ANSI code.
-func Color247(str string, args ...interface{}) string {
-	return Hilight("color_247", str, args...)
+func Color247(str string) string {
+	return Hilight("color_247", str)
 }
 
 // PrintColor247 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor247(str string, args ...interface{}) {
-	Print(Hilight("color_247", str, args...))
+func PrintColor247(str string) {
+	Print(Hilight("color_247", str))
 }
 
 // PrintlnColor247 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor247(str string, args ...interface{}) {
-	Println(Hilight("color_247", str, args...))
+func PrintlnColor247(str string) {
+	Println(Hilight("color_247", str))
+}
+
+// Color247f wraps Color247 and works with format
+// strings.
+func Color247f(str string, args ...interface{}) string {
+	return Color247(Sprintf(str, args...))
+}
+
+// PrintColor247f wraps PrintColor247 and works with format
+// strings.
+func PrintColor247f(str string, args ...interface{}) {
+	PrintColor247(Sprintf(str, args...))
+}
+
+// PrintlnColor247f wraps PrintlnColor247 and works with format
+// strings.
+func PrintlnColor247f(str string, args ...interface{}) {
+	PrintlnColor247(Sprintf(str, args...))
 }
 
 // OnColor247 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor247(str string, args ...interface{}) string {
-	return Hilight("on_color_247", str, args...)
+func OnColor247(str string) string {
+	return Hilight("on_color_247", str)
 }
 
 // PrintOnColor247 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor247(str string, args ...interface{}) {
-	Print(Hilight("on_color_247", str, args...))
+func PrintOnColor247(str string) {
+	Print(Hilight("on_color_247", str))
 }
 
 // PrintlnOnColor247 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor247(str string, args ...interface{}) {
-	Println(Hilight("on_color_247", str, args...))
+func PrintlnOnColor247(str string) {
+	Println(Hilight("on_color_247", str))
+}
+
+// OnColor247f wraps OnColor247 and works with format
+// strings.
+func OnColor247f(str string, args ...interface{}) string {
+	return OnColor247(Sprintf(str, args...))
+}
+
+// PrintOnColor247f wraps PrintOnColor247 and works with format
+// strings.
+func PrintOnColor247f(str string, args ...interface{}) {
+	PrintOnColor247(Sprintf(str, args...))
+}
+
+// PrintlnOnColor247f wraps PrintlnOnColor247 and works with format
+// strings.
+func PrintlnOnColor247f(str string, args ...interface{}) {
+	PrintlnOnColor247(Sprintf(str, args...))
 }
 
 // Color248 will Hilight() the provided string with the
 // specified ANSI code.
-func Color248(str string, args ...interface{}) string {
-	return Hilight("color_248", str, args...)
+func Color248(str string) string {
+	return Hilight("color_248", str)
 }
 
 // PrintColor248 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor248(str string, args ...interface{}) {
-	Print(Hilight("color_248", str, args...))
+func PrintColor248(str string) {
+	Print(Hilight("color_248", str))
 }
 
 // PrintlnColor248 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor248(str string, args ...interface{}) {
-	Println(Hilight("color_248", str, args...))
+func PrintlnColor248(str string) {
+	Println(Hilight("color_248", str))
+}
+
+// Color248f wraps Color248 and works with format
+// strings.
+func Color248f(str string, args ...interface{}) string {
+	return Color248(Sprintf(str, args...))
+}
+
+// PrintColor248f wraps PrintColor248 and works with format
+// strings.
+func PrintColor248f(str string, args ...interface{}) {
+	PrintColor248(Sprintf(str, args...))
+}
+
+// PrintlnColor248f wraps PrintlnColor248 and works with format
+// strings.
+func PrintlnColor248f(str string, args ...interface{}) {
+	PrintlnColor248(Sprintf(str, args...))
 }
 
 // OnColor248 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor248(str string, args ...interface{}) string {
-	return Hilight("on_color_248", str, args...)
+func OnColor248(str string) string {
+	return Hilight("on_color_248", str)
 }
 
 // PrintOnColor248 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor248(str string, args ...interface{}) {
-	Print(Hilight("on_color_248", str, args...))
+func PrintOnColor248(str string) {
+	Print(Hilight("on_color_248", str))
 }
 
 // PrintlnOnColor248 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor248(str string, args ...interface{}) {
-	Println(Hilight("on_color_248", str, args...))
+func PrintlnOnColor248(str string) {
+	Println(Hilight("on_color_248", str))
+}
+
+// OnColor248f wraps OnColor248 and works with format
+// strings.
+func OnColor248f(str string, args ...interface{}) string {
+	return OnColor248(Sprintf(str, args...))
+}
+
+// PrintOnColor248f wraps PrintOnColor248 and works with format
+// strings.
+func PrintOnColor248f(str string, args ...interface{}) {
+	PrintOnColor248(Sprintf(str, args...))
+}
+
+// PrintlnOnColor248f wraps PrintlnOnColor248 and works with format
+// strings.
+func PrintlnOnColor248f(str string, args ...interface{}) {
+	PrintlnOnColor248(Sprintf(str, args...))
 }
 
 // Color249 will Hilight() the provided string with the
 // specified ANSI code.
-func Color249(str string, args ...interface{}) string {
-	return Hilight("color_249", str, args...)
+func Color249(str string) string {
+	return Hilight("color_249", str)
 }
 
 // PrintColor249 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor249(str string, args ...interface{}) {
-	Print(Hilight("color_249", str, args...))
+func PrintColor249(str string) {
+	Print(Hilight("color_249", str))
 }
 
 // PrintlnColor249 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor249(str string, args ...interface{}) {
-	Println(Hilight("color_249", str, args...))
+func PrintlnColor249(str string) {
+	Println(Hilight("color_249", str))
+}
+
+// Color249f wraps Color249 and works with format
+// strings.
+func Color249f(str string, args ...interface{}) string {
+	return Color249(Sprintf(str, args...))
+}
+
+// PrintColor249f wraps PrintColor249 and works with format
+// strings.
+func PrintColor249f(str string, args ...interface{}) {
+	PrintColor249(Sprintf(str, args...))
+}
+
+// PrintlnColor249f wraps PrintlnColor249 and works with format
+// strings.
+func PrintlnColor249f(str string, args ...interface{}) {
+	PrintlnColor249(Sprintf(str, args...))
 }
 
 // OnColor249 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor249(str string, args ...interface{}) string {
-	return Hilight("on_color_249", str, args...)
+func OnColor249(str string) string {
+	return Hilight("on_color_249", str)
 }
 
 // PrintOnColor249 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor249(str string, args ...interface{}) {
-	Print(Hilight("on_color_249", str, args...))
+func PrintOnColor249(str string) {
+	Print(Hilight("on_color_249", str))
 }
 
 // PrintlnOnColor249 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor249(str string, args ...interface{}) {
-	Println(Hilight("on_color_249", str, args...))
+func PrintlnOnColor249(str string) {
+	Println(Hilight("on_color_249", str))
+}
+
+// OnColor249f wraps OnColor249 and works with format
+// strings.
+func OnColor249f(str string, args ...interface{}) string {
+	return OnColor249(Sprintf(str, args...))
+}
+
+// PrintOnColor249f wraps PrintOnColor249 and works with format
+// strings.
+func PrintOnColor249f(str string, args ...interface{}) {
+	PrintOnColor249(Sprintf(str, args...))
+}
+
+// PrintlnOnColor249f wraps PrintlnOnColor249 and works with format
+// strings.
+func PrintlnOnColor249f(str string, args ...interface{}) {
+	PrintlnOnColor249(Sprintf(str, args...))
 }
 
 // Color250 will Hilight() the provided string with the
 // specified ANSI code.
-func Color250(str string, args ...interface{}) string {
-	return Hilight("color_250", str, args...)
+func Color250(str string) string {
+	return Hilight("color_250", str)
 }
 
 // PrintColor250 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor250(str string, args ...interface{}) {
-	Print(Hilight("color_250", str, args...))
+func PrintColor250(str string) {
+	Print(Hilight("color_250", str))
 }
 
 // PrintlnColor250 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor250(str string, args ...interface{}) {
-	Println(Hilight("color_250", str, args...))
+func PrintlnColor250(str string) {
+	Println(Hilight("color_250", str))
+}
+
+// Color250f wraps Color250 and works with format
+// strings.
+func Color250f(str string, args ...interface{}) string {
+	return Color250(Sprintf(str, args...))
+}
+
+// PrintColor250f wraps PrintColor250 and works with format
+// strings.
+func PrintColor250f(str string, args ...interface{}) {
+	PrintColor250(Sprintf(str, args...))
+}
+
+// PrintlnColor250f wraps PrintlnColor250 and works with format
+// strings.
+func PrintlnColor250f(str string, args ...interface{}) {
+	PrintlnColor250(Sprintf(str, args...))
 }
 
 // OnColor250 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor250(str string, args ...interface{}) string {
-	return Hilight("on_color_250", str, args...)
+func OnColor250(str string) string {
+	return Hilight("on_color_250", str)
 }
 
 // PrintOnColor250 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor250(str string, args ...interface{}) {
-	Print(Hilight("on_color_250", str, args...))
+func PrintOnColor250(str string) {
+	Print(Hilight("on_color_250", str))
 }
 
 // PrintlnOnColor250 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor250(str string, args ...interface{}) {
-	Println(Hilight("on_color_250", str, args...))
+func PrintlnOnColor250(str string) {
+	Println(Hilight("on_color_250", str))
+}
+
+// OnColor250f wraps OnColor250 and works with format
+// strings.
+func OnColor250f(str string, args ...interface{}) string {
+	return OnColor250(Sprintf(str, args...))
+}
+
+// PrintOnColor250f wraps PrintOnColor250 and works with format
+// strings.
+func PrintOnColor250f(str string, args ...interface{}) {
+	PrintOnColor250(Sprintf(str, args...))
+}
+
+// PrintlnOnColor250f wraps PrintlnOnColor250 and works with format
+// strings.
+func PrintlnOnColor250f(str string, args ...interface{}) {
+	PrintlnOnColor250(Sprintf(str, args...))
 }
 
 // Color251 will Hilight() the provided string with the
 // specified ANSI code.
-func Color251(str string, args ...interface{}) string {
-	return Hilight("color_251", str, args...)
+func Color251(str string) string {
+	return Hilight("color_251", str)
 }
 
 // PrintColor251 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor251(str string, args ...interface{}) {
-	Print(Hilight("color_251", str, args...))
+func PrintColor251(str string) {
+	Print(Hilight("color_251", str))
 }
 
 // PrintlnColor251 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor251(str string, args ...interface{}) {
-	Println(Hilight("color_251", str, args...))
+func PrintlnColor251(str string) {
+	Println(Hilight("color_251", str))
+}
+
+// Color251f wraps Color251 and works with format
+// strings.
+func Color251f(str string, args ...interface{}) string {
+	return Color251(Sprintf(str, args...))
+}
+
+// PrintColor251f wraps PrintColor251 and works with format
+// strings.
+func PrintColor251f(str string, args ...interface{}) {
+	PrintColor251(Sprintf(str, args...))
+}
+
+// PrintlnColor251f wraps PrintlnColor251 and works with format
+// strings.
+func PrintlnColor251f(str string, args ...interface{}) {
+	PrintlnColor251(Sprintf(str, args...))
 }
 
 // OnColor251 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor251(str string, args ...interface{}) string {
-	return Hilight("on_color_251", str, args...)
+func OnColor251(str string) string {
+	return Hilight("on_color_251", str)
 }
 
 // PrintOnColor251 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor251(str string, args ...interface{}) {
-	Print(Hilight("on_color_251", str, args...))
+func PrintOnColor251(str string) {
+	Print(Hilight("on_color_251", str))
 }
 
 // PrintlnOnColor251 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor251(str string, args ...interface{}) {
-	Println(Hilight("on_color_251", str, args...))
+func PrintlnOnColor251(str string) {
+	Println(Hilight("on_color_251", str))
+}
+
+// OnColor251f wraps OnColor251 and works with format
+// strings.
+func OnColor251f(str string, args ...interface{}) string {
+	return OnColor251(Sprintf(str, args...))
+}
+
+// PrintOnColor251f wraps PrintOnColor251 and works with format
+// strings.
+func PrintOnColor251f(str string, args ...interface{}) {
+	PrintOnColor251(Sprintf(str, args...))
+}
+
+// PrintlnOnColor251f wraps PrintlnOnColor251 and works with format
+// strings.
+func PrintlnOnColor251f(str string, args ...interface{}) {
+	PrintlnOnColor251(Sprintf(str, args...))
 }
 
 // Color252 will Hilight() the provided string with the
 // specified ANSI code.
-func Color252(str string, args ...interface{}) string {
-	return Hilight("color_252", str, args...)
+func Color252(str string) string {
+	return Hilight("color_252", str)
 }
 
 // PrintColor252 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor252(str string, args ...interface{}) {
-	Print(Hilight("color_252", str, args...))
+func PrintColor252(str string) {
+	Print(Hilight("color_252", str))
 }
 
 // PrintlnColor252 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor252(str string, args ...interface{}) {
-	Println(Hilight("color_252", str, args...))
+func PrintlnColor252(str string) {
+	Println(Hilight("color_252", str))
+}
+
+// Color252f wraps Color252 and works with format
+// strings.
+func Color252f(str string, args ...interface{}) string {
+	return Color252(Sprintf(str, args...))
+}
+
+// PrintColor252f wraps PrintColor252 and works with format
+// strings.
+func PrintColor252f(str string, args ...interface{}) {
+	PrintColor252(Sprintf(str, args...))
+}
+
+// PrintlnColor252f wraps PrintlnColor252 and works with format
+// strings.
+func PrintlnColor252f(str string, args ...interface{}) {
+	PrintlnColor252(Sprintf(str, args...))
 }
 
 // OnColor252 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor252(str string, args ...interface{}) string {
-	return Hilight("on_color_252", str, args...)
+func OnColor252(str string) string {
+	return Hilight("on_color_252", str)
 }
 
 // PrintOnColor252 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor252(str string, args ...interface{}) {
-	Print(Hilight("on_color_252", str, args...))
+func PrintOnColor252(str string) {
+	Print(Hilight("on_color_252", str))
 }
 
 // PrintlnOnColor252 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor252(str string, args ...interface{}) {
-	Println(Hilight("on_color_252", str, args...))
+func PrintlnOnColor252(str string) {
+	Println(Hilight("on_color_252", str))
+}
+
+// OnColor252f wraps OnColor252 and works with format
+// strings.
+func OnColor252f(str string, args ...interface{}) string {
+	return OnColor252(Sprintf(str, args...))
+}
+
+// PrintOnColor252f wraps PrintOnColor252 and works with format
+// strings.
+func PrintOnColor252f(str string, args ...interface{}) {
+	PrintOnColor252(Sprintf(str, args...))
+}
+
+// PrintlnOnColor252f wraps PrintlnOnColor252 and works with format
+// strings.
+func PrintlnOnColor252f(str string, args ...interface{}) {
+	PrintlnOnColor252(Sprintf(str, args...))
 }
 
 // Color253 will Hilight() the provided string with the
 // specified ANSI code.
-func Color253(str string, args ...interface{}) string {
-	return Hilight("color_253", str, args...)
+func Color253(str string) string {
+	return Hilight("color_253", str)
 }
 
 // PrintColor253 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor253(str string, args ...interface{}) {
-	Print(Hilight("color_253", str, args...))
+func PrintColor253(str string) {
+	Print(Hilight("color_253", str))
 }
 
 // PrintlnColor253 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor253(str string, args ...interface{}) {
-	Println(Hilight("color_253", str, args...))
+func PrintlnColor253(str string) {
+	Println(Hilight("color_253", str))
+}
+
+// Color253f wraps Color253 and works with format
+// strings.
+func Color253f(str string, args ...interface{}) string {
+	return Color253(Sprintf(str, args...))
+}
+
+// PrintColor253f wraps PrintColor253 and works with format
+// strings.
+func PrintColor253f(str string, args ...interface{}) {
+	PrintColor253(Sprintf(str, args...))
+}
+
+// PrintlnColor253f wraps PrintlnColor253 and works with format
+// strings.
+func PrintlnColor253f(str string, args ...interface{}) {
+	PrintlnColor253(Sprintf(str, args...))
 }
 
 // OnColor253 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor253(str string, args ...interface{}) string {
-	return Hilight("on_color_253", str, args...)
+func OnColor253(str string) string {
+	return Hilight("on_color_253", str)
 }
 
 // PrintOnColor253 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor253(str string, args ...interface{}) {
-	Print(Hilight("on_color_253", str, args...))
+func PrintOnColor253(str string) {
+	Print(Hilight("on_color_253", str))
 }
 
 // PrintlnOnColor253 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor253(str string, args ...interface{}) {
-	Println(Hilight("on_color_253", str, args...))
+func PrintlnOnColor253(str string) {
+	Println(Hilight("on_color_253", str))
+}
+
+// OnColor253f wraps OnColor253 and works with format
+// strings.
+func OnColor253f(str string, args ...interface{}) string {
+	return OnColor253(Sprintf(str, args...))
+}
+
+// PrintOnColor253f wraps PrintOnColor253 and works with format
+// strings.
+func PrintOnColor253f(str string, args ...interface{}) {
+	PrintOnColor253(Sprintf(str, args...))
+}
+
+// PrintlnOnColor253f wraps PrintlnOnColor253 and works with format
+// strings.
+func PrintlnOnColor253f(str string, args ...interface{}) {
+	PrintlnOnColor253(Sprintf(str, args...))
 }
 
 // Color254 will Hilight() the provided string with the
 // specified ANSI code.
-func Color254(str string, args ...interface{}) string {
-	return Hilight("color_254", str, args...)
+func Color254(str string) string {
+	return Hilight("color_254", str)
 }
 
 // PrintColor254 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor254(str string, args ...interface{}) {
-	Print(Hilight("color_254", str, args...))
+func PrintColor254(str string) {
+	Print(Hilight("color_254", str))
 }
 
 // PrintlnColor254 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor254(str string, args ...interface{}) {
-	Println(Hilight("color_254", str, args...))
+func PrintlnColor254(str string) {
+	Println(Hilight("color_254", str))
+}
+
+// Color254f wraps Color254 and works with format
+// strings.
+func Color254f(str string, args ...interface{}) string {
+	return Color254(Sprintf(str, args...))
+}
+
+// PrintColor254f wraps PrintColor254 and works with format
+// strings.
+func PrintColor254f(str string, args ...interface{}) {
+	PrintColor254(Sprintf(str, args...))
+}
+
+// PrintlnColor254f wraps PrintlnColor254 and works with format
+// strings.
+func PrintlnColor254f(str string, args ...interface{}) {
+	PrintlnColor254(Sprintf(str, args...))
 }
 
 // OnColor254 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor254(str string, args ...interface{}) string {
-	return Hilight("on_color_254", str, args...)
+func OnColor254(str string) string {
+	return Hilight("on_color_254", str)
 }
 
 // PrintOnColor254 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor254(str string, args ...interface{}) {
-	Print(Hilight("on_color_254", str, args...))
+func PrintOnColor254(str string) {
+	Print(Hilight("on_color_254", str))
 }
 
 // PrintlnOnColor254 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor254(str string, args ...interface{}) {
-	Println(Hilight("on_color_254", str, args...))
+func PrintlnOnColor254(str string) {
+	Println(Hilight("on_color_254", str))
+}
+
+// OnColor254f wraps OnColor254 and works with format
+// strings.
+func OnColor254f(str string, args ...interface{}) string {
+	return OnColor254(Sprintf(str, args...))
+}
+
+// PrintOnColor254f wraps PrintOnColor254 and works with format
+// strings.
+func PrintOnColor254f(str string, args ...interface{}) {
+	PrintOnColor254(Sprintf(str, args...))
+}
+
+// PrintlnOnColor254f wraps PrintlnOnColor254 and works with format
+// strings.
+func PrintlnOnColor254f(str string, args ...interface{}) {
+	PrintlnOnColor254(Sprintf(str, args...))
 }
 
 // Color255 will Hilight() the provided string with the
 // specified ANSI code.
-func Color255(str string, args ...interface{}) string {
-	return Hilight("color_255", str, args...)
+func Color255(str string) string {
+	return Hilight("color_255", str)
 }
 
 // PrintColor255 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintColor255(str string, args ...interface{}) {
-	Print(Hilight("color_255", str, args...))
+func PrintColor255(str string) {
+	Print(Hilight("color_255", str))
 }
 
 // PrintlnColor255 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnColor255(str string, args ...interface{}) {
-	Println(Hilight("color_255", str, args...))
+func PrintlnColor255(str string) {
+	Println(Hilight("color_255", str))
+}
+
+// Color255f wraps Color255 and works with format
+// strings.
+func Color255f(str string, args ...interface{}) string {
+	return Color255(Sprintf(str, args...))
+}
+
+// PrintColor255f wraps PrintColor255 and works with format
+// strings.
+func PrintColor255f(str string, args ...interface{}) {
+	PrintColor255(Sprintf(str, args...))
+}
+
+// PrintlnColor255f wraps PrintlnColor255 and works with format
+// strings.
+func PrintlnColor255f(str string, args ...interface{}) {
+	PrintlnColor255(Sprintf(str, args...))
 }
 
 // OnColor255 will Hilight() the provided string with the
 // specified ANSI code.
-func OnColor255(str string, args ...interface{}) string {
-	return Hilight("on_color_255", str, args...)
+func OnColor255(str string) string {
+	return Hilight("on_color_255", str)
 }
 
 // PrintOnColor255 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintOnColor255(str string, args ...interface{}) {
-	Print(Hilight("on_color_255", str, args...))
+func PrintOnColor255(str string) {
+	Print(Hilight("on_color_255", str))
 }
 
 // PrintlnOnColor255 will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnOnColor255(str string, args ...interface{}) {
-	Println(Hilight("on_color_255", str, args...))
+func PrintlnOnColor255(str string) {
+	Println(Hilight("on_color_255", str))
+}
+
+// OnColor255f wraps OnColor255 and works with format
+// strings.
+func OnColor255f(str string, args ...interface{}) string {
+	return OnColor255(Sprintf(str, args...))
+}
+
+// PrintOnColor255f wraps PrintOnColor255 and works with format
+// strings.
+func PrintOnColor255f(str string, args ...interface{}) {
+	PrintOnColor255(Sprintf(str, args...))
+}
+
+// PrintlnOnColor255f wraps PrintlnOnColor255 and works with format
+// strings.
+func PrintlnOnColor255f(str string, args ...interface{}) {
+	PrintlnOnColor255(Sprintf(str, args...))
 }
 
 // Reset will Hilight() the provided string with the
 // specified ANSI code.
-func Reset(str string, args ...interface{}) string {
-	return Hilight("reset", str, args...)
+func Reset(str string) string {
+	return Hilight("reset", str)
 }
 
 // PrintReset will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintReset(str string, args ...interface{}) {
-	Print(Hilight("reset", str, args...))
+func PrintReset(str string) {
+	Print(Hilight("reset", str))
 }
 
 // PrintlnReset will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnReset(str string, args ...interface{}) {
-	Println(Hilight("reset", str, args...))
+func PrintlnReset(str string) {
+	Println(Hilight("reset", str))
+}
+
+// Resetf wraps Reset and works with format
+// strings.
+func Resetf(str string, args ...interface{}) string {
+	return Reset(Sprintf(str, args...))
+}
+
+// PrintResetf wraps PrintReset and works with format
+// strings.
+func PrintResetf(str string, args ...interface{}) {
+	PrintReset(Sprintf(str, args...))
+}
+
+// PrintlnResetf wraps PrintlnReset and works with format
+// strings.
+func PrintlnResetf(str string, args ...interface{}) {
+	PrintlnReset(Sprintf(str, args...))
 }
 
 // Normal will Hilight() the provided string with the
 // specified ANSI code.
-func Normal(str string, args ...interface{}) string {
-	return Hilight("normal", str, args...)
+func Normal(str string) string {
+	return Hilight("normal", str)
 }
 
 // PrintNormal will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNormal(str string, args ...interface{}) {
-	Print(Hilight("normal", str, args...))
+func PrintNormal(str string) {
+	Print(Hilight("normal", str))
 }
 
 // PrintlnNormal will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNormal(str string, args ...interface{}) {
-	Println(Hilight("normal", str, args...))
+func PrintlnNormal(str string) {
+	Println(Hilight("normal", str))
+}
+
+// Normalf wraps Normal and works with format
+// strings.
+func Normalf(str string, args ...interface{}) string {
+	return Normal(Sprintf(str, args...))
+}
+
+// PrintNormalf wraps PrintNormal and works with format
+// strings.
+func PrintNormalf(str string, args ...interface{}) {
+	PrintNormal(Sprintf(str, args...))
+}
+
+// PrintlnNormalf wraps PrintlnNormal and works with format
+// strings.
+func PrintlnNormalf(str string, args ...interface{}) {
+	PrintlnNormal(Sprintf(str, args...))
 }
 
 // Bold will Hilight() the provided string with the
 // specified ANSI code.
-func Bold(str string, args ...interface{}) string {
-	return Hilight("bold", str, args...)
+func Bold(str string) string {
+	return Hilight("bold", str)
 }
 
 // PrintBold will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintBold(str string, args ...interface{}) {
-	Print(Hilight("bold", str, args...))
+func PrintBold(str string) {
+	Print(Hilight("bold", str))
 }
 
 // PrintlnBold will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnBold(str string, args ...interface{}) {
-	Println(Hilight("bold", str, args...))
+func PrintlnBold(str string) {
+	Println(Hilight("bold", str))
+}
+
+// Boldf wraps Bold and works with format
+// strings.
+func Boldf(str string, args ...interface{}) string {
+	return Bold(Sprintf(str, args...))
+}
+
+// PrintBoldf wraps PrintBold and works with format
+// strings.
+func PrintBoldf(str string, args ...interface{}) {
+	PrintBold(Sprintf(str, args...))
+}
+
+// PrintlnBoldf wraps PrintlnBold and works with format
+// strings.
+func PrintlnBoldf(str string, args ...interface{}) {
+	PrintlnBold(Sprintf(str, args...))
 }
 
 // NoBold will Hilight() the provided string with the
 // specified ANSI code.
-func NoBold(str string, args ...interface{}) string {
-	return Hilight("no_bold", str, args...)
+func NoBold(str string) string {
+	return Hilight("no_bold", str)
 }
 
 // PrintNoBold will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoBold(str string, args ...interface{}) {
-	Print(Hilight("no_bold", str, args...))
+func PrintNoBold(str string) {
+	Print(Hilight("no_bold", str))
 }
 
 // PrintlnNoBold will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoBold(str string, args ...interface{}) {
-	Println(Hilight("no_bold", str, args...))
+func PrintlnNoBold(str string) {
+	Println(Hilight("no_bold", str))
+}
+
+// NoBoldf wraps NoBold and works with format
+// strings.
+func NoBoldf(str string, args ...interface{}) string {
+	return NoBold(Sprintf(str, args...))
+}
+
+// PrintNoBoldf wraps PrintNoBold and works with format
+// strings.
+func PrintNoBoldf(str string, args ...interface{}) {
+	PrintNoBold(Sprintf(str, args...))
+}
+
+// PrintlnNoBoldf wraps PrintlnNoBold and works with format
+// strings.
+func PrintlnNoBoldf(str string, args ...interface{}) {
+	PrintlnNoBold(Sprintf(str, args...))
 }
 
 // Dim will Hilight() the provided string with the
 // specified ANSI code.
-func Dim(str string, args ...interface{}) string {
-	return Hilight("dim", str, args...)
+func Dim(str string) string {
+	return Hilight("dim", str)
 }
 
 // PrintDim will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintDim(str string, args ...interface{}) {
-	Print(Hilight("dim", str, args...))
+func PrintDim(str string) {
+	Print(Hilight("dim", str))
 }
 
 // PrintlnDim will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnDim(str string, args ...interface{}) {
-	Println(Hilight("dim", str, args...))
+func PrintlnDim(str string) {
+	Println(Hilight("dim", str))
+}
+
+// Dimf wraps Dim and works with format
+// strings.
+func Dimf(str string, args ...interface{}) string {
+	return Dim(Sprintf(str, args...))
+}
+
+// PrintDimf wraps PrintDim and works with format
+// strings.
+func PrintDimf(str string, args ...interface{}) {
+	PrintDim(Sprintf(str, args...))
+}
+
+// PrintlnDimf wraps PrintlnDim and works with format
+// strings.
+func PrintlnDimf(str string, args ...interface{}) {
+	PrintlnDim(Sprintf(str, args...))
 }
 
 // NoDim will Hilight() the provided string with the
 // specified ANSI code.
-func NoDim(str string, args ...interface{}) string {
-	return Hilight("no_dim", str, args...)
+func NoDim(str string) string {
+	return Hilight("no_dim", str)
 }
 
 // PrintNoDim will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoDim(str string, args ...interface{}) {
-	Print(Hilight("no_dim", str, args...))
+func PrintNoDim(str string) {
+	Print(Hilight("no_dim", str))
 }
 
 // PrintlnNoDim will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoDim(str string, args ...interface{}) {
-	Println(Hilight("no_dim", str, args...))
+func PrintlnNoDim(str string) {
+	Println(Hilight("no_dim", str))
+}
+
+// NoDimf wraps NoDim and works with format
+// strings.
+func NoDimf(str string, args ...interface{}) string {
+	return NoDim(Sprintf(str, args...))
+}
+
+// PrintNoDimf wraps PrintNoDim and works with format
+// strings.
+func PrintNoDimf(str string, args ...interface{}) {
+	PrintNoDim(Sprintf(str, args...))
+}
+
+// PrintlnNoDimf wraps PrintlnNoDim and works with format
+// strings.
+func PrintlnNoDimf(str string, args ...interface{}) {
+	PrintlnNoDim(Sprintf(str, args...))
 }
 
 // Faint will Hilight() the provided string with the
 // specified ANSI code.
-func Faint(str string, args ...interface{}) string {
-	return Hilight("faint", str, args...)
+func Faint(str string) string {
+	return Hilight("faint", str)
 }
 
 // PrintFaint will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintFaint(str string, args ...interface{}) {
-	Print(Hilight("faint", str, args...))
+func PrintFaint(str string) {
+	Print(Hilight("faint", str))
 }
 
 // PrintlnFaint will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnFaint(str string, args ...interface{}) {
-	Println(Hilight("faint", str, args...))
+func PrintlnFaint(str string) {
+	Println(Hilight("faint", str))
+}
+
+// Faintf wraps Faint and works with format
+// strings.
+func Faintf(str string, args ...interface{}) string {
+	return Faint(Sprintf(str, args...))
+}
+
+// PrintFaintf wraps PrintFaint and works with format
+// strings.
+func PrintFaintf(str string, args ...interface{}) {
+	PrintFaint(Sprintf(str, args...))
+}
+
+// PrintlnFaintf wraps PrintlnFaint and works with format
+// strings.
+func PrintlnFaintf(str string, args ...interface{}) {
+	PrintlnFaint(Sprintf(str, args...))
 }
 
 // NoFaint will Hilight() the provided string with the
 // specified ANSI code.
-func NoFaint(str string, args ...interface{}) string {
-	return Hilight("no_faint", str, args...)
+func NoFaint(str string) string {
+	return Hilight("no_faint", str)
 }
 
 // PrintNoFaint will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoFaint(str string, args ...interface{}) {
-	Print(Hilight("no_faint", str, args...))
+func PrintNoFaint(str string) {
+	Print(Hilight("no_faint", str))
 }
 
 // PrintlnNoFaint will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoFaint(str string, args ...interface{}) {
-	Println(Hilight("no_faint", str, args...))
+func PrintlnNoFaint(str string) {
+	Println(Hilight("no_faint", str))
+}
+
+// NoFaintf wraps NoFaint and works with format
+// strings.
+func NoFaintf(str string, args ...interface{}) string {
+	return NoFaint(Sprintf(str, args...))
+}
+
+// PrintNoFaintf wraps PrintNoFaint and works with format
+// strings.
+func PrintNoFaintf(str string, args ...interface{}) {
+	PrintNoFaint(Sprintf(str, args...))
+}
+
+// PrintlnNoFaintf wraps PrintlnNoFaint and works with format
+// strings.
+func PrintlnNoFaintf(str string, args ...interface{}) {
+	PrintlnNoFaint(Sprintf(str, args...))
 }
 
 // Italic will Hilight() the provided string with the
 // specified ANSI code.
-func Italic(str string, args ...interface{}) string {
-	return Hilight("italic", str, args...)
+func Italic(str string) string {
+	return Hilight("italic", str)
 }
 
 // PrintItalic will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintItalic(str string, args ...interface{}) {
-	Print(Hilight("italic", str, args...))
+func PrintItalic(str string) {
+	Print(Hilight("italic", str))
 }
 
 // PrintlnItalic will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnItalic(str string, args ...interface{}) {
-	Println(Hilight("italic", str, args...))
+func PrintlnItalic(str string) {
+	Println(Hilight("italic", str))
+}
+
+// Italicf wraps Italic and works with format
+// strings.
+func Italicf(str string, args ...interface{}) string {
+	return Italic(Sprintf(str, args...))
+}
+
+// PrintItalicf wraps PrintItalic and works with format
+// strings.
+func PrintItalicf(str string, args ...interface{}) {
+	PrintItalic(Sprintf(str, args...))
+}
+
+// PrintlnItalicf wraps PrintlnItalic and works with format
+// strings.
+func PrintlnItalicf(str string, args ...interface{}) {
+	PrintlnItalic(Sprintf(str, args...))
 }
 
 // NoItalic will Hilight() the provided string with the
 // specified ANSI code.
-func NoItalic(str string, args ...interface{}) string {
-	return Hilight("no_italic", str, args...)
+func NoItalic(str string) string {
+	return Hilight("no_italic", str)
 }
 
 // PrintNoItalic will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoItalic(str string, args ...interface{}) {
-	Print(Hilight("no_italic", str, args...))
+func PrintNoItalic(str string) {
+	Print(Hilight("no_italic", str))
 }
 
 // PrintlnNoItalic will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoItalic(str string, args ...interface{}) {
-	Println(Hilight("no_italic", str, args...))
+func PrintlnNoItalic(str string) {
+	Println(Hilight("no_italic", str))
+}
+
+// NoItalicf wraps NoItalic and works with format
+// strings.
+func NoItalicf(str string, args ...interface{}) string {
+	return NoItalic(Sprintf(str, args...))
+}
+
+// PrintNoItalicf wraps PrintNoItalic and works with format
+// strings.
+func PrintNoItalicf(str string, args ...interface{}) {
+	PrintNoItalic(Sprintf(str, args...))
+}
+
+// PrintlnNoItalicf wraps PrintlnNoItalic and works with format
+// strings.
+func PrintlnNoItalicf(str string, args ...interface{}) {
+	PrintlnNoItalic(Sprintf(str, args...))
 }
 
 // Underline will Hilight() the provided string with the
 // specified ANSI code.
-func Underline(str string, args ...interface{}) string {
-	return Hilight("underline", str, args...)
+func Underline(str string) string {
+	return Hilight("underline", str)
 }
 
 // PrintUnderline will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintUnderline(str string, args ...interface{}) {
-	Print(Hilight("underline", str, args...))
+func PrintUnderline(str string) {
+	Print(Hilight("underline", str))
 }
 
 // PrintlnUnderline will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnUnderline(str string, args ...interface{}) {
-	Println(Hilight("underline", str, args...))
+func PrintlnUnderline(str string) {
+	Println(Hilight("underline", str))
+}
+
+// Underlinef wraps Underline and works with format
+// strings.
+func Underlinef(str string, args ...interface{}) string {
+	return Underline(Sprintf(str, args...))
+}
+
+// PrintUnderlinef wraps PrintUnderline and works with format
+// strings.
+func PrintUnderlinef(str string, args ...interface{}) {
+	PrintUnderline(Sprintf(str, args...))
+}
+
+// PrintlnUnderlinef wraps PrintlnUnderline and works with format
+// strings.
+func PrintlnUnderlinef(str string, args ...interface{}) {
+	PrintlnUnderline(Sprintf(str, args...))
 }
 
 // NoUnderline will Hilight() the provided string with the
 // specified ANSI code.
-func NoUnderline(str string, args ...interface{}) string {
-	return Hilight("no_underline", str, args...)
+func NoUnderline(str string) string {
+	return Hilight("no_underline", str)
 }
 
 // PrintNoUnderline will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoUnderline(str string, args ...interface{}) {
-	Print(Hilight("no_underline", str, args...))
+func PrintNoUnderline(str string) {
+	Print(Hilight("no_underline", str))
 }
 
 // PrintlnNoUnderline will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoUnderline(str string, args ...interface{}) {
-	Println(Hilight("no_underline", str, args...))
+func PrintlnNoUnderline(str string) {
+	Println(Hilight("no_underline", str))
+}
+
+// NoUnderlinef wraps NoUnderline and works with format
+// strings.
+func NoUnderlinef(str string, args ...interface{}) string {
+	return NoUnderline(Sprintf(str, args...))
+}
+
+// PrintNoUnderlinef wraps PrintNoUnderline and works with format
+// strings.
+func PrintNoUnderlinef(str string, args ...interface{}) {
+	PrintNoUnderline(Sprintf(str, args...))
+}
+
+// PrintlnNoUnderlinef wraps PrintlnNoUnderline and works with format
+// strings.
+func PrintlnNoUnderlinef(str string, args ...interface{}) {
+	PrintlnNoUnderline(Sprintf(str, args...))
 }
 
 // Blink will Hilight() the provided string with the
 // specified ANSI code.
-func Blink(str string, args ...interface{}) string {
-	return Hilight("blink", str, args...)
+func Blink(str string) string {
+	return Hilight("blink", str)
 }
 
 // PrintBlink will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintBlink(str string, args ...interface{}) {
-	Print(Hilight("blink", str, args...))
+func PrintBlink(str string) {
+	Print(Hilight("blink", str))
 }
 
 // PrintlnBlink will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnBlink(str string, args ...interface{}) {
-	Println(Hilight("blink", str, args...))
+func PrintlnBlink(str string) {
+	Println(Hilight("blink", str))
+}
+
+// Blinkf wraps Blink and works with format
+// strings.
+func Blinkf(str string, args ...interface{}) string {
+	return Blink(Sprintf(str, args...))
+}
+
+// PrintBlinkf wraps PrintBlink and works with format
+// strings.
+func PrintBlinkf(str string, args ...interface{}) {
+	PrintBlink(Sprintf(str, args...))
+}
+
+// PrintlnBlinkf wraps PrintlnBlink and works with format
+// strings.
+func PrintlnBlinkf(str string, args ...interface{}) {
+	PrintlnBlink(Sprintf(str, args...))
 }
 
 // NoBlink will Hilight() the provided string with the
 // specified ANSI code.
-func NoBlink(str string, args ...interface{}) string {
-	return Hilight("no_blink", str, args...)
+func NoBlink(str string) string {
+	return Hilight("no_blink", str)
 }
 
 // PrintNoBlink will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoBlink(str string, args ...interface{}) {
-	Print(Hilight("no_blink", str, args...))
+func PrintNoBlink(str string) {
+	Print(Hilight("no_blink", str))
 }
 
 // PrintlnNoBlink will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoBlink(str string, args ...interface{}) {
-	Println(Hilight("no_blink", str, args...))
+func PrintlnNoBlink(str string) {
+	Println(Hilight("no_blink", str))
+}
+
+// NoBlinkf wraps NoBlink and works with format
+// strings.
+func NoBlinkf(str string, args ...interface{}) string {
+	return NoBlink(Sprintf(str, args...))
+}
+
+// PrintNoBlinkf wraps PrintNoBlink and works with format
+// strings.
+func PrintNoBlinkf(str string, args ...interface{}) {
+	PrintNoBlink(Sprintf(str, args...))
+}
+
+// PrintlnNoBlinkf wraps PrintlnNoBlink and works with format
+// strings.
+func PrintlnNoBlinkf(str string, args ...interface{}) {
+	PrintlnNoBlink(Sprintf(str, args...))
 }
 
 // BlinkSlow will Hilight() the provided string with the
 // specified ANSI code.
-func BlinkSlow(str string, args ...interface{}) string {
-	return Hilight("blink_slow", str, args...)
+func BlinkSlow(str string) string {
+	return Hilight("blink_slow", str)
 }
 
 // PrintBlinkSlow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintBlinkSlow(str string, args ...interface{}) {
-	Print(Hilight("blink_slow", str, args...))
+func PrintBlinkSlow(str string) {
+	Print(Hilight("blink_slow", str))
 }
 
 // PrintlnBlinkSlow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnBlinkSlow(str string, args ...interface{}) {
-	Println(Hilight("blink_slow", str, args...))
+func PrintlnBlinkSlow(str string) {
+	Println(Hilight("blink_slow", str))
+}
+
+// BlinkSlowf wraps BlinkSlow and works with format
+// strings.
+func BlinkSlowf(str string, args ...interface{}) string {
+	return BlinkSlow(Sprintf(str, args...))
+}
+
+// PrintBlinkSlowf wraps PrintBlinkSlow and works with format
+// strings.
+func PrintBlinkSlowf(str string, args ...interface{}) {
+	PrintBlinkSlow(Sprintf(str, args...))
+}
+
+// PrintlnBlinkSlowf wraps PrintlnBlinkSlow and works with format
+// strings.
+func PrintlnBlinkSlowf(str string, args ...interface{}) {
+	PrintlnBlinkSlow(Sprintf(str, args...))
 }
 
 // NoBlinkSlow will Hilight() the provided string with the
 // specified ANSI code.
-func NoBlinkSlow(str string, args ...interface{}) string {
-	return Hilight("no_blink_slow", str, args...)
+func NoBlinkSlow(str string) string {
+	return Hilight("no_blink_slow", str)
 }
 
 // PrintNoBlinkSlow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoBlinkSlow(str string, args ...interface{}) {
-	Print(Hilight("no_blink_slow", str, args...))
+func PrintNoBlinkSlow(str string) {
+	Print(Hilight("no_blink_slow", str))
 }
 
 // PrintlnNoBlinkSlow will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoBlinkSlow(str string, args ...interface{}) {
-	Println(Hilight("no_blink_slow", str, args...))
+func PrintlnNoBlinkSlow(str string) {
+	Println(Hilight("no_blink_slow", str))
+}
+
+// NoBlinkSlowf wraps NoBlinkSlow and works with format
+// strings.
+func NoBlinkSlowf(str string, args ...interface{}) string {
+	return NoBlinkSlow(Sprintf(str, args...))
+}
+
+// PrintNoBlinkSlowf wraps PrintNoBlinkSlow and works with format
+// strings.
+func PrintNoBlinkSlowf(str string, args ...interface{}) {
+	PrintNoBlinkSlow(Sprintf(str, args...))
+}
+
+// PrintlnNoBlinkSlowf wraps PrintlnNoBlinkSlow and works with format
+// strings.
+func PrintlnNoBlinkSlowf(str string, args ...interface{}) {
+	PrintlnNoBlinkSlow(Sprintf(str, args...))
 }
 
 // BlinkRapid will Hilight() the provided string with the
 // specified ANSI code.
-func BlinkRapid(str string, args ...interface{}) string {
-	return Hilight("blink_rapid", str, args...)
+func BlinkRapid(str string) string {
+	return Hilight("blink_rapid", str)
 }
 
 // PrintBlinkRapid will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintBlinkRapid(str string, args ...interface{}) {
-	Print(Hilight("blink_rapid", str, args...))
+func PrintBlinkRapid(str string) {
+	Print(Hilight("blink_rapid", str))
 }
 
 // PrintlnBlinkRapid will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnBlinkRapid(str string, args ...interface{}) {
-	Println(Hilight("blink_rapid", str, args...))
+func PrintlnBlinkRapid(str string) {
+	Println(Hilight("blink_rapid", str))
+}
+
+// BlinkRapidf wraps BlinkRapid and works with format
+// strings.
+func BlinkRapidf(str string, args ...interface{}) string {
+	return BlinkRapid(Sprintf(str, args...))
+}
+
+// PrintBlinkRapidf wraps PrintBlinkRapid and works with format
+// strings.
+func PrintBlinkRapidf(str string, args ...interface{}) {
+	PrintBlinkRapid(Sprintf(str, args...))
+}
+
+// PrintlnBlinkRapidf wraps PrintlnBlinkRapid and works with format
+// strings.
+func PrintlnBlinkRapidf(str string, args ...interface{}) {
+	PrintlnBlinkRapid(Sprintf(str, args...))
 }
 
 // NoBlinkRapid will Hilight() the provided string with the
 // specified ANSI code.
-func NoBlinkRapid(str string, args ...interface{}) string {
-	return Hilight("no_blink_rapid", str, args...)
+func NoBlinkRapid(str string) string {
+	return Hilight("no_blink_rapid", str)
 }
 
 // PrintNoBlinkRapid will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoBlinkRapid(str string, args ...interface{}) {
-	Print(Hilight("no_blink_rapid", str, args...))
+func PrintNoBlinkRapid(str string) {
+	Print(Hilight("no_blink_rapid", str))
 }
 
 // PrintlnNoBlinkRapid will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoBlinkRapid(str string, args ...interface{}) {
-	Println(Hilight("no_blink_rapid", str, args...))
+func PrintlnNoBlinkRapid(str string) {
+	Println(Hilight("no_blink_rapid", str))
+}
+
+// NoBlinkRapidf wraps NoBlinkRapid and works with format
+// strings.
+func NoBlinkRapidf(str string, args ...interface{}) string {
+	return NoBlinkRapid(Sprintf(str, args...))
+}
+
+// PrintNoBlinkRapidf wraps PrintNoBlinkRapid and works with format
+// strings.
+func PrintNoBlinkRapidf(str string, args ...interface{}) {
+	PrintNoBlinkRapid(Sprintf(str, args...))
+}
+
+// PrintlnNoBlinkRapidf wraps PrintlnNoBlinkRapid and works with format
+// strings.
+func PrintlnNoBlinkRapidf(str string, args ...interface{}) {
+	PrintlnNoBlinkRapid(Sprintf(str, args...))
 }
 
 // Inverse will Hilight() the provided string with the
 // specified ANSI code.
-func Inverse(str string, args ...interface{}) string {
-	return Hilight("inverse", str, args...)
+func Inverse(str string) string {
+	return Hilight("inverse", str)
 }
 
 // PrintInverse will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintInverse(str string, args ...interface{}) {
-	Print(Hilight("inverse", str, args...))
+func PrintInverse(str string) {
+	Print(Hilight("inverse", str))
 }
 
 // PrintlnInverse will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnInverse(str string, args ...interface{}) {
-	Println(Hilight("inverse", str, args...))
+func PrintlnInverse(str string) {
+	Println(Hilight("inverse", str))
+}
+
+// Inversef wraps Inverse and works with format
+// strings.
+func Inversef(str string, args ...interface{}) string {
+	return Inverse(Sprintf(str, args...))
+}
+
+// PrintInversef wraps PrintInverse and works with format
+// strings.
+func PrintInversef(str string, args ...interface{}) {
+	PrintInverse(Sprintf(str, args...))
+}
+
+// PrintlnInversef wraps PrintlnInverse and works with format
+// strings.
+func PrintlnInversef(str string, args ...interface{}) {
+	PrintlnInverse(Sprintf(str, args...))
 }
 
 // NoInverse will Hilight() the provided string with the
 // specified ANSI code.
-func NoInverse(str string, args ...interface{}) string {
-	return Hilight("no_inverse", str, args...)
+func NoInverse(str string) string {
+	return Hilight("no_inverse", str)
 }
 
 // PrintNoInverse will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoInverse(str string, args ...interface{}) {
-	Print(Hilight("no_inverse", str, args...))
+func PrintNoInverse(str string) {
+	Print(Hilight("no_inverse", str))
 }
 
 // PrintlnNoInverse will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoInverse(str string, args ...interface{}) {
-	Println(Hilight("no_inverse", str, args...))
+func PrintlnNoInverse(str string) {
+	Println(Hilight("no_inverse", str))
+}
+
+// NoInversef wraps NoInverse and works with format
+// strings.
+func NoInversef(str string, args ...interface{}) string {
+	return NoInverse(Sprintf(str, args...))
+}
+
+// PrintNoInversef wraps PrintNoInverse and works with format
+// strings.
+func PrintNoInversef(str string, args ...interface{}) {
+	PrintNoInverse(Sprintf(str, args...))
+}
+
+// PrintlnNoInversef wraps PrintlnNoInverse and works with format
+// strings.
+func PrintlnNoInversef(str string, args ...interface{}) {
+	PrintlnNoInverse(Sprintf(str, args...))
 }
 
 // Negative will Hilight() the provided string with the
 // specified ANSI code.
-func Negative(str string, args ...interface{}) string {
-	return Hilight("negative", str, args...)
+func Negative(str string) string {
+	return Hilight("negative", str)
 }
 
 // PrintNegative will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNegative(str string, args ...interface{}) {
-	Print(Hilight("negative", str, args...))
+func PrintNegative(str string) {
+	Print(Hilight("negative", str))
 }
 
 // PrintlnNegative will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNegative(str string, args ...interface{}) {
-	Println(Hilight("negative", str, args...))
+func PrintlnNegative(str string) {
+	Println(Hilight("negative", str))
+}
+
+// Negativef wraps Negative and works with format
+// strings.
+func Negativef(str string, args ...interface{}) string {
+	return Negative(Sprintf(str, args...))
+}
+
+// PrintNegativef wraps PrintNegative and works with format
+// strings.
+func PrintNegativef(str string, args ...interface{}) {
+	PrintNegative(Sprintf(str, args...))
+}
+
+// PrintlnNegativef wraps PrintlnNegative and works with format
+// strings.
+func PrintlnNegativef(str string, args ...interface{}) {
+	PrintlnNegative(Sprintf(str, args...))
 }
 
 // NoNegative will Hilight() the provided string with the
 // specified ANSI code.
-func NoNegative(str string, args ...interface{}) string {
-	return Hilight("no_negative", str, args...)
+func NoNegative(str string) string {
+	return Hilight("no_negative", str)
 }
 
 // PrintNoNegative will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoNegative(str string, args ...interface{}) {
-	Print(Hilight("no_negative", str, args...))
+func PrintNoNegative(str string) {
+	Print(Hilight("no_negative", str))
 }
 
 // PrintlnNoNegative will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoNegative(str string, args ...interface{}) {
-	Println(Hilight("no_negative", str, args...))
+func PrintlnNoNegative(str string) {
+	Println(Hilight("no_negative", str))
+}
+
+// NoNegativef wraps NoNegative and works with format
+// strings.
+func NoNegativef(str string, args ...interface{}) string {
+	return NoNegative(Sprintf(str, args...))
+}
+
+// PrintNoNegativef wraps PrintNoNegative and works with format
+// strings.
+func PrintNoNegativef(str string, args ...interface{}) {
+	PrintNoNegative(Sprintf(str, args...))
+}
+
+// PrintlnNoNegativef wraps PrintlnNoNegative and works with format
+// strings.
+func PrintlnNoNegativef(str string, args ...interface{}) {
+	PrintlnNoNegative(Sprintf(str, args...))
 }
 
 // Swap will Hilight() the provided string with the
 // specified ANSI code.
-func Swap(str string, args ...interface{}) string {
-	return Hilight("swap", str, args...)
+func Swap(str string) string {
+	return Hilight("swap", str)
 }
 
 // PrintSwap will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintSwap(str string, args ...interface{}) {
-	Print(Hilight("swap", str, args...))
+func PrintSwap(str string) {
+	Print(Hilight("swap", str))
 }
 
 // PrintlnSwap will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnSwap(str string, args ...interface{}) {
-	Println(Hilight("swap", str, args...))
+func PrintlnSwap(str string) {
+	Println(Hilight("swap", str))
+}
+
+// Swapf wraps Swap and works with format
+// strings.
+func Swapf(str string, args ...interface{}) string {
+	return Swap(Sprintf(str, args...))
+}
+
+// PrintSwapf wraps PrintSwap and works with format
+// strings.
+func PrintSwapf(str string, args ...interface{}) {
+	PrintSwap(Sprintf(str, args...))
+}
+
+// PrintlnSwapf wraps PrintlnSwap and works with format
+// strings.
+func PrintlnSwapf(str string, args ...interface{}) {
+	PrintlnSwap(Sprintf(str, args...))
 }
 
 // NoSwap will Hilight() the provided string with the
 // specified ANSI code.
-func NoSwap(str string, args ...interface{}) string {
-	return Hilight("no_swap", str, args...)
+func NoSwap(str string) string {
+	return Hilight("no_swap", str)
 }
 
 // PrintNoSwap will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoSwap(str string, args ...interface{}) {
-	Print(Hilight("no_swap", str, args...))
+func PrintNoSwap(str string) {
+	Print(Hilight("no_swap", str))
 }
 
 // PrintlnNoSwap will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoSwap(str string, args ...interface{}) {
-	Println(Hilight("no_swap", str, args...))
+func PrintlnNoSwap(str string) {
+	Println(Hilight("no_swap", str))
+}
+
+// NoSwapf wraps NoSwap and works with format
+// strings.
+func NoSwapf(str string, args ...interface{}) string {
+	return NoSwap(Sprintf(str, args...))
+}
+
+// PrintNoSwapf wraps PrintNoSwap and works with format
+// strings.
+func PrintNoSwapf(str string, args ...interface{}) {
+	PrintNoSwap(Sprintf(str, args...))
+}
+
+// PrintlnNoSwapf wraps PrintlnNoSwap and works with format
+// strings.
+func PrintlnNoSwapf(str string, args ...interface{}) {
+	PrintlnNoSwap(Sprintf(str, args...))
 }
 
 // Hide will Hilight() the provided string with the
 // specified ANSI code.
-func Hide(str string, args ...interface{}) string {
-	return Hilight("hide", str, args...)
+func Hide(str string) string {
+	return Hilight("hide", str)
 }
 
 // PrintHide will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintHide(str string, args ...interface{}) {
-	Print(Hilight("hide", str, args...))
+func PrintHide(str string) {
+	Print(Hilight("hide", str))
 }
 
 // PrintlnHide will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnHide(str string, args ...interface{}) {
-	Println(Hilight("hide", str, args...))
+func PrintlnHide(str string) {
+	Println(Hilight("hide", str))
+}
+
+// Hidef wraps Hide and works with format
+// strings.
+func Hidef(str string, args ...interface{}) string {
+	return Hide(Sprintf(str, args...))
+}
+
+// PrintHidef wraps PrintHide and works with format
+// strings.
+func PrintHidef(str string, args ...interface{}) {
+	PrintHide(Sprintf(str, args...))
+}
+
+// PrintlnHidef wraps PrintlnHide and works with format
+// strings.
+func PrintlnHidef(str string, args ...interface{}) {
+	PrintlnHide(Sprintf(str, args...))
 }
 
 // NoHide will Hilight() the provided string with the
 // specified ANSI code.
-func NoHide(str string, args ...interface{}) string {
-	return Hilight("no_hide", str, args...)
+func NoHide(str string) string {
+	return Hilight("no_hide", str)
 }
 
 // PrintNoHide will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoHide(str string, args ...interface{}) {
-	Print(Hilight("no_hide", str, args...))
+func PrintNoHide(str string) {
+	Print(Hilight("no_hide", str))
 }
 
 // PrintlnNoHide will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoHide(str string, args ...interface{}) {
-	Println(Hilight("no_hide", str, args...))
+func PrintlnNoHide(str string) {
+	Println(Hilight("no_hide", str))
+}
+
+// NoHidef wraps NoHide and works with format
+// strings.
+func NoHidef(str string, args ...interface{}) string {
+	return NoHide(Sprintf(str, args...))
+}
+
+// PrintNoHidef wraps PrintNoHide and works with format
+// strings.
+func PrintNoHidef(str string, args ...interface{}) {
+	PrintNoHide(Sprintf(str, args...))
+}
+
+// PrintlnNoHidef wraps PrintlnNoHide and works with format
+// strings.
+func PrintlnNoHidef(str string, args ...interface{}) {
+	PrintlnNoHide(Sprintf(str, args...))
 }
 
 // Conceal will Hilight() the provided string with the
 // specified ANSI code.
-func Conceal(str string, args ...interface{}) string {
-	return Hilight("conceal", str, args...)
+func Conceal(str string) string {
+	return Hilight("conceal", str)
 }
 
 // PrintConceal will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintConceal(str string, args ...interface{}) {
-	Print(Hilight("conceal", str, args...))
+func PrintConceal(str string) {
+	Print(Hilight("conceal", str))
 }
 
 // PrintlnConceal will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnConceal(str string, args ...interface{}) {
-	Println(Hilight("conceal", str, args...))
+func PrintlnConceal(str string) {
+	Println(Hilight("conceal", str))
+}
+
+// Concealf wraps Conceal and works with format
+// strings.
+func Concealf(str string, args ...interface{}) string {
+	return Conceal(Sprintf(str, args...))
+}
+
+// PrintConcealf wraps PrintConceal and works with format
+// strings.
+func PrintConcealf(str string, args ...interface{}) {
+	PrintConceal(Sprintf(str, args...))
+}
+
+// PrintlnConcealf wraps PrintlnConceal and works with format
+// strings.
+func PrintlnConcealf(str string, args ...interface{}) {
+	PrintlnConceal(Sprintf(str, args...))
 }
 
 // NoConceal will Hilight() the provided string with the
 // specified ANSI code.
-func NoConceal(str string, args ...interface{}) string {
-	return Hilight("no_conceal", str, args...)
+func NoConceal(str string) string {
+	return Hilight("no_conceal", str)
 }
 
 // PrintNoConceal will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoConceal(str string, args ...interface{}) {
-	Print(Hilight("no_conceal", str, args...))
+func PrintNoConceal(str string) {
+	Print(Hilight("no_conceal", str))
 }
 
 // PrintlnNoConceal will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoConceal(str string, args ...interface{}) {
-	Println(Hilight("no_conceal", str, args...))
+func PrintlnNoConceal(str string) {
+	Println(Hilight("no_conceal", str))
+}
+
+// NoConcealf wraps NoConceal and works with format
+// strings.
+func NoConcealf(str string, args ...interface{}) string {
+	return NoConceal(Sprintf(str, args...))
+}
+
+// PrintNoConcealf wraps PrintNoConceal and works with format
+// strings.
+func PrintNoConcealf(str string, args ...interface{}) {
+	PrintNoConceal(Sprintf(str, args...))
+}
+
+// PrintlnNoConcealf wraps PrintlnNoConceal and works with format
+// strings.
+func PrintlnNoConcealf(str string, args ...interface{}) {
+	PrintlnNoConceal(Sprintf(str, args...))
 }
 
 // CrossedOut will Hilight() the provided string with the
 // specified ANSI code.
-func CrossedOut(str string, args ...interface{}) string {
-	return Hilight("crossed_out", str, args...)
+func CrossedOut(str string) string {
+	return Hilight("crossed_out", str)
 }
 
 // PrintCrossedOut will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintCrossedOut(str string, args ...interface{}) {
-	Print(Hilight("crossed_out", str, args...))
+func PrintCrossedOut(str string) {
+	Print(Hilight("crossed_out", str))
 }
 
 // PrintlnCrossedOut will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnCrossedOut(str string, args ...interface{}) {
-	Println(Hilight("crossed_out", str, args...))
+func PrintlnCrossedOut(str string) {
+	Println(Hilight("crossed_out", str))
+}
+
+// CrossedOutf wraps CrossedOut and works with format
+// strings.
+func CrossedOutf(str string, args ...interface{}) string {
+	return CrossedOut(Sprintf(str, args...))
+}
+
+// PrintCrossedOutf wraps PrintCrossedOut and works with format
+// strings.
+func PrintCrossedOutf(str string, args ...interface{}) {
+	PrintCrossedOut(Sprintf(str, args...))
+}
+
+// PrintlnCrossedOutf wraps PrintlnCrossedOut and works with format
+// strings.
+func PrintlnCrossedOutf(str string, args ...interface{}) {
+	PrintlnCrossedOut(Sprintf(str, args...))
 }
 
 // NoCrossedOut will Hilight() the provided string with the
 // specified ANSI code.
-func NoCrossedOut(str string, args ...interface{}) string {
-	return Hilight("no_crossed_out", str, args...)
+func NoCrossedOut(str string) string {
+	return Hilight("no_crossed_out", str)
 }
 
 // PrintNoCrossedOut will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoCrossedOut(str string, args ...interface{}) {
-	Print(Hilight("no_crossed_out", str, args...))
+func PrintNoCrossedOut(str string) {
+	Print(Hilight("no_crossed_out", str))
 }
 
 // PrintlnNoCrossedOut will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoCrossedOut(str string, args ...interface{}) {
-	Println(Hilight("no_crossed_out", str, args...))
+func PrintlnNoCrossedOut(str string) {
+	Println(Hilight("no_crossed_out", str))
+}
+
+// NoCrossedOutf wraps NoCrossedOut and works with format
+// strings.
+func NoCrossedOutf(str string, args ...interface{}) string {
+	return NoCrossedOut(Sprintf(str, args...))
+}
+
+// PrintNoCrossedOutf wraps PrintNoCrossedOut and works with format
+// strings.
+func PrintNoCrossedOutf(str string, args ...interface{}) {
+	PrintNoCrossedOut(Sprintf(str, args...))
+}
+
+// PrintlnNoCrossedOutf wraps PrintlnNoCrossedOut and works with format
+// strings.
+func PrintlnNoCrossedOutf(str string, args ...interface{}) {
+	PrintlnNoCrossedOut(Sprintf(str, args...))
 }
 
 // Strikethrough will Hilight() the provided string with the
 // specified ANSI code.
-func Strikethrough(str string, args ...interface{}) string {
-	return Hilight("strikethrough", str, args...)
+func Strikethrough(str string) string {
+	return Hilight("strikethrough", str)
 }
 
 // PrintStrikethrough will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintStrikethrough(str string, args ...interface{}) {
-	Print(Hilight("strikethrough", str, args...))
+func PrintStrikethrough(str string) {
+	Print(Hilight("strikethrough", str))
 }
 
 // PrintlnStrikethrough will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnStrikethrough(str string, args ...interface{}) {
-	Println(Hilight("strikethrough", str, args...))
+func PrintlnStrikethrough(str string) {
+	Println(Hilight("strikethrough", str))
+}
+
+// Strikethroughf wraps Strikethrough and works with format
+// strings.
+func Strikethroughf(str string, args ...interface{}) string {
+	return Strikethrough(Sprintf(str, args...))
+}
+
+// PrintStrikethroughf wraps PrintStrikethrough and works with format
+// strings.
+func PrintStrikethroughf(str string, args ...interface{}) {
+	PrintStrikethrough(Sprintf(str, args...))
+}
+
+// PrintlnStrikethroughf wraps PrintlnStrikethrough and works with format
+// strings.
+func PrintlnStrikethroughf(str string, args ...interface{}) {
+	PrintlnStrikethrough(Sprintf(str, args...))
 }
 
 // NoStrikethrough will Hilight() the provided string with the
 // specified ANSI code.
-func NoStrikethrough(str string, args ...interface{}) string {
-	return Hilight("no_strikethrough", str, args...)
+func NoStrikethrough(str string) string {
+	return Hilight("no_strikethrough", str)
 }
 
 // PrintNoStrikethrough will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoStrikethrough(str string, args ...interface{}) {
-	Print(Hilight("no_strikethrough", str, args...))
+func PrintNoStrikethrough(str string) {
+	Print(Hilight("no_strikethrough", str))
 }
 
 // PrintlnNoStrikethrough will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoStrikethrough(str string, args ...interface{}) {
-	Println(Hilight("no_strikethrough", str, args...))
+func PrintlnNoStrikethrough(str string) {
+	Println(Hilight("no_strikethrough", str))
+}
+
+// NoStrikethroughf wraps NoStrikethrough and works with format
+// strings.
+func NoStrikethroughf(str string, args ...interface{}) string {
+	return NoStrikethrough(Sprintf(str, args...))
+}
+
+// PrintNoStrikethroughf wraps PrintNoStrikethrough and works with format
+// strings.
+func PrintNoStrikethroughf(str string, args ...interface{}) {
+	PrintNoStrikethrough(Sprintf(str, args...))
+}
+
+// PrintlnNoStrikethroughf wraps PrintlnNoStrikethrough and works with format
+// strings.
+func PrintlnNoStrikethroughf(str string, args ...interface{}) {
+	PrintlnNoStrikethrough(Sprintf(str, args...))
 }
 
 // Fraktur will Hilight() the provided string with the
 // specified ANSI code.
-func Fraktur(str string, args ...interface{}) string {
-	return Hilight("fraktur", str, args...)
+func Fraktur(str string) string {
+	return Hilight("fraktur", str)
 }
 
 // PrintFraktur will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintFraktur(str string, args ...interface{}) {
-	Print(Hilight("fraktur", str, args...))
+func PrintFraktur(str string) {
+	Print(Hilight("fraktur", str))
 }
 
 // PrintlnFraktur will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnFraktur(str string, args ...interface{}) {
-	Println(Hilight("fraktur", str, args...))
+func PrintlnFraktur(str string) {
+	Println(Hilight("fraktur", str))
+}
+
+// Frakturf wraps Fraktur and works with format
+// strings.
+func Frakturf(str string, args ...interface{}) string {
+	return Fraktur(Sprintf(str, args...))
+}
+
+// PrintFrakturf wraps PrintFraktur and works with format
+// strings.
+func PrintFrakturf(str string, args ...interface{}) {
+	PrintFraktur(Sprintf(str, args...))
+}
+
+// PrintlnFrakturf wraps PrintlnFraktur and works with format
+// strings.
+func PrintlnFrakturf(str string, args ...interface{}) {
+	PrintlnFraktur(Sprintf(str, args...))
 }
 
 // NoFraktur will Hilight() the provided string with the
 // specified ANSI code.
-func NoFraktur(str string, args ...interface{}) string {
-	return Hilight("no_fraktur", str, args...)
+func NoFraktur(str string) string {
+	return Hilight("no_fraktur", str)
 }
 
 // PrintNoFraktur will Hilight() the provided string with the
 // specified ANSI code and call fmt.Print(args ...interface{}).
-func PrintNoFraktur(str string, args ...interface{}) {
-	Print(Hilight("no_fraktur", str, args...))
+func PrintNoFraktur(str string) {
+	Print(Hilight("no_fraktur", str))
 }
 
 // PrintlnNoFraktur will Hilight() the provided string with the
 // specified ANSI code and call fmt.Println(args ...interface{}).
-func PrintlnNoFraktur(str string, args ...interface{}) {
-	Println(Hilight("no_fraktur", str, args...))
+func PrintlnNoFraktur(str string) {
+	Println(Hilight("no_fraktur", str))
+}
+
+// NoFrakturf wraps NoFraktur and works with format
+// strings.
+func NoFrakturf(str string, args ...interface{}) string {
+	return NoFraktur(Sprintf(str, args...))
+}
+
+// PrintNoFrakturf wraps PrintNoFraktur and works with format
+// strings.
+func PrintNoFrakturf(str string, args ...interface{}) {
+	PrintNoFraktur(Sprintf(str, args...))
+}
+
+// PrintlnNoFrakturf wraps PrintlnNoFraktur and works with format
+// strings.
+func PrintlnNoFrakturf(str string, args ...interface{}) {
+	PrintlnNoFraktur(Sprintf(str, args...))
+}
+
+// Hexf wraps Hex and works with format
+// strings.
+func Hexf(hex string, str string, args ...interface{}) string {
+	return Hex(hex, Sprintf(str, args...))
+}
+
+// Hilightf wraps Hilight and works with format
+// strings.
+func Hilightf(code string, str string, args ...interface{}) string {
+	return Hilight(code, Sprintf(str, args...))
+}
+
+// Hilightsf wraps Hilights and works with format
+// strings.
+func Hilightsf(codes []string, str string, args ...interface{}) string {
+	return Hilights(codes, Sprintf(str, args...))
+}
+
+// OnHexf wraps OnHex and works with format
+// strings.
+func OnHexf(hex string, str string, args ...interface{}) string {
+	return OnHex(hex, Sprintf(str, args...))
+}
+
+// OnRainbowf wraps OnRainbow and works with format
+// strings.
+func OnRainbowf(str string, args ...interface{}) string {
+	return OnRainbow(Sprintf(str, args...))
+}
+
+// Plainf wraps Plain and works with format
+// strings.
+func Plainf(str string, args ...interface{}) string {
+	return Plain(Sprintf(str, args...))
+}
+
+// Rainbowf wraps Rainbow and works with format
+// strings.
+func Rainbowf(str string, args ...interface{}) string {
+	return Rainbow(Sprintf(str, args...))
+}
+
+// Wrapf wraps Wrap and works with format
+// strings.
+func Wrapf(width int, str string, args ...interface{}) string {
+	return Wrap(width, Sprintf(str, args...))
+}
+
+// PrintHexf wraps PrintHex and works with format
+// strings.
+func PrintHexf(hex string, str string, args ...interface{}) {
+	PrintHex(hex, Sprintf(str, args...))
+}
+
+// PrintOnHexf wraps PrintOnHex and works with format
+// strings.
+func PrintOnHexf(hex string, str string, args ...interface{}) {
+	PrintOnHex(hex, Sprintf(str, args...))
+}
+
+// PrintlnHexf wraps PrintlnHex and works with format
+// strings.
+func PrintlnHexf(hex string, str string, args ...interface{}) {
+	PrintlnHex(hex, Sprintf(str, args...))
+}
+
+// PrintlnOnHexf wraps PrintlnOnHex and works with format
+// strings.
+func PrintlnOnHexf(hex string, str string, args ...interface{}) {
+	PrintlnOnHex(hex, Sprintf(str, args...))
+}
+
+// PrintHilightf wraps PrintHilight and works with format
+// strings.
+func PrintHilightf(code string, str string, args ...interface{}) {
+	PrintHilight(code, Sprintf(str, args...))
+}
+
+// PrintlnHilightf wraps PrintlnHilight and works with format
+// strings.
+func PrintlnHilightf(code string, str string, args ...interface{}) {
+	PrintlnHilight(code, Sprintf(str, args...))
+}
+
+// PrintHilightsf wraps PrintHilights and works with format
+// strings.
+func PrintHilightsf(codes []string, str string, args ...interface{}) {
+	PrintHilights(codes, Sprintf(str, args...))
+}
+
+// PrintlnHilightsf wraps PrintlnHilights and works with format
+// strings.
+func PrintlnHilightsf(codes []string, str string, args ...interface{}) {
+	PrintlnHilights(codes, Sprintf(str, args...))
+}
+
+// PrintRainbowf wraps PrintRainbow and works with format
+// strings.
+func PrintRainbowf(str string, args ...interface{}) {
+	PrintRainbow(Sprintf(str, args...))
+}
+
+// PrintOnRainbowf wraps PrintOnRainbow and works with format
+// strings.
+func PrintOnRainbowf(str string, args ...interface{}) {
+	PrintOnRainbow(Sprintf(str, args...))
+}
+
+// PrintlnRainbowf wraps PrintlnRainbow and works with format
+// strings.
+func PrintlnRainbowf(str string, args ...interface{}) {
+	PrintlnRainbow(Sprintf(str, args...))
+}
+
+// PrintlnOnRainbowf wraps PrintlnOnRainbow and works with format
+// strings.
+func PrintlnOnRainbowf(str string, args ...interface{}) {
+	PrintlnOnRainbow(Sprintf(str, args...))
+}
+
+// PrintWrapf wraps PrintWrap and works with format
+// strings.
+func PrintWrapf(width int, str string, args ...interface{}) {
+	PrintWrap(width, Sprintf(str, args...))
+}
+
+// PrintlnWrapf wraps PrintlnWrap and works with format
+// strings.
+func PrintlnWrapf(width int, str string, args ...interface{}) {
+	PrintlnWrap(width, Sprintf(str, args...))
 }

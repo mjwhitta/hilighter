@@ -8,13 +8,13 @@ import (
 	"strings"
 )
 
-func bgColor(code string, str string, args ...interface{}) string {
+func bgColor(code string, str string) string {
 	var colorized string
 
 	// Strip all other bg color codes and don't extend bg color over
 	// newlines
 	str = newline.ReplaceAllString(
-		plainBg(str, args...),
+		plainBg(str),
 		"\x1b["+Colors["on_default"]+"m\n\x1b["+Colors[code]+"m",
 	)
 
@@ -26,26 +26,26 @@ func bgColor(code string, str string, args ...interface{}) string {
 	return onlyCodes.ReplaceAllString(colorized, "$1$4")
 }
 
-func colorize(clr string, str string, args ...interface{}) string {
+func colorize(clr string, str string) string {
 	if Disable {
 		// Return the string w/o any color codes
-		return Plain(str, args...)
+		return Plain(str)
 	}
 
 	// Call the appropriate function
 	if strings.HasPrefix(clr, "on_") {
-		return bgColor(clr, str, args...)
+		return bgColor(clr, str)
 	}
-	return fgColor(clr, str, args...)
+	return fgColor(clr, str)
 }
 
-func fgColor(code string, str string, args ...interface{}) string {
+func fgColor(code string, str string) string {
 	var colorized string
 
 	// Strip all other fg color codes and don't extend fg color over
 	// newlines
 	str = newline.ReplaceAllString(
-		plainFg(str, args...),
+		plainFg(str),
 		"\x1b["+Colors["default"]+"m\n\x1b["+Colors[code]+"m",
 	)
 
@@ -59,8 +59,8 @@ func fgColor(code string, str string, args ...interface{}) string {
 
 // Hex will take a hex color code and add the appropriate ANSI color
 // codes to the provided string.
-func Hex(hex string, str string, args ...interface{}) string {
-	return colorize(hexToXterm256(hex), str, args...)
+func Hex(hex string, str string) string {
+	return colorize(hexToXterm256(hex), str)
 }
 
 // Convert hex to xterm-256 8-bit value
@@ -167,7 +167,7 @@ func hexToXterm256(hex string) string {
 
 // Hilight will add the appropriate ANSI code to the specified
 // string.
-func Hilight(code string, str string, args ...interface{}) string {
+func Hilight(code string, str string) string {
 	var clr string
 	var hasKey bool
 	var matches [][]string
@@ -175,17 +175,17 @@ func Hilight(code string, str string, args ...interface{}) string {
 
 	// Call the appropriate function
 	if _, hasKey = Colors[code]; hasKey {
-		return colorize(code, str, args...)
+		return colorize(code, str)
 	} else if _, hasKey = Modes[code]; hasKey {
-		return modify(code, str, args...)
+		return modify(code, str)
 	} else {
 		switch code {
 		case "on_rainbow":
-			return OnRainbow(str, args...)
+			return OnRainbow(str)
 		case "plain":
-			return Plain(str, args...)
+			return Plain(str)
 		case "rainbow":
-			return Rainbow(str, args...)
+			return Rainbow(str)
 		default:
 			// Check if hex color code
 			matches = hexCode.FindAllStringSubmatch(code, -1)
@@ -194,7 +194,7 @@ func Hilight(code string, str string, args ...interface{}) string {
 				if strings.HasPrefix(code, "on_") {
 					clr = "on_" + clr
 				}
-				return colorize(clr, str, args...)
+				return colorize(clr, str)
 			}
 
 			// Check if wrap
@@ -205,7 +205,7 @@ func Hilight(code string, str string, args ...interface{}) string {
 				if len(match) == 3 && len(match[2]) > 0 {
 					width, _ = strconv.Atoi(match[2])
 				}
-				return Wrap(width, str, args...)
+				return Wrap(width, str)
 			}
 
 			// Otherwise panic
@@ -216,13 +216,7 @@ func Hilight(code string, str string, args ...interface{}) string {
 
 // Hilights will add the appropriate ANSI codes to the specified
 // string.
-func Hilights(
-	codes []string,
-	str string,
-	args ...interface{},
-) string {
-	str = Sprintf(str, args...)
-
+func Hilights(codes []string, str string) string {
 	// Apply all specified color codes
 	for _, code := range codes {
 		str = Hilight(code, str)
@@ -231,10 +225,10 @@ func Hilights(
 	return str
 }
 
-func modify(mode string, str string, args ...interface{}) string {
+func modify(mode string, str string) string {
 	if Disable {
 		// Return the string w/o any color codes
-		return Plain(str, args...)
+		return Plain(str)
 	}
 
 	var hasKey bool
@@ -267,7 +261,7 @@ func modify(mode string, str string, args ...interface{}) string {
 
 	// Remove other occurrences of specified mode and opposite
 	r = regexp.MustCompile(`\x1b\[(` + rm + ")m")
-	str = r.ReplaceAllString(Sprintf(str, args...), "")
+	str = r.ReplaceAllString(str, "")
 
 	// Wrap the whole thing with specified color code
 	modified = "\x1b[" + Modes[mode] + "m" + str + off
@@ -278,16 +272,16 @@ func modify(mode string, str string, args ...interface{}) string {
 
 // OnHex will take a hex color code and add the appropriate ANSI color
 // codes to the provided string.
-func OnHex(hex string, str string, args ...interface{}) string {
-	return colorize("on_"+hexToXterm256(hex), str, args...)
+func OnHex(hex string, str string) string {
+	return colorize("on_"+hexToXterm256(hex), str)
 }
 
 // OnRainbow will add multiple ANSI color codes to a string for a
 // rainbow effect.
-func OnRainbow(str string, args ...interface{}) string {
+func OnRainbow(str string) string {
 	if Disable {
 		// Return the string w/o any color codes
-		return Plain(str, args...)
+		return Plain(str)
 	}
 
 	var chars []string
@@ -299,7 +293,7 @@ func OnRainbow(str string, args ...interface{}) string {
 	var out []string
 
 	// Strip all other bg color codes and split on newline
-	lines = strings.Split(plainBg(str, args...), "\n")
+	lines = strings.Split(plainBg(str), "\n")
 
 	// Loop thru lines and apply bg color codes
 	colors = rainbowColors()
@@ -324,25 +318,25 @@ func OnRainbow(str string, args ...interface{}) string {
 }
 
 // Plain will strip all ANSI color codes from a string.
-func Plain(str string, args ...interface{}) string {
+func Plain(str string) string {
 	// Strip all color codes
-	return allCodes.ReplaceAllString(Sprintf(str, args...), "")
+	return allCodes.ReplaceAllString(str, "")
 }
 
-func plainBg(str string, args ...interface{}) string {
-	return bgCodes.ReplaceAllString(Sprintf(str, args...), "")
+func plainBg(str string) string {
+	return bgCodes.ReplaceAllString(str, "")
 }
 
-func plainFg(str string, args ...interface{}) string {
-	return fgCodes.ReplaceAllString(Sprintf(str, args...), "")
+func plainFg(str string) string {
+	return fgCodes.ReplaceAllString(str, "")
 }
 
 // Rainbow will add multiple ANSI color codes to a string for a
 // rainbow effect.
-func Rainbow(str string, args ...interface{}) string {
+func Rainbow(str string) string {
 	if Disable {
 		// Return the string w/o any color codes
-		return Plain(str, args...)
+		return Plain(str)
 	}
 
 	var chars []string
@@ -353,7 +347,7 @@ func Rainbow(str string, args ...interface{}) string {
 	var out []string
 
 	// Strip all other fg color codes and split on newline
-	lines = strings.Split(plainFg(str, args...), "\n")
+	lines = strings.Split(plainFg(str), "\n")
 
 	// Loop thru lines and apply fg color codes
 	colors = rainbowColors()
@@ -402,13 +396,11 @@ func Table() {
 
 	for i := 0; i < 16; i++ {
 		bg = Sprintf("on_color_%03d", i)
-		Print(
-			colorize(
-				bg,
-				" %s %s ",
-				Black("%03d", i),
-				White("%03d", i),
-			),
+		PrintHilightf(
+			bg,
+			" %s %s ",
+			Blackf("%03d", i),
+			Whitef("%03d", i),
 		)
 		if (i+1)%8 == 0 {
 			Print("\n")
@@ -417,13 +409,11 @@ func Table() {
 
 	for i := 16; i < 256; i++ {
 		bg = Sprintf("on_color_%03d", i)
-		Print(
-			colorize(
-				bg,
-				" %s %s ",
-				Black("%03d", i),
-				White("%03d", i),
-			),
+		PrintHilightf(
+			bg,
+			" %s %s ",
+			Blackf("%03d", i),
+			Whitef("%03d", i),
 		)
 		if (i-15)%6 == 0 {
 			Print("\n")
@@ -432,14 +422,14 @@ func Table() {
 }
 
 // Wrap will wrap a string to the specified width.
-func Wrap(width int, str string, args ...interface{}) string {
+func Wrap(width int, str string) string {
 	var lc int
 	var line = ""
 	var lines []string
 	var wc int
 	var words = strings.Fields(str)
 
-	str = Sprintf(str, args...)
+	str = Sprintf(str)
 
 	// Loop thru words
 	for _, word := range words {
