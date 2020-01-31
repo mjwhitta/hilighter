@@ -2,7 +2,10 @@ package hilighter
 
 //go:generate ./scripts/generate_go_funcs
 
-import "regexp"
+import (
+	"regexp"
+	"runtime"
+)
 
 // Colors maps color names to color codes
 var Colors = map[string]string{
@@ -90,7 +93,7 @@ var Modes = map[string]string{
 }
 
 // Version is the package version
-const Version = "1.6.0"
+const Version = "1.6.1"
 
 // Various regular expressions
 var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
@@ -123,5 +126,9 @@ func init() {
 		key = Sprintf("on_color_%03d", i)
 		val = Sprintf("48;5;%03d", i)
 		Colors[key] = val
+	}
+
+	if runtime.GOOS == "windows" {
+		Disable = true
 	}
 }
