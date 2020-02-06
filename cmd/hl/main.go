@@ -97,7 +97,7 @@ func init() {
 }
 
 func main() {
-	hl.Disable = flags.nocolor
+	hl.Disable(flags.nocolor)
 
 	defer func() {
 		if r := recover(); r != nil {
