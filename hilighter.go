@@ -84,7 +84,7 @@ func HexToXterm256(hex string) string {
 	}
 
 	// 0..215 lazy evaluation
-	cidx = (36 * ir) + (6 * ig) + ib + 16
+	cidx = (36 * ir) + (6 * ig) + ib
 
 	// Calculate the nearest 0-based gray index at 232..255
 	average = (r + g + b) / 3
@@ -107,13 +107,15 @@ func HexToXterm256(hex string) string {
 	gv = (10 * gidx) + 8
 
 	// Return the one which is nearer to the original rgb values
-	clrErr = math.Pow(float64(cr-r), 2) +
-		math.Pow(float64(cg-g), 2) + math.Pow(float64(cb-b), 2)
-	grayErr = math.Pow(float64(gv-r), 2) +
-		math.Pow(float64(gv-g), 2) + math.Pow(float64(gv-b), 2)
+	clrErr = math.Pow(float64(int(cr-r)), 2) +
+		math.Pow(float64(int(cg-g)), 2) +
+		math.Pow(float64(int(cb-b)), 2)
+	grayErr = math.Pow(float64(int(gv-r)), 2) +
+		math.Pow(float64(int(gv-g)), 2) +
+		math.Pow(float64(int(gv-b)), 2)
 
 	if clrErr <= grayErr {
-		cachedCodes[hex] = Sprintf("color_%03d", cidx)
+		cachedCodes[hex] = Sprintf("color_%03d", cidx+16)
 	} else {
 		cachedCodes[hex] = Sprintf("color_%03d", gidx+232)
 	}
