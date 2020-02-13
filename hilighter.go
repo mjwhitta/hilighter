@@ -52,23 +52,26 @@ func HexToXterm256(hex string) string {
 		return cachedCodes[hex]
 	}
 
-	var average uint64
-	var b uint64
-	var cb uint64
-	var cg uint64
-	var cidx uint64
+	var average int
+	var b int
+	var cb int
+	var cg int
+	var cidx int
 	var clrErr float64
-	var cr uint64
-	var g uint64
-	var gidx uint64
+	var cr int
+	var g int
+	var gidx int
 	var grayErr float64
-	var gv uint64
-	var i2cv []uint64
-	var ib uint64
-	var ig uint64
-	var ir uint64
+	var gv int
+	var hexB uint64
+	var hexG uint64
+	var hexR uint64
+	var i2cv []int
+	var ib int
+	var ig int
+	var ir int
 	var matches [][]string
-	var r uint64
+	var r int
 
 	// For simplicity, assume RGB space is perceptually uniform.
 	// There are 5 places where one of two outputs needs to be
@@ -79,13 +82,20 @@ func HexToXterm256(hex string) string {
 	//   input
 	//     - color is chosen
 
+	// Note: This is integer math, NOT unsigned integer
+
 	// Calculate the nearest 0-based color index at 16..231
 	r, g, b = 0, 0, 0
 	matches = parseHex.FindAllStringSubmatch(hex, -1)
 	for _, match := range matches {
-		r, _ = strconv.ParseUint(match[1], 16, 8)
-		g, _ = strconv.ParseUint(match[2], 16, 8)
-		b, _ = strconv.ParseUint(match[3], 16, 8)
+		hexB, _ = strconv.ParseUint(match[3], 16, 8)
+		b = int(hexB)
+
+		hexG, _ = strconv.ParseUint(match[2], 16, 8)
+		g = int(hexG)
+
+		hexR, _ = strconv.ParseUint(match[1], 16, 8)
+		r = int(hexR)
 	}
 
 	// 0..5 each
@@ -121,7 +131,7 @@ func HexToXterm256(hex string) string {
 	}
 
 	// Calculate the represented colors back from the index
-	i2cv = []uint64{0, 0x5f, 0x87, 0xaf, 0xd7, 0xff}
+	i2cv = []int{0, 0x5f, 0x87, 0xaf, 0xd7, 0xff}
 
 	// r/g/b 0..255 each
 	cr = i2cv[ir]
