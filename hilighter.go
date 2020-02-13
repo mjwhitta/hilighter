@@ -19,6 +19,12 @@ func ColorToXterm256(c color.Color) string {
 
 	r, g, b, a = c.RGBA()
 
+	if (a != 0) && (a != 0xffff) {
+		r = uint32(float64(r*0xffff) / float64(a))
+		g = uint32(float64(g*0xffff) / float64(a))
+		b = uint32(float64(b*0xffff) / float64(a))
+	}
+
 	r >>= 8
 	g >>= 8
 	b >>= 8
