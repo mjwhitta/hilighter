@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-// ColorToXterm256 will convert the color instance to its hex string
+// ColorToXterm256 will convert the color instance to its xterm256
 // representation.
 func ColorToXterm256(c color.Color) string {
 	var a uint32
@@ -304,8 +304,8 @@ func Rainbow(str string) string {
 	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "$1$4")
 }
 
-// RGBAToXterm256 will convert the RGBA values to the closest hex
-// string representation.
+// RGBAToXterm256 will convert the RGBA values to the closest xterm256
+// representation.
 func RGBAToXterm256(r uint8, g uint8, b uint8, a uint8) string {
 	return HexToXterm256(Sprintf("%02x%02x%02x%02x", r, g, b, a))
 }
