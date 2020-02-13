@@ -2,11 +2,30 @@ package hilighter
 
 import (
 	"errors"
+	"image/color"
 	"math"
 	"runtime"
 	"strconv"
 	"strings"
 )
+
+// ColorToXterm256 will convert the color instance to its hex string
+// representation.
+func ColorToXterm256(c color.Color) string {
+	var a uint32
+	var b uint32
+	var g uint32
+	var r uint32
+
+	r, g, b, a = c.RGBA()
+
+	r >>= 8
+	g >>= 8
+	b >>= 8
+	a >>= 8
+
+	return RGBAToXterm256(uint8(r), uint8(g), uint8(b), uint8(a))
+}
 
 // Disable will prevent color codes from being used.
 func Disable(b bool) {
@@ -283,6 +302,12 @@ func Rainbow(str string) string {
 	// Put lines back together, and remove color codes if the line
 	// only contains color codes
 	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "$1$4")
+}
+
+// RGBAToXterm256 will convert the RGBA values to the closest hex
+// string representation.
+func RGBAToXterm256(r uint8, g uint8, b uint8, a uint8) string {
+	return HexToXterm256(Sprintf("%02x%02x%02x%02x", r, g, b, a))
 }
 
 // Sample will show all bg/fg combos of the first 16 8-bit colors.
