@@ -2,6 +2,11 @@ package hilighter
 
 import "fmt"
 
+// Errorf wraps fmt.Errorf(args ...interface{}).
+func Errorf(format string, args ...interface{}) error {
+	return fmt.Errorf(format, args...)
+}
+
 // Print wraps fmt.Print(args ...interface{}).
 func Print(args ...interface{}) {
 	fmt.Print(args...)
