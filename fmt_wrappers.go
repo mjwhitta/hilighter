@@ -1,20 +1,42 @@
 package hilighter
 
-import "fmt"
+import (
+	"fmt"
+	"io"
+)
 
-// Errorf wraps fmt.Errorf(args ...interface{}).
+// Errorf wraps fmt.Errorf().
 func Errorf(format string, args ...interface{}) error {
 	return fmt.Errorf(format, args...)
 }
 
-// Print wraps fmt.Print(args ...interface{}).
+// Fprint wraps fmt.Fprint().
+func Fprint(w io.Writer, args ...interface{}) (int, error) {
+	return fmt.Fprint(w, args...)
+}
+
+// Fprintf wraps fmt.Fprintf().
+func Fprintf(
+	w io.Writer,
+	format string,
+	args ...interface{},
+) (int, error) {
+	return fmt.Fprintf(w, format, args...)
+}
+
+// Fprintln wraps fmt.Fprintln().
+func Fprintln(w io.Writer, args ...interface{}) (int, error) {
+	return fmt.Fprintln(w, args...)
+}
+
+// Print wraps fmt.Print().
 func Print(args ...interface{}) {
 	fmt.Print(args...)
 }
 
-// Printf wraps fmt.Printf(str string, args ...interface{}).
-func Printf(str string, args ...interface{}) {
-	fmt.Printf(str, args...)
+// Printf wraps fmt.Printf().
+func Printf(format string, args ...interface{}) {
+	fmt.Printf(format, args...)
 }
 
 // PrintHex will take a hex color code and print a string with ANSI
@@ -39,7 +61,7 @@ func PrintHilights(codes []string, str string) {
 	Print(str)
 }
 
-// Println wraps fmt.Println(args ...interface{}).
+// Println wraps fmt.Println().
 func Println(args ...interface{}) {
 	fmt.Println(args...)
 }
@@ -112,17 +134,17 @@ func PrintWrap(width int, str string) {
 	Print(Wrap(width, str))
 }
 
-// Sprint wraps fmt.Sprint(args ...interface{}).
+// Sprint wraps fmt.Sprint().
 func Sprint(args ...interface{}) string {
 	return fmt.Sprint(args...)
 }
 
-// Sprintf wraps fmt.Sprintf(str string, args ...interface{}).
-func Sprintf(str string, args ...interface{}) string {
-	return fmt.Sprintf(str, args...)
+// Sprintf wraps fmt.Sprintf().
+func Sprintf(format string, args ...interface{}) string {
+	return fmt.Sprintf(format, args...)
 }
 
-// Sprintln wraps fmt.Sprintln(args ...interface{}).
+// Sprintln wraps fmt.Sprintln().
 func Sprintln(args ...interface{}) string {
 	return fmt.Sprintln(args...)
 }
