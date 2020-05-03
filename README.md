@@ -40,19 +40,19 @@ import (
 
 func main() {
     // Example 1 (single color)
-    var greenStr = hl.Green("1. Hello, %s!\n", "world")
+    var greenStr = hl.Greenf("1. Hello, %s!\n", "world")
     fmt.Print(greenStr)
 
     // or
 
-    hl.PrintGreen("1. Hello, %s!\n", "world")
+    hl.PrintfGreen("1. Hello, %s!\n", "world")
 
     // or
 
     hl.PrintlnGreen("1. Hello, world!")
 
     // Example 2 (multiple colors)
-    var multiColored = hl.Hilights(
+    var multiColored = hl.Hilightsf(
         []string{"white", "on_green"},
         "2. Hello, %s!\n",
         "world",
@@ -69,7 +69,7 @@ func main() {
 
     // or
 
-    hl.PrintHilights(
+    hl.PrintfHilights(
         []string{"white", "on_green"},
         "2. Hello, %s!\n",
         "world",
@@ -118,7 +118,7 @@ func main() {
 
     // or
 
-    hl.PrintWrap(80, hl.Green("%s\n", long_var))
+    hl.PrintWrap(80, hl.Greenf("%s\n", long_var))
 
     // or
 
@@ -134,7 +134,7 @@ func main() {
 
     // or
 
-    hl.PrintRainbow("%s\n", long_var)
+    hl.PrintfRainbow("%s\n", long_var)
 
     // or
 
