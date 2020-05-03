@@ -9,20 +9,6 @@ import (
 	hl "gitlab.com/mjwhitta/hilighter"
 )
 
-// Helpers begin
-
-func err(msg string) { hl.PrintfRed("[!] %s\n", msg) }
-func errx(status int, msg string) {
-	err(msg)
-	os.Exit(status)
-}
-func good(msg string)    { hl.PrintfGreen("[+] %s\n", msg) }
-func info(msg string)    { hl.PrintfWhite("[*] %s\n", msg) }
-func subinfo(msg string) { hl.PrintfCyan("[=] %s\n", msg) }
-func warn(msg string)    { hl.PrintfYellow("[-] %s\n", msg) }
-
-// Helpers end
-
 // Exit status
 const (
 	Good            int = 0
