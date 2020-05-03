@@ -347,7 +347,7 @@ func Table() {
 
 	for i := 0; i < 16; i++ {
 		bg = Sprintf("on_color_%03d", i)
-		PrintHilightf(
+		PrintfHilight(
 			bg,
 			" %s %s ",
 			Blackf("%03d", i),
@@ -360,7 +360,7 @@ func Table() {
 
 	for i := 16; i < 256; i++ {
 		bg = Sprintf("on_color_%03d", i)
-		PrintHilightf(
+		PrintfHilight(
 			bg,
 			" %s %s ",
 			Blackf("%03d", i),

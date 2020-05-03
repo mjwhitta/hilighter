@@ -11,15 +11,15 @@ import (
 
 // Helpers begin
 
-func err(msg string) { hl.PrintlnRedf("[!] %s", msg) }
+func err(msg string) { hl.PrintfRed("[!] %s\n", msg) }
 func errx(status int, msg string) {
 	err(msg)
 	os.Exit(status)
 }
-func good(msg string)    { hl.PrintlnGreenf("[+] %s", msg) }
-func info(msg string)    { hl.PrintlnWhitef("[*] %s", msg) }
-func subinfo(msg string) { hl.PrintlnCyanf("[=] %s", msg) }
-func warn(msg string)    { hl.PrintlnYellowf("[-] %s", msg) }
+func good(msg string)    { hl.PrintfGreen("[+] %s\n", msg) }
+func info(msg string)    { hl.PrintfWhite("[*] %s\n", msg) }
+func subinfo(msg string) { hl.PrintfCyan("[=] %s\n", msg) }
+func warn(msg string)    { hl.PrintfYellow("[-] %s\n", msg) }
 
 // Helpers end
 
