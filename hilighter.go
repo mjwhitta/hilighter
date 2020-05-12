@@ -326,50 +326,58 @@ func RGBAToXterm256(r uint8, g uint8, b uint8, a uint8) string {
 	return HexToXterm256(Sprintf("%02x%02x%02x%02x", r, g, b, a))
 }
 
-// Sample will show all bg/fg combos of the first 16 8-bit colors.
-func Sample() {
+// Sample will return all bg/fg combos of the first 16 8-bit colors.
+func Sample() (lines []string) {
 	var bg string
 	var fg string
+	var line string
 
 	for f := 0; f < 16; f++ {
+		line = ""
+
 		for b := 0; b < 16; b++ {
 			fg = Sprintf("color_%03d", f)
 			bg = Sprintf("on_color_%03d", b)
-			Print(colorize(fg, colorize(bg, " mw ")))
+			line += colorize(fg, colorize(bg, " mw "))
 		}
-		Print("\n")
+
+		lines = append(lines, line)
 	}
+
+	return
 }
 
-// Table will display a pretty table of all 8-bit colors.
-func Table() {
-	var bg string
+// Table will return a pretty table of all 8-bit colors.
+func Table() (lines []string) {
+	var line string
 
 	for i := 0; i < 16; i++ {
-		bg = Sprintf("on_color_%03d", i)
-		PrintfHilight(
-			bg,
+		line += Hilightf(
+			Sprintf("on_color_%03d", i),
 			" %s %s ",
 			Blackf("%03d", i),
 			Whitef("%03d", i),
 		)
 		if (i+1)%8 == 0 {
-			Print("\n")
+			lines = append(lines, line)
+			line = ""
 		}
 	}
 
 	for i := 16; i < 256; i++ {
-		bg = Sprintf("on_color_%03d", i)
-		PrintfHilight(
-			bg,
+		line += Hilightf(
+			Sprintf("on_color_%03d", i),
 			" %s %s ",
 			Blackf("%03d", i),
 			Whitef("%03d", i),
 		)
 		if (i-15)%6 == 0 {
-			Print("\n")
+			lines = append(lines, line)
+			line = ""
 		}
 	}
+
+	return
 }
 
 // Wrap will wrap a string to the specified width.

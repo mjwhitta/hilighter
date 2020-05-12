@@ -29,9 +29,13 @@ func main() {
 	validate()
 
 	if flags.sample {
-		hl.Sample()
+		for _, line := range hl.Sample() {
+			hl.Println(line)
+		}
 	} else if flags.table {
-		hl.Table()
+		for _, line := range hl.Table() {
+			hl.Println(line)
+		}
 	} else {
 		var line string
 		var scanner = bufio.NewScanner(os.Stdin)
