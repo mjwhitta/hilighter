@@ -1,5 +1,7 @@
 # Hilighter
 
+[![Go Report Card](https://goreportcard.com/badge/gitlab.com/mjwhitta/hilighter)](https://goreportcard.com/report/gitlab.com/mjwhitta/hilighter)
+
 ## What is this?
 
 This go package provides color methods for strings. It also provides a
