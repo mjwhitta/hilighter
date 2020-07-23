@@ -1,5 +1,7 @@
 # Hilighter
 
+<a href="https://www.buymeacoffee.com/mjwhitta">🍪 Buy me a cookie</a>
+
 [![Go Report Card](https://goreportcard.com/badge/gitlab.com/mjwhitta/hilighter)](https://goreportcard.com/report/gitlab.com/mjwhitta/hilighter)
 
 ## What is this?
