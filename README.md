@@ -1,5 +1,7 @@
 # Hilighter
 
+<a href="https://www.buymeacoffee.com/mjwhitta">🍪 Buy me a cookie</a>
+
 ## What is this?
 
 This ruby gem adds color methods to the String class. It also provides
