@@ -31,7 +31,7 @@ $ cat some_file | hl wrap
 $ cat some_file | hl wrap_64
 ```
 
-In Golang you can do things like the following:
+In Go you can do things like the following:
 
 ```
 package main
