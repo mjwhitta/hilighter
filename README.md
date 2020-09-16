@@ -14,8 +14,19 @@ method for wrapping strings that accounts for color escape codes.
 Open a terminal and run the following:
 
 ```
-$ go get -u gitlab.com/mjwhitta/hilighter/cmd/hl
+$ go get -ldflags "-s -w" -u gitlab.com/mjwhitta/hilighter/cmd/hl
 ```
+
+Or install from source:
+
+```
+$ git clone https://gitlab.com/mjwhitta/hilighter.git
+$ cd hilighter
+$ git submodule update --init
+$ make install
+```
+
+**Note:** `make install` will install to `$HOME/.local/bin`.
 
 ## Usage
 
