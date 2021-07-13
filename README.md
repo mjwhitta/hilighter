@@ -14,7 +14,7 @@ method for wrapping strings that accounts for color escape codes.
 Open a terminal and run the following:
 
 ```
-$ go get -ldflags "-s -w" -u gitlab.com/mjwhitta/hilighter/cmd/hl
+$ go get --ldflags "-s -w" --trimpath -u gitlab.com/mjwhitta/hilighter/cmd/hl
 ```
 
 Or install from source:
