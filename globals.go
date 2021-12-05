@@ -1,7 +1,5 @@
 package hilighter
 
-//go:generate ./scripts/generate_go_funcs
-
 import "regexp"
 
 // Colors maps color names to color codes

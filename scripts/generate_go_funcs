@@ -193,4 +193,4 @@ EOF
 #    generate_print_funcs "Hex" "hex string"
 #)
 
-go fmt "$file"
+go fmt "$file" >/dev/null
