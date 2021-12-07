@@ -17,6 +17,15 @@ const (
 	Stdin           int = 4
 )
 
+func err(msg string) {
+	hl.PrintlnRed("[!] " + msg)
+}
+
+func errx(status int, msg string) {
+	err(msg)
+	os.Exit(status)
+}
+
 func main() {
 	hl.Disable(flags.nocolor)
 
