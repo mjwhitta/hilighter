@@ -1,7 +1,6 @@
 package hilighter
 
 import (
-	"errors"
 	"image/color"
 	"math"
 	"runtime"
@@ -209,7 +208,15 @@ func Hilight(code string, str string) string {
 			}
 
 			// Otherwise panic
-			panic(errors.New("Invalid color or mode: " + code))
+			// panic(
+			// 	fmt.Errorf(
+			// 		"hilighter: invalid color or mode: %s",
+			// 		code,
+			// 	),
+			// )
+
+			// Scratch that, just do nothing
+			return str
 		}
 	}
 }
