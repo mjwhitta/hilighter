@@ -8,15 +8,6 @@ import (
 	hl "gitlab.com/mjwhitta/hilighter"
 )
 
-// Exit status
-const (
-	Good            int = 0
-	InvalidOption   int = 1
-	MissingArgument int = 2
-	Exception       int = 3
-	Stdin           int = 4
-)
-
 func err(msg string) {
 	hl.PrintlnRed("[!] " + msg)
 }
@@ -27,10 +18,11 @@ func errx(status int, msg string) {
 }
 
 func main() {
-	hl.Disable(flags.nocolor)
-
 	defer func() {
 		if r := recover(); r != nil {
+			if flags.verbose {
+				panic(r.(error).Error())
+			}
 			errx(Exception, r.(error).Error())
 		}
 	}()
@@ -63,7 +55,7 @@ func main() {
 		}
 
 		if scanner.Err() != nil {
-			errx(Stdin, scanner.Err().Error())
+			errx(Exception, scanner.Err().Error())
 		}
 	}
 }

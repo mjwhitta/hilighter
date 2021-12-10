@@ -1,2 +1,4 @@
-gitlab.com/mjwhitta/cli v1.8.2 h1:M9u+RlYm3bsKTrZTHiS3RdRFL5quxuxHIoIDhBLJYxY=
-gitlab.com/mjwhitta/cli v1.8.2/go.mod h1:mL238URUPKng2ISpF6z57S2OddeXnGx0R69E+UptRGE=
+gitlab.com/mjwhitta/cli v1.9.0 h1:GbfhWvEDASibMOAvp2QuSSPfURej85uqx7qECFbN3Z0=
+gitlab.com/mjwhitta/cli v1.9.0/go.mod h1:XoT9culHMbF+4OUpgUxiTLjp8YkI2JSos1f18AqYhko=
+gitlab.com/mjwhitta/errors v1.0.0 h1:rivvgv4HCdIJ6Y6kFfPcirzKnBRewkjgsOktR0Uaj8g=
+gitlab.com/mjwhitta/errors v1.0.0/go.mod h1:5mFayhs7rnrBmc6kd3d1l1YaAY4is/IjYNVmCtJc0lU=

@@ -8,15 +8,25 @@ import (
 	hl "gitlab.com/mjwhitta/hilighter"
 )
 
+// Exit status
+const (
+	Good = iota
+	InvalidOption
+	MissingOption
+	InvalidArgument
+	MissingArgument
+	ExtraArgument
+	Exception
+)
+
 // Flags
-type cliFlags struct {
+var flags struct {
 	nocolor bool
 	sample  bool
 	table   bool
+	verbose bool
 	version bool
 }
-
-var flags cliFlags
 
 func init() {
 	// Configure cli package
@@ -31,10 +41,12 @@ func init() {
 		[]string{
 			"Normally the exit status is 0. In the event of an error",
 			"the exit status will be one of the below:\n\n",
-			"  1: Invalid option\n",
-			"  2: Missing argument\n",
-			"  3: Exception\n",
-			"  4: Error reading stdin",
+			hl.Sprintf("  %d: Invalid option\n", InvalidOption),
+			hl.Sprintf("  %d: Missing option\n", MissingOption),
+			hl.Sprintf("  %d: Invalid argument\n", InvalidArgument),
+			hl.Sprintf("  %d: Missing argument\n", MissingArgument),
+			hl.Sprintf("  %d: Extra argument\n", ExtraArgument),
+			hl.Sprintf("  %d: Exception", Exception),
 		},
 		" ",
 	)
@@ -68,12 +80,21 @@ func init() {
 		false,
 		"Show the color table.",
 	)
+	cli.Flag(
+		&flags.verbose,
+		"v",
+		"verbose",
+		false,
+		"Show stacktrace, if error.",
+	)
 	cli.Flag(&flags.version, "V", "version", false, "Show version.")
 	cli.Parse()
 }
 
 // Process cli flags and ensure no issues
 func validate() {
+	hl.Disable(flags.nocolor)
+
 	// Short circuit if version was requested
 	if flags.version {
 		hl.Printf("hilighter version %s\n", hl.Version)

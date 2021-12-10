@@ -209,10 +209,10 @@ func Hilight(code string, str string) string {
 
 			// Otherwise panic
 			// panic(
-			// 	fmt.Errorf(
-			// 		"hilighter: invalid color or mode: %s",
-			// 		code,
-			// 	),
+			//     fmt.Errorf(
+			//         "hilighter: invalid color or mode: %s",
+			//         code,
+			//     ),
 			// )
 
 			// Scratch that, just do nothing
