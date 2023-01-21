@@ -2,7 +2,7 @@
 
 <a href="https://www.buymeacoffee.com/mjwhitta">🍪 Buy me a cookie</a>
 
-[![Go Report Card](https://goreportcard.com/badge/gitlab.com/mjwhitta/hilighter)](https://goreportcard.com/report/gitlab.com/mjwhitta/hilighter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mjwhitta/hilighter)](https://goreportcard.com/report/github.com/mjwhitta/hilighter)
 
 ## What is this?
 
@@ -14,9 +14,9 @@ method for wrapping strings that accounts for color escape codes.
 Open a terminal and run the following:
 
 ```
-$ go get --ldflags "-s -w" --trimpath -u gitlab.com/mjwhitta/hilighter
+$ go get --ldflags "-s -w" --trimpath -u github.com/mjwhitta/hilighter
 $ go install --ldflags "-s -w" --trimpath \
-    gitlab.com/mjwhitta/hilighter/cmd/hl@latest
+    github.com/mjwhitta/hilighter/cmd/hl@latest
 ```
 
 ## Usage
@@ -41,7 +41,7 @@ package main
 import (
     "fmt"
 
-    hl "gitlab.com/mjwhitta/hilighter"
+    hl "github.com/mjwhitta/hilighter"
 )
 
 func main() {
@@ -207,7 +207,7 @@ strikethrough | no_strikethrough | Same as CrossedOut
 
 ## Links
 
-- [Source](https://gitlab.com/mjwhitta/hilighter)
+- [Source](https://github.com/mjwhitta/hilighter)
 - [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 ## TODO

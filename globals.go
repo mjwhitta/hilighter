@@ -88,7 +88,7 @@ var Modes = map[string]string{
 }
 
 // Version is the package version
-const Version = "1.11.1"
+const Version = "1.11.2"
 
 // Various regular expressions
 var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)

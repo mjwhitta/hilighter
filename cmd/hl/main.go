@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"os"
 
-	"gitlab.com/mjwhitta/cli"
-	hl "gitlab.com/mjwhitta/hilighter"
+	"github.com/mjwhitta/cli"
+	hl "github.com/mjwhitta/hilighter"
 )
 
 func err(msg string) {

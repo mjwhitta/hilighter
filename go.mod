@@ -1,7 +1,7 @@
-module gitlab.com/mjwhitta/hilighter
+module github.com/mjwhitta/hilighter
 
-go 1.17
+go 1.19
 
-require gitlab.com/mjwhitta/cli v1.10.0
+require github.com/mjwhitta/cli v1.10.1
 
-require gitlab.com/mjwhitta/errors v1.0.0 // indirect
+require github.com/mjwhitta/errors v1.0.1 // indirect
