@@ -54,7 +54,7 @@ generate_print_funcs() {
 
     cat <<EOF
 // ${func}f wraps fmt.Sprintf() and $func.
-func ${func}f(${vardef}format string, args ...interface{}) string {
+func ${func}f(${vardef}format string, args ...any) string {
     return $func(${var}Sprintf(format, args...))
 }
 
@@ -64,7 +64,7 @@ func Fprint$func(w io.Writer, ${vardef}str string) {
 }
 
 // Fprintf$func wraps $func and fmt.Fprintf().
-func Fprintf$func(w io.Writer, ${vardef}format string, args ...interface{}) {
+func Fprintf$func(w io.Writer, ${vardef}format string, args ...any) {
     Fprint$func(w, ${var}Sprintf(format, args...))
 }
 
@@ -79,7 +79,7 @@ func Print$func(${vardef}str string) {
 }
 
 // Printf$func wraps $func() and fmt.Printf().
-func Printf$func(${vardef}format string, args ...interface{}) {
+func Printf$func(${vardef}format string, args ...any) {
     Print$func(${var}Sprintf(format, args...))
 }
 

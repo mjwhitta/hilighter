@@ -10,7 +10,7 @@ func Black(str string) string {
 }
 
 // Blackf wraps fmt.Sprintf() and Black.
-func Blackf(format string, args ...interface{}) string {
+func Blackf(format string, args ...any) string {
 	return Black(Sprintf(format, args...))
 }
 
@@ -20,7 +20,7 @@ func FprintBlack(w io.Writer, str string) {
 }
 
 // FprintfBlack wraps Black and fmt.Fprintf().
-func FprintfBlack(w io.Writer, format string, args ...interface{}) {
+func FprintfBlack(w io.Writer, format string, args ...any) {
 	FprintBlack(w, Sprintf(format, args...))
 }
 
@@ -35,7 +35,7 @@ func PrintBlack(str string) {
 }
 
 // PrintfBlack wraps Black() and fmt.Printf().
-func PrintfBlack(format string, args ...interface{}) {
+func PrintfBlack(format string, args ...any) {
 	PrintBlack(Sprintf(format, args...))
 }
 
@@ -51,7 +51,7 @@ func OnBlack(str string) string {
 }
 
 // OnBlackf wraps fmt.Sprintf() and OnBlack.
-func OnBlackf(format string, args ...interface{}) string {
+func OnBlackf(format string, args ...any) string {
 	return OnBlack(Sprintf(format, args...))
 }
 
@@ -61,7 +61,7 @@ func FprintOnBlack(w io.Writer, str string) {
 }
 
 // FprintfOnBlack wraps OnBlack and fmt.Fprintf().
-func FprintfOnBlack(w io.Writer, format string, args ...interface{}) {
+func FprintfOnBlack(w io.Writer, format string, args ...any) {
 	FprintOnBlack(w, Sprintf(format, args...))
 }
 
@@ -76,7 +76,7 @@ func PrintOnBlack(str string) {
 }
 
 // PrintfOnBlack wraps OnBlack() and fmt.Printf().
-func PrintfOnBlack(format string, args ...interface{}) {
+func PrintfOnBlack(format string, args ...any) {
 	PrintOnBlack(Sprintf(format, args...))
 }
 
@@ -92,7 +92,7 @@ func LightBlack(str string) string {
 }
 
 // LightBlackf wraps fmt.Sprintf() and LightBlack.
-func LightBlackf(format string, args ...interface{}) string {
+func LightBlackf(format string, args ...any) string {
 	return LightBlack(Sprintf(format, args...))
 }
 
@@ -102,7 +102,7 @@ func FprintLightBlack(w io.Writer, str string) {
 }
 
 // FprintfLightBlack wraps LightBlack and fmt.Fprintf().
-func FprintfLightBlack(w io.Writer, format string, args ...interface{}) {
+func FprintfLightBlack(w io.Writer, format string, args ...any) {
 	FprintLightBlack(w, Sprintf(format, args...))
 }
 
@@ -117,7 +117,7 @@ func PrintLightBlack(str string) {
 }
 
 // PrintfLightBlack wraps LightBlack() and fmt.Printf().
-func PrintfLightBlack(format string, args ...interface{}) {
+func PrintfLightBlack(format string, args ...any) {
 	PrintLightBlack(Sprintf(format, args...))
 }
 
@@ -133,7 +133,7 @@ func OnLightBlack(str string) string {
 }
 
 // OnLightBlackf wraps fmt.Sprintf() and OnLightBlack.
-func OnLightBlackf(format string, args ...interface{}) string {
+func OnLightBlackf(format string, args ...any) string {
 	return OnLightBlack(Sprintf(format, args...))
 }
 
@@ -143,7 +143,7 @@ func FprintOnLightBlack(w io.Writer, str string) {
 }
 
 // FprintfOnLightBlack wraps OnLightBlack and fmt.Fprintf().
-func FprintfOnLightBlack(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightBlack(w io.Writer, format string, args ...any) {
 	FprintOnLightBlack(w, Sprintf(format, args...))
 }
 
@@ -158,7 +158,7 @@ func PrintOnLightBlack(str string) {
 }
 
 // PrintfOnLightBlack wraps OnLightBlack() and fmt.Printf().
-func PrintfOnLightBlack(format string, args ...interface{}) {
+func PrintfOnLightBlack(format string, args ...any) {
 	PrintOnLightBlack(Sprintf(format, args...))
 }
 
@@ -174,7 +174,7 @@ func Red(str string) string {
 }
 
 // Redf wraps fmt.Sprintf() and Red.
-func Redf(format string, args ...interface{}) string {
+func Redf(format string, args ...any) string {
 	return Red(Sprintf(format, args...))
 }
 
@@ -184,7 +184,7 @@ func FprintRed(w io.Writer, str string) {
 }
 
 // FprintfRed wraps Red and fmt.Fprintf().
-func FprintfRed(w io.Writer, format string, args ...interface{}) {
+func FprintfRed(w io.Writer, format string, args ...any) {
 	FprintRed(w, Sprintf(format, args...))
 }
 
@@ -199,7 +199,7 @@ func PrintRed(str string) {
 }
 
 // PrintfRed wraps Red() and fmt.Printf().
-func PrintfRed(format string, args ...interface{}) {
+func PrintfRed(format string, args ...any) {
 	PrintRed(Sprintf(format, args...))
 }
 
@@ -215,7 +215,7 @@ func OnRed(str string) string {
 }
 
 // OnRedf wraps fmt.Sprintf() and OnRed.
-func OnRedf(format string, args ...interface{}) string {
+func OnRedf(format string, args ...any) string {
 	return OnRed(Sprintf(format, args...))
 }
 
@@ -225,7 +225,7 @@ func FprintOnRed(w io.Writer, str string) {
 }
 
 // FprintfOnRed wraps OnRed and fmt.Fprintf().
-func FprintfOnRed(w io.Writer, format string, args ...interface{}) {
+func FprintfOnRed(w io.Writer, format string, args ...any) {
 	FprintOnRed(w, Sprintf(format, args...))
 }
 
@@ -240,7 +240,7 @@ func PrintOnRed(str string) {
 }
 
 // PrintfOnRed wraps OnRed() and fmt.Printf().
-func PrintfOnRed(format string, args ...interface{}) {
+func PrintfOnRed(format string, args ...any) {
 	PrintOnRed(Sprintf(format, args...))
 }
 
@@ -256,7 +256,7 @@ func LightRed(str string) string {
 }
 
 // LightRedf wraps fmt.Sprintf() and LightRed.
-func LightRedf(format string, args ...interface{}) string {
+func LightRedf(format string, args ...any) string {
 	return LightRed(Sprintf(format, args...))
 }
 
@@ -266,7 +266,7 @@ func FprintLightRed(w io.Writer, str string) {
 }
 
 // FprintfLightRed wraps LightRed and fmt.Fprintf().
-func FprintfLightRed(w io.Writer, format string, args ...interface{}) {
+func FprintfLightRed(w io.Writer, format string, args ...any) {
 	FprintLightRed(w, Sprintf(format, args...))
 }
 
@@ -281,7 +281,7 @@ func PrintLightRed(str string) {
 }
 
 // PrintfLightRed wraps LightRed() and fmt.Printf().
-func PrintfLightRed(format string, args ...interface{}) {
+func PrintfLightRed(format string, args ...any) {
 	PrintLightRed(Sprintf(format, args...))
 }
 
@@ -297,7 +297,7 @@ func OnLightRed(str string) string {
 }
 
 // OnLightRedf wraps fmt.Sprintf() and OnLightRed.
-func OnLightRedf(format string, args ...interface{}) string {
+func OnLightRedf(format string, args ...any) string {
 	return OnLightRed(Sprintf(format, args...))
 }
 
@@ -307,7 +307,7 @@ func FprintOnLightRed(w io.Writer, str string) {
 }
 
 // FprintfOnLightRed wraps OnLightRed and fmt.Fprintf().
-func FprintfOnLightRed(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightRed(w io.Writer, format string, args ...any) {
 	FprintOnLightRed(w, Sprintf(format, args...))
 }
 
@@ -322,7 +322,7 @@ func PrintOnLightRed(str string) {
 }
 
 // PrintfOnLightRed wraps OnLightRed() and fmt.Printf().
-func PrintfOnLightRed(format string, args ...interface{}) {
+func PrintfOnLightRed(format string, args ...any) {
 	PrintOnLightRed(Sprintf(format, args...))
 }
 
@@ -338,7 +338,7 @@ func Green(str string) string {
 }
 
 // Greenf wraps fmt.Sprintf() and Green.
-func Greenf(format string, args ...interface{}) string {
+func Greenf(format string, args ...any) string {
 	return Green(Sprintf(format, args...))
 }
 
@@ -348,7 +348,7 @@ func FprintGreen(w io.Writer, str string) {
 }
 
 // FprintfGreen wraps Green and fmt.Fprintf().
-func FprintfGreen(w io.Writer, format string, args ...interface{}) {
+func FprintfGreen(w io.Writer, format string, args ...any) {
 	FprintGreen(w, Sprintf(format, args...))
 }
 
@@ -363,7 +363,7 @@ func PrintGreen(str string) {
 }
 
 // PrintfGreen wraps Green() and fmt.Printf().
-func PrintfGreen(format string, args ...interface{}) {
+func PrintfGreen(format string, args ...any) {
 	PrintGreen(Sprintf(format, args...))
 }
 
@@ -379,7 +379,7 @@ func OnGreen(str string) string {
 }
 
 // OnGreenf wraps fmt.Sprintf() and OnGreen.
-func OnGreenf(format string, args ...interface{}) string {
+func OnGreenf(format string, args ...any) string {
 	return OnGreen(Sprintf(format, args...))
 }
 
@@ -389,7 +389,7 @@ func FprintOnGreen(w io.Writer, str string) {
 }
 
 // FprintfOnGreen wraps OnGreen and fmt.Fprintf().
-func FprintfOnGreen(w io.Writer, format string, args ...interface{}) {
+func FprintfOnGreen(w io.Writer, format string, args ...any) {
 	FprintOnGreen(w, Sprintf(format, args...))
 }
 
@@ -404,7 +404,7 @@ func PrintOnGreen(str string) {
 }
 
 // PrintfOnGreen wraps OnGreen() and fmt.Printf().
-func PrintfOnGreen(format string, args ...interface{}) {
+func PrintfOnGreen(format string, args ...any) {
 	PrintOnGreen(Sprintf(format, args...))
 }
 
@@ -420,7 +420,7 @@ func LightGreen(str string) string {
 }
 
 // LightGreenf wraps fmt.Sprintf() and LightGreen.
-func LightGreenf(format string, args ...interface{}) string {
+func LightGreenf(format string, args ...any) string {
 	return LightGreen(Sprintf(format, args...))
 }
 
@@ -430,7 +430,7 @@ func FprintLightGreen(w io.Writer, str string) {
 }
 
 // FprintfLightGreen wraps LightGreen and fmt.Fprintf().
-func FprintfLightGreen(w io.Writer, format string, args ...interface{}) {
+func FprintfLightGreen(w io.Writer, format string, args ...any) {
 	FprintLightGreen(w, Sprintf(format, args...))
 }
 
@@ -445,7 +445,7 @@ func PrintLightGreen(str string) {
 }
 
 // PrintfLightGreen wraps LightGreen() and fmt.Printf().
-func PrintfLightGreen(format string, args ...interface{}) {
+func PrintfLightGreen(format string, args ...any) {
 	PrintLightGreen(Sprintf(format, args...))
 }
 
@@ -461,7 +461,7 @@ func OnLightGreen(str string) string {
 }
 
 // OnLightGreenf wraps fmt.Sprintf() and OnLightGreen.
-func OnLightGreenf(format string, args ...interface{}) string {
+func OnLightGreenf(format string, args ...any) string {
 	return OnLightGreen(Sprintf(format, args...))
 }
 
@@ -471,7 +471,7 @@ func FprintOnLightGreen(w io.Writer, str string) {
 }
 
 // FprintfOnLightGreen wraps OnLightGreen and fmt.Fprintf().
-func FprintfOnLightGreen(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightGreen(w io.Writer, format string, args ...any) {
 	FprintOnLightGreen(w, Sprintf(format, args...))
 }
 
@@ -486,7 +486,7 @@ func PrintOnLightGreen(str string) {
 }
 
 // PrintfOnLightGreen wraps OnLightGreen() and fmt.Printf().
-func PrintfOnLightGreen(format string, args ...interface{}) {
+func PrintfOnLightGreen(format string, args ...any) {
 	PrintOnLightGreen(Sprintf(format, args...))
 }
 
@@ -502,7 +502,7 @@ func Yellow(str string) string {
 }
 
 // Yellowf wraps fmt.Sprintf() and Yellow.
-func Yellowf(format string, args ...interface{}) string {
+func Yellowf(format string, args ...any) string {
 	return Yellow(Sprintf(format, args...))
 }
 
@@ -512,7 +512,7 @@ func FprintYellow(w io.Writer, str string) {
 }
 
 // FprintfYellow wraps Yellow and fmt.Fprintf().
-func FprintfYellow(w io.Writer, format string, args ...interface{}) {
+func FprintfYellow(w io.Writer, format string, args ...any) {
 	FprintYellow(w, Sprintf(format, args...))
 }
 
@@ -527,7 +527,7 @@ func PrintYellow(str string) {
 }
 
 // PrintfYellow wraps Yellow() and fmt.Printf().
-func PrintfYellow(format string, args ...interface{}) {
+func PrintfYellow(format string, args ...any) {
 	PrintYellow(Sprintf(format, args...))
 }
 
@@ -543,7 +543,7 @@ func OnYellow(str string) string {
 }
 
 // OnYellowf wraps fmt.Sprintf() and OnYellow.
-func OnYellowf(format string, args ...interface{}) string {
+func OnYellowf(format string, args ...any) string {
 	return OnYellow(Sprintf(format, args...))
 }
 
@@ -553,7 +553,7 @@ func FprintOnYellow(w io.Writer, str string) {
 }
 
 // FprintfOnYellow wraps OnYellow and fmt.Fprintf().
-func FprintfOnYellow(w io.Writer, format string, args ...interface{}) {
+func FprintfOnYellow(w io.Writer, format string, args ...any) {
 	FprintOnYellow(w, Sprintf(format, args...))
 }
 
@@ -568,7 +568,7 @@ func PrintOnYellow(str string) {
 }
 
 // PrintfOnYellow wraps OnYellow() and fmt.Printf().
-func PrintfOnYellow(format string, args ...interface{}) {
+func PrintfOnYellow(format string, args ...any) {
 	PrintOnYellow(Sprintf(format, args...))
 }
 
@@ -584,7 +584,7 @@ func LightYellow(str string) string {
 }
 
 // LightYellowf wraps fmt.Sprintf() and LightYellow.
-func LightYellowf(format string, args ...interface{}) string {
+func LightYellowf(format string, args ...any) string {
 	return LightYellow(Sprintf(format, args...))
 }
 
@@ -594,7 +594,7 @@ func FprintLightYellow(w io.Writer, str string) {
 }
 
 // FprintfLightYellow wraps LightYellow and fmt.Fprintf().
-func FprintfLightYellow(w io.Writer, format string, args ...interface{}) {
+func FprintfLightYellow(w io.Writer, format string, args ...any) {
 	FprintLightYellow(w, Sprintf(format, args...))
 }
 
@@ -609,7 +609,7 @@ func PrintLightYellow(str string) {
 }
 
 // PrintfLightYellow wraps LightYellow() and fmt.Printf().
-func PrintfLightYellow(format string, args ...interface{}) {
+func PrintfLightYellow(format string, args ...any) {
 	PrintLightYellow(Sprintf(format, args...))
 }
 
@@ -625,7 +625,7 @@ func OnLightYellow(str string) string {
 }
 
 // OnLightYellowf wraps fmt.Sprintf() and OnLightYellow.
-func OnLightYellowf(format string, args ...interface{}) string {
+func OnLightYellowf(format string, args ...any) string {
 	return OnLightYellow(Sprintf(format, args...))
 }
 
@@ -635,7 +635,7 @@ func FprintOnLightYellow(w io.Writer, str string) {
 }
 
 // FprintfOnLightYellow wraps OnLightYellow and fmt.Fprintf().
-func FprintfOnLightYellow(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightYellow(w io.Writer, format string, args ...any) {
 	FprintOnLightYellow(w, Sprintf(format, args...))
 }
 
@@ -650,7 +650,7 @@ func PrintOnLightYellow(str string) {
 }
 
 // PrintfOnLightYellow wraps OnLightYellow() and fmt.Printf().
-func PrintfOnLightYellow(format string, args ...interface{}) {
+func PrintfOnLightYellow(format string, args ...any) {
 	PrintOnLightYellow(Sprintf(format, args...))
 }
 
@@ -666,7 +666,7 @@ func Blue(str string) string {
 }
 
 // Bluef wraps fmt.Sprintf() and Blue.
-func Bluef(format string, args ...interface{}) string {
+func Bluef(format string, args ...any) string {
 	return Blue(Sprintf(format, args...))
 }
 
@@ -676,7 +676,7 @@ func FprintBlue(w io.Writer, str string) {
 }
 
 // FprintfBlue wraps Blue and fmt.Fprintf().
-func FprintfBlue(w io.Writer, format string, args ...interface{}) {
+func FprintfBlue(w io.Writer, format string, args ...any) {
 	FprintBlue(w, Sprintf(format, args...))
 }
 
@@ -691,7 +691,7 @@ func PrintBlue(str string) {
 }
 
 // PrintfBlue wraps Blue() and fmt.Printf().
-func PrintfBlue(format string, args ...interface{}) {
+func PrintfBlue(format string, args ...any) {
 	PrintBlue(Sprintf(format, args...))
 }
 
@@ -707,7 +707,7 @@ func OnBlue(str string) string {
 }
 
 // OnBluef wraps fmt.Sprintf() and OnBlue.
-func OnBluef(format string, args ...interface{}) string {
+func OnBluef(format string, args ...any) string {
 	return OnBlue(Sprintf(format, args...))
 }
 
@@ -717,7 +717,7 @@ func FprintOnBlue(w io.Writer, str string) {
 }
 
 // FprintfOnBlue wraps OnBlue and fmt.Fprintf().
-func FprintfOnBlue(w io.Writer, format string, args ...interface{}) {
+func FprintfOnBlue(w io.Writer, format string, args ...any) {
 	FprintOnBlue(w, Sprintf(format, args...))
 }
 
@@ -732,7 +732,7 @@ func PrintOnBlue(str string) {
 }
 
 // PrintfOnBlue wraps OnBlue() and fmt.Printf().
-func PrintfOnBlue(format string, args ...interface{}) {
+func PrintfOnBlue(format string, args ...any) {
 	PrintOnBlue(Sprintf(format, args...))
 }
 
@@ -748,7 +748,7 @@ func LightBlue(str string) string {
 }
 
 // LightBluef wraps fmt.Sprintf() and LightBlue.
-func LightBluef(format string, args ...interface{}) string {
+func LightBluef(format string, args ...any) string {
 	return LightBlue(Sprintf(format, args...))
 }
 
@@ -758,7 +758,7 @@ func FprintLightBlue(w io.Writer, str string) {
 }
 
 // FprintfLightBlue wraps LightBlue and fmt.Fprintf().
-func FprintfLightBlue(w io.Writer, format string, args ...interface{}) {
+func FprintfLightBlue(w io.Writer, format string, args ...any) {
 	FprintLightBlue(w, Sprintf(format, args...))
 }
 
@@ -773,7 +773,7 @@ func PrintLightBlue(str string) {
 }
 
 // PrintfLightBlue wraps LightBlue() and fmt.Printf().
-func PrintfLightBlue(format string, args ...interface{}) {
+func PrintfLightBlue(format string, args ...any) {
 	PrintLightBlue(Sprintf(format, args...))
 }
 
@@ -789,7 +789,7 @@ func OnLightBlue(str string) string {
 }
 
 // OnLightBluef wraps fmt.Sprintf() and OnLightBlue.
-func OnLightBluef(format string, args ...interface{}) string {
+func OnLightBluef(format string, args ...any) string {
 	return OnLightBlue(Sprintf(format, args...))
 }
 
@@ -799,7 +799,7 @@ func FprintOnLightBlue(w io.Writer, str string) {
 }
 
 // FprintfOnLightBlue wraps OnLightBlue and fmt.Fprintf().
-func FprintfOnLightBlue(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightBlue(w io.Writer, format string, args ...any) {
 	FprintOnLightBlue(w, Sprintf(format, args...))
 }
 
@@ -814,7 +814,7 @@ func PrintOnLightBlue(str string) {
 }
 
 // PrintfOnLightBlue wraps OnLightBlue() and fmt.Printf().
-func PrintfOnLightBlue(format string, args ...interface{}) {
+func PrintfOnLightBlue(format string, args ...any) {
 	PrintOnLightBlue(Sprintf(format, args...))
 }
 
@@ -830,7 +830,7 @@ func Magenta(str string) string {
 }
 
 // Magentaf wraps fmt.Sprintf() and Magenta.
-func Magentaf(format string, args ...interface{}) string {
+func Magentaf(format string, args ...any) string {
 	return Magenta(Sprintf(format, args...))
 }
 
@@ -840,7 +840,7 @@ func FprintMagenta(w io.Writer, str string) {
 }
 
 // FprintfMagenta wraps Magenta and fmt.Fprintf().
-func FprintfMagenta(w io.Writer, format string, args ...interface{}) {
+func FprintfMagenta(w io.Writer, format string, args ...any) {
 	FprintMagenta(w, Sprintf(format, args...))
 }
 
@@ -855,7 +855,7 @@ func PrintMagenta(str string) {
 }
 
 // PrintfMagenta wraps Magenta() and fmt.Printf().
-func PrintfMagenta(format string, args ...interface{}) {
+func PrintfMagenta(format string, args ...any) {
 	PrintMagenta(Sprintf(format, args...))
 }
 
@@ -871,7 +871,7 @@ func OnMagenta(str string) string {
 }
 
 // OnMagentaf wraps fmt.Sprintf() and OnMagenta.
-func OnMagentaf(format string, args ...interface{}) string {
+func OnMagentaf(format string, args ...any) string {
 	return OnMagenta(Sprintf(format, args...))
 }
 
@@ -881,7 +881,7 @@ func FprintOnMagenta(w io.Writer, str string) {
 }
 
 // FprintfOnMagenta wraps OnMagenta and fmt.Fprintf().
-func FprintfOnMagenta(w io.Writer, format string, args ...interface{}) {
+func FprintfOnMagenta(w io.Writer, format string, args ...any) {
 	FprintOnMagenta(w, Sprintf(format, args...))
 }
 
@@ -896,7 +896,7 @@ func PrintOnMagenta(str string) {
 }
 
 // PrintfOnMagenta wraps OnMagenta() and fmt.Printf().
-func PrintfOnMagenta(format string, args ...interface{}) {
+func PrintfOnMagenta(format string, args ...any) {
 	PrintOnMagenta(Sprintf(format, args...))
 }
 
@@ -912,7 +912,7 @@ func LightMagenta(str string) string {
 }
 
 // LightMagentaf wraps fmt.Sprintf() and LightMagenta.
-func LightMagentaf(format string, args ...interface{}) string {
+func LightMagentaf(format string, args ...any) string {
 	return LightMagenta(Sprintf(format, args...))
 }
 
@@ -922,7 +922,7 @@ func FprintLightMagenta(w io.Writer, str string) {
 }
 
 // FprintfLightMagenta wraps LightMagenta and fmt.Fprintf().
-func FprintfLightMagenta(w io.Writer, format string, args ...interface{}) {
+func FprintfLightMagenta(w io.Writer, format string, args ...any) {
 	FprintLightMagenta(w, Sprintf(format, args...))
 }
 
@@ -937,7 +937,7 @@ func PrintLightMagenta(str string) {
 }
 
 // PrintfLightMagenta wraps LightMagenta() and fmt.Printf().
-func PrintfLightMagenta(format string, args ...interface{}) {
+func PrintfLightMagenta(format string, args ...any) {
 	PrintLightMagenta(Sprintf(format, args...))
 }
 
@@ -953,7 +953,7 @@ func OnLightMagenta(str string) string {
 }
 
 // OnLightMagentaf wraps fmt.Sprintf() and OnLightMagenta.
-func OnLightMagentaf(format string, args ...interface{}) string {
+func OnLightMagentaf(format string, args ...any) string {
 	return OnLightMagenta(Sprintf(format, args...))
 }
 
@@ -963,7 +963,7 @@ func FprintOnLightMagenta(w io.Writer, str string) {
 }
 
 // FprintfOnLightMagenta wraps OnLightMagenta and fmt.Fprintf().
-func FprintfOnLightMagenta(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightMagenta(w io.Writer, format string, args ...any) {
 	FprintOnLightMagenta(w, Sprintf(format, args...))
 }
 
@@ -978,7 +978,7 @@ func PrintOnLightMagenta(str string) {
 }
 
 // PrintfOnLightMagenta wraps OnLightMagenta() and fmt.Printf().
-func PrintfOnLightMagenta(format string, args ...interface{}) {
+func PrintfOnLightMagenta(format string, args ...any) {
 	PrintOnLightMagenta(Sprintf(format, args...))
 }
 
@@ -994,7 +994,7 @@ func Cyan(str string) string {
 }
 
 // Cyanf wraps fmt.Sprintf() and Cyan.
-func Cyanf(format string, args ...interface{}) string {
+func Cyanf(format string, args ...any) string {
 	return Cyan(Sprintf(format, args...))
 }
 
@@ -1004,7 +1004,7 @@ func FprintCyan(w io.Writer, str string) {
 }
 
 // FprintfCyan wraps Cyan and fmt.Fprintf().
-func FprintfCyan(w io.Writer, format string, args ...interface{}) {
+func FprintfCyan(w io.Writer, format string, args ...any) {
 	FprintCyan(w, Sprintf(format, args...))
 }
 
@@ -1019,7 +1019,7 @@ func PrintCyan(str string) {
 }
 
 // PrintfCyan wraps Cyan() and fmt.Printf().
-func PrintfCyan(format string, args ...interface{}) {
+func PrintfCyan(format string, args ...any) {
 	PrintCyan(Sprintf(format, args...))
 }
 
@@ -1035,7 +1035,7 @@ func OnCyan(str string) string {
 }
 
 // OnCyanf wraps fmt.Sprintf() and OnCyan.
-func OnCyanf(format string, args ...interface{}) string {
+func OnCyanf(format string, args ...any) string {
 	return OnCyan(Sprintf(format, args...))
 }
 
@@ -1045,7 +1045,7 @@ func FprintOnCyan(w io.Writer, str string) {
 }
 
 // FprintfOnCyan wraps OnCyan and fmt.Fprintf().
-func FprintfOnCyan(w io.Writer, format string, args ...interface{}) {
+func FprintfOnCyan(w io.Writer, format string, args ...any) {
 	FprintOnCyan(w, Sprintf(format, args...))
 }
 
@@ -1060,7 +1060,7 @@ func PrintOnCyan(str string) {
 }
 
 // PrintfOnCyan wraps OnCyan() and fmt.Printf().
-func PrintfOnCyan(format string, args ...interface{}) {
+func PrintfOnCyan(format string, args ...any) {
 	PrintOnCyan(Sprintf(format, args...))
 }
 
@@ -1076,7 +1076,7 @@ func LightCyan(str string) string {
 }
 
 // LightCyanf wraps fmt.Sprintf() and LightCyan.
-func LightCyanf(format string, args ...interface{}) string {
+func LightCyanf(format string, args ...any) string {
 	return LightCyan(Sprintf(format, args...))
 }
 
@@ -1086,7 +1086,7 @@ func FprintLightCyan(w io.Writer, str string) {
 }
 
 // FprintfLightCyan wraps LightCyan and fmt.Fprintf().
-func FprintfLightCyan(w io.Writer, format string, args ...interface{}) {
+func FprintfLightCyan(w io.Writer, format string, args ...any) {
 	FprintLightCyan(w, Sprintf(format, args...))
 }
 
@@ -1101,7 +1101,7 @@ func PrintLightCyan(str string) {
 }
 
 // PrintfLightCyan wraps LightCyan() and fmt.Printf().
-func PrintfLightCyan(format string, args ...interface{}) {
+func PrintfLightCyan(format string, args ...any) {
 	PrintLightCyan(Sprintf(format, args...))
 }
 
@@ -1117,7 +1117,7 @@ func OnLightCyan(str string) string {
 }
 
 // OnLightCyanf wraps fmt.Sprintf() and OnLightCyan.
-func OnLightCyanf(format string, args ...interface{}) string {
+func OnLightCyanf(format string, args ...any) string {
 	return OnLightCyan(Sprintf(format, args...))
 }
 
@@ -1127,7 +1127,7 @@ func FprintOnLightCyan(w io.Writer, str string) {
 }
 
 // FprintfOnLightCyan wraps OnLightCyan and fmt.Fprintf().
-func FprintfOnLightCyan(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightCyan(w io.Writer, format string, args ...any) {
 	FprintOnLightCyan(w, Sprintf(format, args...))
 }
 
@@ -1142,7 +1142,7 @@ func PrintOnLightCyan(str string) {
 }
 
 // PrintfOnLightCyan wraps OnLightCyan() and fmt.Printf().
-func PrintfOnLightCyan(format string, args ...interface{}) {
+func PrintfOnLightCyan(format string, args ...any) {
 	PrintOnLightCyan(Sprintf(format, args...))
 }
 
@@ -1158,7 +1158,7 @@ func White(str string) string {
 }
 
 // Whitef wraps fmt.Sprintf() and White.
-func Whitef(format string, args ...interface{}) string {
+func Whitef(format string, args ...any) string {
 	return White(Sprintf(format, args...))
 }
 
@@ -1168,7 +1168,7 @@ func FprintWhite(w io.Writer, str string) {
 }
 
 // FprintfWhite wraps White and fmt.Fprintf().
-func FprintfWhite(w io.Writer, format string, args ...interface{}) {
+func FprintfWhite(w io.Writer, format string, args ...any) {
 	FprintWhite(w, Sprintf(format, args...))
 }
 
@@ -1183,7 +1183,7 @@ func PrintWhite(str string) {
 }
 
 // PrintfWhite wraps White() and fmt.Printf().
-func PrintfWhite(format string, args ...interface{}) {
+func PrintfWhite(format string, args ...any) {
 	PrintWhite(Sprintf(format, args...))
 }
 
@@ -1199,7 +1199,7 @@ func OnWhite(str string) string {
 }
 
 // OnWhitef wraps fmt.Sprintf() and OnWhite.
-func OnWhitef(format string, args ...interface{}) string {
+func OnWhitef(format string, args ...any) string {
 	return OnWhite(Sprintf(format, args...))
 }
 
@@ -1209,7 +1209,7 @@ func FprintOnWhite(w io.Writer, str string) {
 }
 
 // FprintfOnWhite wraps OnWhite and fmt.Fprintf().
-func FprintfOnWhite(w io.Writer, format string, args ...interface{}) {
+func FprintfOnWhite(w io.Writer, format string, args ...any) {
 	FprintOnWhite(w, Sprintf(format, args...))
 }
 
@@ -1224,7 +1224,7 @@ func PrintOnWhite(str string) {
 }
 
 // PrintfOnWhite wraps OnWhite() and fmt.Printf().
-func PrintfOnWhite(format string, args ...interface{}) {
+func PrintfOnWhite(format string, args ...any) {
 	PrintOnWhite(Sprintf(format, args...))
 }
 
@@ -1240,7 +1240,7 @@ func LightWhite(str string) string {
 }
 
 // LightWhitef wraps fmt.Sprintf() and LightWhite.
-func LightWhitef(format string, args ...interface{}) string {
+func LightWhitef(format string, args ...any) string {
 	return LightWhite(Sprintf(format, args...))
 }
 
@@ -1250,7 +1250,7 @@ func FprintLightWhite(w io.Writer, str string) {
 }
 
 // FprintfLightWhite wraps LightWhite and fmt.Fprintf().
-func FprintfLightWhite(w io.Writer, format string, args ...interface{}) {
+func FprintfLightWhite(w io.Writer, format string, args ...any) {
 	FprintLightWhite(w, Sprintf(format, args...))
 }
 
@@ -1265,7 +1265,7 @@ func PrintLightWhite(str string) {
 }
 
 // PrintfLightWhite wraps LightWhite() and fmt.Printf().
-func PrintfLightWhite(format string, args ...interface{}) {
+func PrintfLightWhite(format string, args ...any) {
 	PrintLightWhite(Sprintf(format, args...))
 }
 
@@ -1281,7 +1281,7 @@ func OnLightWhite(str string) string {
 }
 
 // OnLightWhitef wraps fmt.Sprintf() and OnLightWhite.
-func OnLightWhitef(format string, args ...interface{}) string {
+func OnLightWhitef(format string, args ...any) string {
 	return OnLightWhite(Sprintf(format, args...))
 }
 
@@ -1291,7 +1291,7 @@ func FprintOnLightWhite(w io.Writer, str string) {
 }
 
 // FprintfOnLightWhite wraps OnLightWhite and fmt.Fprintf().
-func FprintfOnLightWhite(w io.Writer, format string, args ...interface{}) {
+func FprintfOnLightWhite(w io.Writer, format string, args ...any) {
 	FprintOnLightWhite(w, Sprintf(format, args...))
 }
 
@@ -1306,7 +1306,7 @@ func PrintOnLightWhite(str string) {
 }
 
 // PrintfOnLightWhite wraps OnLightWhite() and fmt.Printf().
-func PrintfOnLightWhite(format string, args ...interface{}) {
+func PrintfOnLightWhite(format string, args ...any) {
 	PrintOnLightWhite(Sprintf(format, args...))
 }
 
@@ -1322,7 +1322,7 @@ func Default(str string) string {
 }
 
 // Defaultf wraps fmt.Sprintf() and Default.
-func Defaultf(format string, args ...interface{}) string {
+func Defaultf(format string, args ...any) string {
 	return Default(Sprintf(format, args...))
 }
 
@@ -1332,7 +1332,7 @@ func FprintDefault(w io.Writer, str string) {
 }
 
 // FprintfDefault wraps Default and fmt.Fprintf().
-func FprintfDefault(w io.Writer, format string, args ...interface{}) {
+func FprintfDefault(w io.Writer, format string, args ...any) {
 	FprintDefault(w, Sprintf(format, args...))
 }
 
@@ -1347,7 +1347,7 @@ func PrintDefault(str string) {
 }
 
 // PrintfDefault wraps Default() and fmt.Printf().
-func PrintfDefault(format string, args ...interface{}) {
+func PrintfDefault(format string, args ...any) {
 	PrintDefault(Sprintf(format, args...))
 }
 
@@ -1363,7 +1363,7 @@ func OnDefault(str string) string {
 }
 
 // OnDefaultf wraps fmt.Sprintf() and OnDefault.
-func OnDefaultf(format string, args ...interface{}) string {
+func OnDefaultf(format string, args ...any) string {
 	return OnDefault(Sprintf(format, args...))
 }
 
@@ -1373,7 +1373,7 @@ func FprintOnDefault(w io.Writer, str string) {
 }
 
 // FprintfOnDefault wraps OnDefault and fmt.Fprintf().
-func FprintfOnDefault(w io.Writer, format string, args ...interface{}) {
+func FprintfOnDefault(w io.Writer, format string, args ...any) {
 	FprintOnDefault(w, Sprintf(format, args...))
 }
 
@@ -1388,7 +1388,7 @@ func PrintOnDefault(str string) {
 }
 
 // PrintfOnDefault wraps OnDefault() and fmt.Printf().
-func PrintfOnDefault(format string, args ...interface{}) {
+func PrintfOnDefault(format string, args ...any) {
 	PrintOnDefault(Sprintf(format, args...))
 }
 
@@ -1404,7 +1404,7 @@ func Color000(str string) string {
 }
 
 // Color000f wraps fmt.Sprintf() and Color000.
-func Color000f(format string, args ...interface{}) string {
+func Color000f(format string, args ...any) string {
 	return Color000(Sprintf(format, args...))
 }
 
@@ -1414,7 +1414,7 @@ func FprintColor000(w io.Writer, str string) {
 }
 
 // FprintfColor000 wraps Color000 and fmt.Fprintf().
-func FprintfColor000(w io.Writer, format string, args ...interface{}) {
+func FprintfColor000(w io.Writer, format string, args ...any) {
 	FprintColor000(w, Sprintf(format, args...))
 }
 
@@ -1429,7 +1429,7 @@ func PrintColor000(str string) {
 }
 
 // PrintfColor000 wraps Color000() and fmt.Printf().
-func PrintfColor000(format string, args ...interface{}) {
+func PrintfColor000(format string, args ...any) {
 	PrintColor000(Sprintf(format, args...))
 }
 
@@ -1445,7 +1445,7 @@ func OnColor000(str string) string {
 }
 
 // OnColor000f wraps fmt.Sprintf() and OnColor000.
-func OnColor000f(format string, args ...interface{}) string {
+func OnColor000f(format string, args ...any) string {
 	return OnColor000(Sprintf(format, args...))
 }
 
@@ -1455,7 +1455,7 @@ func FprintOnColor000(w io.Writer, str string) {
 }
 
 // FprintfOnColor000 wraps OnColor000 and fmt.Fprintf().
-func FprintfOnColor000(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor000(w io.Writer, format string, args ...any) {
 	FprintOnColor000(w, Sprintf(format, args...))
 }
 
@@ -1470,7 +1470,7 @@ func PrintOnColor000(str string) {
 }
 
 // PrintfOnColor000 wraps OnColor000() and fmt.Printf().
-func PrintfOnColor000(format string, args ...interface{}) {
+func PrintfOnColor000(format string, args ...any) {
 	PrintOnColor000(Sprintf(format, args...))
 }
 
@@ -1486,7 +1486,7 @@ func Color001(str string) string {
 }
 
 // Color001f wraps fmt.Sprintf() and Color001.
-func Color001f(format string, args ...interface{}) string {
+func Color001f(format string, args ...any) string {
 	return Color001(Sprintf(format, args...))
 }
 
@@ -1496,7 +1496,7 @@ func FprintColor001(w io.Writer, str string) {
 }
 
 // FprintfColor001 wraps Color001 and fmt.Fprintf().
-func FprintfColor001(w io.Writer, format string, args ...interface{}) {
+func FprintfColor001(w io.Writer, format string, args ...any) {
 	FprintColor001(w, Sprintf(format, args...))
 }
 
@@ -1511,7 +1511,7 @@ func PrintColor001(str string) {
 }
 
 // PrintfColor001 wraps Color001() and fmt.Printf().
-func PrintfColor001(format string, args ...interface{}) {
+func PrintfColor001(format string, args ...any) {
 	PrintColor001(Sprintf(format, args...))
 }
 
@@ -1527,7 +1527,7 @@ func OnColor001(str string) string {
 }
 
 // OnColor001f wraps fmt.Sprintf() and OnColor001.
-func OnColor001f(format string, args ...interface{}) string {
+func OnColor001f(format string, args ...any) string {
 	return OnColor001(Sprintf(format, args...))
 }
 
@@ -1537,7 +1537,7 @@ func FprintOnColor001(w io.Writer, str string) {
 }
 
 // FprintfOnColor001 wraps OnColor001 and fmt.Fprintf().
-func FprintfOnColor001(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor001(w io.Writer, format string, args ...any) {
 	FprintOnColor001(w, Sprintf(format, args...))
 }
 
@@ -1552,7 +1552,7 @@ func PrintOnColor001(str string) {
 }
 
 // PrintfOnColor001 wraps OnColor001() and fmt.Printf().
-func PrintfOnColor001(format string, args ...interface{}) {
+func PrintfOnColor001(format string, args ...any) {
 	PrintOnColor001(Sprintf(format, args...))
 }
 
@@ -1568,7 +1568,7 @@ func Color002(str string) string {
 }
 
 // Color002f wraps fmt.Sprintf() and Color002.
-func Color002f(format string, args ...interface{}) string {
+func Color002f(format string, args ...any) string {
 	return Color002(Sprintf(format, args...))
 }
 
@@ -1578,7 +1578,7 @@ func FprintColor002(w io.Writer, str string) {
 }
 
 // FprintfColor002 wraps Color002 and fmt.Fprintf().
-func FprintfColor002(w io.Writer, format string, args ...interface{}) {
+func FprintfColor002(w io.Writer, format string, args ...any) {
 	FprintColor002(w, Sprintf(format, args...))
 }
 
@@ -1593,7 +1593,7 @@ func PrintColor002(str string) {
 }
 
 // PrintfColor002 wraps Color002() and fmt.Printf().
-func PrintfColor002(format string, args ...interface{}) {
+func PrintfColor002(format string, args ...any) {
 	PrintColor002(Sprintf(format, args...))
 }
 
@@ -1609,7 +1609,7 @@ func OnColor002(str string) string {
 }
 
 // OnColor002f wraps fmt.Sprintf() and OnColor002.
-func OnColor002f(format string, args ...interface{}) string {
+func OnColor002f(format string, args ...any) string {
 	return OnColor002(Sprintf(format, args...))
 }
 
@@ -1619,7 +1619,7 @@ func FprintOnColor002(w io.Writer, str string) {
 }
 
 // FprintfOnColor002 wraps OnColor002 and fmt.Fprintf().
-func FprintfOnColor002(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor002(w io.Writer, format string, args ...any) {
 	FprintOnColor002(w, Sprintf(format, args...))
 }
 
@@ -1634,7 +1634,7 @@ func PrintOnColor002(str string) {
 }
 
 // PrintfOnColor002 wraps OnColor002() and fmt.Printf().
-func PrintfOnColor002(format string, args ...interface{}) {
+func PrintfOnColor002(format string, args ...any) {
 	PrintOnColor002(Sprintf(format, args...))
 }
 
@@ -1650,7 +1650,7 @@ func Color003(str string) string {
 }
 
 // Color003f wraps fmt.Sprintf() and Color003.
-func Color003f(format string, args ...interface{}) string {
+func Color003f(format string, args ...any) string {
 	return Color003(Sprintf(format, args...))
 }
 
@@ -1660,7 +1660,7 @@ func FprintColor003(w io.Writer, str string) {
 }
 
 // FprintfColor003 wraps Color003 and fmt.Fprintf().
-func FprintfColor003(w io.Writer, format string, args ...interface{}) {
+func FprintfColor003(w io.Writer, format string, args ...any) {
 	FprintColor003(w, Sprintf(format, args...))
 }
 
@@ -1675,7 +1675,7 @@ func PrintColor003(str string) {
 }
 
 // PrintfColor003 wraps Color003() and fmt.Printf().
-func PrintfColor003(format string, args ...interface{}) {
+func PrintfColor003(format string, args ...any) {
 	PrintColor003(Sprintf(format, args...))
 }
 
@@ -1691,7 +1691,7 @@ func OnColor003(str string) string {
 }
 
 // OnColor003f wraps fmt.Sprintf() and OnColor003.
-func OnColor003f(format string, args ...interface{}) string {
+func OnColor003f(format string, args ...any) string {
 	return OnColor003(Sprintf(format, args...))
 }
 
@@ -1701,7 +1701,7 @@ func FprintOnColor003(w io.Writer, str string) {
 }
 
 // FprintfOnColor003 wraps OnColor003 and fmt.Fprintf().
-func FprintfOnColor003(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor003(w io.Writer, format string, args ...any) {
 	FprintOnColor003(w, Sprintf(format, args...))
 }
 
@@ -1716,7 +1716,7 @@ func PrintOnColor003(str string) {
 }
 
 // PrintfOnColor003 wraps OnColor003() and fmt.Printf().
-func PrintfOnColor003(format string, args ...interface{}) {
+func PrintfOnColor003(format string, args ...any) {
 	PrintOnColor003(Sprintf(format, args...))
 }
 
@@ -1732,7 +1732,7 @@ func Color004(str string) string {
 }
 
 // Color004f wraps fmt.Sprintf() and Color004.
-func Color004f(format string, args ...interface{}) string {
+func Color004f(format string, args ...any) string {
 	return Color004(Sprintf(format, args...))
 }
 
@@ -1742,7 +1742,7 @@ func FprintColor004(w io.Writer, str string) {
 }
 
 // FprintfColor004 wraps Color004 and fmt.Fprintf().
-func FprintfColor004(w io.Writer, format string, args ...interface{}) {
+func FprintfColor004(w io.Writer, format string, args ...any) {
 	FprintColor004(w, Sprintf(format, args...))
 }
 
@@ -1757,7 +1757,7 @@ func PrintColor004(str string) {
 }
 
 // PrintfColor004 wraps Color004() and fmt.Printf().
-func PrintfColor004(format string, args ...interface{}) {
+func PrintfColor004(format string, args ...any) {
 	PrintColor004(Sprintf(format, args...))
 }
 
@@ -1773,7 +1773,7 @@ func OnColor004(str string) string {
 }
 
 // OnColor004f wraps fmt.Sprintf() and OnColor004.
-func OnColor004f(format string, args ...interface{}) string {
+func OnColor004f(format string, args ...any) string {
 	return OnColor004(Sprintf(format, args...))
 }
 
@@ -1783,7 +1783,7 @@ func FprintOnColor004(w io.Writer, str string) {
 }
 
 // FprintfOnColor004 wraps OnColor004 and fmt.Fprintf().
-func FprintfOnColor004(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor004(w io.Writer, format string, args ...any) {
 	FprintOnColor004(w, Sprintf(format, args...))
 }
 
@@ -1798,7 +1798,7 @@ func PrintOnColor004(str string) {
 }
 
 // PrintfOnColor004 wraps OnColor004() and fmt.Printf().
-func PrintfOnColor004(format string, args ...interface{}) {
+func PrintfOnColor004(format string, args ...any) {
 	PrintOnColor004(Sprintf(format, args...))
 }
 
@@ -1814,7 +1814,7 @@ func Color005(str string) string {
 }
 
 // Color005f wraps fmt.Sprintf() and Color005.
-func Color005f(format string, args ...interface{}) string {
+func Color005f(format string, args ...any) string {
 	return Color005(Sprintf(format, args...))
 }
 
@@ -1824,7 +1824,7 @@ func FprintColor005(w io.Writer, str string) {
 }
 
 // FprintfColor005 wraps Color005 and fmt.Fprintf().
-func FprintfColor005(w io.Writer, format string, args ...interface{}) {
+func FprintfColor005(w io.Writer, format string, args ...any) {
 	FprintColor005(w, Sprintf(format, args...))
 }
 
@@ -1839,7 +1839,7 @@ func PrintColor005(str string) {
 }
 
 // PrintfColor005 wraps Color005() and fmt.Printf().
-func PrintfColor005(format string, args ...interface{}) {
+func PrintfColor005(format string, args ...any) {
 	PrintColor005(Sprintf(format, args...))
 }
 
@@ -1855,7 +1855,7 @@ func OnColor005(str string) string {
 }
 
 // OnColor005f wraps fmt.Sprintf() and OnColor005.
-func OnColor005f(format string, args ...interface{}) string {
+func OnColor005f(format string, args ...any) string {
 	return OnColor005(Sprintf(format, args...))
 }
 
@@ -1865,7 +1865,7 @@ func FprintOnColor005(w io.Writer, str string) {
 }
 
 // FprintfOnColor005 wraps OnColor005 and fmt.Fprintf().
-func FprintfOnColor005(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor005(w io.Writer, format string, args ...any) {
 	FprintOnColor005(w, Sprintf(format, args...))
 }
 
@@ -1880,7 +1880,7 @@ func PrintOnColor005(str string) {
 }
 
 // PrintfOnColor005 wraps OnColor005() and fmt.Printf().
-func PrintfOnColor005(format string, args ...interface{}) {
+func PrintfOnColor005(format string, args ...any) {
 	PrintOnColor005(Sprintf(format, args...))
 }
 
@@ -1896,7 +1896,7 @@ func Color006(str string) string {
 }
 
 // Color006f wraps fmt.Sprintf() and Color006.
-func Color006f(format string, args ...interface{}) string {
+func Color006f(format string, args ...any) string {
 	return Color006(Sprintf(format, args...))
 }
 
@@ -1906,7 +1906,7 @@ func FprintColor006(w io.Writer, str string) {
 }
 
 // FprintfColor006 wraps Color006 and fmt.Fprintf().
-func FprintfColor006(w io.Writer, format string, args ...interface{}) {
+func FprintfColor006(w io.Writer, format string, args ...any) {
 	FprintColor006(w, Sprintf(format, args...))
 }
 
@@ -1921,7 +1921,7 @@ func PrintColor006(str string) {
 }
 
 // PrintfColor006 wraps Color006() and fmt.Printf().
-func PrintfColor006(format string, args ...interface{}) {
+func PrintfColor006(format string, args ...any) {
 	PrintColor006(Sprintf(format, args...))
 }
 
@@ -1937,7 +1937,7 @@ func OnColor006(str string) string {
 }
 
 // OnColor006f wraps fmt.Sprintf() and OnColor006.
-func OnColor006f(format string, args ...interface{}) string {
+func OnColor006f(format string, args ...any) string {
 	return OnColor006(Sprintf(format, args...))
 }
 
@@ -1947,7 +1947,7 @@ func FprintOnColor006(w io.Writer, str string) {
 }
 
 // FprintfOnColor006 wraps OnColor006 and fmt.Fprintf().
-func FprintfOnColor006(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor006(w io.Writer, format string, args ...any) {
 	FprintOnColor006(w, Sprintf(format, args...))
 }
 
@@ -1962,7 +1962,7 @@ func PrintOnColor006(str string) {
 }
 
 // PrintfOnColor006 wraps OnColor006() and fmt.Printf().
-func PrintfOnColor006(format string, args ...interface{}) {
+func PrintfOnColor006(format string, args ...any) {
 	PrintOnColor006(Sprintf(format, args...))
 }
 
@@ -1978,7 +1978,7 @@ func Color007(str string) string {
 }
 
 // Color007f wraps fmt.Sprintf() and Color007.
-func Color007f(format string, args ...interface{}) string {
+func Color007f(format string, args ...any) string {
 	return Color007(Sprintf(format, args...))
 }
 
@@ -1988,7 +1988,7 @@ func FprintColor007(w io.Writer, str string) {
 }
 
 // FprintfColor007 wraps Color007 and fmt.Fprintf().
-func FprintfColor007(w io.Writer, format string, args ...interface{}) {
+func FprintfColor007(w io.Writer, format string, args ...any) {
 	FprintColor007(w, Sprintf(format, args...))
 }
 
@@ -2003,7 +2003,7 @@ func PrintColor007(str string) {
 }
 
 // PrintfColor007 wraps Color007() and fmt.Printf().
-func PrintfColor007(format string, args ...interface{}) {
+func PrintfColor007(format string, args ...any) {
 	PrintColor007(Sprintf(format, args...))
 }
 
@@ -2019,7 +2019,7 @@ func OnColor007(str string) string {
 }
 
 // OnColor007f wraps fmt.Sprintf() and OnColor007.
-func OnColor007f(format string, args ...interface{}) string {
+func OnColor007f(format string, args ...any) string {
 	return OnColor007(Sprintf(format, args...))
 }
 
@@ -2029,7 +2029,7 @@ func FprintOnColor007(w io.Writer, str string) {
 }
 
 // FprintfOnColor007 wraps OnColor007 and fmt.Fprintf().
-func FprintfOnColor007(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor007(w io.Writer, format string, args ...any) {
 	FprintOnColor007(w, Sprintf(format, args...))
 }
 
@@ -2044,7 +2044,7 @@ func PrintOnColor007(str string) {
 }
 
 // PrintfOnColor007 wraps OnColor007() and fmt.Printf().
-func PrintfOnColor007(format string, args ...interface{}) {
+func PrintfOnColor007(format string, args ...any) {
 	PrintOnColor007(Sprintf(format, args...))
 }
 
@@ -2060,7 +2060,7 @@ func Color008(str string) string {
 }
 
 // Color008f wraps fmt.Sprintf() and Color008.
-func Color008f(format string, args ...interface{}) string {
+func Color008f(format string, args ...any) string {
 	return Color008(Sprintf(format, args...))
 }
 
@@ -2070,7 +2070,7 @@ func FprintColor008(w io.Writer, str string) {
 }
 
 // FprintfColor008 wraps Color008 and fmt.Fprintf().
-func FprintfColor008(w io.Writer, format string, args ...interface{}) {
+func FprintfColor008(w io.Writer, format string, args ...any) {
 	FprintColor008(w, Sprintf(format, args...))
 }
 
@@ -2085,7 +2085,7 @@ func PrintColor008(str string) {
 }
 
 // PrintfColor008 wraps Color008() and fmt.Printf().
-func PrintfColor008(format string, args ...interface{}) {
+func PrintfColor008(format string, args ...any) {
 	PrintColor008(Sprintf(format, args...))
 }
 
@@ -2101,7 +2101,7 @@ func OnColor008(str string) string {
 }
 
 // OnColor008f wraps fmt.Sprintf() and OnColor008.
-func OnColor008f(format string, args ...interface{}) string {
+func OnColor008f(format string, args ...any) string {
 	return OnColor008(Sprintf(format, args...))
 }
 
@@ -2111,7 +2111,7 @@ func FprintOnColor008(w io.Writer, str string) {
 }
 
 // FprintfOnColor008 wraps OnColor008 and fmt.Fprintf().
-func FprintfOnColor008(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor008(w io.Writer, format string, args ...any) {
 	FprintOnColor008(w, Sprintf(format, args...))
 }
 
@@ -2126,7 +2126,7 @@ func PrintOnColor008(str string) {
 }
 
 // PrintfOnColor008 wraps OnColor008() and fmt.Printf().
-func PrintfOnColor008(format string, args ...interface{}) {
+func PrintfOnColor008(format string, args ...any) {
 	PrintOnColor008(Sprintf(format, args...))
 }
 
@@ -2142,7 +2142,7 @@ func Color009(str string) string {
 }
 
 // Color009f wraps fmt.Sprintf() and Color009.
-func Color009f(format string, args ...interface{}) string {
+func Color009f(format string, args ...any) string {
 	return Color009(Sprintf(format, args...))
 }
 
@@ -2152,7 +2152,7 @@ func FprintColor009(w io.Writer, str string) {
 }
 
 // FprintfColor009 wraps Color009 and fmt.Fprintf().
-func FprintfColor009(w io.Writer, format string, args ...interface{}) {
+func FprintfColor009(w io.Writer, format string, args ...any) {
 	FprintColor009(w, Sprintf(format, args...))
 }
 
@@ -2167,7 +2167,7 @@ func PrintColor009(str string) {
 }
 
 // PrintfColor009 wraps Color009() and fmt.Printf().
-func PrintfColor009(format string, args ...interface{}) {
+func PrintfColor009(format string, args ...any) {
 	PrintColor009(Sprintf(format, args...))
 }
 
@@ -2183,7 +2183,7 @@ func OnColor009(str string) string {
 }
 
 // OnColor009f wraps fmt.Sprintf() and OnColor009.
-func OnColor009f(format string, args ...interface{}) string {
+func OnColor009f(format string, args ...any) string {
 	return OnColor009(Sprintf(format, args...))
 }
 
@@ -2193,7 +2193,7 @@ func FprintOnColor009(w io.Writer, str string) {
 }
 
 // FprintfOnColor009 wraps OnColor009 and fmt.Fprintf().
-func FprintfOnColor009(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor009(w io.Writer, format string, args ...any) {
 	FprintOnColor009(w, Sprintf(format, args...))
 }
 
@@ -2208,7 +2208,7 @@ func PrintOnColor009(str string) {
 }
 
 // PrintfOnColor009 wraps OnColor009() and fmt.Printf().
-func PrintfOnColor009(format string, args ...interface{}) {
+func PrintfOnColor009(format string, args ...any) {
 	PrintOnColor009(Sprintf(format, args...))
 }
 
@@ -2224,7 +2224,7 @@ func Color010(str string) string {
 }
 
 // Color010f wraps fmt.Sprintf() and Color010.
-func Color010f(format string, args ...interface{}) string {
+func Color010f(format string, args ...any) string {
 	return Color010(Sprintf(format, args...))
 }
 
@@ -2234,7 +2234,7 @@ func FprintColor010(w io.Writer, str string) {
 }
 
 // FprintfColor010 wraps Color010 and fmt.Fprintf().
-func FprintfColor010(w io.Writer, format string, args ...interface{}) {
+func FprintfColor010(w io.Writer, format string, args ...any) {
 	FprintColor010(w, Sprintf(format, args...))
 }
 
@@ -2249,7 +2249,7 @@ func PrintColor010(str string) {
 }
 
 // PrintfColor010 wraps Color010() and fmt.Printf().
-func PrintfColor010(format string, args ...interface{}) {
+func PrintfColor010(format string, args ...any) {
 	PrintColor010(Sprintf(format, args...))
 }
 
@@ -2265,7 +2265,7 @@ func OnColor010(str string) string {
 }
 
 // OnColor010f wraps fmt.Sprintf() and OnColor010.
-func OnColor010f(format string, args ...interface{}) string {
+func OnColor010f(format string, args ...any) string {
 	return OnColor010(Sprintf(format, args...))
 }
 
@@ -2275,7 +2275,7 @@ func FprintOnColor010(w io.Writer, str string) {
 }
 
 // FprintfOnColor010 wraps OnColor010 and fmt.Fprintf().
-func FprintfOnColor010(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor010(w io.Writer, format string, args ...any) {
 	FprintOnColor010(w, Sprintf(format, args...))
 }
 
@@ -2290,7 +2290,7 @@ func PrintOnColor010(str string) {
 }
 
 // PrintfOnColor010 wraps OnColor010() and fmt.Printf().
-func PrintfOnColor010(format string, args ...interface{}) {
+func PrintfOnColor010(format string, args ...any) {
 	PrintOnColor010(Sprintf(format, args...))
 }
 
@@ -2306,7 +2306,7 @@ func Color011(str string) string {
 }
 
 // Color011f wraps fmt.Sprintf() and Color011.
-func Color011f(format string, args ...interface{}) string {
+func Color011f(format string, args ...any) string {
 	return Color011(Sprintf(format, args...))
 }
 
@@ -2316,7 +2316,7 @@ func FprintColor011(w io.Writer, str string) {
 }
 
 // FprintfColor011 wraps Color011 and fmt.Fprintf().
-func FprintfColor011(w io.Writer, format string, args ...interface{}) {
+func FprintfColor011(w io.Writer, format string, args ...any) {
 	FprintColor011(w, Sprintf(format, args...))
 }
 
@@ -2331,7 +2331,7 @@ func PrintColor011(str string) {
 }
 
 // PrintfColor011 wraps Color011() and fmt.Printf().
-func PrintfColor011(format string, args ...interface{}) {
+func PrintfColor011(format string, args ...any) {
 	PrintColor011(Sprintf(format, args...))
 }
 
@@ -2347,7 +2347,7 @@ func OnColor011(str string) string {
 }
 
 // OnColor011f wraps fmt.Sprintf() and OnColor011.
-func OnColor011f(format string, args ...interface{}) string {
+func OnColor011f(format string, args ...any) string {
 	return OnColor011(Sprintf(format, args...))
 }
 
@@ -2357,7 +2357,7 @@ func FprintOnColor011(w io.Writer, str string) {
 }
 
 // FprintfOnColor011 wraps OnColor011 and fmt.Fprintf().
-func FprintfOnColor011(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor011(w io.Writer, format string, args ...any) {
 	FprintOnColor011(w, Sprintf(format, args...))
 }
 
@@ -2372,7 +2372,7 @@ func PrintOnColor011(str string) {
 }
 
 // PrintfOnColor011 wraps OnColor011() and fmt.Printf().
-func PrintfOnColor011(format string, args ...interface{}) {
+func PrintfOnColor011(format string, args ...any) {
 	PrintOnColor011(Sprintf(format, args...))
 }
 
@@ -2388,7 +2388,7 @@ func Color012(str string) string {
 }
 
 // Color012f wraps fmt.Sprintf() and Color012.
-func Color012f(format string, args ...interface{}) string {
+func Color012f(format string, args ...any) string {
 	return Color012(Sprintf(format, args...))
 }
 
@@ -2398,7 +2398,7 @@ func FprintColor012(w io.Writer, str string) {
 }
 
 // FprintfColor012 wraps Color012 and fmt.Fprintf().
-func FprintfColor012(w io.Writer, format string, args ...interface{}) {
+func FprintfColor012(w io.Writer, format string, args ...any) {
 	FprintColor012(w, Sprintf(format, args...))
 }
 
@@ -2413,7 +2413,7 @@ func PrintColor012(str string) {
 }
 
 // PrintfColor012 wraps Color012() and fmt.Printf().
-func PrintfColor012(format string, args ...interface{}) {
+func PrintfColor012(format string, args ...any) {
 	PrintColor012(Sprintf(format, args...))
 }
 
@@ -2429,7 +2429,7 @@ func OnColor012(str string) string {
 }
 
 // OnColor012f wraps fmt.Sprintf() and OnColor012.
-func OnColor012f(format string, args ...interface{}) string {
+func OnColor012f(format string, args ...any) string {
 	return OnColor012(Sprintf(format, args...))
 }
 
@@ -2439,7 +2439,7 @@ func FprintOnColor012(w io.Writer, str string) {
 }
 
 // FprintfOnColor012 wraps OnColor012 and fmt.Fprintf().
-func FprintfOnColor012(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor012(w io.Writer, format string, args ...any) {
 	FprintOnColor012(w, Sprintf(format, args...))
 }
 
@@ -2454,7 +2454,7 @@ func PrintOnColor012(str string) {
 }
 
 // PrintfOnColor012 wraps OnColor012() and fmt.Printf().
-func PrintfOnColor012(format string, args ...interface{}) {
+func PrintfOnColor012(format string, args ...any) {
 	PrintOnColor012(Sprintf(format, args...))
 }
 
@@ -2470,7 +2470,7 @@ func Color013(str string) string {
 }
 
 // Color013f wraps fmt.Sprintf() and Color013.
-func Color013f(format string, args ...interface{}) string {
+func Color013f(format string, args ...any) string {
 	return Color013(Sprintf(format, args...))
 }
 
@@ -2480,7 +2480,7 @@ func FprintColor013(w io.Writer, str string) {
 }
 
 // FprintfColor013 wraps Color013 and fmt.Fprintf().
-func FprintfColor013(w io.Writer, format string, args ...interface{}) {
+func FprintfColor013(w io.Writer, format string, args ...any) {
 	FprintColor013(w, Sprintf(format, args...))
 }
 
@@ -2495,7 +2495,7 @@ func PrintColor013(str string) {
 }
 
 // PrintfColor013 wraps Color013() and fmt.Printf().
-func PrintfColor013(format string, args ...interface{}) {
+func PrintfColor013(format string, args ...any) {
 	PrintColor013(Sprintf(format, args...))
 }
 
@@ -2511,7 +2511,7 @@ func OnColor013(str string) string {
 }
 
 // OnColor013f wraps fmt.Sprintf() and OnColor013.
-func OnColor013f(format string, args ...interface{}) string {
+func OnColor013f(format string, args ...any) string {
 	return OnColor013(Sprintf(format, args...))
 }
 
@@ -2521,7 +2521,7 @@ func FprintOnColor013(w io.Writer, str string) {
 }
 
 // FprintfOnColor013 wraps OnColor013 and fmt.Fprintf().
-func FprintfOnColor013(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor013(w io.Writer, format string, args ...any) {
 	FprintOnColor013(w, Sprintf(format, args...))
 }
 
@@ -2536,7 +2536,7 @@ func PrintOnColor013(str string) {
 }
 
 // PrintfOnColor013 wraps OnColor013() and fmt.Printf().
-func PrintfOnColor013(format string, args ...interface{}) {
+func PrintfOnColor013(format string, args ...any) {
 	PrintOnColor013(Sprintf(format, args...))
 }
 
@@ -2552,7 +2552,7 @@ func Color014(str string) string {
 }
 
 // Color014f wraps fmt.Sprintf() and Color014.
-func Color014f(format string, args ...interface{}) string {
+func Color014f(format string, args ...any) string {
 	return Color014(Sprintf(format, args...))
 }
 
@@ -2562,7 +2562,7 @@ func FprintColor014(w io.Writer, str string) {
 }
 
 // FprintfColor014 wraps Color014 and fmt.Fprintf().
-func FprintfColor014(w io.Writer, format string, args ...interface{}) {
+func FprintfColor014(w io.Writer, format string, args ...any) {
 	FprintColor014(w, Sprintf(format, args...))
 }
 
@@ -2577,7 +2577,7 @@ func PrintColor014(str string) {
 }
 
 // PrintfColor014 wraps Color014() and fmt.Printf().
-func PrintfColor014(format string, args ...interface{}) {
+func PrintfColor014(format string, args ...any) {
 	PrintColor014(Sprintf(format, args...))
 }
 
@@ -2593,7 +2593,7 @@ func OnColor014(str string) string {
 }
 
 // OnColor014f wraps fmt.Sprintf() and OnColor014.
-func OnColor014f(format string, args ...interface{}) string {
+func OnColor014f(format string, args ...any) string {
 	return OnColor014(Sprintf(format, args...))
 }
 
@@ -2603,7 +2603,7 @@ func FprintOnColor014(w io.Writer, str string) {
 }
 
 // FprintfOnColor014 wraps OnColor014 and fmt.Fprintf().
-func FprintfOnColor014(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor014(w io.Writer, format string, args ...any) {
 	FprintOnColor014(w, Sprintf(format, args...))
 }
 
@@ -2618,7 +2618,7 @@ func PrintOnColor014(str string) {
 }
 
 // PrintfOnColor014 wraps OnColor014() and fmt.Printf().
-func PrintfOnColor014(format string, args ...interface{}) {
+func PrintfOnColor014(format string, args ...any) {
 	PrintOnColor014(Sprintf(format, args...))
 }
 
@@ -2634,7 +2634,7 @@ func Color015(str string) string {
 }
 
 // Color015f wraps fmt.Sprintf() and Color015.
-func Color015f(format string, args ...interface{}) string {
+func Color015f(format string, args ...any) string {
 	return Color015(Sprintf(format, args...))
 }
 
@@ -2644,7 +2644,7 @@ func FprintColor015(w io.Writer, str string) {
 }
 
 // FprintfColor015 wraps Color015 and fmt.Fprintf().
-func FprintfColor015(w io.Writer, format string, args ...interface{}) {
+func FprintfColor015(w io.Writer, format string, args ...any) {
 	FprintColor015(w, Sprintf(format, args...))
 }
 
@@ -2659,7 +2659,7 @@ func PrintColor015(str string) {
 }
 
 // PrintfColor015 wraps Color015() and fmt.Printf().
-func PrintfColor015(format string, args ...interface{}) {
+func PrintfColor015(format string, args ...any) {
 	PrintColor015(Sprintf(format, args...))
 }
 
@@ -2675,7 +2675,7 @@ func OnColor015(str string) string {
 }
 
 // OnColor015f wraps fmt.Sprintf() and OnColor015.
-func OnColor015f(format string, args ...interface{}) string {
+func OnColor015f(format string, args ...any) string {
 	return OnColor015(Sprintf(format, args...))
 }
 
@@ -2685,7 +2685,7 @@ func FprintOnColor015(w io.Writer, str string) {
 }
 
 // FprintfOnColor015 wraps OnColor015 and fmt.Fprintf().
-func FprintfOnColor015(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor015(w io.Writer, format string, args ...any) {
 	FprintOnColor015(w, Sprintf(format, args...))
 }
 
@@ -2700,7 +2700,7 @@ func PrintOnColor015(str string) {
 }
 
 // PrintfOnColor015 wraps OnColor015() and fmt.Printf().
-func PrintfOnColor015(format string, args ...interface{}) {
+func PrintfOnColor015(format string, args ...any) {
 	PrintOnColor015(Sprintf(format, args...))
 }
 
@@ -2716,7 +2716,7 @@ func Color016(str string) string {
 }
 
 // Color016f wraps fmt.Sprintf() and Color016.
-func Color016f(format string, args ...interface{}) string {
+func Color016f(format string, args ...any) string {
 	return Color016(Sprintf(format, args...))
 }
 
@@ -2726,7 +2726,7 @@ func FprintColor016(w io.Writer, str string) {
 }
 
 // FprintfColor016 wraps Color016 and fmt.Fprintf().
-func FprintfColor016(w io.Writer, format string, args ...interface{}) {
+func FprintfColor016(w io.Writer, format string, args ...any) {
 	FprintColor016(w, Sprintf(format, args...))
 }
 
@@ -2741,7 +2741,7 @@ func PrintColor016(str string) {
 }
 
 // PrintfColor016 wraps Color016() and fmt.Printf().
-func PrintfColor016(format string, args ...interface{}) {
+func PrintfColor016(format string, args ...any) {
 	PrintColor016(Sprintf(format, args...))
 }
 
@@ -2757,7 +2757,7 @@ func OnColor016(str string) string {
 }
 
 // OnColor016f wraps fmt.Sprintf() and OnColor016.
-func OnColor016f(format string, args ...interface{}) string {
+func OnColor016f(format string, args ...any) string {
 	return OnColor016(Sprintf(format, args...))
 }
 
@@ -2767,7 +2767,7 @@ func FprintOnColor016(w io.Writer, str string) {
 }
 
 // FprintfOnColor016 wraps OnColor016 and fmt.Fprintf().
-func FprintfOnColor016(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor016(w io.Writer, format string, args ...any) {
 	FprintOnColor016(w, Sprintf(format, args...))
 }
 
@@ -2782,7 +2782,7 @@ func PrintOnColor016(str string) {
 }
 
 // PrintfOnColor016 wraps OnColor016() and fmt.Printf().
-func PrintfOnColor016(format string, args ...interface{}) {
+func PrintfOnColor016(format string, args ...any) {
 	PrintOnColor016(Sprintf(format, args...))
 }
 
@@ -2798,7 +2798,7 @@ func Color017(str string) string {
 }
 
 // Color017f wraps fmt.Sprintf() and Color017.
-func Color017f(format string, args ...interface{}) string {
+func Color017f(format string, args ...any) string {
 	return Color017(Sprintf(format, args...))
 }
 
@@ -2808,7 +2808,7 @@ func FprintColor017(w io.Writer, str string) {
 }
 
 // FprintfColor017 wraps Color017 and fmt.Fprintf().
-func FprintfColor017(w io.Writer, format string, args ...interface{}) {
+func FprintfColor017(w io.Writer, format string, args ...any) {
 	FprintColor017(w, Sprintf(format, args...))
 }
 
@@ -2823,7 +2823,7 @@ func PrintColor017(str string) {
 }
 
 // PrintfColor017 wraps Color017() and fmt.Printf().
-func PrintfColor017(format string, args ...interface{}) {
+func PrintfColor017(format string, args ...any) {
 	PrintColor017(Sprintf(format, args...))
 }
 
@@ -2839,7 +2839,7 @@ func OnColor017(str string) string {
 }
 
 // OnColor017f wraps fmt.Sprintf() and OnColor017.
-func OnColor017f(format string, args ...interface{}) string {
+func OnColor017f(format string, args ...any) string {
 	return OnColor017(Sprintf(format, args...))
 }
 
@@ -2849,7 +2849,7 @@ func FprintOnColor017(w io.Writer, str string) {
 }
 
 // FprintfOnColor017 wraps OnColor017 and fmt.Fprintf().
-func FprintfOnColor017(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor017(w io.Writer, format string, args ...any) {
 	FprintOnColor017(w, Sprintf(format, args...))
 }
 
@@ -2864,7 +2864,7 @@ func PrintOnColor017(str string) {
 }
 
 // PrintfOnColor017 wraps OnColor017() and fmt.Printf().
-func PrintfOnColor017(format string, args ...interface{}) {
+func PrintfOnColor017(format string, args ...any) {
 	PrintOnColor017(Sprintf(format, args...))
 }
 
@@ -2880,7 +2880,7 @@ func Color018(str string) string {
 }
 
 // Color018f wraps fmt.Sprintf() and Color018.
-func Color018f(format string, args ...interface{}) string {
+func Color018f(format string, args ...any) string {
 	return Color018(Sprintf(format, args...))
 }
 
@@ -2890,7 +2890,7 @@ func FprintColor018(w io.Writer, str string) {
 }
 
 // FprintfColor018 wraps Color018 and fmt.Fprintf().
-func FprintfColor018(w io.Writer, format string, args ...interface{}) {
+func FprintfColor018(w io.Writer, format string, args ...any) {
 	FprintColor018(w, Sprintf(format, args...))
 }
 
@@ -2905,7 +2905,7 @@ func PrintColor018(str string) {
 }
 
 // PrintfColor018 wraps Color018() and fmt.Printf().
-func PrintfColor018(format string, args ...interface{}) {
+func PrintfColor018(format string, args ...any) {
 	PrintColor018(Sprintf(format, args...))
 }
 
@@ -2921,7 +2921,7 @@ func OnColor018(str string) string {
 }
 
 // OnColor018f wraps fmt.Sprintf() and OnColor018.
-func OnColor018f(format string, args ...interface{}) string {
+func OnColor018f(format string, args ...any) string {
 	return OnColor018(Sprintf(format, args...))
 }
 
@@ -2931,7 +2931,7 @@ func FprintOnColor018(w io.Writer, str string) {
 }
 
 // FprintfOnColor018 wraps OnColor018 and fmt.Fprintf().
-func FprintfOnColor018(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor018(w io.Writer, format string, args ...any) {
 	FprintOnColor018(w, Sprintf(format, args...))
 }
 
@@ -2946,7 +2946,7 @@ func PrintOnColor018(str string) {
 }
 
 // PrintfOnColor018 wraps OnColor018() and fmt.Printf().
-func PrintfOnColor018(format string, args ...interface{}) {
+func PrintfOnColor018(format string, args ...any) {
 	PrintOnColor018(Sprintf(format, args...))
 }
 
@@ -2962,7 +2962,7 @@ func Color019(str string) string {
 }
 
 // Color019f wraps fmt.Sprintf() and Color019.
-func Color019f(format string, args ...interface{}) string {
+func Color019f(format string, args ...any) string {
 	return Color019(Sprintf(format, args...))
 }
 
@@ -2972,7 +2972,7 @@ func FprintColor019(w io.Writer, str string) {
 }
 
 // FprintfColor019 wraps Color019 and fmt.Fprintf().
-func FprintfColor019(w io.Writer, format string, args ...interface{}) {
+func FprintfColor019(w io.Writer, format string, args ...any) {
 	FprintColor019(w, Sprintf(format, args...))
 }
 
@@ -2987,7 +2987,7 @@ func PrintColor019(str string) {
 }
 
 // PrintfColor019 wraps Color019() and fmt.Printf().
-func PrintfColor019(format string, args ...interface{}) {
+func PrintfColor019(format string, args ...any) {
 	PrintColor019(Sprintf(format, args...))
 }
 
@@ -3003,7 +3003,7 @@ func OnColor019(str string) string {
 }
 
 // OnColor019f wraps fmt.Sprintf() and OnColor019.
-func OnColor019f(format string, args ...interface{}) string {
+func OnColor019f(format string, args ...any) string {
 	return OnColor019(Sprintf(format, args...))
 }
 
@@ -3013,7 +3013,7 @@ func FprintOnColor019(w io.Writer, str string) {
 }
 
 // FprintfOnColor019 wraps OnColor019 and fmt.Fprintf().
-func FprintfOnColor019(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor019(w io.Writer, format string, args ...any) {
 	FprintOnColor019(w, Sprintf(format, args...))
 }
 
@@ -3028,7 +3028,7 @@ func PrintOnColor019(str string) {
 }
 
 // PrintfOnColor019 wraps OnColor019() and fmt.Printf().
-func PrintfOnColor019(format string, args ...interface{}) {
+func PrintfOnColor019(format string, args ...any) {
 	PrintOnColor019(Sprintf(format, args...))
 }
 
@@ -3044,7 +3044,7 @@ func Color020(str string) string {
 }
 
 // Color020f wraps fmt.Sprintf() and Color020.
-func Color020f(format string, args ...interface{}) string {
+func Color020f(format string, args ...any) string {
 	return Color020(Sprintf(format, args...))
 }
 
@@ -3054,7 +3054,7 @@ func FprintColor020(w io.Writer, str string) {
 }
 
 // FprintfColor020 wraps Color020 and fmt.Fprintf().
-func FprintfColor020(w io.Writer, format string, args ...interface{}) {
+func FprintfColor020(w io.Writer, format string, args ...any) {
 	FprintColor020(w, Sprintf(format, args...))
 }
 
@@ -3069,7 +3069,7 @@ func PrintColor020(str string) {
 }
 
 // PrintfColor020 wraps Color020() and fmt.Printf().
-func PrintfColor020(format string, args ...interface{}) {
+func PrintfColor020(format string, args ...any) {
 	PrintColor020(Sprintf(format, args...))
 }
 
@@ -3085,7 +3085,7 @@ func OnColor020(str string) string {
 }
 
 // OnColor020f wraps fmt.Sprintf() and OnColor020.
-func OnColor020f(format string, args ...interface{}) string {
+func OnColor020f(format string, args ...any) string {
 	return OnColor020(Sprintf(format, args...))
 }
 
@@ -3095,7 +3095,7 @@ func FprintOnColor020(w io.Writer, str string) {
 }
 
 // FprintfOnColor020 wraps OnColor020 and fmt.Fprintf().
-func FprintfOnColor020(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor020(w io.Writer, format string, args ...any) {
 	FprintOnColor020(w, Sprintf(format, args...))
 }
 
@@ -3110,7 +3110,7 @@ func PrintOnColor020(str string) {
 }
 
 // PrintfOnColor020 wraps OnColor020() and fmt.Printf().
-func PrintfOnColor020(format string, args ...interface{}) {
+func PrintfOnColor020(format string, args ...any) {
 	PrintOnColor020(Sprintf(format, args...))
 }
 
@@ -3126,7 +3126,7 @@ func Color021(str string) string {
 }
 
 // Color021f wraps fmt.Sprintf() and Color021.
-func Color021f(format string, args ...interface{}) string {
+func Color021f(format string, args ...any) string {
 	return Color021(Sprintf(format, args...))
 }
 
@@ -3136,7 +3136,7 @@ func FprintColor021(w io.Writer, str string) {
 }
 
 // FprintfColor021 wraps Color021 and fmt.Fprintf().
-func FprintfColor021(w io.Writer, format string, args ...interface{}) {
+func FprintfColor021(w io.Writer, format string, args ...any) {
 	FprintColor021(w, Sprintf(format, args...))
 }
 
@@ -3151,7 +3151,7 @@ func PrintColor021(str string) {
 }
 
 // PrintfColor021 wraps Color021() and fmt.Printf().
-func PrintfColor021(format string, args ...interface{}) {
+func PrintfColor021(format string, args ...any) {
 	PrintColor021(Sprintf(format, args...))
 }
 
@@ -3167,7 +3167,7 @@ func OnColor021(str string) string {
 }
 
 // OnColor021f wraps fmt.Sprintf() and OnColor021.
-func OnColor021f(format string, args ...interface{}) string {
+func OnColor021f(format string, args ...any) string {
 	return OnColor021(Sprintf(format, args...))
 }
 
@@ -3177,7 +3177,7 @@ func FprintOnColor021(w io.Writer, str string) {
 }
 
 // FprintfOnColor021 wraps OnColor021 and fmt.Fprintf().
-func FprintfOnColor021(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor021(w io.Writer, format string, args ...any) {
 	FprintOnColor021(w, Sprintf(format, args...))
 }
 
@@ -3192,7 +3192,7 @@ func PrintOnColor021(str string) {
 }
 
 // PrintfOnColor021 wraps OnColor021() and fmt.Printf().
-func PrintfOnColor021(format string, args ...interface{}) {
+func PrintfOnColor021(format string, args ...any) {
 	PrintOnColor021(Sprintf(format, args...))
 }
 
@@ -3208,7 +3208,7 @@ func Color022(str string) string {
 }
 
 // Color022f wraps fmt.Sprintf() and Color022.
-func Color022f(format string, args ...interface{}) string {
+func Color022f(format string, args ...any) string {
 	return Color022(Sprintf(format, args...))
 }
 
@@ -3218,7 +3218,7 @@ func FprintColor022(w io.Writer, str string) {
 }
 
 // FprintfColor022 wraps Color022 and fmt.Fprintf().
-func FprintfColor022(w io.Writer, format string, args ...interface{}) {
+func FprintfColor022(w io.Writer, format string, args ...any) {
 	FprintColor022(w, Sprintf(format, args...))
 }
 
@@ -3233,7 +3233,7 @@ func PrintColor022(str string) {
 }
 
 // PrintfColor022 wraps Color022() and fmt.Printf().
-func PrintfColor022(format string, args ...interface{}) {
+func PrintfColor022(format string, args ...any) {
 	PrintColor022(Sprintf(format, args...))
 }
 
@@ -3249,7 +3249,7 @@ func OnColor022(str string) string {
 }
 
 // OnColor022f wraps fmt.Sprintf() and OnColor022.
-func OnColor022f(format string, args ...interface{}) string {
+func OnColor022f(format string, args ...any) string {
 	return OnColor022(Sprintf(format, args...))
 }
 
@@ -3259,7 +3259,7 @@ func FprintOnColor022(w io.Writer, str string) {
 }
 
 // FprintfOnColor022 wraps OnColor022 and fmt.Fprintf().
-func FprintfOnColor022(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor022(w io.Writer, format string, args ...any) {
 	FprintOnColor022(w, Sprintf(format, args...))
 }
 
@@ -3274,7 +3274,7 @@ func PrintOnColor022(str string) {
 }
 
 // PrintfOnColor022 wraps OnColor022() and fmt.Printf().
-func PrintfOnColor022(format string, args ...interface{}) {
+func PrintfOnColor022(format string, args ...any) {
 	PrintOnColor022(Sprintf(format, args...))
 }
 
@@ -3290,7 +3290,7 @@ func Color023(str string) string {
 }
 
 // Color023f wraps fmt.Sprintf() and Color023.
-func Color023f(format string, args ...interface{}) string {
+func Color023f(format string, args ...any) string {
 	return Color023(Sprintf(format, args...))
 }
 
@@ -3300,7 +3300,7 @@ func FprintColor023(w io.Writer, str string) {
 }
 
 // FprintfColor023 wraps Color023 and fmt.Fprintf().
-func FprintfColor023(w io.Writer, format string, args ...interface{}) {
+func FprintfColor023(w io.Writer, format string, args ...any) {
 	FprintColor023(w, Sprintf(format, args...))
 }
 
@@ -3315,7 +3315,7 @@ func PrintColor023(str string) {
 }
 
 // PrintfColor023 wraps Color023() and fmt.Printf().
-func PrintfColor023(format string, args ...interface{}) {
+func PrintfColor023(format string, args ...any) {
 	PrintColor023(Sprintf(format, args...))
 }
 
@@ -3331,7 +3331,7 @@ func OnColor023(str string) string {
 }
 
 // OnColor023f wraps fmt.Sprintf() and OnColor023.
-func OnColor023f(format string, args ...interface{}) string {
+func OnColor023f(format string, args ...any) string {
 	return OnColor023(Sprintf(format, args...))
 }
 
@@ -3341,7 +3341,7 @@ func FprintOnColor023(w io.Writer, str string) {
 }
 
 // FprintfOnColor023 wraps OnColor023 and fmt.Fprintf().
-func FprintfOnColor023(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor023(w io.Writer, format string, args ...any) {
 	FprintOnColor023(w, Sprintf(format, args...))
 }
 
@@ -3356,7 +3356,7 @@ func PrintOnColor023(str string) {
 }
 
 // PrintfOnColor023 wraps OnColor023() and fmt.Printf().
-func PrintfOnColor023(format string, args ...interface{}) {
+func PrintfOnColor023(format string, args ...any) {
 	PrintOnColor023(Sprintf(format, args...))
 }
 
@@ -3372,7 +3372,7 @@ func Color024(str string) string {
 }
 
 // Color024f wraps fmt.Sprintf() and Color024.
-func Color024f(format string, args ...interface{}) string {
+func Color024f(format string, args ...any) string {
 	return Color024(Sprintf(format, args...))
 }
 
@@ -3382,7 +3382,7 @@ func FprintColor024(w io.Writer, str string) {
 }
 
 // FprintfColor024 wraps Color024 and fmt.Fprintf().
-func FprintfColor024(w io.Writer, format string, args ...interface{}) {
+func FprintfColor024(w io.Writer, format string, args ...any) {
 	FprintColor024(w, Sprintf(format, args...))
 }
 
@@ -3397,7 +3397,7 @@ func PrintColor024(str string) {
 }
 
 // PrintfColor024 wraps Color024() and fmt.Printf().
-func PrintfColor024(format string, args ...interface{}) {
+func PrintfColor024(format string, args ...any) {
 	PrintColor024(Sprintf(format, args...))
 }
 
@@ -3413,7 +3413,7 @@ func OnColor024(str string) string {
 }
 
 // OnColor024f wraps fmt.Sprintf() and OnColor024.
-func OnColor024f(format string, args ...interface{}) string {
+func OnColor024f(format string, args ...any) string {
 	return OnColor024(Sprintf(format, args...))
 }
 
@@ -3423,7 +3423,7 @@ func FprintOnColor024(w io.Writer, str string) {
 }
 
 // FprintfOnColor024 wraps OnColor024 and fmt.Fprintf().
-func FprintfOnColor024(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor024(w io.Writer, format string, args ...any) {
 	FprintOnColor024(w, Sprintf(format, args...))
 }
 
@@ -3438,7 +3438,7 @@ func PrintOnColor024(str string) {
 }
 
 // PrintfOnColor024 wraps OnColor024() and fmt.Printf().
-func PrintfOnColor024(format string, args ...interface{}) {
+func PrintfOnColor024(format string, args ...any) {
 	PrintOnColor024(Sprintf(format, args...))
 }
 
@@ -3454,7 +3454,7 @@ func Color025(str string) string {
 }
 
 // Color025f wraps fmt.Sprintf() and Color025.
-func Color025f(format string, args ...interface{}) string {
+func Color025f(format string, args ...any) string {
 	return Color025(Sprintf(format, args...))
 }
 
@@ -3464,7 +3464,7 @@ func FprintColor025(w io.Writer, str string) {
 }
 
 // FprintfColor025 wraps Color025 and fmt.Fprintf().
-func FprintfColor025(w io.Writer, format string, args ...interface{}) {
+func FprintfColor025(w io.Writer, format string, args ...any) {
 	FprintColor025(w, Sprintf(format, args...))
 }
 
@@ -3479,7 +3479,7 @@ func PrintColor025(str string) {
 }
 
 // PrintfColor025 wraps Color025() and fmt.Printf().
-func PrintfColor025(format string, args ...interface{}) {
+func PrintfColor025(format string, args ...any) {
 	PrintColor025(Sprintf(format, args...))
 }
 
@@ -3495,7 +3495,7 @@ func OnColor025(str string) string {
 }
 
 // OnColor025f wraps fmt.Sprintf() and OnColor025.
-func OnColor025f(format string, args ...interface{}) string {
+func OnColor025f(format string, args ...any) string {
 	return OnColor025(Sprintf(format, args...))
 }
 
@@ -3505,7 +3505,7 @@ func FprintOnColor025(w io.Writer, str string) {
 }
 
 // FprintfOnColor025 wraps OnColor025 and fmt.Fprintf().
-func FprintfOnColor025(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor025(w io.Writer, format string, args ...any) {
 	FprintOnColor025(w, Sprintf(format, args...))
 }
 
@@ -3520,7 +3520,7 @@ func PrintOnColor025(str string) {
 }
 
 // PrintfOnColor025 wraps OnColor025() and fmt.Printf().
-func PrintfOnColor025(format string, args ...interface{}) {
+func PrintfOnColor025(format string, args ...any) {
 	PrintOnColor025(Sprintf(format, args...))
 }
 
@@ -3536,7 +3536,7 @@ func Color026(str string) string {
 }
 
 // Color026f wraps fmt.Sprintf() and Color026.
-func Color026f(format string, args ...interface{}) string {
+func Color026f(format string, args ...any) string {
 	return Color026(Sprintf(format, args...))
 }
 
@@ -3546,7 +3546,7 @@ func FprintColor026(w io.Writer, str string) {
 }
 
 // FprintfColor026 wraps Color026 and fmt.Fprintf().
-func FprintfColor026(w io.Writer, format string, args ...interface{}) {
+func FprintfColor026(w io.Writer, format string, args ...any) {
 	FprintColor026(w, Sprintf(format, args...))
 }
 
@@ -3561,7 +3561,7 @@ func PrintColor026(str string) {
 }
 
 // PrintfColor026 wraps Color026() and fmt.Printf().
-func PrintfColor026(format string, args ...interface{}) {
+func PrintfColor026(format string, args ...any) {
 	PrintColor026(Sprintf(format, args...))
 }
 
@@ -3577,7 +3577,7 @@ func OnColor026(str string) string {
 }
 
 // OnColor026f wraps fmt.Sprintf() and OnColor026.
-func OnColor026f(format string, args ...interface{}) string {
+func OnColor026f(format string, args ...any) string {
 	return OnColor026(Sprintf(format, args...))
 }
 
@@ -3587,7 +3587,7 @@ func FprintOnColor026(w io.Writer, str string) {
 }
 
 // FprintfOnColor026 wraps OnColor026 and fmt.Fprintf().
-func FprintfOnColor026(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor026(w io.Writer, format string, args ...any) {
 	FprintOnColor026(w, Sprintf(format, args...))
 }
 
@@ -3602,7 +3602,7 @@ func PrintOnColor026(str string) {
 }
 
 // PrintfOnColor026 wraps OnColor026() and fmt.Printf().
-func PrintfOnColor026(format string, args ...interface{}) {
+func PrintfOnColor026(format string, args ...any) {
 	PrintOnColor026(Sprintf(format, args...))
 }
 
@@ -3618,7 +3618,7 @@ func Color027(str string) string {
 }
 
 // Color027f wraps fmt.Sprintf() and Color027.
-func Color027f(format string, args ...interface{}) string {
+func Color027f(format string, args ...any) string {
 	return Color027(Sprintf(format, args...))
 }
 
@@ -3628,7 +3628,7 @@ func FprintColor027(w io.Writer, str string) {
 }
 
 // FprintfColor027 wraps Color027 and fmt.Fprintf().
-func FprintfColor027(w io.Writer, format string, args ...interface{}) {
+func FprintfColor027(w io.Writer, format string, args ...any) {
 	FprintColor027(w, Sprintf(format, args...))
 }
 
@@ -3643,7 +3643,7 @@ func PrintColor027(str string) {
 }
 
 // PrintfColor027 wraps Color027() and fmt.Printf().
-func PrintfColor027(format string, args ...interface{}) {
+func PrintfColor027(format string, args ...any) {
 	PrintColor027(Sprintf(format, args...))
 }
 
@@ -3659,7 +3659,7 @@ func OnColor027(str string) string {
 }
 
 // OnColor027f wraps fmt.Sprintf() and OnColor027.
-func OnColor027f(format string, args ...interface{}) string {
+func OnColor027f(format string, args ...any) string {
 	return OnColor027(Sprintf(format, args...))
 }
 
@@ -3669,7 +3669,7 @@ func FprintOnColor027(w io.Writer, str string) {
 }
 
 // FprintfOnColor027 wraps OnColor027 and fmt.Fprintf().
-func FprintfOnColor027(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor027(w io.Writer, format string, args ...any) {
 	FprintOnColor027(w, Sprintf(format, args...))
 }
 
@@ -3684,7 +3684,7 @@ func PrintOnColor027(str string) {
 }
 
 // PrintfOnColor027 wraps OnColor027() and fmt.Printf().
-func PrintfOnColor027(format string, args ...interface{}) {
+func PrintfOnColor027(format string, args ...any) {
 	PrintOnColor027(Sprintf(format, args...))
 }
 
@@ -3700,7 +3700,7 @@ func Color028(str string) string {
 }
 
 // Color028f wraps fmt.Sprintf() and Color028.
-func Color028f(format string, args ...interface{}) string {
+func Color028f(format string, args ...any) string {
 	return Color028(Sprintf(format, args...))
 }
 
@@ -3710,7 +3710,7 @@ func FprintColor028(w io.Writer, str string) {
 }
 
 // FprintfColor028 wraps Color028 and fmt.Fprintf().
-func FprintfColor028(w io.Writer, format string, args ...interface{}) {
+func FprintfColor028(w io.Writer, format string, args ...any) {
 	FprintColor028(w, Sprintf(format, args...))
 }
 
@@ -3725,7 +3725,7 @@ func PrintColor028(str string) {
 }
 
 // PrintfColor028 wraps Color028() and fmt.Printf().
-func PrintfColor028(format string, args ...interface{}) {
+func PrintfColor028(format string, args ...any) {
 	PrintColor028(Sprintf(format, args...))
 }
 
@@ -3741,7 +3741,7 @@ func OnColor028(str string) string {
 }
 
 // OnColor028f wraps fmt.Sprintf() and OnColor028.
-func OnColor028f(format string, args ...interface{}) string {
+func OnColor028f(format string, args ...any) string {
 	return OnColor028(Sprintf(format, args...))
 }
 
@@ -3751,7 +3751,7 @@ func FprintOnColor028(w io.Writer, str string) {
 }
 
 // FprintfOnColor028 wraps OnColor028 and fmt.Fprintf().
-func FprintfOnColor028(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor028(w io.Writer, format string, args ...any) {
 	FprintOnColor028(w, Sprintf(format, args...))
 }
 
@@ -3766,7 +3766,7 @@ func PrintOnColor028(str string) {
 }
 
 // PrintfOnColor028 wraps OnColor028() and fmt.Printf().
-func PrintfOnColor028(format string, args ...interface{}) {
+func PrintfOnColor028(format string, args ...any) {
 	PrintOnColor028(Sprintf(format, args...))
 }
 
@@ -3782,7 +3782,7 @@ func Color029(str string) string {
 }
 
 // Color029f wraps fmt.Sprintf() and Color029.
-func Color029f(format string, args ...interface{}) string {
+func Color029f(format string, args ...any) string {
 	return Color029(Sprintf(format, args...))
 }
 
@@ -3792,7 +3792,7 @@ func FprintColor029(w io.Writer, str string) {
 }
 
 // FprintfColor029 wraps Color029 and fmt.Fprintf().
-func FprintfColor029(w io.Writer, format string, args ...interface{}) {
+func FprintfColor029(w io.Writer, format string, args ...any) {
 	FprintColor029(w, Sprintf(format, args...))
 }
 
@@ -3807,7 +3807,7 @@ func PrintColor029(str string) {
 }
 
 // PrintfColor029 wraps Color029() and fmt.Printf().
-func PrintfColor029(format string, args ...interface{}) {
+func PrintfColor029(format string, args ...any) {
 	PrintColor029(Sprintf(format, args...))
 }
 
@@ -3823,7 +3823,7 @@ func OnColor029(str string) string {
 }
 
 // OnColor029f wraps fmt.Sprintf() and OnColor029.
-func OnColor029f(format string, args ...interface{}) string {
+func OnColor029f(format string, args ...any) string {
 	return OnColor029(Sprintf(format, args...))
 }
 
@@ -3833,7 +3833,7 @@ func FprintOnColor029(w io.Writer, str string) {
 }
 
 // FprintfOnColor029 wraps OnColor029 and fmt.Fprintf().
-func FprintfOnColor029(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor029(w io.Writer, format string, args ...any) {
 	FprintOnColor029(w, Sprintf(format, args...))
 }
 
@@ -3848,7 +3848,7 @@ func PrintOnColor029(str string) {
 }
 
 // PrintfOnColor029 wraps OnColor029() and fmt.Printf().
-func PrintfOnColor029(format string, args ...interface{}) {
+func PrintfOnColor029(format string, args ...any) {
 	PrintOnColor029(Sprintf(format, args...))
 }
 
@@ -3864,7 +3864,7 @@ func Color030(str string) string {
 }
 
 // Color030f wraps fmt.Sprintf() and Color030.
-func Color030f(format string, args ...interface{}) string {
+func Color030f(format string, args ...any) string {
 	return Color030(Sprintf(format, args...))
 }
 
@@ -3874,7 +3874,7 @@ func FprintColor030(w io.Writer, str string) {
 }
 
 // FprintfColor030 wraps Color030 and fmt.Fprintf().
-func FprintfColor030(w io.Writer, format string, args ...interface{}) {
+func FprintfColor030(w io.Writer, format string, args ...any) {
 	FprintColor030(w, Sprintf(format, args...))
 }
 
@@ -3889,7 +3889,7 @@ func PrintColor030(str string) {
 }
 
 // PrintfColor030 wraps Color030() and fmt.Printf().
-func PrintfColor030(format string, args ...interface{}) {
+func PrintfColor030(format string, args ...any) {
 	PrintColor030(Sprintf(format, args...))
 }
 
@@ -3905,7 +3905,7 @@ func OnColor030(str string) string {
 }
 
 // OnColor030f wraps fmt.Sprintf() and OnColor030.
-func OnColor030f(format string, args ...interface{}) string {
+func OnColor030f(format string, args ...any) string {
 	return OnColor030(Sprintf(format, args...))
 }
 
@@ -3915,7 +3915,7 @@ func FprintOnColor030(w io.Writer, str string) {
 }
 
 // FprintfOnColor030 wraps OnColor030 and fmt.Fprintf().
-func FprintfOnColor030(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor030(w io.Writer, format string, args ...any) {
 	FprintOnColor030(w, Sprintf(format, args...))
 }
 
@@ -3930,7 +3930,7 @@ func PrintOnColor030(str string) {
 }
 
 // PrintfOnColor030 wraps OnColor030() and fmt.Printf().
-func PrintfOnColor030(format string, args ...interface{}) {
+func PrintfOnColor030(format string, args ...any) {
 	PrintOnColor030(Sprintf(format, args...))
 }
 
@@ -3946,7 +3946,7 @@ func Color031(str string) string {
 }
 
 // Color031f wraps fmt.Sprintf() and Color031.
-func Color031f(format string, args ...interface{}) string {
+func Color031f(format string, args ...any) string {
 	return Color031(Sprintf(format, args...))
 }
 
@@ -3956,7 +3956,7 @@ func FprintColor031(w io.Writer, str string) {
 }
 
 // FprintfColor031 wraps Color031 and fmt.Fprintf().
-func FprintfColor031(w io.Writer, format string, args ...interface{}) {
+func FprintfColor031(w io.Writer, format string, args ...any) {
 	FprintColor031(w, Sprintf(format, args...))
 }
 
@@ -3971,7 +3971,7 @@ func PrintColor031(str string) {
 }
 
 // PrintfColor031 wraps Color031() and fmt.Printf().
-func PrintfColor031(format string, args ...interface{}) {
+func PrintfColor031(format string, args ...any) {
 	PrintColor031(Sprintf(format, args...))
 }
 
@@ -3987,7 +3987,7 @@ func OnColor031(str string) string {
 }
 
 // OnColor031f wraps fmt.Sprintf() and OnColor031.
-func OnColor031f(format string, args ...interface{}) string {
+func OnColor031f(format string, args ...any) string {
 	return OnColor031(Sprintf(format, args...))
 }
 
@@ -3997,7 +3997,7 @@ func FprintOnColor031(w io.Writer, str string) {
 }
 
 // FprintfOnColor031 wraps OnColor031 and fmt.Fprintf().
-func FprintfOnColor031(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor031(w io.Writer, format string, args ...any) {
 	FprintOnColor031(w, Sprintf(format, args...))
 }
 
@@ -4012,7 +4012,7 @@ func PrintOnColor031(str string) {
 }
 
 // PrintfOnColor031 wraps OnColor031() and fmt.Printf().
-func PrintfOnColor031(format string, args ...interface{}) {
+func PrintfOnColor031(format string, args ...any) {
 	PrintOnColor031(Sprintf(format, args...))
 }
 
@@ -4028,7 +4028,7 @@ func Color032(str string) string {
 }
 
 // Color032f wraps fmt.Sprintf() and Color032.
-func Color032f(format string, args ...interface{}) string {
+func Color032f(format string, args ...any) string {
 	return Color032(Sprintf(format, args...))
 }
 
@@ -4038,7 +4038,7 @@ func FprintColor032(w io.Writer, str string) {
 }
 
 // FprintfColor032 wraps Color032 and fmt.Fprintf().
-func FprintfColor032(w io.Writer, format string, args ...interface{}) {
+func FprintfColor032(w io.Writer, format string, args ...any) {
 	FprintColor032(w, Sprintf(format, args...))
 }
 
@@ -4053,7 +4053,7 @@ func PrintColor032(str string) {
 }
 
 // PrintfColor032 wraps Color032() and fmt.Printf().
-func PrintfColor032(format string, args ...interface{}) {
+func PrintfColor032(format string, args ...any) {
 	PrintColor032(Sprintf(format, args...))
 }
 
@@ -4069,7 +4069,7 @@ func OnColor032(str string) string {
 }
 
 // OnColor032f wraps fmt.Sprintf() and OnColor032.
-func OnColor032f(format string, args ...interface{}) string {
+func OnColor032f(format string, args ...any) string {
 	return OnColor032(Sprintf(format, args...))
 }
 
@@ -4079,7 +4079,7 @@ func FprintOnColor032(w io.Writer, str string) {
 }
 
 // FprintfOnColor032 wraps OnColor032 and fmt.Fprintf().
-func FprintfOnColor032(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor032(w io.Writer, format string, args ...any) {
 	FprintOnColor032(w, Sprintf(format, args...))
 }
 
@@ -4094,7 +4094,7 @@ func PrintOnColor032(str string) {
 }
 
 // PrintfOnColor032 wraps OnColor032() and fmt.Printf().
-func PrintfOnColor032(format string, args ...interface{}) {
+func PrintfOnColor032(format string, args ...any) {
 	PrintOnColor032(Sprintf(format, args...))
 }
 
@@ -4110,7 +4110,7 @@ func Color033(str string) string {
 }
 
 // Color033f wraps fmt.Sprintf() and Color033.
-func Color033f(format string, args ...interface{}) string {
+func Color033f(format string, args ...any) string {
 	return Color033(Sprintf(format, args...))
 }
 
@@ -4120,7 +4120,7 @@ func FprintColor033(w io.Writer, str string) {
 }
 
 // FprintfColor033 wraps Color033 and fmt.Fprintf().
-func FprintfColor033(w io.Writer, format string, args ...interface{}) {
+func FprintfColor033(w io.Writer, format string, args ...any) {
 	FprintColor033(w, Sprintf(format, args...))
 }
 
@@ -4135,7 +4135,7 @@ func PrintColor033(str string) {
 }
 
 // PrintfColor033 wraps Color033() and fmt.Printf().
-func PrintfColor033(format string, args ...interface{}) {
+func PrintfColor033(format string, args ...any) {
 	PrintColor033(Sprintf(format, args...))
 }
 
@@ -4151,7 +4151,7 @@ func OnColor033(str string) string {
 }
 
 // OnColor033f wraps fmt.Sprintf() and OnColor033.
-func OnColor033f(format string, args ...interface{}) string {
+func OnColor033f(format string, args ...any) string {
 	return OnColor033(Sprintf(format, args...))
 }
 
@@ -4161,7 +4161,7 @@ func FprintOnColor033(w io.Writer, str string) {
 }
 
 // FprintfOnColor033 wraps OnColor033 and fmt.Fprintf().
-func FprintfOnColor033(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor033(w io.Writer, format string, args ...any) {
 	FprintOnColor033(w, Sprintf(format, args...))
 }
 
@@ -4176,7 +4176,7 @@ func PrintOnColor033(str string) {
 }
 
 // PrintfOnColor033 wraps OnColor033() and fmt.Printf().
-func PrintfOnColor033(format string, args ...interface{}) {
+func PrintfOnColor033(format string, args ...any) {
 	PrintOnColor033(Sprintf(format, args...))
 }
 
@@ -4192,7 +4192,7 @@ func Color034(str string) string {
 }
 
 // Color034f wraps fmt.Sprintf() and Color034.
-func Color034f(format string, args ...interface{}) string {
+func Color034f(format string, args ...any) string {
 	return Color034(Sprintf(format, args...))
 }
 
@@ -4202,7 +4202,7 @@ func FprintColor034(w io.Writer, str string) {
 }
 
 // FprintfColor034 wraps Color034 and fmt.Fprintf().
-func FprintfColor034(w io.Writer, format string, args ...interface{}) {
+func FprintfColor034(w io.Writer, format string, args ...any) {
 	FprintColor034(w, Sprintf(format, args...))
 }
 
@@ -4217,7 +4217,7 @@ func PrintColor034(str string) {
 }
 
 // PrintfColor034 wraps Color034() and fmt.Printf().
-func PrintfColor034(format string, args ...interface{}) {
+func PrintfColor034(format string, args ...any) {
 	PrintColor034(Sprintf(format, args...))
 }
 
@@ -4233,7 +4233,7 @@ func OnColor034(str string) string {
 }
 
 // OnColor034f wraps fmt.Sprintf() and OnColor034.
-func OnColor034f(format string, args ...interface{}) string {
+func OnColor034f(format string, args ...any) string {
 	return OnColor034(Sprintf(format, args...))
 }
 
@@ -4243,7 +4243,7 @@ func FprintOnColor034(w io.Writer, str string) {
 }
 
 // FprintfOnColor034 wraps OnColor034 and fmt.Fprintf().
-func FprintfOnColor034(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor034(w io.Writer, format string, args ...any) {
 	FprintOnColor034(w, Sprintf(format, args...))
 }
 
@@ -4258,7 +4258,7 @@ func PrintOnColor034(str string) {
 }
 
 // PrintfOnColor034 wraps OnColor034() and fmt.Printf().
-func PrintfOnColor034(format string, args ...interface{}) {
+func PrintfOnColor034(format string, args ...any) {
 	PrintOnColor034(Sprintf(format, args...))
 }
 
@@ -4274,7 +4274,7 @@ func Color035(str string) string {
 }
 
 // Color035f wraps fmt.Sprintf() and Color035.
-func Color035f(format string, args ...interface{}) string {
+func Color035f(format string, args ...any) string {
 	return Color035(Sprintf(format, args...))
 }
 
@@ -4284,7 +4284,7 @@ func FprintColor035(w io.Writer, str string) {
 }
 
 // FprintfColor035 wraps Color035 and fmt.Fprintf().
-func FprintfColor035(w io.Writer, format string, args ...interface{}) {
+func FprintfColor035(w io.Writer, format string, args ...any) {
 	FprintColor035(w, Sprintf(format, args...))
 }
 
@@ -4299,7 +4299,7 @@ func PrintColor035(str string) {
 }
 
 // PrintfColor035 wraps Color035() and fmt.Printf().
-func PrintfColor035(format string, args ...interface{}) {
+func PrintfColor035(format string, args ...any) {
 	PrintColor035(Sprintf(format, args...))
 }
 
@@ -4315,7 +4315,7 @@ func OnColor035(str string) string {
 }
 
 // OnColor035f wraps fmt.Sprintf() and OnColor035.
-func OnColor035f(format string, args ...interface{}) string {
+func OnColor035f(format string, args ...any) string {
 	return OnColor035(Sprintf(format, args...))
 }
 
@@ -4325,7 +4325,7 @@ func FprintOnColor035(w io.Writer, str string) {
 }
 
 // FprintfOnColor035 wraps OnColor035 and fmt.Fprintf().
-func FprintfOnColor035(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor035(w io.Writer, format string, args ...any) {
 	FprintOnColor035(w, Sprintf(format, args...))
 }
 
@@ -4340,7 +4340,7 @@ func PrintOnColor035(str string) {
 }
 
 // PrintfOnColor035 wraps OnColor035() and fmt.Printf().
-func PrintfOnColor035(format string, args ...interface{}) {
+func PrintfOnColor035(format string, args ...any) {
 	PrintOnColor035(Sprintf(format, args...))
 }
 
@@ -4356,7 +4356,7 @@ func Color036(str string) string {
 }
 
 // Color036f wraps fmt.Sprintf() and Color036.
-func Color036f(format string, args ...interface{}) string {
+func Color036f(format string, args ...any) string {
 	return Color036(Sprintf(format, args...))
 }
 
@@ -4366,7 +4366,7 @@ func FprintColor036(w io.Writer, str string) {
 }
 
 // FprintfColor036 wraps Color036 and fmt.Fprintf().
-func FprintfColor036(w io.Writer, format string, args ...interface{}) {
+func FprintfColor036(w io.Writer, format string, args ...any) {
 	FprintColor036(w, Sprintf(format, args...))
 }
 
@@ -4381,7 +4381,7 @@ func PrintColor036(str string) {
 }
 
 // PrintfColor036 wraps Color036() and fmt.Printf().
-func PrintfColor036(format string, args ...interface{}) {
+func PrintfColor036(format string, args ...any) {
 	PrintColor036(Sprintf(format, args...))
 }
 
@@ -4397,7 +4397,7 @@ func OnColor036(str string) string {
 }
 
 // OnColor036f wraps fmt.Sprintf() and OnColor036.
-func OnColor036f(format string, args ...interface{}) string {
+func OnColor036f(format string, args ...any) string {
 	return OnColor036(Sprintf(format, args...))
 }
 
@@ -4407,7 +4407,7 @@ func FprintOnColor036(w io.Writer, str string) {
 }
 
 // FprintfOnColor036 wraps OnColor036 and fmt.Fprintf().
-func FprintfOnColor036(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor036(w io.Writer, format string, args ...any) {
 	FprintOnColor036(w, Sprintf(format, args...))
 }
 
@@ -4422,7 +4422,7 @@ func PrintOnColor036(str string) {
 }
 
 // PrintfOnColor036 wraps OnColor036() and fmt.Printf().
-func PrintfOnColor036(format string, args ...interface{}) {
+func PrintfOnColor036(format string, args ...any) {
 	PrintOnColor036(Sprintf(format, args...))
 }
 
@@ -4438,7 +4438,7 @@ func Color037(str string) string {
 }
 
 // Color037f wraps fmt.Sprintf() and Color037.
-func Color037f(format string, args ...interface{}) string {
+func Color037f(format string, args ...any) string {
 	return Color037(Sprintf(format, args...))
 }
 
@@ -4448,7 +4448,7 @@ func FprintColor037(w io.Writer, str string) {
 }
 
 // FprintfColor037 wraps Color037 and fmt.Fprintf().
-func FprintfColor037(w io.Writer, format string, args ...interface{}) {
+func FprintfColor037(w io.Writer, format string, args ...any) {
 	FprintColor037(w, Sprintf(format, args...))
 }
 
@@ -4463,7 +4463,7 @@ func PrintColor037(str string) {
 }
 
 // PrintfColor037 wraps Color037() and fmt.Printf().
-func PrintfColor037(format string, args ...interface{}) {
+func PrintfColor037(format string, args ...any) {
 	PrintColor037(Sprintf(format, args...))
 }
 
@@ -4479,7 +4479,7 @@ func OnColor037(str string) string {
 }
 
 // OnColor037f wraps fmt.Sprintf() and OnColor037.
-func OnColor037f(format string, args ...interface{}) string {
+func OnColor037f(format string, args ...any) string {
 	return OnColor037(Sprintf(format, args...))
 }
 
@@ -4489,7 +4489,7 @@ func FprintOnColor037(w io.Writer, str string) {
 }
 
 // FprintfOnColor037 wraps OnColor037 and fmt.Fprintf().
-func FprintfOnColor037(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor037(w io.Writer, format string, args ...any) {
 	FprintOnColor037(w, Sprintf(format, args...))
 }
 
@@ -4504,7 +4504,7 @@ func PrintOnColor037(str string) {
 }
 
 // PrintfOnColor037 wraps OnColor037() and fmt.Printf().
-func PrintfOnColor037(format string, args ...interface{}) {
+func PrintfOnColor037(format string, args ...any) {
 	PrintOnColor037(Sprintf(format, args...))
 }
 
@@ -4520,7 +4520,7 @@ func Color038(str string) string {
 }
 
 // Color038f wraps fmt.Sprintf() and Color038.
-func Color038f(format string, args ...interface{}) string {
+func Color038f(format string, args ...any) string {
 	return Color038(Sprintf(format, args...))
 }
 
@@ -4530,7 +4530,7 @@ func FprintColor038(w io.Writer, str string) {
 }
 
 // FprintfColor038 wraps Color038 and fmt.Fprintf().
-func FprintfColor038(w io.Writer, format string, args ...interface{}) {
+func FprintfColor038(w io.Writer, format string, args ...any) {
 	FprintColor038(w, Sprintf(format, args...))
 }
 
@@ -4545,7 +4545,7 @@ func PrintColor038(str string) {
 }
 
 // PrintfColor038 wraps Color038() and fmt.Printf().
-func PrintfColor038(format string, args ...interface{}) {
+func PrintfColor038(format string, args ...any) {
 	PrintColor038(Sprintf(format, args...))
 }
 
@@ -4561,7 +4561,7 @@ func OnColor038(str string) string {
 }
 
 // OnColor038f wraps fmt.Sprintf() and OnColor038.
-func OnColor038f(format string, args ...interface{}) string {
+func OnColor038f(format string, args ...any) string {
 	return OnColor038(Sprintf(format, args...))
 }
 
@@ -4571,7 +4571,7 @@ func FprintOnColor038(w io.Writer, str string) {
 }
 
 // FprintfOnColor038 wraps OnColor038 and fmt.Fprintf().
-func FprintfOnColor038(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor038(w io.Writer, format string, args ...any) {
 	FprintOnColor038(w, Sprintf(format, args...))
 }
 
@@ -4586,7 +4586,7 @@ func PrintOnColor038(str string) {
 }
 
 // PrintfOnColor038 wraps OnColor038() and fmt.Printf().
-func PrintfOnColor038(format string, args ...interface{}) {
+func PrintfOnColor038(format string, args ...any) {
 	PrintOnColor038(Sprintf(format, args...))
 }
 
@@ -4602,7 +4602,7 @@ func Color039(str string) string {
 }
 
 // Color039f wraps fmt.Sprintf() and Color039.
-func Color039f(format string, args ...interface{}) string {
+func Color039f(format string, args ...any) string {
 	return Color039(Sprintf(format, args...))
 }
 
@@ -4612,7 +4612,7 @@ func FprintColor039(w io.Writer, str string) {
 }
 
 // FprintfColor039 wraps Color039 and fmt.Fprintf().
-func FprintfColor039(w io.Writer, format string, args ...interface{}) {
+func FprintfColor039(w io.Writer, format string, args ...any) {
 	FprintColor039(w, Sprintf(format, args...))
 }
 
@@ -4627,7 +4627,7 @@ func PrintColor039(str string) {
 }
 
 // PrintfColor039 wraps Color039() and fmt.Printf().
-func PrintfColor039(format string, args ...interface{}) {
+func PrintfColor039(format string, args ...any) {
 	PrintColor039(Sprintf(format, args...))
 }
 
@@ -4643,7 +4643,7 @@ func OnColor039(str string) string {
 }
 
 // OnColor039f wraps fmt.Sprintf() and OnColor039.
-func OnColor039f(format string, args ...interface{}) string {
+func OnColor039f(format string, args ...any) string {
 	return OnColor039(Sprintf(format, args...))
 }
 
@@ -4653,7 +4653,7 @@ func FprintOnColor039(w io.Writer, str string) {
 }
 
 // FprintfOnColor039 wraps OnColor039 and fmt.Fprintf().
-func FprintfOnColor039(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor039(w io.Writer, format string, args ...any) {
 	FprintOnColor039(w, Sprintf(format, args...))
 }
 
@@ -4668,7 +4668,7 @@ func PrintOnColor039(str string) {
 }
 
 // PrintfOnColor039 wraps OnColor039() and fmt.Printf().
-func PrintfOnColor039(format string, args ...interface{}) {
+func PrintfOnColor039(format string, args ...any) {
 	PrintOnColor039(Sprintf(format, args...))
 }
 
@@ -4684,7 +4684,7 @@ func Color040(str string) string {
 }
 
 // Color040f wraps fmt.Sprintf() and Color040.
-func Color040f(format string, args ...interface{}) string {
+func Color040f(format string, args ...any) string {
 	return Color040(Sprintf(format, args...))
 }
 
@@ -4694,7 +4694,7 @@ func FprintColor040(w io.Writer, str string) {
 }
 
 // FprintfColor040 wraps Color040 and fmt.Fprintf().
-func FprintfColor040(w io.Writer, format string, args ...interface{}) {
+func FprintfColor040(w io.Writer, format string, args ...any) {
 	FprintColor040(w, Sprintf(format, args...))
 }
 
@@ -4709,7 +4709,7 @@ func PrintColor040(str string) {
 }
 
 // PrintfColor040 wraps Color040() and fmt.Printf().
-func PrintfColor040(format string, args ...interface{}) {
+func PrintfColor040(format string, args ...any) {
 	PrintColor040(Sprintf(format, args...))
 }
 
@@ -4725,7 +4725,7 @@ func OnColor040(str string) string {
 }
 
 // OnColor040f wraps fmt.Sprintf() and OnColor040.
-func OnColor040f(format string, args ...interface{}) string {
+func OnColor040f(format string, args ...any) string {
 	return OnColor040(Sprintf(format, args...))
 }
 
@@ -4735,7 +4735,7 @@ func FprintOnColor040(w io.Writer, str string) {
 }
 
 // FprintfOnColor040 wraps OnColor040 and fmt.Fprintf().
-func FprintfOnColor040(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor040(w io.Writer, format string, args ...any) {
 	FprintOnColor040(w, Sprintf(format, args...))
 }
 
@@ -4750,7 +4750,7 @@ func PrintOnColor040(str string) {
 }
 
 // PrintfOnColor040 wraps OnColor040() and fmt.Printf().
-func PrintfOnColor040(format string, args ...interface{}) {
+func PrintfOnColor040(format string, args ...any) {
 	PrintOnColor040(Sprintf(format, args...))
 }
 
@@ -4766,7 +4766,7 @@ func Color041(str string) string {
 }
 
 // Color041f wraps fmt.Sprintf() and Color041.
-func Color041f(format string, args ...interface{}) string {
+func Color041f(format string, args ...any) string {
 	return Color041(Sprintf(format, args...))
 }
 
@@ -4776,7 +4776,7 @@ func FprintColor041(w io.Writer, str string) {
 }
 
 // FprintfColor041 wraps Color041 and fmt.Fprintf().
-func FprintfColor041(w io.Writer, format string, args ...interface{}) {
+func FprintfColor041(w io.Writer, format string, args ...any) {
 	FprintColor041(w, Sprintf(format, args...))
 }
 
@@ -4791,7 +4791,7 @@ func PrintColor041(str string) {
 }
 
 // PrintfColor041 wraps Color041() and fmt.Printf().
-func PrintfColor041(format string, args ...interface{}) {
+func PrintfColor041(format string, args ...any) {
 	PrintColor041(Sprintf(format, args...))
 }
 
@@ -4807,7 +4807,7 @@ func OnColor041(str string) string {
 }
 
 // OnColor041f wraps fmt.Sprintf() and OnColor041.
-func OnColor041f(format string, args ...interface{}) string {
+func OnColor041f(format string, args ...any) string {
 	return OnColor041(Sprintf(format, args...))
 }
 
@@ -4817,7 +4817,7 @@ func FprintOnColor041(w io.Writer, str string) {
 }
 
 // FprintfOnColor041 wraps OnColor041 and fmt.Fprintf().
-func FprintfOnColor041(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor041(w io.Writer, format string, args ...any) {
 	FprintOnColor041(w, Sprintf(format, args...))
 }
 
@@ -4832,7 +4832,7 @@ func PrintOnColor041(str string) {
 }
 
 // PrintfOnColor041 wraps OnColor041() and fmt.Printf().
-func PrintfOnColor041(format string, args ...interface{}) {
+func PrintfOnColor041(format string, args ...any) {
 	PrintOnColor041(Sprintf(format, args...))
 }
 
@@ -4848,7 +4848,7 @@ func Color042(str string) string {
 }
 
 // Color042f wraps fmt.Sprintf() and Color042.
-func Color042f(format string, args ...interface{}) string {
+func Color042f(format string, args ...any) string {
 	return Color042(Sprintf(format, args...))
 }
 
@@ -4858,7 +4858,7 @@ func FprintColor042(w io.Writer, str string) {
 }
 
 // FprintfColor042 wraps Color042 and fmt.Fprintf().
-func FprintfColor042(w io.Writer, format string, args ...interface{}) {
+func FprintfColor042(w io.Writer, format string, args ...any) {
 	FprintColor042(w, Sprintf(format, args...))
 }
 
@@ -4873,7 +4873,7 @@ func PrintColor042(str string) {
 }
 
 // PrintfColor042 wraps Color042() and fmt.Printf().
-func PrintfColor042(format string, args ...interface{}) {
+func PrintfColor042(format string, args ...any) {
 	PrintColor042(Sprintf(format, args...))
 }
 
@@ -4889,7 +4889,7 @@ func OnColor042(str string) string {
 }
 
 // OnColor042f wraps fmt.Sprintf() and OnColor042.
-func OnColor042f(format string, args ...interface{}) string {
+func OnColor042f(format string, args ...any) string {
 	return OnColor042(Sprintf(format, args...))
 }
 
@@ -4899,7 +4899,7 @@ func FprintOnColor042(w io.Writer, str string) {
 }
 
 // FprintfOnColor042 wraps OnColor042 and fmt.Fprintf().
-func FprintfOnColor042(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor042(w io.Writer, format string, args ...any) {
 	FprintOnColor042(w, Sprintf(format, args...))
 }
 
@@ -4914,7 +4914,7 @@ func PrintOnColor042(str string) {
 }
 
 // PrintfOnColor042 wraps OnColor042() and fmt.Printf().
-func PrintfOnColor042(format string, args ...interface{}) {
+func PrintfOnColor042(format string, args ...any) {
 	PrintOnColor042(Sprintf(format, args...))
 }
 
@@ -4930,7 +4930,7 @@ func Color043(str string) string {
 }
 
 // Color043f wraps fmt.Sprintf() and Color043.
-func Color043f(format string, args ...interface{}) string {
+func Color043f(format string, args ...any) string {
 	return Color043(Sprintf(format, args...))
 }
 
@@ -4940,7 +4940,7 @@ func FprintColor043(w io.Writer, str string) {
 }
 
 // FprintfColor043 wraps Color043 and fmt.Fprintf().
-func FprintfColor043(w io.Writer, format string, args ...interface{}) {
+func FprintfColor043(w io.Writer, format string, args ...any) {
 	FprintColor043(w, Sprintf(format, args...))
 }
 
@@ -4955,7 +4955,7 @@ func PrintColor043(str string) {
 }
 
 // PrintfColor043 wraps Color043() and fmt.Printf().
-func PrintfColor043(format string, args ...interface{}) {
+func PrintfColor043(format string, args ...any) {
 	PrintColor043(Sprintf(format, args...))
 }
 
@@ -4971,7 +4971,7 @@ func OnColor043(str string) string {
 }
 
 // OnColor043f wraps fmt.Sprintf() and OnColor043.
-func OnColor043f(format string, args ...interface{}) string {
+func OnColor043f(format string, args ...any) string {
 	return OnColor043(Sprintf(format, args...))
 }
 
@@ -4981,7 +4981,7 @@ func FprintOnColor043(w io.Writer, str string) {
 }
 
 // FprintfOnColor043 wraps OnColor043 and fmt.Fprintf().
-func FprintfOnColor043(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor043(w io.Writer, format string, args ...any) {
 	FprintOnColor043(w, Sprintf(format, args...))
 }
 
@@ -4996,7 +4996,7 @@ func PrintOnColor043(str string) {
 }
 
 // PrintfOnColor043 wraps OnColor043() and fmt.Printf().
-func PrintfOnColor043(format string, args ...interface{}) {
+func PrintfOnColor043(format string, args ...any) {
 	PrintOnColor043(Sprintf(format, args...))
 }
 
@@ -5012,7 +5012,7 @@ func Color044(str string) string {
 }
 
 // Color044f wraps fmt.Sprintf() and Color044.
-func Color044f(format string, args ...interface{}) string {
+func Color044f(format string, args ...any) string {
 	return Color044(Sprintf(format, args...))
 }
 
@@ -5022,7 +5022,7 @@ func FprintColor044(w io.Writer, str string) {
 }
 
 // FprintfColor044 wraps Color044 and fmt.Fprintf().
-func FprintfColor044(w io.Writer, format string, args ...interface{}) {
+func FprintfColor044(w io.Writer, format string, args ...any) {
 	FprintColor044(w, Sprintf(format, args...))
 }
 
@@ -5037,7 +5037,7 @@ func PrintColor044(str string) {
 }
 
 // PrintfColor044 wraps Color044() and fmt.Printf().
-func PrintfColor044(format string, args ...interface{}) {
+func PrintfColor044(format string, args ...any) {
 	PrintColor044(Sprintf(format, args...))
 }
 
@@ -5053,7 +5053,7 @@ func OnColor044(str string) string {
 }
 
 // OnColor044f wraps fmt.Sprintf() and OnColor044.
-func OnColor044f(format string, args ...interface{}) string {
+func OnColor044f(format string, args ...any) string {
 	return OnColor044(Sprintf(format, args...))
 }
 
@@ -5063,7 +5063,7 @@ func FprintOnColor044(w io.Writer, str string) {
 }
 
 // FprintfOnColor044 wraps OnColor044 and fmt.Fprintf().
-func FprintfOnColor044(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor044(w io.Writer, format string, args ...any) {
 	FprintOnColor044(w, Sprintf(format, args...))
 }
 
@@ -5078,7 +5078,7 @@ func PrintOnColor044(str string) {
 }
 
 // PrintfOnColor044 wraps OnColor044() and fmt.Printf().
-func PrintfOnColor044(format string, args ...interface{}) {
+func PrintfOnColor044(format string, args ...any) {
 	PrintOnColor044(Sprintf(format, args...))
 }
 
@@ -5094,7 +5094,7 @@ func Color045(str string) string {
 }
 
 // Color045f wraps fmt.Sprintf() and Color045.
-func Color045f(format string, args ...interface{}) string {
+func Color045f(format string, args ...any) string {
 	return Color045(Sprintf(format, args...))
 }
 
@@ -5104,7 +5104,7 @@ func FprintColor045(w io.Writer, str string) {
 }
 
 // FprintfColor045 wraps Color045 and fmt.Fprintf().
-func FprintfColor045(w io.Writer, format string, args ...interface{}) {
+func FprintfColor045(w io.Writer, format string, args ...any) {
 	FprintColor045(w, Sprintf(format, args...))
 }
 
@@ -5119,7 +5119,7 @@ func PrintColor045(str string) {
 }
 
 // PrintfColor045 wraps Color045() and fmt.Printf().
-func PrintfColor045(format string, args ...interface{}) {
+func PrintfColor045(format string, args ...any) {
 	PrintColor045(Sprintf(format, args...))
 }
 
@@ -5135,7 +5135,7 @@ func OnColor045(str string) string {
 }
 
 // OnColor045f wraps fmt.Sprintf() and OnColor045.
-func OnColor045f(format string, args ...interface{}) string {
+func OnColor045f(format string, args ...any) string {
 	return OnColor045(Sprintf(format, args...))
 }
 
@@ -5145,7 +5145,7 @@ func FprintOnColor045(w io.Writer, str string) {
 }
 
 // FprintfOnColor045 wraps OnColor045 and fmt.Fprintf().
-func FprintfOnColor045(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor045(w io.Writer, format string, args ...any) {
 	FprintOnColor045(w, Sprintf(format, args...))
 }
 
@@ -5160,7 +5160,7 @@ func PrintOnColor045(str string) {
 }
 
 // PrintfOnColor045 wraps OnColor045() and fmt.Printf().
-func PrintfOnColor045(format string, args ...interface{}) {
+func PrintfOnColor045(format string, args ...any) {
 	PrintOnColor045(Sprintf(format, args...))
 }
 
@@ -5176,7 +5176,7 @@ func Color046(str string) string {
 }
 
 // Color046f wraps fmt.Sprintf() and Color046.
-func Color046f(format string, args ...interface{}) string {
+func Color046f(format string, args ...any) string {
 	return Color046(Sprintf(format, args...))
 }
 
@@ -5186,7 +5186,7 @@ func FprintColor046(w io.Writer, str string) {
 }
 
 // FprintfColor046 wraps Color046 and fmt.Fprintf().
-func FprintfColor046(w io.Writer, format string, args ...interface{}) {
+func FprintfColor046(w io.Writer, format string, args ...any) {
 	FprintColor046(w, Sprintf(format, args...))
 }
 
@@ -5201,7 +5201,7 @@ func PrintColor046(str string) {
 }
 
 // PrintfColor046 wraps Color046() and fmt.Printf().
-func PrintfColor046(format string, args ...interface{}) {
+func PrintfColor046(format string, args ...any) {
 	PrintColor046(Sprintf(format, args...))
 }
 
@@ -5217,7 +5217,7 @@ func OnColor046(str string) string {
 }
 
 // OnColor046f wraps fmt.Sprintf() and OnColor046.
-func OnColor046f(format string, args ...interface{}) string {
+func OnColor046f(format string, args ...any) string {
 	return OnColor046(Sprintf(format, args...))
 }
 
@@ -5227,7 +5227,7 @@ func FprintOnColor046(w io.Writer, str string) {
 }
 
 // FprintfOnColor046 wraps OnColor046 and fmt.Fprintf().
-func FprintfOnColor046(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor046(w io.Writer, format string, args ...any) {
 	FprintOnColor046(w, Sprintf(format, args...))
 }
 
@@ -5242,7 +5242,7 @@ func PrintOnColor046(str string) {
 }
 
 // PrintfOnColor046 wraps OnColor046() and fmt.Printf().
-func PrintfOnColor046(format string, args ...interface{}) {
+func PrintfOnColor046(format string, args ...any) {
 	PrintOnColor046(Sprintf(format, args...))
 }
 
@@ -5258,7 +5258,7 @@ func Color047(str string) string {
 }
 
 // Color047f wraps fmt.Sprintf() and Color047.
-func Color047f(format string, args ...interface{}) string {
+func Color047f(format string, args ...any) string {
 	return Color047(Sprintf(format, args...))
 }
 
@@ -5268,7 +5268,7 @@ func FprintColor047(w io.Writer, str string) {
 }
 
 // FprintfColor047 wraps Color047 and fmt.Fprintf().
-func FprintfColor047(w io.Writer, format string, args ...interface{}) {
+func FprintfColor047(w io.Writer, format string, args ...any) {
 	FprintColor047(w, Sprintf(format, args...))
 }
 
@@ -5283,7 +5283,7 @@ func PrintColor047(str string) {
 }
 
 // PrintfColor047 wraps Color047() and fmt.Printf().
-func PrintfColor047(format string, args ...interface{}) {
+func PrintfColor047(format string, args ...any) {
 	PrintColor047(Sprintf(format, args...))
 }
 
@@ -5299,7 +5299,7 @@ func OnColor047(str string) string {
 }
 
 // OnColor047f wraps fmt.Sprintf() and OnColor047.
-func OnColor047f(format string, args ...interface{}) string {
+func OnColor047f(format string, args ...any) string {
 	return OnColor047(Sprintf(format, args...))
 }
 
@@ -5309,7 +5309,7 @@ func FprintOnColor047(w io.Writer, str string) {
 }
 
 // FprintfOnColor047 wraps OnColor047 and fmt.Fprintf().
-func FprintfOnColor047(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor047(w io.Writer, format string, args ...any) {
 	FprintOnColor047(w, Sprintf(format, args...))
 }
 
@@ -5324,7 +5324,7 @@ func PrintOnColor047(str string) {
 }
 
 // PrintfOnColor047 wraps OnColor047() and fmt.Printf().
-func PrintfOnColor047(format string, args ...interface{}) {
+func PrintfOnColor047(format string, args ...any) {
 	PrintOnColor047(Sprintf(format, args...))
 }
 
@@ -5340,7 +5340,7 @@ func Color048(str string) string {
 }
 
 // Color048f wraps fmt.Sprintf() and Color048.
-func Color048f(format string, args ...interface{}) string {
+func Color048f(format string, args ...any) string {
 	return Color048(Sprintf(format, args...))
 }
 
@@ -5350,7 +5350,7 @@ func FprintColor048(w io.Writer, str string) {
 }
 
 // FprintfColor048 wraps Color048 and fmt.Fprintf().
-func FprintfColor048(w io.Writer, format string, args ...interface{}) {
+func FprintfColor048(w io.Writer, format string, args ...any) {
 	FprintColor048(w, Sprintf(format, args...))
 }
 
@@ -5365,7 +5365,7 @@ func PrintColor048(str string) {
 }
 
 // PrintfColor048 wraps Color048() and fmt.Printf().
-func PrintfColor048(format string, args ...interface{}) {
+func PrintfColor048(format string, args ...any) {
 	PrintColor048(Sprintf(format, args...))
 }
 
@@ -5381,7 +5381,7 @@ func OnColor048(str string) string {
 }
 
 // OnColor048f wraps fmt.Sprintf() and OnColor048.
-func OnColor048f(format string, args ...interface{}) string {
+func OnColor048f(format string, args ...any) string {
 	return OnColor048(Sprintf(format, args...))
 }
 
@@ -5391,7 +5391,7 @@ func FprintOnColor048(w io.Writer, str string) {
 }
 
 // FprintfOnColor048 wraps OnColor048 and fmt.Fprintf().
-func FprintfOnColor048(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor048(w io.Writer, format string, args ...any) {
 	FprintOnColor048(w, Sprintf(format, args...))
 }
 
@@ -5406,7 +5406,7 @@ func PrintOnColor048(str string) {
 }
 
 // PrintfOnColor048 wraps OnColor048() and fmt.Printf().
-func PrintfOnColor048(format string, args ...interface{}) {
+func PrintfOnColor048(format string, args ...any) {
 	PrintOnColor048(Sprintf(format, args...))
 }
 
@@ -5422,7 +5422,7 @@ func Color049(str string) string {
 }
 
 // Color049f wraps fmt.Sprintf() and Color049.
-func Color049f(format string, args ...interface{}) string {
+func Color049f(format string, args ...any) string {
 	return Color049(Sprintf(format, args...))
 }
 
@@ -5432,7 +5432,7 @@ func FprintColor049(w io.Writer, str string) {
 }
 
 // FprintfColor049 wraps Color049 and fmt.Fprintf().
-func FprintfColor049(w io.Writer, format string, args ...interface{}) {
+func FprintfColor049(w io.Writer, format string, args ...any) {
 	FprintColor049(w, Sprintf(format, args...))
 }
 
@@ -5447,7 +5447,7 @@ func PrintColor049(str string) {
 }
 
 // PrintfColor049 wraps Color049() and fmt.Printf().
-func PrintfColor049(format string, args ...interface{}) {
+func PrintfColor049(format string, args ...any) {
 	PrintColor049(Sprintf(format, args...))
 }
 
@@ -5463,7 +5463,7 @@ func OnColor049(str string) string {
 }
 
 // OnColor049f wraps fmt.Sprintf() and OnColor049.
-func OnColor049f(format string, args ...interface{}) string {
+func OnColor049f(format string, args ...any) string {
 	return OnColor049(Sprintf(format, args...))
 }
 
@@ -5473,7 +5473,7 @@ func FprintOnColor049(w io.Writer, str string) {
 }
 
 // FprintfOnColor049 wraps OnColor049 and fmt.Fprintf().
-func FprintfOnColor049(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor049(w io.Writer, format string, args ...any) {
 	FprintOnColor049(w, Sprintf(format, args...))
 }
 
@@ -5488,7 +5488,7 @@ func PrintOnColor049(str string) {
 }
 
 // PrintfOnColor049 wraps OnColor049() and fmt.Printf().
-func PrintfOnColor049(format string, args ...interface{}) {
+func PrintfOnColor049(format string, args ...any) {
 	PrintOnColor049(Sprintf(format, args...))
 }
 
@@ -5504,7 +5504,7 @@ func Color050(str string) string {
 }
 
 // Color050f wraps fmt.Sprintf() and Color050.
-func Color050f(format string, args ...interface{}) string {
+func Color050f(format string, args ...any) string {
 	return Color050(Sprintf(format, args...))
 }
 
@@ -5514,7 +5514,7 @@ func FprintColor050(w io.Writer, str string) {
 }
 
 // FprintfColor050 wraps Color050 and fmt.Fprintf().
-func FprintfColor050(w io.Writer, format string, args ...interface{}) {
+func FprintfColor050(w io.Writer, format string, args ...any) {
 	FprintColor050(w, Sprintf(format, args...))
 }
 
@@ -5529,7 +5529,7 @@ func PrintColor050(str string) {
 }
 
 // PrintfColor050 wraps Color050() and fmt.Printf().
-func PrintfColor050(format string, args ...interface{}) {
+func PrintfColor050(format string, args ...any) {
 	PrintColor050(Sprintf(format, args...))
 }
 
@@ -5545,7 +5545,7 @@ func OnColor050(str string) string {
 }
 
 // OnColor050f wraps fmt.Sprintf() and OnColor050.
-func OnColor050f(format string, args ...interface{}) string {
+func OnColor050f(format string, args ...any) string {
 	return OnColor050(Sprintf(format, args...))
 }
 
@@ -5555,7 +5555,7 @@ func FprintOnColor050(w io.Writer, str string) {
 }
 
 // FprintfOnColor050 wraps OnColor050 and fmt.Fprintf().
-func FprintfOnColor050(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor050(w io.Writer, format string, args ...any) {
 	FprintOnColor050(w, Sprintf(format, args...))
 }
 
@@ -5570,7 +5570,7 @@ func PrintOnColor050(str string) {
 }
 
 // PrintfOnColor050 wraps OnColor050() and fmt.Printf().
-func PrintfOnColor050(format string, args ...interface{}) {
+func PrintfOnColor050(format string, args ...any) {
 	PrintOnColor050(Sprintf(format, args...))
 }
 
@@ -5586,7 +5586,7 @@ func Color051(str string) string {
 }
 
 // Color051f wraps fmt.Sprintf() and Color051.
-func Color051f(format string, args ...interface{}) string {
+func Color051f(format string, args ...any) string {
 	return Color051(Sprintf(format, args...))
 }
 
@@ -5596,7 +5596,7 @@ func FprintColor051(w io.Writer, str string) {
 }
 
 // FprintfColor051 wraps Color051 and fmt.Fprintf().
-func FprintfColor051(w io.Writer, format string, args ...interface{}) {
+func FprintfColor051(w io.Writer, format string, args ...any) {
 	FprintColor051(w, Sprintf(format, args...))
 }
 
@@ -5611,7 +5611,7 @@ func PrintColor051(str string) {
 }
 
 // PrintfColor051 wraps Color051() and fmt.Printf().
-func PrintfColor051(format string, args ...interface{}) {
+func PrintfColor051(format string, args ...any) {
 	PrintColor051(Sprintf(format, args...))
 }
 
@@ -5627,7 +5627,7 @@ func OnColor051(str string) string {
 }
 
 // OnColor051f wraps fmt.Sprintf() and OnColor051.
-func OnColor051f(format string, args ...interface{}) string {
+func OnColor051f(format string, args ...any) string {
 	return OnColor051(Sprintf(format, args...))
 }
 
@@ -5637,7 +5637,7 @@ func FprintOnColor051(w io.Writer, str string) {
 }
 
 // FprintfOnColor051 wraps OnColor051 and fmt.Fprintf().
-func FprintfOnColor051(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor051(w io.Writer, format string, args ...any) {
 	FprintOnColor051(w, Sprintf(format, args...))
 }
 
@@ -5652,7 +5652,7 @@ func PrintOnColor051(str string) {
 }
 
 // PrintfOnColor051 wraps OnColor051() and fmt.Printf().
-func PrintfOnColor051(format string, args ...interface{}) {
+func PrintfOnColor051(format string, args ...any) {
 	PrintOnColor051(Sprintf(format, args...))
 }
 
@@ -5668,7 +5668,7 @@ func Color052(str string) string {
 }
 
 // Color052f wraps fmt.Sprintf() and Color052.
-func Color052f(format string, args ...interface{}) string {
+func Color052f(format string, args ...any) string {
 	return Color052(Sprintf(format, args...))
 }
 
@@ -5678,7 +5678,7 @@ func FprintColor052(w io.Writer, str string) {
 }
 
 // FprintfColor052 wraps Color052 and fmt.Fprintf().
-func FprintfColor052(w io.Writer, format string, args ...interface{}) {
+func FprintfColor052(w io.Writer, format string, args ...any) {
 	FprintColor052(w, Sprintf(format, args...))
 }
 
@@ -5693,7 +5693,7 @@ func PrintColor052(str string) {
 }
 
 // PrintfColor052 wraps Color052() and fmt.Printf().
-func PrintfColor052(format string, args ...interface{}) {
+func PrintfColor052(format string, args ...any) {
 	PrintColor052(Sprintf(format, args...))
 }
 
@@ -5709,7 +5709,7 @@ func OnColor052(str string) string {
 }
 
 // OnColor052f wraps fmt.Sprintf() and OnColor052.
-func OnColor052f(format string, args ...interface{}) string {
+func OnColor052f(format string, args ...any) string {
 	return OnColor052(Sprintf(format, args...))
 }
 
@@ -5719,7 +5719,7 @@ func FprintOnColor052(w io.Writer, str string) {
 }
 
 // FprintfOnColor052 wraps OnColor052 and fmt.Fprintf().
-func FprintfOnColor052(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor052(w io.Writer, format string, args ...any) {
 	FprintOnColor052(w, Sprintf(format, args...))
 }
 
@@ -5734,7 +5734,7 @@ func PrintOnColor052(str string) {
 }
 
 // PrintfOnColor052 wraps OnColor052() and fmt.Printf().
-func PrintfOnColor052(format string, args ...interface{}) {
+func PrintfOnColor052(format string, args ...any) {
 	PrintOnColor052(Sprintf(format, args...))
 }
 
@@ -5750,7 +5750,7 @@ func Color053(str string) string {
 }
 
 // Color053f wraps fmt.Sprintf() and Color053.
-func Color053f(format string, args ...interface{}) string {
+func Color053f(format string, args ...any) string {
 	return Color053(Sprintf(format, args...))
 }
 
@@ -5760,7 +5760,7 @@ func FprintColor053(w io.Writer, str string) {
 }
 
 // FprintfColor053 wraps Color053 and fmt.Fprintf().
-func FprintfColor053(w io.Writer, format string, args ...interface{}) {
+func FprintfColor053(w io.Writer, format string, args ...any) {
 	FprintColor053(w, Sprintf(format, args...))
 }
 
@@ -5775,7 +5775,7 @@ func PrintColor053(str string) {
 }
 
 // PrintfColor053 wraps Color053() and fmt.Printf().
-func PrintfColor053(format string, args ...interface{}) {
+func PrintfColor053(format string, args ...any) {
 	PrintColor053(Sprintf(format, args...))
 }
 
@@ -5791,7 +5791,7 @@ func OnColor053(str string) string {
 }
 
 // OnColor053f wraps fmt.Sprintf() and OnColor053.
-func OnColor053f(format string, args ...interface{}) string {
+func OnColor053f(format string, args ...any) string {
 	return OnColor053(Sprintf(format, args...))
 }
 
@@ -5801,7 +5801,7 @@ func FprintOnColor053(w io.Writer, str string) {
 }
 
 // FprintfOnColor053 wraps OnColor053 and fmt.Fprintf().
-func FprintfOnColor053(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor053(w io.Writer, format string, args ...any) {
 	FprintOnColor053(w, Sprintf(format, args...))
 }
 
@@ -5816,7 +5816,7 @@ func PrintOnColor053(str string) {
 }
 
 // PrintfOnColor053 wraps OnColor053() and fmt.Printf().
-func PrintfOnColor053(format string, args ...interface{}) {
+func PrintfOnColor053(format string, args ...any) {
 	PrintOnColor053(Sprintf(format, args...))
 }
 
@@ -5832,7 +5832,7 @@ func Color054(str string) string {
 }
 
 // Color054f wraps fmt.Sprintf() and Color054.
-func Color054f(format string, args ...interface{}) string {
+func Color054f(format string, args ...any) string {
 	return Color054(Sprintf(format, args...))
 }
 
@@ -5842,7 +5842,7 @@ func FprintColor054(w io.Writer, str string) {
 }
 
 // FprintfColor054 wraps Color054 and fmt.Fprintf().
-func FprintfColor054(w io.Writer, format string, args ...interface{}) {
+func FprintfColor054(w io.Writer, format string, args ...any) {
 	FprintColor054(w, Sprintf(format, args...))
 }
 
@@ -5857,7 +5857,7 @@ func PrintColor054(str string) {
 }
 
 // PrintfColor054 wraps Color054() and fmt.Printf().
-func PrintfColor054(format string, args ...interface{}) {
+func PrintfColor054(format string, args ...any) {
 	PrintColor054(Sprintf(format, args...))
 }
 
@@ -5873,7 +5873,7 @@ func OnColor054(str string) string {
 }
 
 // OnColor054f wraps fmt.Sprintf() and OnColor054.
-func OnColor054f(format string, args ...interface{}) string {
+func OnColor054f(format string, args ...any) string {
 	return OnColor054(Sprintf(format, args...))
 }
 
@@ -5883,7 +5883,7 @@ func FprintOnColor054(w io.Writer, str string) {
 }
 
 // FprintfOnColor054 wraps OnColor054 and fmt.Fprintf().
-func FprintfOnColor054(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor054(w io.Writer, format string, args ...any) {
 	FprintOnColor054(w, Sprintf(format, args...))
 }
 
@@ -5898,7 +5898,7 @@ func PrintOnColor054(str string) {
 }
 
 // PrintfOnColor054 wraps OnColor054() and fmt.Printf().
-func PrintfOnColor054(format string, args ...interface{}) {
+func PrintfOnColor054(format string, args ...any) {
 	PrintOnColor054(Sprintf(format, args...))
 }
 
@@ -5914,7 +5914,7 @@ func Color055(str string) string {
 }
 
 // Color055f wraps fmt.Sprintf() and Color055.
-func Color055f(format string, args ...interface{}) string {
+func Color055f(format string, args ...any) string {
 	return Color055(Sprintf(format, args...))
 }
 
@@ -5924,7 +5924,7 @@ func FprintColor055(w io.Writer, str string) {
 }
 
 // FprintfColor055 wraps Color055 and fmt.Fprintf().
-func FprintfColor055(w io.Writer, format string, args ...interface{}) {
+func FprintfColor055(w io.Writer, format string, args ...any) {
 	FprintColor055(w, Sprintf(format, args...))
 }
 
@@ -5939,7 +5939,7 @@ func PrintColor055(str string) {
 }
 
 // PrintfColor055 wraps Color055() and fmt.Printf().
-func PrintfColor055(format string, args ...interface{}) {
+func PrintfColor055(format string, args ...any) {
 	PrintColor055(Sprintf(format, args...))
 }
 
@@ -5955,7 +5955,7 @@ func OnColor055(str string) string {
 }
 
 // OnColor055f wraps fmt.Sprintf() and OnColor055.
-func OnColor055f(format string, args ...interface{}) string {
+func OnColor055f(format string, args ...any) string {
 	return OnColor055(Sprintf(format, args...))
 }
 
@@ -5965,7 +5965,7 @@ func FprintOnColor055(w io.Writer, str string) {
 }
 
 // FprintfOnColor055 wraps OnColor055 and fmt.Fprintf().
-func FprintfOnColor055(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor055(w io.Writer, format string, args ...any) {
 	FprintOnColor055(w, Sprintf(format, args...))
 }
 
@@ -5980,7 +5980,7 @@ func PrintOnColor055(str string) {
 }
 
 // PrintfOnColor055 wraps OnColor055() and fmt.Printf().
-func PrintfOnColor055(format string, args ...interface{}) {
+func PrintfOnColor055(format string, args ...any) {
 	PrintOnColor055(Sprintf(format, args...))
 }
 
@@ -5996,7 +5996,7 @@ func Color056(str string) string {
 }
 
 // Color056f wraps fmt.Sprintf() and Color056.
-func Color056f(format string, args ...interface{}) string {
+func Color056f(format string, args ...any) string {
 	return Color056(Sprintf(format, args...))
 }
 
@@ -6006,7 +6006,7 @@ func FprintColor056(w io.Writer, str string) {
 }
 
 // FprintfColor056 wraps Color056 and fmt.Fprintf().
-func FprintfColor056(w io.Writer, format string, args ...interface{}) {
+func FprintfColor056(w io.Writer, format string, args ...any) {
 	FprintColor056(w, Sprintf(format, args...))
 }
 
@@ -6021,7 +6021,7 @@ func PrintColor056(str string) {
 }
 
 // PrintfColor056 wraps Color056() and fmt.Printf().
-func PrintfColor056(format string, args ...interface{}) {
+func PrintfColor056(format string, args ...any) {
 	PrintColor056(Sprintf(format, args...))
 }
 
@@ -6037,7 +6037,7 @@ func OnColor056(str string) string {
 }
 
 // OnColor056f wraps fmt.Sprintf() and OnColor056.
-func OnColor056f(format string, args ...interface{}) string {
+func OnColor056f(format string, args ...any) string {
 	return OnColor056(Sprintf(format, args...))
 }
 
@@ -6047,7 +6047,7 @@ func FprintOnColor056(w io.Writer, str string) {
 }
 
 // FprintfOnColor056 wraps OnColor056 and fmt.Fprintf().
-func FprintfOnColor056(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor056(w io.Writer, format string, args ...any) {
 	FprintOnColor056(w, Sprintf(format, args...))
 }
 
@@ -6062,7 +6062,7 @@ func PrintOnColor056(str string) {
 }
 
 // PrintfOnColor056 wraps OnColor056() and fmt.Printf().
-func PrintfOnColor056(format string, args ...interface{}) {
+func PrintfOnColor056(format string, args ...any) {
 	PrintOnColor056(Sprintf(format, args...))
 }
 
@@ -6078,7 +6078,7 @@ func Color057(str string) string {
 }
 
 // Color057f wraps fmt.Sprintf() and Color057.
-func Color057f(format string, args ...interface{}) string {
+func Color057f(format string, args ...any) string {
 	return Color057(Sprintf(format, args...))
 }
 
@@ -6088,7 +6088,7 @@ func FprintColor057(w io.Writer, str string) {
 }
 
 // FprintfColor057 wraps Color057 and fmt.Fprintf().
-func FprintfColor057(w io.Writer, format string, args ...interface{}) {
+func FprintfColor057(w io.Writer, format string, args ...any) {
 	FprintColor057(w, Sprintf(format, args...))
 }
 
@@ -6103,7 +6103,7 @@ func PrintColor057(str string) {
 }
 
 // PrintfColor057 wraps Color057() and fmt.Printf().
-func PrintfColor057(format string, args ...interface{}) {
+func PrintfColor057(format string, args ...any) {
 	PrintColor057(Sprintf(format, args...))
 }
 
@@ -6119,7 +6119,7 @@ func OnColor057(str string) string {
 }
 
 // OnColor057f wraps fmt.Sprintf() and OnColor057.
-func OnColor057f(format string, args ...interface{}) string {
+func OnColor057f(format string, args ...any) string {
 	return OnColor057(Sprintf(format, args...))
 }
 
@@ -6129,7 +6129,7 @@ func FprintOnColor057(w io.Writer, str string) {
 }
 
 // FprintfOnColor057 wraps OnColor057 and fmt.Fprintf().
-func FprintfOnColor057(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor057(w io.Writer, format string, args ...any) {
 	FprintOnColor057(w, Sprintf(format, args...))
 }
 
@@ -6144,7 +6144,7 @@ func PrintOnColor057(str string) {
 }
 
 // PrintfOnColor057 wraps OnColor057() and fmt.Printf().
-func PrintfOnColor057(format string, args ...interface{}) {
+func PrintfOnColor057(format string, args ...any) {
 	PrintOnColor057(Sprintf(format, args...))
 }
 
@@ -6160,7 +6160,7 @@ func Color058(str string) string {
 }
 
 // Color058f wraps fmt.Sprintf() and Color058.
-func Color058f(format string, args ...interface{}) string {
+func Color058f(format string, args ...any) string {
 	return Color058(Sprintf(format, args...))
 }
 
@@ -6170,7 +6170,7 @@ func FprintColor058(w io.Writer, str string) {
 }
 
 // FprintfColor058 wraps Color058 and fmt.Fprintf().
-func FprintfColor058(w io.Writer, format string, args ...interface{}) {
+func FprintfColor058(w io.Writer, format string, args ...any) {
 	FprintColor058(w, Sprintf(format, args...))
 }
 
@@ -6185,7 +6185,7 @@ func PrintColor058(str string) {
 }
 
 // PrintfColor058 wraps Color058() and fmt.Printf().
-func PrintfColor058(format string, args ...interface{}) {
+func PrintfColor058(format string, args ...any) {
 	PrintColor058(Sprintf(format, args...))
 }
 
@@ -6201,7 +6201,7 @@ func OnColor058(str string) string {
 }
 
 // OnColor058f wraps fmt.Sprintf() and OnColor058.
-func OnColor058f(format string, args ...interface{}) string {
+func OnColor058f(format string, args ...any) string {
 	return OnColor058(Sprintf(format, args...))
 }
 
@@ -6211,7 +6211,7 @@ func FprintOnColor058(w io.Writer, str string) {
 }
 
 // FprintfOnColor058 wraps OnColor058 and fmt.Fprintf().
-func FprintfOnColor058(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor058(w io.Writer, format string, args ...any) {
 	FprintOnColor058(w, Sprintf(format, args...))
 }
 
@@ -6226,7 +6226,7 @@ func PrintOnColor058(str string) {
 }
 
 // PrintfOnColor058 wraps OnColor058() and fmt.Printf().
-func PrintfOnColor058(format string, args ...interface{}) {
+func PrintfOnColor058(format string, args ...any) {
 	PrintOnColor058(Sprintf(format, args...))
 }
 
@@ -6242,7 +6242,7 @@ func Color059(str string) string {
 }
 
 // Color059f wraps fmt.Sprintf() and Color059.
-func Color059f(format string, args ...interface{}) string {
+func Color059f(format string, args ...any) string {
 	return Color059(Sprintf(format, args...))
 }
 
@@ -6252,7 +6252,7 @@ func FprintColor059(w io.Writer, str string) {
 }
 
 // FprintfColor059 wraps Color059 and fmt.Fprintf().
-func FprintfColor059(w io.Writer, format string, args ...interface{}) {
+func FprintfColor059(w io.Writer, format string, args ...any) {
 	FprintColor059(w, Sprintf(format, args...))
 }
 
@@ -6267,7 +6267,7 @@ func PrintColor059(str string) {
 }
 
 // PrintfColor059 wraps Color059() and fmt.Printf().
-func PrintfColor059(format string, args ...interface{}) {
+func PrintfColor059(format string, args ...any) {
 	PrintColor059(Sprintf(format, args...))
 }
 
@@ -6283,7 +6283,7 @@ func OnColor059(str string) string {
 }
 
 // OnColor059f wraps fmt.Sprintf() and OnColor059.
-func OnColor059f(format string, args ...interface{}) string {
+func OnColor059f(format string, args ...any) string {
 	return OnColor059(Sprintf(format, args...))
 }
 
@@ -6293,7 +6293,7 @@ func FprintOnColor059(w io.Writer, str string) {
 }
 
 // FprintfOnColor059 wraps OnColor059 and fmt.Fprintf().
-func FprintfOnColor059(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor059(w io.Writer, format string, args ...any) {
 	FprintOnColor059(w, Sprintf(format, args...))
 }
 
@@ -6308,7 +6308,7 @@ func PrintOnColor059(str string) {
 }
 
 // PrintfOnColor059 wraps OnColor059() and fmt.Printf().
-func PrintfOnColor059(format string, args ...interface{}) {
+func PrintfOnColor059(format string, args ...any) {
 	PrintOnColor059(Sprintf(format, args...))
 }
 
@@ -6324,7 +6324,7 @@ func Color060(str string) string {
 }
 
 // Color060f wraps fmt.Sprintf() and Color060.
-func Color060f(format string, args ...interface{}) string {
+func Color060f(format string, args ...any) string {
 	return Color060(Sprintf(format, args...))
 }
 
@@ -6334,7 +6334,7 @@ func FprintColor060(w io.Writer, str string) {
 }
 
 // FprintfColor060 wraps Color060 and fmt.Fprintf().
-func FprintfColor060(w io.Writer, format string, args ...interface{}) {
+func FprintfColor060(w io.Writer, format string, args ...any) {
 	FprintColor060(w, Sprintf(format, args...))
 }
 
@@ -6349,7 +6349,7 @@ func PrintColor060(str string) {
 }
 
 // PrintfColor060 wraps Color060() and fmt.Printf().
-func PrintfColor060(format string, args ...interface{}) {
+func PrintfColor060(format string, args ...any) {
 	PrintColor060(Sprintf(format, args...))
 }
 
@@ -6365,7 +6365,7 @@ func OnColor060(str string) string {
 }
 
 // OnColor060f wraps fmt.Sprintf() and OnColor060.
-func OnColor060f(format string, args ...interface{}) string {
+func OnColor060f(format string, args ...any) string {
 	return OnColor060(Sprintf(format, args...))
 }
 
@@ -6375,7 +6375,7 @@ func FprintOnColor060(w io.Writer, str string) {
 }
 
 // FprintfOnColor060 wraps OnColor060 and fmt.Fprintf().
-func FprintfOnColor060(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor060(w io.Writer, format string, args ...any) {
 	FprintOnColor060(w, Sprintf(format, args...))
 }
 
@@ -6390,7 +6390,7 @@ func PrintOnColor060(str string) {
 }
 
 // PrintfOnColor060 wraps OnColor060() and fmt.Printf().
-func PrintfOnColor060(format string, args ...interface{}) {
+func PrintfOnColor060(format string, args ...any) {
 	PrintOnColor060(Sprintf(format, args...))
 }
 
@@ -6406,7 +6406,7 @@ func Color061(str string) string {
 }
 
 // Color061f wraps fmt.Sprintf() and Color061.
-func Color061f(format string, args ...interface{}) string {
+func Color061f(format string, args ...any) string {
 	return Color061(Sprintf(format, args...))
 }
 
@@ -6416,7 +6416,7 @@ func FprintColor061(w io.Writer, str string) {
 }
 
 // FprintfColor061 wraps Color061 and fmt.Fprintf().
-func FprintfColor061(w io.Writer, format string, args ...interface{}) {
+func FprintfColor061(w io.Writer, format string, args ...any) {
 	FprintColor061(w, Sprintf(format, args...))
 }
 
@@ -6431,7 +6431,7 @@ func PrintColor061(str string) {
 }
 
 // PrintfColor061 wraps Color061() and fmt.Printf().
-func PrintfColor061(format string, args ...interface{}) {
+func PrintfColor061(format string, args ...any) {
 	PrintColor061(Sprintf(format, args...))
 }
 
@@ -6447,7 +6447,7 @@ func OnColor061(str string) string {
 }
 
 // OnColor061f wraps fmt.Sprintf() and OnColor061.
-func OnColor061f(format string, args ...interface{}) string {
+func OnColor061f(format string, args ...any) string {
 	return OnColor061(Sprintf(format, args...))
 }
 
@@ -6457,7 +6457,7 @@ func FprintOnColor061(w io.Writer, str string) {
 }
 
 // FprintfOnColor061 wraps OnColor061 and fmt.Fprintf().
-func FprintfOnColor061(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor061(w io.Writer, format string, args ...any) {
 	FprintOnColor061(w, Sprintf(format, args...))
 }
 
@@ -6472,7 +6472,7 @@ func PrintOnColor061(str string) {
 }
 
 // PrintfOnColor061 wraps OnColor061() and fmt.Printf().
-func PrintfOnColor061(format string, args ...interface{}) {
+func PrintfOnColor061(format string, args ...any) {
 	PrintOnColor061(Sprintf(format, args...))
 }
 
@@ -6488,7 +6488,7 @@ func Color062(str string) string {
 }
 
 // Color062f wraps fmt.Sprintf() and Color062.
-func Color062f(format string, args ...interface{}) string {
+func Color062f(format string, args ...any) string {
 	return Color062(Sprintf(format, args...))
 }
 
@@ -6498,7 +6498,7 @@ func FprintColor062(w io.Writer, str string) {
 }
 
 // FprintfColor062 wraps Color062 and fmt.Fprintf().
-func FprintfColor062(w io.Writer, format string, args ...interface{}) {
+func FprintfColor062(w io.Writer, format string, args ...any) {
 	FprintColor062(w, Sprintf(format, args...))
 }
 
@@ -6513,7 +6513,7 @@ func PrintColor062(str string) {
 }
 
 // PrintfColor062 wraps Color062() and fmt.Printf().
-func PrintfColor062(format string, args ...interface{}) {
+func PrintfColor062(format string, args ...any) {
 	PrintColor062(Sprintf(format, args...))
 }
 
@@ -6529,7 +6529,7 @@ func OnColor062(str string) string {
 }
 
 // OnColor062f wraps fmt.Sprintf() and OnColor062.
-func OnColor062f(format string, args ...interface{}) string {
+func OnColor062f(format string, args ...any) string {
 	return OnColor062(Sprintf(format, args...))
 }
 
@@ -6539,7 +6539,7 @@ func FprintOnColor062(w io.Writer, str string) {
 }
 
 // FprintfOnColor062 wraps OnColor062 and fmt.Fprintf().
-func FprintfOnColor062(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor062(w io.Writer, format string, args ...any) {
 	FprintOnColor062(w, Sprintf(format, args...))
 }
 
@@ -6554,7 +6554,7 @@ func PrintOnColor062(str string) {
 }
 
 // PrintfOnColor062 wraps OnColor062() and fmt.Printf().
-func PrintfOnColor062(format string, args ...interface{}) {
+func PrintfOnColor062(format string, args ...any) {
 	PrintOnColor062(Sprintf(format, args...))
 }
 
@@ -6570,7 +6570,7 @@ func Color063(str string) string {
 }
 
 // Color063f wraps fmt.Sprintf() and Color063.
-func Color063f(format string, args ...interface{}) string {
+func Color063f(format string, args ...any) string {
 	return Color063(Sprintf(format, args...))
 }
 
@@ -6580,7 +6580,7 @@ func FprintColor063(w io.Writer, str string) {
 }
 
 // FprintfColor063 wraps Color063 and fmt.Fprintf().
-func FprintfColor063(w io.Writer, format string, args ...interface{}) {
+func FprintfColor063(w io.Writer, format string, args ...any) {
 	FprintColor063(w, Sprintf(format, args...))
 }
 
@@ -6595,7 +6595,7 @@ func PrintColor063(str string) {
 }
 
 // PrintfColor063 wraps Color063() and fmt.Printf().
-func PrintfColor063(format string, args ...interface{}) {
+func PrintfColor063(format string, args ...any) {
 	PrintColor063(Sprintf(format, args...))
 }
 
@@ -6611,7 +6611,7 @@ func OnColor063(str string) string {
 }
 
 // OnColor063f wraps fmt.Sprintf() and OnColor063.
-func OnColor063f(format string, args ...interface{}) string {
+func OnColor063f(format string, args ...any) string {
 	return OnColor063(Sprintf(format, args...))
 }
 
@@ -6621,7 +6621,7 @@ func FprintOnColor063(w io.Writer, str string) {
 }
 
 // FprintfOnColor063 wraps OnColor063 and fmt.Fprintf().
-func FprintfOnColor063(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor063(w io.Writer, format string, args ...any) {
 	FprintOnColor063(w, Sprintf(format, args...))
 }
 
@@ -6636,7 +6636,7 @@ func PrintOnColor063(str string) {
 }
 
 // PrintfOnColor063 wraps OnColor063() and fmt.Printf().
-func PrintfOnColor063(format string, args ...interface{}) {
+func PrintfOnColor063(format string, args ...any) {
 	PrintOnColor063(Sprintf(format, args...))
 }
 
@@ -6652,7 +6652,7 @@ func Color064(str string) string {
 }
 
 // Color064f wraps fmt.Sprintf() and Color064.
-func Color064f(format string, args ...interface{}) string {
+func Color064f(format string, args ...any) string {
 	return Color064(Sprintf(format, args...))
 }
 
@@ -6662,7 +6662,7 @@ func FprintColor064(w io.Writer, str string) {
 }
 
 // FprintfColor064 wraps Color064 and fmt.Fprintf().
-func FprintfColor064(w io.Writer, format string, args ...interface{}) {
+func FprintfColor064(w io.Writer, format string, args ...any) {
 	FprintColor064(w, Sprintf(format, args...))
 }
 
@@ -6677,7 +6677,7 @@ func PrintColor064(str string) {
 }
 
 // PrintfColor064 wraps Color064() and fmt.Printf().
-func PrintfColor064(format string, args ...interface{}) {
+func PrintfColor064(format string, args ...any) {
 	PrintColor064(Sprintf(format, args...))
 }
 
@@ -6693,7 +6693,7 @@ func OnColor064(str string) string {
 }
 
 // OnColor064f wraps fmt.Sprintf() and OnColor064.
-func OnColor064f(format string, args ...interface{}) string {
+func OnColor064f(format string, args ...any) string {
 	return OnColor064(Sprintf(format, args...))
 }
 
@@ -6703,7 +6703,7 @@ func FprintOnColor064(w io.Writer, str string) {
 }
 
 // FprintfOnColor064 wraps OnColor064 and fmt.Fprintf().
-func FprintfOnColor064(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor064(w io.Writer, format string, args ...any) {
 	FprintOnColor064(w, Sprintf(format, args...))
 }
 
@@ -6718,7 +6718,7 @@ func PrintOnColor064(str string) {
 }
 
 // PrintfOnColor064 wraps OnColor064() and fmt.Printf().
-func PrintfOnColor064(format string, args ...interface{}) {
+func PrintfOnColor064(format string, args ...any) {
 	PrintOnColor064(Sprintf(format, args...))
 }
 
@@ -6734,7 +6734,7 @@ func Color065(str string) string {
 }
 
 // Color065f wraps fmt.Sprintf() and Color065.
-func Color065f(format string, args ...interface{}) string {
+func Color065f(format string, args ...any) string {
 	return Color065(Sprintf(format, args...))
 }
 
@@ -6744,7 +6744,7 @@ func FprintColor065(w io.Writer, str string) {
 }
 
 // FprintfColor065 wraps Color065 and fmt.Fprintf().
-func FprintfColor065(w io.Writer, format string, args ...interface{}) {
+func FprintfColor065(w io.Writer, format string, args ...any) {
 	FprintColor065(w, Sprintf(format, args...))
 }
 
@@ -6759,7 +6759,7 @@ func PrintColor065(str string) {
 }
 
 // PrintfColor065 wraps Color065() and fmt.Printf().
-func PrintfColor065(format string, args ...interface{}) {
+func PrintfColor065(format string, args ...any) {
 	PrintColor065(Sprintf(format, args...))
 }
 
@@ -6775,7 +6775,7 @@ func OnColor065(str string) string {
 }
 
 // OnColor065f wraps fmt.Sprintf() and OnColor065.
-func OnColor065f(format string, args ...interface{}) string {
+func OnColor065f(format string, args ...any) string {
 	return OnColor065(Sprintf(format, args...))
 }
 
@@ -6785,7 +6785,7 @@ func FprintOnColor065(w io.Writer, str string) {
 }
 
 // FprintfOnColor065 wraps OnColor065 and fmt.Fprintf().
-func FprintfOnColor065(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor065(w io.Writer, format string, args ...any) {
 	FprintOnColor065(w, Sprintf(format, args...))
 }
 
@@ -6800,7 +6800,7 @@ func PrintOnColor065(str string) {
 }
 
 // PrintfOnColor065 wraps OnColor065() and fmt.Printf().
-func PrintfOnColor065(format string, args ...interface{}) {
+func PrintfOnColor065(format string, args ...any) {
 	PrintOnColor065(Sprintf(format, args...))
 }
 
@@ -6816,7 +6816,7 @@ func Color066(str string) string {
 }
 
 // Color066f wraps fmt.Sprintf() and Color066.
-func Color066f(format string, args ...interface{}) string {
+func Color066f(format string, args ...any) string {
 	return Color066(Sprintf(format, args...))
 }
 
@@ -6826,7 +6826,7 @@ func FprintColor066(w io.Writer, str string) {
 }
 
 // FprintfColor066 wraps Color066 and fmt.Fprintf().
-func FprintfColor066(w io.Writer, format string, args ...interface{}) {
+func FprintfColor066(w io.Writer, format string, args ...any) {
 	FprintColor066(w, Sprintf(format, args...))
 }
 
@@ -6841,7 +6841,7 @@ func PrintColor066(str string) {
 }
 
 // PrintfColor066 wraps Color066() and fmt.Printf().
-func PrintfColor066(format string, args ...interface{}) {
+func PrintfColor066(format string, args ...any) {
 	PrintColor066(Sprintf(format, args...))
 }
 
@@ -6857,7 +6857,7 @@ func OnColor066(str string) string {
 }
 
 // OnColor066f wraps fmt.Sprintf() and OnColor066.
-func OnColor066f(format string, args ...interface{}) string {
+func OnColor066f(format string, args ...any) string {
 	return OnColor066(Sprintf(format, args...))
 }
 
@@ -6867,7 +6867,7 @@ func FprintOnColor066(w io.Writer, str string) {
 }
 
 // FprintfOnColor066 wraps OnColor066 and fmt.Fprintf().
-func FprintfOnColor066(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor066(w io.Writer, format string, args ...any) {
 	FprintOnColor066(w, Sprintf(format, args...))
 }
 
@@ -6882,7 +6882,7 @@ func PrintOnColor066(str string) {
 }
 
 // PrintfOnColor066 wraps OnColor066() and fmt.Printf().
-func PrintfOnColor066(format string, args ...interface{}) {
+func PrintfOnColor066(format string, args ...any) {
 	PrintOnColor066(Sprintf(format, args...))
 }
 
@@ -6898,7 +6898,7 @@ func Color067(str string) string {
 }
 
 // Color067f wraps fmt.Sprintf() and Color067.
-func Color067f(format string, args ...interface{}) string {
+func Color067f(format string, args ...any) string {
 	return Color067(Sprintf(format, args...))
 }
 
@@ -6908,7 +6908,7 @@ func FprintColor067(w io.Writer, str string) {
 }
 
 // FprintfColor067 wraps Color067 and fmt.Fprintf().
-func FprintfColor067(w io.Writer, format string, args ...interface{}) {
+func FprintfColor067(w io.Writer, format string, args ...any) {
 	FprintColor067(w, Sprintf(format, args...))
 }
 
@@ -6923,7 +6923,7 @@ func PrintColor067(str string) {
 }
 
 // PrintfColor067 wraps Color067() and fmt.Printf().
-func PrintfColor067(format string, args ...interface{}) {
+func PrintfColor067(format string, args ...any) {
 	PrintColor067(Sprintf(format, args...))
 }
 
@@ -6939,7 +6939,7 @@ func OnColor067(str string) string {
 }
 
 // OnColor067f wraps fmt.Sprintf() and OnColor067.
-func OnColor067f(format string, args ...interface{}) string {
+func OnColor067f(format string, args ...any) string {
 	return OnColor067(Sprintf(format, args...))
 }
 
@@ -6949,7 +6949,7 @@ func FprintOnColor067(w io.Writer, str string) {
 }
 
 // FprintfOnColor067 wraps OnColor067 and fmt.Fprintf().
-func FprintfOnColor067(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor067(w io.Writer, format string, args ...any) {
 	FprintOnColor067(w, Sprintf(format, args...))
 }
 
@@ -6964,7 +6964,7 @@ func PrintOnColor067(str string) {
 }
 
 // PrintfOnColor067 wraps OnColor067() and fmt.Printf().
-func PrintfOnColor067(format string, args ...interface{}) {
+func PrintfOnColor067(format string, args ...any) {
 	PrintOnColor067(Sprintf(format, args...))
 }
 
@@ -6980,7 +6980,7 @@ func Color068(str string) string {
 }
 
 // Color068f wraps fmt.Sprintf() and Color068.
-func Color068f(format string, args ...interface{}) string {
+func Color068f(format string, args ...any) string {
 	return Color068(Sprintf(format, args...))
 }
 
@@ -6990,7 +6990,7 @@ func FprintColor068(w io.Writer, str string) {
 }
 
 // FprintfColor068 wraps Color068 and fmt.Fprintf().
-func FprintfColor068(w io.Writer, format string, args ...interface{}) {
+func FprintfColor068(w io.Writer, format string, args ...any) {
 	FprintColor068(w, Sprintf(format, args...))
 }
 
@@ -7005,7 +7005,7 @@ func PrintColor068(str string) {
 }
 
 // PrintfColor068 wraps Color068() and fmt.Printf().
-func PrintfColor068(format string, args ...interface{}) {
+func PrintfColor068(format string, args ...any) {
 	PrintColor068(Sprintf(format, args...))
 }
 
@@ -7021,7 +7021,7 @@ func OnColor068(str string) string {
 }
 
 // OnColor068f wraps fmt.Sprintf() and OnColor068.
-func OnColor068f(format string, args ...interface{}) string {
+func OnColor068f(format string, args ...any) string {
 	return OnColor068(Sprintf(format, args...))
 }
 
@@ -7031,7 +7031,7 @@ func FprintOnColor068(w io.Writer, str string) {
 }
 
 // FprintfOnColor068 wraps OnColor068 and fmt.Fprintf().
-func FprintfOnColor068(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor068(w io.Writer, format string, args ...any) {
 	FprintOnColor068(w, Sprintf(format, args...))
 }
 
@@ -7046,7 +7046,7 @@ func PrintOnColor068(str string) {
 }
 
 // PrintfOnColor068 wraps OnColor068() and fmt.Printf().
-func PrintfOnColor068(format string, args ...interface{}) {
+func PrintfOnColor068(format string, args ...any) {
 	PrintOnColor068(Sprintf(format, args...))
 }
 
@@ -7062,7 +7062,7 @@ func Color069(str string) string {
 }
 
 // Color069f wraps fmt.Sprintf() and Color069.
-func Color069f(format string, args ...interface{}) string {
+func Color069f(format string, args ...any) string {
 	return Color069(Sprintf(format, args...))
 }
 
@@ -7072,7 +7072,7 @@ func FprintColor069(w io.Writer, str string) {
 }
 
 // FprintfColor069 wraps Color069 and fmt.Fprintf().
-func FprintfColor069(w io.Writer, format string, args ...interface{}) {
+func FprintfColor069(w io.Writer, format string, args ...any) {
 	FprintColor069(w, Sprintf(format, args...))
 }
 
@@ -7087,7 +7087,7 @@ func PrintColor069(str string) {
 }
 
 // PrintfColor069 wraps Color069() and fmt.Printf().
-func PrintfColor069(format string, args ...interface{}) {
+func PrintfColor069(format string, args ...any) {
 	PrintColor069(Sprintf(format, args...))
 }
 
@@ -7103,7 +7103,7 @@ func OnColor069(str string) string {
 }
 
 // OnColor069f wraps fmt.Sprintf() and OnColor069.
-func OnColor069f(format string, args ...interface{}) string {
+func OnColor069f(format string, args ...any) string {
 	return OnColor069(Sprintf(format, args...))
 }
 
@@ -7113,7 +7113,7 @@ func FprintOnColor069(w io.Writer, str string) {
 }
 
 // FprintfOnColor069 wraps OnColor069 and fmt.Fprintf().
-func FprintfOnColor069(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor069(w io.Writer, format string, args ...any) {
 	FprintOnColor069(w, Sprintf(format, args...))
 }
 
@@ -7128,7 +7128,7 @@ func PrintOnColor069(str string) {
 }
 
 // PrintfOnColor069 wraps OnColor069() and fmt.Printf().
-func PrintfOnColor069(format string, args ...interface{}) {
+func PrintfOnColor069(format string, args ...any) {
 	PrintOnColor069(Sprintf(format, args...))
 }
 
@@ -7144,7 +7144,7 @@ func Color070(str string) string {
 }
 
 // Color070f wraps fmt.Sprintf() and Color070.
-func Color070f(format string, args ...interface{}) string {
+func Color070f(format string, args ...any) string {
 	return Color070(Sprintf(format, args...))
 }
 
@@ -7154,7 +7154,7 @@ func FprintColor070(w io.Writer, str string) {
 }
 
 // FprintfColor070 wraps Color070 and fmt.Fprintf().
-func FprintfColor070(w io.Writer, format string, args ...interface{}) {
+func FprintfColor070(w io.Writer, format string, args ...any) {
 	FprintColor070(w, Sprintf(format, args...))
 }
 
@@ -7169,7 +7169,7 @@ func PrintColor070(str string) {
 }
 
 // PrintfColor070 wraps Color070() and fmt.Printf().
-func PrintfColor070(format string, args ...interface{}) {
+func PrintfColor070(format string, args ...any) {
 	PrintColor070(Sprintf(format, args...))
 }
 
@@ -7185,7 +7185,7 @@ func OnColor070(str string) string {
 }
 
 // OnColor070f wraps fmt.Sprintf() and OnColor070.
-func OnColor070f(format string, args ...interface{}) string {
+func OnColor070f(format string, args ...any) string {
 	return OnColor070(Sprintf(format, args...))
 }
 
@@ -7195,7 +7195,7 @@ func FprintOnColor070(w io.Writer, str string) {
 }
 
 // FprintfOnColor070 wraps OnColor070 and fmt.Fprintf().
-func FprintfOnColor070(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor070(w io.Writer, format string, args ...any) {
 	FprintOnColor070(w, Sprintf(format, args...))
 }
 
@@ -7210,7 +7210,7 @@ func PrintOnColor070(str string) {
 }
 
 // PrintfOnColor070 wraps OnColor070() and fmt.Printf().
-func PrintfOnColor070(format string, args ...interface{}) {
+func PrintfOnColor070(format string, args ...any) {
 	PrintOnColor070(Sprintf(format, args...))
 }
 
@@ -7226,7 +7226,7 @@ func Color071(str string) string {
 }
 
 // Color071f wraps fmt.Sprintf() and Color071.
-func Color071f(format string, args ...interface{}) string {
+func Color071f(format string, args ...any) string {
 	return Color071(Sprintf(format, args...))
 }
 
@@ -7236,7 +7236,7 @@ func FprintColor071(w io.Writer, str string) {
 }
 
 // FprintfColor071 wraps Color071 and fmt.Fprintf().
-func FprintfColor071(w io.Writer, format string, args ...interface{}) {
+func FprintfColor071(w io.Writer, format string, args ...any) {
 	FprintColor071(w, Sprintf(format, args...))
 }
 
@@ -7251,7 +7251,7 @@ func PrintColor071(str string) {
 }
 
 // PrintfColor071 wraps Color071() and fmt.Printf().
-func PrintfColor071(format string, args ...interface{}) {
+func PrintfColor071(format string, args ...any) {
 	PrintColor071(Sprintf(format, args...))
 }
 
@@ -7267,7 +7267,7 @@ func OnColor071(str string) string {
 }
 
 // OnColor071f wraps fmt.Sprintf() and OnColor071.
-func OnColor071f(format string, args ...interface{}) string {
+func OnColor071f(format string, args ...any) string {
 	return OnColor071(Sprintf(format, args...))
 }
 
@@ -7277,7 +7277,7 @@ func FprintOnColor071(w io.Writer, str string) {
 }
 
 // FprintfOnColor071 wraps OnColor071 and fmt.Fprintf().
-func FprintfOnColor071(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor071(w io.Writer, format string, args ...any) {
 	FprintOnColor071(w, Sprintf(format, args...))
 }
 
@@ -7292,7 +7292,7 @@ func PrintOnColor071(str string) {
 }
 
 // PrintfOnColor071 wraps OnColor071() and fmt.Printf().
-func PrintfOnColor071(format string, args ...interface{}) {
+func PrintfOnColor071(format string, args ...any) {
 	PrintOnColor071(Sprintf(format, args...))
 }
 
@@ -7308,7 +7308,7 @@ func Color072(str string) string {
 }
 
 // Color072f wraps fmt.Sprintf() and Color072.
-func Color072f(format string, args ...interface{}) string {
+func Color072f(format string, args ...any) string {
 	return Color072(Sprintf(format, args...))
 }
 
@@ -7318,7 +7318,7 @@ func FprintColor072(w io.Writer, str string) {
 }
 
 // FprintfColor072 wraps Color072 and fmt.Fprintf().
-func FprintfColor072(w io.Writer, format string, args ...interface{}) {
+func FprintfColor072(w io.Writer, format string, args ...any) {
 	FprintColor072(w, Sprintf(format, args...))
 }
 
@@ -7333,7 +7333,7 @@ func PrintColor072(str string) {
 }
 
 // PrintfColor072 wraps Color072() and fmt.Printf().
-func PrintfColor072(format string, args ...interface{}) {
+func PrintfColor072(format string, args ...any) {
 	PrintColor072(Sprintf(format, args...))
 }
 
@@ -7349,7 +7349,7 @@ func OnColor072(str string) string {
 }
 
 // OnColor072f wraps fmt.Sprintf() and OnColor072.
-func OnColor072f(format string, args ...interface{}) string {
+func OnColor072f(format string, args ...any) string {
 	return OnColor072(Sprintf(format, args...))
 }
 
@@ -7359,7 +7359,7 @@ func FprintOnColor072(w io.Writer, str string) {
 }
 
 // FprintfOnColor072 wraps OnColor072 and fmt.Fprintf().
-func FprintfOnColor072(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor072(w io.Writer, format string, args ...any) {
 	FprintOnColor072(w, Sprintf(format, args...))
 }
 
@@ -7374,7 +7374,7 @@ func PrintOnColor072(str string) {
 }
 
 // PrintfOnColor072 wraps OnColor072() and fmt.Printf().
-func PrintfOnColor072(format string, args ...interface{}) {
+func PrintfOnColor072(format string, args ...any) {
 	PrintOnColor072(Sprintf(format, args...))
 }
 
@@ -7390,7 +7390,7 @@ func Color073(str string) string {
 }
 
 // Color073f wraps fmt.Sprintf() and Color073.
-func Color073f(format string, args ...interface{}) string {
+func Color073f(format string, args ...any) string {
 	return Color073(Sprintf(format, args...))
 }
 
@@ -7400,7 +7400,7 @@ func FprintColor073(w io.Writer, str string) {
 }
 
 // FprintfColor073 wraps Color073 and fmt.Fprintf().
-func FprintfColor073(w io.Writer, format string, args ...interface{}) {
+func FprintfColor073(w io.Writer, format string, args ...any) {
 	FprintColor073(w, Sprintf(format, args...))
 }
 
@@ -7415,7 +7415,7 @@ func PrintColor073(str string) {
 }
 
 // PrintfColor073 wraps Color073() and fmt.Printf().
-func PrintfColor073(format string, args ...interface{}) {
+func PrintfColor073(format string, args ...any) {
 	PrintColor073(Sprintf(format, args...))
 }
 
@@ -7431,7 +7431,7 @@ func OnColor073(str string) string {
 }
 
 // OnColor073f wraps fmt.Sprintf() and OnColor073.
-func OnColor073f(format string, args ...interface{}) string {
+func OnColor073f(format string, args ...any) string {
 	return OnColor073(Sprintf(format, args...))
 }
 
@@ -7441,7 +7441,7 @@ func FprintOnColor073(w io.Writer, str string) {
 }
 
 // FprintfOnColor073 wraps OnColor073 and fmt.Fprintf().
-func FprintfOnColor073(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor073(w io.Writer, format string, args ...any) {
 	FprintOnColor073(w, Sprintf(format, args...))
 }
 
@@ -7456,7 +7456,7 @@ func PrintOnColor073(str string) {
 }
 
 // PrintfOnColor073 wraps OnColor073() and fmt.Printf().
-func PrintfOnColor073(format string, args ...interface{}) {
+func PrintfOnColor073(format string, args ...any) {
 	PrintOnColor073(Sprintf(format, args...))
 }
 
@@ -7472,7 +7472,7 @@ func Color074(str string) string {
 }
 
 // Color074f wraps fmt.Sprintf() and Color074.
-func Color074f(format string, args ...interface{}) string {
+func Color074f(format string, args ...any) string {
 	return Color074(Sprintf(format, args...))
 }
 
@@ -7482,7 +7482,7 @@ func FprintColor074(w io.Writer, str string) {
 }
 
 // FprintfColor074 wraps Color074 and fmt.Fprintf().
-func FprintfColor074(w io.Writer, format string, args ...interface{}) {
+func FprintfColor074(w io.Writer, format string, args ...any) {
 	FprintColor074(w, Sprintf(format, args...))
 }
 
@@ -7497,7 +7497,7 @@ func PrintColor074(str string) {
 }
 
 // PrintfColor074 wraps Color074() and fmt.Printf().
-func PrintfColor074(format string, args ...interface{}) {
+func PrintfColor074(format string, args ...any) {
 	PrintColor074(Sprintf(format, args...))
 }
 
@@ -7513,7 +7513,7 @@ func OnColor074(str string) string {
 }
 
 // OnColor074f wraps fmt.Sprintf() and OnColor074.
-func OnColor074f(format string, args ...interface{}) string {
+func OnColor074f(format string, args ...any) string {
 	return OnColor074(Sprintf(format, args...))
 }
 
@@ -7523,7 +7523,7 @@ func FprintOnColor074(w io.Writer, str string) {
 }
 
 // FprintfOnColor074 wraps OnColor074 and fmt.Fprintf().
-func FprintfOnColor074(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor074(w io.Writer, format string, args ...any) {
 	FprintOnColor074(w, Sprintf(format, args...))
 }
 
@@ -7538,7 +7538,7 @@ func PrintOnColor074(str string) {
 }
 
 // PrintfOnColor074 wraps OnColor074() and fmt.Printf().
-func PrintfOnColor074(format string, args ...interface{}) {
+func PrintfOnColor074(format string, args ...any) {
 	PrintOnColor074(Sprintf(format, args...))
 }
 
@@ -7554,7 +7554,7 @@ func Color075(str string) string {
 }
 
 // Color075f wraps fmt.Sprintf() and Color075.
-func Color075f(format string, args ...interface{}) string {
+func Color075f(format string, args ...any) string {
 	return Color075(Sprintf(format, args...))
 }
 
@@ -7564,7 +7564,7 @@ func FprintColor075(w io.Writer, str string) {
 }
 
 // FprintfColor075 wraps Color075 and fmt.Fprintf().
-func FprintfColor075(w io.Writer, format string, args ...interface{}) {
+func FprintfColor075(w io.Writer, format string, args ...any) {
 	FprintColor075(w, Sprintf(format, args...))
 }
 
@@ -7579,7 +7579,7 @@ func PrintColor075(str string) {
 }
 
 // PrintfColor075 wraps Color075() and fmt.Printf().
-func PrintfColor075(format string, args ...interface{}) {
+func PrintfColor075(format string, args ...any) {
 	PrintColor075(Sprintf(format, args...))
 }
 
@@ -7595,7 +7595,7 @@ func OnColor075(str string) string {
 }
 
 // OnColor075f wraps fmt.Sprintf() and OnColor075.
-func OnColor075f(format string, args ...interface{}) string {
+func OnColor075f(format string, args ...any) string {
 	return OnColor075(Sprintf(format, args...))
 }
 
@@ -7605,7 +7605,7 @@ func FprintOnColor075(w io.Writer, str string) {
 }
 
 // FprintfOnColor075 wraps OnColor075 and fmt.Fprintf().
-func FprintfOnColor075(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor075(w io.Writer, format string, args ...any) {
 	FprintOnColor075(w, Sprintf(format, args...))
 }
 
@@ -7620,7 +7620,7 @@ func PrintOnColor075(str string) {
 }
 
 // PrintfOnColor075 wraps OnColor075() and fmt.Printf().
-func PrintfOnColor075(format string, args ...interface{}) {
+func PrintfOnColor075(format string, args ...any) {
 	PrintOnColor075(Sprintf(format, args...))
 }
 
@@ -7636,7 +7636,7 @@ func Color076(str string) string {
 }
 
 // Color076f wraps fmt.Sprintf() and Color076.
-func Color076f(format string, args ...interface{}) string {
+func Color076f(format string, args ...any) string {
 	return Color076(Sprintf(format, args...))
 }
 
@@ -7646,7 +7646,7 @@ func FprintColor076(w io.Writer, str string) {
 }
 
 // FprintfColor076 wraps Color076 and fmt.Fprintf().
-func FprintfColor076(w io.Writer, format string, args ...interface{}) {
+func FprintfColor076(w io.Writer, format string, args ...any) {
 	FprintColor076(w, Sprintf(format, args...))
 }
 
@@ -7661,7 +7661,7 @@ func PrintColor076(str string) {
 }
 
 // PrintfColor076 wraps Color076() and fmt.Printf().
-func PrintfColor076(format string, args ...interface{}) {
+func PrintfColor076(format string, args ...any) {
 	PrintColor076(Sprintf(format, args...))
 }
 
@@ -7677,7 +7677,7 @@ func OnColor076(str string) string {
 }
 
 // OnColor076f wraps fmt.Sprintf() and OnColor076.
-func OnColor076f(format string, args ...interface{}) string {
+func OnColor076f(format string, args ...any) string {
 	return OnColor076(Sprintf(format, args...))
 }
 
@@ -7687,7 +7687,7 @@ func FprintOnColor076(w io.Writer, str string) {
 }
 
 // FprintfOnColor076 wraps OnColor076 and fmt.Fprintf().
-func FprintfOnColor076(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor076(w io.Writer, format string, args ...any) {
 	FprintOnColor076(w, Sprintf(format, args...))
 }
 
@@ -7702,7 +7702,7 @@ func PrintOnColor076(str string) {
 }
 
 // PrintfOnColor076 wraps OnColor076() and fmt.Printf().
-func PrintfOnColor076(format string, args ...interface{}) {
+func PrintfOnColor076(format string, args ...any) {
 	PrintOnColor076(Sprintf(format, args...))
 }
 
@@ -7718,7 +7718,7 @@ func Color077(str string) string {
 }
 
 // Color077f wraps fmt.Sprintf() and Color077.
-func Color077f(format string, args ...interface{}) string {
+func Color077f(format string, args ...any) string {
 	return Color077(Sprintf(format, args...))
 }
 
@@ -7728,7 +7728,7 @@ func FprintColor077(w io.Writer, str string) {
 }
 
 // FprintfColor077 wraps Color077 and fmt.Fprintf().
-func FprintfColor077(w io.Writer, format string, args ...interface{}) {
+func FprintfColor077(w io.Writer, format string, args ...any) {
 	FprintColor077(w, Sprintf(format, args...))
 }
 
@@ -7743,7 +7743,7 @@ func PrintColor077(str string) {
 }
 
 // PrintfColor077 wraps Color077() and fmt.Printf().
-func PrintfColor077(format string, args ...interface{}) {
+func PrintfColor077(format string, args ...any) {
 	PrintColor077(Sprintf(format, args...))
 }
 
@@ -7759,7 +7759,7 @@ func OnColor077(str string) string {
 }
 
 // OnColor077f wraps fmt.Sprintf() and OnColor077.
-func OnColor077f(format string, args ...interface{}) string {
+func OnColor077f(format string, args ...any) string {
 	return OnColor077(Sprintf(format, args...))
 }
 
@@ -7769,7 +7769,7 @@ func FprintOnColor077(w io.Writer, str string) {
 }
 
 // FprintfOnColor077 wraps OnColor077 and fmt.Fprintf().
-func FprintfOnColor077(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor077(w io.Writer, format string, args ...any) {
 	FprintOnColor077(w, Sprintf(format, args...))
 }
 
@@ -7784,7 +7784,7 @@ func PrintOnColor077(str string) {
 }
 
 // PrintfOnColor077 wraps OnColor077() and fmt.Printf().
-func PrintfOnColor077(format string, args ...interface{}) {
+func PrintfOnColor077(format string, args ...any) {
 	PrintOnColor077(Sprintf(format, args...))
 }
 
@@ -7800,7 +7800,7 @@ func Color078(str string) string {
 }
 
 // Color078f wraps fmt.Sprintf() and Color078.
-func Color078f(format string, args ...interface{}) string {
+func Color078f(format string, args ...any) string {
 	return Color078(Sprintf(format, args...))
 }
 
@@ -7810,7 +7810,7 @@ func FprintColor078(w io.Writer, str string) {
 }
 
 // FprintfColor078 wraps Color078 and fmt.Fprintf().
-func FprintfColor078(w io.Writer, format string, args ...interface{}) {
+func FprintfColor078(w io.Writer, format string, args ...any) {
 	FprintColor078(w, Sprintf(format, args...))
 }
 
@@ -7825,7 +7825,7 @@ func PrintColor078(str string) {
 }
 
 // PrintfColor078 wraps Color078() and fmt.Printf().
-func PrintfColor078(format string, args ...interface{}) {
+func PrintfColor078(format string, args ...any) {
 	PrintColor078(Sprintf(format, args...))
 }
 
@@ -7841,7 +7841,7 @@ func OnColor078(str string) string {
 }
 
 // OnColor078f wraps fmt.Sprintf() and OnColor078.
-func OnColor078f(format string, args ...interface{}) string {
+func OnColor078f(format string, args ...any) string {
 	return OnColor078(Sprintf(format, args...))
 }
 
@@ -7851,7 +7851,7 @@ func FprintOnColor078(w io.Writer, str string) {
 }
 
 // FprintfOnColor078 wraps OnColor078 and fmt.Fprintf().
-func FprintfOnColor078(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor078(w io.Writer, format string, args ...any) {
 	FprintOnColor078(w, Sprintf(format, args...))
 }
 
@@ -7866,7 +7866,7 @@ func PrintOnColor078(str string) {
 }
 
 // PrintfOnColor078 wraps OnColor078() and fmt.Printf().
-func PrintfOnColor078(format string, args ...interface{}) {
+func PrintfOnColor078(format string, args ...any) {
 	PrintOnColor078(Sprintf(format, args...))
 }
 
@@ -7882,7 +7882,7 @@ func Color079(str string) string {
 }
 
 // Color079f wraps fmt.Sprintf() and Color079.
-func Color079f(format string, args ...interface{}) string {
+func Color079f(format string, args ...any) string {
 	return Color079(Sprintf(format, args...))
 }
 
@@ -7892,7 +7892,7 @@ func FprintColor079(w io.Writer, str string) {
 }
 
 // FprintfColor079 wraps Color079 and fmt.Fprintf().
-func FprintfColor079(w io.Writer, format string, args ...interface{}) {
+func FprintfColor079(w io.Writer, format string, args ...any) {
 	FprintColor079(w, Sprintf(format, args...))
 }
 
@@ -7907,7 +7907,7 @@ func PrintColor079(str string) {
 }
 
 // PrintfColor079 wraps Color079() and fmt.Printf().
-func PrintfColor079(format string, args ...interface{}) {
+func PrintfColor079(format string, args ...any) {
 	PrintColor079(Sprintf(format, args...))
 }
 
@@ -7923,7 +7923,7 @@ func OnColor079(str string) string {
 }
 
 // OnColor079f wraps fmt.Sprintf() and OnColor079.
-func OnColor079f(format string, args ...interface{}) string {
+func OnColor079f(format string, args ...any) string {
 	return OnColor079(Sprintf(format, args...))
 }
 
@@ -7933,7 +7933,7 @@ func FprintOnColor079(w io.Writer, str string) {
 }
 
 // FprintfOnColor079 wraps OnColor079 and fmt.Fprintf().
-func FprintfOnColor079(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor079(w io.Writer, format string, args ...any) {
 	FprintOnColor079(w, Sprintf(format, args...))
 }
 
@@ -7948,7 +7948,7 @@ func PrintOnColor079(str string) {
 }
 
 // PrintfOnColor079 wraps OnColor079() and fmt.Printf().
-func PrintfOnColor079(format string, args ...interface{}) {
+func PrintfOnColor079(format string, args ...any) {
 	PrintOnColor079(Sprintf(format, args...))
 }
 
@@ -7964,7 +7964,7 @@ func Color080(str string) string {
 }
 
 // Color080f wraps fmt.Sprintf() and Color080.
-func Color080f(format string, args ...interface{}) string {
+func Color080f(format string, args ...any) string {
 	return Color080(Sprintf(format, args...))
 }
 
@@ -7974,7 +7974,7 @@ func FprintColor080(w io.Writer, str string) {
 }
 
 // FprintfColor080 wraps Color080 and fmt.Fprintf().
-func FprintfColor080(w io.Writer, format string, args ...interface{}) {
+func FprintfColor080(w io.Writer, format string, args ...any) {
 	FprintColor080(w, Sprintf(format, args...))
 }
 
@@ -7989,7 +7989,7 @@ func PrintColor080(str string) {
 }
 
 // PrintfColor080 wraps Color080() and fmt.Printf().
-func PrintfColor080(format string, args ...interface{}) {
+func PrintfColor080(format string, args ...any) {
 	PrintColor080(Sprintf(format, args...))
 }
 
@@ -8005,7 +8005,7 @@ func OnColor080(str string) string {
 }
 
 // OnColor080f wraps fmt.Sprintf() and OnColor080.
-func OnColor080f(format string, args ...interface{}) string {
+func OnColor080f(format string, args ...any) string {
 	return OnColor080(Sprintf(format, args...))
 }
 
@@ -8015,7 +8015,7 @@ func FprintOnColor080(w io.Writer, str string) {
 }
 
 // FprintfOnColor080 wraps OnColor080 and fmt.Fprintf().
-func FprintfOnColor080(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor080(w io.Writer, format string, args ...any) {
 	FprintOnColor080(w, Sprintf(format, args...))
 }
 
@@ -8030,7 +8030,7 @@ func PrintOnColor080(str string) {
 }
 
 // PrintfOnColor080 wraps OnColor080() and fmt.Printf().
-func PrintfOnColor080(format string, args ...interface{}) {
+func PrintfOnColor080(format string, args ...any) {
 	PrintOnColor080(Sprintf(format, args...))
 }
 
@@ -8046,7 +8046,7 @@ func Color081(str string) string {
 }
 
 // Color081f wraps fmt.Sprintf() and Color081.
-func Color081f(format string, args ...interface{}) string {
+func Color081f(format string, args ...any) string {
 	return Color081(Sprintf(format, args...))
 }
 
@@ -8056,7 +8056,7 @@ func FprintColor081(w io.Writer, str string) {
 }
 
 // FprintfColor081 wraps Color081 and fmt.Fprintf().
-func FprintfColor081(w io.Writer, format string, args ...interface{}) {
+func FprintfColor081(w io.Writer, format string, args ...any) {
 	FprintColor081(w, Sprintf(format, args...))
 }
 
@@ -8071,7 +8071,7 @@ func PrintColor081(str string) {
 }
 
 // PrintfColor081 wraps Color081() and fmt.Printf().
-func PrintfColor081(format string, args ...interface{}) {
+func PrintfColor081(format string, args ...any) {
 	PrintColor081(Sprintf(format, args...))
 }
 
@@ -8087,7 +8087,7 @@ func OnColor081(str string) string {
 }
 
 // OnColor081f wraps fmt.Sprintf() and OnColor081.
-func OnColor081f(format string, args ...interface{}) string {
+func OnColor081f(format string, args ...any) string {
 	return OnColor081(Sprintf(format, args...))
 }
 
@@ -8097,7 +8097,7 @@ func FprintOnColor081(w io.Writer, str string) {
 }
 
 // FprintfOnColor081 wraps OnColor081 and fmt.Fprintf().
-func FprintfOnColor081(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor081(w io.Writer, format string, args ...any) {
 	FprintOnColor081(w, Sprintf(format, args...))
 }
 
@@ -8112,7 +8112,7 @@ func PrintOnColor081(str string) {
 }
 
 // PrintfOnColor081 wraps OnColor081() and fmt.Printf().
-func PrintfOnColor081(format string, args ...interface{}) {
+func PrintfOnColor081(format string, args ...any) {
 	PrintOnColor081(Sprintf(format, args...))
 }
 
@@ -8128,7 +8128,7 @@ func Color082(str string) string {
 }
 
 // Color082f wraps fmt.Sprintf() and Color082.
-func Color082f(format string, args ...interface{}) string {
+func Color082f(format string, args ...any) string {
 	return Color082(Sprintf(format, args...))
 }
 
@@ -8138,7 +8138,7 @@ func FprintColor082(w io.Writer, str string) {
 }
 
 // FprintfColor082 wraps Color082 and fmt.Fprintf().
-func FprintfColor082(w io.Writer, format string, args ...interface{}) {
+func FprintfColor082(w io.Writer, format string, args ...any) {
 	FprintColor082(w, Sprintf(format, args...))
 }
 
@@ -8153,7 +8153,7 @@ func PrintColor082(str string) {
 }
 
 // PrintfColor082 wraps Color082() and fmt.Printf().
-func PrintfColor082(format string, args ...interface{}) {
+func PrintfColor082(format string, args ...any) {
 	PrintColor082(Sprintf(format, args...))
 }
 
@@ -8169,7 +8169,7 @@ func OnColor082(str string) string {
 }
 
 // OnColor082f wraps fmt.Sprintf() and OnColor082.
-func OnColor082f(format string, args ...interface{}) string {
+func OnColor082f(format string, args ...any) string {
 	return OnColor082(Sprintf(format, args...))
 }
 
@@ -8179,7 +8179,7 @@ func FprintOnColor082(w io.Writer, str string) {
 }
 
 // FprintfOnColor082 wraps OnColor082 and fmt.Fprintf().
-func FprintfOnColor082(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor082(w io.Writer, format string, args ...any) {
 	FprintOnColor082(w, Sprintf(format, args...))
 }
 
@@ -8194,7 +8194,7 @@ func PrintOnColor082(str string) {
 }
 
 // PrintfOnColor082 wraps OnColor082() and fmt.Printf().
-func PrintfOnColor082(format string, args ...interface{}) {
+func PrintfOnColor082(format string, args ...any) {
 	PrintOnColor082(Sprintf(format, args...))
 }
 
@@ -8210,7 +8210,7 @@ func Color083(str string) string {
 }
 
 // Color083f wraps fmt.Sprintf() and Color083.
-func Color083f(format string, args ...interface{}) string {
+func Color083f(format string, args ...any) string {
 	return Color083(Sprintf(format, args...))
 }
 
@@ -8220,7 +8220,7 @@ func FprintColor083(w io.Writer, str string) {
 }
 
 // FprintfColor083 wraps Color083 and fmt.Fprintf().
-func FprintfColor083(w io.Writer, format string, args ...interface{}) {
+func FprintfColor083(w io.Writer, format string, args ...any) {
 	FprintColor083(w, Sprintf(format, args...))
 }
 
@@ -8235,7 +8235,7 @@ func PrintColor083(str string) {
 }
 
 // PrintfColor083 wraps Color083() and fmt.Printf().
-func PrintfColor083(format string, args ...interface{}) {
+func PrintfColor083(format string, args ...any) {
 	PrintColor083(Sprintf(format, args...))
 }
 
@@ -8251,7 +8251,7 @@ func OnColor083(str string) string {
 }
 
 // OnColor083f wraps fmt.Sprintf() and OnColor083.
-func OnColor083f(format string, args ...interface{}) string {
+func OnColor083f(format string, args ...any) string {
 	return OnColor083(Sprintf(format, args...))
 }
 
@@ -8261,7 +8261,7 @@ func FprintOnColor083(w io.Writer, str string) {
 }
 
 // FprintfOnColor083 wraps OnColor083 and fmt.Fprintf().
-func FprintfOnColor083(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor083(w io.Writer, format string, args ...any) {
 	FprintOnColor083(w, Sprintf(format, args...))
 }
 
@@ -8276,7 +8276,7 @@ func PrintOnColor083(str string) {
 }
 
 // PrintfOnColor083 wraps OnColor083() and fmt.Printf().
-func PrintfOnColor083(format string, args ...interface{}) {
+func PrintfOnColor083(format string, args ...any) {
 	PrintOnColor083(Sprintf(format, args...))
 }
 
@@ -8292,7 +8292,7 @@ func Color084(str string) string {
 }
 
 // Color084f wraps fmt.Sprintf() and Color084.
-func Color084f(format string, args ...interface{}) string {
+func Color084f(format string, args ...any) string {
 	return Color084(Sprintf(format, args...))
 }
 
@@ -8302,7 +8302,7 @@ func FprintColor084(w io.Writer, str string) {
 }
 
 // FprintfColor084 wraps Color084 and fmt.Fprintf().
-func FprintfColor084(w io.Writer, format string, args ...interface{}) {
+func FprintfColor084(w io.Writer, format string, args ...any) {
 	FprintColor084(w, Sprintf(format, args...))
 }
 
@@ -8317,7 +8317,7 @@ func PrintColor084(str string) {
 }
 
 // PrintfColor084 wraps Color084() and fmt.Printf().
-func PrintfColor084(format string, args ...interface{}) {
+func PrintfColor084(format string, args ...any) {
 	PrintColor084(Sprintf(format, args...))
 }
 
@@ -8333,7 +8333,7 @@ func OnColor084(str string) string {
 }
 
 // OnColor084f wraps fmt.Sprintf() and OnColor084.
-func OnColor084f(format string, args ...interface{}) string {
+func OnColor084f(format string, args ...any) string {
 	return OnColor084(Sprintf(format, args...))
 }
 
@@ -8343,7 +8343,7 @@ func FprintOnColor084(w io.Writer, str string) {
 }
 
 // FprintfOnColor084 wraps OnColor084 and fmt.Fprintf().
-func FprintfOnColor084(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor084(w io.Writer, format string, args ...any) {
 	FprintOnColor084(w, Sprintf(format, args...))
 }
 
@@ -8358,7 +8358,7 @@ func PrintOnColor084(str string) {
 }
 
 // PrintfOnColor084 wraps OnColor084() and fmt.Printf().
-func PrintfOnColor084(format string, args ...interface{}) {
+func PrintfOnColor084(format string, args ...any) {
 	PrintOnColor084(Sprintf(format, args...))
 }
 
@@ -8374,7 +8374,7 @@ func Color085(str string) string {
 }
 
 // Color085f wraps fmt.Sprintf() and Color085.
-func Color085f(format string, args ...interface{}) string {
+func Color085f(format string, args ...any) string {
 	return Color085(Sprintf(format, args...))
 }
 
@@ -8384,7 +8384,7 @@ func FprintColor085(w io.Writer, str string) {
 }
 
 // FprintfColor085 wraps Color085 and fmt.Fprintf().
-func FprintfColor085(w io.Writer, format string, args ...interface{}) {
+func FprintfColor085(w io.Writer, format string, args ...any) {
 	FprintColor085(w, Sprintf(format, args...))
 }
 
@@ -8399,7 +8399,7 @@ func PrintColor085(str string) {
 }
 
 // PrintfColor085 wraps Color085() and fmt.Printf().
-func PrintfColor085(format string, args ...interface{}) {
+func PrintfColor085(format string, args ...any) {
 	PrintColor085(Sprintf(format, args...))
 }
 
@@ -8415,7 +8415,7 @@ func OnColor085(str string) string {
 }
 
 // OnColor085f wraps fmt.Sprintf() and OnColor085.
-func OnColor085f(format string, args ...interface{}) string {
+func OnColor085f(format string, args ...any) string {
 	return OnColor085(Sprintf(format, args...))
 }
 
@@ -8425,7 +8425,7 @@ func FprintOnColor085(w io.Writer, str string) {
 }
 
 // FprintfOnColor085 wraps OnColor085 and fmt.Fprintf().
-func FprintfOnColor085(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor085(w io.Writer, format string, args ...any) {
 	FprintOnColor085(w, Sprintf(format, args...))
 }
 
@@ -8440,7 +8440,7 @@ func PrintOnColor085(str string) {
 }
 
 // PrintfOnColor085 wraps OnColor085() and fmt.Printf().
-func PrintfOnColor085(format string, args ...interface{}) {
+func PrintfOnColor085(format string, args ...any) {
 	PrintOnColor085(Sprintf(format, args...))
 }
 
@@ -8456,7 +8456,7 @@ func Color086(str string) string {
 }
 
 // Color086f wraps fmt.Sprintf() and Color086.
-func Color086f(format string, args ...interface{}) string {
+func Color086f(format string, args ...any) string {
 	return Color086(Sprintf(format, args...))
 }
 
@@ -8466,7 +8466,7 @@ func FprintColor086(w io.Writer, str string) {
 }
 
 // FprintfColor086 wraps Color086 and fmt.Fprintf().
-func FprintfColor086(w io.Writer, format string, args ...interface{}) {
+func FprintfColor086(w io.Writer, format string, args ...any) {
 	FprintColor086(w, Sprintf(format, args...))
 }
 
@@ -8481,7 +8481,7 @@ func PrintColor086(str string) {
 }
 
 // PrintfColor086 wraps Color086() and fmt.Printf().
-func PrintfColor086(format string, args ...interface{}) {
+func PrintfColor086(format string, args ...any) {
 	PrintColor086(Sprintf(format, args...))
 }
 
@@ -8497,7 +8497,7 @@ func OnColor086(str string) string {
 }
 
 // OnColor086f wraps fmt.Sprintf() and OnColor086.
-func OnColor086f(format string, args ...interface{}) string {
+func OnColor086f(format string, args ...any) string {
 	return OnColor086(Sprintf(format, args...))
 }
 
@@ -8507,7 +8507,7 @@ func FprintOnColor086(w io.Writer, str string) {
 }
 
 // FprintfOnColor086 wraps OnColor086 and fmt.Fprintf().
-func FprintfOnColor086(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor086(w io.Writer, format string, args ...any) {
 	FprintOnColor086(w, Sprintf(format, args...))
 }
 
@@ -8522,7 +8522,7 @@ func PrintOnColor086(str string) {
 }
 
 // PrintfOnColor086 wraps OnColor086() and fmt.Printf().
-func PrintfOnColor086(format string, args ...interface{}) {
+func PrintfOnColor086(format string, args ...any) {
 	PrintOnColor086(Sprintf(format, args...))
 }
 
@@ -8538,7 +8538,7 @@ func Color087(str string) string {
 }
 
 // Color087f wraps fmt.Sprintf() and Color087.
-func Color087f(format string, args ...interface{}) string {
+func Color087f(format string, args ...any) string {
 	return Color087(Sprintf(format, args...))
 }
 
@@ -8548,7 +8548,7 @@ func FprintColor087(w io.Writer, str string) {
 }
 
 // FprintfColor087 wraps Color087 and fmt.Fprintf().
-func FprintfColor087(w io.Writer, format string, args ...interface{}) {
+func FprintfColor087(w io.Writer, format string, args ...any) {
 	FprintColor087(w, Sprintf(format, args...))
 }
 
@@ -8563,7 +8563,7 @@ func PrintColor087(str string) {
 }
 
 // PrintfColor087 wraps Color087() and fmt.Printf().
-func PrintfColor087(format string, args ...interface{}) {
+func PrintfColor087(format string, args ...any) {
 	PrintColor087(Sprintf(format, args...))
 }
 
@@ -8579,7 +8579,7 @@ func OnColor087(str string) string {
 }
 
 // OnColor087f wraps fmt.Sprintf() and OnColor087.
-func OnColor087f(format string, args ...interface{}) string {
+func OnColor087f(format string, args ...any) string {
 	return OnColor087(Sprintf(format, args...))
 }
 
@@ -8589,7 +8589,7 @@ func FprintOnColor087(w io.Writer, str string) {
 }
 
 // FprintfOnColor087 wraps OnColor087 and fmt.Fprintf().
-func FprintfOnColor087(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor087(w io.Writer, format string, args ...any) {
 	FprintOnColor087(w, Sprintf(format, args...))
 }
 
@@ -8604,7 +8604,7 @@ func PrintOnColor087(str string) {
 }
 
 // PrintfOnColor087 wraps OnColor087() and fmt.Printf().
-func PrintfOnColor087(format string, args ...interface{}) {
+func PrintfOnColor087(format string, args ...any) {
 	PrintOnColor087(Sprintf(format, args...))
 }
 
@@ -8620,7 +8620,7 @@ func Color088(str string) string {
 }
 
 // Color088f wraps fmt.Sprintf() and Color088.
-func Color088f(format string, args ...interface{}) string {
+func Color088f(format string, args ...any) string {
 	return Color088(Sprintf(format, args...))
 }
 
@@ -8630,7 +8630,7 @@ func FprintColor088(w io.Writer, str string) {
 }
 
 // FprintfColor088 wraps Color088 and fmt.Fprintf().
-func FprintfColor088(w io.Writer, format string, args ...interface{}) {
+func FprintfColor088(w io.Writer, format string, args ...any) {
 	FprintColor088(w, Sprintf(format, args...))
 }
 
@@ -8645,7 +8645,7 @@ func PrintColor088(str string) {
 }
 
 // PrintfColor088 wraps Color088() and fmt.Printf().
-func PrintfColor088(format string, args ...interface{}) {
+func PrintfColor088(format string, args ...any) {
 	PrintColor088(Sprintf(format, args...))
 }
 
@@ -8661,7 +8661,7 @@ func OnColor088(str string) string {
 }
 
 // OnColor088f wraps fmt.Sprintf() and OnColor088.
-func OnColor088f(format string, args ...interface{}) string {
+func OnColor088f(format string, args ...any) string {
 	return OnColor088(Sprintf(format, args...))
 }
 
@@ -8671,7 +8671,7 @@ func FprintOnColor088(w io.Writer, str string) {
 }
 
 // FprintfOnColor088 wraps OnColor088 and fmt.Fprintf().
-func FprintfOnColor088(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor088(w io.Writer, format string, args ...any) {
 	FprintOnColor088(w, Sprintf(format, args...))
 }
 
@@ -8686,7 +8686,7 @@ func PrintOnColor088(str string) {
 }
 
 // PrintfOnColor088 wraps OnColor088() and fmt.Printf().
-func PrintfOnColor088(format string, args ...interface{}) {
+func PrintfOnColor088(format string, args ...any) {
 	PrintOnColor088(Sprintf(format, args...))
 }
 
@@ -8702,7 +8702,7 @@ func Color089(str string) string {
 }
 
 // Color089f wraps fmt.Sprintf() and Color089.
-func Color089f(format string, args ...interface{}) string {
+func Color089f(format string, args ...any) string {
 	return Color089(Sprintf(format, args...))
 }
 
@@ -8712,7 +8712,7 @@ func FprintColor089(w io.Writer, str string) {
 }
 
 // FprintfColor089 wraps Color089 and fmt.Fprintf().
-func FprintfColor089(w io.Writer, format string, args ...interface{}) {
+func FprintfColor089(w io.Writer, format string, args ...any) {
 	FprintColor089(w, Sprintf(format, args...))
 }
 
@@ -8727,7 +8727,7 @@ func PrintColor089(str string) {
 }
 
 // PrintfColor089 wraps Color089() and fmt.Printf().
-func PrintfColor089(format string, args ...interface{}) {
+func PrintfColor089(format string, args ...any) {
 	PrintColor089(Sprintf(format, args...))
 }
 
@@ -8743,7 +8743,7 @@ func OnColor089(str string) string {
 }
 
 // OnColor089f wraps fmt.Sprintf() and OnColor089.
-func OnColor089f(format string, args ...interface{}) string {
+func OnColor089f(format string, args ...any) string {
 	return OnColor089(Sprintf(format, args...))
 }
 
@@ -8753,7 +8753,7 @@ func FprintOnColor089(w io.Writer, str string) {
 }
 
 // FprintfOnColor089 wraps OnColor089 and fmt.Fprintf().
-func FprintfOnColor089(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor089(w io.Writer, format string, args ...any) {
 	FprintOnColor089(w, Sprintf(format, args...))
 }
 
@@ -8768,7 +8768,7 @@ func PrintOnColor089(str string) {
 }
 
 // PrintfOnColor089 wraps OnColor089() and fmt.Printf().
-func PrintfOnColor089(format string, args ...interface{}) {
+func PrintfOnColor089(format string, args ...any) {
 	PrintOnColor089(Sprintf(format, args...))
 }
 
@@ -8784,7 +8784,7 @@ func Color090(str string) string {
 }
 
 // Color090f wraps fmt.Sprintf() and Color090.
-func Color090f(format string, args ...interface{}) string {
+func Color090f(format string, args ...any) string {
 	return Color090(Sprintf(format, args...))
 }
 
@@ -8794,7 +8794,7 @@ func FprintColor090(w io.Writer, str string) {
 }
 
 // FprintfColor090 wraps Color090 and fmt.Fprintf().
-func FprintfColor090(w io.Writer, format string, args ...interface{}) {
+func FprintfColor090(w io.Writer, format string, args ...any) {
 	FprintColor090(w, Sprintf(format, args...))
 }
 
@@ -8809,7 +8809,7 @@ func PrintColor090(str string) {
 }
 
 // PrintfColor090 wraps Color090() and fmt.Printf().
-func PrintfColor090(format string, args ...interface{}) {
+func PrintfColor090(format string, args ...any) {
 	PrintColor090(Sprintf(format, args...))
 }
 
@@ -8825,7 +8825,7 @@ func OnColor090(str string) string {
 }
 
 // OnColor090f wraps fmt.Sprintf() and OnColor090.
-func OnColor090f(format string, args ...interface{}) string {
+func OnColor090f(format string, args ...any) string {
 	return OnColor090(Sprintf(format, args...))
 }
 
@@ -8835,7 +8835,7 @@ func FprintOnColor090(w io.Writer, str string) {
 }
 
 // FprintfOnColor090 wraps OnColor090 and fmt.Fprintf().
-func FprintfOnColor090(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor090(w io.Writer, format string, args ...any) {
 	FprintOnColor090(w, Sprintf(format, args...))
 }
 
@@ -8850,7 +8850,7 @@ func PrintOnColor090(str string) {
 }
 
 // PrintfOnColor090 wraps OnColor090() and fmt.Printf().
-func PrintfOnColor090(format string, args ...interface{}) {
+func PrintfOnColor090(format string, args ...any) {
 	PrintOnColor090(Sprintf(format, args...))
 }
 
@@ -8866,7 +8866,7 @@ func Color091(str string) string {
 }
 
 // Color091f wraps fmt.Sprintf() and Color091.
-func Color091f(format string, args ...interface{}) string {
+func Color091f(format string, args ...any) string {
 	return Color091(Sprintf(format, args...))
 }
 
@@ -8876,7 +8876,7 @@ func FprintColor091(w io.Writer, str string) {
 }
 
 // FprintfColor091 wraps Color091 and fmt.Fprintf().
-func FprintfColor091(w io.Writer, format string, args ...interface{}) {
+func FprintfColor091(w io.Writer, format string, args ...any) {
 	FprintColor091(w, Sprintf(format, args...))
 }
 
@@ -8891,7 +8891,7 @@ func PrintColor091(str string) {
 }
 
 // PrintfColor091 wraps Color091() and fmt.Printf().
-func PrintfColor091(format string, args ...interface{}) {
+func PrintfColor091(format string, args ...any) {
 	PrintColor091(Sprintf(format, args...))
 }
 
@@ -8907,7 +8907,7 @@ func OnColor091(str string) string {
 }
 
 // OnColor091f wraps fmt.Sprintf() and OnColor091.
-func OnColor091f(format string, args ...interface{}) string {
+func OnColor091f(format string, args ...any) string {
 	return OnColor091(Sprintf(format, args...))
 }
 
@@ -8917,7 +8917,7 @@ func FprintOnColor091(w io.Writer, str string) {
 }
 
 // FprintfOnColor091 wraps OnColor091 and fmt.Fprintf().
-func FprintfOnColor091(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor091(w io.Writer, format string, args ...any) {
 	FprintOnColor091(w, Sprintf(format, args...))
 }
 
@@ -8932,7 +8932,7 @@ func PrintOnColor091(str string) {
 }
 
 // PrintfOnColor091 wraps OnColor091() and fmt.Printf().
-func PrintfOnColor091(format string, args ...interface{}) {
+func PrintfOnColor091(format string, args ...any) {
 	PrintOnColor091(Sprintf(format, args...))
 }
 
@@ -8948,7 +8948,7 @@ func Color092(str string) string {
 }
 
 // Color092f wraps fmt.Sprintf() and Color092.
-func Color092f(format string, args ...interface{}) string {
+func Color092f(format string, args ...any) string {
 	return Color092(Sprintf(format, args...))
 }
 
@@ -8958,7 +8958,7 @@ func FprintColor092(w io.Writer, str string) {
 }
 
 // FprintfColor092 wraps Color092 and fmt.Fprintf().
-func FprintfColor092(w io.Writer, format string, args ...interface{}) {
+func FprintfColor092(w io.Writer, format string, args ...any) {
 	FprintColor092(w, Sprintf(format, args...))
 }
 
@@ -8973,7 +8973,7 @@ func PrintColor092(str string) {
 }
 
 // PrintfColor092 wraps Color092() and fmt.Printf().
-func PrintfColor092(format string, args ...interface{}) {
+func PrintfColor092(format string, args ...any) {
 	PrintColor092(Sprintf(format, args...))
 }
 
@@ -8989,7 +8989,7 @@ func OnColor092(str string) string {
 }
 
 // OnColor092f wraps fmt.Sprintf() and OnColor092.
-func OnColor092f(format string, args ...interface{}) string {
+func OnColor092f(format string, args ...any) string {
 	return OnColor092(Sprintf(format, args...))
 }
 
@@ -8999,7 +8999,7 @@ func FprintOnColor092(w io.Writer, str string) {
 }
 
 // FprintfOnColor092 wraps OnColor092 and fmt.Fprintf().
-func FprintfOnColor092(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor092(w io.Writer, format string, args ...any) {
 	FprintOnColor092(w, Sprintf(format, args...))
 }
 
@@ -9014,7 +9014,7 @@ func PrintOnColor092(str string) {
 }
 
 // PrintfOnColor092 wraps OnColor092() and fmt.Printf().
-func PrintfOnColor092(format string, args ...interface{}) {
+func PrintfOnColor092(format string, args ...any) {
 	PrintOnColor092(Sprintf(format, args...))
 }
 
@@ -9030,7 +9030,7 @@ func Color093(str string) string {
 }
 
 // Color093f wraps fmt.Sprintf() and Color093.
-func Color093f(format string, args ...interface{}) string {
+func Color093f(format string, args ...any) string {
 	return Color093(Sprintf(format, args...))
 }
 
@@ -9040,7 +9040,7 @@ func FprintColor093(w io.Writer, str string) {
 }
 
 // FprintfColor093 wraps Color093 and fmt.Fprintf().
-func FprintfColor093(w io.Writer, format string, args ...interface{}) {
+func FprintfColor093(w io.Writer, format string, args ...any) {
 	FprintColor093(w, Sprintf(format, args...))
 }
 
@@ -9055,7 +9055,7 @@ func PrintColor093(str string) {
 }
 
 // PrintfColor093 wraps Color093() and fmt.Printf().
-func PrintfColor093(format string, args ...interface{}) {
+func PrintfColor093(format string, args ...any) {
 	PrintColor093(Sprintf(format, args...))
 }
 
@@ -9071,7 +9071,7 @@ func OnColor093(str string) string {
 }
 
 // OnColor093f wraps fmt.Sprintf() and OnColor093.
-func OnColor093f(format string, args ...interface{}) string {
+func OnColor093f(format string, args ...any) string {
 	return OnColor093(Sprintf(format, args...))
 }
 
@@ -9081,7 +9081,7 @@ func FprintOnColor093(w io.Writer, str string) {
 }
 
 // FprintfOnColor093 wraps OnColor093 and fmt.Fprintf().
-func FprintfOnColor093(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor093(w io.Writer, format string, args ...any) {
 	FprintOnColor093(w, Sprintf(format, args...))
 }
 
@@ -9096,7 +9096,7 @@ func PrintOnColor093(str string) {
 }
 
 // PrintfOnColor093 wraps OnColor093() and fmt.Printf().
-func PrintfOnColor093(format string, args ...interface{}) {
+func PrintfOnColor093(format string, args ...any) {
 	PrintOnColor093(Sprintf(format, args...))
 }
 
@@ -9112,7 +9112,7 @@ func Color094(str string) string {
 }
 
 // Color094f wraps fmt.Sprintf() and Color094.
-func Color094f(format string, args ...interface{}) string {
+func Color094f(format string, args ...any) string {
 	return Color094(Sprintf(format, args...))
 }
 
@@ -9122,7 +9122,7 @@ func FprintColor094(w io.Writer, str string) {
 }
 
 // FprintfColor094 wraps Color094 and fmt.Fprintf().
-func FprintfColor094(w io.Writer, format string, args ...interface{}) {
+func FprintfColor094(w io.Writer, format string, args ...any) {
 	FprintColor094(w, Sprintf(format, args...))
 }
 
@@ -9137,7 +9137,7 @@ func PrintColor094(str string) {
 }
 
 // PrintfColor094 wraps Color094() and fmt.Printf().
-func PrintfColor094(format string, args ...interface{}) {
+func PrintfColor094(format string, args ...any) {
 	PrintColor094(Sprintf(format, args...))
 }
 
@@ -9153,7 +9153,7 @@ func OnColor094(str string) string {
 }
 
 // OnColor094f wraps fmt.Sprintf() and OnColor094.
-func OnColor094f(format string, args ...interface{}) string {
+func OnColor094f(format string, args ...any) string {
 	return OnColor094(Sprintf(format, args...))
 }
 
@@ -9163,7 +9163,7 @@ func FprintOnColor094(w io.Writer, str string) {
 }
 
 // FprintfOnColor094 wraps OnColor094 and fmt.Fprintf().
-func FprintfOnColor094(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor094(w io.Writer, format string, args ...any) {
 	FprintOnColor094(w, Sprintf(format, args...))
 }
 
@@ -9178,7 +9178,7 @@ func PrintOnColor094(str string) {
 }
 
 // PrintfOnColor094 wraps OnColor094() and fmt.Printf().
-func PrintfOnColor094(format string, args ...interface{}) {
+func PrintfOnColor094(format string, args ...any) {
 	PrintOnColor094(Sprintf(format, args...))
 }
 
@@ -9194,7 +9194,7 @@ func Color095(str string) string {
 }
 
 // Color095f wraps fmt.Sprintf() and Color095.
-func Color095f(format string, args ...interface{}) string {
+func Color095f(format string, args ...any) string {
 	return Color095(Sprintf(format, args...))
 }
 
@@ -9204,7 +9204,7 @@ func FprintColor095(w io.Writer, str string) {
 }
 
 // FprintfColor095 wraps Color095 and fmt.Fprintf().
-func FprintfColor095(w io.Writer, format string, args ...interface{}) {
+func FprintfColor095(w io.Writer, format string, args ...any) {
 	FprintColor095(w, Sprintf(format, args...))
 }
 
@@ -9219,7 +9219,7 @@ func PrintColor095(str string) {
 }
 
 // PrintfColor095 wraps Color095() and fmt.Printf().
-func PrintfColor095(format string, args ...interface{}) {
+func PrintfColor095(format string, args ...any) {
 	PrintColor095(Sprintf(format, args...))
 }
 
@@ -9235,7 +9235,7 @@ func OnColor095(str string) string {
 }
 
 // OnColor095f wraps fmt.Sprintf() and OnColor095.
-func OnColor095f(format string, args ...interface{}) string {
+func OnColor095f(format string, args ...any) string {
 	return OnColor095(Sprintf(format, args...))
 }
 
@@ -9245,7 +9245,7 @@ func FprintOnColor095(w io.Writer, str string) {
 }
 
 // FprintfOnColor095 wraps OnColor095 and fmt.Fprintf().
-func FprintfOnColor095(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor095(w io.Writer, format string, args ...any) {
 	FprintOnColor095(w, Sprintf(format, args...))
 }
 
@@ -9260,7 +9260,7 @@ func PrintOnColor095(str string) {
 }
 
 // PrintfOnColor095 wraps OnColor095() and fmt.Printf().
-func PrintfOnColor095(format string, args ...interface{}) {
+func PrintfOnColor095(format string, args ...any) {
 	PrintOnColor095(Sprintf(format, args...))
 }
 
@@ -9276,7 +9276,7 @@ func Color096(str string) string {
 }
 
 // Color096f wraps fmt.Sprintf() and Color096.
-func Color096f(format string, args ...interface{}) string {
+func Color096f(format string, args ...any) string {
 	return Color096(Sprintf(format, args...))
 }
 
@@ -9286,7 +9286,7 @@ func FprintColor096(w io.Writer, str string) {
 }
 
 // FprintfColor096 wraps Color096 and fmt.Fprintf().
-func FprintfColor096(w io.Writer, format string, args ...interface{}) {
+func FprintfColor096(w io.Writer, format string, args ...any) {
 	FprintColor096(w, Sprintf(format, args...))
 }
 
@@ -9301,7 +9301,7 @@ func PrintColor096(str string) {
 }
 
 // PrintfColor096 wraps Color096() and fmt.Printf().
-func PrintfColor096(format string, args ...interface{}) {
+func PrintfColor096(format string, args ...any) {
 	PrintColor096(Sprintf(format, args...))
 }
 
@@ -9317,7 +9317,7 @@ func OnColor096(str string) string {
 }
 
 // OnColor096f wraps fmt.Sprintf() and OnColor096.
-func OnColor096f(format string, args ...interface{}) string {
+func OnColor096f(format string, args ...any) string {
 	return OnColor096(Sprintf(format, args...))
 }
 
@@ -9327,7 +9327,7 @@ func FprintOnColor096(w io.Writer, str string) {
 }
 
 // FprintfOnColor096 wraps OnColor096 and fmt.Fprintf().
-func FprintfOnColor096(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor096(w io.Writer, format string, args ...any) {
 	FprintOnColor096(w, Sprintf(format, args...))
 }
 
@@ -9342,7 +9342,7 @@ func PrintOnColor096(str string) {
 }
 
 // PrintfOnColor096 wraps OnColor096() and fmt.Printf().
-func PrintfOnColor096(format string, args ...interface{}) {
+func PrintfOnColor096(format string, args ...any) {
 	PrintOnColor096(Sprintf(format, args...))
 }
 
@@ -9358,7 +9358,7 @@ func Color097(str string) string {
 }
 
 // Color097f wraps fmt.Sprintf() and Color097.
-func Color097f(format string, args ...interface{}) string {
+func Color097f(format string, args ...any) string {
 	return Color097(Sprintf(format, args...))
 }
 
@@ -9368,7 +9368,7 @@ func FprintColor097(w io.Writer, str string) {
 }
 
 // FprintfColor097 wraps Color097 and fmt.Fprintf().
-func FprintfColor097(w io.Writer, format string, args ...interface{}) {
+func FprintfColor097(w io.Writer, format string, args ...any) {
 	FprintColor097(w, Sprintf(format, args...))
 }
 
@@ -9383,7 +9383,7 @@ func PrintColor097(str string) {
 }
 
 // PrintfColor097 wraps Color097() and fmt.Printf().
-func PrintfColor097(format string, args ...interface{}) {
+func PrintfColor097(format string, args ...any) {
 	PrintColor097(Sprintf(format, args...))
 }
 
@@ -9399,7 +9399,7 @@ func OnColor097(str string) string {
 }
 
 // OnColor097f wraps fmt.Sprintf() and OnColor097.
-func OnColor097f(format string, args ...interface{}) string {
+func OnColor097f(format string, args ...any) string {
 	return OnColor097(Sprintf(format, args...))
 }
 
@@ -9409,7 +9409,7 @@ func FprintOnColor097(w io.Writer, str string) {
 }
 
 // FprintfOnColor097 wraps OnColor097 and fmt.Fprintf().
-func FprintfOnColor097(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor097(w io.Writer, format string, args ...any) {
 	FprintOnColor097(w, Sprintf(format, args...))
 }
 
@@ -9424,7 +9424,7 @@ func PrintOnColor097(str string) {
 }
 
 // PrintfOnColor097 wraps OnColor097() and fmt.Printf().
-func PrintfOnColor097(format string, args ...interface{}) {
+func PrintfOnColor097(format string, args ...any) {
 	PrintOnColor097(Sprintf(format, args...))
 }
 
@@ -9440,7 +9440,7 @@ func Color098(str string) string {
 }
 
 // Color098f wraps fmt.Sprintf() and Color098.
-func Color098f(format string, args ...interface{}) string {
+func Color098f(format string, args ...any) string {
 	return Color098(Sprintf(format, args...))
 }
 
@@ -9450,7 +9450,7 @@ func FprintColor098(w io.Writer, str string) {
 }
 
 // FprintfColor098 wraps Color098 and fmt.Fprintf().
-func FprintfColor098(w io.Writer, format string, args ...interface{}) {
+func FprintfColor098(w io.Writer, format string, args ...any) {
 	FprintColor098(w, Sprintf(format, args...))
 }
 
@@ -9465,7 +9465,7 @@ func PrintColor098(str string) {
 }
 
 // PrintfColor098 wraps Color098() and fmt.Printf().
-func PrintfColor098(format string, args ...interface{}) {
+func PrintfColor098(format string, args ...any) {
 	PrintColor098(Sprintf(format, args...))
 }
 
@@ -9481,7 +9481,7 @@ func OnColor098(str string) string {
 }
 
 // OnColor098f wraps fmt.Sprintf() and OnColor098.
-func OnColor098f(format string, args ...interface{}) string {
+func OnColor098f(format string, args ...any) string {
 	return OnColor098(Sprintf(format, args...))
 }
 
@@ -9491,7 +9491,7 @@ func FprintOnColor098(w io.Writer, str string) {
 }
 
 // FprintfOnColor098 wraps OnColor098 and fmt.Fprintf().
-func FprintfOnColor098(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor098(w io.Writer, format string, args ...any) {
 	FprintOnColor098(w, Sprintf(format, args...))
 }
 
@@ -9506,7 +9506,7 @@ func PrintOnColor098(str string) {
 }
 
 // PrintfOnColor098 wraps OnColor098() and fmt.Printf().
-func PrintfOnColor098(format string, args ...interface{}) {
+func PrintfOnColor098(format string, args ...any) {
 	PrintOnColor098(Sprintf(format, args...))
 }
 
@@ -9522,7 +9522,7 @@ func Color099(str string) string {
 }
 
 // Color099f wraps fmt.Sprintf() and Color099.
-func Color099f(format string, args ...interface{}) string {
+func Color099f(format string, args ...any) string {
 	return Color099(Sprintf(format, args...))
 }
 
@@ -9532,7 +9532,7 @@ func FprintColor099(w io.Writer, str string) {
 }
 
 // FprintfColor099 wraps Color099 and fmt.Fprintf().
-func FprintfColor099(w io.Writer, format string, args ...interface{}) {
+func FprintfColor099(w io.Writer, format string, args ...any) {
 	FprintColor099(w, Sprintf(format, args...))
 }
 
@@ -9547,7 +9547,7 @@ func PrintColor099(str string) {
 }
 
 // PrintfColor099 wraps Color099() and fmt.Printf().
-func PrintfColor099(format string, args ...interface{}) {
+func PrintfColor099(format string, args ...any) {
 	PrintColor099(Sprintf(format, args...))
 }
 
@@ -9563,7 +9563,7 @@ func OnColor099(str string) string {
 }
 
 // OnColor099f wraps fmt.Sprintf() and OnColor099.
-func OnColor099f(format string, args ...interface{}) string {
+func OnColor099f(format string, args ...any) string {
 	return OnColor099(Sprintf(format, args...))
 }
 
@@ -9573,7 +9573,7 @@ func FprintOnColor099(w io.Writer, str string) {
 }
 
 // FprintfOnColor099 wraps OnColor099 and fmt.Fprintf().
-func FprintfOnColor099(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor099(w io.Writer, format string, args ...any) {
 	FprintOnColor099(w, Sprintf(format, args...))
 }
 
@@ -9588,7 +9588,7 @@ func PrintOnColor099(str string) {
 }
 
 // PrintfOnColor099 wraps OnColor099() and fmt.Printf().
-func PrintfOnColor099(format string, args ...interface{}) {
+func PrintfOnColor099(format string, args ...any) {
 	PrintOnColor099(Sprintf(format, args...))
 }
 
@@ -9604,7 +9604,7 @@ func Color100(str string) string {
 }
 
 // Color100f wraps fmt.Sprintf() and Color100.
-func Color100f(format string, args ...interface{}) string {
+func Color100f(format string, args ...any) string {
 	return Color100(Sprintf(format, args...))
 }
 
@@ -9614,7 +9614,7 @@ func FprintColor100(w io.Writer, str string) {
 }
 
 // FprintfColor100 wraps Color100 and fmt.Fprintf().
-func FprintfColor100(w io.Writer, format string, args ...interface{}) {
+func FprintfColor100(w io.Writer, format string, args ...any) {
 	FprintColor100(w, Sprintf(format, args...))
 }
 
@@ -9629,7 +9629,7 @@ func PrintColor100(str string) {
 }
 
 // PrintfColor100 wraps Color100() and fmt.Printf().
-func PrintfColor100(format string, args ...interface{}) {
+func PrintfColor100(format string, args ...any) {
 	PrintColor100(Sprintf(format, args...))
 }
 
@@ -9645,7 +9645,7 @@ func OnColor100(str string) string {
 }
 
 // OnColor100f wraps fmt.Sprintf() and OnColor100.
-func OnColor100f(format string, args ...interface{}) string {
+func OnColor100f(format string, args ...any) string {
 	return OnColor100(Sprintf(format, args...))
 }
 
@@ -9655,7 +9655,7 @@ func FprintOnColor100(w io.Writer, str string) {
 }
 
 // FprintfOnColor100 wraps OnColor100 and fmt.Fprintf().
-func FprintfOnColor100(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor100(w io.Writer, format string, args ...any) {
 	FprintOnColor100(w, Sprintf(format, args...))
 }
 
@@ -9670,7 +9670,7 @@ func PrintOnColor100(str string) {
 }
 
 // PrintfOnColor100 wraps OnColor100() and fmt.Printf().
-func PrintfOnColor100(format string, args ...interface{}) {
+func PrintfOnColor100(format string, args ...any) {
 	PrintOnColor100(Sprintf(format, args...))
 }
 
@@ -9686,7 +9686,7 @@ func Color101(str string) string {
 }
 
 // Color101f wraps fmt.Sprintf() and Color101.
-func Color101f(format string, args ...interface{}) string {
+func Color101f(format string, args ...any) string {
 	return Color101(Sprintf(format, args...))
 }
 
@@ -9696,7 +9696,7 @@ func FprintColor101(w io.Writer, str string) {
 }
 
 // FprintfColor101 wraps Color101 and fmt.Fprintf().
-func FprintfColor101(w io.Writer, format string, args ...interface{}) {
+func FprintfColor101(w io.Writer, format string, args ...any) {
 	FprintColor101(w, Sprintf(format, args...))
 }
 
@@ -9711,7 +9711,7 @@ func PrintColor101(str string) {
 }
 
 // PrintfColor101 wraps Color101() and fmt.Printf().
-func PrintfColor101(format string, args ...interface{}) {
+func PrintfColor101(format string, args ...any) {
 	PrintColor101(Sprintf(format, args...))
 }
 
@@ -9727,7 +9727,7 @@ func OnColor101(str string) string {
 }
 
 // OnColor101f wraps fmt.Sprintf() and OnColor101.
-func OnColor101f(format string, args ...interface{}) string {
+func OnColor101f(format string, args ...any) string {
 	return OnColor101(Sprintf(format, args...))
 }
 
@@ -9737,7 +9737,7 @@ func FprintOnColor101(w io.Writer, str string) {
 }
 
 // FprintfOnColor101 wraps OnColor101 and fmt.Fprintf().
-func FprintfOnColor101(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor101(w io.Writer, format string, args ...any) {
 	FprintOnColor101(w, Sprintf(format, args...))
 }
 
@@ -9752,7 +9752,7 @@ func PrintOnColor101(str string) {
 }
 
 // PrintfOnColor101 wraps OnColor101() and fmt.Printf().
-func PrintfOnColor101(format string, args ...interface{}) {
+func PrintfOnColor101(format string, args ...any) {
 	PrintOnColor101(Sprintf(format, args...))
 }
 
@@ -9768,7 +9768,7 @@ func Color102(str string) string {
 }
 
 // Color102f wraps fmt.Sprintf() and Color102.
-func Color102f(format string, args ...interface{}) string {
+func Color102f(format string, args ...any) string {
 	return Color102(Sprintf(format, args...))
 }
 
@@ -9778,7 +9778,7 @@ func FprintColor102(w io.Writer, str string) {
 }
 
 // FprintfColor102 wraps Color102 and fmt.Fprintf().
-func FprintfColor102(w io.Writer, format string, args ...interface{}) {
+func FprintfColor102(w io.Writer, format string, args ...any) {
 	FprintColor102(w, Sprintf(format, args...))
 }
 
@@ -9793,7 +9793,7 @@ func PrintColor102(str string) {
 }
 
 // PrintfColor102 wraps Color102() and fmt.Printf().
-func PrintfColor102(format string, args ...interface{}) {
+func PrintfColor102(format string, args ...any) {
 	PrintColor102(Sprintf(format, args...))
 }
 
@@ -9809,7 +9809,7 @@ func OnColor102(str string) string {
 }
 
 // OnColor102f wraps fmt.Sprintf() and OnColor102.
-func OnColor102f(format string, args ...interface{}) string {
+func OnColor102f(format string, args ...any) string {
 	return OnColor102(Sprintf(format, args...))
 }
 
@@ -9819,7 +9819,7 @@ func FprintOnColor102(w io.Writer, str string) {
 }
 
 // FprintfOnColor102 wraps OnColor102 and fmt.Fprintf().
-func FprintfOnColor102(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor102(w io.Writer, format string, args ...any) {
 	FprintOnColor102(w, Sprintf(format, args...))
 }
 
@@ -9834,7 +9834,7 @@ func PrintOnColor102(str string) {
 }
 
 // PrintfOnColor102 wraps OnColor102() and fmt.Printf().
-func PrintfOnColor102(format string, args ...interface{}) {
+func PrintfOnColor102(format string, args ...any) {
 	PrintOnColor102(Sprintf(format, args...))
 }
 
@@ -9850,7 +9850,7 @@ func Color103(str string) string {
 }
 
 // Color103f wraps fmt.Sprintf() and Color103.
-func Color103f(format string, args ...interface{}) string {
+func Color103f(format string, args ...any) string {
 	return Color103(Sprintf(format, args...))
 }
 
@@ -9860,7 +9860,7 @@ func FprintColor103(w io.Writer, str string) {
 }
 
 // FprintfColor103 wraps Color103 and fmt.Fprintf().
-func FprintfColor103(w io.Writer, format string, args ...interface{}) {
+func FprintfColor103(w io.Writer, format string, args ...any) {
 	FprintColor103(w, Sprintf(format, args...))
 }
 
@@ -9875,7 +9875,7 @@ func PrintColor103(str string) {
 }
 
 // PrintfColor103 wraps Color103() and fmt.Printf().
-func PrintfColor103(format string, args ...interface{}) {
+func PrintfColor103(format string, args ...any) {
 	PrintColor103(Sprintf(format, args...))
 }
 
@@ -9891,7 +9891,7 @@ func OnColor103(str string) string {
 }
 
 // OnColor103f wraps fmt.Sprintf() and OnColor103.
-func OnColor103f(format string, args ...interface{}) string {
+func OnColor103f(format string, args ...any) string {
 	return OnColor103(Sprintf(format, args...))
 }
 
@@ -9901,7 +9901,7 @@ func FprintOnColor103(w io.Writer, str string) {
 }
 
 // FprintfOnColor103 wraps OnColor103 and fmt.Fprintf().
-func FprintfOnColor103(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor103(w io.Writer, format string, args ...any) {
 	FprintOnColor103(w, Sprintf(format, args...))
 }
 
@@ -9916,7 +9916,7 @@ func PrintOnColor103(str string) {
 }
 
 // PrintfOnColor103 wraps OnColor103() and fmt.Printf().
-func PrintfOnColor103(format string, args ...interface{}) {
+func PrintfOnColor103(format string, args ...any) {
 	PrintOnColor103(Sprintf(format, args...))
 }
 
@@ -9932,7 +9932,7 @@ func Color104(str string) string {
 }
 
 // Color104f wraps fmt.Sprintf() and Color104.
-func Color104f(format string, args ...interface{}) string {
+func Color104f(format string, args ...any) string {
 	return Color104(Sprintf(format, args...))
 }
 
@@ -9942,7 +9942,7 @@ func FprintColor104(w io.Writer, str string) {
 }
 
 // FprintfColor104 wraps Color104 and fmt.Fprintf().
-func FprintfColor104(w io.Writer, format string, args ...interface{}) {
+func FprintfColor104(w io.Writer, format string, args ...any) {
 	FprintColor104(w, Sprintf(format, args...))
 }
 
@@ -9957,7 +9957,7 @@ func PrintColor104(str string) {
 }
 
 // PrintfColor104 wraps Color104() and fmt.Printf().
-func PrintfColor104(format string, args ...interface{}) {
+func PrintfColor104(format string, args ...any) {
 	PrintColor104(Sprintf(format, args...))
 }
 
@@ -9973,7 +9973,7 @@ func OnColor104(str string) string {
 }
 
 // OnColor104f wraps fmt.Sprintf() and OnColor104.
-func OnColor104f(format string, args ...interface{}) string {
+func OnColor104f(format string, args ...any) string {
 	return OnColor104(Sprintf(format, args...))
 }
 
@@ -9983,7 +9983,7 @@ func FprintOnColor104(w io.Writer, str string) {
 }
 
 // FprintfOnColor104 wraps OnColor104 and fmt.Fprintf().
-func FprintfOnColor104(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor104(w io.Writer, format string, args ...any) {
 	FprintOnColor104(w, Sprintf(format, args...))
 }
 
@@ -9998,7 +9998,7 @@ func PrintOnColor104(str string) {
 }
 
 // PrintfOnColor104 wraps OnColor104() and fmt.Printf().
-func PrintfOnColor104(format string, args ...interface{}) {
+func PrintfOnColor104(format string, args ...any) {
 	PrintOnColor104(Sprintf(format, args...))
 }
 
@@ -10014,7 +10014,7 @@ func Color105(str string) string {
 }
 
 // Color105f wraps fmt.Sprintf() and Color105.
-func Color105f(format string, args ...interface{}) string {
+func Color105f(format string, args ...any) string {
 	return Color105(Sprintf(format, args...))
 }
 
@@ -10024,7 +10024,7 @@ func FprintColor105(w io.Writer, str string) {
 }
 
 // FprintfColor105 wraps Color105 and fmt.Fprintf().
-func FprintfColor105(w io.Writer, format string, args ...interface{}) {
+func FprintfColor105(w io.Writer, format string, args ...any) {
 	FprintColor105(w, Sprintf(format, args...))
 }
 
@@ -10039,7 +10039,7 @@ func PrintColor105(str string) {
 }
 
 // PrintfColor105 wraps Color105() and fmt.Printf().
-func PrintfColor105(format string, args ...interface{}) {
+func PrintfColor105(format string, args ...any) {
 	PrintColor105(Sprintf(format, args...))
 }
 
@@ -10055,7 +10055,7 @@ func OnColor105(str string) string {
 }
 
 // OnColor105f wraps fmt.Sprintf() and OnColor105.
-func OnColor105f(format string, args ...interface{}) string {
+func OnColor105f(format string, args ...any) string {
 	return OnColor105(Sprintf(format, args...))
 }
 
@@ -10065,7 +10065,7 @@ func FprintOnColor105(w io.Writer, str string) {
 }
 
 // FprintfOnColor105 wraps OnColor105 and fmt.Fprintf().
-func FprintfOnColor105(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor105(w io.Writer, format string, args ...any) {
 	FprintOnColor105(w, Sprintf(format, args...))
 }
 
@@ -10080,7 +10080,7 @@ func PrintOnColor105(str string) {
 }
 
 // PrintfOnColor105 wraps OnColor105() and fmt.Printf().
-func PrintfOnColor105(format string, args ...interface{}) {
+func PrintfOnColor105(format string, args ...any) {
 	PrintOnColor105(Sprintf(format, args...))
 }
 
@@ -10096,7 +10096,7 @@ func Color106(str string) string {
 }
 
 // Color106f wraps fmt.Sprintf() and Color106.
-func Color106f(format string, args ...interface{}) string {
+func Color106f(format string, args ...any) string {
 	return Color106(Sprintf(format, args...))
 }
 
@@ -10106,7 +10106,7 @@ func FprintColor106(w io.Writer, str string) {
 }
 
 // FprintfColor106 wraps Color106 and fmt.Fprintf().
-func FprintfColor106(w io.Writer, format string, args ...interface{}) {
+func FprintfColor106(w io.Writer, format string, args ...any) {
 	FprintColor106(w, Sprintf(format, args...))
 }
 
@@ -10121,7 +10121,7 @@ func PrintColor106(str string) {
 }
 
 // PrintfColor106 wraps Color106() and fmt.Printf().
-func PrintfColor106(format string, args ...interface{}) {
+func PrintfColor106(format string, args ...any) {
 	PrintColor106(Sprintf(format, args...))
 }
 
@@ -10137,7 +10137,7 @@ func OnColor106(str string) string {
 }
 
 // OnColor106f wraps fmt.Sprintf() and OnColor106.
-func OnColor106f(format string, args ...interface{}) string {
+func OnColor106f(format string, args ...any) string {
 	return OnColor106(Sprintf(format, args...))
 }
 
@@ -10147,7 +10147,7 @@ func FprintOnColor106(w io.Writer, str string) {
 }
 
 // FprintfOnColor106 wraps OnColor106 and fmt.Fprintf().
-func FprintfOnColor106(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor106(w io.Writer, format string, args ...any) {
 	FprintOnColor106(w, Sprintf(format, args...))
 }
 
@@ -10162,7 +10162,7 @@ func PrintOnColor106(str string) {
 }
 
 // PrintfOnColor106 wraps OnColor106() and fmt.Printf().
-func PrintfOnColor106(format string, args ...interface{}) {
+func PrintfOnColor106(format string, args ...any) {
 	PrintOnColor106(Sprintf(format, args...))
 }
 
@@ -10178,7 +10178,7 @@ func Color107(str string) string {
 }
 
 // Color107f wraps fmt.Sprintf() and Color107.
-func Color107f(format string, args ...interface{}) string {
+func Color107f(format string, args ...any) string {
 	return Color107(Sprintf(format, args...))
 }
 
@@ -10188,7 +10188,7 @@ func FprintColor107(w io.Writer, str string) {
 }
 
 // FprintfColor107 wraps Color107 and fmt.Fprintf().
-func FprintfColor107(w io.Writer, format string, args ...interface{}) {
+func FprintfColor107(w io.Writer, format string, args ...any) {
 	FprintColor107(w, Sprintf(format, args...))
 }
 
@@ -10203,7 +10203,7 @@ func PrintColor107(str string) {
 }
 
 // PrintfColor107 wraps Color107() and fmt.Printf().
-func PrintfColor107(format string, args ...interface{}) {
+func PrintfColor107(format string, args ...any) {
 	PrintColor107(Sprintf(format, args...))
 }
 
@@ -10219,7 +10219,7 @@ func OnColor107(str string) string {
 }
 
 // OnColor107f wraps fmt.Sprintf() and OnColor107.
-func OnColor107f(format string, args ...interface{}) string {
+func OnColor107f(format string, args ...any) string {
 	return OnColor107(Sprintf(format, args...))
 }
 
@@ -10229,7 +10229,7 @@ func FprintOnColor107(w io.Writer, str string) {
 }
 
 // FprintfOnColor107 wraps OnColor107 and fmt.Fprintf().
-func FprintfOnColor107(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor107(w io.Writer, format string, args ...any) {
 	FprintOnColor107(w, Sprintf(format, args...))
 }
 
@@ -10244,7 +10244,7 @@ func PrintOnColor107(str string) {
 }
 
 // PrintfOnColor107 wraps OnColor107() and fmt.Printf().
-func PrintfOnColor107(format string, args ...interface{}) {
+func PrintfOnColor107(format string, args ...any) {
 	PrintOnColor107(Sprintf(format, args...))
 }
 
@@ -10260,7 +10260,7 @@ func Color108(str string) string {
 }
 
 // Color108f wraps fmt.Sprintf() and Color108.
-func Color108f(format string, args ...interface{}) string {
+func Color108f(format string, args ...any) string {
 	return Color108(Sprintf(format, args...))
 }
 
@@ -10270,7 +10270,7 @@ func FprintColor108(w io.Writer, str string) {
 }
 
 // FprintfColor108 wraps Color108 and fmt.Fprintf().
-func FprintfColor108(w io.Writer, format string, args ...interface{}) {
+func FprintfColor108(w io.Writer, format string, args ...any) {
 	FprintColor108(w, Sprintf(format, args...))
 }
 
@@ -10285,7 +10285,7 @@ func PrintColor108(str string) {
 }
 
 // PrintfColor108 wraps Color108() and fmt.Printf().
-func PrintfColor108(format string, args ...interface{}) {
+func PrintfColor108(format string, args ...any) {
 	PrintColor108(Sprintf(format, args...))
 }
 
@@ -10301,7 +10301,7 @@ func OnColor108(str string) string {
 }
 
 // OnColor108f wraps fmt.Sprintf() and OnColor108.
-func OnColor108f(format string, args ...interface{}) string {
+func OnColor108f(format string, args ...any) string {
 	return OnColor108(Sprintf(format, args...))
 }
 
@@ -10311,7 +10311,7 @@ func FprintOnColor108(w io.Writer, str string) {
 }
 
 // FprintfOnColor108 wraps OnColor108 and fmt.Fprintf().
-func FprintfOnColor108(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor108(w io.Writer, format string, args ...any) {
 	FprintOnColor108(w, Sprintf(format, args...))
 }
 
@@ -10326,7 +10326,7 @@ func PrintOnColor108(str string) {
 }
 
 // PrintfOnColor108 wraps OnColor108() and fmt.Printf().
-func PrintfOnColor108(format string, args ...interface{}) {
+func PrintfOnColor108(format string, args ...any) {
 	PrintOnColor108(Sprintf(format, args...))
 }
 
@@ -10342,7 +10342,7 @@ func Color109(str string) string {
 }
 
 // Color109f wraps fmt.Sprintf() and Color109.
-func Color109f(format string, args ...interface{}) string {
+func Color109f(format string, args ...any) string {
 	return Color109(Sprintf(format, args...))
 }
 
@@ -10352,7 +10352,7 @@ func FprintColor109(w io.Writer, str string) {
 }
 
 // FprintfColor109 wraps Color109 and fmt.Fprintf().
-func FprintfColor109(w io.Writer, format string, args ...interface{}) {
+func FprintfColor109(w io.Writer, format string, args ...any) {
 	FprintColor109(w, Sprintf(format, args...))
 }
 
@@ -10367,7 +10367,7 @@ func PrintColor109(str string) {
 }
 
 // PrintfColor109 wraps Color109() and fmt.Printf().
-func PrintfColor109(format string, args ...interface{}) {
+func PrintfColor109(format string, args ...any) {
 	PrintColor109(Sprintf(format, args...))
 }
 
@@ -10383,7 +10383,7 @@ func OnColor109(str string) string {
 }
 
 // OnColor109f wraps fmt.Sprintf() and OnColor109.
-func OnColor109f(format string, args ...interface{}) string {
+func OnColor109f(format string, args ...any) string {
 	return OnColor109(Sprintf(format, args...))
 }
 
@@ -10393,7 +10393,7 @@ func FprintOnColor109(w io.Writer, str string) {
 }
 
 // FprintfOnColor109 wraps OnColor109 and fmt.Fprintf().
-func FprintfOnColor109(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor109(w io.Writer, format string, args ...any) {
 	FprintOnColor109(w, Sprintf(format, args...))
 }
 
@@ -10408,7 +10408,7 @@ func PrintOnColor109(str string) {
 }
 
 // PrintfOnColor109 wraps OnColor109() and fmt.Printf().
-func PrintfOnColor109(format string, args ...interface{}) {
+func PrintfOnColor109(format string, args ...any) {
 	PrintOnColor109(Sprintf(format, args...))
 }
 
@@ -10424,7 +10424,7 @@ func Color110(str string) string {
 }
 
 // Color110f wraps fmt.Sprintf() and Color110.
-func Color110f(format string, args ...interface{}) string {
+func Color110f(format string, args ...any) string {
 	return Color110(Sprintf(format, args...))
 }
 
@@ -10434,7 +10434,7 @@ func FprintColor110(w io.Writer, str string) {
 }
 
 // FprintfColor110 wraps Color110 and fmt.Fprintf().
-func FprintfColor110(w io.Writer, format string, args ...interface{}) {
+func FprintfColor110(w io.Writer, format string, args ...any) {
 	FprintColor110(w, Sprintf(format, args...))
 }
 
@@ -10449,7 +10449,7 @@ func PrintColor110(str string) {
 }
 
 // PrintfColor110 wraps Color110() and fmt.Printf().
-func PrintfColor110(format string, args ...interface{}) {
+func PrintfColor110(format string, args ...any) {
 	PrintColor110(Sprintf(format, args...))
 }
 
@@ -10465,7 +10465,7 @@ func OnColor110(str string) string {
 }
 
 // OnColor110f wraps fmt.Sprintf() and OnColor110.
-func OnColor110f(format string, args ...interface{}) string {
+func OnColor110f(format string, args ...any) string {
 	return OnColor110(Sprintf(format, args...))
 }
 
@@ -10475,7 +10475,7 @@ func FprintOnColor110(w io.Writer, str string) {
 }
 
 // FprintfOnColor110 wraps OnColor110 and fmt.Fprintf().
-func FprintfOnColor110(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor110(w io.Writer, format string, args ...any) {
 	FprintOnColor110(w, Sprintf(format, args...))
 }
 
@@ -10490,7 +10490,7 @@ func PrintOnColor110(str string) {
 }
 
 // PrintfOnColor110 wraps OnColor110() and fmt.Printf().
-func PrintfOnColor110(format string, args ...interface{}) {
+func PrintfOnColor110(format string, args ...any) {
 	PrintOnColor110(Sprintf(format, args...))
 }
 
@@ -10506,7 +10506,7 @@ func Color111(str string) string {
 }
 
 // Color111f wraps fmt.Sprintf() and Color111.
-func Color111f(format string, args ...interface{}) string {
+func Color111f(format string, args ...any) string {
 	return Color111(Sprintf(format, args...))
 }
 
@@ -10516,7 +10516,7 @@ func FprintColor111(w io.Writer, str string) {
 }
 
 // FprintfColor111 wraps Color111 and fmt.Fprintf().
-func FprintfColor111(w io.Writer, format string, args ...interface{}) {
+func FprintfColor111(w io.Writer, format string, args ...any) {
 	FprintColor111(w, Sprintf(format, args...))
 }
 
@@ -10531,7 +10531,7 @@ func PrintColor111(str string) {
 }
 
 // PrintfColor111 wraps Color111() and fmt.Printf().
-func PrintfColor111(format string, args ...interface{}) {
+func PrintfColor111(format string, args ...any) {
 	PrintColor111(Sprintf(format, args...))
 }
 
@@ -10547,7 +10547,7 @@ func OnColor111(str string) string {
 }
 
 // OnColor111f wraps fmt.Sprintf() and OnColor111.
-func OnColor111f(format string, args ...interface{}) string {
+func OnColor111f(format string, args ...any) string {
 	return OnColor111(Sprintf(format, args...))
 }
 
@@ -10557,7 +10557,7 @@ func FprintOnColor111(w io.Writer, str string) {
 }
 
 // FprintfOnColor111 wraps OnColor111 and fmt.Fprintf().
-func FprintfOnColor111(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor111(w io.Writer, format string, args ...any) {
 	FprintOnColor111(w, Sprintf(format, args...))
 }
 
@@ -10572,7 +10572,7 @@ func PrintOnColor111(str string) {
 }
 
 // PrintfOnColor111 wraps OnColor111() and fmt.Printf().
-func PrintfOnColor111(format string, args ...interface{}) {
+func PrintfOnColor111(format string, args ...any) {
 	PrintOnColor111(Sprintf(format, args...))
 }
 
@@ -10588,7 +10588,7 @@ func Color112(str string) string {
 }
 
 // Color112f wraps fmt.Sprintf() and Color112.
-func Color112f(format string, args ...interface{}) string {
+func Color112f(format string, args ...any) string {
 	return Color112(Sprintf(format, args...))
 }
 
@@ -10598,7 +10598,7 @@ func FprintColor112(w io.Writer, str string) {
 }
 
 // FprintfColor112 wraps Color112 and fmt.Fprintf().
-func FprintfColor112(w io.Writer, format string, args ...interface{}) {
+func FprintfColor112(w io.Writer, format string, args ...any) {
 	FprintColor112(w, Sprintf(format, args...))
 }
 
@@ -10613,7 +10613,7 @@ func PrintColor112(str string) {
 }
 
 // PrintfColor112 wraps Color112() and fmt.Printf().
-func PrintfColor112(format string, args ...interface{}) {
+func PrintfColor112(format string, args ...any) {
 	PrintColor112(Sprintf(format, args...))
 }
 
@@ -10629,7 +10629,7 @@ func OnColor112(str string) string {
 }
 
 // OnColor112f wraps fmt.Sprintf() and OnColor112.
-func OnColor112f(format string, args ...interface{}) string {
+func OnColor112f(format string, args ...any) string {
 	return OnColor112(Sprintf(format, args...))
 }
 
@@ -10639,7 +10639,7 @@ func FprintOnColor112(w io.Writer, str string) {
 }
 
 // FprintfOnColor112 wraps OnColor112 and fmt.Fprintf().
-func FprintfOnColor112(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor112(w io.Writer, format string, args ...any) {
 	FprintOnColor112(w, Sprintf(format, args...))
 }
 
@@ -10654,7 +10654,7 @@ func PrintOnColor112(str string) {
 }
 
 // PrintfOnColor112 wraps OnColor112() and fmt.Printf().
-func PrintfOnColor112(format string, args ...interface{}) {
+func PrintfOnColor112(format string, args ...any) {
 	PrintOnColor112(Sprintf(format, args...))
 }
 
@@ -10670,7 +10670,7 @@ func Color113(str string) string {
 }
 
 // Color113f wraps fmt.Sprintf() and Color113.
-func Color113f(format string, args ...interface{}) string {
+func Color113f(format string, args ...any) string {
 	return Color113(Sprintf(format, args...))
 }
 
@@ -10680,7 +10680,7 @@ func FprintColor113(w io.Writer, str string) {
 }
 
 // FprintfColor113 wraps Color113 and fmt.Fprintf().
-func FprintfColor113(w io.Writer, format string, args ...interface{}) {
+func FprintfColor113(w io.Writer, format string, args ...any) {
 	FprintColor113(w, Sprintf(format, args...))
 }
 
@@ -10695,7 +10695,7 @@ func PrintColor113(str string) {
 }
 
 // PrintfColor113 wraps Color113() and fmt.Printf().
-func PrintfColor113(format string, args ...interface{}) {
+func PrintfColor113(format string, args ...any) {
 	PrintColor113(Sprintf(format, args...))
 }
 
@@ -10711,7 +10711,7 @@ func OnColor113(str string) string {
 }
 
 // OnColor113f wraps fmt.Sprintf() and OnColor113.
-func OnColor113f(format string, args ...interface{}) string {
+func OnColor113f(format string, args ...any) string {
 	return OnColor113(Sprintf(format, args...))
 }
 
@@ -10721,7 +10721,7 @@ func FprintOnColor113(w io.Writer, str string) {
 }
 
 // FprintfOnColor113 wraps OnColor113 and fmt.Fprintf().
-func FprintfOnColor113(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor113(w io.Writer, format string, args ...any) {
 	FprintOnColor113(w, Sprintf(format, args...))
 }
 
@@ -10736,7 +10736,7 @@ func PrintOnColor113(str string) {
 }
 
 // PrintfOnColor113 wraps OnColor113() and fmt.Printf().
-func PrintfOnColor113(format string, args ...interface{}) {
+func PrintfOnColor113(format string, args ...any) {
 	PrintOnColor113(Sprintf(format, args...))
 }
 
@@ -10752,7 +10752,7 @@ func Color114(str string) string {
 }
 
 // Color114f wraps fmt.Sprintf() and Color114.
-func Color114f(format string, args ...interface{}) string {
+func Color114f(format string, args ...any) string {
 	return Color114(Sprintf(format, args...))
 }
 
@@ -10762,7 +10762,7 @@ func FprintColor114(w io.Writer, str string) {
 }
 
 // FprintfColor114 wraps Color114 and fmt.Fprintf().
-func FprintfColor114(w io.Writer, format string, args ...interface{}) {
+func FprintfColor114(w io.Writer, format string, args ...any) {
 	FprintColor114(w, Sprintf(format, args...))
 }
 
@@ -10777,7 +10777,7 @@ func PrintColor114(str string) {
 }
 
 // PrintfColor114 wraps Color114() and fmt.Printf().
-func PrintfColor114(format string, args ...interface{}) {
+func PrintfColor114(format string, args ...any) {
 	PrintColor114(Sprintf(format, args...))
 }
 
@@ -10793,7 +10793,7 @@ func OnColor114(str string) string {
 }
 
 // OnColor114f wraps fmt.Sprintf() and OnColor114.
-func OnColor114f(format string, args ...interface{}) string {
+func OnColor114f(format string, args ...any) string {
 	return OnColor114(Sprintf(format, args...))
 }
 
@@ -10803,7 +10803,7 @@ func FprintOnColor114(w io.Writer, str string) {
 }
 
 // FprintfOnColor114 wraps OnColor114 and fmt.Fprintf().
-func FprintfOnColor114(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor114(w io.Writer, format string, args ...any) {
 	FprintOnColor114(w, Sprintf(format, args...))
 }
 
@@ -10818,7 +10818,7 @@ func PrintOnColor114(str string) {
 }
 
 // PrintfOnColor114 wraps OnColor114() and fmt.Printf().
-func PrintfOnColor114(format string, args ...interface{}) {
+func PrintfOnColor114(format string, args ...any) {
 	PrintOnColor114(Sprintf(format, args...))
 }
 
@@ -10834,7 +10834,7 @@ func Color115(str string) string {
 }
 
 // Color115f wraps fmt.Sprintf() and Color115.
-func Color115f(format string, args ...interface{}) string {
+func Color115f(format string, args ...any) string {
 	return Color115(Sprintf(format, args...))
 }
 
@@ -10844,7 +10844,7 @@ func FprintColor115(w io.Writer, str string) {
 }
 
 // FprintfColor115 wraps Color115 and fmt.Fprintf().
-func FprintfColor115(w io.Writer, format string, args ...interface{}) {
+func FprintfColor115(w io.Writer, format string, args ...any) {
 	FprintColor115(w, Sprintf(format, args...))
 }
 
@@ -10859,7 +10859,7 @@ func PrintColor115(str string) {
 }
 
 // PrintfColor115 wraps Color115() and fmt.Printf().
-func PrintfColor115(format string, args ...interface{}) {
+func PrintfColor115(format string, args ...any) {
 	PrintColor115(Sprintf(format, args...))
 }
 
@@ -10875,7 +10875,7 @@ func OnColor115(str string) string {
 }
 
 // OnColor115f wraps fmt.Sprintf() and OnColor115.
-func OnColor115f(format string, args ...interface{}) string {
+func OnColor115f(format string, args ...any) string {
 	return OnColor115(Sprintf(format, args...))
 }
 
@@ -10885,7 +10885,7 @@ func FprintOnColor115(w io.Writer, str string) {
 }
 
 // FprintfOnColor115 wraps OnColor115 and fmt.Fprintf().
-func FprintfOnColor115(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor115(w io.Writer, format string, args ...any) {
 	FprintOnColor115(w, Sprintf(format, args...))
 }
 
@@ -10900,7 +10900,7 @@ func PrintOnColor115(str string) {
 }
 
 // PrintfOnColor115 wraps OnColor115() and fmt.Printf().
-func PrintfOnColor115(format string, args ...interface{}) {
+func PrintfOnColor115(format string, args ...any) {
 	PrintOnColor115(Sprintf(format, args...))
 }
 
@@ -10916,7 +10916,7 @@ func Color116(str string) string {
 }
 
 // Color116f wraps fmt.Sprintf() and Color116.
-func Color116f(format string, args ...interface{}) string {
+func Color116f(format string, args ...any) string {
 	return Color116(Sprintf(format, args...))
 }
 
@@ -10926,7 +10926,7 @@ func FprintColor116(w io.Writer, str string) {
 }
 
 // FprintfColor116 wraps Color116 and fmt.Fprintf().
-func FprintfColor116(w io.Writer, format string, args ...interface{}) {
+func FprintfColor116(w io.Writer, format string, args ...any) {
 	FprintColor116(w, Sprintf(format, args...))
 }
 
@@ -10941,7 +10941,7 @@ func PrintColor116(str string) {
 }
 
 // PrintfColor116 wraps Color116() and fmt.Printf().
-func PrintfColor116(format string, args ...interface{}) {
+func PrintfColor116(format string, args ...any) {
 	PrintColor116(Sprintf(format, args...))
 }
 
@@ -10957,7 +10957,7 @@ func OnColor116(str string) string {
 }
 
 // OnColor116f wraps fmt.Sprintf() and OnColor116.
-func OnColor116f(format string, args ...interface{}) string {
+func OnColor116f(format string, args ...any) string {
 	return OnColor116(Sprintf(format, args...))
 }
 
@@ -10967,7 +10967,7 @@ func FprintOnColor116(w io.Writer, str string) {
 }
 
 // FprintfOnColor116 wraps OnColor116 and fmt.Fprintf().
-func FprintfOnColor116(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor116(w io.Writer, format string, args ...any) {
 	FprintOnColor116(w, Sprintf(format, args...))
 }
 
@@ -10982,7 +10982,7 @@ func PrintOnColor116(str string) {
 }
 
 // PrintfOnColor116 wraps OnColor116() and fmt.Printf().
-func PrintfOnColor116(format string, args ...interface{}) {
+func PrintfOnColor116(format string, args ...any) {
 	PrintOnColor116(Sprintf(format, args...))
 }
 
@@ -10998,7 +10998,7 @@ func Color117(str string) string {
 }
 
 // Color117f wraps fmt.Sprintf() and Color117.
-func Color117f(format string, args ...interface{}) string {
+func Color117f(format string, args ...any) string {
 	return Color117(Sprintf(format, args...))
 }
 
@@ -11008,7 +11008,7 @@ func FprintColor117(w io.Writer, str string) {
 }
 
 // FprintfColor117 wraps Color117 and fmt.Fprintf().
-func FprintfColor117(w io.Writer, format string, args ...interface{}) {
+func FprintfColor117(w io.Writer, format string, args ...any) {
 	FprintColor117(w, Sprintf(format, args...))
 }
 
@@ -11023,7 +11023,7 @@ func PrintColor117(str string) {
 }
 
 // PrintfColor117 wraps Color117() and fmt.Printf().
-func PrintfColor117(format string, args ...interface{}) {
+func PrintfColor117(format string, args ...any) {
 	PrintColor117(Sprintf(format, args...))
 }
 
@@ -11039,7 +11039,7 @@ func OnColor117(str string) string {
 }
 
 // OnColor117f wraps fmt.Sprintf() and OnColor117.
-func OnColor117f(format string, args ...interface{}) string {
+func OnColor117f(format string, args ...any) string {
 	return OnColor117(Sprintf(format, args...))
 }
 
@@ -11049,7 +11049,7 @@ func FprintOnColor117(w io.Writer, str string) {
 }
 
 // FprintfOnColor117 wraps OnColor117 and fmt.Fprintf().
-func FprintfOnColor117(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor117(w io.Writer, format string, args ...any) {
 	FprintOnColor117(w, Sprintf(format, args...))
 }
 
@@ -11064,7 +11064,7 @@ func PrintOnColor117(str string) {
 }
 
 // PrintfOnColor117 wraps OnColor117() and fmt.Printf().
-func PrintfOnColor117(format string, args ...interface{}) {
+func PrintfOnColor117(format string, args ...any) {
 	PrintOnColor117(Sprintf(format, args...))
 }
 
@@ -11080,7 +11080,7 @@ func Color118(str string) string {
 }
 
 // Color118f wraps fmt.Sprintf() and Color118.
-func Color118f(format string, args ...interface{}) string {
+func Color118f(format string, args ...any) string {
 	return Color118(Sprintf(format, args...))
 }
 
@@ -11090,7 +11090,7 @@ func FprintColor118(w io.Writer, str string) {
 }
 
 // FprintfColor118 wraps Color118 and fmt.Fprintf().
-func FprintfColor118(w io.Writer, format string, args ...interface{}) {
+func FprintfColor118(w io.Writer, format string, args ...any) {
 	FprintColor118(w, Sprintf(format, args...))
 }
 
@@ -11105,7 +11105,7 @@ func PrintColor118(str string) {
 }
 
 // PrintfColor118 wraps Color118() and fmt.Printf().
-func PrintfColor118(format string, args ...interface{}) {
+func PrintfColor118(format string, args ...any) {
 	PrintColor118(Sprintf(format, args...))
 }
 
@@ -11121,7 +11121,7 @@ func OnColor118(str string) string {
 }
 
 // OnColor118f wraps fmt.Sprintf() and OnColor118.
-func OnColor118f(format string, args ...interface{}) string {
+func OnColor118f(format string, args ...any) string {
 	return OnColor118(Sprintf(format, args...))
 }
 
@@ -11131,7 +11131,7 @@ func FprintOnColor118(w io.Writer, str string) {
 }
 
 // FprintfOnColor118 wraps OnColor118 and fmt.Fprintf().
-func FprintfOnColor118(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor118(w io.Writer, format string, args ...any) {
 	FprintOnColor118(w, Sprintf(format, args...))
 }
 
@@ -11146,7 +11146,7 @@ func PrintOnColor118(str string) {
 }
 
 // PrintfOnColor118 wraps OnColor118() and fmt.Printf().
-func PrintfOnColor118(format string, args ...interface{}) {
+func PrintfOnColor118(format string, args ...any) {
 	PrintOnColor118(Sprintf(format, args...))
 }
 
@@ -11162,7 +11162,7 @@ func Color119(str string) string {
 }
 
 // Color119f wraps fmt.Sprintf() and Color119.
-func Color119f(format string, args ...interface{}) string {
+func Color119f(format string, args ...any) string {
 	return Color119(Sprintf(format, args...))
 }
 
@@ -11172,7 +11172,7 @@ func FprintColor119(w io.Writer, str string) {
 }
 
 // FprintfColor119 wraps Color119 and fmt.Fprintf().
-func FprintfColor119(w io.Writer, format string, args ...interface{}) {
+func FprintfColor119(w io.Writer, format string, args ...any) {
 	FprintColor119(w, Sprintf(format, args...))
 }
 
@@ -11187,7 +11187,7 @@ func PrintColor119(str string) {
 }
 
 // PrintfColor119 wraps Color119() and fmt.Printf().
-func PrintfColor119(format string, args ...interface{}) {
+func PrintfColor119(format string, args ...any) {
 	PrintColor119(Sprintf(format, args...))
 }
 
@@ -11203,7 +11203,7 @@ func OnColor119(str string) string {
 }
 
 // OnColor119f wraps fmt.Sprintf() and OnColor119.
-func OnColor119f(format string, args ...interface{}) string {
+func OnColor119f(format string, args ...any) string {
 	return OnColor119(Sprintf(format, args...))
 }
 
@@ -11213,7 +11213,7 @@ func FprintOnColor119(w io.Writer, str string) {
 }
 
 // FprintfOnColor119 wraps OnColor119 and fmt.Fprintf().
-func FprintfOnColor119(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor119(w io.Writer, format string, args ...any) {
 	FprintOnColor119(w, Sprintf(format, args...))
 }
 
@@ -11228,7 +11228,7 @@ func PrintOnColor119(str string) {
 }
 
 // PrintfOnColor119 wraps OnColor119() and fmt.Printf().
-func PrintfOnColor119(format string, args ...interface{}) {
+func PrintfOnColor119(format string, args ...any) {
 	PrintOnColor119(Sprintf(format, args...))
 }
 
@@ -11244,7 +11244,7 @@ func Color120(str string) string {
 }
 
 // Color120f wraps fmt.Sprintf() and Color120.
-func Color120f(format string, args ...interface{}) string {
+func Color120f(format string, args ...any) string {
 	return Color120(Sprintf(format, args...))
 }
 
@@ -11254,7 +11254,7 @@ func FprintColor120(w io.Writer, str string) {
 }
 
 // FprintfColor120 wraps Color120 and fmt.Fprintf().
-func FprintfColor120(w io.Writer, format string, args ...interface{}) {
+func FprintfColor120(w io.Writer, format string, args ...any) {
 	FprintColor120(w, Sprintf(format, args...))
 }
 
@@ -11269,7 +11269,7 @@ func PrintColor120(str string) {
 }
 
 // PrintfColor120 wraps Color120() and fmt.Printf().
-func PrintfColor120(format string, args ...interface{}) {
+func PrintfColor120(format string, args ...any) {
 	PrintColor120(Sprintf(format, args...))
 }
 
@@ -11285,7 +11285,7 @@ func OnColor120(str string) string {
 }
 
 // OnColor120f wraps fmt.Sprintf() and OnColor120.
-func OnColor120f(format string, args ...interface{}) string {
+func OnColor120f(format string, args ...any) string {
 	return OnColor120(Sprintf(format, args...))
 }
 
@@ -11295,7 +11295,7 @@ func FprintOnColor120(w io.Writer, str string) {
 }
 
 // FprintfOnColor120 wraps OnColor120 and fmt.Fprintf().
-func FprintfOnColor120(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor120(w io.Writer, format string, args ...any) {
 	FprintOnColor120(w, Sprintf(format, args...))
 }
 
@@ -11310,7 +11310,7 @@ func PrintOnColor120(str string) {
 }
 
 // PrintfOnColor120 wraps OnColor120() and fmt.Printf().
-func PrintfOnColor120(format string, args ...interface{}) {
+func PrintfOnColor120(format string, args ...any) {
 	PrintOnColor120(Sprintf(format, args...))
 }
 
@@ -11326,7 +11326,7 @@ func Color121(str string) string {
 }
 
 // Color121f wraps fmt.Sprintf() and Color121.
-func Color121f(format string, args ...interface{}) string {
+func Color121f(format string, args ...any) string {
 	return Color121(Sprintf(format, args...))
 }
 
@@ -11336,7 +11336,7 @@ func FprintColor121(w io.Writer, str string) {
 }
 
 // FprintfColor121 wraps Color121 and fmt.Fprintf().
-func FprintfColor121(w io.Writer, format string, args ...interface{}) {
+func FprintfColor121(w io.Writer, format string, args ...any) {
 	FprintColor121(w, Sprintf(format, args...))
 }
 
@@ -11351,7 +11351,7 @@ func PrintColor121(str string) {
 }
 
 // PrintfColor121 wraps Color121() and fmt.Printf().
-func PrintfColor121(format string, args ...interface{}) {
+func PrintfColor121(format string, args ...any) {
 	PrintColor121(Sprintf(format, args...))
 }
 
@@ -11367,7 +11367,7 @@ func OnColor121(str string) string {
 }
 
 // OnColor121f wraps fmt.Sprintf() and OnColor121.
-func OnColor121f(format string, args ...interface{}) string {
+func OnColor121f(format string, args ...any) string {
 	return OnColor121(Sprintf(format, args...))
 }
 
@@ -11377,7 +11377,7 @@ func FprintOnColor121(w io.Writer, str string) {
 }
 
 // FprintfOnColor121 wraps OnColor121 and fmt.Fprintf().
-func FprintfOnColor121(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor121(w io.Writer, format string, args ...any) {
 	FprintOnColor121(w, Sprintf(format, args...))
 }
 
@@ -11392,7 +11392,7 @@ func PrintOnColor121(str string) {
 }
 
 // PrintfOnColor121 wraps OnColor121() and fmt.Printf().
-func PrintfOnColor121(format string, args ...interface{}) {
+func PrintfOnColor121(format string, args ...any) {
 	PrintOnColor121(Sprintf(format, args...))
 }
 
@@ -11408,7 +11408,7 @@ func Color122(str string) string {
 }
 
 // Color122f wraps fmt.Sprintf() and Color122.
-func Color122f(format string, args ...interface{}) string {
+func Color122f(format string, args ...any) string {
 	return Color122(Sprintf(format, args...))
 }
 
@@ -11418,7 +11418,7 @@ func FprintColor122(w io.Writer, str string) {
 }
 
 // FprintfColor122 wraps Color122 and fmt.Fprintf().
-func FprintfColor122(w io.Writer, format string, args ...interface{}) {
+func FprintfColor122(w io.Writer, format string, args ...any) {
 	FprintColor122(w, Sprintf(format, args...))
 }
 
@@ -11433,7 +11433,7 @@ func PrintColor122(str string) {
 }
 
 // PrintfColor122 wraps Color122() and fmt.Printf().
-func PrintfColor122(format string, args ...interface{}) {
+func PrintfColor122(format string, args ...any) {
 	PrintColor122(Sprintf(format, args...))
 }
 
@@ -11449,7 +11449,7 @@ func OnColor122(str string) string {
 }
 
 // OnColor122f wraps fmt.Sprintf() and OnColor122.
-func OnColor122f(format string, args ...interface{}) string {
+func OnColor122f(format string, args ...any) string {
 	return OnColor122(Sprintf(format, args...))
 }
 
@@ -11459,7 +11459,7 @@ func FprintOnColor122(w io.Writer, str string) {
 }
 
 // FprintfOnColor122 wraps OnColor122 and fmt.Fprintf().
-func FprintfOnColor122(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor122(w io.Writer, format string, args ...any) {
 	FprintOnColor122(w, Sprintf(format, args...))
 }
 
@@ -11474,7 +11474,7 @@ func PrintOnColor122(str string) {
 }
 
 // PrintfOnColor122 wraps OnColor122() and fmt.Printf().
-func PrintfOnColor122(format string, args ...interface{}) {
+func PrintfOnColor122(format string, args ...any) {
 	PrintOnColor122(Sprintf(format, args...))
 }
 
@@ -11490,7 +11490,7 @@ func Color123(str string) string {
 }
 
 // Color123f wraps fmt.Sprintf() and Color123.
-func Color123f(format string, args ...interface{}) string {
+func Color123f(format string, args ...any) string {
 	return Color123(Sprintf(format, args...))
 }
 
@@ -11500,7 +11500,7 @@ func FprintColor123(w io.Writer, str string) {
 }
 
 // FprintfColor123 wraps Color123 and fmt.Fprintf().
-func FprintfColor123(w io.Writer, format string, args ...interface{}) {
+func FprintfColor123(w io.Writer, format string, args ...any) {
 	FprintColor123(w, Sprintf(format, args...))
 }
 
@@ -11515,7 +11515,7 @@ func PrintColor123(str string) {
 }
 
 // PrintfColor123 wraps Color123() and fmt.Printf().
-func PrintfColor123(format string, args ...interface{}) {
+func PrintfColor123(format string, args ...any) {
 	PrintColor123(Sprintf(format, args...))
 }
 
@@ -11531,7 +11531,7 @@ func OnColor123(str string) string {
 }
 
 // OnColor123f wraps fmt.Sprintf() and OnColor123.
-func OnColor123f(format string, args ...interface{}) string {
+func OnColor123f(format string, args ...any) string {
 	return OnColor123(Sprintf(format, args...))
 }
 
@@ -11541,7 +11541,7 @@ func FprintOnColor123(w io.Writer, str string) {
 }
 
 // FprintfOnColor123 wraps OnColor123 and fmt.Fprintf().
-func FprintfOnColor123(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor123(w io.Writer, format string, args ...any) {
 	FprintOnColor123(w, Sprintf(format, args...))
 }
 
@@ -11556,7 +11556,7 @@ func PrintOnColor123(str string) {
 }
 
 // PrintfOnColor123 wraps OnColor123() and fmt.Printf().
-func PrintfOnColor123(format string, args ...interface{}) {
+func PrintfOnColor123(format string, args ...any) {
 	PrintOnColor123(Sprintf(format, args...))
 }
 
@@ -11572,7 +11572,7 @@ func Color124(str string) string {
 }
 
 // Color124f wraps fmt.Sprintf() and Color124.
-func Color124f(format string, args ...interface{}) string {
+func Color124f(format string, args ...any) string {
 	return Color124(Sprintf(format, args...))
 }
 
@@ -11582,7 +11582,7 @@ func FprintColor124(w io.Writer, str string) {
 }
 
 // FprintfColor124 wraps Color124 and fmt.Fprintf().
-func FprintfColor124(w io.Writer, format string, args ...interface{}) {
+func FprintfColor124(w io.Writer, format string, args ...any) {
 	FprintColor124(w, Sprintf(format, args...))
 }
 
@@ -11597,7 +11597,7 @@ func PrintColor124(str string) {
 }
 
 // PrintfColor124 wraps Color124() and fmt.Printf().
-func PrintfColor124(format string, args ...interface{}) {
+func PrintfColor124(format string, args ...any) {
 	PrintColor124(Sprintf(format, args...))
 }
 
@@ -11613,7 +11613,7 @@ func OnColor124(str string) string {
 }
 
 // OnColor124f wraps fmt.Sprintf() and OnColor124.
-func OnColor124f(format string, args ...interface{}) string {
+func OnColor124f(format string, args ...any) string {
 	return OnColor124(Sprintf(format, args...))
 }
 
@@ -11623,7 +11623,7 @@ func FprintOnColor124(w io.Writer, str string) {
 }
 
 // FprintfOnColor124 wraps OnColor124 and fmt.Fprintf().
-func FprintfOnColor124(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor124(w io.Writer, format string, args ...any) {
 	FprintOnColor124(w, Sprintf(format, args...))
 }
 
@@ -11638,7 +11638,7 @@ func PrintOnColor124(str string) {
 }
 
 // PrintfOnColor124 wraps OnColor124() and fmt.Printf().
-func PrintfOnColor124(format string, args ...interface{}) {
+func PrintfOnColor124(format string, args ...any) {
 	PrintOnColor124(Sprintf(format, args...))
 }
 
@@ -11654,7 +11654,7 @@ func Color125(str string) string {
 }
 
 // Color125f wraps fmt.Sprintf() and Color125.
-func Color125f(format string, args ...interface{}) string {
+func Color125f(format string, args ...any) string {
 	return Color125(Sprintf(format, args...))
 }
 
@@ -11664,7 +11664,7 @@ func FprintColor125(w io.Writer, str string) {
 }
 
 // FprintfColor125 wraps Color125 and fmt.Fprintf().
-func FprintfColor125(w io.Writer, format string, args ...interface{}) {
+func FprintfColor125(w io.Writer, format string, args ...any) {
 	FprintColor125(w, Sprintf(format, args...))
 }
 
@@ -11679,7 +11679,7 @@ func PrintColor125(str string) {
 }
 
 // PrintfColor125 wraps Color125() and fmt.Printf().
-func PrintfColor125(format string, args ...interface{}) {
+func PrintfColor125(format string, args ...any) {
 	PrintColor125(Sprintf(format, args...))
 }
 
@@ -11695,7 +11695,7 @@ func OnColor125(str string) string {
 }
 
 // OnColor125f wraps fmt.Sprintf() and OnColor125.
-func OnColor125f(format string, args ...interface{}) string {
+func OnColor125f(format string, args ...any) string {
 	return OnColor125(Sprintf(format, args...))
 }
 
@@ -11705,7 +11705,7 @@ func FprintOnColor125(w io.Writer, str string) {
 }
 
 // FprintfOnColor125 wraps OnColor125 and fmt.Fprintf().
-func FprintfOnColor125(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor125(w io.Writer, format string, args ...any) {
 	FprintOnColor125(w, Sprintf(format, args...))
 }
 
@@ -11720,7 +11720,7 @@ func PrintOnColor125(str string) {
 }
 
 // PrintfOnColor125 wraps OnColor125() and fmt.Printf().
-func PrintfOnColor125(format string, args ...interface{}) {
+func PrintfOnColor125(format string, args ...any) {
 	PrintOnColor125(Sprintf(format, args...))
 }
 
@@ -11736,7 +11736,7 @@ func Color126(str string) string {
 }
 
 // Color126f wraps fmt.Sprintf() and Color126.
-func Color126f(format string, args ...interface{}) string {
+func Color126f(format string, args ...any) string {
 	return Color126(Sprintf(format, args...))
 }
 
@@ -11746,7 +11746,7 @@ func FprintColor126(w io.Writer, str string) {
 }
 
 // FprintfColor126 wraps Color126 and fmt.Fprintf().
-func FprintfColor126(w io.Writer, format string, args ...interface{}) {
+func FprintfColor126(w io.Writer, format string, args ...any) {
 	FprintColor126(w, Sprintf(format, args...))
 }
 
@@ -11761,7 +11761,7 @@ func PrintColor126(str string) {
 }
 
 // PrintfColor126 wraps Color126() and fmt.Printf().
-func PrintfColor126(format string, args ...interface{}) {
+func PrintfColor126(format string, args ...any) {
 	PrintColor126(Sprintf(format, args...))
 }
 
@@ -11777,7 +11777,7 @@ func OnColor126(str string) string {
 }
 
 // OnColor126f wraps fmt.Sprintf() and OnColor126.
-func OnColor126f(format string, args ...interface{}) string {
+func OnColor126f(format string, args ...any) string {
 	return OnColor126(Sprintf(format, args...))
 }
 
@@ -11787,7 +11787,7 @@ func FprintOnColor126(w io.Writer, str string) {
 }
 
 // FprintfOnColor126 wraps OnColor126 and fmt.Fprintf().
-func FprintfOnColor126(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor126(w io.Writer, format string, args ...any) {
 	FprintOnColor126(w, Sprintf(format, args...))
 }
 
@@ -11802,7 +11802,7 @@ func PrintOnColor126(str string) {
 }
 
 // PrintfOnColor126 wraps OnColor126() and fmt.Printf().
-func PrintfOnColor126(format string, args ...interface{}) {
+func PrintfOnColor126(format string, args ...any) {
 	PrintOnColor126(Sprintf(format, args...))
 }
 
@@ -11818,7 +11818,7 @@ func Color127(str string) string {
 }
 
 // Color127f wraps fmt.Sprintf() and Color127.
-func Color127f(format string, args ...interface{}) string {
+func Color127f(format string, args ...any) string {
 	return Color127(Sprintf(format, args...))
 }
 
@@ -11828,7 +11828,7 @@ func FprintColor127(w io.Writer, str string) {
 }
 
 // FprintfColor127 wraps Color127 and fmt.Fprintf().
-func FprintfColor127(w io.Writer, format string, args ...interface{}) {
+func FprintfColor127(w io.Writer, format string, args ...any) {
 	FprintColor127(w, Sprintf(format, args...))
 }
 
@@ -11843,7 +11843,7 @@ func PrintColor127(str string) {
 }
 
 // PrintfColor127 wraps Color127() and fmt.Printf().
-func PrintfColor127(format string, args ...interface{}) {
+func PrintfColor127(format string, args ...any) {
 	PrintColor127(Sprintf(format, args...))
 }
 
@@ -11859,7 +11859,7 @@ func OnColor127(str string) string {
 }
 
 // OnColor127f wraps fmt.Sprintf() and OnColor127.
-func OnColor127f(format string, args ...interface{}) string {
+func OnColor127f(format string, args ...any) string {
 	return OnColor127(Sprintf(format, args...))
 }
 
@@ -11869,7 +11869,7 @@ func FprintOnColor127(w io.Writer, str string) {
 }
 
 // FprintfOnColor127 wraps OnColor127 and fmt.Fprintf().
-func FprintfOnColor127(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor127(w io.Writer, format string, args ...any) {
 	FprintOnColor127(w, Sprintf(format, args...))
 }
 
@@ -11884,7 +11884,7 @@ func PrintOnColor127(str string) {
 }
 
 // PrintfOnColor127 wraps OnColor127() and fmt.Printf().
-func PrintfOnColor127(format string, args ...interface{}) {
+func PrintfOnColor127(format string, args ...any) {
 	PrintOnColor127(Sprintf(format, args...))
 }
 
@@ -11900,7 +11900,7 @@ func Color128(str string) string {
 }
 
 // Color128f wraps fmt.Sprintf() and Color128.
-func Color128f(format string, args ...interface{}) string {
+func Color128f(format string, args ...any) string {
 	return Color128(Sprintf(format, args...))
 }
 
@@ -11910,7 +11910,7 @@ func FprintColor128(w io.Writer, str string) {
 }
 
 // FprintfColor128 wraps Color128 and fmt.Fprintf().
-func FprintfColor128(w io.Writer, format string, args ...interface{}) {
+func FprintfColor128(w io.Writer, format string, args ...any) {
 	FprintColor128(w, Sprintf(format, args...))
 }
 
@@ -11925,7 +11925,7 @@ func PrintColor128(str string) {
 }
 
 // PrintfColor128 wraps Color128() and fmt.Printf().
-func PrintfColor128(format string, args ...interface{}) {
+func PrintfColor128(format string, args ...any) {
 	PrintColor128(Sprintf(format, args...))
 }
 
@@ -11941,7 +11941,7 @@ func OnColor128(str string) string {
 }
 
 // OnColor128f wraps fmt.Sprintf() and OnColor128.
-func OnColor128f(format string, args ...interface{}) string {
+func OnColor128f(format string, args ...any) string {
 	return OnColor128(Sprintf(format, args...))
 }
 
@@ -11951,7 +11951,7 @@ func FprintOnColor128(w io.Writer, str string) {
 }
 
 // FprintfOnColor128 wraps OnColor128 and fmt.Fprintf().
-func FprintfOnColor128(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor128(w io.Writer, format string, args ...any) {
 	FprintOnColor128(w, Sprintf(format, args...))
 }
 
@@ -11966,7 +11966,7 @@ func PrintOnColor128(str string) {
 }
 
 // PrintfOnColor128 wraps OnColor128() and fmt.Printf().
-func PrintfOnColor128(format string, args ...interface{}) {
+func PrintfOnColor128(format string, args ...any) {
 	PrintOnColor128(Sprintf(format, args...))
 }
 
@@ -11982,7 +11982,7 @@ func Color129(str string) string {
 }
 
 // Color129f wraps fmt.Sprintf() and Color129.
-func Color129f(format string, args ...interface{}) string {
+func Color129f(format string, args ...any) string {
 	return Color129(Sprintf(format, args...))
 }
 
@@ -11992,7 +11992,7 @@ func FprintColor129(w io.Writer, str string) {
 }
 
 // FprintfColor129 wraps Color129 and fmt.Fprintf().
-func FprintfColor129(w io.Writer, format string, args ...interface{}) {
+func FprintfColor129(w io.Writer, format string, args ...any) {
 	FprintColor129(w, Sprintf(format, args...))
 }
 
@@ -12007,7 +12007,7 @@ func PrintColor129(str string) {
 }
 
 // PrintfColor129 wraps Color129() and fmt.Printf().
-func PrintfColor129(format string, args ...interface{}) {
+func PrintfColor129(format string, args ...any) {
 	PrintColor129(Sprintf(format, args...))
 }
 
@@ -12023,7 +12023,7 @@ func OnColor129(str string) string {
 }
 
 // OnColor129f wraps fmt.Sprintf() and OnColor129.
-func OnColor129f(format string, args ...interface{}) string {
+func OnColor129f(format string, args ...any) string {
 	return OnColor129(Sprintf(format, args...))
 }
 
@@ -12033,7 +12033,7 @@ func FprintOnColor129(w io.Writer, str string) {
 }
 
 // FprintfOnColor129 wraps OnColor129 and fmt.Fprintf().
-func FprintfOnColor129(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor129(w io.Writer, format string, args ...any) {
 	FprintOnColor129(w, Sprintf(format, args...))
 }
 
@@ -12048,7 +12048,7 @@ func PrintOnColor129(str string) {
 }
 
 // PrintfOnColor129 wraps OnColor129() and fmt.Printf().
-func PrintfOnColor129(format string, args ...interface{}) {
+func PrintfOnColor129(format string, args ...any) {
 	PrintOnColor129(Sprintf(format, args...))
 }
 
@@ -12064,7 +12064,7 @@ func Color130(str string) string {
 }
 
 // Color130f wraps fmt.Sprintf() and Color130.
-func Color130f(format string, args ...interface{}) string {
+func Color130f(format string, args ...any) string {
 	return Color130(Sprintf(format, args...))
 }
 
@@ -12074,7 +12074,7 @@ func FprintColor130(w io.Writer, str string) {
 }
 
 // FprintfColor130 wraps Color130 and fmt.Fprintf().
-func FprintfColor130(w io.Writer, format string, args ...interface{}) {
+func FprintfColor130(w io.Writer, format string, args ...any) {
 	FprintColor130(w, Sprintf(format, args...))
 }
 
@@ -12089,7 +12089,7 @@ func PrintColor130(str string) {
 }
 
 // PrintfColor130 wraps Color130() and fmt.Printf().
-func PrintfColor130(format string, args ...interface{}) {
+func PrintfColor130(format string, args ...any) {
 	PrintColor130(Sprintf(format, args...))
 }
 
@@ -12105,7 +12105,7 @@ func OnColor130(str string) string {
 }
 
 // OnColor130f wraps fmt.Sprintf() and OnColor130.
-func OnColor130f(format string, args ...interface{}) string {
+func OnColor130f(format string, args ...any) string {
 	return OnColor130(Sprintf(format, args...))
 }
 
@@ -12115,7 +12115,7 @@ func FprintOnColor130(w io.Writer, str string) {
 }
 
 // FprintfOnColor130 wraps OnColor130 and fmt.Fprintf().
-func FprintfOnColor130(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor130(w io.Writer, format string, args ...any) {
 	FprintOnColor130(w, Sprintf(format, args...))
 }
 
@@ -12130,7 +12130,7 @@ func PrintOnColor130(str string) {
 }
 
 // PrintfOnColor130 wraps OnColor130() and fmt.Printf().
-func PrintfOnColor130(format string, args ...interface{}) {
+func PrintfOnColor130(format string, args ...any) {
 	PrintOnColor130(Sprintf(format, args...))
 }
 
@@ -12146,7 +12146,7 @@ func Color131(str string) string {
 }
 
 // Color131f wraps fmt.Sprintf() and Color131.
-func Color131f(format string, args ...interface{}) string {
+func Color131f(format string, args ...any) string {
 	return Color131(Sprintf(format, args...))
 }
 
@@ -12156,7 +12156,7 @@ func FprintColor131(w io.Writer, str string) {
 }
 
 // FprintfColor131 wraps Color131 and fmt.Fprintf().
-func FprintfColor131(w io.Writer, format string, args ...interface{}) {
+func FprintfColor131(w io.Writer, format string, args ...any) {
 	FprintColor131(w, Sprintf(format, args...))
 }
 
@@ -12171,7 +12171,7 @@ func PrintColor131(str string) {
 }
 
 // PrintfColor131 wraps Color131() and fmt.Printf().
-func PrintfColor131(format string, args ...interface{}) {
+func PrintfColor131(format string, args ...any) {
 	PrintColor131(Sprintf(format, args...))
 }
 
@@ -12187,7 +12187,7 @@ func OnColor131(str string) string {
 }
 
 // OnColor131f wraps fmt.Sprintf() and OnColor131.
-func OnColor131f(format string, args ...interface{}) string {
+func OnColor131f(format string, args ...any) string {
 	return OnColor131(Sprintf(format, args...))
 }
 
@@ -12197,7 +12197,7 @@ func FprintOnColor131(w io.Writer, str string) {
 }
 
 // FprintfOnColor131 wraps OnColor131 and fmt.Fprintf().
-func FprintfOnColor131(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor131(w io.Writer, format string, args ...any) {
 	FprintOnColor131(w, Sprintf(format, args...))
 }
 
@@ -12212,7 +12212,7 @@ func PrintOnColor131(str string) {
 }
 
 // PrintfOnColor131 wraps OnColor131() and fmt.Printf().
-func PrintfOnColor131(format string, args ...interface{}) {
+func PrintfOnColor131(format string, args ...any) {
 	PrintOnColor131(Sprintf(format, args...))
 }
 
@@ -12228,7 +12228,7 @@ func Color132(str string) string {
 }
 
 // Color132f wraps fmt.Sprintf() and Color132.
-func Color132f(format string, args ...interface{}) string {
+func Color132f(format string, args ...any) string {
 	return Color132(Sprintf(format, args...))
 }
 
@@ -12238,7 +12238,7 @@ func FprintColor132(w io.Writer, str string) {
 }
 
 // FprintfColor132 wraps Color132 and fmt.Fprintf().
-func FprintfColor132(w io.Writer, format string, args ...interface{}) {
+func FprintfColor132(w io.Writer, format string, args ...any) {
 	FprintColor132(w, Sprintf(format, args...))
 }
 
@@ -12253,7 +12253,7 @@ func PrintColor132(str string) {
 }
 
 // PrintfColor132 wraps Color132() and fmt.Printf().
-func PrintfColor132(format string, args ...interface{}) {
+func PrintfColor132(format string, args ...any) {
 	PrintColor132(Sprintf(format, args...))
 }
 
@@ -12269,7 +12269,7 @@ func OnColor132(str string) string {
 }
 
 // OnColor132f wraps fmt.Sprintf() and OnColor132.
-func OnColor132f(format string, args ...interface{}) string {
+func OnColor132f(format string, args ...any) string {
 	return OnColor132(Sprintf(format, args...))
 }
 
@@ -12279,7 +12279,7 @@ func FprintOnColor132(w io.Writer, str string) {
 }
 
 // FprintfOnColor132 wraps OnColor132 and fmt.Fprintf().
-func FprintfOnColor132(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor132(w io.Writer, format string, args ...any) {
 	FprintOnColor132(w, Sprintf(format, args...))
 }
 
@@ -12294,7 +12294,7 @@ func PrintOnColor132(str string) {
 }
 
 // PrintfOnColor132 wraps OnColor132() and fmt.Printf().
-func PrintfOnColor132(format string, args ...interface{}) {
+func PrintfOnColor132(format string, args ...any) {
 	PrintOnColor132(Sprintf(format, args...))
 }
 
@@ -12310,7 +12310,7 @@ func Color133(str string) string {
 }
 
 // Color133f wraps fmt.Sprintf() and Color133.
-func Color133f(format string, args ...interface{}) string {
+func Color133f(format string, args ...any) string {
 	return Color133(Sprintf(format, args...))
 }
 
@@ -12320,7 +12320,7 @@ func FprintColor133(w io.Writer, str string) {
 }
 
 // FprintfColor133 wraps Color133 and fmt.Fprintf().
-func FprintfColor133(w io.Writer, format string, args ...interface{}) {
+func FprintfColor133(w io.Writer, format string, args ...any) {
 	FprintColor133(w, Sprintf(format, args...))
 }
 
@@ -12335,7 +12335,7 @@ func PrintColor133(str string) {
 }
 
 // PrintfColor133 wraps Color133() and fmt.Printf().
-func PrintfColor133(format string, args ...interface{}) {
+func PrintfColor133(format string, args ...any) {
 	PrintColor133(Sprintf(format, args...))
 }
 
@@ -12351,7 +12351,7 @@ func OnColor133(str string) string {
 }
 
 // OnColor133f wraps fmt.Sprintf() and OnColor133.
-func OnColor133f(format string, args ...interface{}) string {
+func OnColor133f(format string, args ...any) string {
 	return OnColor133(Sprintf(format, args...))
 }
 
@@ -12361,7 +12361,7 @@ func FprintOnColor133(w io.Writer, str string) {
 }
 
 // FprintfOnColor133 wraps OnColor133 and fmt.Fprintf().
-func FprintfOnColor133(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor133(w io.Writer, format string, args ...any) {
 	FprintOnColor133(w, Sprintf(format, args...))
 }
 
@@ -12376,7 +12376,7 @@ func PrintOnColor133(str string) {
 }
 
 // PrintfOnColor133 wraps OnColor133() and fmt.Printf().
-func PrintfOnColor133(format string, args ...interface{}) {
+func PrintfOnColor133(format string, args ...any) {
 	PrintOnColor133(Sprintf(format, args...))
 }
 
@@ -12392,7 +12392,7 @@ func Color134(str string) string {
 }
 
 // Color134f wraps fmt.Sprintf() and Color134.
-func Color134f(format string, args ...interface{}) string {
+func Color134f(format string, args ...any) string {
 	return Color134(Sprintf(format, args...))
 }
 
@@ -12402,7 +12402,7 @@ func FprintColor134(w io.Writer, str string) {
 }
 
 // FprintfColor134 wraps Color134 and fmt.Fprintf().
-func FprintfColor134(w io.Writer, format string, args ...interface{}) {
+func FprintfColor134(w io.Writer, format string, args ...any) {
 	FprintColor134(w, Sprintf(format, args...))
 }
 
@@ -12417,7 +12417,7 @@ func PrintColor134(str string) {
 }
 
 // PrintfColor134 wraps Color134() and fmt.Printf().
-func PrintfColor134(format string, args ...interface{}) {
+func PrintfColor134(format string, args ...any) {
 	PrintColor134(Sprintf(format, args...))
 }
 
@@ -12433,7 +12433,7 @@ func OnColor134(str string) string {
 }
 
 // OnColor134f wraps fmt.Sprintf() and OnColor134.
-func OnColor134f(format string, args ...interface{}) string {
+func OnColor134f(format string, args ...any) string {
 	return OnColor134(Sprintf(format, args...))
 }
 
@@ -12443,7 +12443,7 @@ func FprintOnColor134(w io.Writer, str string) {
 }
 
 // FprintfOnColor134 wraps OnColor134 and fmt.Fprintf().
-func FprintfOnColor134(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor134(w io.Writer, format string, args ...any) {
 	FprintOnColor134(w, Sprintf(format, args...))
 }
 
@@ -12458,7 +12458,7 @@ func PrintOnColor134(str string) {
 }
 
 // PrintfOnColor134 wraps OnColor134() and fmt.Printf().
-func PrintfOnColor134(format string, args ...interface{}) {
+func PrintfOnColor134(format string, args ...any) {
 	PrintOnColor134(Sprintf(format, args...))
 }
 
@@ -12474,7 +12474,7 @@ func Color135(str string) string {
 }
 
 // Color135f wraps fmt.Sprintf() and Color135.
-func Color135f(format string, args ...interface{}) string {
+func Color135f(format string, args ...any) string {
 	return Color135(Sprintf(format, args...))
 }
 
@@ -12484,7 +12484,7 @@ func FprintColor135(w io.Writer, str string) {
 }
 
 // FprintfColor135 wraps Color135 and fmt.Fprintf().
-func FprintfColor135(w io.Writer, format string, args ...interface{}) {
+func FprintfColor135(w io.Writer, format string, args ...any) {
 	FprintColor135(w, Sprintf(format, args...))
 }
 
@@ -12499,7 +12499,7 @@ func PrintColor135(str string) {
 }
 
 // PrintfColor135 wraps Color135() and fmt.Printf().
-func PrintfColor135(format string, args ...interface{}) {
+func PrintfColor135(format string, args ...any) {
 	PrintColor135(Sprintf(format, args...))
 }
 
@@ -12515,7 +12515,7 @@ func OnColor135(str string) string {
 }
 
 // OnColor135f wraps fmt.Sprintf() and OnColor135.
-func OnColor135f(format string, args ...interface{}) string {
+func OnColor135f(format string, args ...any) string {
 	return OnColor135(Sprintf(format, args...))
 }
 
@@ -12525,7 +12525,7 @@ func FprintOnColor135(w io.Writer, str string) {
 }
 
 // FprintfOnColor135 wraps OnColor135 and fmt.Fprintf().
-func FprintfOnColor135(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor135(w io.Writer, format string, args ...any) {
 	FprintOnColor135(w, Sprintf(format, args...))
 }
 
@@ -12540,7 +12540,7 @@ func PrintOnColor135(str string) {
 }
 
 // PrintfOnColor135 wraps OnColor135() and fmt.Printf().
-func PrintfOnColor135(format string, args ...interface{}) {
+func PrintfOnColor135(format string, args ...any) {
 	PrintOnColor135(Sprintf(format, args...))
 }
 
@@ -12556,7 +12556,7 @@ func Color136(str string) string {
 }
 
 // Color136f wraps fmt.Sprintf() and Color136.
-func Color136f(format string, args ...interface{}) string {
+func Color136f(format string, args ...any) string {
 	return Color136(Sprintf(format, args...))
 }
 
@@ -12566,7 +12566,7 @@ func FprintColor136(w io.Writer, str string) {
 }
 
 // FprintfColor136 wraps Color136 and fmt.Fprintf().
-func FprintfColor136(w io.Writer, format string, args ...interface{}) {
+func FprintfColor136(w io.Writer, format string, args ...any) {
 	FprintColor136(w, Sprintf(format, args...))
 }
 
@@ -12581,7 +12581,7 @@ func PrintColor136(str string) {
 }
 
 // PrintfColor136 wraps Color136() and fmt.Printf().
-func PrintfColor136(format string, args ...interface{}) {
+func PrintfColor136(format string, args ...any) {
 	PrintColor136(Sprintf(format, args...))
 }
 
@@ -12597,7 +12597,7 @@ func OnColor136(str string) string {
 }
 
 // OnColor136f wraps fmt.Sprintf() and OnColor136.
-func OnColor136f(format string, args ...interface{}) string {
+func OnColor136f(format string, args ...any) string {
 	return OnColor136(Sprintf(format, args...))
 }
 
@@ -12607,7 +12607,7 @@ func FprintOnColor136(w io.Writer, str string) {
 }
 
 // FprintfOnColor136 wraps OnColor136 and fmt.Fprintf().
-func FprintfOnColor136(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor136(w io.Writer, format string, args ...any) {
 	FprintOnColor136(w, Sprintf(format, args...))
 }
 
@@ -12622,7 +12622,7 @@ func PrintOnColor136(str string) {
 }
 
 // PrintfOnColor136 wraps OnColor136() and fmt.Printf().
-func PrintfOnColor136(format string, args ...interface{}) {
+func PrintfOnColor136(format string, args ...any) {
 	PrintOnColor136(Sprintf(format, args...))
 }
 
@@ -12638,7 +12638,7 @@ func Color137(str string) string {
 }
 
 // Color137f wraps fmt.Sprintf() and Color137.
-func Color137f(format string, args ...interface{}) string {
+func Color137f(format string, args ...any) string {
 	return Color137(Sprintf(format, args...))
 }
 
@@ -12648,7 +12648,7 @@ func FprintColor137(w io.Writer, str string) {
 }
 
 // FprintfColor137 wraps Color137 and fmt.Fprintf().
-func FprintfColor137(w io.Writer, format string, args ...interface{}) {
+func FprintfColor137(w io.Writer, format string, args ...any) {
 	FprintColor137(w, Sprintf(format, args...))
 }
 
@@ -12663,7 +12663,7 @@ func PrintColor137(str string) {
 }
 
 // PrintfColor137 wraps Color137() and fmt.Printf().
-func PrintfColor137(format string, args ...interface{}) {
+func PrintfColor137(format string, args ...any) {
 	PrintColor137(Sprintf(format, args...))
 }
 
@@ -12679,7 +12679,7 @@ func OnColor137(str string) string {
 }
 
 // OnColor137f wraps fmt.Sprintf() and OnColor137.
-func OnColor137f(format string, args ...interface{}) string {
+func OnColor137f(format string, args ...any) string {
 	return OnColor137(Sprintf(format, args...))
 }
 
@@ -12689,7 +12689,7 @@ func FprintOnColor137(w io.Writer, str string) {
 }
 
 // FprintfOnColor137 wraps OnColor137 and fmt.Fprintf().
-func FprintfOnColor137(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor137(w io.Writer, format string, args ...any) {
 	FprintOnColor137(w, Sprintf(format, args...))
 }
 
@@ -12704,7 +12704,7 @@ func PrintOnColor137(str string) {
 }
 
 // PrintfOnColor137 wraps OnColor137() and fmt.Printf().
-func PrintfOnColor137(format string, args ...interface{}) {
+func PrintfOnColor137(format string, args ...any) {
 	PrintOnColor137(Sprintf(format, args...))
 }
 
@@ -12720,7 +12720,7 @@ func Color138(str string) string {
 }
 
 // Color138f wraps fmt.Sprintf() and Color138.
-func Color138f(format string, args ...interface{}) string {
+func Color138f(format string, args ...any) string {
 	return Color138(Sprintf(format, args...))
 }
 
@@ -12730,7 +12730,7 @@ func FprintColor138(w io.Writer, str string) {
 }
 
 // FprintfColor138 wraps Color138 and fmt.Fprintf().
-func FprintfColor138(w io.Writer, format string, args ...interface{}) {
+func FprintfColor138(w io.Writer, format string, args ...any) {
 	FprintColor138(w, Sprintf(format, args...))
 }
 
@@ -12745,7 +12745,7 @@ func PrintColor138(str string) {
 }
 
 // PrintfColor138 wraps Color138() and fmt.Printf().
-func PrintfColor138(format string, args ...interface{}) {
+func PrintfColor138(format string, args ...any) {
 	PrintColor138(Sprintf(format, args...))
 }
 
@@ -12761,7 +12761,7 @@ func OnColor138(str string) string {
 }
 
 // OnColor138f wraps fmt.Sprintf() and OnColor138.
-func OnColor138f(format string, args ...interface{}) string {
+func OnColor138f(format string, args ...any) string {
 	return OnColor138(Sprintf(format, args...))
 }
 
@@ -12771,7 +12771,7 @@ func FprintOnColor138(w io.Writer, str string) {
 }
 
 // FprintfOnColor138 wraps OnColor138 and fmt.Fprintf().
-func FprintfOnColor138(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor138(w io.Writer, format string, args ...any) {
 	FprintOnColor138(w, Sprintf(format, args...))
 }
 
@@ -12786,7 +12786,7 @@ func PrintOnColor138(str string) {
 }
 
 // PrintfOnColor138 wraps OnColor138() and fmt.Printf().
-func PrintfOnColor138(format string, args ...interface{}) {
+func PrintfOnColor138(format string, args ...any) {
 	PrintOnColor138(Sprintf(format, args...))
 }
 
@@ -12802,7 +12802,7 @@ func Color139(str string) string {
 }
 
 // Color139f wraps fmt.Sprintf() and Color139.
-func Color139f(format string, args ...interface{}) string {
+func Color139f(format string, args ...any) string {
 	return Color139(Sprintf(format, args...))
 }
 
@@ -12812,7 +12812,7 @@ func FprintColor139(w io.Writer, str string) {
 }
 
 // FprintfColor139 wraps Color139 and fmt.Fprintf().
-func FprintfColor139(w io.Writer, format string, args ...interface{}) {
+func FprintfColor139(w io.Writer, format string, args ...any) {
 	FprintColor139(w, Sprintf(format, args...))
 }
 
@@ -12827,7 +12827,7 @@ func PrintColor139(str string) {
 }
 
 // PrintfColor139 wraps Color139() and fmt.Printf().
-func PrintfColor139(format string, args ...interface{}) {
+func PrintfColor139(format string, args ...any) {
 	PrintColor139(Sprintf(format, args...))
 }
 
@@ -12843,7 +12843,7 @@ func OnColor139(str string) string {
 }
 
 // OnColor139f wraps fmt.Sprintf() and OnColor139.
-func OnColor139f(format string, args ...interface{}) string {
+func OnColor139f(format string, args ...any) string {
 	return OnColor139(Sprintf(format, args...))
 }
 
@@ -12853,7 +12853,7 @@ func FprintOnColor139(w io.Writer, str string) {
 }
 
 // FprintfOnColor139 wraps OnColor139 and fmt.Fprintf().
-func FprintfOnColor139(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor139(w io.Writer, format string, args ...any) {
 	FprintOnColor139(w, Sprintf(format, args...))
 }
 
@@ -12868,7 +12868,7 @@ func PrintOnColor139(str string) {
 }
 
 // PrintfOnColor139 wraps OnColor139() and fmt.Printf().
-func PrintfOnColor139(format string, args ...interface{}) {
+func PrintfOnColor139(format string, args ...any) {
 	PrintOnColor139(Sprintf(format, args...))
 }
 
@@ -12884,7 +12884,7 @@ func Color140(str string) string {
 }
 
 // Color140f wraps fmt.Sprintf() and Color140.
-func Color140f(format string, args ...interface{}) string {
+func Color140f(format string, args ...any) string {
 	return Color140(Sprintf(format, args...))
 }
 
@@ -12894,7 +12894,7 @@ func FprintColor140(w io.Writer, str string) {
 }
 
 // FprintfColor140 wraps Color140 and fmt.Fprintf().
-func FprintfColor140(w io.Writer, format string, args ...interface{}) {
+func FprintfColor140(w io.Writer, format string, args ...any) {
 	FprintColor140(w, Sprintf(format, args...))
 }
 
@@ -12909,7 +12909,7 @@ func PrintColor140(str string) {
 }
 
 // PrintfColor140 wraps Color140() and fmt.Printf().
-func PrintfColor140(format string, args ...interface{}) {
+func PrintfColor140(format string, args ...any) {
 	PrintColor140(Sprintf(format, args...))
 }
 
@@ -12925,7 +12925,7 @@ func OnColor140(str string) string {
 }
 
 // OnColor140f wraps fmt.Sprintf() and OnColor140.
-func OnColor140f(format string, args ...interface{}) string {
+func OnColor140f(format string, args ...any) string {
 	return OnColor140(Sprintf(format, args...))
 }
 
@@ -12935,7 +12935,7 @@ func FprintOnColor140(w io.Writer, str string) {
 }
 
 // FprintfOnColor140 wraps OnColor140 and fmt.Fprintf().
-func FprintfOnColor140(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor140(w io.Writer, format string, args ...any) {
 	FprintOnColor140(w, Sprintf(format, args...))
 }
 
@@ -12950,7 +12950,7 @@ func PrintOnColor140(str string) {
 }
 
 // PrintfOnColor140 wraps OnColor140() and fmt.Printf().
-func PrintfOnColor140(format string, args ...interface{}) {
+func PrintfOnColor140(format string, args ...any) {
 	PrintOnColor140(Sprintf(format, args...))
 }
 
@@ -12966,7 +12966,7 @@ func Color141(str string) string {
 }
 
 // Color141f wraps fmt.Sprintf() and Color141.
-func Color141f(format string, args ...interface{}) string {
+func Color141f(format string, args ...any) string {
 	return Color141(Sprintf(format, args...))
 }
 
@@ -12976,7 +12976,7 @@ func FprintColor141(w io.Writer, str string) {
 }
 
 // FprintfColor141 wraps Color141 and fmt.Fprintf().
-func FprintfColor141(w io.Writer, format string, args ...interface{}) {
+func FprintfColor141(w io.Writer, format string, args ...any) {
 	FprintColor141(w, Sprintf(format, args...))
 }
 
@@ -12991,7 +12991,7 @@ func PrintColor141(str string) {
 }
 
 // PrintfColor141 wraps Color141() and fmt.Printf().
-func PrintfColor141(format string, args ...interface{}) {
+func PrintfColor141(format string, args ...any) {
 	PrintColor141(Sprintf(format, args...))
 }
 
@@ -13007,7 +13007,7 @@ func OnColor141(str string) string {
 }
 
 // OnColor141f wraps fmt.Sprintf() and OnColor141.
-func OnColor141f(format string, args ...interface{}) string {
+func OnColor141f(format string, args ...any) string {
 	return OnColor141(Sprintf(format, args...))
 }
 
@@ -13017,7 +13017,7 @@ func FprintOnColor141(w io.Writer, str string) {
 }
 
 // FprintfOnColor141 wraps OnColor141 and fmt.Fprintf().
-func FprintfOnColor141(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor141(w io.Writer, format string, args ...any) {
 	FprintOnColor141(w, Sprintf(format, args...))
 }
 
@@ -13032,7 +13032,7 @@ func PrintOnColor141(str string) {
 }
 
 // PrintfOnColor141 wraps OnColor141() and fmt.Printf().
-func PrintfOnColor141(format string, args ...interface{}) {
+func PrintfOnColor141(format string, args ...any) {
 	PrintOnColor141(Sprintf(format, args...))
 }
 
@@ -13048,7 +13048,7 @@ func Color142(str string) string {
 }
 
 // Color142f wraps fmt.Sprintf() and Color142.
-func Color142f(format string, args ...interface{}) string {
+func Color142f(format string, args ...any) string {
 	return Color142(Sprintf(format, args...))
 }
 
@@ -13058,7 +13058,7 @@ func FprintColor142(w io.Writer, str string) {
 }
 
 // FprintfColor142 wraps Color142 and fmt.Fprintf().
-func FprintfColor142(w io.Writer, format string, args ...interface{}) {
+func FprintfColor142(w io.Writer, format string, args ...any) {
 	FprintColor142(w, Sprintf(format, args...))
 }
 
@@ -13073,7 +13073,7 @@ func PrintColor142(str string) {
 }
 
 // PrintfColor142 wraps Color142() and fmt.Printf().
-func PrintfColor142(format string, args ...interface{}) {
+func PrintfColor142(format string, args ...any) {
 	PrintColor142(Sprintf(format, args...))
 }
 
@@ -13089,7 +13089,7 @@ func OnColor142(str string) string {
 }
 
 // OnColor142f wraps fmt.Sprintf() and OnColor142.
-func OnColor142f(format string, args ...interface{}) string {
+func OnColor142f(format string, args ...any) string {
 	return OnColor142(Sprintf(format, args...))
 }
 
@@ -13099,7 +13099,7 @@ func FprintOnColor142(w io.Writer, str string) {
 }
 
 // FprintfOnColor142 wraps OnColor142 and fmt.Fprintf().
-func FprintfOnColor142(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor142(w io.Writer, format string, args ...any) {
 	FprintOnColor142(w, Sprintf(format, args...))
 }
 
@@ -13114,7 +13114,7 @@ func PrintOnColor142(str string) {
 }
 
 // PrintfOnColor142 wraps OnColor142() and fmt.Printf().
-func PrintfOnColor142(format string, args ...interface{}) {
+func PrintfOnColor142(format string, args ...any) {
 	PrintOnColor142(Sprintf(format, args...))
 }
 
@@ -13130,7 +13130,7 @@ func Color143(str string) string {
 }
 
 // Color143f wraps fmt.Sprintf() and Color143.
-func Color143f(format string, args ...interface{}) string {
+func Color143f(format string, args ...any) string {
 	return Color143(Sprintf(format, args...))
 }
 
@@ -13140,7 +13140,7 @@ func FprintColor143(w io.Writer, str string) {
 }
 
 // FprintfColor143 wraps Color143 and fmt.Fprintf().
-func FprintfColor143(w io.Writer, format string, args ...interface{}) {
+func FprintfColor143(w io.Writer, format string, args ...any) {
 	FprintColor143(w, Sprintf(format, args...))
 }
 
@@ -13155,7 +13155,7 @@ func PrintColor143(str string) {
 }
 
 // PrintfColor143 wraps Color143() and fmt.Printf().
-func PrintfColor143(format string, args ...interface{}) {
+func PrintfColor143(format string, args ...any) {
 	PrintColor143(Sprintf(format, args...))
 }
 
@@ -13171,7 +13171,7 @@ func OnColor143(str string) string {
 }
 
 // OnColor143f wraps fmt.Sprintf() and OnColor143.
-func OnColor143f(format string, args ...interface{}) string {
+func OnColor143f(format string, args ...any) string {
 	return OnColor143(Sprintf(format, args...))
 }
 
@@ -13181,7 +13181,7 @@ func FprintOnColor143(w io.Writer, str string) {
 }
 
 // FprintfOnColor143 wraps OnColor143 and fmt.Fprintf().
-func FprintfOnColor143(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor143(w io.Writer, format string, args ...any) {
 	FprintOnColor143(w, Sprintf(format, args...))
 }
 
@@ -13196,7 +13196,7 @@ func PrintOnColor143(str string) {
 }
 
 // PrintfOnColor143 wraps OnColor143() and fmt.Printf().
-func PrintfOnColor143(format string, args ...interface{}) {
+func PrintfOnColor143(format string, args ...any) {
 	PrintOnColor143(Sprintf(format, args...))
 }
 
@@ -13212,7 +13212,7 @@ func Color144(str string) string {
 }
 
 // Color144f wraps fmt.Sprintf() and Color144.
-func Color144f(format string, args ...interface{}) string {
+func Color144f(format string, args ...any) string {
 	return Color144(Sprintf(format, args...))
 }
 
@@ -13222,7 +13222,7 @@ func FprintColor144(w io.Writer, str string) {
 }
 
 // FprintfColor144 wraps Color144 and fmt.Fprintf().
-func FprintfColor144(w io.Writer, format string, args ...interface{}) {
+func FprintfColor144(w io.Writer, format string, args ...any) {
 	FprintColor144(w, Sprintf(format, args...))
 }
 
@@ -13237,7 +13237,7 @@ func PrintColor144(str string) {
 }
 
 // PrintfColor144 wraps Color144() and fmt.Printf().
-func PrintfColor144(format string, args ...interface{}) {
+func PrintfColor144(format string, args ...any) {
 	PrintColor144(Sprintf(format, args...))
 }
 
@@ -13253,7 +13253,7 @@ func OnColor144(str string) string {
 }
 
 // OnColor144f wraps fmt.Sprintf() and OnColor144.
-func OnColor144f(format string, args ...interface{}) string {
+func OnColor144f(format string, args ...any) string {
 	return OnColor144(Sprintf(format, args...))
 }
 
@@ -13263,7 +13263,7 @@ func FprintOnColor144(w io.Writer, str string) {
 }
 
 // FprintfOnColor144 wraps OnColor144 and fmt.Fprintf().
-func FprintfOnColor144(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor144(w io.Writer, format string, args ...any) {
 	FprintOnColor144(w, Sprintf(format, args...))
 }
 
@@ -13278,7 +13278,7 @@ func PrintOnColor144(str string) {
 }
 
 // PrintfOnColor144 wraps OnColor144() and fmt.Printf().
-func PrintfOnColor144(format string, args ...interface{}) {
+func PrintfOnColor144(format string, args ...any) {
 	PrintOnColor144(Sprintf(format, args...))
 }
 
@@ -13294,7 +13294,7 @@ func Color145(str string) string {
 }
 
 // Color145f wraps fmt.Sprintf() and Color145.
-func Color145f(format string, args ...interface{}) string {
+func Color145f(format string, args ...any) string {
 	return Color145(Sprintf(format, args...))
 }
 
@@ -13304,7 +13304,7 @@ func FprintColor145(w io.Writer, str string) {
 }
 
 // FprintfColor145 wraps Color145 and fmt.Fprintf().
-func FprintfColor145(w io.Writer, format string, args ...interface{}) {
+func FprintfColor145(w io.Writer, format string, args ...any) {
 	FprintColor145(w, Sprintf(format, args...))
 }
 
@@ -13319,7 +13319,7 @@ func PrintColor145(str string) {
 }
 
 // PrintfColor145 wraps Color145() and fmt.Printf().
-func PrintfColor145(format string, args ...interface{}) {
+func PrintfColor145(format string, args ...any) {
 	PrintColor145(Sprintf(format, args...))
 }
 
@@ -13335,7 +13335,7 @@ func OnColor145(str string) string {
 }
 
 // OnColor145f wraps fmt.Sprintf() and OnColor145.
-func OnColor145f(format string, args ...interface{}) string {
+func OnColor145f(format string, args ...any) string {
 	return OnColor145(Sprintf(format, args...))
 }
 
@@ -13345,7 +13345,7 @@ func FprintOnColor145(w io.Writer, str string) {
 }
 
 // FprintfOnColor145 wraps OnColor145 and fmt.Fprintf().
-func FprintfOnColor145(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor145(w io.Writer, format string, args ...any) {
 	FprintOnColor145(w, Sprintf(format, args...))
 }
 
@@ -13360,7 +13360,7 @@ func PrintOnColor145(str string) {
 }
 
 // PrintfOnColor145 wraps OnColor145() and fmt.Printf().
-func PrintfOnColor145(format string, args ...interface{}) {
+func PrintfOnColor145(format string, args ...any) {
 	PrintOnColor145(Sprintf(format, args...))
 }
 
@@ -13376,7 +13376,7 @@ func Color146(str string) string {
 }
 
 // Color146f wraps fmt.Sprintf() and Color146.
-func Color146f(format string, args ...interface{}) string {
+func Color146f(format string, args ...any) string {
 	return Color146(Sprintf(format, args...))
 }
 
@@ -13386,7 +13386,7 @@ func FprintColor146(w io.Writer, str string) {
 }
 
 // FprintfColor146 wraps Color146 and fmt.Fprintf().
-func FprintfColor146(w io.Writer, format string, args ...interface{}) {
+func FprintfColor146(w io.Writer, format string, args ...any) {
 	FprintColor146(w, Sprintf(format, args...))
 }
 
@@ -13401,7 +13401,7 @@ func PrintColor146(str string) {
 }
 
 // PrintfColor146 wraps Color146() and fmt.Printf().
-func PrintfColor146(format string, args ...interface{}) {
+func PrintfColor146(format string, args ...any) {
 	PrintColor146(Sprintf(format, args...))
 }
 
@@ -13417,7 +13417,7 @@ func OnColor146(str string) string {
 }
 
 // OnColor146f wraps fmt.Sprintf() and OnColor146.
-func OnColor146f(format string, args ...interface{}) string {
+func OnColor146f(format string, args ...any) string {
 	return OnColor146(Sprintf(format, args...))
 }
 
@@ -13427,7 +13427,7 @@ func FprintOnColor146(w io.Writer, str string) {
 }
 
 // FprintfOnColor146 wraps OnColor146 and fmt.Fprintf().
-func FprintfOnColor146(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor146(w io.Writer, format string, args ...any) {
 	FprintOnColor146(w, Sprintf(format, args...))
 }
 
@@ -13442,7 +13442,7 @@ func PrintOnColor146(str string) {
 }
 
 // PrintfOnColor146 wraps OnColor146() and fmt.Printf().
-func PrintfOnColor146(format string, args ...interface{}) {
+func PrintfOnColor146(format string, args ...any) {
 	PrintOnColor146(Sprintf(format, args...))
 }
 
@@ -13458,7 +13458,7 @@ func Color147(str string) string {
 }
 
 // Color147f wraps fmt.Sprintf() and Color147.
-func Color147f(format string, args ...interface{}) string {
+func Color147f(format string, args ...any) string {
 	return Color147(Sprintf(format, args...))
 }
 
@@ -13468,7 +13468,7 @@ func FprintColor147(w io.Writer, str string) {
 }
 
 // FprintfColor147 wraps Color147 and fmt.Fprintf().
-func FprintfColor147(w io.Writer, format string, args ...interface{}) {
+func FprintfColor147(w io.Writer, format string, args ...any) {
 	FprintColor147(w, Sprintf(format, args...))
 }
 
@@ -13483,7 +13483,7 @@ func PrintColor147(str string) {
 }
 
 // PrintfColor147 wraps Color147() and fmt.Printf().
-func PrintfColor147(format string, args ...interface{}) {
+func PrintfColor147(format string, args ...any) {
 	PrintColor147(Sprintf(format, args...))
 }
 
@@ -13499,7 +13499,7 @@ func OnColor147(str string) string {
 }
 
 // OnColor147f wraps fmt.Sprintf() and OnColor147.
-func OnColor147f(format string, args ...interface{}) string {
+func OnColor147f(format string, args ...any) string {
 	return OnColor147(Sprintf(format, args...))
 }
 
@@ -13509,7 +13509,7 @@ func FprintOnColor147(w io.Writer, str string) {
 }
 
 // FprintfOnColor147 wraps OnColor147 and fmt.Fprintf().
-func FprintfOnColor147(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor147(w io.Writer, format string, args ...any) {
 	FprintOnColor147(w, Sprintf(format, args...))
 }
 
@@ -13524,7 +13524,7 @@ func PrintOnColor147(str string) {
 }
 
 // PrintfOnColor147 wraps OnColor147() and fmt.Printf().
-func PrintfOnColor147(format string, args ...interface{}) {
+func PrintfOnColor147(format string, args ...any) {
 	PrintOnColor147(Sprintf(format, args...))
 }
 
@@ -13540,7 +13540,7 @@ func Color148(str string) string {
 }
 
 // Color148f wraps fmt.Sprintf() and Color148.
-func Color148f(format string, args ...interface{}) string {
+func Color148f(format string, args ...any) string {
 	return Color148(Sprintf(format, args...))
 }
 
@@ -13550,7 +13550,7 @@ func FprintColor148(w io.Writer, str string) {
 }
 
 // FprintfColor148 wraps Color148 and fmt.Fprintf().
-func FprintfColor148(w io.Writer, format string, args ...interface{}) {
+func FprintfColor148(w io.Writer, format string, args ...any) {
 	FprintColor148(w, Sprintf(format, args...))
 }
 
@@ -13565,7 +13565,7 @@ func PrintColor148(str string) {
 }
 
 // PrintfColor148 wraps Color148() and fmt.Printf().
-func PrintfColor148(format string, args ...interface{}) {
+func PrintfColor148(format string, args ...any) {
 	PrintColor148(Sprintf(format, args...))
 }
 
@@ -13581,7 +13581,7 @@ func OnColor148(str string) string {
 }
 
 // OnColor148f wraps fmt.Sprintf() and OnColor148.
-func OnColor148f(format string, args ...interface{}) string {
+func OnColor148f(format string, args ...any) string {
 	return OnColor148(Sprintf(format, args...))
 }
 
@@ -13591,7 +13591,7 @@ func FprintOnColor148(w io.Writer, str string) {
 }
 
 // FprintfOnColor148 wraps OnColor148 and fmt.Fprintf().
-func FprintfOnColor148(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor148(w io.Writer, format string, args ...any) {
 	FprintOnColor148(w, Sprintf(format, args...))
 }
 
@@ -13606,7 +13606,7 @@ func PrintOnColor148(str string) {
 }
 
 // PrintfOnColor148 wraps OnColor148() and fmt.Printf().
-func PrintfOnColor148(format string, args ...interface{}) {
+func PrintfOnColor148(format string, args ...any) {
 	PrintOnColor148(Sprintf(format, args...))
 }
 
@@ -13622,7 +13622,7 @@ func Color149(str string) string {
 }
 
 // Color149f wraps fmt.Sprintf() and Color149.
-func Color149f(format string, args ...interface{}) string {
+func Color149f(format string, args ...any) string {
 	return Color149(Sprintf(format, args...))
 }
 
@@ -13632,7 +13632,7 @@ func FprintColor149(w io.Writer, str string) {
 }
 
 // FprintfColor149 wraps Color149 and fmt.Fprintf().
-func FprintfColor149(w io.Writer, format string, args ...interface{}) {
+func FprintfColor149(w io.Writer, format string, args ...any) {
 	FprintColor149(w, Sprintf(format, args...))
 }
 
@@ -13647,7 +13647,7 @@ func PrintColor149(str string) {
 }
 
 // PrintfColor149 wraps Color149() and fmt.Printf().
-func PrintfColor149(format string, args ...interface{}) {
+func PrintfColor149(format string, args ...any) {
 	PrintColor149(Sprintf(format, args...))
 }
 
@@ -13663,7 +13663,7 @@ func OnColor149(str string) string {
 }
 
 // OnColor149f wraps fmt.Sprintf() and OnColor149.
-func OnColor149f(format string, args ...interface{}) string {
+func OnColor149f(format string, args ...any) string {
 	return OnColor149(Sprintf(format, args...))
 }
 
@@ -13673,7 +13673,7 @@ func FprintOnColor149(w io.Writer, str string) {
 }
 
 // FprintfOnColor149 wraps OnColor149 and fmt.Fprintf().
-func FprintfOnColor149(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor149(w io.Writer, format string, args ...any) {
 	FprintOnColor149(w, Sprintf(format, args...))
 }
 
@@ -13688,7 +13688,7 @@ func PrintOnColor149(str string) {
 }
 
 // PrintfOnColor149 wraps OnColor149() and fmt.Printf().
-func PrintfOnColor149(format string, args ...interface{}) {
+func PrintfOnColor149(format string, args ...any) {
 	PrintOnColor149(Sprintf(format, args...))
 }
 
@@ -13704,7 +13704,7 @@ func Color150(str string) string {
 }
 
 // Color150f wraps fmt.Sprintf() and Color150.
-func Color150f(format string, args ...interface{}) string {
+func Color150f(format string, args ...any) string {
 	return Color150(Sprintf(format, args...))
 }
 
@@ -13714,7 +13714,7 @@ func FprintColor150(w io.Writer, str string) {
 }
 
 // FprintfColor150 wraps Color150 and fmt.Fprintf().
-func FprintfColor150(w io.Writer, format string, args ...interface{}) {
+func FprintfColor150(w io.Writer, format string, args ...any) {
 	FprintColor150(w, Sprintf(format, args...))
 }
 
@@ -13729,7 +13729,7 @@ func PrintColor150(str string) {
 }
 
 // PrintfColor150 wraps Color150() and fmt.Printf().
-func PrintfColor150(format string, args ...interface{}) {
+func PrintfColor150(format string, args ...any) {
 	PrintColor150(Sprintf(format, args...))
 }
 
@@ -13745,7 +13745,7 @@ func OnColor150(str string) string {
 }
 
 // OnColor150f wraps fmt.Sprintf() and OnColor150.
-func OnColor150f(format string, args ...interface{}) string {
+func OnColor150f(format string, args ...any) string {
 	return OnColor150(Sprintf(format, args...))
 }
 
@@ -13755,7 +13755,7 @@ func FprintOnColor150(w io.Writer, str string) {
 }
 
 // FprintfOnColor150 wraps OnColor150 and fmt.Fprintf().
-func FprintfOnColor150(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor150(w io.Writer, format string, args ...any) {
 	FprintOnColor150(w, Sprintf(format, args...))
 }
 
@@ -13770,7 +13770,7 @@ func PrintOnColor150(str string) {
 }
 
 // PrintfOnColor150 wraps OnColor150() and fmt.Printf().
-func PrintfOnColor150(format string, args ...interface{}) {
+func PrintfOnColor150(format string, args ...any) {
 	PrintOnColor150(Sprintf(format, args...))
 }
 
@@ -13786,7 +13786,7 @@ func Color151(str string) string {
 }
 
 // Color151f wraps fmt.Sprintf() and Color151.
-func Color151f(format string, args ...interface{}) string {
+func Color151f(format string, args ...any) string {
 	return Color151(Sprintf(format, args...))
 }
 
@@ -13796,7 +13796,7 @@ func FprintColor151(w io.Writer, str string) {
 }
 
 // FprintfColor151 wraps Color151 and fmt.Fprintf().
-func FprintfColor151(w io.Writer, format string, args ...interface{}) {
+func FprintfColor151(w io.Writer, format string, args ...any) {
 	FprintColor151(w, Sprintf(format, args...))
 }
 
@@ -13811,7 +13811,7 @@ func PrintColor151(str string) {
 }
 
 // PrintfColor151 wraps Color151() and fmt.Printf().
-func PrintfColor151(format string, args ...interface{}) {
+func PrintfColor151(format string, args ...any) {
 	PrintColor151(Sprintf(format, args...))
 }
 
@@ -13827,7 +13827,7 @@ func OnColor151(str string) string {
 }
 
 // OnColor151f wraps fmt.Sprintf() and OnColor151.
-func OnColor151f(format string, args ...interface{}) string {
+func OnColor151f(format string, args ...any) string {
 	return OnColor151(Sprintf(format, args...))
 }
 
@@ -13837,7 +13837,7 @@ func FprintOnColor151(w io.Writer, str string) {
 }
 
 // FprintfOnColor151 wraps OnColor151 and fmt.Fprintf().
-func FprintfOnColor151(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor151(w io.Writer, format string, args ...any) {
 	FprintOnColor151(w, Sprintf(format, args...))
 }
 
@@ -13852,7 +13852,7 @@ func PrintOnColor151(str string) {
 }
 
 // PrintfOnColor151 wraps OnColor151() and fmt.Printf().
-func PrintfOnColor151(format string, args ...interface{}) {
+func PrintfOnColor151(format string, args ...any) {
 	PrintOnColor151(Sprintf(format, args...))
 }
 
@@ -13868,7 +13868,7 @@ func Color152(str string) string {
 }
 
 // Color152f wraps fmt.Sprintf() and Color152.
-func Color152f(format string, args ...interface{}) string {
+func Color152f(format string, args ...any) string {
 	return Color152(Sprintf(format, args...))
 }
 
@@ -13878,7 +13878,7 @@ func FprintColor152(w io.Writer, str string) {
 }
 
 // FprintfColor152 wraps Color152 and fmt.Fprintf().
-func FprintfColor152(w io.Writer, format string, args ...interface{}) {
+func FprintfColor152(w io.Writer, format string, args ...any) {
 	FprintColor152(w, Sprintf(format, args...))
 }
 
@@ -13893,7 +13893,7 @@ func PrintColor152(str string) {
 }
 
 // PrintfColor152 wraps Color152() and fmt.Printf().
-func PrintfColor152(format string, args ...interface{}) {
+func PrintfColor152(format string, args ...any) {
 	PrintColor152(Sprintf(format, args...))
 }
 
@@ -13909,7 +13909,7 @@ func OnColor152(str string) string {
 }
 
 // OnColor152f wraps fmt.Sprintf() and OnColor152.
-func OnColor152f(format string, args ...interface{}) string {
+func OnColor152f(format string, args ...any) string {
 	return OnColor152(Sprintf(format, args...))
 }
 
@@ -13919,7 +13919,7 @@ func FprintOnColor152(w io.Writer, str string) {
 }
 
 // FprintfOnColor152 wraps OnColor152 and fmt.Fprintf().
-func FprintfOnColor152(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor152(w io.Writer, format string, args ...any) {
 	FprintOnColor152(w, Sprintf(format, args...))
 }
 
@@ -13934,7 +13934,7 @@ func PrintOnColor152(str string) {
 }
 
 // PrintfOnColor152 wraps OnColor152() and fmt.Printf().
-func PrintfOnColor152(format string, args ...interface{}) {
+func PrintfOnColor152(format string, args ...any) {
 	PrintOnColor152(Sprintf(format, args...))
 }
 
@@ -13950,7 +13950,7 @@ func Color153(str string) string {
 }
 
 // Color153f wraps fmt.Sprintf() and Color153.
-func Color153f(format string, args ...interface{}) string {
+func Color153f(format string, args ...any) string {
 	return Color153(Sprintf(format, args...))
 }
 
@@ -13960,7 +13960,7 @@ func FprintColor153(w io.Writer, str string) {
 }
 
 // FprintfColor153 wraps Color153 and fmt.Fprintf().
-func FprintfColor153(w io.Writer, format string, args ...interface{}) {
+func FprintfColor153(w io.Writer, format string, args ...any) {
 	FprintColor153(w, Sprintf(format, args...))
 }
 
@@ -13975,7 +13975,7 @@ func PrintColor153(str string) {
 }
 
 // PrintfColor153 wraps Color153() and fmt.Printf().
-func PrintfColor153(format string, args ...interface{}) {
+func PrintfColor153(format string, args ...any) {
 	PrintColor153(Sprintf(format, args...))
 }
 
@@ -13991,7 +13991,7 @@ func OnColor153(str string) string {
 }
 
 // OnColor153f wraps fmt.Sprintf() and OnColor153.
-func OnColor153f(format string, args ...interface{}) string {
+func OnColor153f(format string, args ...any) string {
 	return OnColor153(Sprintf(format, args...))
 }
 
@@ -14001,7 +14001,7 @@ func FprintOnColor153(w io.Writer, str string) {
 }
 
 // FprintfOnColor153 wraps OnColor153 and fmt.Fprintf().
-func FprintfOnColor153(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor153(w io.Writer, format string, args ...any) {
 	FprintOnColor153(w, Sprintf(format, args...))
 }
 
@@ -14016,7 +14016,7 @@ func PrintOnColor153(str string) {
 }
 
 // PrintfOnColor153 wraps OnColor153() and fmt.Printf().
-func PrintfOnColor153(format string, args ...interface{}) {
+func PrintfOnColor153(format string, args ...any) {
 	PrintOnColor153(Sprintf(format, args...))
 }
 
@@ -14032,7 +14032,7 @@ func Color154(str string) string {
 }
 
 // Color154f wraps fmt.Sprintf() and Color154.
-func Color154f(format string, args ...interface{}) string {
+func Color154f(format string, args ...any) string {
 	return Color154(Sprintf(format, args...))
 }
 
@@ -14042,7 +14042,7 @@ func FprintColor154(w io.Writer, str string) {
 }
 
 // FprintfColor154 wraps Color154 and fmt.Fprintf().
-func FprintfColor154(w io.Writer, format string, args ...interface{}) {
+func FprintfColor154(w io.Writer, format string, args ...any) {
 	FprintColor154(w, Sprintf(format, args...))
 }
 
@@ -14057,7 +14057,7 @@ func PrintColor154(str string) {
 }
 
 // PrintfColor154 wraps Color154() and fmt.Printf().
-func PrintfColor154(format string, args ...interface{}) {
+func PrintfColor154(format string, args ...any) {
 	PrintColor154(Sprintf(format, args...))
 }
 
@@ -14073,7 +14073,7 @@ func OnColor154(str string) string {
 }
 
 // OnColor154f wraps fmt.Sprintf() and OnColor154.
-func OnColor154f(format string, args ...interface{}) string {
+func OnColor154f(format string, args ...any) string {
 	return OnColor154(Sprintf(format, args...))
 }
 
@@ -14083,7 +14083,7 @@ func FprintOnColor154(w io.Writer, str string) {
 }
 
 // FprintfOnColor154 wraps OnColor154 and fmt.Fprintf().
-func FprintfOnColor154(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor154(w io.Writer, format string, args ...any) {
 	FprintOnColor154(w, Sprintf(format, args...))
 }
 
@@ -14098,7 +14098,7 @@ func PrintOnColor154(str string) {
 }
 
 // PrintfOnColor154 wraps OnColor154() and fmt.Printf().
-func PrintfOnColor154(format string, args ...interface{}) {
+func PrintfOnColor154(format string, args ...any) {
 	PrintOnColor154(Sprintf(format, args...))
 }
 
@@ -14114,7 +14114,7 @@ func Color155(str string) string {
 }
 
 // Color155f wraps fmt.Sprintf() and Color155.
-func Color155f(format string, args ...interface{}) string {
+func Color155f(format string, args ...any) string {
 	return Color155(Sprintf(format, args...))
 }
 
@@ -14124,7 +14124,7 @@ func FprintColor155(w io.Writer, str string) {
 }
 
 // FprintfColor155 wraps Color155 and fmt.Fprintf().
-func FprintfColor155(w io.Writer, format string, args ...interface{}) {
+func FprintfColor155(w io.Writer, format string, args ...any) {
 	FprintColor155(w, Sprintf(format, args...))
 }
 
@@ -14139,7 +14139,7 @@ func PrintColor155(str string) {
 }
 
 // PrintfColor155 wraps Color155() and fmt.Printf().
-func PrintfColor155(format string, args ...interface{}) {
+func PrintfColor155(format string, args ...any) {
 	PrintColor155(Sprintf(format, args...))
 }
 
@@ -14155,7 +14155,7 @@ func OnColor155(str string) string {
 }
 
 // OnColor155f wraps fmt.Sprintf() and OnColor155.
-func OnColor155f(format string, args ...interface{}) string {
+func OnColor155f(format string, args ...any) string {
 	return OnColor155(Sprintf(format, args...))
 }
 
@@ -14165,7 +14165,7 @@ func FprintOnColor155(w io.Writer, str string) {
 }
 
 // FprintfOnColor155 wraps OnColor155 and fmt.Fprintf().
-func FprintfOnColor155(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor155(w io.Writer, format string, args ...any) {
 	FprintOnColor155(w, Sprintf(format, args...))
 }
 
@@ -14180,7 +14180,7 @@ func PrintOnColor155(str string) {
 }
 
 // PrintfOnColor155 wraps OnColor155() and fmt.Printf().
-func PrintfOnColor155(format string, args ...interface{}) {
+func PrintfOnColor155(format string, args ...any) {
 	PrintOnColor155(Sprintf(format, args...))
 }
 
@@ -14196,7 +14196,7 @@ func Color156(str string) string {
 }
 
 // Color156f wraps fmt.Sprintf() and Color156.
-func Color156f(format string, args ...interface{}) string {
+func Color156f(format string, args ...any) string {
 	return Color156(Sprintf(format, args...))
 }
 
@@ -14206,7 +14206,7 @@ func FprintColor156(w io.Writer, str string) {
 }
 
 // FprintfColor156 wraps Color156 and fmt.Fprintf().
-func FprintfColor156(w io.Writer, format string, args ...interface{}) {
+func FprintfColor156(w io.Writer, format string, args ...any) {
 	FprintColor156(w, Sprintf(format, args...))
 }
 
@@ -14221,7 +14221,7 @@ func PrintColor156(str string) {
 }
 
 // PrintfColor156 wraps Color156() and fmt.Printf().
-func PrintfColor156(format string, args ...interface{}) {
+func PrintfColor156(format string, args ...any) {
 	PrintColor156(Sprintf(format, args...))
 }
 
@@ -14237,7 +14237,7 @@ func OnColor156(str string) string {
 }
 
 // OnColor156f wraps fmt.Sprintf() and OnColor156.
-func OnColor156f(format string, args ...interface{}) string {
+func OnColor156f(format string, args ...any) string {
 	return OnColor156(Sprintf(format, args...))
 }
 
@@ -14247,7 +14247,7 @@ func FprintOnColor156(w io.Writer, str string) {
 }
 
 // FprintfOnColor156 wraps OnColor156 and fmt.Fprintf().
-func FprintfOnColor156(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor156(w io.Writer, format string, args ...any) {
 	FprintOnColor156(w, Sprintf(format, args...))
 }
 
@@ -14262,7 +14262,7 @@ func PrintOnColor156(str string) {
 }
 
 // PrintfOnColor156 wraps OnColor156() and fmt.Printf().
-func PrintfOnColor156(format string, args ...interface{}) {
+func PrintfOnColor156(format string, args ...any) {
 	PrintOnColor156(Sprintf(format, args...))
 }
 
@@ -14278,7 +14278,7 @@ func Color157(str string) string {
 }
 
 // Color157f wraps fmt.Sprintf() and Color157.
-func Color157f(format string, args ...interface{}) string {
+func Color157f(format string, args ...any) string {
 	return Color157(Sprintf(format, args...))
 }
 
@@ -14288,7 +14288,7 @@ func FprintColor157(w io.Writer, str string) {
 }
 
 // FprintfColor157 wraps Color157 and fmt.Fprintf().
-func FprintfColor157(w io.Writer, format string, args ...interface{}) {
+func FprintfColor157(w io.Writer, format string, args ...any) {
 	FprintColor157(w, Sprintf(format, args...))
 }
 
@@ -14303,7 +14303,7 @@ func PrintColor157(str string) {
 }
 
 // PrintfColor157 wraps Color157() and fmt.Printf().
-func PrintfColor157(format string, args ...interface{}) {
+func PrintfColor157(format string, args ...any) {
 	PrintColor157(Sprintf(format, args...))
 }
 
@@ -14319,7 +14319,7 @@ func OnColor157(str string) string {
 }
 
 // OnColor157f wraps fmt.Sprintf() and OnColor157.
-func OnColor157f(format string, args ...interface{}) string {
+func OnColor157f(format string, args ...any) string {
 	return OnColor157(Sprintf(format, args...))
 }
 
@@ -14329,7 +14329,7 @@ func FprintOnColor157(w io.Writer, str string) {
 }
 
 // FprintfOnColor157 wraps OnColor157 and fmt.Fprintf().
-func FprintfOnColor157(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor157(w io.Writer, format string, args ...any) {
 	FprintOnColor157(w, Sprintf(format, args...))
 }
 
@@ -14344,7 +14344,7 @@ func PrintOnColor157(str string) {
 }
 
 // PrintfOnColor157 wraps OnColor157() and fmt.Printf().
-func PrintfOnColor157(format string, args ...interface{}) {
+func PrintfOnColor157(format string, args ...any) {
 	PrintOnColor157(Sprintf(format, args...))
 }
 
@@ -14360,7 +14360,7 @@ func Color158(str string) string {
 }
 
 // Color158f wraps fmt.Sprintf() and Color158.
-func Color158f(format string, args ...interface{}) string {
+func Color158f(format string, args ...any) string {
 	return Color158(Sprintf(format, args...))
 }
 
@@ -14370,7 +14370,7 @@ func FprintColor158(w io.Writer, str string) {
 }
 
 // FprintfColor158 wraps Color158 and fmt.Fprintf().
-func FprintfColor158(w io.Writer, format string, args ...interface{}) {
+func FprintfColor158(w io.Writer, format string, args ...any) {
 	FprintColor158(w, Sprintf(format, args...))
 }
 
@@ -14385,7 +14385,7 @@ func PrintColor158(str string) {
 }
 
 // PrintfColor158 wraps Color158() and fmt.Printf().
-func PrintfColor158(format string, args ...interface{}) {
+func PrintfColor158(format string, args ...any) {
 	PrintColor158(Sprintf(format, args...))
 }
 
@@ -14401,7 +14401,7 @@ func OnColor158(str string) string {
 }
 
 // OnColor158f wraps fmt.Sprintf() and OnColor158.
-func OnColor158f(format string, args ...interface{}) string {
+func OnColor158f(format string, args ...any) string {
 	return OnColor158(Sprintf(format, args...))
 }
 
@@ -14411,7 +14411,7 @@ func FprintOnColor158(w io.Writer, str string) {
 }
 
 // FprintfOnColor158 wraps OnColor158 and fmt.Fprintf().
-func FprintfOnColor158(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor158(w io.Writer, format string, args ...any) {
 	FprintOnColor158(w, Sprintf(format, args...))
 }
 
@@ -14426,7 +14426,7 @@ func PrintOnColor158(str string) {
 }
 
 // PrintfOnColor158 wraps OnColor158() and fmt.Printf().
-func PrintfOnColor158(format string, args ...interface{}) {
+func PrintfOnColor158(format string, args ...any) {
 	PrintOnColor158(Sprintf(format, args...))
 }
 
@@ -14442,7 +14442,7 @@ func Color159(str string) string {
 }
 
 // Color159f wraps fmt.Sprintf() and Color159.
-func Color159f(format string, args ...interface{}) string {
+func Color159f(format string, args ...any) string {
 	return Color159(Sprintf(format, args...))
 }
 
@@ -14452,7 +14452,7 @@ func FprintColor159(w io.Writer, str string) {
 }
 
 // FprintfColor159 wraps Color159 and fmt.Fprintf().
-func FprintfColor159(w io.Writer, format string, args ...interface{}) {
+func FprintfColor159(w io.Writer, format string, args ...any) {
 	FprintColor159(w, Sprintf(format, args...))
 }
 
@@ -14467,7 +14467,7 @@ func PrintColor159(str string) {
 }
 
 // PrintfColor159 wraps Color159() and fmt.Printf().
-func PrintfColor159(format string, args ...interface{}) {
+func PrintfColor159(format string, args ...any) {
 	PrintColor159(Sprintf(format, args...))
 }
 
@@ -14483,7 +14483,7 @@ func OnColor159(str string) string {
 }
 
 // OnColor159f wraps fmt.Sprintf() and OnColor159.
-func OnColor159f(format string, args ...interface{}) string {
+func OnColor159f(format string, args ...any) string {
 	return OnColor159(Sprintf(format, args...))
 }
 
@@ -14493,7 +14493,7 @@ func FprintOnColor159(w io.Writer, str string) {
 }
 
 // FprintfOnColor159 wraps OnColor159 and fmt.Fprintf().
-func FprintfOnColor159(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor159(w io.Writer, format string, args ...any) {
 	FprintOnColor159(w, Sprintf(format, args...))
 }
 
@@ -14508,7 +14508,7 @@ func PrintOnColor159(str string) {
 }
 
 // PrintfOnColor159 wraps OnColor159() and fmt.Printf().
-func PrintfOnColor159(format string, args ...interface{}) {
+func PrintfOnColor159(format string, args ...any) {
 	PrintOnColor159(Sprintf(format, args...))
 }
 
@@ -14524,7 +14524,7 @@ func Color160(str string) string {
 }
 
 // Color160f wraps fmt.Sprintf() and Color160.
-func Color160f(format string, args ...interface{}) string {
+func Color160f(format string, args ...any) string {
 	return Color160(Sprintf(format, args...))
 }
 
@@ -14534,7 +14534,7 @@ func FprintColor160(w io.Writer, str string) {
 }
 
 // FprintfColor160 wraps Color160 and fmt.Fprintf().
-func FprintfColor160(w io.Writer, format string, args ...interface{}) {
+func FprintfColor160(w io.Writer, format string, args ...any) {
 	FprintColor160(w, Sprintf(format, args...))
 }
 
@@ -14549,7 +14549,7 @@ func PrintColor160(str string) {
 }
 
 // PrintfColor160 wraps Color160() and fmt.Printf().
-func PrintfColor160(format string, args ...interface{}) {
+func PrintfColor160(format string, args ...any) {
 	PrintColor160(Sprintf(format, args...))
 }
 
@@ -14565,7 +14565,7 @@ func OnColor160(str string) string {
 }
 
 // OnColor160f wraps fmt.Sprintf() and OnColor160.
-func OnColor160f(format string, args ...interface{}) string {
+func OnColor160f(format string, args ...any) string {
 	return OnColor160(Sprintf(format, args...))
 }
 
@@ -14575,7 +14575,7 @@ func FprintOnColor160(w io.Writer, str string) {
 }
 
 // FprintfOnColor160 wraps OnColor160 and fmt.Fprintf().
-func FprintfOnColor160(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor160(w io.Writer, format string, args ...any) {
 	FprintOnColor160(w, Sprintf(format, args...))
 }
 
@@ -14590,7 +14590,7 @@ func PrintOnColor160(str string) {
 }
 
 // PrintfOnColor160 wraps OnColor160() and fmt.Printf().
-func PrintfOnColor160(format string, args ...interface{}) {
+func PrintfOnColor160(format string, args ...any) {
 	PrintOnColor160(Sprintf(format, args...))
 }
 
@@ -14606,7 +14606,7 @@ func Color161(str string) string {
 }
 
 // Color161f wraps fmt.Sprintf() and Color161.
-func Color161f(format string, args ...interface{}) string {
+func Color161f(format string, args ...any) string {
 	return Color161(Sprintf(format, args...))
 }
 
@@ -14616,7 +14616,7 @@ func FprintColor161(w io.Writer, str string) {
 }
 
 // FprintfColor161 wraps Color161 and fmt.Fprintf().
-func FprintfColor161(w io.Writer, format string, args ...interface{}) {
+func FprintfColor161(w io.Writer, format string, args ...any) {
 	FprintColor161(w, Sprintf(format, args...))
 }
 
@@ -14631,7 +14631,7 @@ func PrintColor161(str string) {
 }
 
 // PrintfColor161 wraps Color161() and fmt.Printf().
-func PrintfColor161(format string, args ...interface{}) {
+func PrintfColor161(format string, args ...any) {
 	PrintColor161(Sprintf(format, args...))
 }
 
@@ -14647,7 +14647,7 @@ func OnColor161(str string) string {
 }
 
 // OnColor161f wraps fmt.Sprintf() and OnColor161.
-func OnColor161f(format string, args ...interface{}) string {
+func OnColor161f(format string, args ...any) string {
 	return OnColor161(Sprintf(format, args...))
 }
 
@@ -14657,7 +14657,7 @@ func FprintOnColor161(w io.Writer, str string) {
 }
 
 // FprintfOnColor161 wraps OnColor161 and fmt.Fprintf().
-func FprintfOnColor161(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor161(w io.Writer, format string, args ...any) {
 	FprintOnColor161(w, Sprintf(format, args...))
 }
 
@@ -14672,7 +14672,7 @@ func PrintOnColor161(str string) {
 }
 
 // PrintfOnColor161 wraps OnColor161() and fmt.Printf().
-func PrintfOnColor161(format string, args ...interface{}) {
+func PrintfOnColor161(format string, args ...any) {
 	PrintOnColor161(Sprintf(format, args...))
 }
 
@@ -14688,7 +14688,7 @@ func Color162(str string) string {
 }
 
 // Color162f wraps fmt.Sprintf() and Color162.
-func Color162f(format string, args ...interface{}) string {
+func Color162f(format string, args ...any) string {
 	return Color162(Sprintf(format, args...))
 }
 
@@ -14698,7 +14698,7 @@ func FprintColor162(w io.Writer, str string) {
 }
 
 // FprintfColor162 wraps Color162 and fmt.Fprintf().
-func FprintfColor162(w io.Writer, format string, args ...interface{}) {
+func FprintfColor162(w io.Writer, format string, args ...any) {
 	FprintColor162(w, Sprintf(format, args...))
 }
 
@@ -14713,7 +14713,7 @@ func PrintColor162(str string) {
 }
 
 // PrintfColor162 wraps Color162() and fmt.Printf().
-func PrintfColor162(format string, args ...interface{}) {
+func PrintfColor162(format string, args ...any) {
 	PrintColor162(Sprintf(format, args...))
 }
 
@@ -14729,7 +14729,7 @@ func OnColor162(str string) string {
 }
 
 // OnColor162f wraps fmt.Sprintf() and OnColor162.
-func OnColor162f(format string, args ...interface{}) string {
+func OnColor162f(format string, args ...any) string {
 	return OnColor162(Sprintf(format, args...))
 }
 
@@ -14739,7 +14739,7 @@ func FprintOnColor162(w io.Writer, str string) {
 }
 
 // FprintfOnColor162 wraps OnColor162 and fmt.Fprintf().
-func FprintfOnColor162(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor162(w io.Writer, format string, args ...any) {
 	FprintOnColor162(w, Sprintf(format, args...))
 }
 
@@ -14754,7 +14754,7 @@ func PrintOnColor162(str string) {
 }
 
 // PrintfOnColor162 wraps OnColor162() and fmt.Printf().
-func PrintfOnColor162(format string, args ...interface{}) {
+func PrintfOnColor162(format string, args ...any) {
 	PrintOnColor162(Sprintf(format, args...))
 }
 
@@ -14770,7 +14770,7 @@ func Color163(str string) string {
 }
 
 // Color163f wraps fmt.Sprintf() and Color163.
-func Color163f(format string, args ...interface{}) string {
+func Color163f(format string, args ...any) string {
 	return Color163(Sprintf(format, args...))
 }
 
@@ -14780,7 +14780,7 @@ func FprintColor163(w io.Writer, str string) {
 }
 
 // FprintfColor163 wraps Color163 and fmt.Fprintf().
-func FprintfColor163(w io.Writer, format string, args ...interface{}) {
+func FprintfColor163(w io.Writer, format string, args ...any) {
 	FprintColor163(w, Sprintf(format, args...))
 }
 
@@ -14795,7 +14795,7 @@ func PrintColor163(str string) {
 }
 
 // PrintfColor163 wraps Color163() and fmt.Printf().
-func PrintfColor163(format string, args ...interface{}) {
+func PrintfColor163(format string, args ...any) {
 	PrintColor163(Sprintf(format, args...))
 }
 
@@ -14811,7 +14811,7 @@ func OnColor163(str string) string {
 }
 
 // OnColor163f wraps fmt.Sprintf() and OnColor163.
-func OnColor163f(format string, args ...interface{}) string {
+func OnColor163f(format string, args ...any) string {
 	return OnColor163(Sprintf(format, args...))
 }
 
@@ -14821,7 +14821,7 @@ func FprintOnColor163(w io.Writer, str string) {
 }
 
 // FprintfOnColor163 wraps OnColor163 and fmt.Fprintf().
-func FprintfOnColor163(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor163(w io.Writer, format string, args ...any) {
 	FprintOnColor163(w, Sprintf(format, args...))
 }
 
@@ -14836,7 +14836,7 @@ func PrintOnColor163(str string) {
 }
 
 // PrintfOnColor163 wraps OnColor163() and fmt.Printf().
-func PrintfOnColor163(format string, args ...interface{}) {
+func PrintfOnColor163(format string, args ...any) {
 	PrintOnColor163(Sprintf(format, args...))
 }
 
@@ -14852,7 +14852,7 @@ func Color164(str string) string {
 }
 
 // Color164f wraps fmt.Sprintf() and Color164.
-func Color164f(format string, args ...interface{}) string {
+func Color164f(format string, args ...any) string {
 	return Color164(Sprintf(format, args...))
 }
 
@@ -14862,7 +14862,7 @@ func FprintColor164(w io.Writer, str string) {
 }
 
 // FprintfColor164 wraps Color164 and fmt.Fprintf().
-func FprintfColor164(w io.Writer, format string, args ...interface{}) {
+func FprintfColor164(w io.Writer, format string, args ...any) {
 	FprintColor164(w, Sprintf(format, args...))
 }
 
@@ -14877,7 +14877,7 @@ func PrintColor164(str string) {
 }
 
 // PrintfColor164 wraps Color164() and fmt.Printf().
-func PrintfColor164(format string, args ...interface{}) {
+func PrintfColor164(format string, args ...any) {
 	PrintColor164(Sprintf(format, args...))
 }
 
@@ -14893,7 +14893,7 @@ func OnColor164(str string) string {
 }
 
 // OnColor164f wraps fmt.Sprintf() and OnColor164.
-func OnColor164f(format string, args ...interface{}) string {
+func OnColor164f(format string, args ...any) string {
 	return OnColor164(Sprintf(format, args...))
 }
 
@@ -14903,7 +14903,7 @@ func FprintOnColor164(w io.Writer, str string) {
 }
 
 // FprintfOnColor164 wraps OnColor164 and fmt.Fprintf().
-func FprintfOnColor164(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor164(w io.Writer, format string, args ...any) {
 	FprintOnColor164(w, Sprintf(format, args...))
 }
 
@@ -14918,7 +14918,7 @@ func PrintOnColor164(str string) {
 }
 
 // PrintfOnColor164 wraps OnColor164() and fmt.Printf().
-func PrintfOnColor164(format string, args ...interface{}) {
+func PrintfOnColor164(format string, args ...any) {
 	PrintOnColor164(Sprintf(format, args...))
 }
 
@@ -14934,7 +14934,7 @@ func Color165(str string) string {
 }
 
 // Color165f wraps fmt.Sprintf() and Color165.
-func Color165f(format string, args ...interface{}) string {
+func Color165f(format string, args ...any) string {
 	return Color165(Sprintf(format, args...))
 }
 
@@ -14944,7 +14944,7 @@ func FprintColor165(w io.Writer, str string) {
 }
 
 // FprintfColor165 wraps Color165 and fmt.Fprintf().
-func FprintfColor165(w io.Writer, format string, args ...interface{}) {
+func FprintfColor165(w io.Writer, format string, args ...any) {
 	FprintColor165(w, Sprintf(format, args...))
 }
 
@@ -14959,7 +14959,7 @@ func PrintColor165(str string) {
 }
 
 // PrintfColor165 wraps Color165() and fmt.Printf().
-func PrintfColor165(format string, args ...interface{}) {
+func PrintfColor165(format string, args ...any) {
 	PrintColor165(Sprintf(format, args...))
 }
 
@@ -14975,7 +14975,7 @@ func OnColor165(str string) string {
 }
 
 // OnColor165f wraps fmt.Sprintf() and OnColor165.
-func OnColor165f(format string, args ...interface{}) string {
+func OnColor165f(format string, args ...any) string {
 	return OnColor165(Sprintf(format, args...))
 }
 
@@ -14985,7 +14985,7 @@ func FprintOnColor165(w io.Writer, str string) {
 }
 
 // FprintfOnColor165 wraps OnColor165 and fmt.Fprintf().
-func FprintfOnColor165(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor165(w io.Writer, format string, args ...any) {
 	FprintOnColor165(w, Sprintf(format, args...))
 }
 
@@ -15000,7 +15000,7 @@ func PrintOnColor165(str string) {
 }
 
 // PrintfOnColor165 wraps OnColor165() and fmt.Printf().
-func PrintfOnColor165(format string, args ...interface{}) {
+func PrintfOnColor165(format string, args ...any) {
 	PrintOnColor165(Sprintf(format, args...))
 }
 
@@ -15016,7 +15016,7 @@ func Color166(str string) string {
 }
 
 // Color166f wraps fmt.Sprintf() and Color166.
-func Color166f(format string, args ...interface{}) string {
+func Color166f(format string, args ...any) string {
 	return Color166(Sprintf(format, args...))
 }
 
@@ -15026,7 +15026,7 @@ func FprintColor166(w io.Writer, str string) {
 }
 
 // FprintfColor166 wraps Color166 and fmt.Fprintf().
-func FprintfColor166(w io.Writer, format string, args ...interface{}) {
+func FprintfColor166(w io.Writer, format string, args ...any) {
 	FprintColor166(w, Sprintf(format, args...))
 }
 
@@ -15041,7 +15041,7 @@ func PrintColor166(str string) {
 }
 
 // PrintfColor166 wraps Color166() and fmt.Printf().
-func PrintfColor166(format string, args ...interface{}) {
+func PrintfColor166(format string, args ...any) {
 	PrintColor166(Sprintf(format, args...))
 }
 
@@ -15057,7 +15057,7 @@ func OnColor166(str string) string {
 }
 
 // OnColor166f wraps fmt.Sprintf() and OnColor166.
-func OnColor166f(format string, args ...interface{}) string {
+func OnColor166f(format string, args ...any) string {
 	return OnColor166(Sprintf(format, args...))
 }
 
@@ -15067,7 +15067,7 @@ func FprintOnColor166(w io.Writer, str string) {
 }
 
 // FprintfOnColor166 wraps OnColor166 and fmt.Fprintf().
-func FprintfOnColor166(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor166(w io.Writer, format string, args ...any) {
 	FprintOnColor166(w, Sprintf(format, args...))
 }
 
@@ -15082,7 +15082,7 @@ func PrintOnColor166(str string) {
 }
 
 // PrintfOnColor166 wraps OnColor166() and fmt.Printf().
-func PrintfOnColor166(format string, args ...interface{}) {
+func PrintfOnColor166(format string, args ...any) {
 	PrintOnColor166(Sprintf(format, args...))
 }
 
@@ -15098,7 +15098,7 @@ func Color167(str string) string {
 }
 
 // Color167f wraps fmt.Sprintf() and Color167.
-func Color167f(format string, args ...interface{}) string {
+func Color167f(format string, args ...any) string {
 	return Color167(Sprintf(format, args...))
 }
 
@@ -15108,7 +15108,7 @@ func FprintColor167(w io.Writer, str string) {
 }
 
 // FprintfColor167 wraps Color167 and fmt.Fprintf().
-func FprintfColor167(w io.Writer, format string, args ...interface{}) {
+func FprintfColor167(w io.Writer, format string, args ...any) {
 	FprintColor167(w, Sprintf(format, args...))
 }
 
@@ -15123,7 +15123,7 @@ func PrintColor167(str string) {
 }
 
 // PrintfColor167 wraps Color167() and fmt.Printf().
-func PrintfColor167(format string, args ...interface{}) {
+func PrintfColor167(format string, args ...any) {
 	PrintColor167(Sprintf(format, args...))
 }
 
@@ -15139,7 +15139,7 @@ func OnColor167(str string) string {
 }
 
 // OnColor167f wraps fmt.Sprintf() and OnColor167.
-func OnColor167f(format string, args ...interface{}) string {
+func OnColor167f(format string, args ...any) string {
 	return OnColor167(Sprintf(format, args...))
 }
 
@@ -15149,7 +15149,7 @@ func FprintOnColor167(w io.Writer, str string) {
 }
 
 // FprintfOnColor167 wraps OnColor167 and fmt.Fprintf().
-func FprintfOnColor167(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor167(w io.Writer, format string, args ...any) {
 	FprintOnColor167(w, Sprintf(format, args...))
 }
 
@@ -15164,7 +15164,7 @@ func PrintOnColor167(str string) {
 }
 
 // PrintfOnColor167 wraps OnColor167() and fmt.Printf().
-func PrintfOnColor167(format string, args ...interface{}) {
+func PrintfOnColor167(format string, args ...any) {
 	PrintOnColor167(Sprintf(format, args...))
 }
 
@@ -15180,7 +15180,7 @@ func Color168(str string) string {
 }
 
 // Color168f wraps fmt.Sprintf() and Color168.
-func Color168f(format string, args ...interface{}) string {
+func Color168f(format string, args ...any) string {
 	return Color168(Sprintf(format, args...))
 }
 
@@ -15190,7 +15190,7 @@ func FprintColor168(w io.Writer, str string) {
 }
 
 // FprintfColor168 wraps Color168 and fmt.Fprintf().
-func FprintfColor168(w io.Writer, format string, args ...interface{}) {
+func FprintfColor168(w io.Writer, format string, args ...any) {
 	FprintColor168(w, Sprintf(format, args...))
 }
 
@@ -15205,7 +15205,7 @@ func PrintColor168(str string) {
 }
 
 // PrintfColor168 wraps Color168() and fmt.Printf().
-func PrintfColor168(format string, args ...interface{}) {
+func PrintfColor168(format string, args ...any) {
 	PrintColor168(Sprintf(format, args...))
 }
 
@@ -15221,7 +15221,7 @@ func OnColor168(str string) string {
 }
 
 // OnColor168f wraps fmt.Sprintf() and OnColor168.
-func OnColor168f(format string, args ...interface{}) string {
+func OnColor168f(format string, args ...any) string {
 	return OnColor168(Sprintf(format, args...))
 }
 
@@ -15231,7 +15231,7 @@ func FprintOnColor168(w io.Writer, str string) {
 }
 
 // FprintfOnColor168 wraps OnColor168 and fmt.Fprintf().
-func FprintfOnColor168(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor168(w io.Writer, format string, args ...any) {
 	FprintOnColor168(w, Sprintf(format, args...))
 }
 
@@ -15246,7 +15246,7 @@ func PrintOnColor168(str string) {
 }
 
 // PrintfOnColor168 wraps OnColor168() and fmt.Printf().
-func PrintfOnColor168(format string, args ...interface{}) {
+func PrintfOnColor168(format string, args ...any) {
 	PrintOnColor168(Sprintf(format, args...))
 }
 
@@ -15262,7 +15262,7 @@ func Color169(str string) string {
 }
 
 // Color169f wraps fmt.Sprintf() and Color169.
-func Color169f(format string, args ...interface{}) string {
+func Color169f(format string, args ...any) string {
 	return Color169(Sprintf(format, args...))
 }
 
@@ -15272,7 +15272,7 @@ func FprintColor169(w io.Writer, str string) {
 }
 
 // FprintfColor169 wraps Color169 and fmt.Fprintf().
-func FprintfColor169(w io.Writer, format string, args ...interface{}) {
+func FprintfColor169(w io.Writer, format string, args ...any) {
 	FprintColor169(w, Sprintf(format, args...))
 }
 
@@ -15287,7 +15287,7 @@ func PrintColor169(str string) {
 }
 
 // PrintfColor169 wraps Color169() and fmt.Printf().
-func PrintfColor169(format string, args ...interface{}) {
+func PrintfColor169(format string, args ...any) {
 	PrintColor169(Sprintf(format, args...))
 }
 
@@ -15303,7 +15303,7 @@ func OnColor169(str string) string {
 }
 
 // OnColor169f wraps fmt.Sprintf() and OnColor169.
-func OnColor169f(format string, args ...interface{}) string {
+func OnColor169f(format string, args ...any) string {
 	return OnColor169(Sprintf(format, args...))
 }
 
@@ -15313,7 +15313,7 @@ func FprintOnColor169(w io.Writer, str string) {
 }
 
 // FprintfOnColor169 wraps OnColor169 and fmt.Fprintf().
-func FprintfOnColor169(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor169(w io.Writer, format string, args ...any) {
 	FprintOnColor169(w, Sprintf(format, args...))
 }
 
@@ -15328,7 +15328,7 @@ func PrintOnColor169(str string) {
 }
 
 // PrintfOnColor169 wraps OnColor169() and fmt.Printf().
-func PrintfOnColor169(format string, args ...interface{}) {
+func PrintfOnColor169(format string, args ...any) {
 	PrintOnColor169(Sprintf(format, args...))
 }
 
@@ -15344,7 +15344,7 @@ func Color170(str string) string {
 }
 
 // Color170f wraps fmt.Sprintf() and Color170.
-func Color170f(format string, args ...interface{}) string {
+func Color170f(format string, args ...any) string {
 	return Color170(Sprintf(format, args...))
 }
 
@@ -15354,7 +15354,7 @@ func FprintColor170(w io.Writer, str string) {
 }
 
 // FprintfColor170 wraps Color170 and fmt.Fprintf().
-func FprintfColor170(w io.Writer, format string, args ...interface{}) {
+func FprintfColor170(w io.Writer, format string, args ...any) {
 	FprintColor170(w, Sprintf(format, args...))
 }
 
@@ -15369,7 +15369,7 @@ func PrintColor170(str string) {
 }
 
 // PrintfColor170 wraps Color170() and fmt.Printf().
-func PrintfColor170(format string, args ...interface{}) {
+func PrintfColor170(format string, args ...any) {
 	PrintColor170(Sprintf(format, args...))
 }
 
@@ -15385,7 +15385,7 @@ func OnColor170(str string) string {
 }
 
 // OnColor170f wraps fmt.Sprintf() and OnColor170.
-func OnColor170f(format string, args ...interface{}) string {
+func OnColor170f(format string, args ...any) string {
 	return OnColor170(Sprintf(format, args...))
 }
 
@@ -15395,7 +15395,7 @@ func FprintOnColor170(w io.Writer, str string) {
 }
 
 // FprintfOnColor170 wraps OnColor170 and fmt.Fprintf().
-func FprintfOnColor170(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor170(w io.Writer, format string, args ...any) {
 	FprintOnColor170(w, Sprintf(format, args...))
 }
 
@@ -15410,7 +15410,7 @@ func PrintOnColor170(str string) {
 }
 
 // PrintfOnColor170 wraps OnColor170() and fmt.Printf().
-func PrintfOnColor170(format string, args ...interface{}) {
+func PrintfOnColor170(format string, args ...any) {
 	PrintOnColor170(Sprintf(format, args...))
 }
 
@@ -15426,7 +15426,7 @@ func Color171(str string) string {
 }
 
 // Color171f wraps fmt.Sprintf() and Color171.
-func Color171f(format string, args ...interface{}) string {
+func Color171f(format string, args ...any) string {
 	return Color171(Sprintf(format, args...))
 }
 
@@ -15436,7 +15436,7 @@ func FprintColor171(w io.Writer, str string) {
 }
 
 // FprintfColor171 wraps Color171 and fmt.Fprintf().
-func FprintfColor171(w io.Writer, format string, args ...interface{}) {
+func FprintfColor171(w io.Writer, format string, args ...any) {
 	FprintColor171(w, Sprintf(format, args...))
 }
 
@@ -15451,7 +15451,7 @@ func PrintColor171(str string) {
 }
 
 // PrintfColor171 wraps Color171() and fmt.Printf().
-func PrintfColor171(format string, args ...interface{}) {
+func PrintfColor171(format string, args ...any) {
 	PrintColor171(Sprintf(format, args...))
 }
 
@@ -15467,7 +15467,7 @@ func OnColor171(str string) string {
 }
 
 // OnColor171f wraps fmt.Sprintf() and OnColor171.
-func OnColor171f(format string, args ...interface{}) string {
+func OnColor171f(format string, args ...any) string {
 	return OnColor171(Sprintf(format, args...))
 }
 
@@ -15477,7 +15477,7 @@ func FprintOnColor171(w io.Writer, str string) {
 }
 
 // FprintfOnColor171 wraps OnColor171 and fmt.Fprintf().
-func FprintfOnColor171(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor171(w io.Writer, format string, args ...any) {
 	FprintOnColor171(w, Sprintf(format, args...))
 }
 
@@ -15492,7 +15492,7 @@ func PrintOnColor171(str string) {
 }
 
 // PrintfOnColor171 wraps OnColor171() and fmt.Printf().
-func PrintfOnColor171(format string, args ...interface{}) {
+func PrintfOnColor171(format string, args ...any) {
 	PrintOnColor171(Sprintf(format, args...))
 }
 
@@ -15508,7 +15508,7 @@ func Color172(str string) string {
 }
 
 // Color172f wraps fmt.Sprintf() and Color172.
-func Color172f(format string, args ...interface{}) string {
+func Color172f(format string, args ...any) string {
 	return Color172(Sprintf(format, args...))
 }
 
@@ -15518,7 +15518,7 @@ func FprintColor172(w io.Writer, str string) {
 }
 
 // FprintfColor172 wraps Color172 and fmt.Fprintf().
-func FprintfColor172(w io.Writer, format string, args ...interface{}) {
+func FprintfColor172(w io.Writer, format string, args ...any) {
 	FprintColor172(w, Sprintf(format, args...))
 }
 
@@ -15533,7 +15533,7 @@ func PrintColor172(str string) {
 }
 
 // PrintfColor172 wraps Color172() and fmt.Printf().
-func PrintfColor172(format string, args ...interface{}) {
+func PrintfColor172(format string, args ...any) {
 	PrintColor172(Sprintf(format, args...))
 }
 
@@ -15549,7 +15549,7 @@ func OnColor172(str string) string {
 }
 
 // OnColor172f wraps fmt.Sprintf() and OnColor172.
-func OnColor172f(format string, args ...interface{}) string {
+func OnColor172f(format string, args ...any) string {
 	return OnColor172(Sprintf(format, args...))
 }
 
@@ -15559,7 +15559,7 @@ func FprintOnColor172(w io.Writer, str string) {
 }
 
 // FprintfOnColor172 wraps OnColor172 and fmt.Fprintf().
-func FprintfOnColor172(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor172(w io.Writer, format string, args ...any) {
 	FprintOnColor172(w, Sprintf(format, args...))
 }
 
@@ -15574,7 +15574,7 @@ func PrintOnColor172(str string) {
 }
 
 // PrintfOnColor172 wraps OnColor172() and fmt.Printf().
-func PrintfOnColor172(format string, args ...interface{}) {
+func PrintfOnColor172(format string, args ...any) {
 	PrintOnColor172(Sprintf(format, args...))
 }
 
@@ -15590,7 +15590,7 @@ func Color173(str string) string {
 }
 
 // Color173f wraps fmt.Sprintf() and Color173.
-func Color173f(format string, args ...interface{}) string {
+func Color173f(format string, args ...any) string {
 	return Color173(Sprintf(format, args...))
 }
 
@@ -15600,7 +15600,7 @@ func FprintColor173(w io.Writer, str string) {
 }
 
 // FprintfColor173 wraps Color173 and fmt.Fprintf().
-func FprintfColor173(w io.Writer, format string, args ...interface{}) {
+func FprintfColor173(w io.Writer, format string, args ...any) {
 	FprintColor173(w, Sprintf(format, args...))
 }
 
@@ -15615,7 +15615,7 @@ func PrintColor173(str string) {
 }
 
 // PrintfColor173 wraps Color173() and fmt.Printf().
-func PrintfColor173(format string, args ...interface{}) {
+func PrintfColor173(format string, args ...any) {
 	PrintColor173(Sprintf(format, args...))
 }
 
@@ -15631,7 +15631,7 @@ func OnColor173(str string) string {
 }
 
 // OnColor173f wraps fmt.Sprintf() and OnColor173.
-func OnColor173f(format string, args ...interface{}) string {
+func OnColor173f(format string, args ...any) string {
 	return OnColor173(Sprintf(format, args...))
 }
 
@@ -15641,7 +15641,7 @@ func FprintOnColor173(w io.Writer, str string) {
 }
 
 // FprintfOnColor173 wraps OnColor173 and fmt.Fprintf().
-func FprintfOnColor173(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor173(w io.Writer, format string, args ...any) {
 	FprintOnColor173(w, Sprintf(format, args...))
 }
 
@@ -15656,7 +15656,7 @@ func PrintOnColor173(str string) {
 }
 
 // PrintfOnColor173 wraps OnColor173() and fmt.Printf().
-func PrintfOnColor173(format string, args ...interface{}) {
+func PrintfOnColor173(format string, args ...any) {
 	PrintOnColor173(Sprintf(format, args...))
 }
 
@@ -15672,7 +15672,7 @@ func Color174(str string) string {
 }
 
 // Color174f wraps fmt.Sprintf() and Color174.
-func Color174f(format string, args ...interface{}) string {
+func Color174f(format string, args ...any) string {
 	return Color174(Sprintf(format, args...))
 }
 
@@ -15682,7 +15682,7 @@ func FprintColor174(w io.Writer, str string) {
 }
 
 // FprintfColor174 wraps Color174 and fmt.Fprintf().
-func FprintfColor174(w io.Writer, format string, args ...interface{}) {
+func FprintfColor174(w io.Writer, format string, args ...any) {
 	FprintColor174(w, Sprintf(format, args...))
 }
 
@@ -15697,7 +15697,7 @@ func PrintColor174(str string) {
 }
 
 // PrintfColor174 wraps Color174() and fmt.Printf().
-func PrintfColor174(format string, args ...interface{}) {
+func PrintfColor174(format string, args ...any) {
 	PrintColor174(Sprintf(format, args...))
 }
 
@@ -15713,7 +15713,7 @@ func OnColor174(str string) string {
 }
 
 // OnColor174f wraps fmt.Sprintf() and OnColor174.
-func OnColor174f(format string, args ...interface{}) string {
+func OnColor174f(format string, args ...any) string {
 	return OnColor174(Sprintf(format, args...))
 }
 
@@ -15723,7 +15723,7 @@ func FprintOnColor174(w io.Writer, str string) {
 }
 
 // FprintfOnColor174 wraps OnColor174 and fmt.Fprintf().
-func FprintfOnColor174(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor174(w io.Writer, format string, args ...any) {
 	FprintOnColor174(w, Sprintf(format, args...))
 }
 
@@ -15738,7 +15738,7 @@ func PrintOnColor174(str string) {
 }
 
 // PrintfOnColor174 wraps OnColor174() and fmt.Printf().
-func PrintfOnColor174(format string, args ...interface{}) {
+func PrintfOnColor174(format string, args ...any) {
 	PrintOnColor174(Sprintf(format, args...))
 }
 
@@ -15754,7 +15754,7 @@ func Color175(str string) string {
 }
 
 // Color175f wraps fmt.Sprintf() and Color175.
-func Color175f(format string, args ...interface{}) string {
+func Color175f(format string, args ...any) string {
 	return Color175(Sprintf(format, args...))
 }
 
@@ -15764,7 +15764,7 @@ func FprintColor175(w io.Writer, str string) {
 }
 
 // FprintfColor175 wraps Color175 and fmt.Fprintf().
-func FprintfColor175(w io.Writer, format string, args ...interface{}) {
+func FprintfColor175(w io.Writer, format string, args ...any) {
 	FprintColor175(w, Sprintf(format, args...))
 }
 
@@ -15779,7 +15779,7 @@ func PrintColor175(str string) {
 }
 
 // PrintfColor175 wraps Color175() and fmt.Printf().
-func PrintfColor175(format string, args ...interface{}) {
+func PrintfColor175(format string, args ...any) {
 	PrintColor175(Sprintf(format, args...))
 }
 
@@ -15795,7 +15795,7 @@ func OnColor175(str string) string {
 }
 
 // OnColor175f wraps fmt.Sprintf() and OnColor175.
-func OnColor175f(format string, args ...interface{}) string {
+func OnColor175f(format string, args ...any) string {
 	return OnColor175(Sprintf(format, args...))
 }
 
@@ -15805,7 +15805,7 @@ func FprintOnColor175(w io.Writer, str string) {
 }
 
 // FprintfOnColor175 wraps OnColor175 and fmt.Fprintf().
-func FprintfOnColor175(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor175(w io.Writer, format string, args ...any) {
 	FprintOnColor175(w, Sprintf(format, args...))
 }
 
@@ -15820,7 +15820,7 @@ func PrintOnColor175(str string) {
 }
 
 // PrintfOnColor175 wraps OnColor175() and fmt.Printf().
-func PrintfOnColor175(format string, args ...interface{}) {
+func PrintfOnColor175(format string, args ...any) {
 	PrintOnColor175(Sprintf(format, args...))
 }
 
@@ -15836,7 +15836,7 @@ func Color176(str string) string {
 }
 
 // Color176f wraps fmt.Sprintf() and Color176.
-func Color176f(format string, args ...interface{}) string {
+func Color176f(format string, args ...any) string {
 	return Color176(Sprintf(format, args...))
 }
 
@@ -15846,7 +15846,7 @@ func FprintColor176(w io.Writer, str string) {
 }
 
 // FprintfColor176 wraps Color176 and fmt.Fprintf().
-func FprintfColor176(w io.Writer, format string, args ...interface{}) {
+func FprintfColor176(w io.Writer, format string, args ...any) {
 	FprintColor176(w, Sprintf(format, args...))
 }
 
@@ -15861,7 +15861,7 @@ func PrintColor176(str string) {
 }
 
 // PrintfColor176 wraps Color176() and fmt.Printf().
-func PrintfColor176(format string, args ...interface{}) {
+func PrintfColor176(format string, args ...any) {
 	PrintColor176(Sprintf(format, args...))
 }
 
@@ -15877,7 +15877,7 @@ func OnColor176(str string) string {
 }
 
 // OnColor176f wraps fmt.Sprintf() and OnColor176.
-func OnColor176f(format string, args ...interface{}) string {
+func OnColor176f(format string, args ...any) string {
 	return OnColor176(Sprintf(format, args...))
 }
 
@@ -15887,7 +15887,7 @@ func FprintOnColor176(w io.Writer, str string) {
 }
 
 // FprintfOnColor176 wraps OnColor176 and fmt.Fprintf().
-func FprintfOnColor176(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor176(w io.Writer, format string, args ...any) {
 	FprintOnColor176(w, Sprintf(format, args...))
 }
 
@@ -15902,7 +15902,7 @@ func PrintOnColor176(str string) {
 }
 
 // PrintfOnColor176 wraps OnColor176() and fmt.Printf().
-func PrintfOnColor176(format string, args ...interface{}) {
+func PrintfOnColor176(format string, args ...any) {
 	PrintOnColor176(Sprintf(format, args...))
 }
 
@@ -15918,7 +15918,7 @@ func Color177(str string) string {
 }
 
 // Color177f wraps fmt.Sprintf() and Color177.
-func Color177f(format string, args ...interface{}) string {
+func Color177f(format string, args ...any) string {
 	return Color177(Sprintf(format, args...))
 }
 
@@ -15928,7 +15928,7 @@ func FprintColor177(w io.Writer, str string) {
 }
 
 // FprintfColor177 wraps Color177 and fmt.Fprintf().
-func FprintfColor177(w io.Writer, format string, args ...interface{}) {
+func FprintfColor177(w io.Writer, format string, args ...any) {
 	FprintColor177(w, Sprintf(format, args...))
 }
 
@@ -15943,7 +15943,7 @@ func PrintColor177(str string) {
 }
 
 // PrintfColor177 wraps Color177() and fmt.Printf().
-func PrintfColor177(format string, args ...interface{}) {
+func PrintfColor177(format string, args ...any) {
 	PrintColor177(Sprintf(format, args...))
 }
 
@@ -15959,7 +15959,7 @@ func OnColor177(str string) string {
 }
 
 // OnColor177f wraps fmt.Sprintf() and OnColor177.
-func OnColor177f(format string, args ...interface{}) string {
+func OnColor177f(format string, args ...any) string {
 	return OnColor177(Sprintf(format, args...))
 }
 
@@ -15969,7 +15969,7 @@ func FprintOnColor177(w io.Writer, str string) {
 }
 
 // FprintfOnColor177 wraps OnColor177 and fmt.Fprintf().
-func FprintfOnColor177(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor177(w io.Writer, format string, args ...any) {
 	FprintOnColor177(w, Sprintf(format, args...))
 }
 
@@ -15984,7 +15984,7 @@ func PrintOnColor177(str string) {
 }
 
 // PrintfOnColor177 wraps OnColor177() and fmt.Printf().
-func PrintfOnColor177(format string, args ...interface{}) {
+func PrintfOnColor177(format string, args ...any) {
 	PrintOnColor177(Sprintf(format, args...))
 }
 
@@ -16000,7 +16000,7 @@ func Color178(str string) string {
 }
 
 // Color178f wraps fmt.Sprintf() and Color178.
-func Color178f(format string, args ...interface{}) string {
+func Color178f(format string, args ...any) string {
 	return Color178(Sprintf(format, args...))
 }
 
@@ -16010,7 +16010,7 @@ func FprintColor178(w io.Writer, str string) {
 }
 
 // FprintfColor178 wraps Color178 and fmt.Fprintf().
-func FprintfColor178(w io.Writer, format string, args ...interface{}) {
+func FprintfColor178(w io.Writer, format string, args ...any) {
 	FprintColor178(w, Sprintf(format, args...))
 }
 
@@ -16025,7 +16025,7 @@ func PrintColor178(str string) {
 }
 
 // PrintfColor178 wraps Color178() and fmt.Printf().
-func PrintfColor178(format string, args ...interface{}) {
+func PrintfColor178(format string, args ...any) {
 	PrintColor178(Sprintf(format, args...))
 }
 
@@ -16041,7 +16041,7 @@ func OnColor178(str string) string {
 }
 
 // OnColor178f wraps fmt.Sprintf() and OnColor178.
-func OnColor178f(format string, args ...interface{}) string {
+func OnColor178f(format string, args ...any) string {
 	return OnColor178(Sprintf(format, args...))
 }
 
@@ -16051,7 +16051,7 @@ func FprintOnColor178(w io.Writer, str string) {
 }
 
 // FprintfOnColor178 wraps OnColor178 and fmt.Fprintf().
-func FprintfOnColor178(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor178(w io.Writer, format string, args ...any) {
 	FprintOnColor178(w, Sprintf(format, args...))
 }
 
@@ -16066,7 +16066,7 @@ func PrintOnColor178(str string) {
 }
 
 // PrintfOnColor178 wraps OnColor178() and fmt.Printf().
-func PrintfOnColor178(format string, args ...interface{}) {
+func PrintfOnColor178(format string, args ...any) {
 	PrintOnColor178(Sprintf(format, args...))
 }
 
@@ -16082,7 +16082,7 @@ func Color179(str string) string {
 }
 
 // Color179f wraps fmt.Sprintf() and Color179.
-func Color179f(format string, args ...interface{}) string {
+func Color179f(format string, args ...any) string {
 	return Color179(Sprintf(format, args...))
 }
 
@@ -16092,7 +16092,7 @@ func FprintColor179(w io.Writer, str string) {
 }
 
 // FprintfColor179 wraps Color179 and fmt.Fprintf().
-func FprintfColor179(w io.Writer, format string, args ...interface{}) {
+func FprintfColor179(w io.Writer, format string, args ...any) {
 	FprintColor179(w, Sprintf(format, args...))
 }
 
@@ -16107,7 +16107,7 @@ func PrintColor179(str string) {
 }
 
 // PrintfColor179 wraps Color179() and fmt.Printf().
-func PrintfColor179(format string, args ...interface{}) {
+func PrintfColor179(format string, args ...any) {
 	PrintColor179(Sprintf(format, args...))
 }
 
@@ -16123,7 +16123,7 @@ func OnColor179(str string) string {
 }
 
 // OnColor179f wraps fmt.Sprintf() and OnColor179.
-func OnColor179f(format string, args ...interface{}) string {
+func OnColor179f(format string, args ...any) string {
 	return OnColor179(Sprintf(format, args...))
 }
 
@@ -16133,7 +16133,7 @@ func FprintOnColor179(w io.Writer, str string) {
 }
 
 // FprintfOnColor179 wraps OnColor179 and fmt.Fprintf().
-func FprintfOnColor179(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor179(w io.Writer, format string, args ...any) {
 	FprintOnColor179(w, Sprintf(format, args...))
 }
 
@@ -16148,7 +16148,7 @@ func PrintOnColor179(str string) {
 }
 
 // PrintfOnColor179 wraps OnColor179() and fmt.Printf().
-func PrintfOnColor179(format string, args ...interface{}) {
+func PrintfOnColor179(format string, args ...any) {
 	PrintOnColor179(Sprintf(format, args...))
 }
 
@@ -16164,7 +16164,7 @@ func Color180(str string) string {
 }
 
 // Color180f wraps fmt.Sprintf() and Color180.
-func Color180f(format string, args ...interface{}) string {
+func Color180f(format string, args ...any) string {
 	return Color180(Sprintf(format, args...))
 }
 
@@ -16174,7 +16174,7 @@ func FprintColor180(w io.Writer, str string) {
 }
 
 // FprintfColor180 wraps Color180 and fmt.Fprintf().
-func FprintfColor180(w io.Writer, format string, args ...interface{}) {
+func FprintfColor180(w io.Writer, format string, args ...any) {
 	FprintColor180(w, Sprintf(format, args...))
 }
 
@@ -16189,7 +16189,7 @@ func PrintColor180(str string) {
 }
 
 // PrintfColor180 wraps Color180() and fmt.Printf().
-func PrintfColor180(format string, args ...interface{}) {
+func PrintfColor180(format string, args ...any) {
 	PrintColor180(Sprintf(format, args...))
 }
 
@@ -16205,7 +16205,7 @@ func OnColor180(str string) string {
 }
 
 // OnColor180f wraps fmt.Sprintf() and OnColor180.
-func OnColor180f(format string, args ...interface{}) string {
+func OnColor180f(format string, args ...any) string {
 	return OnColor180(Sprintf(format, args...))
 }
 
@@ -16215,7 +16215,7 @@ func FprintOnColor180(w io.Writer, str string) {
 }
 
 // FprintfOnColor180 wraps OnColor180 and fmt.Fprintf().
-func FprintfOnColor180(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor180(w io.Writer, format string, args ...any) {
 	FprintOnColor180(w, Sprintf(format, args...))
 }
 
@@ -16230,7 +16230,7 @@ func PrintOnColor180(str string) {
 }
 
 // PrintfOnColor180 wraps OnColor180() and fmt.Printf().
-func PrintfOnColor180(format string, args ...interface{}) {
+func PrintfOnColor180(format string, args ...any) {
 	PrintOnColor180(Sprintf(format, args...))
 }
 
@@ -16246,7 +16246,7 @@ func Color181(str string) string {
 }
 
 // Color181f wraps fmt.Sprintf() and Color181.
-func Color181f(format string, args ...interface{}) string {
+func Color181f(format string, args ...any) string {
 	return Color181(Sprintf(format, args...))
 }
 
@@ -16256,7 +16256,7 @@ func FprintColor181(w io.Writer, str string) {
 }
 
 // FprintfColor181 wraps Color181 and fmt.Fprintf().
-func FprintfColor181(w io.Writer, format string, args ...interface{}) {
+func FprintfColor181(w io.Writer, format string, args ...any) {
 	FprintColor181(w, Sprintf(format, args...))
 }
 
@@ -16271,7 +16271,7 @@ func PrintColor181(str string) {
 }
 
 // PrintfColor181 wraps Color181() and fmt.Printf().
-func PrintfColor181(format string, args ...interface{}) {
+func PrintfColor181(format string, args ...any) {
 	PrintColor181(Sprintf(format, args...))
 }
 
@@ -16287,7 +16287,7 @@ func OnColor181(str string) string {
 }
 
 // OnColor181f wraps fmt.Sprintf() and OnColor181.
-func OnColor181f(format string, args ...interface{}) string {
+func OnColor181f(format string, args ...any) string {
 	return OnColor181(Sprintf(format, args...))
 }
 
@@ -16297,7 +16297,7 @@ func FprintOnColor181(w io.Writer, str string) {
 }
 
 // FprintfOnColor181 wraps OnColor181 and fmt.Fprintf().
-func FprintfOnColor181(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor181(w io.Writer, format string, args ...any) {
 	FprintOnColor181(w, Sprintf(format, args...))
 }
 
@@ -16312,7 +16312,7 @@ func PrintOnColor181(str string) {
 }
 
 // PrintfOnColor181 wraps OnColor181() and fmt.Printf().
-func PrintfOnColor181(format string, args ...interface{}) {
+func PrintfOnColor181(format string, args ...any) {
 	PrintOnColor181(Sprintf(format, args...))
 }
 
@@ -16328,7 +16328,7 @@ func Color182(str string) string {
 }
 
 // Color182f wraps fmt.Sprintf() and Color182.
-func Color182f(format string, args ...interface{}) string {
+func Color182f(format string, args ...any) string {
 	return Color182(Sprintf(format, args...))
 }
 
@@ -16338,7 +16338,7 @@ func FprintColor182(w io.Writer, str string) {
 }
 
 // FprintfColor182 wraps Color182 and fmt.Fprintf().
-func FprintfColor182(w io.Writer, format string, args ...interface{}) {
+func FprintfColor182(w io.Writer, format string, args ...any) {
 	FprintColor182(w, Sprintf(format, args...))
 }
 
@@ -16353,7 +16353,7 @@ func PrintColor182(str string) {
 }
 
 // PrintfColor182 wraps Color182() and fmt.Printf().
-func PrintfColor182(format string, args ...interface{}) {
+func PrintfColor182(format string, args ...any) {
 	PrintColor182(Sprintf(format, args...))
 }
 
@@ -16369,7 +16369,7 @@ func OnColor182(str string) string {
 }
 
 // OnColor182f wraps fmt.Sprintf() and OnColor182.
-func OnColor182f(format string, args ...interface{}) string {
+func OnColor182f(format string, args ...any) string {
 	return OnColor182(Sprintf(format, args...))
 }
 
@@ -16379,7 +16379,7 @@ func FprintOnColor182(w io.Writer, str string) {
 }
 
 // FprintfOnColor182 wraps OnColor182 and fmt.Fprintf().
-func FprintfOnColor182(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor182(w io.Writer, format string, args ...any) {
 	FprintOnColor182(w, Sprintf(format, args...))
 }
 
@@ -16394,7 +16394,7 @@ func PrintOnColor182(str string) {
 }
 
 // PrintfOnColor182 wraps OnColor182() and fmt.Printf().
-func PrintfOnColor182(format string, args ...interface{}) {
+func PrintfOnColor182(format string, args ...any) {
 	PrintOnColor182(Sprintf(format, args...))
 }
 
@@ -16410,7 +16410,7 @@ func Color183(str string) string {
 }
 
 // Color183f wraps fmt.Sprintf() and Color183.
-func Color183f(format string, args ...interface{}) string {
+func Color183f(format string, args ...any) string {
 	return Color183(Sprintf(format, args...))
 }
 
@@ -16420,7 +16420,7 @@ func FprintColor183(w io.Writer, str string) {
 }
 
 // FprintfColor183 wraps Color183 and fmt.Fprintf().
-func FprintfColor183(w io.Writer, format string, args ...interface{}) {
+func FprintfColor183(w io.Writer, format string, args ...any) {
 	FprintColor183(w, Sprintf(format, args...))
 }
 
@@ -16435,7 +16435,7 @@ func PrintColor183(str string) {
 }
 
 // PrintfColor183 wraps Color183() and fmt.Printf().
-func PrintfColor183(format string, args ...interface{}) {
+func PrintfColor183(format string, args ...any) {
 	PrintColor183(Sprintf(format, args...))
 }
 
@@ -16451,7 +16451,7 @@ func OnColor183(str string) string {
 }
 
 // OnColor183f wraps fmt.Sprintf() and OnColor183.
-func OnColor183f(format string, args ...interface{}) string {
+func OnColor183f(format string, args ...any) string {
 	return OnColor183(Sprintf(format, args...))
 }
 
@@ -16461,7 +16461,7 @@ func FprintOnColor183(w io.Writer, str string) {
 }
 
 // FprintfOnColor183 wraps OnColor183 and fmt.Fprintf().
-func FprintfOnColor183(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor183(w io.Writer, format string, args ...any) {
 	FprintOnColor183(w, Sprintf(format, args...))
 }
 
@@ -16476,7 +16476,7 @@ func PrintOnColor183(str string) {
 }
 
 // PrintfOnColor183 wraps OnColor183() and fmt.Printf().
-func PrintfOnColor183(format string, args ...interface{}) {
+func PrintfOnColor183(format string, args ...any) {
 	PrintOnColor183(Sprintf(format, args...))
 }
 
@@ -16492,7 +16492,7 @@ func Color184(str string) string {
 }
 
 // Color184f wraps fmt.Sprintf() and Color184.
-func Color184f(format string, args ...interface{}) string {
+func Color184f(format string, args ...any) string {
 	return Color184(Sprintf(format, args...))
 }
 
@@ -16502,7 +16502,7 @@ func FprintColor184(w io.Writer, str string) {
 }
 
 // FprintfColor184 wraps Color184 and fmt.Fprintf().
-func FprintfColor184(w io.Writer, format string, args ...interface{}) {
+func FprintfColor184(w io.Writer, format string, args ...any) {
 	FprintColor184(w, Sprintf(format, args...))
 }
 
@@ -16517,7 +16517,7 @@ func PrintColor184(str string) {
 }
 
 // PrintfColor184 wraps Color184() and fmt.Printf().
-func PrintfColor184(format string, args ...interface{}) {
+func PrintfColor184(format string, args ...any) {
 	PrintColor184(Sprintf(format, args...))
 }
 
@@ -16533,7 +16533,7 @@ func OnColor184(str string) string {
 }
 
 // OnColor184f wraps fmt.Sprintf() and OnColor184.
-func OnColor184f(format string, args ...interface{}) string {
+func OnColor184f(format string, args ...any) string {
 	return OnColor184(Sprintf(format, args...))
 }
 
@@ -16543,7 +16543,7 @@ func FprintOnColor184(w io.Writer, str string) {
 }
 
 // FprintfOnColor184 wraps OnColor184 and fmt.Fprintf().
-func FprintfOnColor184(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor184(w io.Writer, format string, args ...any) {
 	FprintOnColor184(w, Sprintf(format, args...))
 }
 
@@ -16558,7 +16558,7 @@ func PrintOnColor184(str string) {
 }
 
 // PrintfOnColor184 wraps OnColor184() and fmt.Printf().
-func PrintfOnColor184(format string, args ...interface{}) {
+func PrintfOnColor184(format string, args ...any) {
 	PrintOnColor184(Sprintf(format, args...))
 }
 
@@ -16574,7 +16574,7 @@ func Color185(str string) string {
 }
 
 // Color185f wraps fmt.Sprintf() and Color185.
-func Color185f(format string, args ...interface{}) string {
+func Color185f(format string, args ...any) string {
 	return Color185(Sprintf(format, args...))
 }
 
@@ -16584,7 +16584,7 @@ func FprintColor185(w io.Writer, str string) {
 }
 
 // FprintfColor185 wraps Color185 and fmt.Fprintf().
-func FprintfColor185(w io.Writer, format string, args ...interface{}) {
+func FprintfColor185(w io.Writer, format string, args ...any) {
 	FprintColor185(w, Sprintf(format, args...))
 }
 
@@ -16599,7 +16599,7 @@ func PrintColor185(str string) {
 }
 
 // PrintfColor185 wraps Color185() and fmt.Printf().
-func PrintfColor185(format string, args ...interface{}) {
+func PrintfColor185(format string, args ...any) {
 	PrintColor185(Sprintf(format, args...))
 }
 
@@ -16615,7 +16615,7 @@ func OnColor185(str string) string {
 }
 
 // OnColor185f wraps fmt.Sprintf() and OnColor185.
-func OnColor185f(format string, args ...interface{}) string {
+func OnColor185f(format string, args ...any) string {
 	return OnColor185(Sprintf(format, args...))
 }
 
@@ -16625,7 +16625,7 @@ func FprintOnColor185(w io.Writer, str string) {
 }
 
 // FprintfOnColor185 wraps OnColor185 and fmt.Fprintf().
-func FprintfOnColor185(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor185(w io.Writer, format string, args ...any) {
 	FprintOnColor185(w, Sprintf(format, args...))
 }
 
@@ -16640,7 +16640,7 @@ func PrintOnColor185(str string) {
 }
 
 // PrintfOnColor185 wraps OnColor185() and fmt.Printf().
-func PrintfOnColor185(format string, args ...interface{}) {
+func PrintfOnColor185(format string, args ...any) {
 	PrintOnColor185(Sprintf(format, args...))
 }
 
@@ -16656,7 +16656,7 @@ func Color186(str string) string {
 }
 
 // Color186f wraps fmt.Sprintf() and Color186.
-func Color186f(format string, args ...interface{}) string {
+func Color186f(format string, args ...any) string {
 	return Color186(Sprintf(format, args...))
 }
 
@@ -16666,7 +16666,7 @@ func FprintColor186(w io.Writer, str string) {
 }
 
 // FprintfColor186 wraps Color186 and fmt.Fprintf().
-func FprintfColor186(w io.Writer, format string, args ...interface{}) {
+func FprintfColor186(w io.Writer, format string, args ...any) {
 	FprintColor186(w, Sprintf(format, args...))
 }
 
@@ -16681,7 +16681,7 @@ func PrintColor186(str string) {
 }
 
 // PrintfColor186 wraps Color186() and fmt.Printf().
-func PrintfColor186(format string, args ...interface{}) {
+func PrintfColor186(format string, args ...any) {
 	PrintColor186(Sprintf(format, args...))
 }
 
@@ -16697,7 +16697,7 @@ func OnColor186(str string) string {
 }
 
 // OnColor186f wraps fmt.Sprintf() and OnColor186.
-func OnColor186f(format string, args ...interface{}) string {
+func OnColor186f(format string, args ...any) string {
 	return OnColor186(Sprintf(format, args...))
 }
 
@@ -16707,7 +16707,7 @@ func FprintOnColor186(w io.Writer, str string) {
 }
 
 // FprintfOnColor186 wraps OnColor186 and fmt.Fprintf().
-func FprintfOnColor186(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor186(w io.Writer, format string, args ...any) {
 	FprintOnColor186(w, Sprintf(format, args...))
 }
 
@@ -16722,7 +16722,7 @@ func PrintOnColor186(str string) {
 }
 
 // PrintfOnColor186 wraps OnColor186() and fmt.Printf().
-func PrintfOnColor186(format string, args ...interface{}) {
+func PrintfOnColor186(format string, args ...any) {
 	PrintOnColor186(Sprintf(format, args...))
 }
 
@@ -16738,7 +16738,7 @@ func Color187(str string) string {
 }
 
 // Color187f wraps fmt.Sprintf() and Color187.
-func Color187f(format string, args ...interface{}) string {
+func Color187f(format string, args ...any) string {
 	return Color187(Sprintf(format, args...))
 }
 
@@ -16748,7 +16748,7 @@ func FprintColor187(w io.Writer, str string) {
 }
 
 // FprintfColor187 wraps Color187 and fmt.Fprintf().
-func FprintfColor187(w io.Writer, format string, args ...interface{}) {
+func FprintfColor187(w io.Writer, format string, args ...any) {
 	FprintColor187(w, Sprintf(format, args...))
 }
 
@@ -16763,7 +16763,7 @@ func PrintColor187(str string) {
 }
 
 // PrintfColor187 wraps Color187() and fmt.Printf().
-func PrintfColor187(format string, args ...interface{}) {
+func PrintfColor187(format string, args ...any) {
 	PrintColor187(Sprintf(format, args...))
 }
 
@@ -16779,7 +16779,7 @@ func OnColor187(str string) string {
 }
 
 // OnColor187f wraps fmt.Sprintf() and OnColor187.
-func OnColor187f(format string, args ...interface{}) string {
+func OnColor187f(format string, args ...any) string {
 	return OnColor187(Sprintf(format, args...))
 }
 
@@ -16789,7 +16789,7 @@ func FprintOnColor187(w io.Writer, str string) {
 }
 
 // FprintfOnColor187 wraps OnColor187 and fmt.Fprintf().
-func FprintfOnColor187(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor187(w io.Writer, format string, args ...any) {
 	FprintOnColor187(w, Sprintf(format, args...))
 }
 
@@ -16804,7 +16804,7 @@ func PrintOnColor187(str string) {
 }
 
 // PrintfOnColor187 wraps OnColor187() and fmt.Printf().
-func PrintfOnColor187(format string, args ...interface{}) {
+func PrintfOnColor187(format string, args ...any) {
 	PrintOnColor187(Sprintf(format, args...))
 }
 
@@ -16820,7 +16820,7 @@ func Color188(str string) string {
 }
 
 // Color188f wraps fmt.Sprintf() and Color188.
-func Color188f(format string, args ...interface{}) string {
+func Color188f(format string, args ...any) string {
 	return Color188(Sprintf(format, args...))
 }
 
@@ -16830,7 +16830,7 @@ func FprintColor188(w io.Writer, str string) {
 }
 
 // FprintfColor188 wraps Color188 and fmt.Fprintf().
-func FprintfColor188(w io.Writer, format string, args ...interface{}) {
+func FprintfColor188(w io.Writer, format string, args ...any) {
 	FprintColor188(w, Sprintf(format, args...))
 }
 
@@ -16845,7 +16845,7 @@ func PrintColor188(str string) {
 }
 
 // PrintfColor188 wraps Color188() and fmt.Printf().
-func PrintfColor188(format string, args ...interface{}) {
+func PrintfColor188(format string, args ...any) {
 	PrintColor188(Sprintf(format, args...))
 }
 
@@ -16861,7 +16861,7 @@ func OnColor188(str string) string {
 }
 
 // OnColor188f wraps fmt.Sprintf() and OnColor188.
-func OnColor188f(format string, args ...interface{}) string {
+func OnColor188f(format string, args ...any) string {
 	return OnColor188(Sprintf(format, args...))
 }
 
@@ -16871,7 +16871,7 @@ func FprintOnColor188(w io.Writer, str string) {
 }
 
 // FprintfOnColor188 wraps OnColor188 and fmt.Fprintf().
-func FprintfOnColor188(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor188(w io.Writer, format string, args ...any) {
 	FprintOnColor188(w, Sprintf(format, args...))
 }
 
@@ -16886,7 +16886,7 @@ func PrintOnColor188(str string) {
 }
 
 // PrintfOnColor188 wraps OnColor188() and fmt.Printf().
-func PrintfOnColor188(format string, args ...interface{}) {
+func PrintfOnColor188(format string, args ...any) {
 	PrintOnColor188(Sprintf(format, args...))
 }
 
@@ -16902,7 +16902,7 @@ func Color189(str string) string {
 }
 
 // Color189f wraps fmt.Sprintf() and Color189.
-func Color189f(format string, args ...interface{}) string {
+func Color189f(format string, args ...any) string {
 	return Color189(Sprintf(format, args...))
 }
 
@@ -16912,7 +16912,7 @@ func FprintColor189(w io.Writer, str string) {
 }
 
 // FprintfColor189 wraps Color189 and fmt.Fprintf().
-func FprintfColor189(w io.Writer, format string, args ...interface{}) {
+func FprintfColor189(w io.Writer, format string, args ...any) {
 	FprintColor189(w, Sprintf(format, args...))
 }
 
@@ -16927,7 +16927,7 @@ func PrintColor189(str string) {
 }
 
 // PrintfColor189 wraps Color189() and fmt.Printf().
-func PrintfColor189(format string, args ...interface{}) {
+func PrintfColor189(format string, args ...any) {
 	PrintColor189(Sprintf(format, args...))
 }
 
@@ -16943,7 +16943,7 @@ func OnColor189(str string) string {
 }
 
 // OnColor189f wraps fmt.Sprintf() and OnColor189.
-func OnColor189f(format string, args ...interface{}) string {
+func OnColor189f(format string, args ...any) string {
 	return OnColor189(Sprintf(format, args...))
 }
 
@@ -16953,7 +16953,7 @@ func FprintOnColor189(w io.Writer, str string) {
 }
 
 // FprintfOnColor189 wraps OnColor189 and fmt.Fprintf().
-func FprintfOnColor189(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor189(w io.Writer, format string, args ...any) {
 	FprintOnColor189(w, Sprintf(format, args...))
 }
 
@@ -16968,7 +16968,7 @@ func PrintOnColor189(str string) {
 }
 
 // PrintfOnColor189 wraps OnColor189() and fmt.Printf().
-func PrintfOnColor189(format string, args ...interface{}) {
+func PrintfOnColor189(format string, args ...any) {
 	PrintOnColor189(Sprintf(format, args...))
 }
 
@@ -16984,7 +16984,7 @@ func Color190(str string) string {
 }
 
 // Color190f wraps fmt.Sprintf() and Color190.
-func Color190f(format string, args ...interface{}) string {
+func Color190f(format string, args ...any) string {
 	return Color190(Sprintf(format, args...))
 }
 
@@ -16994,7 +16994,7 @@ func FprintColor190(w io.Writer, str string) {
 }
 
 // FprintfColor190 wraps Color190 and fmt.Fprintf().
-func FprintfColor190(w io.Writer, format string, args ...interface{}) {
+func FprintfColor190(w io.Writer, format string, args ...any) {
 	FprintColor190(w, Sprintf(format, args...))
 }
 
@@ -17009,7 +17009,7 @@ func PrintColor190(str string) {
 }
 
 // PrintfColor190 wraps Color190() and fmt.Printf().
-func PrintfColor190(format string, args ...interface{}) {
+func PrintfColor190(format string, args ...any) {
 	PrintColor190(Sprintf(format, args...))
 }
 
@@ -17025,7 +17025,7 @@ func OnColor190(str string) string {
 }
 
 // OnColor190f wraps fmt.Sprintf() and OnColor190.
-func OnColor190f(format string, args ...interface{}) string {
+func OnColor190f(format string, args ...any) string {
 	return OnColor190(Sprintf(format, args...))
 }
 
@@ -17035,7 +17035,7 @@ func FprintOnColor190(w io.Writer, str string) {
 }
 
 // FprintfOnColor190 wraps OnColor190 and fmt.Fprintf().
-func FprintfOnColor190(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor190(w io.Writer, format string, args ...any) {
 	FprintOnColor190(w, Sprintf(format, args...))
 }
 
@@ -17050,7 +17050,7 @@ func PrintOnColor190(str string) {
 }
 
 // PrintfOnColor190 wraps OnColor190() and fmt.Printf().
-func PrintfOnColor190(format string, args ...interface{}) {
+func PrintfOnColor190(format string, args ...any) {
 	PrintOnColor190(Sprintf(format, args...))
 }
 
@@ -17066,7 +17066,7 @@ func Color191(str string) string {
 }
 
 // Color191f wraps fmt.Sprintf() and Color191.
-func Color191f(format string, args ...interface{}) string {
+func Color191f(format string, args ...any) string {
 	return Color191(Sprintf(format, args...))
 }
 
@@ -17076,7 +17076,7 @@ func FprintColor191(w io.Writer, str string) {
 }
 
 // FprintfColor191 wraps Color191 and fmt.Fprintf().
-func FprintfColor191(w io.Writer, format string, args ...interface{}) {
+func FprintfColor191(w io.Writer, format string, args ...any) {
 	FprintColor191(w, Sprintf(format, args...))
 }
 
@@ -17091,7 +17091,7 @@ func PrintColor191(str string) {
 }
 
 // PrintfColor191 wraps Color191() and fmt.Printf().
-func PrintfColor191(format string, args ...interface{}) {
+func PrintfColor191(format string, args ...any) {
 	PrintColor191(Sprintf(format, args...))
 }
 
@@ -17107,7 +17107,7 @@ func OnColor191(str string) string {
 }
 
 // OnColor191f wraps fmt.Sprintf() and OnColor191.
-func OnColor191f(format string, args ...interface{}) string {
+func OnColor191f(format string, args ...any) string {
 	return OnColor191(Sprintf(format, args...))
 }
 
@@ -17117,7 +17117,7 @@ func FprintOnColor191(w io.Writer, str string) {
 }
 
 // FprintfOnColor191 wraps OnColor191 and fmt.Fprintf().
-func FprintfOnColor191(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor191(w io.Writer, format string, args ...any) {
 	FprintOnColor191(w, Sprintf(format, args...))
 }
 
@@ -17132,7 +17132,7 @@ func PrintOnColor191(str string) {
 }
 
 // PrintfOnColor191 wraps OnColor191() and fmt.Printf().
-func PrintfOnColor191(format string, args ...interface{}) {
+func PrintfOnColor191(format string, args ...any) {
 	PrintOnColor191(Sprintf(format, args...))
 }
 
@@ -17148,7 +17148,7 @@ func Color192(str string) string {
 }
 
 // Color192f wraps fmt.Sprintf() and Color192.
-func Color192f(format string, args ...interface{}) string {
+func Color192f(format string, args ...any) string {
 	return Color192(Sprintf(format, args...))
 }
 
@@ -17158,7 +17158,7 @@ func FprintColor192(w io.Writer, str string) {
 }
 
 // FprintfColor192 wraps Color192 and fmt.Fprintf().
-func FprintfColor192(w io.Writer, format string, args ...interface{}) {
+func FprintfColor192(w io.Writer, format string, args ...any) {
 	FprintColor192(w, Sprintf(format, args...))
 }
 
@@ -17173,7 +17173,7 @@ func PrintColor192(str string) {
 }
 
 // PrintfColor192 wraps Color192() and fmt.Printf().
-func PrintfColor192(format string, args ...interface{}) {
+func PrintfColor192(format string, args ...any) {
 	PrintColor192(Sprintf(format, args...))
 }
 
@@ -17189,7 +17189,7 @@ func OnColor192(str string) string {
 }
 
 // OnColor192f wraps fmt.Sprintf() and OnColor192.
-func OnColor192f(format string, args ...interface{}) string {
+func OnColor192f(format string, args ...any) string {
 	return OnColor192(Sprintf(format, args...))
 }
 
@@ -17199,7 +17199,7 @@ func FprintOnColor192(w io.Writer, str string) {
 }
 
 // FprintfOnColor192 wraps OnColor192 and fmt.Fprintf().
-func FprintfOnColor192(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor192(w io.Writer, format string, args ...any) {
 	FprintOnColor192(w, Sprintf(format, args...))
 }
 
@@ -17214,7 +17214,7 @@ func PrintOnColor192(str string) {
 }
 
 // PrintfOnColor192 wraps OnColor192() and fmt.Printf().
-func PrintfOnColor192(format string, args ...interface{}) {
+func PrintfOnColor192(format string, args ...any) {
 	PrintOnColor192(Sprintf(format, args...))
 }
 
@@ -17230,7 +17230,7 @@ func Color193(str string) string {
 }
 
 // Color193f wraps fmt.Sprintf() and Color193.
-func Color193f(format string, args ...interface{}) string {
+func Color193f(format string, args ...any) string {
 	return Color193(Sprintf(format, args...))
 }
 
@@ -17240,7 +17240,7 @@ func FprintColor193(w io.Writer, str string) {
 }
 
 // FprintfColor193 wraps Color193 and fmt.Fprintf().
-func FprintfColor193(w io.Writer, format string, args ...interface{}) {
+func FprintfColor193(w io.Writer, format string, args ...any) {
 	FprintColor193(w, Sprintf(format, args...))
 }
 
@@ -17255,7 +17255,7 @@ func PrintColor193(str string) {
 }
 
 // PrintfColor193 wraps Color193() and fmt.Printf().
-func PrintfColor193(format string, args ...interface{}) {
+func PrintfColor193(format string, args ...any) {
 	PrintColor193(Sprintf(format, args...))
 }
 
@@ -17271,7 +17271,7 @@ func OnColor193(str string) string {
 }
 
 // OnColor193f wraps fmt.Sprintf() and OnColor193.
-func OnColor193f(format string, args ...interface{}) string {
+func OnColor193f(format string, args ...any) string {
 	return OnColor193(Sprintf(format, args...))
 }
 
@@ -17281,7 +17281,7 @@ func FprintOnColor193(w io.Writer, str string) {
 }
 
 // FprintfOnColor193 wraps OnColor193 and fmt.Fprintf().
-func FprintfOnColor193(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor193(w io.Writer, format string, args ...any) {
 	FprintOnColor193(w, Sprintf(format, args...))
 }
 
@@ -17296,7 +17296,7 @@ func PrintOnColor193(str string) {
 }
 
 // PrintfOnColor193 wraps OnColor193() and fmt.Printf().
-func PrintfOnColor193(format string, args ...interface{}) {
+func PrintfOnColor193(format string, args ...any) {
 	PrintOnColor193(Sprintf(format, args...))
 }
 
@@ -17312,7 +17312,7 @@ func Color194(str string) string {
 }
 
 // Color194f wraps fmt.Sprintf() and Color194.
-func Color194f(format string, args ...interface{}) string {
+func Color194f(format string, args ...any) string {
 	return Color194(Sprintf(format, args...))
 }
 
@@ -17322,7 +17322,7 @@ func FprintColor194(w io.Writer, str string) {
 }
 
 // FprintfColor194 wraps Color194 and fmt.Fprintf().
-func FprintfColor194(w io.Writer, format string, args ...interface{}) {
+func FprintfColor194(w io.Writer, format string, args ...any) {
 	FprintColor194(w, Sprintf(format, args...))
 }
 
@@ -17337,7 +17337,7 @@ func PrintColor194(str string) {
 }
 
 // PrintfColor194 wraps Color194() and fmt.Printf().
-func PrintfColor194(format string, args ...interface{}) {
+func PrintfColor194(format string, args ...any) {
 	PrintColor194(Sprintf(format, args...))
 }
 
@@ -17353,7 +17353,7 @@ func OnColor194(str string) string {
 }
 
 // OnColor194f wraps fmt.Sprintf() and OnColor194.
-func OnColor194f(format string, args ...interface{}) string {
+func OnColor194f(format string, args ...any) string {
 	return OnColor194(Sprintf(format, args...))
 }
 
@@ -17363,7 +17363,7 @@ func FprintOnColor194(w io.Writer, str string) {
 }
 
 // FprintfOnColor194 wraps OnColor194 and fmt.Fprintf().
-func FprintfOnColor194(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor194(w io.Writer, format string, args ...any) {
 	FprintOnColor194(w, Sprintf(format, args...))
 }
 
@@ -17378,7 +17378,7 @@ func PrintOnColor194(str string) {
 }
 
 // PrintfOnColor194 wraps OnColor194() and fmt.Printf().
-func PrintfOnColor194(format string, args ...interface{}) {
+func PrintfOnColor194(format string, args ...any) {
 	PrintOnColor194(Sprintf(format, args...))
 }
 
@@ -17394,7 +17394,7 @@ func Color195(str string) string {
 }
 
 // Color195f wraps fmt.Sprintf() and Color195.
-func Color195f(format string, args ...interface{}) string {
+func Color195f(format string, args ...any) string {
 	return Color195(Sprintf(format, args...))
 }
 
@@ -17404,7 +17404,7 @@ func FprintColor195(w io.Writer, str string) {
 }
 
 // FprintfColor195 wraps Color195 and fmt.Fprintf().
-func FprintfColor195(w io.Writer, format string, args ...interface{}) {
+func FprintfColor195(w io.Writer, format string, args ...any) {
 	FprintColor195(w, Sprintf(format, args...))
 }
 
@@ -17419,7 +17419,7 @@ func PrintColor195(str string) {
 }
 
 // PrintfColor195 wraps Color195() and fmt.Printf().
-func PrintfColor195(format string, args ...interface{}) {
+func PrintfColor195(format string, args ...any) {
 	PrintColor195(Sprintf(format, args...))
 }
 
@@ -17435,7 +17435,7 @@ func OnColor195(str string) string {
 }
 
 // OnColor195f wraps fmt.Sprintf() and OnColor195.
-func OnColor195f(format string, args ...interface{}) string {
+func OnColor195f(format string, args ...any) string {
 	return OnColor195(Sprintf(format, args...))
 }
 
@@ -17445,7 +17445,7 @@ func FprintOnColor195(w io.Writer, str string) {
 }
 
 // FprintfOnColor195 wraps OnColor195 and fmt.Fprintf().
-func FprintfOnColor195(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor195(w io.Writer, format string, args ...any) {
 	FprintOnColor195(w, Sprintf(format, args...))
 }
 
@@ -17460,7 +17460,7 @@ func PrintOnColor195(str string) {
 }
 
 // PrintfOnColor195 wraps OnColor195() and fmt.Printf().
-func PrintfOnColor195(format string, args ...interface{}) {
+func PrintfOnColor195(format string, args ...any) {
 	PrintOnColor195(Sprintf(format, args...))
 }
 
@@ -17476,7 +17476,7 @@ func Color196(str string) string {
 }
 
 // Color196f wraps fmt.Sprintf() and Color196.
-func Color196f(format string, args ...interface{}) string {
+func Color196f(format string, args ...any) string {
 	return Color196(Sprintf(format, args...))
 }
 
@@ -17486,7 +17486,7 @@ func FprintColor196(w io.Writer, str string) {
 }
 
 // FprintfColor196 wraps Color196 and fmt.Fprintf().
-func FprintfColor196(w io.Writer, format string, args ...interface{}) {
+func FprintfColor196(w io.Writer, format string, args ...any) {
 	FprintColor196(w, Sprintf(format, args...))
 }
 
@@ -17501,7 +17501,7 @@ func PrintColor196(str string) {
 }
 
 // PrintfColor196 wraps Color196() and fmt.Printf().
-func PrintfColor196(format string, args ...interface{}) {
+func PrintfColor196(format string, args ...any) {
 	PrintColor196(Sprintf(format, args...))
 }
 
@@ -17517,7 +17517,7 @@ func OnColor196(str string) string {
 }
 
 // OnColor196f wraps fmt.Sprintf() and OnColor196.
-func OnColor196f(format string, args ...interface{}) string {
+func OnColor196f(format string, args ...any) string {
 	return OnColor196(Sprintf(format, args...))
 }
 
@@ -17527,7 +17527,7 @@ func FprintOnColor196(w io.Writer, str string) {
 }
 
 // FprintfOnColor196 wraps OnColor196 and fmt.Fprintf().
-func FprintfOnColor196(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor196(w io.Writer, format string, args ...any) {
 	FprintOnColor196(w, Sprintf(format, args...))
 }
 
@@ -17542,7 +17542,7 @@ func PrintOnColor196(str string) {
 }
 
 // PrintfOnColor196 wraps OnColor196() and fmt.Printf().
-func PrintfOnColor196(format string, args ...interface{}) {
+func PrintfOnColor196(format string, args ...any) {
 	PrintOnColor196(Sprintf(format, args...))
 }
 
@@ -17558,7 +17558,7 @@ func Color197(str string) string {
 }
 
 // Color197f wraps fmt.Sprintf() and Color197.
-func Color197f(format string, args ...interface{}) string {
+func Color197f(format string, args ...any) string {
 	return Color197(Sprintf(format, args...))
 }
 
@@ -17568,7 +17568,7 @@ func FprintColor197(w io.Writer, str string) {
 }
 
 // FprintfColor197 wraps Color197 and fmt.Fprintf().
-func FprintfColor197(w io.Writer, format string, args ...interface{}) {
+func FprintfColor197(w io.Writer, format string, args ...any) {
 	FprintColor197(w, Sprintf(format, args...))
 }
 
@@ -17583,7 +17583,7 @@ func PrintColor197(str string) {
 }
 
 // PrintfColor197 wraps Color197() and fmt.Printf().
-func PrintfColor197(format string, args ...interface{}) {
+func PrintfColor197(format string, args ...any) {
 	PrintColor197(Sprintf(format, args...))
 }
 
@@ -17599,7 +17599,7 @@ func OnColor197(str string) string {
 }
 
 // OnColor197f wraps fmt.Sprintf() and OnColor197.
-func OnColor197f(format string, args ...interface{}) string {
+func OnColor197f(format string, args ...any) string {
 	return OnColor197(Sprintf(format, args...))
 }
 
@@ -17609,7 +17609,7 @@ func FprintOnColor197(w io.Writer, str string) {
 }
 
 // FprintfOnColor197 wraps OnColor197 and fmt.Fprintf().
-func FprintfOnColor197(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor197(w io.Writer, format string, args ...any) {
 	FprintOnColor197(w, Sprintf(format, args...))
 }
 
@@ -17624,7 +17624,7 @@ func PrintOnColor197(str string) {
 }
 
 // PrintfOnColor197 wraps OnColor197() and fmt.Printf().
-func PrintfOnColor197(format string, args ...interface{}) {
+func PrintfOnColor197(format string, args ...any) {
 	PrintOnColor197(Sprintf(format, args...))
 }
 
@@ -17640,7 +17640,7 @@ func Color198(str string) string {
 }
 
 // Color198f wraps fmt.Sprintf() and Color198.
-func Color198f(format string, args ...interface{}) string {
+func Color198f(format string, args ...any) string {
 	return Color198(Sprintf(format, args...))
 }
 
@@ -17650,7 +17650,7 @@ func FprintColor198(w io.Writer, str string) {
 }
 
 // FprintfColor198 wraps Color198 and fmt.Fprintf().
-func FprintfColor198(w io.Writer, format string, args ...interface{}) {
+func FprintfColor198(w io.Writer, format string, args ...any) {
 	FprintColor198(w, Sprintf(format, args...))
 }
 
@@ -17665,7 +17665,7 @@ func PrintColor198(str string) {
 }
 
 // PrintfColor198 wraps Color198() and fmt.Printf().
-func PrintfColor198(format string, args ...interface{}) {
+func PrintfColor198(format string, args ...any) {
 	PrintColor198(Sprintf(format, args...))
 }
 
@@ -17681,7 +17681,7 @@ func OnColor198(str string) string {
 }
 
 // OnColor198f wraps fmt.Sprintf() and OnColor198.
-func OnColor198f(format string, args ...interface{}) string {
+func OnColor198f(format string, args ...any) string {
 	return OnColor198(Sprintf(format, args...))
 }
 
@@ -17691,7 +17691,7 @@ func FprintOnColor198(w io.Writer, str string) {
 }
 
 // FprintfOnColor198 wraps OnColor198 and fmt.Fprintf().
-func FprintfOnColor198(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor198(w io.Writer, format string, args ...any) {
 	FprintOnColor198(w, Sprintf(format, args...))
 }
 
@@ -17706,7 +17706,7 @@ func PrintOnColor198(str string) {
 }
 
 // PrintfOnColor198 wraps OnColor198() and fmt.Printf().
-func PrintfOnColor198(format string, args ...interface{}) {
+func PrintfOnColor198(format string, args ...any) {
 	PrintOnColor198(Sprintf(format, args...))
 }
 
@@ -17722,7 +17722,7 @@ func Color199(str string) string {
 }
 
 // Color199f wraps fmt.Sprintf() and Color199.
-func Color199f(format string, args ...interface{}) string {
+func Color199f(format string, args ...any) string {
 	return Color199(Sprintf(format, args...))
 }
 
@@ -17732,7 +17732,7 @@ func FprintColor199(w io.Writer, str string) {
 }
 
 // FprintfColor199 wraps Color199 and fmt.Fprintf().
-func FprintfColor199(w io.Writer, format string, args ...interface{}) {
+func FprintfColor199(w io.Writer, format string, args ...any) {
 	FprintColor199(w, Sprintf(format, args...))
 }
 
@@ -17747,7 +17747,7 @@ func PrintColor199(str string) {
 }
 
 // PrintfColor199 wraps Color199() and fmt.Printf().
-func PrintfColor199(format string, args ...interface{}) {
+func PrintfColor199(format string, args ...any) {
 	PrintColor199(Sprintf(format, args...))
 }
 
@@ -17763,7 +17763,7 @@ func OnColor199(str string) string {
 }
 
 // OnColor199f wraps fmt.Sprintf() and OnColor199.
-func OnColor199f(format string, args ...interface{}) string {
+func OnColor199f(format string, args ...any) string {
 	return OnColor199(Sprintf(format, args...))
 }
 
@@ -17773,7 +17773,7 @@ func FprintOnColor199(w io.Writer, str string) {
 }
 
 // FprintfOnColor199 wraps OnColor199 and fmt.Fprintf().
-func FprintfOnColor199(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor199(w io.Writer, format string, args ...any) {
 	FprintOnColor199(w, Sprintf(format, args...))
 }
 
@@ -17788,7 +17788,7 @@ func PrintOnColor199(str string) {
 }
 
 // PrintfOnColor199 wraps OnColor199() and fmt.Printf().
-func PrintfOnColor199(format string, args ...interface{}) {
+func PrintfOnColor199(format string, args ...any) {
 	PrintOnColor199(Sprintf(format, args...))
 }
 
@@ -17804,7 +17804,7 @@ func Color200(str string) string {
 }
 
 // Color200f wraps fmt.Sprintf() and Color200.
-func Color200f(format string, args ...interface{}) string {
+func Color200f(format string, args ...any) string {
 	return Color200(Sprintf(format, args...))
 }
 
@@ -17814,7 +17814,7 @@ func FprintColor200(w io.Writer, str string) {
 }
 
 // FprintfColor200 wraps Color200 and fmt.Fprintf().
-func FprintfColor200(w io.Writer, format string, args ...interface{}) {
+func FprintfColor200(w io.Writer, format string, args ...any) {
 	FprintColor200(w, Sprintf(format, args...))
 }
 
@@ -17829,7 +17829,7 @@ func PrintColor200(str string) {
 }
 
 // PrintfColor200 wraps Color200() and fmt.Printf().
-func PrintfColor200(format string, args ...interface{}) {
+func PrintfColor200(format string, args ...any) {
 	PrintColor200(Sprintf(format, args...))
 }
 
@@ -17845,7 +17845,7 @@ func OnColor200(str string) string {
 }
 
 // OnColor200f wraps fmt.Sprintf() and OnColor200.
-func OnColor200f(format string, args ...interface{}) string {
+func OnColor200f(format string, args ...any) string {
 	return OnColor200(Sprintf(format, args...))
 }
 
@@ -17855,7 +17855,7 @@ func FprintOnColor200(w io.Writer, str string) {
 }
 
 // FprintfOnColor200 wraps OnColor200 and fmt.Fprintf().
-func FprintfOnColor200(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor200(w io.Writer, format string, args ...any) {
 	FprintOnColor200(w, Sprintf(format, args...))
 }
 
@@ -17870,7 +17870,7 @@ func PrintOnColor200(str string) {
 }
 
 // PrintfOnColor200 wraps OnColor200() and fmt.Printf().
-func PrintfOnColor200(format string, args ...interface{}) {
+func PrintfOnColor200(format string, args ...any) {
 	PrintOnColor200(Sprintf(format, args...))
 }
 
@@ -17886,7 +17886,7 @@ func Color201(str string) string {
 }
 
 // Color201f wraps fmt.Sprintf() and Color201.
-func Color201f(format string, args ...interface{}) string {
+func Color201f(format string, args ...any) string {
 	return Color201(Sprintf(format, args...))
 }
 
@@ -17896,7 +17896,7 @@ func FprintColor201(w io.Writer, str string) {
 }
 
 // FprintfColor201 wraps Color201 and fmt.Fprintf().
-func FprintfColor201(w io.Writer, format string, args ...interface{}) {
+func FprintfColor201(w io.Writer, format string, args ...any) {
 	FprintColor201(w, Sprintf(format, args...))
 }
 
@@ -17911,7 +17911,7 @@ func PrintColor201(str string) {
 }
 
 // PrintfColor201 wraps Color201() and fmt.Printf().
-func PrintfColor201(format string, args ...interface{}) {
+func PrintfColor201(format string, args ...any) {
 	PrintColor201(Sprintf(format, args...))
 }
 
@@ -17927,7 +17927,7 @@ func OnColor201(str string) string {
 }
 
 // OnColor201f wraps fmt.Sprintf() and OnColor201.
-func OnColor201f(format string, args ...interface{}) string {
+func OnColor201f(format string, args ...any) string {
 	return OnColor201(Sprintf(format, args...))
 }
 
@@ -17937,7 +17937,7 @@ func FprintOnColor201(w io.Writer, str string) {
 }
 
 // FprintfOnColor201 wraps OnColor201 and fmt.Fprintf().
-func FprintfOnColor201(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor201(w io.Writer, format string, args ...any) {
 	FprintOnColor201(w, Sprintf(format, args...))
 }
 
@@ -17952,7 +17952,7 @@ func PrintOnColor201(str string) {
 }
 
 // PrintfOnColor201 wraps OnColor201() and fmt.Printf().
-func PrintfOnColor201(format string, args ...interface{}) {
+func PrintfOnColor201(format string, args ...any) {
 	PrintOnColor201(Sprintf(format, args...))
 }
 
@@ -17968,7 +17968,7 @@ func Color202(str string) string {
 }
 
 // Color202f wraps fmt.Sprintf() and Color202.
-func Color202f(format string, args ...interface{}) string {
+func Color202f(format string, args ...any) string {
 	return Color202(Sprintf(format, args...))
 }
 
@@ -17978,7 +17978,7 @@ func FprintColor202(w io.Writer, str string) {
 }
 
 // FprintfColor202 wraps Color202 and fmt.Fprintf().
-func FprintfColor202(w io.Writer, format string, args ...interface{}) {
+func FprintfColor202(w io.Writer, format string, args ...any) {
 	FprintColor202(w, Sprintf(format, args...))
 }
 
@@ -17993,7 +17993,7 @@ func PrintColor202(str string) {
 }
 
 // PrintfColor202 wraps Color202() and fmt.Printf().
-func PrintfColor202(format string, args ...interface{}) {
+func PrintfColor202(format string, args ...any) {
 	PrintColor202(Sprintf(format, args...))
 }
 
@@ -18009,7 +18009,7 @@ func OnColor202(str string) string {
 }
 
 // OnColor202f wraps fmt.Sprintf() and OnColor202.
-func OnColor202f(format string, args ...interface{}) string {
+func OnColor202f(format string, args ...any) string {
 	return OnColor202(Sprintf(format, args...))
 }
 
@@ -18019,7 +18019,7 @@ func FprintOnColor202(w io.Writer, str string) {
 }
 
 // FprintfOnColor202 wraps OnColor202 and fmt.Fprintf().
-func FprintfOnColor202(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor202(w io.Writer, format string, args ...any) {
 	FprintOnColor202(w, Sprintf(format, args...))
 }
 
@@ -18034,7 +18034,7 @@ func PrintOnColor202(str string) {
 }
 
 // PrintfOnColor202 wraps OnColor202() and fmt.Printf().
-func PrintfOnColor202(format string, args ...interface{}) {
+func PrintfOnColor202(format string, args ...any) {
 	PrintOnColor202(Sprintf(format, args...))
 }
 
@@ -18050,7 +18050,7 @@ func Color203(str string) string {
 }
 
 // Color203f wraps fmt.Sprintf() and Color203.
-func Color203f(format string, args ...interface{}) string {
+func Color203f(format string, args ...any) string {
 	return Color203(Sprintf(format, args...))
 }
 
@@ -18060,7 +18060,7 @@ func FprintColor203(w io.Writer, str string) {
 }
 
 // FprintfColor203 wraps Color203 and fmt.Fprintf().
-func FprintfColor203(w io.Writer, format string, args ...interface{}) {
+func FprintfColor203(w io.Writer, format string, args ...any) {
 	FprintColor203(w, Sprintf(format, args...))
 }
 
@@ -18075,7 +18075,7 @@ func PrintColor203(str string) {
 }
 
 // PrintfColor203 wraps Color203() and fmt.Printf().
-func PrintfColor203(format string, args ...interface{}) {
+func PrintfColor203(format string, args ...any) {
 	PrintColor203(Sprintf(format, args...))
 }
 
@@ -18091,7 +18091,7 @@ func OnColor203(str string) string {
 }
 
 // OnColor203f wraps fmt.Sprintf() and OnColor203.
-func OnColor203f(format string, args ...interface{}) string {
+func OnColor203f(format string, args ...any) string {
 	return OnColor203(Sprintf(format, args...))
 }
 
@@ -18101,7 +18101,7 @@ func FprintOnColor203(w io.Writer, str string) {
 }
 
 // FprintfOnColor203 wraps OnColor203 and fmt.Fprintf().
-func FprintfOnColor203(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor203(w io.Writer, format string, args ...any) {
 	FprintOnColor203(w, Sprintf(format, args...))
 }
 
@@ -18116,7 +18116,7 @@ func PrintOnColor203(str string) {
 }
 
 // PrintfOnColor203 wraps OnColor203() and fmt.Printf().
-func PrintfOnColor203(format string, args ...interface{}) {
+func PrintfOnColor203(format string, args ...any) {
 	PrintOnColor203(Sprintf(format, args...))
 }
 
@@ -18132,7 +18132,7 @@ func Color204(str string) string {
 }
 
 // Color204f wraps fmt.Sprintf() and Color204.
-func Color204f(format string, args ...interface{}) string {
+func Color204f(format string, args ...any) string {
 	return Color204(Sprintf(format, args...))
 }
 
@@ -18142,7 +18142,7 @@ func FprintColor204(w io.Writer, str string) {
 }
 
 // FprintfColor204 wraps Color204 and fmt.Fprintf().
-func FprintfColor204(w io.Writer, format string, args ...interface{}) {
+func FprintfColor204(w io.Writer, format string, args ...any) {
 	FprintColor204(w, Sprintf(format, args...))
 }
 
@@ -18157,7 +18157,7 @@ func PrintColor204(str string) {
 }
 
 // PrintfColor204 wraps Color204() and fmt.Printf().
-func PrintfColor204(format string, args ...interface{}) {
+func PrintfColor204(format string, args ...any) {
 	PrintColor204(Sprintf(format, args...))
 }
 
@@ -18173,7 +18173,7 @@ func OnColor204(str string) string {
 }
 
 // OnColor204f wraps fmt.Sprintf() and OnColor204.
-func OnColor204f(format string, args ...interface{}) string {
+func OnColor204f(format string, args ...any) string {
 	return OnColor204(Sprintf(format, args...))
 }
 
@@ -18183,7 +18183,7 @@ func FprintOnColor204(w io.Writer, str string) {
 }
 
 // FprintfOnColor204 wraps OnColor204 and fmt.Fprintf().
-func FprintfOnColor204(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor204(w io.Writer, format string, args ...any) {
 	FprintOnColor204(w, Sprintf(format, args...))
 }
 
@@ -18198,7 +18198,7 @@ func PrintOnColor204(str string) {
 }
 
 // PrintfOnColor204 wraps OnColor204() and fmt.Printf().
-func PrintfOnColor204(format string, args ...interface{}) {
+func PrintfOnColor204(format string, args ...any) {
 	PrintOnColor204(Sprintf(format, args...))
 }
 
@@ -18214,7 +18214,7 @@ func Color205(str string) string {
 }
 
 // Color205f wraps fmt.Sprintf() and Color205.
-func Color205f(format string, args ...interface{}) string {
+func Color205f(format string, args ...any) string {
 	return Color205(Sprintf(format, args...))
 }
 
@@ -18224,7 +18224,7 @@ func FprintColor205(w io.Writer, str string) {
 }
 
 // FprintfColor205 wraps Color205 and fmt.Fprintf().
-func FprintfColor205(w io.Writer, format string, args ...interface{}) {
+func FprintfColor205(w io.Writer, format string, args ...any) {
 	FprintColor205(w, Sprintf(format, args...))
 }
 
@@ -18239,7 +18239,7 @@ func PrintColor205(str string) {
 }
 
 // PrintfColor205 wraps Color205() and fmt.Printf().
-func PrintfColor205(format string, args ...interface{}) {
+func PrintfColor205(format string, args ...any) {
 	PrintColor205(Sprintf(format, args...))
 }
 
@@ -18255,7 +18255,7 @@ func OnColor205(str string) string {
 }
 
 // OnColor205f wraps fmt.Sprintf() and OnColor205.
-func OnColor205f(format string, args ...interface{}) string {
+func OnColor205f(format string, args ...any) string {
 	return OnColor205(Sprintf(format, args...))
 }
 
@@ -18265,7 +18265,7 @@ func FprintOnColor205(w io.Writer, str string) {
 }
 
 // FprintfOnColor205 wraps OnColor205 and fmt.Fprintf().
-func FprintfOnColor205(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor205(w io.Writer, format string, args ...any) {
 	FprintOnColor205(w, Sprintf(format, args...))
 }
 
@@ -18280,7 +18280,7 @@ func PrintOnColor205(str string) {
 }
 
 // PrintfOnColor205 wraps OnColor205() and fmt.Printf().
-func PrintfOnColor205(format string, args ...interface{}) {
+func PrintfOnColor205(format string, args ...any) {
 	PrintOnColor205(Sprintf(format, args...))
 }
 
@@ -18296,7 +18296,7 @@ func Color206(str string) string {
 }
 
 // Color206f wraps fmt.Sprintf() and Color206.
-func Color206f(format string, args ...interface{}) string {
+func Color206f(format string, args ...any) string {
 	return Color206(Sprintf(format, args...))
 }
 
@@ -18306,7 +18306,7 @@ func FprintColor206(w io.Writer, str string) {
 }
 
 // FprintfColor206 wraps Color206 and fmt.Fprintf().
-func FprintfColor206(w io.Writer, format string, args ...interface{}) {
+func FprintfColor206(w io.Writer, format string, args ...any) {
 	FprintColor206(w, Sprintf(format, args...))
 }
 
@@ -18321,7 +18321,7 @@ func PrintColor206(str string) {
 }
 
 // PrintfColor206 wraps Color206() and fmt.Printf().
-func PrintfColor206(format string, args ...interface{}) {
+func PrintfColor206(format string, args ...any) {
 	PrintColor206(Sprintf(format, args...))
 }
 
@@ -18337,7 +18337,7 @@ func OnColor206(str string) string {
 }
 
 // OnColor206f wraps fmt.Sprintf() and OnColor206.
-func OnColor206f(format string, args ...interface{}) string {
+func OnColor206f(format string, args ...any) string {
 	return OnColor206(Sprintf(format, args...))
 }
 
@@ -18347,7 +18347,7 @@ func FprintOnColor206(w io.Writer, str string) {
 }
 
 // FprintfOnColor206 wraps OnColor206 and fmt.Fprintf().
-func FprintfOnColor206(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor206(w io.Writer, format string, args ...any) {
 	FprintOnColor206(w, Sprintf(format, args...))
 }
 
@@ -18362,7 +18362,7 @@ func PrintOnColor206(str string) {
 }
 
 // PrintfOnColor206 wraps OnColor206() and fmt.Printf().
-func PrintfOnColor206(format string, args ...interface{}) {
+func PrintfOnColor206(format string, args ...any) {
 	PrintOnColor206(Sprintf(format, args...))
 }
 
@@ -18378,7 +18378,7 @@ func Color207(str string) string {
 }
 
 // Color207f wraps fmt.Sprintf() and Color207.
-func Color207f(format string, args ...interface{}) string {
+func Color207f(format string, args ...any) string {
 	return Color207(Sprintf(format, args...))
 }
 
@@ -18388,7 +18388,7 @@ func FprintColor207(w io.Writer, str string) {
 }
 
 // FprintfColor207 wraps Color207 and fmt.Fprintf().
-func FprintfColor207(w io.Writer, format string, args ...interface{}) {
+func FprintfColor207(w io.Writer, format string, args ...any) {
 	FprintColor207(w, Sprintf(format, args...))
 }
 
@@ -18403,7 +18403,7 @@ func PrintColor207(str string) {
 }
 
 // PrintfColor207 wraps Color207() and fmt.Printf().
-func PrintfColor207(format string, args ...interface{}) {
+func PrintfColor207(format string, args ...any) {
 	PrintColor207(Sprintf(format, args...))
 }
 
@@ -18419,7 +18419,7 @@ func OnColor207(str string) string {
 }
 
 // OnColor207f wraps fmt.Sprintf() and OnColor207.
-func OnColor207f(format string, args ...interface{}) string {
+func OnColor207f(format string, args ...any) string {
 	return OnColor207(Sprintf(format, args...))
 }
 
@@ -18429,7 +18429,7 @@ func FprintOnColor207(w io.Writer, str string) {
 }
 
 // FprintfOnColor207 wraps OnColor207 and fmt.Fprintf().
-func FprintfOnColor207(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor207(w io.Writer, format string, args ...any) {
 	FprintOnColor207(w, Sprintf(format, args...))
 }
 
@@ -18444,7 +18444,7 @@ func PrintOnColor207(str string) {
 }
 
 // PrintfOnColor207 wraps OnColor207() and fmt.Printf().
-func PrintfOnColor207(format string, args ...interface{}) {
+func PrintfOnColor207(format string, args ...any) {
 	PrintOnColor207(Sprintf(format, args...))
 }
 
@@ -18460,7 +18460,7 @@ func Color208(str string) string {
 }
 
 // Color208f wraps fmt.Sprintf() and Color208.
-func Color208f(format string, args ...interface{}) string {
+func Color208f(format string, args ...any) string {
 	return Color208(Sprintf(format, args...))
 }
 
@@ -18470,7 +18470,7 @@ func FprintColor208(w io.Writer, str string) {
 }
 
 // FprintfColor208 wraps Color208 and fmt.Fprintf().
-func FprintfColor208(w io.Writer, format string, args ...interface{}) {
+func FprintfColor208(w io.Writer, format string, args ...any) {
 	FprintColor208(w, Sprintf(format, args...))
 }
 
@@ -18485,7 +18485,7 @@ func PrintColor208(str string) {
 }
 
 // PrintfColor208 wraps Color208() and fmt.Printf().
-func PrintfColor208(format string, args ...interface{}) {
+func PrintfColor208(format string, args ...any) {
 	PrintColor208(Sprintf(format, args...))
 }
 
@@ -18501,7 +18501,7 @@ func OnColor208(str string) string {
 }
 
 // OnColor208f wraps fmt.Sprintf() and OnColor208.
-func OnColor208f(format string, args ...interface{}) string {
+func OnColor208f(format string, args ...any) string {
 	return OnColor208(Sprintf(format, args...))
 }
 
@@ -18511,7 +18511,7 @@ func FprintOnColor208(w io.Writer, str string) {
 }
 
 // FprintfOnColor208 wraps OnColor208 and fmt.Fprintf().
-func FprintfOnColor208(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor208(w io.Writer, format string, args ...any) {
 	FprintOnColor208(w, Sprintf(format, args...))
 }
 
@@ -18526,7 +18526,7 @@ func PrintOnColor208(str string) {
 }
 
 // PrintfOnColor208 wraps OnColor208() and fmt.Printf().
-func PrintfOnColor208(format string, args ...interface{}) {
+func PrintfOnColor208(format string, args ...any) {
 	PrintOnColor208(Sprintf(format, args...))
 }
 
@@ -18542,7 +18542,7 @@ func Color209(str string) string {
 }
 
 // Color209f wraps fmt.Sprintf() and Color209.
-func Color209f(format string, args ...interface{}) string {
+func Color209f(format string, args ...any) string {
 	return Color209(Sprintf(format, args...))
 }
 
@@ -18552,7 +18552,7 @@ func FprintColor209(w io.Writer, str string) {
 }
 
 // FprintfColor209 wraps Color209 and fmt.Fprintf().
-func FprintfColor209(w io.Writer, format string, args ...interface{}) {
+func FprintfColor209(w io.Writer, format string, args ...any) {
 	FprintColor209(w, Sprintf(format, args...))
 }
 
@@ -18567,7 +18567,7 @@ func PrintColor209(str string) {
 }
 
 // PrintfColor209 wraps Color209() and fmt.Printf().
-func PrintfColor209(format string, args ...interface{}) {
+func PrintfColor209(format string, args ...any) {
 	PrintColor209(Sprintf(format, args...))
 }
 
@@ -18583,7 +18583,7 @@ func OnColor209(str string) string {
 }
 
 // OnColor209f wraps fmt.Sprintf() and OnColor209.
-func OnColor209f(format string, args ...interface{}) string {
+func OnColor209f(format string, args ...any) string {
 	return OnColor209(Sprintf(format, args...))
 }
 
@@ -18593,7 +18593,7 @@ func FprintOnColor209(w io.Writer, str string) {
 }
 
 // FprintfOnColor209 wraps OnColor209 and fmt.Fprintf().
-func FprintfOnColor209(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor209(w io.Writer, format string, args ...any) {
 	FprintOnColor209(w, Sprintf(format, args...))
 }
 
@@ -18608,7 +18608,7 @@ func PrintOnColor209(str string) {
 }
 
 // PrintfOnColor209 wraps OnColor209() and fmt.Printf().
-func PrintfOnColor209(format string, args ...interface{}) {
+func PrintfOnColor209(format string, args ...any) {
 	PrintOnColor209(Sprintf(format, args...))
 }
 
@@ -18624,7 +18624,7 @@ func Color210(str string) string {
 }
 
 // Color210f wraps fmt.Sprintf() and Color210.
-func Color210f(format string, args ...interface{}) string {
+func Color210f(format string, args ...any) string {
 	return Color210(Sprintf(format, args...))
 }
 
@@ -18634,7 +18634,7 @@ func FprintColor210(w io.Writer, str string) {
 }
 
 // FprintfColor210 wraps Color210 and fmt.Fprintf().
-func FprintfColor210(w io.Writer, format string, args ...interface{}) {
+func FprintfColor210(w io.Writer, format string, args ...any) {
 	FprintColor210(w, Sprintf(format, args...))
 }
 
@@ -18649,7 +18649,7 @@ func PrintColor210(str string) {
 }
 
 // PrintfColor210 wraps Color210() and fmt.Printf().
-func PrintfColor210(format string, args ...interface{}) {
+func PrintfColor210(format string, args ...any) {
 	PrintColor210(Sprintf(format, args...))
 }
 
@@ -18665,7 +18665,7 @@ func OnColor210(str string) string {
 }
 
 // OnColor210f wraps fmt.Sprintf() and OnColor210.
-func OnColor210f(format string, args ...interface{}) string {
+func OnColor210f(format string, args ...any) string {
 	return OnColor210(Sprintf(format, args...))
 }
 
@@ -18675,7 +18675,7 @@ func FprintOnColor210(w io.Writer, str string) {
 }
 
 // FprintfOnColor210 wraps OnColor210 and fmt.Fprintf().
-func FprintfOnColor210(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor210(w io.Writer, format string, args ...any) {
 	FprintOnColor210(w, Sprintf(format, args...))
 }
 
@@ -18690,7 +18690,7 @@ func PrintOnColor210(str string) {
 }
 
 // PrintfOnColor210 wraps OnColor210() and fmt.Printf().
-func PrintfOnColor210(format string, args ...interface{}) {
+func PrintfOnColor210(format string, args ...any) {
 	PrintOnColor210(Sprintf(format, args...))
 }
 
@@ -18706,7 +18706,7 @@ func Color211(str string) string {
 }
 
 // Color211f wraps fmt.Sprintf() and Color211.
-func Color211f(format string, args ...interface{}) string {
+func Color211f(format string, args ...any) string {
 	return Color211(Sprintf(format, args...))
 }
 
@@ -18716,7 +18716,7 @@ func FprintColor211(w io.Writer, str string) {
 }
 
 // FprintfColor211 wraps Color211 and fmt.Fprintf().
-func FprintfColor211(w io.Writer, format string, args ...interface{}) {
+func FprintfColor211(w io.Writer, format string, args ...any) {
 	FprintColor211(w, Sprintf(format, args...))
 }
 
@@ -18731,7 +18731,7 @@ func PrintColor211(str string) {
 }
 
 // PrintfColor211 wraps Color211() and fmt.Printf().
-func PrintfColor211(format string, args ...interface{}) {
+func PrintfColor211(format string, args ...any) {
 	PrintColor211(Sprintf(format, args...))
 }
 
@@ -18747,7 +18747,7 @@ func OnColor211(str string) string {
 }
 
 // OnColor211f wraps fmt.Sprintf() and OnColor211.
-func OnColor211f(format string, args ...interface{}) string {
+func OnColor211f(format string, args ...any) string {
 	return OnColor211(Sprintf(format, args...))
 }
 
@@ -18757,7 +18757,7 @@ func FprintOnColor211(w io.Writer, str string) {
 }
 
 // FprintfOnColor211 wraps OnColor211 and fmt.Fprintf().
-func FprintfOnColor211(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor211(w io.Writer, format string, args ...any) {
 	FprintOnColor211(w, Sprintf(format, args...))
 }
 
@@ -18772,7 +18772,7 @@ func PrintOnColor211(str string) {
 }
 
 // PrintfOnColor211 wraps OnColor211() and fmt.Printf().
-func PrintfOnColor211(format string, args ...interface{}) {
+func PrintfOnColor211(format string, args ...any) {
 	PrintOnColor211(Sprintf(format, args...))
 }
 
@@ -18788,7 +18788,7 @@ func Color212(str string) string {
 }
 
 // Color212f wraps fmt.Sprintf() and Color212.
-func Color212f(format string, args ...interface{}) string {
+func Color212f(format string, args ...any) string {
 	return Color212(Sprintf(format, args...))
 }
 
@@ -18798,7 +18798,7 @@ func FprintColor212(w io.Writer, str string) {
 }
 
 // FprintfColor212 wraps Color212 and fmt.Fprintf().
-func FprintfColor212(w io.Writer, format string, args ...interface{}) {
+func FprintfColor212(w io.Writer, format string, args ...any) {
 	FprintColor212(w, Sprintf(format, args...))
 }
 
@@ -18813,7 +18813,7 @@ func PrintColor212(str string) {
 }
 
 // PrintfColor212 wraps Color212() and fmt.Printf().
-func PrintfColor212(format string, args ...interface{}) {
+func PrintfColor212(format string, args ...any) {
 	PrintColor212(Sprintf(format, args...))
 }
 
@@ -18829,7 +18829,7 @@ func OnColor212(str string) string {
 }
 
 // OnColor212f wraps fmt.Sprintf() and OnColor212.
-func OnColor212f(format string, args ...interface{}) string {
+func OnColor212f(format string, args ...any) string {
 	return OnColor212(Sprintf(format, args...))
 }
 
@@ -18839,7 +18839,7 @@ func FprintOnColor212(w io.Writer, str string) {
 }
 
 // FprintfOnColor212 wraps OnColor212 and fmt.Fprintf().
-func FprintfOnColor212(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor212(w io.Writer, format string, args ...any) {
 	FprintOnColor212(w, Sprintf(format, args...))
 }
 
@@ -18854,7 +18854,7 @@ func PrintOnColor212(str string) {
 }
 
 // PrintfOnColor212 wraps OnColor212() and fmt.Printf().
-func PrintfOnColor212(format string, args ...interface{}) {
+func PrintfOnColor212(format string, args ...any) {
 	PrintOnColor212(Sprintf(format, args...))
 }
 
@@ -18870,7 +18870,7 @@ func Color213(str string) string {
 }
 
 // Color213f wraps fmt.Sprintf() and Color213.
-func Color213f(format string, args ...interface{}) string {
+func Color213f(format string, args ...any) string {
 	return Color213(Sprintf(format, args...))
 }
 
@@ -18880,7 +18880,7 @@ func FprintColor213(w io.Writer, str string) {
 }
 
 // FprintfColor213 wraps Color213 and fmt.Fprintf().
-func FprintfColor213(w io.Writer, format string, args ...interface{}) {
+func FprintfColor213(w io.Writer, format string, args ...any) {
 	FprintColor213(w, Sprintf(format, args...))
 }
 
@@ -18895,7 +18895,7 @@ func PrintColor213(str string) {
 }
 
 // PrintfColor213 wraps Color213() and fmt.Printf().
-func PrintfColor213(format string, args ...interface{}) {
+func PrintfColor213(format string, args ...any) {
 	PrintColor213(Sprintf(format, args...))
 }
 
@@ -18911,7 +18911,7 @@ func OnColor213(str string) string {
 }
 
 // OnColor213f wraps fmt.Sprintf() and OnColor213.
-func OnColor213f(format string, args ...interface{}) string {
+func OnColor213f(format string, args ...any) string {
 	return OnColor213(Sprintf(format, args...))
 }
 
@@ -18921,7 +18921,7 @@ func FprintOnColor213(w io.Writer, str string) {
 }
 
 // FprintfOnColor213 wraps OnColor213 and fmt.Fprintf().
-func FprintfOnColor213(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor213(w io.Writer, format string, args ...any) {
 	FprintOnColor213(w, Sprintf(format, args...))
 }
 
@@ -18936,7 +18936,7 @@ func PrintOnColor213(str string) {
 }
 
 // PrintfOnColor213 wraps OnColor213() and fmt.Printf().
-func PrintfOnColor213(format string, args ...interface{}) {
+func PrintfOnColor213(format string, args ...any) {
 	PrintOnColor213(Sprintf(format, args...))
 }
 
@@ -18952,7 +18952,7 @@ func Color214(str string) string {
 }
 
 // Color214f wraps fmt.Sprintf() and Color214.
-func Color214f(format string, args ...interface{}) string {
+func Color214f(format string, args ...any) string {
 	return Color214(Sprintf(format, args...))
 }
 
@@ -18962,7 +18962,7 @@ func FprintColor214(w io.Writer, str string) {
 }
 
 // FprintfColor214 wraps Color214 and fmt.Fprintf().
-func FprintfColor214(w io.Writer, format string, args ...interface{}) {
+func FprintfColor214(w io.Writer, format string, args ...any) {
 	FprintColor214(w, Sprintf(format, args...))
 }
 
@@ -18977,7 +18977,7 @@ func PrintColor214(str string) {
 }
 
 // PrintfColor214 wraps Color214() and fmt.Printf().
-func PrintfColor214(format string, args ...interface{}) {
+func PrintfColor214(format string, args ...any) {
 	PrintColor214(Sprintf(format, args...))
 }
 
@@ -18993,7 +18993,7 @@ func OnColor214(str string) string {
 }
 
 // OnColor214f wraps fmt.Sprintf() and OnColor214.
-func OnColor214f(format string, args ...interface{}) string {
+func OnColor214f(format string, args ...any) string {
 	return OnColor214(Sprintf(format, args...))
 }
 
@@ -19003,7 +19003,7 @@ func FprintOnColor214(w io.Writer, str string) {
 }
 
 // FprintfOnColor214 wraps OnColor214 and fmt.Fprintf().
-func FprintfOnColor214(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor214(w io.Writer, format string, args ...any) {
 	FprintOnColor214(w, Sprintf(format, args...))
 }
 
@@ -19018,7 +19018,7 @@ func PrintOnColor214(str string) {
 }
 
 // PrintfOnColor214 wraps OnColor214() and fmt.Printf().
-func PrintfOnColor214(format string, args ...interface{}) {
+func PrintfOnColor214(format string, args ...any) {
 	PrintOnColor214(Sprintf(format, args...))
 }
 
@@ -19034,7 +19034,7 @@ func Color215(str string) string {
 }
 
 // Color215f wraps fmt.Sprintf() and Color215.
-func Color215f(format string, args ...interface{}) string {
+func Color215f(format string, args ...any) string {
 	return Color215(Sprintf(format, args...))
 }
 
@@ -19044,7 +19044,7 @@ func FprintColor215(w io.Writer, str string) {
 }
 
 // FprintfColor215 wraps Color215 and fmt.Fprintf().
-func FprintfColor215(w io.Writer, format string, args ...interface{}) {
+func FprintfColor215(w io.Writer, format string, args ...any) {
 	FprintColor215(w, Sprintf(format, args...))
 }
 
@@ -19059,7 +19059,7 @@ func PrintColor215(str string) {
 }
 
 // PrintfColor215 wraps Color215() and fmt.Printf().
-func PrintfColor215(format string, args ...interface{}) {
+func PrintfColor215(format string, args ...any) {
 	PrintColor215(Sprintf(format, args...))
 }
 
@@ -19075,7 +19075,7 @@ func OnColor215(str string) string {
 }
 
 // OnColor215f wraps fmt.Sprintf() and OnColor215.
-func OnColor215f(format string, args ...interface{}) string {
+func OnColor215f(format string, args ...any) string {
 	return OnColor215(Sprintf(format, args...))
 }
 
@@ -19085,7 +19085,7 @@ func FprintOnColor215(w io.Writer, str string) {
 }
 
 // FprintfOnColor215 wraps OnColor215 and fmt.Fprintf().
-func FprintfOnColor215(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor215(w io.Writer, format string, args ...any) {
 	FprintOnColor215(w, Sprintf(format, args...))
 }
 
@@ -19100,7 +19100,7 @@ func PrintOnColor215(str string) {
 }
 
 // PrintfOnColor215 wraps OnColor215() and fmt.Printf().
-func PrintfOnColor215(format string, args ...interface{}) {
+func PrintfOnColor215(format string, args ...any) {
 	PrintOnColor215(Sprintf(format, args...))
 }
 
@@ -19116,7 +19116,7 @@ func Color216(str string) string {
 }
 
 // Color216f wraps fmt.Sprintf() and Color216.
-func Color216f(format string, args ...interface{}) string {
+func Color216f(format string, args ...any) string {
 	return Color216(Sprintf(format, args...))
 }
 
@@ -19126,7 +19126,7 @@ func FprintColor216(w io.Writer, str string) {
 }
 
 // FprintfColor216 wraps Color216 and fmt.Fprintf().
-func FprintfColor216(w io.Writer, format string, args ...interface{}) {
+func FprintfColor216(w io.Writer, format string, args ...any) {
 	FprintColor216(w, Sprintf(format, args...))
 }
 
@@ -19141,7 +19141,7 @@ func PrintColor216(str string) {
 }
 
 // PrintfColor216 wraps Color216() and fmt.Printf().
-func PrintfColor216(format string, args ...interface{}) {
+func PrintfColor216(format string, args ...any) {
 	PrintColor216(Sprintf(format, args...))
 }
 
@@ -19157,7 +19157,7 @@ func OnColor216(str string) string {
 }
 
 // OnColor216f wraps fmt.Sprintf() and OnColor216.
-func OnColor216f(format string, args ...interface{}) string {
+func OnColor216f(format string, args ...any) string {
 	return OnColor216(Sprintf(format, args...))
 }
 
@@ -19167,7 +19167,7 @@ func FprintOnColor216(w io.Writer, str string) {
 }
 
 // FprintfOnColor216 wraps OnColor216 and fmt.Fprintf().
-func FprintfOnColor216(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor216(w io.Writer, format string, args ...any) {
 	FprintOnColor216(w, Sprintf(format, args...))
 }
 
@@ -19182,7 +19182,7 @@ func PrintOnColor216(str string) {
 }
 
 // PrintfOnColor216 wraps OnColor216() and fmt.Printf().
-func PrintfOnColor216(format string, args ...interface{}) {
+func PrintfOnColor216(format string, args ...any) {
 	PrintOnColor216(Sprintf(format, args...))
 }
 
@@ -19198,7 +19198,7 @@ func Color217(str string) string {
 }
 
 // Color217f wraps fmt.Sprintf() and Color217.
-func Color217f(format string, args ...interface{}) string {
+func Color217f(format string, args ...any) string {
 	return Color217(Sprintf(format, args...))
 }
 
@@ -19208,7 +19208,7 @@ func FprintColor217(w io.Writer, str string) {
 }
 
 // FprintfColor217 wraps Color217 and fmt.Fprintf().
-func FprintfColor217(w io.Writer, format string, args ...interface{}) {
+func FprintfColor217(w io.Writer, format string, args ...any) {
 	FprintColor217(w, Sprintf(format, args...))
 }
 
@@ -19223,7 +19223,7 @@ func PrintColor217(str string) {
 }
 
 // PrintfColor217 wraps Color217() and fmt.Printf().
-func PrintfColor217(format string, args ...interface{}) {
+func PrintfColor217(format string, args ...any) {
 	PrintColor217(Sprintf(format, args...))
 }
 
@@ -19239,7 +19239,7 @@ func OnColor217(str string) string {
 }
 
 // OnColor217f wraps fmt.Sprintf() and OnColor217.
-func OnColor217f(format string, args ...interface{}) string {
+func OnColor217f(format string, args ...any) string {
 	return OnColor217(Sprintf(format, args...))
 }
 
@@ -19249,7 +19249,7 @@ func FprintOnColor217(w io.Writer, str string) {
 }
 
 // FprintfOnColor217 wraps OnColor217 and fmt.Fprintf().
-func FprintfOnColor217(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor217(w io.Writer, format string, args ...any) {
 	FprintOnColor217(w, Sprintf(format, args...))
 }
 
@@ -19264,7 +19264,7 @@ func PrintOnColor217(str string) {
 }
 
 // PrintfOnColor217 wraps OnColor217() and fmt.Printf().
-func PrintfOnColor217(format string, args ...interface{}) {
+func PrintfOnColor217(format string, args ...any) {
 	PrintOnColor217(Sprintf(format, args...))
 }
 
@@ -19280,7 +19280,7 @@ func Color218(str string) string {
 }
 
 // Color218f wraps fmt.Sprintf() and Color218.
-func Color218f(format string, args ...interface{}) string {
+func Color218f(format string, args ...any) string {
 	return Color218(Sprintf(format, args...))
 }
 
@@ -19290,7 +19290,7 @@ func FprintColor218(w io.Writer, str string) {
 }
 
 // FprintfColor218 wraps Color218 and fmt.Fprintf().
-func FprintfColor218(w io.Writer, format string, args ...interface{}) {
+func FprintfColor218(w io.Writer, format string, args ...any) {
 	FprintColor218(w, Sprintf(format, args...))
 }
 
@@ -19305,7 +19305,7 @@ func PrintColor218(str string) {
 }
 
 // PrintfColor218 wraps Color218() and fmt.Printf().
-func PrintfColor218(format string, args ...interface{}) {
+func PrintfColor218(format string, args ...any) {
 	PrintColor218(Sprintf(format, args...))
 }
 
@@ -19321,7 +19321,7 @@ func OnColor218(str string) string {
 }
 
 // OnColor218f wraps fmt.Sprintf() and OnColor218.
-func OnColor218f(format string, args ...interface{}) string {
+func OnColor218f(format string, args ...any) string {
 	return OnColor218(Sprintf(format, args...))
 }
 
@@ -19331,7 +19331,7 @@ func FprintOnColor218(w io.Writer, str string) {
 }
 
 // FprintfOnColor218 wraps OnColor218 and fmt.Fprintf().
-func FprintfOnColor218(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor218(w io.Writer, format string, args ...any) {
 	FprintOnColor218(w, Sprintf(format, args...))
 }
 
@@ -19346,7 +19346,7 @@ func PrintOnColor218(str string) {
 }
 
 // PrintfOnColor218 wraps OnColor218() and fmt.Printf().
-func PrintfOnColor218(format string, args ...interface{}) {
+func PrintfOnColor218(format string, args ...any) {
 	PrintOnColor218(Sprintf(format, args...))
 }
 
@@ -19362,7 +19362,7 @@ func Color219(str string) string {
 }
 
 // Color219f wraps fmt.Sprintf() and Color219.
-func Color219f(format string, args ...interface{}) string {
+func Color219f(format string, args ...any) string {
 	return Color219(Sprintf(format, args...))
 }
 
@@ -19372,7 +19372,7 @@ func FprintColor219(w io.Writer, str string) {
 }
 
 // FprintfColor219 wraps Color219 and fmt.Fprintf().
-func FprintfColor219(w io.Writer, format string, args ...interface{}) {
+func FprintfColor219(w io.Writer, format string, args ...any) {
 	FprintColor219(w, Sprintf(format, args...))
 }
 
@@ -19387,7 +19387,7 @@ func PrintColor219(str string) {
 }
 
 // PrintfColor219 wraps Color219() and fmt.Printf().
-func PrintfColor219(format string, args ...interface{}) {
+func PrintfColor219(format string, args ...any) {
 	PrintColor219(Sprintf(format, args...))
 }
 
@@ -19403,7 +19403,7 @@ func OnColor219(str string) string {
 }
 
 // OnColor219f wraps fmt.Sprintf() and OnColor219.
-func OnColor219f(format string, args ...interface{}) string {
+func OnColor219f(format string, args ...any) string {
 	return OnColor219(Sprintf(format, args...))
 }
 
@@ -19413,7 +19413,7 @@ func FprintOnColor219(w io.Writer, str string) {
 }
 
 // FprintfOnColor219 wraps OnColor219 and fmt.Fprintf().
-func FprintfOnColor219(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor219(w io.Writer, format string, args ...any) {
 	FprintOnColor219(w, Sprintf(format, args...))
 }
 
@@ -19428,7 +19428,7 @@ func PrintOnColor219(str string) {
 }
 
 // PrintfOnColor219 wraps OnColor219() and fmt.Printf().
-func PrintfOnColor219(format string, args ...interface{}) {
+func PrintfOnColor219(format string, args ...any) {
 	PrintOnColor219(Sprintf(format, args...))
 }
 
@@ -19444,7 +19444,7 @@ func Color220(str string) string {
 }
 
 // Color220f wraps fmt.Sprintf() and Color220.
-func Color220f(format string, args ...interface{}) string {
+func Color220f(format string, args ...any) string {
 	return Color220(Sprintf(format, args...))
 }
 
@@ -19454,7 +19454,7 @@ func FprintColor220(w io.Writer, str string) {
 }
 
 // FprintfColor220 wraps Color220 and fmt.Fprintf().
-func FprintfColor220(w io.Writer, format string, args ...interface{}) {
+func FprintfColor220(w io.Writer, format string, args ...any) {
 	FprintColor220(w, Sprintf(format, args...))
 }
 
@@ -19469,7 +19469,7 @@ func PrintColor220(str string) {
 }
 
 // PrintfColor220 wraps Color220() and fmt.Printf().
-func PrintfColor220(format string, args ...interface{}) {
+func PrintfColor220(format string, args ...any) {
 	PrintColor220(Sprintf(format, args...))
 }
 
@@ -19485,7 +19485,7 @@ func OnColor220(str string) string {
 }
 
 // OnColor220f wraps fmt.Sprintf() and OnColor220.
-func OnColor220f(format string, args ...interface{}) string {
+func OnColor220f(format string, args ...any) string {
 	return OnColor220(Sprintf(format, args...))
 }
 
@@ -19495,7 +19495,7 @@ func FprintOnColor220(w io.Writer, str string) {
 }
 
 // FprintfOnColor220 wraps OnColor220 and fmt.Fprintf().
-func FprintfOnColor220(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor220(w io.Writer, format string, args ...any) {
 	FprintOnColor220(w, Sprintf(format, args...))
 }
 
@@ -19510,7 +19510,7 @@ func PrintOnColor220(str string) {
 }
 
 // PrintfOnColor220 wraps OnColor220() and fmt.Printf().
-func PrintfOnColor220(format string, args ...interface{}) {
+func PrintfOnColor220(format string, args ...any) {
 	PrintOnColor220(Sprintf(format, args...))
 }
 
@@ -19526,7 +19526,7 @@ func Color221(str string) string {
 }
 
 // Color221f wraps fmt.Sprintf() and Color221.
-func Color221f(format string, args ...interface{}) string {
+func Color221f(format string, args ...any) string {
 	return Color221(Sprintf(format, args...))
 }
 
@@ -19536,7 +19536,7 @@ func FprintColor221(w io.Writer, str string) {
 }
 
 // FprintfColor221 wraps Color221 and fmt.Fprintf().
-func FprintfColor221(w io.Writer, format string, args ...interface{}) {
+func FprintfColor221(w io.Writer, format string, args ...any) {
 	FprintColor221(w, Sprintf(format, args...))
 }
 
@@ -19551,7 +19551,7 @@ func PrintColor221(str string) {
 }
 
 // PrintfColor221 wraps Color221() and fmt.Printf().
-func PrintfColor221(format string, args ...interface{}) {
+func PrintfColor221(format string, args ...any) {
 	PrintColor221(Sprintf(format, args...))
 }
 
@@ -19567,7 +19567,7 @@ func OnColor221(str string) string {
 }
 
 // OnColor221f wraps fmt.Sprintf() and OnColor221.
-func OnColor221f(format string, args ...interface{}) string {
+func OnColor221f(format string, args ...any) string {
 	return OnColor221(Sprintf(format, args...))
 }
 
@@ -19577,7 +19577,7 @@ func FprintOnColor221(w io.Writer, str string) {
 }
 
 // FprintfOnColor221 wraps OnColor221 and fmt.Fprintf().
-func FprintfOnColor221(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor221(w io.Writer, format string, args ...any) {
 	FprintOnColor221(w, Sprintf(format, args...))
 }
 
@@ -19592,7 +19592,7 @@ func PrintOnColor221(str string) {
 }
 
 // PrintfOnColor221 wraps OnColor221() and fmt.Printf().
-func PrintfOnColor221(format string, args ...interface{}) {
+func PrintfOnColor221(format string, args ...any) {
 	PrintOnColor221(Sprintf(format, args...))
 }
 
@@ -19608,7 +19608,7 @@ func Color222(str string) string {
 }
 
 // Color222f wraps fmt.Sprintf() and Color222.
-func Color222f(format string, args ...interface{}) string {
+func Color222f(format string, args ...any) string {
 	return Color222(Sprintf(format, args...))
 }
 
@@ -19618,7 +19618,7 @@ func FprintColor222(w io.Writer, str string) {
 }
 
 // FprintfColor222 wraps Color222 and fmt.Fprintf().
-func FprintfColor222(w io.Writer, format string, args ...interface{}) {
+func FprintfColor222(w io.Writer, format string, args ...any) {
 	FprintColor222(w, Sprintf(format, args...))
 }
 
@@ -19633,7 +19633,7 @@ func PrintColor222(str string) {
 }
 
 // PrintfColor222 wraps Color222() and fmt.Printf().
-func PrintfColor222(format string, args ...interface{}) {
+func PrintfColor222(format string, args ...any) {
 	PrintColor222(Sprintf(format, args...))
 }
 
@@ -19649,7 +19649,7 @@ func OnColor222(str string) string {
 }
 
 // OnColor222f wraps fmt.Sprintf() and OnColor222.
-func OnColor222f(format string, args ...interface{}) string {
+func OnColor222f(format string, args ...any) string {
 	return OnColor222(Sprintf(format, args...))
 }
 
@@ -19659,7 +19659,7 @@ func FprintOnColor222(w io.Writer, str string) {
 }
 
 // FprintfOnColor222 wraps OnColor222 and fmt.Fprintf().
-func FprintfOnColor222(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor222(w io.Writer, format string, args ...any) {
 	FprintOnColor222(w, Sprintf(format, args...))
 }
 
@@ -19674,7 +19674,7 @@ func PrintOnColor222(str string) {
 }
 
 // PrintfOnColor222 wraps OnColor222() and fmt.Printf().
-func PrintfOnColor222(format string, args ...interface{}) {
+func PrintfOnColor222(format string, args ...any) {
 	PrintOnColor222(Sprintf(format, args...))
 }
 
@@ -19690,7 +19690,7 @@ func Color223(str string) string {
 }
 
 // Color223f wraps fmt.Sprintf() and Color223.
-func Color223f(format string, args ...interface{}) string {
+func Color223f(format string, args ...any) string {
 	return Color223(Sprintf(format, args...))
 }
 
@@ -19700,7 +19700,7 @@ func FprintColor223(w io.Writer, str string) {
 }
 
 // FprintfColor223 wraps Color223 and fmt.Fprintf().
-func FprintfColor223(w io.Writer, format string, args ...interface{}) {
+func FprintfColor223(w io.Writer, format string, args ...any) {
 	FprintColor223(w, Sprintf(format, args...))
 }
 
@@ -19715,7 +19715,7 @@ func PrintColor223(str string) {
 }
 
 // PrintfColor223 wraps Color223() and fmt.Printf().
-func PrintfColor223(format string, args ...interface{}) {
+func PrintfColor223(format string, args ...any) {
 	PrintColor223(Sprintf(format, args...))
 }
 
@@ -19731,7 +19731,7 @@ func OnColor223(str string) string {
 }
 
 // OnColor223f wraps fmt.Sprintf() and OnColor223.
-func OnColor223f(format string, args ...interface{}) string {
+func OnColor223f(format string, args ...any) string {
 	return OnColor223(Sprintf(format, args...))
 }
 
@@ -19741,7 +19741,7 @@ func FprintOnColor223(w io.Writer, str string) {
 }
 
 // FprintfOnColor223 wraps OnColor223 and fmt.Fprintf().
-func FprintfOnColor223(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor223(w io.Writer, format string, args ...any) {
 	FprintOnColor223(w, Sprintf(format, args...))
 }
 
@@ -19756,7 +19756,7 @@ func PrintOnColor223(str string) {
 }
 
 // PrintfOnColor223 wraps OnColor223() and fmt.Printf().
-func PrintfOnColor223(format string, args ...interface{}) {
+func PrintfOnColor223(format string, args ...any) {
 	PrintOnColor223(Sprintf(format, args...))
 }
 
@@ -19772,7 +19772,7 @@ func Color224(str string) string {
 }
 
 // Color224f wraps fmt.Sprintf() and Color224.
-func Color224f(format string, args ...interface{}) string {
+func Color224f(format string, args ...any) string {
 	return Color224(Sprintf(format, args...))
 }
 
@@ -19782,7 +19782,7 @@ func FprintColor224(w io.Writer, str string) {
 }
 
 // FprintfColor224 wraps Color224 and fmt.Fprintf().
-func FprintfColor224(w io.Writer, format string, args ...interface{}) {
+func FprintfColor224(w io.Writer, format string, args ...any) {
 	FprintColor224(w, Sprintf(format, args...))
 }
 
@@ -19797,7 +19797,7 @@ func PrintColor224(str string) {
 }
 
 // PrintfColor224 wraps Color224() and fmt.Printf().
-func PrintfColor224(format string, args ...interface{}) {
+func PrintfColor224(format string, args ...any) {
 	PrintColor224(Sprintf(format, args...))
 }
 
@@ -19813,7 +19813,7 @@ func OnColor224(str string) string {
 }
 
 // OnColor224f wraps fmt.Sprintf() and OnColor224.
-func OnColor224f(format string, args ...interface{}) string {
+func OnColor224f(format string, args ...any) string {
 	return OnColor224(Sprintf(format, args...))
 }
 
@@ -19823,7 +19823,7 @@ func FprintOnColor224(w io.Writer, str string) {
 }
 
 // FprintfOnColor224 wraps OnColor224 and fmt.Fprintf().
-func FprintfOnColor224(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor224(w io.Writer, format string, args ...any) {
 	FprintOnColor224(w, Sprintf(format, args...))
 }
 
@@ -19838,7 +19838,7 @@ func PrintOnColor224(str string) {
 }
 
 // PrintfOnColor224 wraps OnColor224() and fmt.Printf().
-func PrintfOnColor224(format string, args ...interface{}) {
+func PrintfOnColor224(format string, args ...any) {
 	PrintOnColor224(Sprintf(format, args...))
 }
 
@@ -19854,7 +19854,7 @@ func Color225(str string) string {
 }
 
 // Color225f wraps fmt.Sprintf() and Color225.
-func Color225f(format string, args ...interface{}) string {
+func Color225f(format string, args ...any) string {
 	return Color225(Sprintf(format, args...))
 }
 
@@ -19864,7 +19864,7 @@ func FprintColor225(w io.Writer, str string) {
 }
 
 // FprintfColor225 wraps Color225 and fmt.Fprintf().
-func FprintfColor225(w io.Writer, format string, args ...interface{}) {
+func FprintfColor225(w io.Writer, format string, args ...any) {
 	FprintColor225(w, Sprintf(format, args...))
 }
 
@@ -19879,7 +19879,7 @@ func PrintColor225(str string) {
 }
 
 // PrintfColor225 wraps Color225() and fmt.Printf().
-func PrintfColor225(format string, args ...interface{}) {
+func PrintfColor225(format string, args ...any) {
 	PrintColor225(Sprintf(format, args...))
 }
 
@@ -19895,7 +19895,7 @@ func OnColor225(str string) string {
 }
 
 // OnColor225f wraps fmt.Sprintf() and OnColor225.
-func OnColor225f(format string, args ...interface{}) string {
+func OnColor225f(format string, args ...any) string {
 	return OnColor225(Sprintf(format, args...))
 }
 
@@ -19905,7 +19905,7 @@ func FprintOnColor225(w io.Writer, str string) {
 }
 
 // FprintfOnColor225 wraps OnColor225 and fmt.Fprintf().
-func FprintfOnColor225(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor225(w io.Writer, format string, args ...any) {
 	FprintOnColor225(w, Sprintf(format, args...))
 }
 
@@ -19920,7 +19920,7 @@ func PrintOnColor225(str string) {
 }
 
 // PrintfOnColor225 wraps OnColor225() and fmt.Printf().
-func PrintfOnColor225(format string, args ...interface{}) {
+func PrintfOnColor225(format string, args ...any) {
 	PrintOnColor225(Sprintf(format, args...))
 }
 
@@ -19936,7 +19936,7 @@ func Color226(str string) string {
 }
 
 // Color226f wraps fmt.Sprintf() and Color226.
-func Color226f(format string, args ...interface{}) string {
+func Color226f(format string, args ...any) string {
 	return Color226(Sprintf(format, args...))
 }
 
@@ -19946,7 +19946,7 @@ func FprintColor226(w io.Writer, str string) {
 }
 
 // FprintfColor226 wraps Color226 and fmt.Fprintf().
-func FprintfColor226(w io.Writer, format string, args ...interface{}) {
+func FprintfColor226(w io.Writer, format string, args ...any) {
 	FprintColor226(w, Sprintf(format, args...))
 }
 
@@ -19961,7 +19961,7 @@ func PrintColor226(str string) {
 }
 
 // PrintfColor226 wraps Color226() and fmt.Printf().
-func PrintfColor226(format string, args ...interface{}) {
+func PrintfColor226(format string, args ...any) {
 	PrintColor226(Sprintf(format, args...))
 }
 
@@ -19977,7 +19977,7 @@ func OnColor226(str string) string {
 }
 
 // OnColor226f wraps fmt.Sprintf() and OnColor226.
-func OnColor226f(format string, args ...interface{}) string {
+func OnColor226f(format string, args ...any) string {
 	return OnColor226(Sprintf(format, args...))
 }
 
@@ -19987,7 +19987,7 @@ func FprintOnColor226(w io.Writer, str string) {
 }
 
 // FprintfOnColor226 wraps OnColor226 and fmt.Fprintf().
-func FprintfOnColor226(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor226(w io.Writer, format string, args ...any) {
 	FprintOnColor226(w, Sprintf(format, args...))
 }
 
@@ -20002,7 +20002,7 @@ func PrintOnColor226(str string) {
 }
 
 // PrintfOnColor226 wraps OnColor226() and fmt.Printf().
-func PrintfOnColor226(format string, args ...interface{}) {
+func PrintfOnColor226(format string, args ...any) {
 	PrintOnColor226(Sprintf(format, args...))
 }
 
@@ -20018,7 +20018,7 @@ func Color227(str string) string {
 }
 
 // Color227f wraps fmt.Sprintf() and Color227.
-func Color227f(format string, args ...interface{}) string {
+func Color227f(format string, args ...any) string {
 	return Color227(Sprintf(format, args...))
 }
 
@@ -20028,7 +20028,7 @@ func FprintColor227(w io.Writer, str string) {
 }
 
 // FprintfColor227 wraps Color227 and fmt.Fprintf().
-func FprintfColor227(w io.Writer, format string, args ...interface{}) {
+func FprintfColor227(w io.Writer, format string, args ...any) {
 	FprintColor227(w, Sprintf(format, args...))
 }
 
@@ -20043,7 +20043,7 @@ func PrintColor227(str string) {
 }
 
 // PrintfColor227 wraps Color227() and fmt.Printf().
-func PrintfColor227(format string, args ...interface{}) {
+func PrintfColor227(format string, args ...any) {
 	PrintColor227(Sprintf(format, args...))
 }
 
@@ -20059,7 +20059,7 @@ func OnColor227(str string) string {
 }
 
 // OnColor227f wraps fmt.Sprintf() and OnColor227.
-func OnColor227f(format string, args ...interface{}) string {
+func OnColor227f(format string, args ...any) string {
 	return OnColor227(Sprintf(format, args...))
 }
 
@@ -20069,7 +20069,7 @@ func FprintOnColor227(w io.Writer, str string) {
 }
 
 // FprintfOnColor227 wraps OnColor227 and fmt.Fprintf().
-func FprintfOnColor227(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor227(w io.Writer, format string, args ...any) {
 	FprintOnColor227(w, Sprintf(format, args...))
 }
 
@@ -20084,7 +20084,7 @@ func PrintOnColor227(str string) {
 }
 
 // PrintfOnColor227 wraps OnColor227() and fmt.Printf().
-func PrintfOnColor227(format string, args ...interface{}) {
+func PrintfOnColor227(format string, args ...any) {
 	PrintOnColor227(Sprintf(format, args...))
 }
 
@@ -20100,7 +20100,7 @@ func Color228(str string) string {
 }
 
 // Color228f wraps fmt.Sprintf() and Color228.
-func Color228f(format string, args ...interface{}) string {
+func Color228f(format string, args ...any) string {
 	return Color228(Sprintf(format, args...))
 }
 
@@ -20110,7 +20110,7 @@ func FprintColor228(w io.Writer, str string) {
 }
 
 // FprintfColor228 wraps Color228 and fmt.Fprintf().
-func FprintfColor228(w io.Writer, format string, args ...interface{}) {
+func FprintfColor228(w io.Writer, format string, args ...any) {
 	FprintColor228(w, Sprintf(format, args...))
 }
 
@@ -20125,7 +20125,7 @@ func PrintColor228(str string) {
 }
 
 // PrintfColor228 wraps Color228() and fmt.Printf().
-func PrintfColor228(format string, args ...interface{}) {
+func PrintfColor228(format string, args ...any) {
 	PrintColor228(Sprintf(format, args...))
 }
 
@@ -20141,7 +20141,7 @@ func OnColor228(str string) string {
 }
 
 // OnColor228f wraps fmt.Sprintf() and OnColor228.
-func OnColor228f(format string, args ...interface{}) string {
+func OnColor228f(format string, args ...any) string {
 	return OnColor228(Sprintf(format, args...))
 }
 
@@ -20151,7 +20151,7 @@ func FprintOnColor228(w io.Writer, str string) {
 }
 
 // FprintfOnColor228 wraps OnColor228 and fmt.Fprintf().
-func FprintfOnColor228(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor228(w io.Writer, format string, args ...any) {
 	FprintOnColor228(w, Sprintf(format, args...))
 }
 
@@ -20166,7 +20166,7 @@ func PrintOnColor228(str string) {
 }
 
 // PrintfOnColor228 wraps OnColor228() and fmt.Printf().
-func PrintfOnColor228(format string, args ...interface{}) {
+func PrintfOnColor228(format string, args ...any) {
 	PrintOnColor228(Sprintf(format, args...))
 }
 
@@ -20182,7 +20182,7 @@ func Color229(str string) string {
 }
 
 // Color229f wraps fmt.Sprintf() and Color229.
-func Color229f(format string, args ...interface{}) string {
+func Color229f(format string, args ...any) string {
 	return Color229(Sprintf(format, args...))
 }
 
@@ -20192,7 +20192,7 @@ func FprintColor229(w io.Writer, str string) {
 }
 
 // FprintfColor229 wraps Color229 and fmt.Fprintf().
-func FprintfColor229(w io.Writer, format string, args ...interface{}) {
+func FprintfColor229(w io.Writer, format string, args ...any) {
 	FprintColor229(w, Sprintf(format, args...))
 }
 
@@ -20207,7 +20207,7 @@ func PrintColor229(str string) {
 }
 
 // PrintfColor229 wraps Color229() and fmt.Printf().
-func PrintfColor229(format string, args ...interface{}) {
+func PrintfColor229(format string, args ...any) {
 	PrintColor229(Sprintf(format, args...))
 }
 
@@ -20223,7 +20223,7 @@ func OnColor229(str string) string {
 }
 
 // OnColor229f wraps fmt.Sprintf() and OnColor229.
-func OnColor229f(format string, args ...interface{}) string {
+func OnColor229f(format string, args ...any) string {
 	return OnColor229(Sprintf(format, args...))
 }
 
@@ -20233,7 +20233,7 @@ func FprintOnColor229(w io.Writer, str string) {
 }
 
 // FprintfOnColor229 wraps OnColor229 and fmt.Fprintf().
-func FprintfOnColor229(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor229(w io.Writer, format string, args ...any) {
 	FprintOnColor229(w, Sprintf(format, args...))
 }
 
@@ -20248,7 +20248,7 @@ func PrintOnColor229(str string) {
 }
 
 // PrintfOnColor229 wraps OnColor229() and fmt.Printf().
-func PrintfOnColor229(format string, args ...interface{}) {
+func PrintfOnColor229(format string, args ...any) {
 	PrintOnColor229(Sprintf(format, args...))
 }
 
@@ -20264,7 +20264,7 @@ func Color230(str string) string {
 }
 
 // Color230f wraps fmt.Sprintf() and Color230.
-func Color230f(format string, args ...interface{}) string {
+func Color230f(format string, args ...any) string {
 	return Color230(Sprintf(format, args...))
 }
 
@@ -20274,7 +20274,7 @@ func FprintColor230(w io.Writer, str string) {
 }
 
 // FprintfColor230 wraps Color230 and fmt.Fprintf().
-func FprintfColor230(w io.Writer, format string, args ...interface{}) {
+func FprintfColor230(w io.Writer, format string, args ...any) {
 	FprintColor230(w, Sprintf(format, args...))
 }
 
@@ -20289,7 +20289,7 @@ func PrintColor230(str string) {
 }
 
 // PrintfColor230 wraps Color230() and fmt.Printf().
-func PrintfColor230(format string, args ...interface{}) {
+func PrintfColor230(format string, args ...any) {
 	PrintColor230(Sprintf(format, args...))
 }
 
@@ -20305,7 +20305,7 @@ func OnColor230(str string) string {
 }
 
 // OnColor230f wraps fmt.Sprintf() and OnColor230.
-func OnColor230f(format string, args ...interface{}) string {
+func OnColor230f(format string, args ...any) string {
 	return OnColor230(Sprintf(format, args...))
 }
 
@@ -20315,7 +20315,7 @@ func FprintOnColor230(w io.Writer, str string) {
 }
 
 // FprintfOnColor230 wraps OnColor230 and fmt.Fprintf().
-func FprintfOnColor230(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor230(w io.Writer, format string, args ...any) {
 	FprintOnColor230(w, Sprintf(format, args...))
 }
 
@@ -20330,7 +20330,7 @@ func PrintOnColor230(str string) {
 }
 
 // PrintfOnColor230 wraps OnColor230() and fmt.Printf().
-func PrintfOnColor230(format string, args ...interface{}) {
+func PrintfOnColor230(format string, args ...any) {
 	PrintOnColor230(Sprintf(format, args...))
 }
 
@@ -20346,7 +20346,7 @@ func Color231(str string) string {
 }
 
 // Color231f wraps fmt.Sprintf() and Color231.
-func Color231f(format string, args ...interface{}) string {
+func Color231f(format string, args ...any) string {
 	return Color231(Sprintf(format, args...))
 }
 
@@ -20356,7 +20356,7 @@ func FprintColor231(w io.Writer, str string) {
 }
 
 // FprintfColor231 wraps Color231 and fmt.Fprintf().
-func FprintfColor231(w io.Writer, format string, args ...interface{}) {
+func FprintfColor231(w io.Writer, format string, args ...any) {
 	FprintColor231(w, Sprintf(format, args...))
 }
 
@@ -20371,7 +20371,7 @@ func PrintColor231(str string) {
 }
 
 // PrintfColor231 wraps Color231() and fmt.Printf().
-func PrintfColor231(format string, args ...interface{}) {
+func PrintfColor231(format string, args ...any) {
 	PrintColor231(Sprintf(format, args...))
 }
 
@@ -20387,7 +20387,7 @@ func OnColor231(str string) string {
 }
 
 // OnColor231f wraps fmt.Sprintf() and OnColor231.
-func OnColor231f(format string, args ...interface{}) string {
+func OnColor231f(format string, args ...any) string {
 	return OnColor231(Sprintf(format, args...))
 }
 
@@ -20397,7 +20397,7 @@ func FprintOnColor231(w io.Writer, str string) {
 }
 
 // FprintfOnColor231 wraps OnColor231 and fmt.Fprintf().
-func FprintfOnColor231(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor231(w io.Writer, format string, args ...any) {
 	FprintOnColor231(w, Sprintf(format, args...))
 }
 
@@ -20412,7 +20412,7 @@ func PrintOnColor231(str string) {
 }
 
 // PrintfOnColor231 wraps OnColor231() and fmt.Printf().
-func PrintfOnColor231(format string, args ...interface{}) {
+func PrintfOnColor231(format string, args ...any) {
 	PrintOnColor231(Sprintf(format, args...))
 }
 
@@ -20428,7 +20428,7 @@ func Color232(str string) string {
 }
 
 // Color232f wraps fmt.Sprintf() and Color232.
-func Color232f(format string, args ...interface{}) string {
+func Color232f(format string, args ...any) string {
 	return Color232(Sprintf(format, args...))
 }
 
@@ -20438,7 +20438,7 @@ func FprintColor232(w io.Writer, str string) {
 }
 
 // FprintfColor232 wraps Color232 and fmt.Fprintf().
-func FprintfColor232(w io.Writer, format string, args ...interface{}) {
+func FprintfColor232(w io.Writer, format string, args ...any) {
 	FprintColor232(w, Sprintf(format, args...))
 }
 
@@ -20453,7 +20453,7 @@ func PrintColor232(str string) {
 }
 
 // PrintfColor232 wraps Color232() and fmt.Printf().
-func PrintfColor232(format string, args ...interface{}) {
+func PrintfColor232(format string, args ...any) {
 	PrintColor232(Sprintf(format, args...))
 }
 
@@ -20469,7 +20469,7 @@ func OnColor232(str string) string {
 }
 
 // OnColor232f wraps fmt.Sprintf() and OnColor232.
-func OnColor232f(format string, args ...interface{}) string {
+func OnColor232f(format string, args ...any) string {
 	return OnColor232(Sprintf(format, args...))
 }
 
@@ -20479,7 +20479,7 @@ func FprintOnColor232(w io.Writer, str string) {
 }
 
 // FprintfOnColor232 wraps OnColor232 and fmt.Fprintf().
-func FprintfOnColor232(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor232(w io.Writer, format string, args ...any) {
 	FprintOnColor232(w, Sprintf(format, args...))
 }
 
@@ -20494,7 +20494,7 @@ func PrintOnColor232(str string) {
 }
 
 // PrintfOnColor232 wraps OnColor232() and fmt.Printf().
-func PrintfOnColor232(format string, args ...interface{}) {
+func PrintfOnColor232(format string, args ...any) {
 	PrintOnColor232(Sprintf(format, args...))
 }
 
@@ -20510,7 +20510,7 @@ func Color233(str string) string {
 }
 
 // Color233f wraps fmt.Sprintf() and Color233.
-func Color233f(format string, args ...interface{}) string {
+func Color233f(format string, args ...any) string {
 	return Color233(Sprintf(format, args...))
 }
 
@@ -20520,7 +20520,7 @@ func FprintColor233(w io.Writer, str string) {
 }
 
 // FprintfColor233 wraps Color233 and fmt.Fprintf().
-func FprintfColor233(w io.Writer, format string, args ...interface{}) {
+func FprintfColor233(w io.Writer, format string, args ...any) {
 	FprintColor233(w, Sprintf(format, args...))
 }
 
@@ -20535,7 +20535,7 @@ func PrintColor233(str string) {
 }
 
 // PrintfColor233 wraps Color233() and fmt.Printf().
-func PrintfColor233(format string, args ...interface{}) {
+func PrintfColor233(format string, args ...any) {
 	PrintColor233(Sprintf(format, args...))
 }
 
@@ -20551,7 +20551,7 @@ func OnColor233(str string) string {
 }
 
 // OnColor233f wraps fmt.Sprintf() and OnColor233.
-func OnColor233f(format string, args ...interface{}) string {
+func OnColor233f(format string, args ...any) string {
 	return OnColor233(Sprintf(format, args...))
 }
 
@@ -20561,7 +20561,7 @@ func FprintOnColor233(w io.Writer, str string) {
 }
 
 // FprintfOnColor233 wraps OnColor233 and fmt.Fprintf().
-func FprintfOnColor233(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor233(w io.Writer, format string, args ...any) {
 	FprintOnColor233(w, Sprintf(format, args...))
 }
 
@@ -20576,7 +20576,7 @@ func PrintOnColor233(str string) {
 }
 
 // PrintfOnColor233 wraps OnColor233() and fmt.Printf().
-func PrintfOnColor233(format string, args ...interface{}) {
+func PrintfOnColor233(format string, args ...any) {
 	PrintOnColor233(Sprintf(format, args...))
 }
 
@@ -20592,7 +20592,7 @@ func Color234(str string) string {
 }
 
 // Color234f wraps fmt.Sprintf() and Color234.
-func Color234f(format string, args ...interface{}) string {
+func Color234f(format string, args ...any) string {
 	return Color234(Sprintf(format, args...))
 }
 
@@ -20602,7 +20602,7 @@ func FprintColor234(w io.Writer, str string) {
 }
 
 // FprintfColor234 wraps Color234 and fmt.Fprintf().
-func FprintfColor234(w io.Writer, format string, args ...interface{}) {
+func FprintfColor234(w io.Writer, format string, args ...any) {
 	FprintColor234(w, Sprintf(format, args...))
 }
 
@@ -20617,7 +20617,7 @@ func PrintColor234(str string) {
 }
 
 // PrintfColor234 wraps Color234() and fmt.Printf().
-func PrintfColor234(format string, args ...interface{}) {
+func PrintfColor234(format string, args ...any) {
 	PrintColor234(Sprintf(format, args...))
 }
 
@@ -20633,7 +20633,7 @@ func OnColor234(str string) string {
 }
 
 // OnColor234f wraps fmt.Sprintf() and OnColor234.
-func OnColor234f(format string, args ...interface{}) string {
+func OnColor234f(format string, args ...any) string {
 	return OnColor234(Sprintf(format, args...))
 }
 
@@ -20643,7 +20643,7 @@ func FprintOnColor234(w io.Writer, str string) {
 }
 
 // FprintfOnColor234 wraps OnColor234 and fmt.Fprintf().
-func FprintfOnColor234(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor234(w io.Writer, format string, args ...any) {
 	FprintOnColor234(w, Sprintf(format, args...))
 }
 
@@ -20658,7 +20658,7 @@ func PrintOnColor234(str string) {
 }
 
 // PrintfOnColor234 wraps OnColor234() and fmt.Printf().
-func PrintfOnColor234(format string, args ...interface{}) {
+func PrintfOnColor234(format string, args ...any) {
 	PrintOnColor234(Sprintf(format, args...))
 }
 
@@ -20674,7 +20674,7 @@ func Color235(str string) string {
 }
 
 // Color235f wraps fmt.Sprintf() and Color235.
-func Color235f(format string, args ...interface{}) string {
+func Color235f(format string, args ...any) string {
 	return Color235(Sprintf(format, args...))
 }
 
@@ -20684,7 +20684,7 @@ func FprintColor235(w io.Writer, str string) {
 }
 
 // FprintfColor235 wraps Color235 and fmt.Fprintf().
-func FprintfColor235(w io.Writer, format string, args ...interface{}) {
+func FprintfColor235(w io.Writer, format string, args ...any) {
 	FprintColor235(w, Sprintf(format, args...))
 }
 
@@ -20699,7 +20699,7 @@ func PrintColor235(str string) {
 }
 
 // PrintfColor235 wraps Color235() and fmt.Printf().
-func PrintfColor235(format string, args ...interface{}) {
+func PrintfColor235(format string, args ...any) {
 	PrintColor235(Sprintf(format, args...))
 }
 
@@ -20715,7 +20715,7 @@ func OnColor235(str string) string {
 }
 
 // OnColor235f wraps fmt.Sprintf() and OnColor235.
-func OnColor235f(format string, args ...interface{}) string {
+func OnColor235f(format string, args ...any) string {
 	return OnColor235(Sprintf(format, args...))
 }
 
@@ -20725,7 +20725,7 @@ func FprintOnColor235(w io.Writer, str string) {
 }
 
 // FprintfOnColor235 wraps OnColor235 and fmt.Fprintf().
-func FprintfOnColor235(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor235(w io.Writer, format string, args ...any) {
 	FprintOnColor235(w, Sprintf(format, args...))
 }
 
@@ -20740,7 +20740,7 @@ func PrintOnColor235(str string) {
 }
 
 // PrintfOnColor235 wraps OnColor235() and fmt.Printf().
-func PrintfOnColor235(format string, args ...interface{}) {
+func PrintfOnColor235(format string, args ...any) {
 	PrintOnColor235(Sprintf(format, args...))
 }
 
@@ -20756,7 +20756,7 @@ func Color236(str string) string {
 }
 
 // Color236f wraps fmt.Sprintf() and Color236.
-func Color236f(format string, args ...interface{}) string {
+func Color236f(format string, args ...any) string {
 	return Color236(Sprintf(format, args...))
 }
 
@@ -20766,7 +20766,7 @@ func FprintColor236(w io.Writer, str string) {
 }
 
 // FprintfColor236 wraps Color236 and fmt.Fprintf().
-func FprintfColor236(w io.Writer, format string, args ...interface{}) {
+func FprintfColor236(w io.Writer, format string, args ...any) {
 	FprintColor236(w, Sprintf(format, args...))
 }
 
@@ -20781,7 +20781,7 @@ func PrintColor236(str string) {
 }
 
 // PrintfColor236 wraps Color236() and fmt.Printf().
-func PrintfColor236(format string, args ...interface{}) {
+func PrintfColor236(format string, args ...any) {
 	PrintColor236(Sprintf(format, args...))
 }
 
@@ -20797,7 +20797,7 @@ func OnColor236(str string) string {
 }
 
 // OnColor236f wraps fmt.Sprintf() and OnColor236.
-func OnColor236f(format string, args ...interface{}) string {
+func OnColor236f(format string, args ...any) string {
 	return OnColor236(Sprintf(format, args...))
 }
 
@@ -20807,7 +20807,7 @@ func FprintOnColor236(w io.Writer, str string) {
 }
 
 // FprintfOnColor236 wraps OnColor236 and fmt.Fprintf().
-func FprintfOnColor236(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor236(w io.Writer, format string, args ...any) {
 	FprintOnColor236(w, Sprintf(format, args...))
 }
 
@@ -20822,7 +20822,7 @@ func PrintOnColor236(str string) {
 }
 
 // PrintfOnColor236 wraps OnColor236() and fmt.Printf().
-func PrintfOnColor236(format string, args ...interface{}) {
+func PrintfOnColor236(format string, args ...any) {
 	PrintOnColor236(Sprintf(format, args...))
 }
 
@@ -20838,7 +20838,7 @@ func Color237(str string) string {
 }
 
 // Color237f wraps fmt.Sprintf() and Color237.
-func Color237f(format string, args ...interface{}) string {
+func Color237f(format string, args ...any) string {
 	return Color237(Sprintf(format, args...))
 }
 
@@ -20848,7 +20848,7 @@ func FprintColor237(w io.Writer, str string) {
 }
 
 // FprintfColor237 wraps Color237 and fmt.Fprintf().
-func FprintfColor237(w io.Writer, format string, args ...interface{}) {
+func FprintfColor237(w io.Writer, format string, args ...any) {
 	FprintColor237(w, Sprintf(format, args...))
 }
 
@@ -20863,7 +20863,7 @@ func PrintColor237(str string) {
 }
 
 // PrintfColor237 wraps Color237() and fmt.Printf().
-func PrintfColor237(format string, args ...interface{}) {
+func PrintfColor237(format string, args ...any) {
 	PrintColor237(Sprintf(format, args...))
 }
 
@@ -20879,7 +20879,7 @@ func OnColor237(str string) string {
 }
 
 // OnColor237f wraps fmt.Sprintf() and OnColor237.
-func OnColor237f(format string, args ...interface{}) string {
+func OnColor237f(format string, args ...any) string {
 	return OnColor237(Sprintf(format, args...))
 }
 
@@ -20889,7 +20889,7 @@ func FprintOnColor237(w io.Writer, str string) {
 }
 
 // FprintfOnColor237 wraps OnColor237 and fmt.Fprintf().
-func FprintfOnColor237(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor237(w io.Writer, format string, args ...any) {
 	FprintOnColor237(w, Sprintf(format, args...))
 }
 
@@ -20904,7 +20904,7 @@ func PrintOnColor237(str string) {
 }
 
 // PrintfOnColor237 wraps OnColor237() and fmt.Printf().
-func PrintfOnColor237(format string, args ...interface{}) {
+func PrintfOnColor237(format string, args ...any) {
 	PrintOnColor237(Sprintf(format, args...))
 }
 
@@ -20920,7 +20920,7 @@ func Color238(str string) string {
 }
 
 // Color238f wraps fmt.Sprintf() and Color238.
-func Color238f(format string, args ...interface{}) string {
+func Color238f(format string, args ...any) string {
 	return Color238(Sprintf(format, args...))
 }
 
@@ -20930,7 +20930,7 @@ func FprintColor238(w io.Writer, str string) {
 }
 
 // FprintfColor238 wraps Color238 and fmt.Fprintf().
-func FprintfColor238(w io.Writer, format string, args ...interface{}) {
+func FprintfColor238(w io.Writer, format string, args ...any) {
 	FprintColor238(w, Sprintf(format, args...))
 }
 
@@ -20945,7 +20945,7 @@ func PrintColor238(str string) {
 }
 
 // PrintfColor238 wraps Color238() and fmt.Printf().
-func PrintfColor238(format string, args ...interface{}) {
+func PrintfColor238(format string, args ...any) {
 	PrintColor238(Sprintf(format, args...))
 }
 
@@ -20961,7 +20961,7 @@ func OnColor238(str string) string {
 }
 
 // OnColor238f wraps fmt.Sprintf() and OnColor238.
-func OnColor238f(format string, args ...interface{}) string {
+func OnColor238f(format string, args ...any) string {
 	return OnColor238(Sprintf(format, args...))
 }
 
@@ -20971,7 +20971,7 @@ func FprintOnColor238(w io.Writer, str string) {
 }
 
 // FprintfOnColor238 wraps OnColor238 and fmt.Fprintf().
-func FprintfOnColor238(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor238(w io.Writer, format string, args ...any) {
 	FprintOnColor238(w, Sprintf(format, args...))
 }
 
@@ -20986,7 +20986,7 @@ func PrintOnColor238(str string) {
 }
 
 // PrintfOnColor238 wraps OnColor238() and fmt.Printf().
-func PrintfOnColor238(format string, args ...interface{}) {
+func PrintfOnColor238(format string, args ...any) {
 	PrintOnColor238(Sprintf(format, args...))
 }
 
@@ -21002,7 +21002,7 @@ func Color239(str string) string {
 }
 
 // Color239f wraps fmt.Sprintf() and Color239.
-func Color239f(format string, args ...interface{}) string {
+func Color239f(format string, args ...any) string {
 	return Color239(Sprintf(format, args...))
 }
 
@@ -21012,7 +21012,7 @@ func FprintColor239(w io.Writer, str string) {
 }
 
 // FprintfColor239 wraps Color239 and fmt.Fprintf().
-func FprintfColor239(w io.Writer, format string, args ...interface{}) {
+func FprintfColor239(w io.Writer, format string, args ...any) {
 	FprintColor239(w, Sprintf(format, args...))
 }
 
@@ -21027,7 +21027,7 @@ func PrintColor239(str string) {
 }
 
 // PrintfColor239 wraps Color239() and fmt.Printf().
-func PrintfColor239(format string, args ...interface{}) {
+func PrintfColor239(format string, args ...any) {
 	PrintColor239(Sprintf(format, args...))
 }
 
@@ -21043,7 +21043,7 @@ func OnColor239(str string) string {
 }
 
 // OnColor239f wraps fmt.Sprintf() and OnColor239.
-func OnColor239f(format string, args ...interface{}) string {
+func OnColor239f(format string, args ...any) string {
 	return OnColor239(Sprintf(format, args...))
 }
 
@@ -21053,7 +21053,7 @@ func FprintOnColor239(w io.Writer, str string) {
 }
 
 // FprintfOnColor239 wraps OnColor239 and fmt.Fprintf().
-func FprintfOnColor239(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor239(w io.Writer, format string, args ...any) {
 	FprintOnColor239(w, Sprintf(format, args...))
 }
 
@@ -21068,7 +21068,7 @@ func PrintOnColor239(str string) {
 }
 
 // PrintfOnColor239 wraps OnColor239() and fmt.Printf().
-func PrintfOnColor239(format string, args ...interface{}) {
+func PrintfOnColor239(format string, args ...any) {
 	PrintOnColor239(Sprintf(format, args...))
 }
 
@@ -21084,7 +21084,7 @@ func Color240(str string) string {
 }
 
 // Color240f wraps fmt.Sprintf() and Color240.
-func Color240f(format string, args ...interface{}) string {
+func Color240f(format string, args ...any) string {
 	return Color240(Sprintf(format, args...))
 }
 
@@ -21094,7 +21094,7 @@ func FprintColor240(w io.Writer, str string) {
 }
 
 // FprintfColor240 wraps Color240 and fmt.Fprintf().
-func FprintfColor240(w io.Writer, format string, args ...interface{}) {
+func FprintfColor240(w io.Writer, format string, args ...any) {
 	FprintColor240(w, Sprintf(format, args...))
 }
 
@@ -21109,7 +21109,7 @@ func PrintColor240(str string) {
 }
 
 // PrintfColor240 wraps Color240() and fmt.Printf().
-func PrintfColor240(format string, args ...interface{}) {
+func PrintfColor240(format string, args ...any) {
 	PrintColor240(Sprintf(format, args...))
 }
 
@@ -21125,7 +21125,7 @@ func OnColor240(str string) string {
 }
 
 // OnColor240f wraps fmt.Sprintf() and OnColor240.
-func OnColor240f(format string, args ...interface{}) string {
+func OnColor240f(format string, args ...any) string {
 	return OnColor240(Sprintf(format, args...))
 }
 
@@ -21135,7 +21135,7 @@ func FprintOnColor240(w io.Writer, str string) {
 }
 
 // FprintfOnColor240 wraps OnColor240 and fmt.Fprintf().
-func FprintfOnColor240(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor240(w io.Writer, format string, args ...any) {
 	FprintOnColor240(w, Sprintf(format, args...))
 }
 
@@ -21150,7 +21150,7 @@ func PrintOnColor240(str string) {
 }
 
 // PrintfOnColor240 wraps OnColor240() and fmt.Printf().
-func PrintfOnColor240(format string, args ...interface{}) {
+func PrintfOnColor240(format string, args ...any) {
 	PrintOnColor240(Sprintf(format, args...))
 }
 
@@ -21166,7 +21166,7 @@ func Color241(str string) string {
 }
 
 // Color241f wraps fmt.Sprintf() and Color241.
-func Color241f(format string, args ...interface{}) string {
+func Color241f(format string, args ...any) string {
 	return Color241(Sprintf(format, args...))
 }
 
@@ -21176,7 +21176,7 @@ func FprintColor241(w io.Writer, str string) {
 }
 
 // FprintfColor241 wraps Color241 and fmt.Fprintf().
-func FprintfColor241(w io.Writer, format string, args ...interface{}) {
+func FprintfColor241(w io.Writer, format string, args ...any) {
 	FprintColor241(w, Sprintf(format, args...))
 }
 
@@ -21191,7 +21191,7 @@ func PrintColor241(str string) {
 }
 
 // PrintfColor241 wraps Color241() and fmt.Printf().
-func PrintfColor241(format string, args ...interface{}) {
+func PrintfColor241(format string, args ...any) {
 	PrintColor241(Sprintf(format, args...))
 }
 
@@ -21207,7 +21207,7 @@ func OnColor241(str string) string {
 }
 
 // OnColor241f wraps fmt.Sprintf() and OnColor241.
-func OnColor241f(format string, args ...interface{}) string {
+func OnColor241f(format string, args ...any) string {
 	return OnColor241(Sprintf(format, args...))
 }
 
@@ -21217,7 +21217,7 @@ func FprintOnColor241(w io.Writer, str string) {
 }
 
 // FprintfOnColor241 wraps OnColor241 and fmt.Fprintf().
-func FprintfOnColor241(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor241(w io.Writer, format string, args ...any) {
 	FprintOnColor241(w, Sprintf(format, args...))
 }
 
@@ -21232,7 +21232,7 @@ func PrintOnColor241(str string) {
 }
 
 // PrintfOnColor241 wraps OnColor241() and fmt.Printf().
-func PrintfOnColor241(format string, args ...interface{}) {
+func PrintfOnColor241(format string, args ...any) {
 	PrintOnColor241(Sprintf(format, args...))
 }
 
@@ -21248,7 +21248,7 @@ func Color242(str string) string {
 }
 
 // Color242f wraps fmt.Sprintf() and Color242.
-func Color242f(format string, args ...interface{}) string {
+func Color242f(format string, args ...any) string {
 	return Color242(Sprintf(format, args...))
 }
 
@@ -21258,7 +21258,7 @@ func FprintColor242(w io.Writer, str string) {
 }
 
 // FprintfColor242 wraps Color242 and fmt.Fprintf().
-func FprintfColor242(w io.Writer, format string, args ...interface{}) {
+func FprintfColor242(w io.Writer, format string, args ...any) {
 	FprintColor242(w, Sprintf(format, args...))
 }
 
@@ -21273,7 +21273,7 @@ func PrintColor242(str string) {
 }
 
 // PrintfColor242 wraps Color242() and fmt.Printf().
-func PrintfColor242(format string, args ...interface{}) {
+func PrintfColor242(format string, args ...any) {
 	PrintColor242(Sprintf(format, args...))
 }
 
@@ -21289,7 +21289,7 @@ func OnColor242(str string) string {
 }
 
 // OnColor242f wraps fmt.Sprintf() and OnColor242.
-func OnColor242f(format string, args ...interface{}) string {
+func OnColor242f(format string, args ...any) string {
 	return OnColor242(Sprintf(format, args...))
 }
 
@@ -21299,7 +21299,7 @@ func FprintOnColor242(w io.Writer, str string) {
 }
 
 // FprintfOnColor242 wraps OnColor242 and fmt.Fprintf().
-func FprintfOnColor242(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor242(w io.Writer, format string, args ...any) {
 	FprintOnColor242(w, Sprintf(format, args...))
 }
 
@@ -21314,7 +21314,7 @@ func PrintOnColor242(str string) {
 }
 
 // PrintfOnColor242 wraps OnColor242() and fmt.Printf().
-func PrintfOnColor242(format string, args ...interface{}) {
+func PrintfOnColor242(format string, args ...any) {
 	PrintOnColor242(Sprintf(format, args...))
 }
 
@@ -21330,7 +21330,7 @@ func Color243(str string) string {
 }
 
 // Color243f wraps fmt.Sprintf() and Color243.
-func Color243f(format string, args ...interface{}) string {
+func Color243f(format string, args ...any) string {
 	return Color243(Sprintf(format, args...))
 }
 
@@ -21340,7 +21340,7 @@ func FprintColor243(w io.Writer, str string) {
 }
 
 // FprintfColor243 wraps Color243 and fmt.Fprintf().
-func FprintfColor243(w io.Writer, format string, args ...interface{}) {
+func FprintfColor243(w io.Writer, format string, args ...any) {
 	FprintColor243(w, Sprintf(format, args...))
 }
 
@@ -21355,7 +21355,7 @@ func PrintColor243(str string) {
 }
 
 // PrintfColor243 wraps Color243() and fmt.Printf().
-func PrintfColor243(format string, args ...interface{}) {
+func PrintfColor243(format string, args ...any) {
 	PrintColor243(Sprintf(format, args...))
 }
 
@@ -21371,7 +21371,7 @@ func OnColor243(str string) string {
 }
 
 // OnColor243f wraps fmt.Sprintf() and OnColor243.
-func OnColor243f(format string, args ...interface{}) string {
+func OnColor243f(format string, args ...any) string {
 	return OnColor243(Sprintf(format, args...))
 }
 
@@ -21381,7 +21381,7 @@ func FprintOnColor243(w io.Writer, str string) {
 }
 
 // FprintfOnColor243 wraps OnColor243 and fmt.Fprintf().
-func FprintfOnColor243(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor243(w io.Writer, format string, args ...any) {
 	FprintOnColor243(w, Sprintf(format, args...))
 }
 
@@ -21396,7 +21396,7 @@ func PrintOnColor243(str string) {
 }
 
 // PrintfOnColor243 wraps OnColor243() and fmt.Printf().
-func PrintfOnColor243(format string, args ...interface{}) {
+func PrintfOnColor243(format string, args ...any) {
 	PrintOnColor243(Sprintf(format, args...))
 }
 
@@ -21412,7 +21412,7 @@ func Color244(str string) string {
 }
 
 // Color244f wraps fmt.Sprintf() and Color244.
-func Color244f(format string, args ...interface{}) string {
+func Color244f(format string, args ...any) string {
 	return Color244(Sprintf(format, args...))
 }
 
@@ -21422,7 +21422,7 @@ func FprintColor244(w io.Writer, str string) {
 }
 
 // FprintfColor244 wraps Color244 and fmt.Fprintf().
-func FprintfColor244(w io.Writer, format string, args ...interface{}) {
+func FprintfColor244(w io.Writer, format string, args ...any) {
 	FprintColor244(w, Sprintf(format, args...))
 }
 
@@ -21437,7 +21437,7 @@ func PrintColor244(str string) {
 }
 
 // PrintfColor244 wraps Color244() and fmt.Printf().
-func PrintfColor244(format string, args ...interface{}) {
+func PrintfColor244(format string, args ...any) {
 	PrintColor244(Sprintf(format, args...))
 }
 
@@ -21453,7 +21453,7 @@ func OnColor244(str string) string {
 }
 
 // OnColor244f wraps fmt.Sprintf() and OnColor244.
-func OnColor244f(format string, args ...interface{}) string {
+func OnColor244f(format string, args ...any) string {
 	return OnColor244(Sprintf(format, args...))
 }
 
@@ -21463,7 +21463,7 @@ func FprintOnColor244(w io.Writer, str string) {
 }
 
 // FprintfOnColor244 wraps OnColor244 and fmt.Fprintf().
-func FprintfOnColor244(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor244(w io.Writer, format string, args ...any) {
 	FprintOnColor244(w, Sprintf(format, args...))
 }
 
@@ -21478,7 +21478,7 @@ func PrintOnColor244(str string) {
 }
 
 // PrintfOnColor244 wraps OnColor244() and fmt.Printf().
-func PrintfOnColor244(format string, args ...interface{}) {
+func PrintfOnColor244(format string, args ...any) {
 	PrintOnColor244(Sprintf(format, args...))
 }
 
@@ -21494,7 +21494,7 @@ func Color245(str string) string {
 }
 
 // Color245f wraps fmt.Sprintf() and Color245.
-func Color245f(format string, args ...interface{}) string {
+func Color245f(format string, args ...any) string {
 	return Color245(Sprintf(format, args...))
 }
 
@@ -21504,7 +21504,7 @@ func FprintColor245(w io.Writer, str string) {
 }
 
 // FprintfColor245 wraps Color245 and fmt.Fprintf().
-func FprintfColor245(w io.Writer, format string, args ...interface{}) {
+func FprintfColor245(w io.Writer, format string, args ...any) {
 	FprintColor245(w, Sprintf(format, args...))
 }
 
@@ -21519,7 +21519,7 @@ func PrintColor245(str string) {
 }
 
 // PrintfColor245 wraps Color245() and fmt.Printf().
-func PrintfColor245(format string, args ...interface{}) {
+func PrintfColor245(format string, args ...any) {
 	PrintColor245(Sprintf(format, args...))
 }
 
@@ -21535,7 +21535,7 @@ func OnColor245(str string) string {
 }
 
 // OnColor245f wraps fmt.Sprintf() and OnColor245.
-func OnColor245f(format string, args ...interface{}) string {
+func OnColor245f(format string, args ...any) string {
 	return OnColor245(Sprintf(format, args...))
 }
 
@@ -21545,7 +21545,7 @@ func FprintOnColor245(w io.Writer, str string) {
 }
 
 // FprintfOnColor245 wraps OnColor245 and fmt.Fprintf().
-func FprintfOnColor245(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor245(w io.Writer, format string, args ...any) {
 	FprintOnColor245(w, Sprintf(format, args...))
 }
 
@@ -21560,7 +21560,7 @@ func PrintOnColor245(str string) {
 }
 
 // PrintfOnColor245 wraps OnColor245() and fmt.Printf().
-func PrintfOnColor245(format string, args ...interface{}) {
+func PrintfOnColor245(format string, args ...any) {
 	PrintOnColor245(Sprintf(format, args...))
 }
 
@@ -21576,7 +21576,7 @@ func Color246(str string) string {
 }
 
 // Color246f wraps fmt.Sprintf() and Color246.
-func Color246f(format string, args ...interface{}) string {
+func Color246f(format string, args ...any) string {
 	return Color246(Sprintf(format, args...))
 }
 
@@ -21586,7 +21586,7 @@ func FprintColor246(w io.Writer, str string) {
 }
 
 // FprintfColor246 wraps Color246 and fmt.Fprintf().
-func FprintfColor246(w io.Writer, format string, args ...interface{}) {
+func FprintfColor246(w io.Writer, format string, args ...any) {
 	FprintColor246(w, Sprintf(format, args...))
 }
 
@@ -21601,7 +21601,7 @@ func PrintColor246(str string) {
 }
 
 // PrintfColor246 wraps Color246() and fmt.Printf().
-func PrintfColor246(format string, args ...interface{}) {
+func PrintfColor246(format string, args ...any) {
 	PrintColor246(Sprintf(format, args...))
 }
 
@@ -21617,7 +21617,7 @@ func OnColor246(str string) string {
 }
 
 // OnColor246f wraps fmt.Sprintf() and OnColor246.
-func OnColor246f(format string, args ...interface{}) string {
+func OnColor246f(format string, args ...any) string {
 	return OnColor246(Sprintf(format, args...))
 }
 
@@ -21627,7 +21627,7 @@ func FprintOnColor246(w io.Writer, str string) {
 }
 
 // FprintfOnColor246 wraps OnColor246 and fmt.Fprintf().
-func FprintfOnColor246(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor246(w io.Writer, format string, args ...any) {
 	FprintOnColor246(w, Sprintf(format, args...))
 }
 
@@ -21642,7 +21642,7 @@ func PrintOnColor246(str string) {
 }
 
 // PrintfOnColor246 wraps OnColor246() and fmt.Printf().
-func PrintfOnColor246(format string, args ...interface{}) {
+func PrintfOnColor246(format string, args ...any) {
 	PrintOnColor246(Sprintf(format, args...))
 }
 
@@ -21658,7 +21658,7 @@ func Color247(str string) string {
 }
 
 // Color247f wraps fmt.Sprintf() and Color247.
-func Color247f(format string, args ...interface{}) string {
+func Color247f(format string, args ...any) string {
 	return Color247(Sprintf(format, args...))
 }
 
@@ -21668,7 +21668,7 @@ func FprintColor247(w io.Writer, str string) {
 }
 
 // FprintfColor247 wraps Color247 and fmt.Fprintf().
-func FprintfColor247(w io.Writer, format string, args ...interface{}) {
+func FprintfColor247(w io.Writer, format string, args ...any) {
 	FprintColor247(w, Sprintf(format, args...))
 }
 
@@ -21683,7 +21683,7 @@ func PrintColor247(str string) {
 }
 
 // PrintfColor247 wraps Color247() and fmt.Printf().
-func PrintfColor247(format string, args ...interface{}) {
+func PrintfColor247(format string, args ...any) {
 	PrintColor247(Sprintf(format, args...))
 }
 
@@ -21699,7 +21699,7 @@ func OnColor247(str string) string {
 }
 
 // OnColor247f wraps fmt.Sprintf() and OnColor247.
-func OnColor247f(format string, args ...interface{}) string {
+func OnColor247f(format string, args ...any) string {
 	return OnColor247(Sprintf(format, args...))
 }
 
@@ -21709,7 +21709,7 @@ func FprintOnColor247(w io.Writer, str string) {
 }
 
 // FprintfOnColor247 wraps OnColor247 and fmt.Fprintf().
-func FprintfOnColor247(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor247(w io.Writer, format string, args ...any) {
 	FprintOnColor247(w, Sprintf(format, args...))
 }
 
@@ -21724,7 +21724,7 @@ func PrintOnColor247(str string) {
 }
 
 // PrintfOnColor247 wraps OnColor247() and fmt.Printf().
-func PrintfOnColor247(format string, args ...interface{}) {
+func PrintfOnColor247(format string, args ...any) {
 	PrintOnColor247(Sprintf(format, args...))
 }
 
@@ -21740,7 +21740,7 @@ func Color248(str string) string {
 }
 
 // Color248f wraps fmt.Sprintf() and Color248.
-func Color248f(format string, args ...interface{}) string {
+func Color248f(format string, args ...any) string {
 	return Color248(Sprintf(format, args...))
 }
 
@@ -21750,7 +21750,7 @@ func FprintColor248(w io.Writer, str string) {
 }
 
 // FprintfColor248 wraps Color248 and fmt.Fprintf().
-func FprintfColor248(w io.Writer, format string, args ...interface{}) {
+func FprintfColor248(w io.Writer, format string, args ...any) {
 	FprintColor248(w, Sprintf(format, args...))
 }
 
@@ -21765,7 +21765,7 @@ func PrintColor248(str string) {
 }
 
 // PrintfColor248 wraps Color248() and fmt.Printf().
-func PrintfColor248(format string, args ...interface{}) {
+func PrintfColor248(format string, args ...any) {
 	PrintColor248(Sprintf(format, args...))
 }
 
@@ -21781,7 +21781,7 @@ func OnColor248(str string) string {
 }
 
 // OnColor248f wraps fmt.Sprintf() and OnColor248.
-func OnColor248f(format string, args ...interface{}) string {
+func OnColor248f(format string, args ...any) string {
 	return OnColor248(Sprintf(format, args...))
 }
 
@@ -21791,7 +21791,7 @@ func FprintOnColor248(w io.Writer, str string) {
 }
 
 // FprintfOnColor248 wraps OnColor248 and fmt.Fprintf().
-func FprintfOnColor248(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor248(w io.Writer, format string, args ...any) {
 	FprintOnColor248(w, Sprintf(format, args...))
 }
 
@@ -21806,7 +21806,7 @@ func PrintOnColor248(str string) {
 }
 
 // PrintfOnColor248 wraps OnColor248() and fmt.Printf().
-func PrintfOnColor248(format string, args ...interface{}) {
+func PrintfOnColor248(format string, args ...any) {
 	PrintOnColor248(Sprintf(format, args...))
 }
 
@@ -21822,7 +21822,7 @@ func Color249(str string) string {
 }
 
 // Color249f wraps fmt.Sprintf() and Color249.
-func Color249f(format string, args ...interface{}) string {
+func Color249f(format string, args ...any) string {
 	return Color249(Sprintf(format, args...))
 }
 
@@ -21832,7 +21832,7 @@ func FprintColor249(w io.Writer, str string) {
 }
 
 // FprintfColor249 wraps Color249 and fmt.Fprintf().
-func FprintfColor249(w io.Writer, format string, args ...interface{}) {
+func FprintfColor249(w io.Writer, format string, args ...any) {
 	FprintColor249(w, Sprintf(format, args...))
 }
 
@@ -21847,7 +21847,7 @@ func PrintColor249(str string) {
 }
 
 // PrintfColor249 wraps Color249() and fmt.Printf().
-func PrintfColor249(format string, args ...interface{}) {
+func PrintfColor249(format string, args ...any) {
 	PrintColor249(Sprintf(format, args...))
 }
 
@@ -21863,7 +21863,7 @@ func OnColor249(str string) string {
 }
 
 // OnColor249f wraps fmt.Sprintf() and OnColor249.
-func OnColor249f(format string, args ...interface{}) string {
+func OnColor249f(format string, args ...any) string {
 	return OnColor249(Sprintf(format, args...))
 }
 
@@ -21873,7 +21873,7 @@ func FprintOnColor249(w io.Writer, str string) {
 }
 
 // FprintfOnColor249 wraps OnColor249 and fmt.Fprintf().
-func FprintfOnColor249(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor249(w io.Writer, format string, args ...any) {
 	FprintOnColor249(w, Sprintf(format, args...))
 }
 
@@ -21888,7 +21888,7 @@ func PrintOnColor249(str string) {
 }
 
 // PrintfOnColor249 wraps OnColor249() and fmt.Printf().
-func PrintfOnColor249(format string, args ...interface{}) {
+func PrintfOnColor249(format string, args ...any) {
 	PrintOnColor249(Sprintf(format, args...))
 }
 
@@ -21904,7 +21904,7 @@ func Color250(str string) string {
 }
 
 // Color250f wraps fmt.Sprintf() and Color250.
-func Color250f(format string, args ...interface{}) string {
+func Color250f(format string, args ...any) string {
 	return Color250(Sprintf(format, args...))
 }
 
@@ -21914,7 +21914,7 @@ func FprintColor250(w io.Writer, str string) {
 }
 
 // FprintfColor250 wraps Color250 and fmt.Fprintf().
-func FprintfColor250(w io.Writer, format string, args ...interface{}) {
+func FprintfColor250(w io.Writer, format string, args ...any) {
 	FprintColor250(w, Sprintf(format, args...))
 }
 
@@ -21929,7 +21929,7 @@ func PrintColor250(str string) {
 }
 
 // PrintfColor250 wraps Color250() and fmt.Printf().
-func PrintfColor250(format string, args ...interface{}) {
+func PrintfColor250(format string, args ...any) {
 	PrintColor250(Sprintf(format, args...))
 }
 
@@ -21945,7 +21945,7 @@ func OnColor250(str string) string {
 }
 
 // OnColor250f wraps fmt.Sprintf() and OnColor250.
-func OnColor250f(format string, args ...interface{}) string {
+func OnColor250f(format string, args ...any) string {
 	return OnColor250(Sprintf(format, args...))
 }
 
@@ -21955,7 +21955,7 @@ func FprintOnColor250(w io.Writer, str string) {
 }
 
 // FprintfOnColor250 wraps OnColor250 and fmt.Fprintf().
-func FprintfOnColor250(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor250(w io.Writer, format string, args ...any) {
 	FprintOnColor250(w, Sprintf(format, args...))
 }
 
@@ -21970,7 +21970,7 @@ func PrintOnColor250(str string) {
 }
 
 // PrintfOnColor250 wraps OnColor250() and fmt.Printf().
-func PrintfOnColor250(format string, args ...interface{}) {
+func PrintfOnColor250(format string, args ...any) {
 	PrintOnColor250(Sprintf(format, args...))
 }
 
@@ -21986,7 +21986,7 @@ func Color251(str string) string {
 }
 
 // Color251f wraps fmt.Sprintf() and Color251.
-func Color251f(format string, args ...interface{}) string {
+func Color251f(format string, args ...any) string {
 	return Color251(Sprintf(format, args...))
 }
 
@@ -21996,7 +21996,7 @@ func FprintColor251(w io.Writer, str string) {
 }
 
 // FprintfColor251 wraps Color251 and fmt.Fprintf().
-func FprintfColor251(w io.Writer, format string, args ...interface{}) {
+func FprintfColor251(w io.Writer, format string, args ...any) {
 	FprintColor251(w, Sprintf(format, args...))
 }
 
@@ -22011,7 +22011,7 @@ func PrintColor251(str string) {
 }
 
 // PrintfColor251 wraps Color251() and fmt.Printf().
-func PrintfColor251(format string, args ...interface{}) {
+func PrintfColor251(format string, args ...any) {
 	PrintColor251(Sprintf(format, args...))
 }
 
@@ -22027,7 +22027,7 @@ func OnColor251(str string) string {
 }
 
 // OnColor251f wraps fmt.Sprintf() and OnColor251.
-func OnColor251f(format string, args ...interface{}) string {
+func OnColor251f(format string, args ...any) string {
 	return OnColor251(Sprintf(format, args...))
 }
 
@@ -22037,7 +22037,7 @@ func FprintOnColor251(w io.Writer, str string) {
 }
 
 // FprintfOnColor251 wraps OnColor251 and fmt.Fprintf().
-func FprintfOnColor251(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor251(w io.Writer, format string, args ...any) {
 	FprintOnColor251(w, Sprintf(format, args...))
 }
 
@@ -22052,7 +22052,7 @@ func PrintOnColor251(str string) {
 }
 
 // PrintfOnColor251 wraps OnColor251() and fmt.Printf().
-func PrintfOnColor251(format string, args ...interface{}) {
+func PrintfOnColor251(format string, args ...any) {
 	PrintOnColor251(Sprintf(format, args...))
 }
 
@@ -22068,7 +22068,7 @@ func Color252(str string) string {
 }
 
 // Color252f wraps fmt.Sprintf() and Color252.
-func Color252f(format string, args ...interface{}) string {
+func Color252f(format string, args ...any) string {
 	return Color252(Sprintf(format, args...))
 }
 
@@ -22078,7 +22078,7 @@ func FprintColor252(w io.Writer, str string) {
 }
 
 // FprintfColor252 wraps Color252 and fmt.Fprintf().
-func FprintfColor252(w io.Writer, format string, args ...interface{}) {
+func FprintfColor252(w io.Writer, format string, args ...any) {
 	FprintColor252(w, Sprintf(format, args...))
 }
 
@@ -22093,7 +22093,7 @@ func PrintColor252(str string) {
 }
 
 // PrintfColor252 wraps Color252() and fmt.Printf().
-func PrintfColor252(format string, args ...interface{}) {
+func PrintfColor252(format string, args ...any) {
 	PrintColor252(Sprintf(format, args...))
 }
 
@@ -22109,7 +22109,7 @@ func OnColor252(str string) string {
 }
 
 // OnColor252f wraps fmt.Sprintf() and OnColor252.
-func OnColor252f(format string, args ...interface{}) string {
+func OnColor252f(format string, args ...any) string {
 	return OnColor252(Sprintf(format, args...))
 }
 
@@ -22119,7 +22119,7 @@ func FprintOnColor252(w io.Writer, str string) {
 }
 
 // FprintfOnColor252 wraps OnColor252 and fmt.Fprintf().
-func FprintfOnColor252(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor252(w io.Writer, format string, args ...any) {
 	FprintOnColor252(w, Sprintf(format, args...))
 }
 
@@ -22134,7 +22134,7 @@ func PrintOnColor252(str string) {
 }
 
 // PrintfOnColor252 wraps OnColor252() and fmt.Printf().
-func PrintfOnColor252(format string, args ...interface{}) {
+func PrintfOnColor252(format string, args ...any) {
 	PrintOnColor252(Sprintf(format, args...))
 }
 
@@ -22150,7 +22150,7 @@ func Color253(str string) string {
 }
 
 // Color253f wraps fmt.Sprintf() and Color253.
-func Color253f(format string, args ...interface{}) string {
+func Color253f(format string, args ...any) string {
 	return Color253(Sprintf(format, args...))
 }
 
@@ -22160,7 +22160,7 @@ func FprintColor253(w io.Writer, str string) {
 }
 
 // FprintfColor253 wraps Color253 and fmt.Fprintf().
-func FprintfColor253(w io.Writer, format string, args ...interface{}) {
+func FprintfColor253(w io.Writer, format string, args ...any) {
 	FprintColor253(w, Sprintf(format, args...))
 }
 
@@ -22175,7 +22175,7 @@ func PrintColor253(str string) {
 }
 
 // PrintfColor253 wraps Color253() and fmt.Printf().
-func PrintfColor253(format string, args ...interface{}) {
+func PrintfColor253(format string, args ...any) {
 	PrintColor253(Sprintf(format, args...))
 }
 
@@ -22191,7 +22191,7 @@ func OnColor253(str string) string {
 }
 
 // OnColor253f wraps fmt.Sprintf() and OnColor253.
-func OnColor253f(format string, args ...interface{}) string {
+func OnColor253f(format string, args ...any) string {
 	return OnColor253(Sprintf(format, args...))
 }
 
@@ -22201,7 +22201,7 @@ func FprintOnColor253(w io.Writer, str string) {
 }
 
 // FprintfOnColor253 wraps OnColor253 and fmt.Fprintf().
-func FprintfOnColor253(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor253(w io.Writer, format string, args ...any) {
 	FprintOnColor253(w, Sprintf(format, args...))
 }
 
@@ -22216,7 +22216,7 @@ func PrintOnColor253(str string) {
 }
 
 // PrintfOnColor253 wraps OnColor253() and fmt.Printf().
-func PrintfOnColor253(format string, args ...interface{}) {
+func PrintfOnColor253(format string, args ...any) {
 	PrintOnColor253(Sprintf(format, args...))
 }
 
@@ -22232,7 +22232,7 @@ func Color254(str string) string {
 }
 
 // Color254f wraps fmt.Sprintf() and Color254.
-func Color254f(format string, args ...interface{}) string {
+func Color254f(format string, args ...any) string {
 	return Color254(Sprintf(format, args...))
 }
 
@@ -22242,7 +22242,7 @@ func FprintColor254(w io.Writer, str string) {
 }
 
 // FprintfColor254 wraps Color254 and fmt.Fprintf().
-func FprintfColor254(w io.Writer, format string, args ...interface{}) {
+func FprintfColor254(w io.Writer, format string, args ...any) {
 	FprintColor254(w, Sprintf(format, args...))
 }
 
@@ -22257,7 +22257,7 @@ func PrintColor254(str string) {
 }
 
 // PrintfColor254 wraps Color254() and fmt.Printf().
-func PrintfColor254(format string, args ...interface{}) {
+func PrintfColor254(format string, args ...any) {
 	PrintColor254(Sprintf(format, args...))
 }
 
@@ -22273,7 +22273,7 @@ func OnColor254(str string) string {
 }
 
 // OnColor254f wraps fmt.Sprintf() and OnColor254.
-func OnColor254f(format string, args ...interface{}) string {
+func OnColor254f(format string, args ...any) string {
 	return OnColor254(Sprintf(format, args...))
 }
 
@@ -22283,7 +22283,7 @@ func FprintOnColor254(w io.Writer, str string) {
 }
 
 // FprintfOnColor254 wraps OnColor254 and fmt.Fprintf().
-func FprintfOnColor254(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor254(w io.Writer, format string, args ...any) {
 	FprintOnColor254(w, Sprintf(format, args...))
 }
 
@@ -22298,7 +22298,7 @@ func PrintOnColor254(str string) {
 }
 
 // PrintfOnColor254 wraps OnColor254() and fmt.Printf().
-func PrintfOnColor254(format string, args ...interface{}) {
+func PrintfOnColor254(format string, args ...any) {
 	PrintOnColor254(Sprintf(format, args...))
 }
 
@@ -22314,7 +22314,7 @@ func Color255(str string) string {
 }
 
 // Color255f wraps fmt.Sprintf() and Color255.
-func Color255f(format string, args ...interface{}) string {
+func Color255f(format string, args ...any) string {
 	return Color255(Sprintf(format, args...))
 }
 
@@ -22324,7 +22324,7 @@ func FprintColor255(w io.Writer, str string) {
 }
 
 // FprintfColor255 wraps Color255 and fmt.Fprintf().
-func FprintfColor255(w io.Writer, format string, args ...interface{}) {
+func FprintfColor255(w io.Writer, format string, args ...any) {
 	FprintColor255(w, Sprintf(format, args...))
 }
 
@@ -22339,7 +22339,7 @@ func PrintColor255(str string) {
 }
 
 // PrintfColor255 wraps Color255() and fmt.Printf().
-func PrintfColor255(format string, args ...interface{}) {
+func PrintfColor255(format string, args ...any) {
 	PrintColor255(Sprintf(format, args...))
 }
 
@@ -22355,7 +22355,7 @@ func OnColor255(str string) string {
 }
 
 // OnColor255f wraps fmt.Sprintf() and OnColor255.
-func OnColor255f(format string, args ...interface{}) string {
+func OnColor255f(format string, args ...any) string {
 	return OnColor255(Sprintf(format, args...))
 }
 
@@ -22365,7 +22365,7 @@ func FprintOnColor255(w io.Writer, str string) {
 }
 
 // FprintfOnColor255 wraps OnColor255 and fmt.Fprintf().
-func FprintfOnColor255(w io.Writer, format string, args ...interface{}) {
+func FprintfOnColor255(w io.Writer, format string, args ...any) {
 	FprintOnColor255(w, Sprintf(format, args...))
 }
 
@@ -22380,7 +22380,7 @@ func PrintOnColor255(str string) {
 }
 
 // PrintfOnColor255 wraps OnColor255() and fmt.Printf().
-func PrintfOnColor255(format string, args ...interface{}) {
+func PrintfOnColor255(format string, args ...any) {
 	PrintOnColor255(Sprintf(format, args...))
 }
 
@@ -22396,7 +22396,7 @@ func Reset(str string) string {
 }
 
 // Resetf wraps fmt.Sprintf() and Reset.
-func Resetf(format string, args ...interface{}) string {
+func Resetf(format string, args ...any) string {
 	return Reset(Sprintf(format, args...))
 }
 
@@ -22406,7 +22406,7 @@ func FprintReset(w io.Writer, str string) {
 }
 
 // FprintfReset wraps Reset and fmt.Fprintf().
-func FprintfReset(w io.Writer, format string, args ...interface{}) {
+func FprintfReset(w io.Writer, format string, args ...any) {
 	FprintReset(w, Sprintf(format, args...))
 }
 
@@ -22421,7 +22421,7 @@ func PrintReset(str string) {
 }
 
 // PrintfReset wraps Reset() and fmt.Printf().
-func PrintfReset(format string, args ...interface{}) {
+func PrintfReset(format string, args ...any) {
 	PrintReset(Sprintf(format, args...))
 }
 
@@ -22437,7 +22437,7 @@ func Normal(str string) string {
 }
 
 // Normalf wraps fmt.Sprintf() and Normal.
-func Normalf(format string, args ...interface{}) string {
+func Normalf(format string, args ...any) string {
 	return Normal(Sprintf(format, args...))
 }
 
@@ -22447,7 +22447,7 @@ func FprintNormal(w io.Writer, str string) {
 }
 
 // FprintfNormal wraps Normal and fmt.Fprintf().
-func FprintfNormal(w io.Writer, format string, args ...interface{}) {
+func FprintfNormal(w io.Writer, format string, args ...any) {
 	FprintNormal(w, Sprintf(format, args...))
 }
 
@@ -22462,7 +22462,7 @@ func PrintNormal(str string) {
 }
 
 // PrintfNormal wraps Normal() and fmt.Printf().
-func PrintfNormal(format string, args ...interface{}) {
+func PrintfNormal(format string, args ...any) {
 	PrintNormal(Sprintf(format, args...))
 }
 
@@ -22478,7 +22478,7 @@ func Bold(str string) string {
 }
 
 // Boldf wraps fmt.Sprintf() and Bold.
-func Boldf(format string, args ...interface{}) string {
+func Boldf(format string, args ...any) string {
 	return Bold(Sprintf(format, args...))
 }
 
@@ -22488,7 +22488,7 @@ func FprintBold(w io.Writer, str string) {
 }
 
 // FprintfBold wraps Bold and fmt.Fprintf().
-func FprintfBold(w io.Writer, format string, args ...interface{}) {
+func FprintfBold(w io.Writer, format string, args ...any) {
 	FprintBold(w, Sprintf(format, args...))
 }
 
@@ -22503,7 +22503,7 @@ func PrintBold(str string) {
 }
 
 // PrintfBold wraps Bold() and fmt.Printf().
-func PrintfBold(format string, args ...interface{}) {
+func PrintfBold(format string, args ...any) {
 	PrintBold(Sprintf(format, args...))
 }
 
@@ -22519,7 +22519,7 @@ func NoBold(str string) string {
 }
 
 // NoBoldf wraps fmt.Sprintf() and NoBold.
-func NoBoldf(format string, args ...interface{}) string {
+func NoBoldf(format string, args ...any) string {
 	return NoBold(Sprintf(format, args...))
 }
 
@@ -22529,7 +22529,7 @@ func FprintNoBold(w io.Writer, str string) {
 }
 
 // FprintfNoBold wraps NoBold and fmt.Fprintf().
-func FprintfNoBold(w io.Writer, format string, args ...interface{}) {
+func FprintfNoBold(w io.Writer, format string, args ...any) {
 	FprintNoBold(w, Sprintf(format, args...))
 }
 
@@ -22544,7 +22544,7 @@ func PrintNoBold(str string) {
 }
 
 // PrintfNoBold wraps NoBold() and fmt.Printf().
-func PrintfNoBold(format string, args ...interface{}) {
+func PrintfNoBold(format string, args ...any) {
 	PrintNoBold(Sprintf(format, args...))
 }
 
@@ -22560,7 +22560,7 @@ func Dim(str string) string {
 }
 
 // Dimf wraps fmt.Sprintf() and Dim.
-func Dimf(format string, args ...interface{}) string {
+func Dimf(format string, args ...any) string {
 	return Dim(Sprintf(format, args...))
 }
 
@@ -22570,7 +22570,7 @@ func FprintDim(w io.Writer, str string) {
 }
 
 // FprintfDim wraps Dim and fmt.Fprintf().
-func FprintfDim(w io.Writer, format string, args ...interface{}) {
+func FprintfDim(w io.Writer, format string, args ...any) {
 	FprintDim(w, Sprintf(format, args...))
 }
 
@@ -22585,7 +22585,7 @@ func PrintDim(str string) {
 }
 
 // PrintfDim wraps Dim() and fmt.Printf().
-func PrintfDim(format string, args ...interface{}) {
+func PrintfDim(format string, args ...any) {
 	PrintDim(Sprintf(format, args...))
 }
 
@@ -22601,7 +22601,7 @@ func NoDim(str string) string {
 }
 
 // NoDimf wraps fmt.Sprintf() and NoDim.
-func NoDimf(format string, args ...interface{}) string {
+func NoDimf(format string, args ...any) string {
 	return NoDim(Sprintf(format, args...))
 }
 
@@ -22611,7 +22611,7 @@ func FprintNoDim(w io.Writer, str string) {
 }
 
 // FprintfNoDim wraps NoDim and fmt.Fprintf().
-func FprintfNoDim(w io.Writer, format string, args ...interface{}) {
+func FprintfNoDim(w io.Writer, format string, args ...any) {
 	FprintNoDim(w, Sprintf(format, args...))
 }
 
@@ -22626,7 +22626,7 @@ func PrintNoDim(str string) {
 }
 
 // PrintfNoDim wraps NoDim() and fmt.Printf().
-func PrintfNoDim(format string, args ...interface{}) {
+func PrintfNoDim(format string, args ...any) {
 	PrintNoDim(Sprintf(format, args...))
 }
 
@@ -22642,7 +22642,7 @@ func Faint(str string) string {
 }
 
 // Faintf wraps fmt.Sprintf() and Faint.
-func Faintf(format string, args ...interface{}) string {
+func Faintf(format string, args ...any) string {
 	return Faint(Sprintf(format, args...))
 }
 
@@ -22652,7 +22652,7 @@ func FprintFaint(w io.Writer, str string) {
 }
 
 // FprintfFaint wraps Faint and fmt.Fprintf().
-func FprintfFaint(w io.Writer, format string, args ...interface{}) {
+func FprintfFaint(w io.Writer, format string, args ...any) {
 	FprintFaint(w, Sprintf(format, args...))
 }
 
@@ -22667,7 +22667,7 @@ func PrintFaint(str string) {
 }
 
 // PrintfFaint wraps Faint() and fmt.Printf().
-func PrintfFaint(format string, args ...interface{}) {
+func PrintfFaint(format string, args ...any) {
 	PrintFaint(Sprintf(format, args...))
 }
 
@@ -22683,7 +22683,7 @@ func NoFaint(str string) string {
 }
 
 // NoFaintf wraps fmt.Sprintf() and NoFaint.
-func NoFaintf(format string, args ...interface{}) string {
+func NoFaintf(format string, args ...any) string {
 	return NoFaint(Sprintf(format, args...))
 }
 
@@ -22693,7 +22693,7 @@ func FprintNoFaint(w io.Writer, str string) {
 }
 
 // FprintfNoFaint wraps NoFaint and fmt.Fprintf().
-func FprintfNoFaint(w io.Writer, format string, args ...interface{}) {
+func FprintfNoFaint(w io.Writer, format string, args ...any) {
 	FprintNoFaint(w, Sprintf(format, args...))
 }
 
@@ -22708,7 +22708,7 @@ func PrintNoFaint(str string) {
 }
 
 // PrintfNoFaint wraps NoFaint() and fmt.Printf().
-func PrintfNoFaint(format string, args ...interface{}) {
+func PrintfNoFaint(format string, args ...any) {
 	PrintNoFaint(Sprintf(format, args...))
 }
 
@@ -22724,7 +22724,7 @@ func Italic(str string) string {
 }
 
 // Italicf wraps fmt.Sprintf() and Italic.
-func Italicf(format string, args ...interface{}) string {
+func Italicf(format string, args ...any) string {
 	return Italic(Sprintf(format, args...))
 }
 
@@ -22734,7 +22734,7 @@ func FprintItalic(w io.Writer, str string) {
 }
 
 // FprintfItalic wraps Italic and fmt.Fprintf().
-func FprintfItalic(w io.Writer, format string, args ...interface{}) {
+func FprintfItalic(w io.Writer, format string, args ...any) {
 	FprintItalic(w, Sprintf(format, args...))
 }
 
@@ -22749,7 +22749,7 @@ func PrintItalic(str string) {
 }
 
 // PrintfItalic wraps Italic() and fmt.Printf().
-func PrintfItalic(format string, args ...interface{}) {
+func PrintfItalic(format string, args ...any) {
 	PrintItalic(Sprintf(format, args...))
 }
 
@@ -22765,7 +22765,7 @@ func NoItalic(str string) string {
 }
 
 // NoItalicf wraps fmt.Sprintf() and NoItalic.
-func NoItalicf(format string, args ...interface{}) string {
+func NoItalicf(format string, args ...any) string {
 	return NoItalic(Sprintf(format, args...))
 }
 
@@ -22775,7 +22775,7 @@ func FprintNoItalic(w io.Writer, str string) {
 }
 
 // FprintfNoItalic wraps NoItalic and fmt.Fprintf().
-func FprintfNoItalic(w io.Writer, format string, args ...interface{}) {
+func FprintfNoItalic(w io.Writer, format string, args ...any) {
 	FprintNoItalic(w, Sprintf(format, args...))
 }
 
@@ -22790,7 +22790,7 @@ func PrintNoItalic(str string) {
 }
 
 // PrintfNoItalic wraps NoItalic() and fmt.Printf().
-func PrintfNoItalic(format string, args ...interface{}) {
+func PrintfNoItalic(format string, args ...any) {
 	PrintNoItalic(Sprintf(format, args...))
 }
 
@@ -22806,7 +22806,7 @@ func Underline(str string) string {
 }
 
 // Underlinef wraps fmt.Sprintf() and Underline.
-func Underlinef(format string, args ...interface{}) string {
+func Underlinef(format string, args ...any) string {
 	return Underline(Sprintf(format, args...))
 }
 
@@ -22816,7 +22816,7 @@ func FprintUnderline(w io.Writer, str string) {
 }
 
 // FprintfUnderline wraps Underline and fmt.Fprintf().
-func FprintfUnderline(w io.Writer, format string, args ...interface{}) {
+func FprintfUnderline(w io.Writer, format string, args ...any) {
 	FprintUnderline(w, Sprintf(format, args...))
 }
 
@@ -22831,7 +22831,7 @@ func PrintUnderline(str string) {
 }
 
 // PrintfUnderline wraps Underline() and fmt.Printf().
-func PrintfUnderline(format string, args ...interface{}) {
+func PrintfUnderline(format string, args ...any) {
 	PrintUnderline(Sprintf(format, args...))
 }
 
@@ -22847,7 +22847,7 @@ func NoUnderline(str string) string {
 }
 
 // NoUnderlinef wraps fmt.Sprintf() and NoUnderline.
-func NoUnderlinef(format string, args ...interface{}) string {
+func NoUnderlinef(format string, args ...any) string {
 	return NoUnderline(Sprintf(format, args...))
 }
 
@@ -22857,7 +22857,7 @@ func FprintNoUnderline(w io.Writer, str string) {
 }
 
 // FprintfNoUnderline wraps NoUnderline and fmt.Fprintf().
-func FprintfNoUnderline(w io.Writer, format string, args ...interface{}) {
+func FprintfNoUnderline(w io.Writer, format string, args ...any) {
 	FprintNoUnderline(w, Sprintf(format, args...))
 }
 
@@ -22872,7 +22872,7 @@ func PrintNoUnderline(str string) {
 }
 
 // PrintfNoUnderline wraps NoUnderline() and fmt.Printf().
-func PrintfNoUnderline(format string, args ...interface{}) {
+func PrintfNoUnderline(format string, args ...any) {
 	PrintNoUnderline(Sprintf(format, args...))
 }
 
@@ -22888,7 +22888,7 @@ func Blink(str string) string {
 }
 
 // Blinkf wraps fmt.Sprintf() and Blink.
-func Blinkf(format string, args ...interface{}) string {
+func Blinkf(format string, args ...any) string {
 	return Blink(Sprintf(format, args...))
 }
 
@@ -22898,7 +22898,7 @@ func FprintBlink(w io.Writer, str string) {
 }
 
 // FprintfBlink wraps Blink and fmt.Fprintf().
-func FprintfBlink(w io.Writer, format string, args ...interface{}) {
+func FprintfBlink(w io.Writer, format string, args ...any) {
 	FprintBlink(w, Sprintf(format, args...))
 }
 
@@ -22913,7 +22913,7 @@ func PrintBlink(str string) {
 }
 
 // PrintfBlink wraps Blink() and fmt.Printf().
-func PrintfBlink(format string, args ...interface{}) {
+func PrintfBlink(format string, args ...any) {
 	PrintBlink(Sprintf(format, args...))
 }
 
@@ -22929,7 +22929,7 @@ func NoBlink(str string) string {
 }
 
 // NoBlinkf wraps fmt.Sprintf() and NoBlink.
-func NoBlinkf(format string, args ...interface{}) string {
+func NoBlinkf(format string, args ...any) string {
 	return NoBlink(Sprintf(format, args...))
 }
 
@@ -22939,7 +22939,7 @@ func FprintNoBlink(w io.Writer, str string) {
 }
 
 // FprintfNoBlink wraps NoBlink and fmt.Fprintf().
-func FprintfNoBlink(w io.Writer, format string, args ...interface{}) {
+func FprintfNoBlink(w io.Writer, format string, args ...any) {
 	FprintNoBlink(w, Sprintf(format, args...))
 }
 
@@ -22954,7 +22954,7 @@ func PrintNoBlink(str string) {
 }
 
 // PrintfNoBlink wraps NoBlink() and fmt.Printf().
-func PrintfNoBlink(format string, args ...interface{}) {
+func PrintfNoBlink(format string, args ...any) {
 	PrintNoBlink(Sprintf(format, args...))
 }
 
@@ -22970,7 +22970,7 @@ func BlinkSlow(str string) string {
 }
 
 // BlinkSlowf wraps fmt.Sprintf() and BlinkSlow.
-func BlinkSlowf(format string, args ...interface{}) string {
+func BlinkSlowf(format string, args ...any) string {
 	return BlinkSlow(Sprintf(format, args...))
 }
 
@@ -22980,7 +22980,7 @@ func FprintBlinkSlow(w io.Writer, str string) {
 }
 
 // FprintfBlinkSlow wraps BlinkSlow and fmt.Fprintf().
-func FprintfBlinkSlow(w io.Writer, format string, args ...interface{}) {
+func FprintfBlinkSlow(w io.Writer, format string, args ...any) {
 	FprintBlinkSlow(w, Sprintf(format, args...))
 }
 
@@ -22995,7 +22995,7 @@ func PrintBlinkSlow(str string) {
 }
 
 // PrintfBlinkSlow wraps BlinkSlow() and fmt.Printf().
-func PrintfBlinkSlow(format string, args ...interface{}) {
+func PrintfBlinkSlow(format string, args ...any) {
 	PrintBlinkSlow(Sprintf(format, args...))
 }
 
@@ -23011,7 +23011,7 @@ func NoBlinkSlow(str string) string {
 }
 
 // NoBlinkSlowf wraps fmt.Sprintf() and NoBlinkSlow.
-func NoBlinkSlowf(format string, args ...interface{}) string {
+func NoBlinkSlowf(format string, args ...any) string {
 	return NoBlinkSlow(Sprintf(format, args...))
 }
 
@@ -23021,7 +23021,7 @@ func FprintNoBlinkSlow(w io.Writer, str string) {
 }
 
 // FprintfNoBlinkSlow wraps NoBlinkSlow and fmt.Fprintf().
-func FprintfNoBlinkSlow(w io.Writer, format string, args ...interface{}) {
+func FprintfNoBlinkSlow(w io.Writer, format string, args ...any) {
 	FprintNoBlinkSlow(w, Sprintf(format, args...))
 }
 
@@ -23036,7 +23036,7 @@ func PrintNoBlinkSlow(str string) {
 }
 
 // PrintfNoBlinkSlow wraps NoBlinkSlow() and fmt.Printf().
-func PrintfNoBlinkSlow(format string, args ...interface{}) {
+func PrintfNoBlinkSlow(format string, args ...any) {
 	PrintNoBlinkSlow(Sprintf(format, args...))
 }
 
@@ -23052,7 +23052,7 @@ func BlinkRapid(str string) string {
 }
 
 // BlinkRapidf wraps fmt.Sprintf() and BlinkRapid.
-func BlinkRapidf(format string, args ...interface{}) string {
+func BlinkRapidf(format string, args ...any) string {
 	return BlinkRapid(Sprintf(format, args...))
 }
 
@@ -23062,7 +23062,7 @@ func FprintBlinkRapid(w io.Writer, str string) {
 }
 
 // FprintfBlinkRapid wraps BlinkRapid and fmt.Fprintf().
-func FprintfBlinkRapid(w io.Writer, format string, args ...interface{}) {
+func FprintfBlinkRapid(w io.Writer, format string, args ...any) {
 	FprintBlinkRapid(w, Sprintf(format, args...))
 }
 
@@ -23077,7 +23077,7 @@ func PrintBlinkRapid(str string) {
 }
 
 // PrintfBlinkRapid wraps BlinkRapid() and fmt.Printf().
-func PrintfBlinkRapid(format string, args ...interface{}) {
+func PrintfBlinkRapid(format string, args ...any) {
 	PrintBlinkRapid(Sprintf(format, args...))
 }
 
@@ -23093,7 +23093,7 @@ func NoBlinkRapid(str string) string {
 }
 
 // NoBlinkRapidf wraps fmt.Sprintf() and NoBlinkRapid.
-func NoBlinkRapidf(format string, args ...interface{}) string {
+func NoBlinkRapidf(format string, args ...any) string {
 	return NoBlinkRapid(Sprintf(format, args...))
 }
 
@@ -23103,7 +23103,7 @@ func FprintNoBlinkRapid(w io.Writer, str string) {
 }
 
 // FprintfNoBlinkRapid wraps NoBlinkRapid and fmt.Fprintf().
-func FprintfNoBlinkRapid(w io.Writer, format string, args ...interface{}) {
+func FprintfNoBlinkRapid(w io.Writer, format string, args ...any) {
 	FprintNoBlinkRapid(w, Sprintf(format, args...))
 }
 
@@ -23118,7 +23118,7 @@ func PrintNoBlinkRapid(str string) {
 }
 
 // PrintfNoBlinkRapid wraps NoBlinkRapid() and fmt.Printf().
-func PrintfNoBlinkRapid(format string, args ...interface{}) {
+func PrintfNoBlinkRapid(format string, args ...any) {
 	PrintNoBlinkRapid(Sprintf(format, args...))
 }
 
@@ -23134,7 +23134,7 @@ func Inverse(str string) string {
 }
 
 // Inversef wraps fmt.Sprintf() and Inverse.
-func Inversef(format string, args ...interface{}) string {
+func Inversef(format string, args ...any) string {
 	return Inverse(Sprintf(format, args...))
 }
 
@@ -23144,7 +23144,7 @@ func FprintInverse(w io.Writer, str string) {
 }
 
 // FprintfInverse wraps Inverse and fmt.Fprintf().
-func FprintfInverse(w io.Writer, format string, args ...interface{}) {
+func FprintfInverse(w io.Writer, format string, args ...any) {
 	FprintInverse(w, Sprintf(format, args...))
 }
 
@@ -23159,7 +23159,7 @@ func PrintInverse(str string) {
 }
 
 // PrintfInverse wraps Inverse() and fmt.Printf().
-func PrintfInverse(format string, args ...interface{}) {
+func PrintfInverse(format string, args ...any) {
 	PrintInverse(Sprintf(format, args...))
 }
 
@@ -23175,7 +23175,7 @@ func NoInverse(str string) string {
 }
 
 // NoInversef wraps fmt.Sprintf() and NoInverse.
-func NoInversef(format string, args ...interface{}) string {
+func NoInversef(format string, args ...any) string {
 	return NoInverse(Sprintf(format, args...))
 }
 
@@ -23185,7 +23185,7 @@ func FprintNoInverse(w io.Writer, str string) {
 }
 
 // FprintfNoInverse wraps NoInverse and fmt.Fprintf().
-func FprintfNoInverse(w io.Writer, format string, args ...interface{}) {
+func FprintfNoInverse(w io.Writer, format string, args ...any) {
 	FprintNoInverse(w, Sprintf(format, args...))
 }
 
@@ -23200,7 +23200,7 @@ func PrintNoInverse(str string) {
 }
 
 // PrintfNoInverse wraps NoInverse() and fmt.Printf().
-func PrintfNoInverse(format string, args ...interface{}) {
+func PrintfNoInverse(format string, args ...any) {
 	PrintNoInverse(Sprintf(format, args...))
 }
 
@@ -23216,7 +23216,7 @@ func Negative(str string) string {
 }
 
 // Negativef wraps fmt.Sprintf() and Negative.
-func Negativef(format string, args ...interface{}) string {
+func Negativef(format string, args ...any) string {
 	return Negative(Sprintf(format, args...))
 }
 
@@ -23226,7 +23226,7 @@ func FprintNegative(w io.Writer, str string) {
 }
 
 // FprintfNegative wraps Negative and fmt.Fprintf().
-func FprintfNegative(w io.Writer, format string, args ...interface{}) {
+func FprintfNegative(w io.Writer, format string, args ...any) {
 	FprintNegative(w, Sprintf(format, args...))
 }
 
@@ -23241,7 +23241,7 @@ func PrintNegative(str string) {
 }
 
 // PrintfNegative wraps Negative() and fmt.Printf().
-func PrintfNegative(format string, args ...interface{}) {
+func PrintfNegative(format string, args ...any) {
 	PrintNegative(Sprintf(format, args...))
 }
 
@@ -23257,7 +23257,7 @@ func NoNegative(str string) string {
 }
 
 // NoNegativef wraps fmt.Sprintf() and NoNegative.
-func NoNegativef(format string, args ...interface{}) string {
+func NoNegativef(format string, args ...any) string {
 	return NoNegative(Sprintf(format, args...))
 }
 
@@ -23267,7 +23267,7 @@ func FprintNoNegative(w io.Writer, str string) {
 }
 
 // FprintfNoNegative wraps NoNegative and fmt.Fprintf().
-func FprintfNoNegative(w io.Writer, format string, args ...interface{}) {
+func FprintfNoNegative(w io.Writer, format string, args ...any) {
 	FprintNoNegative(w, Sprintf(format, args...))
 }
 
@@ -23282,7 +23282,7 @@ func PrintNoNegative(str string) {
 }
 
 // PrintfNoNegative wraps NoNegative() and fmt.Printf().
-func PrintfNoNegative(format string, args ...interface{}) {
+func PrintfNoNegative(format string, args ...any) {
 	PrintNoNegative(Sprintf(format, args...))
 }
 
@@ -23298,7 +23298,7 @@ func Swap(str string) string {
 }
 
 // Swapf wraps fmt.Sprintf() and Swap.
-func Swapf(format string, args ...interface{}) string {
+func Swapf(format string, args ...any) string {
 	return Swap(Sprintf(format, args...))
 }
 
@@ -23308,7 +23308,7 @@ func FprintSwap(w io.Writer, str string) {
 }
 
 // FprintfSwap wraps Swap and fmt.Fprintf().
-func FprintfSwap(w io.Writer, format string, args ...interface{}) {
+func FprintfSwap(w io.Writer, format string, args ...any) {
 	FprintSwap(w, Sprintf(format, args...))
 }
 
@@ -23323,7 +23323,7 @@ func PrintSwap(str string) {
 }
 
 // PrintfSwap wraps Swap() and fmt.Printf().
-func PrintfSwap(format string, args ...interface{}) {
+func PrintfSwap(format string, args ...any) {
 	PrintSwap(Sprintf(format, args...))
 }
 
@@ -23339,7 +23339,7 @@ func NoSwap(str string) string {
 }
 
 // NoSwapf wraps fmt.Sprintf() and NoSwap.
-func NoSwapf(format string, args ...interface{}) string {
+func NoSwapf(format string, args ...any) string {
 	return NoSwap(Sprintf(format, args...))
 }
 
@@ -23349,7 +23349,7 @@ func FprintNoSwap(w io.Writer, str string) {
 }
 
 // FprintfNoSwap wraps NoSwap and fmt.Fprintf().
-func FprintfNoSwap(w io.Writer, format string, args ...interface{}) {
+func FprintfNoSwap(w io.Writer, format string, args ...any) {
 	FprintNoSwap(w, Sprintf(format, args...))
 }
 
@@ -23364,7 +23364,7 @@ func PrintNoSwap(str string) {
 }
 
 // PrintfNoSwap wraps NoSwap() and fmt.Printf().
-func PrintfNoSwap(format string, args ...interface{}) {
+func PrintfNoSwap(format string, args ...any) {
 	PrintNoSwap(Sprintf(format, args...))
 }
 
@@ -23380,7 +23380,7 @@ func Hide(str string) string {
 }
 
 // Hidef wraps fmt.Sprintf() and Hide.
-func Hidef(format string, args ...interface{}) string {
+func Hidef(format string, args ...any) string {
 	return Hide(Sprintf(format, args...))
 }
 
@@ -23390,7 +23390,7 @@ func FprintHide(w io.Writer, str string) {
 }
 
 // FprintfHide wraps Hide and fmt.Fprintf().
-func FprintfHide(w io.Writer, format string, args ...interface{}) {
+func FprintfHide(w io.Writer, format string, args ...any) {
 	FprintHide(w, Sprintf(format, args...))
 }
 
@@ -23405,7 +23405,7 @@ func PrintHide(str string) {
 }
 
 // PrintfHide wraps Hide() and fmt.Printf().
-func PrintfHide(format string, args ...interface{}) {
+func PrintfHide(format string, args ...any) {
 	PrintHide(Sprintf(format, args...))
 }
 
@@ -23421,7 +23421,7 @@ func NoHide(str string) string {
 }
 
 // NoHidef wraps fmt.Sprintf() and NoHide.
-func NoHidef(format string, args ...interface{}) string {
+func NoHidef(format string, args ...any) string {
 	return NoHide(Sprintf(format, args...))
 }
 
@@ -23431,7 +23431,7 @@ func FprintNoHide(w io.Writer, str string) {
 }
 
 // FprintfNoHide wraps NoHide and fmt.Fprintf().
-func FprintfNoHide(w io.Writer, format string, args ...interface{}) {
+func FprintfNoHide(w io.Writer, format string, args ...any) {
 	FprintNoHide(w, Sprintf(format, args...))
 }
 
@@ -23446,7 +23446,7 @@ func PrintNoHide(str string) {
 }
 
 // PrintfNoHide wraps NoHide() and fmt.Printf().
-func PrintfNoHide(format string, args ...interface{}) {
+func PrintfNoHide(format string, args ...any) {
 	PrintNoHide(Sprintf(format, args...))
 }
 
@@ -23462,7 +23462,7 @@ func Conceal(str string) string {
 }
 
 // Concealf wraps fmt.Sprintf() and Conceal.
-func Concealf(format string, args ...interface{}) string {
+func Concealf(format string, args ...any) string {
 	return Conceal(Sprintf(format, args...))
 }
 
@@ -23472,7 +23472,7 @@ func FprintConceal(w io.Writer, str string) {
 }
 
 // FprintfConceal wraps Conceal and fmt.Fprintf().
-func FprintfConceal(w io.Writer, format string, args ...interface{}) {
+func FprintfConceal(w io.Writer, format string, args ...any) {
 	FprintConceal(w, Sprintf(format, args...))
 }
 
@@ -23487,7 +23487,7 @@ func PrintConceal(str string) {
 }
 
 // PrintfConceal wraps Conceal() and fmt.Printf().
-func PrintfConceal(format string, args ...interface{}) {
+func PrintfConceal(format string, args ...any) {
 	PrintConceal(Sprintf(format, args...))
 }
 
@@ -23503,7 +23503,7 @@ func NoConceal(str string) string {
 }
 
 // NoConcealf wraps fmt.Sprintf() and NoConceal.
-func NoConcealf(format string, args ...interface{}) string {
+func NoConcealf(format string, args ...any) string {
 	return NoConceal(Sprintf(format, args...))
 }
 
@@ -23513,7 +23513,7 @@ func FprintNoConceal(w io.Writer, str string) {
 }
 
 // FprintfNoConceal wraps NoConceal and fmt.Fprintf().
-func FprintfNoConceal(w io.Writer, format string, args ...interface{}) {
+func FprintfNoConceal(w io.Writer, format string, args ...any) {
 	FprintNoConceal(w, Sprintf(format, args...))
 }
 
@@ -23528,7 +23528,7 @@ func PrintNoConceal(str string) {
 }
 
 // PrintfNoConceal wraps NoConceal() and fmt.Printf().
-func PrintfNoConceal(format string, args ...interface{}) {
+func PrintfNoConceal(format string, args ...any) {
 	PrintNoConceal(Sprintf(format, args...))
 }
 
@@ -23544,7 +23544,7 @@ func CrossedOut(str string) string {
 }
 
 // CrossedOutf wraps fmt.Sprintf() and CrossedOut.
-func CrossedOutf(format string, args ...interface{}) string {
+func CrossedOutf(format string, args ...any) string {
 	return CrossedOut(Sprintf(format, args...))
 }
 
@@ -23554,7 +23554,7 @@ func FprintCrossedOut(w io.Writer, str string) {
 }
 
 // FprintfCrossedOut wraps CrossedOut and fmt.Fprintf().
-func FprintfCrossedOut(w io.Writer, format string, args ...interface{}) {
+func FprintfCrossedOut(w io.Writer, format string, args ...any) {
 	FprintCrossedOut(w, Sprintf(format, args...))
 }
 
@@ -23569,7 +23569,7 @@ func PrintCrossedOut(str string) {
 }
 
 // PrintfCrossedOut wraps CrossedOut() and fmt.Printf().
-func PrintfCrossedOut(format string, args ...interface{}) {
+func PrintfCrossedOut(format string, args ...any) {
 	PrintCrossedOut(Sprintf(format, args...))
 }
 
@@ -23585,7 +23585,7 @@ func NoCrossedOut(str string) string {
 }
 
 // NoCrossedOutf wraps fmt.Sprintf() and NoCrossedOut.
-func NoCrossedOutf(format string, args ...interface{}) string {
+func NoCrossedOutf(format string, args ...any) string {
 	return NoCrossedOut(Sprintf(format, args...))
 }
 
@@ -23595,7 +23595,7 @@ func FprintNoCrossedOut(w io.Writer, str string) {
 }
 
 // FprintfNoCrossedOut wraps NoCrossedOut and fmt.Fprintf().
-func FprintfNoCrossedOut(w io.Writer, format string, args ...interface{}) {
+func FprintfNoCrossedOut(w io.Writer, format string, args ...any) {
 	FprintNoCrossedOut(w, Sprintf(format, args...))
 }
 
@@ -23610,7 +23610,7 @@ func PrintNoCrossedOut(str string) {
 }
 
 // PrintfNoCrossedOut wraps NoCrossedOut() and fmt.Printf().
-func PrintfNoCrossedOut(format string, args ...interface{}) {
+func PrintfNoCrossedOut(format string, args ...any) {
 	PrintNoCrossedOut(Sprintf(format, args...))
 }
 
@@ -23626,7 +23626,7 @@ func Strikethrough(str string) string {
 }
 
 // Strikethroughf wraps fmt.Sprintf() and Strikethrough.
-func Strikethroughf(format string, args ...interface{}) string {
+func Strikethroughf(format string, args ...any) string {
 	return Strikethrough(Sprintf(format, args...))
 }
 
@@ -23636,7 +23636,7 @@ func FprintStrikethrough(w io.Writer, str string) {
 }
 
 // FprintfStrikethrough wraps Strikethrough and fmt.Fprintf().
-func FprintfStrikethrough(w io.Writer, format string, args ...interface{}) {
+func FprintfStrikethrough(w io.Writer, format string, args ...any) {
 	FprintStrikethrough(w, Sprintf(format, args...))
 }
 
@@ -23651,7 +23651,7 @@ func PrintStrikethrough(str string) {
 }
 
 // PrintfStrikethrough wraps Strikethrough() and fmt.Printf().
-func PrintfStrikethrough(format string, args ...interface{}) {
+func PrintfStrikethrough(format string, args ...any) {
 	PrintStrikethrough(Sprintf(format, args...))
 }
 
@@ -23667,7 +23667,7 @@ func NoStrikethrough(str string) string {
 }
 
 // NoStrikethroughf wraps fmt.Sprintf() and NoStrikethrough.
-func NoStrikethroughf(format string, args ...interface{}) string {
+func NoStrikethroughf(format string, args ...any) string {
 	return NoStrikethrough(Sprintf(format, args...))
 }
 
@@ -23677,7 +23677,7 @@ func FprintNoStrikethrough(w io.Writer, str string) {
 }
 
 // FprintfNoStrikethrough wraps NoStrikethrough and fmt.Fprintf().
-func FprintfNoStrikethrough(w io.Writer, format string, args ...interface{}) {
+func FprintfNoStrikethrough(w io.Writer, format string, args ...any) {
 	FprintNoStrikethrough(w, Sprintf(format, args...))
 }
 
@@ -23692,7 +23692,7 @@ func PrintNoStrikethrough(str string) {
 }
 
 // PrintfNoStrikethrough wraps NoStrikethrough() and fmt.Printf().
-func PrintfNoStrikethrough(format string, args ...interface{}) {
+func PrintfNoStrikethrough(format string, args ...any) {
 	PrintNoStrikethrough(Sprintf(format, args...))
 }
 
@@ -23708,7 +23708,7 @@ func Fraktur(str string) string {
 }
 
 // Frakturf wraps fmt.Sprintf() and Fraktur.
-func Frakturf(format string, args ...interface{}) string {
+func Frakturf(format string, args ...any) string {
 	return Fraktur(Sprintf(format, args...))
 }
 
@@ -23718,7 +23718,7 @@ func FprintFraktur(w io.Writer, str string) {
 }
 
 // FprintfFraktur wraps Fraktur and fmt.Fprintf().
-func FprintfFraktur(w io.Writer, format string, args ...interface{}) {
+func FprintfFraktur(w io.Writer, format string, args ...any) {
 	FprintFraktur(w, Sprintf(format, args...))
 }
 
@@ -23733,7 +23733,7 @@ func PrintFraktur(str string) {
 }
 
 // PrintfFraktur wraps Fraktur() and fmt.Printf().
-func PrintfFraktur(format string, args ...interface{}) {
+func PrintfFraktur(format string, args ...any) {
 	PrintFraktur(Sprintf(format, args...))
 }
 
@@ -23749,7 +23749,7 @@ func NoFraktur(str string) string {
 }
 
 // NoFrakturf wraps fmt.Sprintf() and NoFraktur.
-func NoFrakturf(format string, args ...interface{}) string {
+func NoFrakturf(format string, args ...any) string {
 	return NoFraktur(Sprintf(format, args...))
 }
 
@@ -23759,7 +23759,7 @@ func FprintNoFraktur(w io.Writer, str string) {
 }
 
 // FprintfNoFraktur wraps NoFraktur and fmt.Fprintf().
-func FprintfNoFraktur(w io.Writer, format string, args ...interface{}) {
+func FprintfNoFraktur(w io.Writer, format string, args ...any) {
 	FprintNoFraktur(w, Sprintf(format, args...))
 }
 
@@ -23774,7 +23774,7 @@ func PrintNoFraktur(str string) {
 }
 
 // PrintfNoFraktur wraps NoFraktur() and fmt.Printf().
-func PrintfNoFraktur(format string, args ...interface{}) {
+func PrintfNoFraktur(format string, args ...any) {
 	PrintNoFraktur(Sprintf(format, args...))
 }
 
@@ -23784,7 +23784,7 @@ func PrintlnNoFraktur(str string) {
 }
 
 // Hexf wraps fmt.Sprintf() and Hex.
-func Hexf(hex string, format string, args ...interface{}) string {
+func Hexf(hex string, format string, args ...any) string {
 	return Hex(hex, Sprintf(format, args...))
 }
 
@@ -23794,7 +23794,7 @@ func FprintHex(w io.Writer, hex string, str string) {
 }
 
 // FprintfHex wraps Hex and fmt.Fprintf().
-func FprintfHex(w io.Writer, hex string, format string, args ...interface{}) {
+func FprintfHex(w io.Writer, hex string, format string, args ...any) {
 	FprintHex(w, hex, Sprintf(format, args...))
 }
 
@@ -23809,7 +23809,7 @@ func PrintHex(hex string, str string) {
 }
 
 // PrintfHex wraps Hex() and fmt.Printf().
-func PrintfHex(hex string, format string, args ...interface{}) {
+func PrintfHex(hex string, format string, args ...any) {
 	PrintHex(hex, Sprintf(format, args...))
 }
 
@@ -23819,7 +23819,7 @@ func PrintlnHex(hex string, str string) {
 }
 
 // Hilightf wraps fmt.Sprintf() and Hilight.
-func Hilightf(code string, format string, args ...interface{}) string {
+func Hilightf(code string, format string, args ...any) string {
 	return Hilight(code, Sprintf(format, args...))
 }
 
@@ -23829,7 +23829,7 @@ func FprintHilight(w io.Writer, code string, str string) {
 }
 
 // FprintfHilight wraps Hilight and fmt.Fprintf().
-func FprintfHilight(w io.Writer, code string, format string, args ...interface{}) {
+func FprintfHilight(w io.Writer, code string, format string, args ...any) {
 	FprintHilight(w, code, Sprintf(format, args...))
 }
 
@@ -23844,7 +23844,7 @@ func PrintHilight(code string, str string) {
 }
 
 // PrintfHilight wraps Hilight() and fmt.Printf().
-func PrintfHilight(code string, format string, args ...interface{}) {
+func PrintfHilight(code string, format string, args ...any) {
 	PrintHilight(code, Sprintf(format, args...))
 }
 
@@ -23854,7 +23854,7 @@ func PrintlnHilight(code string, str string) {
 }
 
 // Hilightsf wraps fmt.Sprintf() and Hilights.
-func Hilightsf(codes []string, format string, args ...interface{}) string {
+func Hilightsf(codes []string, format string, args ...any) string {
 	return Hilights(codes, Sprintf(format, args...))
 }
 
@@ -23864,7 +23864,7 @@ func FprintHilights(w io.Writer, codes []string, str string) {
 }
 
 // FprintfHilights wraps Hilights and fmt.Fprintf().
-func FprintfHilights(w io.Writer, codes []string, format string, args ...interface{}) {
+func FprintfHilights(w io.Writer, codes []string, format string, args ...any) {
 	FprintHilights(w, codes, Sprintf(format, args...))
 }
 
@@ -23879,7 +23879,7 @@ func PrintHilights(codes []string, str string) {
 }
 
 // PrintfHilights wraps Hilights() and fmt.Printf().
-func PrintfHilights(codes []string, format string, args ...interface{}) {
+func PrintfHilights(codes []string, format string, args ...any) {
 	PrintHilights(codes, Sprintf(format, args...))
 }
 
@@ -23889,7 +23889,7 @@ func PrintlnHilights(codes []string, str string) {
 }
 
 // OnHexf wraps fmt.Sprintf() and OnHex.
-func OnHexf(hex string, format string, args ...interface{}) string {
+func OnHexf(hex string, format string, args ...any) string {
 	return OnHex(hex, Sprintf(format, args...))
 }
 
@@ -23899,7 +23899,7 @@ func FprintOnHex(w io.Writer, hex string, str string) {
 }
 
 // FprintfOnHex wraps OnHex and fmt.Fprintf().
-func FprintfOnHex(w io.Writer, hex string, format string, args ...interface{}) {
+func FprintfOnHex(w io.Writer, hex string, format string, args ...any) {
 	FprintOnHex(w, hex, Sprintf(format, args...))
 }
 
@@ -23914,7 +23914,7 @@ func PrintOnHex(hex string, str string) {
 }
 
 // PrintfOnHex wraps OnHex() and fmt.Printf().
-func PrintfOnHex(hex string, format string, args ...interface{}) {
+func PrintfOnHex(hex string, format string, args ...any) {
 	PrintOnHex(hex, Sprintf(format, args...))
 }
 
@@ -23924,7 +23924,7 @@ func PrintlnOnHex(hex string, str string) {
 }
 
 // OnRainbowf wraps fmt.Sprintf() and OnRainbow.
-func OnRainbowf(format string, args ...interface{}) string {
+func OnRainbowf(format string, args ...any) string {
 	return OnRainbow(Sprintf(format, args...))
 }
 
@@ -23934,7 +23934,7 @@ func FprintOnRainbow(w io.Writer, str string) {
 }
 
 // FprintfOnRainbow wraps OnRainbow and fmt.Fprintf().
-func FprintfOnRainbow(w io.Writer, format string, args ...interface{}) {
+func FprintfOnRainbow(w io.Writer, format string, args ...any) {
 	FprintOnRainbow(w, Sprintf(format, args...))
 }
 
@@ -23949,7 +23949,7 @@ func PrintOnRainbow(str string) {
 }
 
 // PrintfOnRainbow wraps OnRainbow() and fmt.Printf().
-func PrintfOnRainbow(format string, args ...interface{}) {
+func PrintfOnRainbow(format string, args ...any) {
 	PrintOnRainbow(Sprintf(format, args...))
 }
 
@@ -23959,7 +23959,7 @@ func PrintlnOnRainbow(str string) {
 }
 
 // Plainf wraps fmt.Sprintf() and Plain.
-func Plainf(format string, args ...interface{}) string {
+func Plainf(format string, args ...any) string {
 	return Plain(Sprintf(format, args...))
 }
 
@@ -23969,7 +23969,7 @@ func FprintPlain(w io.Writer, str string) {
 }
 
 // FprintfPlain wraps Plain and fmt.Fprintf().
-func FprintfPlain(w io.Writer, format string, args ...interface{}) {
+func FprintfPlain(w io.Writer, format string, args ...any) {
 	FprintPlain(w, Sprintf(format, args...))
 }
 
@@ -23984,7 +23984,7 @@ func PrintPlain(str string) {
 }
 
 // PrintfPlain wraps Plain() and fmt.Printf().
-func PrintfPlain(format string, args ...interface{}) {
+func PrintfPlain(format string, args ...any) {
 	PrintPlain(Sprintf(format, args...))
 }
 
@@ -23994,7 +23994,7 @@ func PrintlnPlain(str string) {
 }
 
 // Rainbowf wraps fmt.Sprintf() and Rainbow.
-func Rainbowf(format string, args ...interface{}) string {
+func Rainbowf(format string, args ...any) string {
 	return Rainbow(Sprintf(format, args...))
 }
 
@@ -24004,7 +24004,7 @@ func FprintRainbow(w io.Writer, str string) {
 }
 
 // FprintfRainbow wraps Rainbow and fmt.Fprintf().
-func FprintfRainbow(w io.Writer, format string, args ...interface{}) {
+func FprintfRainbow(w io.Writer, format string, args ...any) {
 	FprintRainbow(w, Sprintf(format, args...))
 }
 
@@ -24019,7 +24019,7 @@ func PrintRainbow(str string) {
 }
 
 // PrintfRainbow wraps Rainbow() and fmt.Printf().
-func PrintfRainbow(format string, args ...interface{}) {
+func PrintfRainbow(format string, args ...any) {
 	PrintRainbow(Sprintf(format, args...))
 }
 
@@ -24029,7 +24029,7 @@ func PrintlnRainbow(str string) {
 }
 
 // Wrapf wraps fmt.Sprintf() and Wrap.
-func Wrapf(width int, format string, args ...interface{}) string {
+func Wrapf(width int, format string, args ...any) string {
 	return Wrap(width, Sprintf(format, args...))
 }
 
@@ -24039,7 +24039,7 @@ func FprintWrap(w io.Writer, width int, str string) {
 }
 
 // FprintfWrap wraps Wrap and fmt.Fprintf().
-func FprintfWrap(w io.Writer, width int, format string, args ...interface{}) {
+func FprintfWrap(w io.Writer, width int, format string, args ...any) {
 	FprintWrap(w, width, Sprintf(format, args...))
 }
 
@@ -24054,7 +24054,7 @@ func PrintWrap(width int, str string) {
 }
 
 // PrintfWrap wraps Wrap() and fmt.Printf().
-func PrintfWrap(width int, format string, args ...interface{}) {
+func PrintfWrap(width int, format string, args ...any) {
 	PrintWrap(width, Sprintf(format, args...))
 }
 
