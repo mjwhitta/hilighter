@@ -90,7 +90,7 @@ var Modes = map[string]string{
 }
 
 // Version is the package version
-const Version = "1.11.5"
+const Version = "1.11.6"
 
 // Various regular expressions
 var (
