@@ -478,10 +478,10 @@ func Table() (lines []string) {
 // Wrap will wrap a string to the specified width.
 func Wrap(width int, str string) string {
 	var lc int
-	var line = ""
+	var line string = ""
 	var lines []string
 	var wc int
-	var words = strings.Fields(str)
+	var words []string = strings.Fields(str)
 
 	str = Sprintf(str)
 

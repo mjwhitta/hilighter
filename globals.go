@@ -48,6 +48,8 @@ var disable = false
 // Cached hex to xterm-256 8-bit mappings
 var cachedXterm = map[string]string{}
 
+const hexByte string = "([0-9a-f]{2})"
+
 // Modes maps mode names to mode codes
 var Modes = map[string]string{
 	"reset":         "0",
@@ -88,25 +90,27 @@ var Modes = map[string]string{
 }
 
 // Version is the package version
-const Version = "1.11.4"
+const Version = "1.11.5"
 
 // Various regular expressions
-var allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
-var bgCodes = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
-var doubleno = regexp.MustCompile(`no_no_`)
-var fgCodes = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
-var hexCode = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
-var iterate = regexp.MustCompile(
-	`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
+var (
+	allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
+	bgCodes  = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
+	doubleno = regexp.MustCompile(`no_no_`)
+	fgCodes  = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
+	hexCode  = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
+	iterate  = regexp.MustCompile(
+		`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
+	)
+	newline   = regexp.MustCompile(`\n`)
+	onlyCodes = regexp.MustCompile(
+		`(^|\n)(\x1b\[([0-9;]+m|K))+(\n|$)`,
+	)
+	parseHex = regexp.MustCompile(
+		`(?i)^#?` + hexByte + hexByte + hexByte + hexByte + `?$`,
+	)
+	wrap = regexp.MustCompile(`wrap(_(\d+))?`)
 )
-var newline = regexp.MustCompile(`\n`)
-var onlyCodes = regexp.MustCompile(
-	`(^|\n)(\x1b\[([0-9;]+m|K))+(\n|$)`,
-)
-var parseHex = regexp.MustCompile(
-	`(?i)^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?$`,
-)
-var wrap = regexp.MustCompile(`wrap(_(\d+))?`)
 
 func init() {
 	var key string

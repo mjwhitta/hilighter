@@ -27,6 +27,9 @@ func main() {
 		}
 	}()
 
+	var line string
+	var scanner *bufio.Scanner
+
 	validate()
 
 	if flags.sample {
@@ -38,8 +41,7 @@ func main() {
 			hl.Println(line)
 		}
 	} else {
-		var line string
-		var scanner = bufio.NewScanner(os.Stdin)
+		scanner = bufio.NewScanner(os.Stdin)
 
 		// Read line by line
 		for scanner.Scan() {
