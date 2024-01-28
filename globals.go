@@ -2,6 +2,9 @@ package hilighter
 
 import "regexp"
 
+// Cached hex to xterm-256 8-bit mappings
+var cachedXterm = map[string]string{}
+
 // Colors maps color names to color codes
 var Colors = map[string]string{
 	"black":         "30",
@@ -45,9 +48,6 @@ var Colors = map[string]string{
 // Used to disable all color codes
 var disable = false
 
-// Cached hex to xterm-256 8-bit mappings
-var cachedXterm = map[string]string{}
-
 const hexByte string = "([0-9a-f]{2})"
 
 // Modes maps mode names to mode codes
@@ -89,9 +89,6 @@ var Modes = map[string]string{
 	"no_strikethrough": "29",
 }
 
-// Version is the package version
-const Version = "1.11.6"
-
 // Various regular expressions
 var (
 	allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
@@ -111,6 +108,9 @@ var (
 	)
 	wrap = regexp.MustCompile(`wrap(_(\d+))?`)
 )
+
+// Version is the package version
+const Version = "1.11.7"
 
 func init() {
 	var key string
