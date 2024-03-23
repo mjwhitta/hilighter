@@ -110,7 +110,7 @@ var (
 )
 
 // Version is the package version
-const Version = "1.11.7"
+const Version = "1.11.8"
 
 func init() {
 	var key string
