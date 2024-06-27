@@ -15,9 +15,8 @@ method for wrapping strings that accounts for color escape codes.
 Open a terminal and run the following:
 
 ```
-$ go get --ldflags "-s -w" --trimpath -u github.com/mjwhitta/hilighter
-$ go install --ldflags "-s -w" --trimpath \
-    github.com/mjwhitta/hilighter/cmd/hl@latest
+$ go get -u github.com/mjwhitta/hilighter
+$ go install github.com/mjwhitta/hilighter/cmd/hl@latest
 ```
 
 ## Usage
