@@ -427,10 +427,10 @@ func Sample() (lines []string) {
 	var fg string
 	var line string
 
-	for f := 0; f < 16; f++ {
+	for f := range 16 {
 		line = ""
 
-		for b := 0; b < 16; b++ {
+		for b := range 16 {
 			fg = Sprintf("color_%03d", f)
 			bg = Sprintf("on_color_%03d", b)
 			line += colorize(fg, colorize(bg, " mw "))
@@ -446,7 +446,7 @@ func Sample() (lines []string) {
 func Table() (lines []string) {
 	var line string
 
-	for i := 0; i < 16; i++ {
+	for i := range 16 {
 		line += Hilightf(
 			Sprintf("on_color_%03d", i),
 			" %s %s ",
