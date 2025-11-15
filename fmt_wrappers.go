@@ -3,6 +3,8 @@ package hilighter
 import (
 	"fmt"
 	"io"
+
+	"github.com/mjwhitta/errors"
 )
 
 // Errorf wraps fmt.Errorf().
@@ -11,8 +13,12 @@ func Errorf(format string, args ...any) error {
 }
 
 // Fprint wraps fmt.Fprint().
-func Fprint(w io.Writer, args ...any) (int, error) {
-	return fmt.Fprint(w, args...)
+func Fprint(w io.Writer, args ...any) (n int, e error) {
+	if n, e = fmt.Fprint(w, args...); e != nil {
+		return n, errors.Newf("%w", e)
+	}
+
+	return n, nil
 }
 
 // Fprintf wraps fmt.Fprintf().
@@ -20,13 +26,21 @@ func Fprintf(
 	w io.Writer,
 	format string,
 	args ...any,
-) (int, error) {
-	return fmt.Fprintf(w, format, args...)
+) (n int, e error) {
+	if n, e = fmt.Fprintf(w, format, args...); e != nil {
+		return n, errors.Newf("%w", e)
+	}
+
+	return n, nil
 }
 
 // Fprintln wraps fmt.Fprintln().
-func Fprintln(w io.Writer, args ...any) (int, error) {
-	return fmt.Fprintln(w, args...)
+func Fprintln(w io.Writer, args ...any) (n int, e error) {
+	if n, e = fmt.Fprintln(w, args...); e != nil {
+		return n, errors.Newf("%w", e)
+	}
+
+	return n, nil
 }
 
 // Print wraps fmt.Print().

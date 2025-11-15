@@ -20,10 +20,20 @@ func errx(status int, msg string) {
 func main() {
 	defer func() {
 		if r := recover(); r != nil {
-			if flags.verbose {
-				panic(r.(error).Error())
+			switch r := r.(type) {
+			case error:
+				if flags.verbose {
+					panic(r)
+				}
+
+				errx(Exception, r.Error())
+			case string:
+				if flags.verbose {
+					panic(r)
+				}
+
+				errx(Exception, r)
 			}
-			errx(Exception, r.(error).Error())
 		}
 	}()
 
@@ -32,15 +42,16 @@ func main() {
 
 	validate()
 
-	if flags.sample {
+	switch {
+	case flags.sample:
 		for _, line := range hl.Sample() {
 			hl.Println(line)
 		}
-	} else if flags.table {
+	case flags.table:
 		for _, line := range hl.Table() {
 			hl.Println(line)
 		}
-	} else {
+	default:
 		scanner = bufio.NewScanner(os.Stdin)
 
 		// Read line by line

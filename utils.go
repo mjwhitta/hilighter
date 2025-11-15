@@ -1,9 +1,34 @@
 package hilighter
 
 import (
+	"image/color"
+	"math"
 	"regexp"
 	"strings"
 )
+
+func adjustedRGBA(c color.Color) (uint8, uint8, uint8, uint8) {
+	var a uint32
+	var b uint32
+	var g uint32
+	var r uint32
+
+	r, g, b, a = c.RGBA()
+
+	if (a != 0) && (a != math.MaxUint32) {
+		r = uint32(float64(r*math.MaxUint32) / float64(a))
+		g = uint32(float64(g*math.MaxUint32) / float64(a))
+		b = uint32(float64(b*math.MaxUint32) / float64(a))
+	}
+
+	r >>= 8
+	g >>= 8
+	b >>= 8
+	a >>= 8
+
+	//nolint:gosec // No overflow issues b/c I shifted already
+	return uint8(r), uint8(g), uint8(b), uint8(a)
+}
 
 func bgColor(code string, str string) string {
 	var colorized string
@@ -33,6 +58,7 @@ func colorize(clr string, str string) string {
 	if strings.HasPrefix(clr, "on_") {
 		return bgColor(clr, str)
 	}
+
 	return fgColor(clr, str)
 }
 
@@ -55,17 +81,16 @@ func fgColor(code string, str string) string {
 }
 
 func modify(mode string, str string) string {
-	if IsDisabled() {
-		// Return the string w/o any color codes
-		return Plain(str)
-	}
-
-	var hasKey bool
 	var modified string
 	var off string
 	var opposite string
 	var r *regexp.Regexp
 	var rm string
+
+	if IsDisabled() {
+		// Return the string w/o any color codes
+		return Plain(str)
+	}
 
 	// Reverse mode
 	opposite = "no_" + mode
@@ -77,8 +102,7 @@ func modify(mode string, str string) string {
 	rm = Modes[mode]
 
 	// Determine the off color code, if it exists
-	off = ""
-	if _, hasKey = Modes[opposite]; hasKey {
+	if _, ok := Modes[opposite]; ok {
 		// Store opposite code for removal
 		rm += "|" + Modes[opposite]
 

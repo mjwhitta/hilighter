@@ -12,49 +12,13 @@ import (
 // ColorToTrueColor will convert the color instance to its truecolor
 // representation.
 func ColorToTrueColor(c color.Color) string {
-	var a uint32
-	var b uint32
-	var g uint32
-	var r uint32
-
-	r, g, b, a = c.RGBA()
-
-	if (a != 0) && (a != 0xffff) {
-		r = uint32(float64(r*0xffff) / float64(a))
-		g = uint32(float64(g*0xffff) / float64(a))
-		b = uint32(float64(b*0xffff) / float64(a))
-	}
-
-	r >>= 8
-	g >>= 8
-	b >>= 8
-	a >>= 8
-
-	return RGBAToTrueColor(uint8(r), uint8(g), uint8(b), uint8(a))
+	return RGBAToTrueColor(adjustedRGBA(c))
 }
 
 // ColorToXterm256 will convert the color instance to its xterm256
 // representation.
 func ColorToXterm256(c color.Color) string {
-	var a uint32
-	var b uint32
-	var g uint32
-	var r uint32
-
-	r, g, b, a = c.RGBA()
-
-	if (a != 0) && (a != 0xffff) {
-		r = uint32(float64(r*0xffff) / float64(a))
-		g = uint32(float64(g*0xffff) / float64(a))
-		b = uint32(float64(b*0xffff) / float64(a))
-	}
-
-	r >>= 8
-	g >>= 8
-	b >>= 8
-	a >>= 8
-
-	return RGBAToXterm256(uint8(r), uint8(g), uint8(b), uint8(a))
+	return RGBAToXterm256(adjustedRGBA(c))
 }
 
 // Disable will prevent color codes from being used.
@@ -75,11 +39,6 @@ func Hex(hex string, str string) string {
 
 // HexToTrueColor will convert hex to the 24-bit RGB values.
 func HexToTrueColor(hex string) string {
-	var hasKey bool
-	if _, hasKey = Colors[hex]; hasKey {
-		return hex
-	}
-
 	var b int
 	var g int
 	var hexB uint64
@@ -88,8 +47,13 @@ func HexToTrueColor(hex string) string {
 	var matches [][]string
 	var r int
 
+	if _, ok := Colors[hex]; ok {
+		return hex
+	}
+
 	r, g, b = 0, 0, 0
 	matches = parseHex.FindAllStringSubmatch(hex, -1)
+
 	for _, match := range matches {
 		hexB, _ = strconv.ParseUint(match[3], 16, 8)
 		b = int(hexB)
@@ -108,13 +72,11 @@ func HexToTrueColor(hex string) string {
 }
 
 // HexToXterm256 will convert hex to xterm-256 8-bit value
-// https://stackoverflow.com/questions/11765623/convert-hex-hex_to_256bitto-closest-x11-color-number
+//
+//nolint:mnd // All numbers pulled from link
 func HexToXterm256(hex string) string {
-	var hasKey bool
-	if _, hasKey = cachedXterm[hex]; hasKey {
-		return cachedXterm[hex]
-	}
-
+	//nolint:lll // URL is too long
+	// https://stackoverflow.com/questions/11765623/convert-hex-hex_to_256bitto-closest-x11-color-number
 	var average int
 	var b int
 	var cb int
@@ -136,6 +98,10 @@ func HexToXterm256(hex string) string {
 	var matches [][]string
 	var r int
 
+	if _, ok := cachedXterm[hex]; ok {
+		return cachedXterm[hex]
+	}
+
 	// For simplicity, assume RGB space is perceptually uniform.
 	// There are 5 places where one of two outputs needs to be
 	// chosen when the input is the exact middle:
@@ -150,6 +116,7 @@ func HexToXterm256(hex string) string {
 	// Calculate the nearest 0-based color index at 16..231
 	r, g, b = 0, 0, 0
 	matches = parseHex.FindAllStringSubmatch(hex, -1)
+
 	for _, match := range matches {
 		hexB, _ = strconv.ParseUint(match[3], 16, 8)
 		b = int(hexB)
@@ -168,12 +135,14 @@ func HexToXterm256(hex string) string {
 	} else if r < 115 {
 		ir = 1
 	}
+
 	ig = (g - 35) / 40
 	if g < 48 {
 		ig = 0
 	} else if g < 115 {
 		ig = 1
 	}
+
 	ib = (b - 35) / 40
 	if b < 48 {
 		ib = 0
@@ -205,12 +174,12 @@ func HexToXterm256(hex string) string {
 	gv = (10 * gidx) + 8
 
 	// Return the one which is nearer to the original rgb values
-	clrErr = math.Pow(float64(int(cr-r)), 2) +
-		math.Pow(float64(int(cg-g)), 2) +
-		math.Pow(float64(int(cb-b)), 2)
-	grayErr = math.Pow(float64(int(gv-r)), 2) +
-		math.Pow(float64(int(gv-g)), 2) +
-		math.Pow(float64(int(gv-b)), 2)
+	clrErr = math.Pow(float64(cr-r), 2) +
+		math.Pow(float64(cg-g), 2) +
+		math.Pow(float64(cb-b), 2)
+	grayErr = math.Pow(float64(gv-r), 2) +
+		math.Pow(float64(gv-g), 2) +
+		math.Pow(float64(gv-b), 2)
 
 	if clrErr <= grayErr {
 		cachedXterm[hex] = Sprintf("color_%03d", cidx+16)
@@ -225,15 +194,14 @@ func HexToXterm256(hex string) string {
 // string.
 func Hilight(code string, str string) string {
 	var clr string
-	var hasKey bool
 	var match []string
 	var matches [][]string
 	var width int
 
 	// Call the appropriate function
-	if _, hasKey = Colors[code]; hasKey {
+	if _, ok := Colors[code]; ok {
 		return colorize(code, str)
-	} else if _, hasKey = Modes[code]; hasKey {
+	} else if _, ok := Modes[code]; ok {
 		return modify(code, str)
 	} else {
 		switch code {
@@ -331,6 +299,7 @@ func OnRainbow(str string) string {
 		return Plain(str)
 	}
 
+	var bgShift int = 10
 	var chars []string
 	var code string
 	var colors []int
@@ -345,13 +314,14 @@ func OnRainbow(str string) string {
 	// Loop thru lines and apply bg color codes
 	colors = rainbowColors()
 	end = "\x1b[" + Colors["on_default"] + "m"
+
 	for i := range lines {
 		chars = iterate.FindAllString(lines[i], -1)
 		line = []string{}
 
 		// Loop thru non-color-code bytes and apply on_rainbow
 		for idx, char := range chars {
-			code = strconv.Itoa(colors[idx%len(colors)] + 10)
+			code = strconv.Itoa(colors[idx%len(colors)] + bgShift)
 			line = append(line, "\x1b["+code+"m"+char)
 		}
 
@@ -390,6 +360,7 @@ func Rainbow(str string) string {
 
 	// Loop thru lines and apply fg color codes
 	colors = rainbowColors()
+
 	for i := range lines {
 		chars = iterate.FindAllString(lines[i], -1)
 		line = []string{}
@@ -425,25 +396,26 @@ func RGBAToXterm256(r uint8, g uint8, b uint8, a uint8) string {
 func Sample() (lines []string) {
 	var bg string
 	var fg string
-	var line string
+	var line strings.Builder
 
 	for f := range 16 {
-		line = ""
+		line.Reset()
 
 		for b := range 16 {
 			fg = Sprintf("color_%03d", f)
 			bg = Sprintf("on_color_%03d", b)
-			line += colorize(fg, colorize(bg, " mw "))
+			line.WriteString(colorize(fg, colorize(bg, " mw ")))
 		}
 
-		lines = append(lines, line)
+		lines = append(lines, line.String())
 	}
 
-	return
+	return lines
 }
 
 // Table will return a pretty table of all 8-bit colors.
 func Table() (lines []string) {
+	var grayOffset int = 15
 	var line string
 
 	for i := range 16 {
@@ -466,13 +438,13 @@ func Table() (lines []string) {
 			Blackf("%03d", i),
 			Whitef("%03d", i),
 		)
-		if (i-15)%6 == 0 {
+		if (i-grayOffset)%6 == 0 {
 			lines = append(lines, line)
 			line = ""
 		}
 	}
 
-	return
+	return lines
 }
 
 // Wrap will wrap a string to the specified width.
@@ -490,14 +462,15 @@ func Wrap(width int, str string) string {
 		lc = len([]rune(Plain(line)))
 		wc = len([]rune(Plain(word)))
 
-		if lc == 0 {
+		switch {
+		case lc == 0:
 			// Can't wrap less than a single word
 			line = word
-		} else if lc+wc+1 > width {
+		case lc+wc+1 > width:
 			// Wrap if line would be longer than width
 			lines = append(lines, line)
 			line = word
-		} else {
+		default:
 			// Append word to line
 			line += " " + word
 		}

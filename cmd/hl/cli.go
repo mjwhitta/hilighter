@@ -36,6 +36,7 @@ func init() {
 		os.Args[0],
 	)
 	cli.BugEmail = "hilighter.bugs@whitta.dev"
+
 	cli.ExitStatus(
 		"Normally the exit status is 0. In the event of an error the",
 		"exit status will be one of the below:\n\n",
@@ -50,6 +51,7 @@ func init() {
 		"Hilights the text from stdin using the methods passed on",
 		"the CLI.",
 	)
+
 	cli.Title = "Hilighter"
 
 	// Parse cli flags
@@ -95,11 +97,12 @@ func validate() {
 	}
 
 	// Validate cli flags
-	if !flags.sample && !flags.table && (cli.NArg() == 0) {
+	switch {
+	case !flags.sample && !flags.table && (cli.NArg() == 0):
 		cli.Usage(MissingArgument)
-	} else if (flags.sample || flags.table) && (cli.NArg() != 0) {
+	case (flags.sample || flags.table) && (cli.NArg() != 0):
 		cli.Usage(InvalidOption)
-	} else if flags.sample && flags.table {
+	case flags.sample && flags.table:
 		cli.Usage(InvalidOption)
 	}
 }
