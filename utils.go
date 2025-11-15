@@ -35,7 +35,7 @@ func bgColor(code string, str string) string {
 
 	// Strip all other bg color codes and don't extend bg color over
 	// newlines
-	str = newline.ReplaceAllString(
+	str = reNewline.ReplaceAllString(
 		plainBg(str),
 		"\x1b["+Colors["on_default"]+"m\n\x1b["+Colors[code]+"m",
 	)
@@ -45,7 +45,7 @@ func bgColor(code string, str string) string {
 		"\x1b[" + Colors["on_default"] + "m"
 
 	// Remove color codes, if the line only contains color codes
-	return onlyCodes.ReplaceAllString(colorized, "$1$4")
+	return reOnlyCodes.ReplaceAllString(colorized, "$1$4")
 }
 
 func colorize(clr string, str string) string {
@@ -67,7 +67,7 @@ func fgColor(code string, str string) string {
 
 	// Strip all other fg color codes and don't extend fg color over
 	// newlines
-	str = newline.ReplaceAllString(
+	str = reNewline.ReplaceAllString(
 		plainFg(str),
 		"\x1b["+Colors["default"]+"m\n\x1b["+Colors[code]+"m",
 	)
@@ -77,7 +77,7 @@ func fgColor(code string, str string) string {
 		"\x1b[" + Colors["default"] + "m"
 
 	// Remove color codes, if the line only contains color codes
-	return onlyCodes.ReplaceAllString(colorized, "$1$4")
+	return reOnlyCodes.ReplaceAllString(colorized, "$1$4")
 }
 
 func modify(mode string, str string) string {
@@ -95,7 +95,7 @@ func modify(mode string, str string) string {
 	// Reverse mode
 	opposite = "no_" + mode
 	if strings.HasPrefix(opposite, "no_no_") {
-		opposite = doubleno.ReplaceAllString(opposite, "")
+		opposite = reDoubleNo.ReplaceAllString(opposite, "")
 	}
 
 	// Store specified mode code for removal
@@ -120,15 +120,15 @@ func modify(mode string, str string) string {
 	modified = "\x1b[" + Modes[mode] + "m" + str + off
 
 	// Remove color codes, if the line only contains color codes
-	return onlyCodes.ReplaceAllString(modified, "$1$4")
+	return reOnlyCodes.ReplaceAllString(modified, "$1$4")
 }
 
 func plainBg(str string) string {
-	return bgCodes.ReplaceAllString(str, "")
+	return reBgCodes.ReplaceAllString(str, "")
 }
 
 func plainFg(str string) string {
-	return fgCodes.ReplaceAllString(str, "")
+	return reFgCodes.ReplaceAllString(str, "")
 }
 
 func rainbowColors() []int {

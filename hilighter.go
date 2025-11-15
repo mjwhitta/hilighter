@@ -52,7 +52,7 @@ func HexToTrueColor(hex string) string {
 	}
 
 	r, g, b = 0, 0, 0
-	matches = parseHex.FindAllStringSubmatch(hex, -1)
+	matches = reParseHex.FindAllStringSubmatch(hex, -1)
 
 	for _, match := range matches {
 		hexB, _ = strconv.ParseUint(match[3], 16, 8)
@@ -115,7 +115,7 @@ func HexToXterm256(hex string) string {
 
 	// Calculate the nearest 0-based color index at 16..231
 	r, g, b = 0, 0, 0
-	matches = parseHex.FindAllStringSubmatch(hex, -1)
+	matches = reParseHex.FindAllStringSubmatch(hex, -1)
 
 	for _, match := range matches {
 		hexB, _ = strconv.ParseUint(match[3], 16, 8)
@@ -213,7 +213,7 @@ func Hilight(code string, str string) string {
 			return Rainbow(str)
 		default:
 			// Check if hex color code
-			matches = hexCode.FindAllStringSubmatch(code, -1)
+			matches = reHexCodes.FindAllStringSubmatch(code, -1)
 			if len(matches) > 0 {
 				match = matches[0]
 
@@ -232,7 +232,7 @@ func Hilight(code string, str string) string {
 			}
 
 			// Check if wrap
-			matches = wrap.FindAllStringSubmatch(code, -1)
+			matches = reWrap.FindAllStringSubmatch(code, -1)
 			if len(matches) > 0 {
 				match = matches[0]
 
@@ -316,7 +316,7 @@ func OnRainbow(str string) string {
 	end = "\x1b[" + Colors["on_default"] + "m"
 
 	for i := range lines {
-		chars = iterate.FindAllString(lines[i], -1)
+		chars = reIterate.FindAllString(lines[i], -1)
 		line = []string{}
 
 		// Loop thru non-color-code bytes and apply on_rainbow
@@ -331,13 +331,16 @@ func OnRainbow(str string) string {
 
 	// Put lines back together, and remove color codes if the line
 	// only contains color codes
-	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "$1$4")
+	return reOnlyCodes.ReplaceAllString(
+		strings.Join(out, "\n"),
+		"$1$4",
+	)
 }
 
 // Plain will strip all ANSI color codes from a string.
 func Plain(str string) string {
 	// Strip all color codes
-	return allCodes.ReplaceAllString(str, "")
+	return reAllCodes.ReplaceAllString(str, "")
 }
 
 // Rainbow will add multiple ANSI color codes to a string for a
@@ -362,7 +365,7 @@ func Rainbow(str string) string {
 	colors = rainbowColors()
 
 	for i := range lines {
-		chars = iterate.FindAllString(lines[i], -1)
+		chars = reIterate.FindAllString(lines[i], -1)
 		line = []string{}
 
 		// Loop thru non-color-code bytes and apply on_rainbow
@@ -377,7 +380,10 @@ func Rainbow(str string) string {
 
 	// Put lines back together, and remove color codes if the line
 	// only contains color codes
-	return onlyCodes.ReplaceAllString(strings.Join(out, "\n"), "$1$4")
+	return reOnlyCodes.ReplaceAllString(
+		strings.Join(out, "\n"),
+		"$1$4",
+	)
 }
 
 // RGBAToTrueColor will convert the RGBA values to their hex
@@ -454,8 +460,6 @@ func Wrap(width int, str string) string {
 	var lines []string
 	var wc int
 	var words []string = strings.Fields(str)
-
-	str = Sprintf(str)
 
 	// Loop thru words
 	for _, word := range words {

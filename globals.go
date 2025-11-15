@@ -3,12 +3,9 @@ package hilighter
 import "regexp"
 
 // Version is the package version
-const Version string = "1.12.0"
+const Version string = "1.13.0"
 
 var (
-	// Cached hex to xterm-256 8-bit mappings
-	cachedXterm = map[string]string{}
-
 	// Colors maps color names to color codes
 	Colors = map[string]string{
 		"black":         "30",
@@ -49,11 +46,6 @@ var (
 		"on_default": "49",
 	}
 
-	// Used to disable all color codes
-	disable = false
-
-	hexByte string = "([0-9a-f]{2})"
-
 	// Modes maps mode names to mode codes
 	Modes = map[string]string{
 		"reset":         "0",
@@ -93,23 +85,31 @@ var (
 		"no_strikethrough": "29",
 	}
 
+	// Cached hex to xterm-256 8-bit mappings
+	cachedXterm = map[string]string{}
+
+	// Used to disable all color codes
+	disable = false
+
+	hexByte string = "([0-9a-f]{2})"
+
 	// Various regular expressions
-	allCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
-	bgCodes  = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
-	doubleno = regexp.MustCompile(`no_no_`)
-	fgCodes  = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
-	hexCode  = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
-	iterate  = regexp.MustCompile(
+	reAllCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
+	reBgCodes  = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
+	reDoubleNo = regexp.MustCompile(`no_no_`)
+	reFgCodes  = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
+	reHexCodes = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
+	reIterate  = regexp.MustCompile(
 		`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
 	)
-	newline   = regexp.MustCompile(`\n`)
-	onlyCodes = regexp.MustCompile(
+	reNewline   = regexp.MustCompile(`\n`)
+	reOnlyCodes = regexp.MustCompile(
 		`(^|\n)(\x1b\[([0-9;]+m|K))+(\n|$)`,
 	)
-	parseHex = regexp.MustCompile(
+	reParseHex = regexp.MustCompile(
 		`(?i)^#?` + hexByte + hexByte + hexByte + hexByte + `?$`,
 	)
-	wrap = regexp.MustCompile(`wrap(_(\d+))?`)
+	reWrap = regexp.MustCompile(`wrap(_(\d+))?`)
 )
 
 func init() {

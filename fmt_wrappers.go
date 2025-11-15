@@ -1,10 +1,9 @@
+//nolint:wrapcheck // Not wrapping these on purpose
 package hilighter
 
 import (
 	"fmt"
 	"io"
-
-	"github.com/mjwhitta/errors"
 )
 
 // Errorf wraps fmt.Errorf().
@@ -13,49 +12,33 @@ func Errorf(format string, args ...any) error {
 }
 
 // Fprint wraps fmt.Fprint().
-func Fprint(w io.Writer, args ...any) (n int, e error) {
-	if n, e = fmt.Fprint(w, args...); e != nil {
-		return n, errors.Newf("%w", e)
-	}
-
-	return n, nil
+func Fprint(w io.Writer, args ...any) (int, error) {
+	return fmt.Fprint(w, args...)
 }
 
 // Fprintf wraps fmt.Fprintf().
-func Fprintf(
-	w io.Writer,
-	format string,
-	args ...any,
-) (n int, e error) {
-	if n, e = fmt.Fprintf(w, format, args...); e != nil {
-		return n, errors.Newf("%w", e)
-	}
-
-	return n, nil
+func Fprintf(w io.Writer, format string, args ...any) (int, error) {
+	return fmt.Fprintf(w, format, args...)
 }
 
 // Fprintln wraps fmt.Fprintln().
-func Fprintln(w io.Writer, args ...any) (n int, e error) {
-	if n, e = fmt.Fprintln(w, args...); e != nil {
-		return n, errors.Newf("%w", e)
-	}
-
-	return n, nil
+func Fprintln(w io.Writer, args ...any) (int, error) {
+	return fmt.Fprintln(w, args...)
 }
 
 // Print wraps fmt.Print().
-func Print(args ...any) {
-	fmt.Print(args...)
+func Print(args ...any) (int, error) {
+	return fmt.Print(args...)
 }
 
 // Printf wraps fmt.Printf().
-func Printf(format string, args ...any) {
-	fmt.Printf(format, args...)
+func Printf(format string, args ...any) (int, error) {
+	return fmt.Printf(format, args...)
 }
 
 // Println wraps fmt.Println().
-func Println(args ...any) {
-	fmt.Println(args...)
+func Println(args ...any) (int, error) {
+	return fmt.Println(args...)
 }
 
 // Sprint wraps fmt.Sprint().

@@ -59,33 +59,48 @@ func ${func}f(${vardef}format string, args ...any) string {
 }
 
 // Fprint$func wraps $func() and fmt.Fprint().
-func Fprint$func(w io.Writer, ${vardef}str string) {
-    Fprint(w, $func(${var}str))
+func Fprint$func(
+    w io.Writer,
+    ${vardef}str string,
+) (int, error) {
+    return Fprint(w, $func(${var}str))
 }
 
-// Fprintf$func wraps $func and fmt.Fprintf().
-func Fprintf$func(w io.Writer, ${vardef}format string, args ...any) {
-    Fprint$func(w, ${var}Sprintf(format, args...))
+// Fprint${func}f wraps $func and fmt.Fprintf().
+func Fprint${func}f(
+    w io.Writer,
+    ${vardef}format string,
+    args ...any,
+) (int, error) {
+    return Fprint$func(w, ${var}Sprintf(format, args...))
 }
 
 // Fprintln$func wraps $func() and fmt.Fprintln().
-func Fprintln$func(w io.Writer, ${vardef}str string) {
-    Fprintln(w, $func(${var}str))
+func Fprintln$func(
+    w io.Writer,
+    ${vardef}str string,
+) (int, error) {
+    return Fprintln(w, $func(${var}str))
 }
 
 // Print$func wraps $func() and fmt.Print().
-func Print$func(${vardef}str string) {
-    Print($func(${var}str))
+func Print$func(
+    ${vardef}str string,
+) (int, error) {
+    return Print($func(${var}str))
 }
 
-// Printf$func wraps $func() and fmt.Printf().
-func Printf$func(${vardef}format string, args ...any) {
-    Print$func(${var}Sprintf(format, args...))
+// Print${func}f wraps $func() and fmt.Printf().
+func Print${func}f(
+    ${vardef}format string,
+    args ...any,
+) (int, error) {
+    return Print$func(${var}Sprintf(format, args...))
 }
 
 // Println$func wraps $func() and fmt.Println().
-func Println$func(${vardef}str string) {
-    Println($func(${var}str))
+func Println$func(${vardef}str string) (int, error) {
+    return Println($func(${var}str))
 }
 EOF
 }
