@@ -3,5 +3,5 @@
 
 ifneq ($(unameS),windows)
 spellcheck:
-	@codespell -f -L hilight,hilighter,hilights -S ".git,*.pem"
+	@codespell -f -L hilight,hilights -S ".git,.golangci.yaml,gomk,*.pem"
 endif
