@@ -1,6 +1,7 @@
 package hilighter
 
 import (
+	"fmt"
 	"image/color"
 	"math"
 	"os"
@@ -65,8 +66,8 @@ func HexToTrueColor(hex string) string {
 		r = int(hexR)
 	}
 
-	Colors[hex] = Sprintf("38;2;%d;%d;%d", r, g, b)
-	Colors["on_"+hex] = Sprintf("48;2;%d;%d;%d", r, g, b)
+	Colors[hex] = fmt.Sprintf("38;2;%d;%d;%d", r, g, b)
+	Colors["on"+hex] = fmt.Sprintf("48;2;%d;%d;%d", r, g, b)
 
 	return hex
 }
@@ -182,9 +183,9 @@ func HexToXterm256(hex string) string {
 		math.Pow(float64(gv-b), 2)
 
 	if clrErr <= grayErr {
-		cachedXterm[hex] = Sprintf("color_%03d", cidx+16)
+		cachedXterm[hex] = fmt.Sprintf("color%03d", cidx+16)
 	} else {
-		cachedXterm[hex] = Sprintf("color_%03d", gidx+232)
+		cachedXterm[hex] = fmt.Sprintf("color%03d", gidx+232)
 	}
 
 	return cachedXterm[hex]
@@ -198,6 +199,8 @@ func Hilight(code string, str string) string {
 	var matches [][]string
 	var width int
 
+	code = normalize(code)
+
 	// Call the appropriate function
 	if _, ok := Colors[code]; ok {
 		return colorize(code, str)
@@ -205,7 +208,7 @@ func Hilight(code string, str string) string {
 		return modify(code, str)
 	} else {
 		switch code {
-		case "on_rainbow":
+		case "onrainbow":
 			return OnRainbow(str)
 		case "plain":
 			return Plain(str)
@@ -224,8 +227,8 @@ func Hilight(code string, str string) string {
 					clr = HexToXterm256(match[2])
 				}
 
-				if strings.HasPrefix(code, "on_") {
-					clr = "on_" + clr
+				if strings.HasPrefix(code, "on") {
+					clr = "on" + clr
 				}
 
 				return colorize(clr, str)
@@ -285,9 +288,9 @@ func IsDisabled() bool {
 func OnHex(hex string, str string) string {
 	switch strings.ToLower(os.Getenv("COLORTERM")) {
 	case "truecolor":
-		return colorize("on_"+HexToTrueColor(hex), str)
+		return colorize("on"+HexToTrueColor(hex), str)
 	default:
-		return colorize("on_"+HexToXterm256(hex), str)
+		return colorize("on"+HexToXterm256(hex), str)
 	}
 }
 
@@ -313,19 +316,19 @@ func OnRainbow(str string) string {
 
 	// Loop thru lines and apply bg color codes
 	colors = rainbowColors()
-	end = "\x1b[" + Colors["on_default"] + "m"
+	end = "\x1b[" + Colors["ondefault"] + "m"
 
 	for i := range lines {
 		chars = reIterate.FindAllString(lines[i], -1)
 		line = []string{}
 
-		// Loop thru non-color-code bytes and apply on_rainbow
+		// Loop thru non-color-code bytes and apply onrainbow
 		for idx, char := range chars {
 			code = strconv.Itoa(colors[idx%len(colors)] + bgShift)
 			line = append(line, "\x1b["+code+"m"+char)
 		}
 
-		// Put line back together again, ensure on_default code at end
+		// Put line back together again, ensure ondefault code at end
 		out = append(out, strings.Join(line, "")+end)
 	}
 
@@ -354,6 +357,7 @@ func Rainbow(str string) string {
 	var chars []string
 	var code string
 	var colors []int
+	var end string
 	var line []string
 	var lines []string
 	var out []string
@@ -363,19 +367,20 @@ func Rainbow(str string) string {
 
 	// Loop thru lines and apply fg color codes
 	colors = rainbowColors()
+	end = "\x1b[" + Colors["default"] + "m"
 
 	for i := range lines {
 		chars = reIterate.FindAllString(lines[i], -1)
 		line = []string{}
 
-		// Loop thru non-color-code bytes and apply on_rainbow
+		// Loop thru non-color-code bytes and apply rainbow
 		for idx, char := range chars {
 			code = strconv.Itoa(colors[idx%len(colors)])
 			line = append(line, "\x1b["+code+"m"+char)
 		}
 
-		// Put line back together again
-		out = append(out, strings.Join(line, ""))
+		// Put line back together again, ensure default code at end
+		out = append(out, strings.Join(line, "")+end)
 	}
 
 	// Put lines back together, and remove color codes if the line
@@ -389,13 +394,13 @@ func Rainbow(str string) string {
 // RGBAToTrueColor will convert the RGBA values to their hex
 // representation.
 func RGBAToTrueColor(r uint8, g uint8, b uint8, a uint8) string {
-	return HexToTrueColor(Sprintf("%02x%02x%02x%02x", r, g, b, a))
+	return HexToTrueColor(fmt.Sprintf("%02x%02x%02x%02x", r, g, b, a))
 }
 
 // RGBAToXterm256 will convert the RGBA values to the closest xterm256
 // representation.
 func RGBAToXterm256(r uint8, g uint8, b uint8, a uint8) string {
-	return HexToXterm256(Sprintf("%02x%02x%02x%02x", r, g, b, a))
+	return HexToXterm256(fmt.Sprintf("%02x%02x%02x%02x", r, g, b, a))
 }
 
 // Sample will return all bg/fg combos of the first 16 8-bit colors.
@@ -408,8 +413,8 @@ func Sample() (lines []string) {
 		line.Reset()
 
 		for b := range 16 {
-			fg = Sprintf("color_%03d", f)
-			bg = Sprintf("on_color_%03d", b)
+			fg = fmt.Sprintf("color%03d", f)
+			bg = fmt.Sprintf("oncolor%03d", b)
 			line.WriteString(colorize(fg, colorize(bg, " mw ")))
 		}
 
@@ -426,7 +431,7 @@ func Table() (lines []string) {
 
 	for i := range 16 {
 		line += Hilightf(
-			Sprintf("on_color_%03d", i),
+			fmt.Sprintf("oncolor%03d", i),
 			" %s %s ",
 			Blackf("%03d", i),
 			Whitef("%03d", i),
@@ -439,7 +444,7 @@ func Table() (lines []string) {
 
 	for i := 16; i < 256; i++ {
 		line += Hilightf(
-			Sprintf("on_color_%03d", i),
+			fmt.Sprintf("oncolor%03d", i),
 			" %s %s ",
 			Blackf("%03d", i),
 			Whitef("%03d", i),
@@ -459,6 +464,7 @@ func Wrap(width int, str string) string {
 	var line string = ""
 	var lines []string
 	var wc int
+	// This messes with whitespace, will fix someday
 	var words []string = strings.Fields(str)
 
 	// Loop thru words

@@ -8,7 +8,7 @@
 ## What is this?
 
 This go package provides color methods for strings. It also provides a
-method for wrapping strings that accounts for color escape codes.
+method for line-wrapping strings that accounts for color escape codes.
 
 ## How to install
 
@@ -40,119 +40,43 @@ package main
 
 import (
     "fmt"
+    "slices"
+    "strings"
 
     hl "github.com/mjwhitta/hilighter"
 )
 
 func main() {
     // Example 1 (single color)
-    var greenStr = hl.Greenf("1. Hello, %s!\n", "world")
-    fmt.Print(greenStr)
-
-    // or
-
-    hl.PrintfGreen("1. Hello, %s!\n", "world")
-
-    // or
-
-    hl.PrintlnGreen("1. Hello, world!")
+    greenStr := hl.Green("Hello, world!")
+    fmt.Println("1. " + greenStr)
 
     // Example 2 (multiple colors)
-    var multiColored = hl.Hilightsf(
+    multiColored := hl.Hilights(
         []string{"white", "on_green"},
-        "2. Hello, %s!\n",
-        "world",
+        "Hello, world!",
     )
-    fmt.Print(multiColored)
-
-    // or
-
-    multiColored = hl.Hilights(
-        []string{"white", "on_green"},
-        "2. Hello, world!",
-    )
-    fmt.Println(multiColored)
-
-    // or
-
-    hl.PrintfHilights(
-        []string{"white", "on_green"},
-        "2. Hello, %s!\n",
-        "world",
-    )
-
-    // or
-
-    hl.PrintlnHilights(
-        []string{"white", "on_green"},
-        "2. Hello, world!",
-    )
+    fmt.Println("2. " + multiColored)
 
     // Example 3 (8-bit)
-    var eightBit = hl.Color002("3. 8-bit color codes!")
-    fmt.Println(eightBit)
-
-    // or
-
-    hl.PrintColor002("3. 8-bit color codes!\n")
-
-    // or
-
-    hl.PrintlnColor002("3. 8-bit color codes!")
+    eightBit := hl.Hilight("002", "8-bit color codes!")
+    fmt.Println("3. " + eightBit)
 
     // Example 4 (hex)
-
-    var hex = hl.Hex("5f8700", "4. Hex color codes!")
-    fmt.Println(hex)
-
-    // or
-
-    hl.PrintHex("5f8700", "4. Hex color codes!\n")
-
-    // or
-
-    hl.PrintlnHex("5f8700", "4. Hex color codes!")
+    hexColorStr := hl.Hex("5f8700", "Hex color codes!")
+    fmt.Println("4. " + hexColorStr)
 
     // Example 5 (text wrapping)
-    var long_var = "5."
-    var word = "hilight"
-    for i := 0; i < 32; i++ {
-        long_var += " " + word
-    }
-
-    fmt.Println(hl.Wrap(80, hl.Hilight("green", long_var)))
-
-    // or
-
-    hl.PrintWrap(80, hl.Greenf("%s\n", long_var))
-
-    // or
-
-    hl.PrintlnWrap(80, hl.Green(long_var))
+    longVar := strings.Join(slices.Repeat([]string{"word"}, 32), " ")
+    fmt.Println("5.\n" + hl.Wrap(70, hl.Green(longVar)))
 
     // Example 6 (rainbow)
-    long_var = "6."
-    for i := 0; i < 8; i++ {
-        long_var += " " + word
-    }
+    fmt.Println("6.\n" + hl.Wrap(61, hl.Rainbow(longVar)))
 
-    fmt.Println(hl.Rainbow(long_var))
-
-    // or
-
-    hl.PrintfRainbow("%s\n", long_var)
-
-    // or
-
-    hl.PrintlnRainbow(long_var)
-
-    // or
-
-    hl.PrintlnOnRainbow(hl.White(long_var))
-
-    // or
-
-    hl.PrintlnRainbow(hl.OnRainbow(long_var))
+    // Example 7 (double rainbow)
+    fmt.Println(
+        "7.\n" + hl.Wrap(61, hl.Rainbow(hl.OnRainbow(longVar))),
+    )
 }
 ```
 

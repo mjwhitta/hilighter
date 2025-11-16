@@ -1,88 +1,96 @@
 package hilighter
 
-import "regexp"
+import (
+	"fmt"
+	"regexp"
+)
 
 // Version is the package version
-const Version string = "1.13.0"
+const Version string = "1.14.0"
 
 var (
 	// Colors maps color names to color codes
 	Colors = map[string]string{
-		"black":         "30",
-		"red":           "31",
-		"green":         "32",
-		"yellow":        "33",
-		"blue":          "34",
-		"magenta":       "35",
-		"cyan":          "36",
-		"white":         "37",
-		"light_black":   "90",
-		"light_red":     "91",
-		"light_green":   "92",
-		"light_yellow":  "93",
-		"light_blue":    "94",
-		"light_magenta": "95",
-		"light_cyan":    "96",
-		"light_white":   "97",
+		"default":   "39",
+		"ondefault": "49",
 
-		"on_black":         "40",
-		"on_red":           "41",
-		"on_green":         "42",
-		"on_yellow":        "43",
-		"on_blue":          "44",
-		"on_magenta":       "45",
-		"on_cyan":          "46",
-		"on_white":         "47",
-		"on_light_black":   "100",
-		"on_light_red":     "101",
-		"on_light_green":   "102",
-		"on_light_yellow":  "103",
-		"on_light_blue":    "104",
-		"on_light_magenta": "105",
-		"on_light_cyan":    "106",
-		"on_light_white":   "107",
+		// Foregrounds
+		"black":        "30",
+		"red":          "31",
+		"green":        "32",
+		"yellow":       "33",
+		"blue":         "34",
+		"magenta":      "35",
+		"cyan":         "36",
+		"white":        "37",
+		"lightblack":   "90",
+		"lightred":     "91",
+		"lightgreen":   "92",
+		"lightyellow":  "93",
+		"lightblue":    "94",
+		"lightmagenta": "95",
+		"lightcyan":    "96",
+		"lightwhite":   "97",
 
-		"default":    "39",
-		"on_default": "49",
+		// Backgrounds
+		"onblack":        "40",
+		"onred":          "41",
+		"ongreen":        "42",
+		"onyellow":       "43",
+		"onblue":         "44",
+		"onmagenta":      "45",
+		"oncyan":         "46",
+		"onwhite":        "47",
+		"onlightblack":   "100",
+		"onlightred":     "101",
+		"onlightgreen":   "102",
+		"onlightyellow":  "103",
+		"onlightblue":    "104",
+		"onlightmagenta": "105",
+		"onlightcyan":    "106",
+		"onlightwhite":   "107",
 	}
 
 	// Modes maps mode names to mode codes
 	Modes = map[string]string{
-		"reset":         "0",
-		"normal":        "0",
+		"normal": "0",
+		"reset":  "0",
+
+		// On
 		"bold":          "1",
 		"dim":           "2",
 		"faint":         "2",
 		"italic":        "3",
 		"underline":     "4",
 		"blink":         "5",
-		"blink_slow":    "5",
-		"blink_rapid":   "6",
+		"blinkslow":     "5",
+		"blinkrapid":    "6",
 		"inverse":       "7",
 		"negative":      "7",
 		"swap":          "7",
-		"hide":          "8",
 		"conceal":       "8",
+		"hide":          "8",
 		"crossed_out":   "9",
 		"strikethrough": "9",
 		"fraktur":       "20",
 
-		"no_bold":          "21",
-		"no_dim":           "22",
-		"no_faint":         "22",
-		"no_italic":        "23",
-		"no_fraktur":       "23",
-		"no_underline":     "24",
-		"no_blink":         "25",
-		"no_blink_slow":    "25",
-		"no_blink_rapid":   "26",
-		"no_inverse":       "27",
-		"no_negative":      "27",
-		"no_swap":          "27",
-		"no_hide":          "28",
-		"no_conceal":       "28",
-		"no_crossed_out":   "29",
-		"no_strikethrough": "29",
+		// Off
+		"nobold":          "21",
+		"nodim":           "22",
+		"nofaint":         "22",
+		"noitalic":        "23",
+		"nofraktur":       "23",
+		"nounderline":     "24",
+		"noblink":         "25",
+		"noblinkslow":     "25",
+		"noblinkrapid":    "26",
+		"noinverse":       "27",
+		"nonegative":      "27",
+		"noswap":          "27",
+		"noconceal":       "28",
+		"nohide":          "28",
+		"nocrossed_out":   "29",
+		"nostrikethrough": "29",
 	}
 
 	// Cached hex to xterm-256 8-bit mappings
@@ -96,7 +104,6 @@ var (
 	// Various regular expressions
 	reAllCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
 	reBgCodes  = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
-	reDoubleNo = regexp.MustCompile(`no_no_`)
 	reFgCodes  = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
 	reHexCodes = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
 	reIterate  = regexp.MustCompile(
@@ -118,12 +125,12 @@ func init() {
 
 	// Add all 8-bit colors, fg and bg
 	for i := range 256 {
-		key = Sprintf("color_%03d", i)
-		val = Sprintf("38;5;%03d", i)
+		key = fmt.Sprintf("color%03d", i)
+		val = fmt.Sprintf("38;5;%03d", i)
 		Colors[key] = val
 
-		key = Sprintf("on_color_%03d", i)
-		val = Sprintf("48;5;%03d", i)
+		key = fmt.Sprintf("oncolor%03d", i)
+		val = fmt.Sprintf("48;5;%03d", i)
 		Colors[key] = val
 	}
 }

@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 
 	"github.com/mjwhitta/cli"
@@ -9,7 +10,7 @@ import (
 )
 
 func err(msg string) {
-	hl.PrintlnRed("[!] " + msg)
+	fmt.Println(hl.Red("[!]") + " " + msg)
 }
 
 func errx(status int, msg string) {
@@ -45,11 +46,11 @@ func main() {
 	switch {
 	case flags.sample:
 		for _, line := range hl.Sample() {
-			hl.Println(line)
+			fmt.Println(line)
 		}
 	case flags.table:
 		for _, line := range hl.Table() {
-			hl.Println(line)
+			fmt.Println(line)
 		}
 	default:
 		scanner = bufio.NewScanner(os.Stdin)
@@ -64,7 +65,7 @@ func main() {
 			}
 
 			// Print the result
-			hl.Println(line)
+			fmt.Println(line)
 		}
 
 		if scanner.Err() != nil {

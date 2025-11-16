@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/mjwhitta/cli"
@@ -31,21 +32,18 @@ func init() {
 	// Configure cli package
 	cli.Align = true
 	cli.Authors = []string{"Miles Whittaker <mj@whitta.dev>"}
-	cli.Banner = hl.Sprintf(
-		"%s [OPTIONS] [color1]... [colorN]",
-		os.Args[0],
-	)
+	cli.Banner = os.Args[0] + " [OPTIONS] [color1]... [colorN]"
 	cli.BugEmail = "hilighter.bugs@whitta.dev"
 
 	cli.ExitStatus(
 		"Normally the exit status is 0. In the event of an error the",
 		"exit status will be one of the below:\n\n",
-		hl.Sprintf("  %d: Invalid option\n", InvalidOption),
-		hl.Sprintf("  %d: Missing option\n", MissingOption),
-		hl.Sprintf("  %d: Invalid argument\n", InvalidArgument),
-		hl.Sprintf("  %d: Missing argument\n", MissingArgument),
-		hl.Sprintf("  %d: Extra argument\n", ExtraArgument),
-		hl.Sprintf("  %d: Exception", Exception),
+		fmt.Sprintf("  %d: Invalid option\n", InvalidOption),
+		fmt.Sprintf("  %d: Missing option\n", MissingOption),
+		fmt.Sprintf("  %d: Invalid argument\n", InvalidArgument),
+		fmt.Sprintf("  %d: Missing argument\n", MissingArgument),
+		fmt.Sprintf("  %d: Extra argument\n", ExtraArgument),
+		fmt.Sprintf("  %d: Exception", Exception),
 	)
 	cli.Info(
 		"Hilights the text from stdin using the methods passed on",
@@ -92,7 +90,7 @@ func validate() {
 
 	// Short circuit if version was requested
 	if flags.version {
-		hl.Printf("hilighter version %s\n", hl.Version)
+		fmt.Printf("hilighter version %s\n", hl.Version)
 		os.Exit(Good)
 	}
 

@@ -37,12 +37,12 @@ func bgColor(code string, str string) string {
 	// newlines
 	str = reNewline.ReplaceAllString(
 		plainBg(str),
-		"\x1b["+Colors["on_default"]+"m\n\x1b["+Colors[code]+"m",
+		"\x1b["+Colors["ondefault"]+"m\n\x1b["+Colors[code]+"m",
 	)
 
 	// Wrap whole thing with specified color code
 	colorized = "\x1b[" + Colors[code] + "m" + str +
-		"\x1b[" + Colors["on_default"] + "m"
+		"\x1b[" + Colors["ondefault"] + "m"
 
 	// Remove color codes, if the line only contains color codes
 	return reOnlyCodes.ReplaceAllString(colorized, "$1$4")
@@ -55,7 +55,7 @@ func colorize(clr string, str string) string {
 	}
 
 	// Call the appropriate function
-	if strings.HasPrefix(clr, "on_") {
+	if strings.HasPrefix(clr, "on") {
 		return bgColor(clr, str)
 	}
 
@@ -93,10 +93,7 @@ func modify(mode string, str string) string {
 	}
 
 	// Reverse mode
-	opposite = "no_" + mode
-	if strings.HasPrefix(opposite, "no_no_") {
-		opposite = reDoubleNo.ReplaceAllString(opposite, "")
-	}
+	opposite = strings.TrimPrefix("no"+opposite, "nono")
 
 	// Store specified mode code for removal
 	rm = Modes[mode]
@@ -106,8 +103,8 @@ func modify(mode string, str string) string {
 		// Store opposite code for removal
 		rm += "|" + Modes[opposite]
 
-		// Save opposite mode code sequence if it starts with "no_"
-		if strings.HasPrefix(opposite, "no_") {
+		// Save opposite mode code sequence if it starts with "no"
+		if strings.HasPrefix(opposite, "no") {
 			off = "\x1b[" + Modes[opposite] + "m"
 		}
 	}
@@ -121,6 +118,13 @@ func modify(mode string, str string) string {
 
 	// Remove color codes, if the line only contains color codes
 	return reOnlyCodes.ReplaceAllString(modified, "$1$4")
+}
+
+func normalize(s string) string {
+	s = strings.ReplaceAll(s, "_", "")
+	s = strings.ReplaceAll(s, "-", "")
+
+	return strings.ToLower(s)
 }
 
 func plainBg(str string) string {
