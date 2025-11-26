@@ -93,7 +93,7 @@ func modify(mode string, str string) string {
 	}
 
 	// Reverse mode
-	opposite = strings.TrimPrefix("no"+opposite, "nono")
+	opposite = strings.TrimPrefix("no"+mode, "nono")
 
 	// Store specified mode code for removal
 	rm = Modes[mode]

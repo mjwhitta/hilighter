@@ -6,7 +6,7 @@ import (
 )
 
 // Version is the package version
-const Version string = "1.14.2"
+const Version string = "1.14.3"
 
 var (
 	// Colors maps color names to color codes
@@ -105,7 +105,7 @@ var (
 	reAllCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
 	reBgCodes  = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
 	reFgCodes  = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
-	reHexCodes = regexp.MustCompile(`(?i)(on_)?([0-9a-f]{6})`)
+	reHexCodes = regexp.MustCompile(`(?i)^(on)?([0-9a-f]{6})$`)
 	reIterate  = regexp.MustCompile(
 		`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
 	)
@@ -116,7 +116,7 @@ var (
 	reParseHex = regexp.MustCompile(
 		`(?i)^#?` + hexByte + hexByte + hexByte + hexByte + `?$`,
 	)
-	reWrap = regexp.MustCompile(`wrap(_(\d+))?`)
+	reWrap = regexp.MustCompile(`wrap(\d+)?`)
 )
 
 func init() {

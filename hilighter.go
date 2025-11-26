@@ -195,8 +195,7 @@ func HexToXterm256(hex string) string {
 // string.
 func Hilight(code string, str string) string {
 	var clr string
-	var match []string
-	var matches [][]string
+	var m [][]string
 	var width int
 
 	code = normalize(code)
@@ -216,15 +215,13 @@ func Hilight(code string, str string) string {
 			return Rainbow(str)
 		default:
 			// Check if hex color code
-			matches = reHexCodes.FindAllStringSubmatch(code, -1)
-			if len(matches) > 0 {
-				match = matches[0]
-
+			m = reHexCodes.FindAllStringSubmatch(code, -1)
+			if len(m) > 0 {
 				switch strings.ToLower(os.Getenv("COLORTERM")) {
 				case "truecolor":
-					clr = HexToTrueColor(match[2])
+					clr = HexToTrueColor(m[0][2])
 				default:
-					clr = HexToXterm256(match[2])
+					clr = HexToXterm256(m[0][2])
 				}
 
 				if strings.HasPrefix(code, "on") {
@@ -235,14 +232,13 @@ func Hilight(code string, str string) string {
 			}
 
 			// Check if wrap
-			matches = reWrap.FindAllStringSubmatch(code, -1)
-			if len(matches) > 0 {
-				match = matches[0]
-
+			m = reWrap.FindAllStringSubmatch(code, -1)
+			if len(m) > 0 {
 				// Determine wrap width, default to 80
 				width = 80
-				if len(match) == 3 && len(match[2]) > 0 {
-					width, _ = strconv.Atoi(match[2])
+				if len(m[0]) == 2 && len(m[0][1]) > 0 {
+					// Regex capture group ensures it's a valid number
+					width, _ = strconv.Atoi(m[0][1])
 				}
 
 				return Wrap(width, str)
