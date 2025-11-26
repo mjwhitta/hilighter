@@ -6,7 +6,7 @@ import (
 )
 
 // Version is the package version
-const Version string = "1.14.3"
+const Version string = "1.14.4"
 
 var (
 	// Colors maps color names to color codes
@@ -105,7 +105,6 @@ var (
 	reAllCodes = regexp.MustCompile(`\x1b\[([0-9;]*m|K)`)
 	reBgCodes  = regexp.MustCompile(`\x1b\[(4|10)[0-9;]+m`)
 	reFgCodes  = regexp.MustCompile(`\x1b\[[39][0-9;]+m`)
-	reHexCodes = regexp.MustCompile(`(?i)^(on)?([0-9a-f]{6})$`)
 	reIterate  = regexp.MustCompile(
 		`(\x1b\[([0-9;]*m|K))*[^\x1b](\x1b\[([0-9;]*m|K))*`,
 	)
@@ -113,24 +112,25 @@ var (
 	reOnlyCodes = regexp.MustCompile(
 		`(^|\n)(\x1b\[([0-9;]+m|K))+(\n|$)`,
 	)
-	reParseHex = regexp.MustCompile(
-		`(?i)^#?` + hexByte + hexByte + hexByte + hexByte + `?$`,
+	reParseHex = regexp.MustCompile("" +
+		`(?i)^(on)?#?(` + hexByte + hexByte + hexByte + hexByte +
+		`?)$`,
 	)
 	reWrap = regexp.MustCompile(`wrap(\d+)?`)
 )
 
 func init() {
+	var bg string
+	var fg string
 	var key string
-	var val string
 
 	// Add all 8-bit colors, fg and bg
 	for i := range 256 {
+		bg = fmt.Sprintf("48;5;%03d", i)
+		fg = fmt.Sprintf("38;5;%03d", i)
 		key = fmt.Sprintf("color%03d", i)
-		val = fmt.Sprintf("38;5;%03d", i)
-		Colors[key] = val
 
-		key = fmt.Sprintf("oncolor%03d", i)
-		val = fmt.Sprintf("48;5;%03d", i)
-		Colors[key] = val
+		Colors[key] = fg
+		Colors["on"+key] = bg
 	}
 }

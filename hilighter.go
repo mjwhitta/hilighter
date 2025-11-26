@@ -45,24 +45,23 @@ func HexToTrueColor(hex string) string {
 	var hexB uint64
 	var hexG uint64
 	var hexR uint64
-	var matches [][]string
+	var m [][]string
 	var r int
 
 	if _, ok := Colors[hex]; ok {
 		return hex
 	}
 
-	r, g, b = 0, 0, 0
-	matches = reParseHex.FindAllStringSubmatch(hex, -1)
-
-	for _, match := range matches {
-		hexB, _ = strconv.ParseUint(match[3], 16, 8)
+	// Capture groups enforce hex strings, so ParseUint() is safe
+	// Warning: Alpha values are currently ignored
+	if m = reParseHex.FindAllStringSubmatch(hex, -1); len(m) > 0 {
+		hexB, _ = strconv.ParseUint(m[0][5], 16, 8)
 		b = int(hexB)
 
-		hexG, _ = strconv.ParseUint(match[2], 16, 8)
+		hexG, _ = strconv.ParseUint(m[0][4], 16, 8)
 		g = int(hexG)
 
-		hexR, _ = strconv.ParseUint(match[1], 16, 8)
+		hexR, _ = strconv.ParseUint(m[0][3], 16, 8)
 		r = int(hexR)
 	}
 
@@ -96,45 +95,43 @@ func HexToXterm256(hex string) string {
 	var ib int
 	var ig int
 	var ir int
-	var matches [][]string
+	var m [][]string
 	var r int
 
 	if _, ok := cachedXterm[hex]; ok {
 		return cachedXterm[hex]
 	}
 
-	// For simplicity, assume RGB space is perceptually uniform.
-	// There are 5 places where one of two outputs needs to be
-	// chosen when the input is the exact middle:
+	// For simplicity, assume RGB space is perceptually uniform. There
+	// are 5 places where one of two outputs needs to be chosen when
+	// the input is the exact middle:
 	// - The r/g/b channels and the gray value:
-	//     - the higher value output is chosen
-	// - If the gray and color values have same distance from the
-	//   input
-	//     - color is chosen
-
+	//     - Minimal distance from the input is chosen
+	// - If distances are equal
+	//     - Color is chosen
 	// Note: This is integer math, NOT unsigned integer
+	// Warning: Alpha values are currently ignored
 
-	// Calculate the nearest 0-based color index at 16..231
-	r, g, b = 0, 0, 0
-	matches = reParseHex.FindAllStringSubmatch(hex, -1)
-
-	for _, match := range matches {
-		hexB, _ = strconv.ParseUint(match[3], 16, 8)
+	// Capture groups enforce hex strings, so ParseUint() is safe
+	if m = reParseHex.FindAllStringSubmatch(hex, -1); len(m) > 0 {
+		hexB, _ = strconv.ParseUint(m[0][5], 16, 8)
 		b = int(hexB)
 
-		hexG, _ = strconv.ParseUint(match[2], 16, 8)
+		hexG, _ = strconv.ParseUint(m[0][4], 16, 8)
 		g = int(hexG)
 
-		hexR, _ = strconv.ParseUint(match[1], 16, 8)
+		hexR, _ = strconv.ParseUint(m[0][3], 16, 8)
 		r = int(hexR)
 	}
 
+	// Calculate the nearest 0-based color index at 16..231
+
 	// 0..5 each
-	ir = (r - 35) / 40
-	if r < 48 {
-		ir = 0
-	} else if r < 115 {
-		ir = 1
+	ib = (b - 35) / 40
+	if b < 48 {
+		ib = 0
+	} else if b < 115 {
+		ib = 1
 	}
 
 	ig = (g - 35) / 40
@@ -144,11 +141,11 @@ func HexToXterm256(hex string) string {
 		ig = 1
 	}
 
-	ib = (b - 35) / 40
-	if b < 48 {
-		ib = 0
-	} else if b < 115 {
-		ib = 1
+	ir = (r - 35) / 40
+	if r < 48 {
+		ir = 0
+	} else if r < 115 {
+		ir = 1
 	}
 
 	// 0..215 lazy evaluation
@@ -167,9 +164,9 @@ func HexToXterm256(hex string) string {
 	i2cv = []int{0, 0x5f, 0x87, 0xaf, 0xd7, 0xff}
 
 	// r/g/b 0..255 each
-	cr = i2cv[ir]
-	cg = i2cv[ig]
 	cb = i2cv[ib]
+	cg = i2cv[ig]
+	cr = i2cv[ir]
 
 	// same value for r/g/b 0..255
 	gv = (10 * gidx) + 8
@@ -215,7 +212,7 @@ func Hilight(code string, str string) string {
 			return Rainbow(str)
 		default:
 			// Check if hex color code
-			m = reHexCodes.FindAllStringSubmatch(code, -1)
+			m = reParseHex.FindAllStringSubmatch(code, -1)
 			if len(m) > 0 {
 				switch strings.ToLower(os.Getenv("COLORTERM")) {
 				case "truecolor":
