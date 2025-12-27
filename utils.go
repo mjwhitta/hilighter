@@ -15,10 +15,10 @@ func adjustedRGBA(c color.Color) (uint8, uint8, uint8, uint8) {
 
 	r, g, b, a = c.RGBA()
 
-	if (a != 0) && (a != math.MaxUint32) {
-		r = uint32(float64(r*math.MaxUint32) / float64(a))
-		g = uint32(float64(g*math.MaxUint32) / float64(a))
-		b = uint32(float64(b*math.MaxUint32) / float64(a))
+	if (a != 0) && (a != math.MaxUint16) {
+		r = uint32(float64(r*math.MaxUint16) / float64(a))
+		g = uint32(float64(g*math.MaxUint16) / float64(a))
+		b = uint32(float64(b*math.MaxUint16) / float64(a))
 	}
 
 	r >>= 8
