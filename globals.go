@@ -6,7 +6,7 @@ import (
 )
 
 // Version is the package version
-const Version string = "1.15.0"
+const Version string = "1.15.1"
 
 var (
 	// Colors maps color names to color codes
